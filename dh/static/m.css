@@ -1,0 +1,347 @@
+/* TREE Deal Hunter — telefoonpagina. Duimbediening: alles wat je aantikt is minstens 44 px hoog,
+   de navigatie staat onderaan, en de lijst blijft leesbaar in fel zonlicht (hoog contrast). */
+:root {
+  color-scheme: light;
+  --paper: #f7f5f0;
+  --surface: #fffefb;
+  --sunk: #efebe3;
+  --ink: #2b3331;
+  --ink-strong: #1c2220;
+  --muted: #69706c;
+  --faint: #9aa09b;
+  --beige: #b8a07a;
+  --deep-pine: #1c2220;
+  --rule: rgba(43, 51, 49, 0.14);
+  --rule-strong: rgba(43, 51, 49, 0.28);
+  --c-groen: #2f7a55; --c-groen-bg: #e2f0e8;
+  --c-blauw: #2f6386; --c-blauw-bg: #e3edf4;
+  --c-oranje: #b86e12; --c-oranje-bg: #f6ead6;
+  --c-grijs: #8c918e; --c-grijs-bg: #ecebe7;
+  --c-onzeker: #7d6a9c; --c-onzeker-bg: #ece7f3;
+  --c-veiling: #7a3f5c; --c-veiling-bg: #f3e4eb;
+  --bad: #9b3a31;
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter Tight", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+  --radius: 10px;
+  --bar-h: calc(3.4rem + env(safe-area-inset-bottom));
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--paper); color: var(--ink);
+  font: 15px/1.5 var(--font-body);
+  display: flex; flex-direction: column;
+  overscroll-behavior-y: none;
+}
+button, select, input { font: inherit; color: inherit; }
+a { color: var(--ink-strong); text-decoration-color: var(--beige); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--beige); outline-offset: 2px; }
+h2 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; margin: 1.4rem 0 0.3rem; }
+
+/* ---------- kop ---------- */
+.bar {
+  background: var(--deep-pine); color: #ece9e2;
+  padding: calc(0.55rem + env(safe-area-inset-top)) 1rem 0.55rem;
+  position: sticky; top: 0; z-index: 30;
+}
+.bar-title { font-family: var(--font-display); font-size: 1.2rem; }
+.mark { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; color: var(--beige); margin-right: 0.4rem; }
+.bar-sub { font-size: 0.78rem; color: #c3c0b8; margin-top: 0.1rem; }
+.bar-sub b { color: #fff; font-weight: 500; }
+.bar-sub .fout { color: #e5877c; }
+
+/* ---------- vlakken ---------- */
+#main { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: calc(var(--bar-h) + 1rem); position: relative; }
+.view { padding: 0.7rem 0.8rem 0; }
+/* de kaart vult de hele hoogte tussen de kop en de onderbalk; de andere vlakken schuiven normaal */
+.view[data-view="kaart"] { padding: 0; position: absolute; inset: 0 0 calc(var(--bar-h) + 1rem) 0; }
+.meta { font-size: 0.8rem; color: var(--muted); margin: 0.5rem 0; }
+
+/* ---------- filters ---------- */
+.scroller { display: flex; gap: 0.4rem; overflow-x: auto; padding: 0.15rem 0 0.35rem; scrollbar-width: none; }
+.scroller::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; border: 1px solid var(--rule-strong); background: var(--surface); color: var(--ink);
+  border-radius: 99px; padding: 0.42rem 0.75rem; font-size: 0.85rem; min-height: 2.2rem;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.chip.on { background: var(--ink-strong); color: #fff; border-color: var(--ink-strong); }
+.chip .n { font-family: var(--font-mono); font-size: 0.72rem; opacity: 0.75; }
+.toolrow { display: flex; gap: 0.4rem; align-items: center; margin: 0.15rem 0 0.2rem; }
+.pill {
+  border: 1px solid var(--rule-strong); background: var(--surface); border-radius: 99px;
+  padding: 0.42rem 0.75rem; font-size: 0.85rem; min-height: 2.2rem;
+}
+.pill[aria-pressed="true"] { background: var(--ink-strong); color: #fff; border-color: var(--ink-strong); }
+#sort { margin-left: auto; border: 1px solid var(--rule-strong); background: var(--surface); border-radius: 99px; padding: 0.42rem 0.6rem; min-height: 2.2rem; }
+
+/* ---------- meldingen ---------- */
+.alert {
+  background: var(--c-groen-bg); border: 1px solid var(--c-groen); border-left-width: 4px;
+  border-radius: var(--radius); padding: 0.6rem 0.75rem; margin: 0.2rem 0 0.6rem;
+}
+.alert.verzamel { background: var(--c-oranje-bg); border-color: var(--c-oranje); }
+.alert b { font-weight: 600; }
+.alert .refs { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+/* ---------- dossiers ---------- */
+.dossiers { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); margin: 0 0 .6rem; overflow: hidden; }
+.dtop { display: flex; justify-content: space-between; align-items: baseline; padding: .55rem .75rem; border-bottom: 1px solid var(--rule); font-size: .88rem; }
+.drow { display: grid; grid-template-columns: .7rem 1fr auto auto auto; gap: .5rem; align-items: center;
+  padding: .55rem .75rem; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; font-size: .85rem; min-height: 2.6rem; }
+.drow:last-child { border-bottom: 0; }
+.drow .dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--c-grijs); }
+.drow .dot.groen { background: var(--c-groen); } .drow .dot.blauw { background: var(--c-blauw); } .drow .dot.oranje { background: var(--c-oranje); }
+.drow .dw { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.drow .dp, .drow .dr, .drow .dm { font-family: var(--font-mono); font-size: .78rem; white-space: nowrap; }
+.drow .dr { color: var(--c-groen); }
+.drow .dm { color: var(--muted); }
+
+/* ---------- kaarten ---------- */
+.card {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  margin-bottom: 0.6rem; padding: 0.7rem 0.8rem; display: block; width: 100%; text-align: left;
+  border-left: 4px solid var(--c-grijs);
+}
+.card.groen { border-left-color: var(--c-groen); }
+.card.blauw { border-left-color: var(--c-blauw); }
+.card.oranje { border-left-color: var(--c-oranje); }
+.card.onzeker { border-left-color: var(--c-onzeker); }
+.card.geen { border-left-color: var(--rule-strong); }
+.card-top { display: flex; align-items: flex-start; gap: 0.5rem; }
+.ref { font-family: var(--font-mono); font-size: 0.76rem; color: var(--muted); }
+.where { font-weight: 500; flex: 1 1 auto; min-width: 0; }
+.price { flex: none; font-family: var(--font-display); font-size: 1.15rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.15rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.45rem; }
+.tag { font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 99px; background: var(--sunk); color: var(--ink); }
+.tag.klasse { background: var(--c-grijs-bg); color: var(--c-grijs); font-weight: 500; }
+.tag.klasse.groen { background: var(--c-groen-bg); color: var(--c-groen); }
+.tag.klasse.blauw { background: var(--c-blauw-bg); color: var(--c-blauw); }
+.tag.klasse.oranje { background: var(--c-oranje-bg); color: var(--c-oranje); }
+.tag.klasse.onzeker { background: var(--c-onzeker-bg); color: var(--c-onzeker); }
+.tag.daling { background: var(--c-groen-bg); color: var(--c-groen); }
+.tag.melding { background: var(--deep-pine); color: #fff; }
+.tag.bron { background: var(--sunk); color: var(--muted); }
+.tag.exclusief { background: var(--c-veiling-bg); color: var(--c-veiling); font-weight: 500; }
+.toolrow { flex-wrap: wrap; }
+
+/* rekensom in vier vakjes */
+.sums { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin-top: 0.55rem; }
+.sums div { background: var(--surface); padding: 0.4rem 0.35rem; }
+.sums .k { font-size: 0.66rem; color: var(--muted); display: block; }
+.sums .v { font-family: var(--font-mono); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.sums .v.pos { color: var(--c-groen); } .sums .v.neg { color: var(--bad); }
+.oordeel { margin: 0.5rem 0 0; font-size: 0.86rem; color: var(--ink-strong); font-weight: 500; }
+.oordeel.ok { color: var(--c-groen); }
+.oordeel.let { color: var(--c-oranje); }
+.bod { margin-top: 0.5rem; display: grid; gap: 0.15rem; }
+.bodrij { display: flex; align-items: baseline; gap: 0.4rem; font-size: 0.85rem; }
+.bodrij span:first-child { color: var(--muted); min-width: 7.5rem; }
+.bodrij b { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.bodrij .pct { margin-left: auto; font-size: 0.76rem; color: var(--muted); }
+.maxline { margin-top: 0.5rem; font-size: 0.85rem; display: flex; gap: 0.4rem; align-items: baseline; }
+.maxline b { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.room { margin-left: auto; font-size: 0.8rem; color: var(--muted); }
+.room.pos { color: var(--c-groen); }
+
+/* ---------- kaartweergave ---------- */
+#map { position: absolute; inset: 0; }
+.maptools { position: absolute; left: 0.6rem; right: 0.6rem; top: 0.6rem; z-index: 500; display: flex; gap: 0.4rem; }
+.maptools .pill, .maptools select { box-shadow: 0 1px 6px rgba(0,0,0,0.18); }
+.legend { position: absolute; left: 0.6rem; bottom: 0.6rem; z-index: 500; background: rgba(255,254,251,0.94); border: 1px solid var(--rule); border-radius: 6px; padding: 0.4rem 0.55rem; font-size: 0.74rem; margin: 0; }
+.legend span { display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 0.6rem; }
+.legend i { width: 0.6rem; height: 0.6rem; border-radius: 50%; display: inline-block; }
+
+/* ---------- lijsten ---------- */
+.row { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 0.6rem 0.75rem; margin-bottom: 0.5rem; }
+.row .t { font-weight: 500; }
+.row .d { font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+.row.veiling { border-left: 4px solid var(--c-veiling); }
+.row.prio2 { border-left: 4px solid var(--bad); }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th, td { text-align: left; padding: 0.4rem 0.3rem; border-bottom: 1px solid var(--rule); }
+td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- onderbalk ---------- */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  background: rgba(255,254,251,0.97); border-top: 1px solid var(--rule);
+  padding-bottom: env(safe-area-inset-bottom);
+  backdrop-filter: blur(8px);
+}
+.tb { background: none; border: 0; padding: 0.5rem 0.1rem 0.55rem; color: var(--muted); font-size: 0.7rem; display: grid; gap: 0.1rem; justify-items: center; min-height: 3.4rem; }
+.tb .ti { font-size: 1.05rem; line-height: 1; }
+.tb.on { color: var(--ink-strong); font-weight: 600; }
+
+/* ---------- dossier ---------- */
+.sheet {
+  position: fixed; inset: 0; z-index: 60; background: var(--paper);
+  display: flex; flex-direction: column;
+  animation: rise 0.18s ease-out;
+}
+@keyframes rise { from { transform: translateY(2%); opacity: 0.4; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .sheet { animation: none; } }
+.sheet-grip { padding: calc(0.5rem + env(safe-area-inset-top)) 0.8rem 0.5rem; border-bottom: 1px solid var(--rule); background: var(--surface); display: flex; justify-content: flex-end; }
+.sheet-grip button { border: 1px solid var(--rule-strong); background: var(--surface); border-radius: 99px; padding: 0.45rem 0.9rem; min-height: 2.4rem; }
+.sheet-body { flex: 1; overflow-y: auto; padding: 0.8rem 0.8rem calc(1.5rem + env(safe-area-inset-bottom)); }
+.sheet h1 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; margin: 0 0 0.15rem; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; margin: 0.7rem 0; }
+.three div { background: var(--surface); padding: 0.55rem 0.5rem; }
+.three .k { font-size: 0.7rem; color: var(--muted); display: block; }
+.three .v { display: block; font-family: var(--font-mono); font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+.three .m { display: block; font-size: 0.7rem; color: var(--muted); }
+.three .v.nul { color: var(--muted); font-size: 0.8rem; }
+.sl { margin: 0.55rem 0; }
+.sl label { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 0.15rem; }
+.sl output { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.sl input[type=range] { width: 100%; height: 2rem; accent-color: var(--ink-strong); }
+.warn { background: var(--c-onzeker-bg); border-left: 3px solid var(--c-onzeker); padding: 0.45rem 0.6rem; border-radius: 6px; font-size: 0.84rem; margin: 0.35rem 0; }
+.warn.blok { background: #f7e6e4; border-left-color: var(--bad); }
+.actions { display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 0.8rem 0; }
+.actions button, .actions a { border: 1px solid var(--rule-strong); background: var(--surface); border-radius: 99px; padding: 0.55rem 0.9rem; min-height: 2.6rem; text-decoration: none; display: inline-flex; align-items: center; }
+.actions button.primary { background: var(--ink-strong); color: #fff; border-color: var(--ink-strong); }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 0.15rem 0.7rem; font-size: 0.85rem; margin: 0.4rem 0; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-variant-numeric: tabular-nums; }
+.empty { color: var(--muted); padding: 1.2rem 0; text-align: center; }
+.foot { font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--rule); margin-top: 1.2rem; padding-top: 0.7rem; }
+
+/* ================= indeling van 25-09-2026 =================
+   Jan wilde minder tekst per kaartje. Eén foto, plaats en prijs, één oordeel van twee regels,
+   de vier bedragen, en drie knoppen. De rest zit achter een tik op het kaartje. */
+
+/* --- tabbladen binnen Kansen --- */
+.seg { display: flex; gap: 0.3rem; background: var(--sunk); padding: 0.22rem; border-radius: var(--radius); margin-bottom: 0.6rem; }
+.seg .sg {
+  flex: 1; min-height: 40px; border: 0; border-radius: 8px; background: transparent; color: var(--muted);
+  font-size: 0.82rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 0.3rem; cursor: pointer;
+}
+.seg .sg.on { background: var(--surface); color: var(--ink-strong); box-shadow: 0 1px 2px rgba(28, 34, 32, 0.12); }
+.seg .sg .n { font-family: var(--font-mono); font-size: 0.7rem; color: var(--faint); }
+.seg .sg.on .n { color: var(--beige); }
+
+/* --- inklapbaar filterblok: standaard dicht, want het was te veel op het scherm --- */
+.fold { margin: 0 0 0.5rem; }
+.fold > summary {
+  list-style: none; cursor: pointer; min-height: 40px; display: flex; align-items: center;
+  font-size: 0.8rem; color: var(--muted);
+}
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary::after { content: " ▾"; color: var(--faint); margin-left: 0.3rem; }
+.fold[open] > summary::after { content: " ▴"; }
+
+/* --- het kaartje --- */
+.card {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  margin-bottom: 0.7rem; overflow: hidden; border-left: 3px solid var(--c-grijs);
+}
+.card.groen { border-left-color: var(--c-groen); }
+.card.blauw { border-left-color: var(--c-blauw); }
+.card.oranje { border-left-color: var(--c-oranje); }
+.card.onzeker { border-left-color: var(--c-onzeker); }
+.card.gemerkt { box-shadow: inset 0 0 0 1px var(--beige); }
+.card-open {
+  display: block; width: 100%; text-align: left; background: none; border: 0; padding: 0; cursor: pointer;
+}
+/* De foto is er op verzoek van Jan (26-09-2026) uit; in plaats daarvan staat er onderaan het kaartje
+   een link naar de advertentie. De kolom listings.image_url wordt nog wel gevuld, dus terugzetten
+   kost alleen deze regels en het stukje in card(). */
+
+.card-open .head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem;
+  padding: 0.6rem 0.8rem 0;
+}
+.card-open .where { font-family: var(--font-display); font-size: 1.05rem; color: var(--ink-strong); }
+.card-open .price { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 500; white-space: nowrap; }
+.card-open .maten { display: block; padding: 0.1rem 0.8rem 0; font-size: 0.76rem; color: var(--muted); }
+
+.oordeel { margin: 0.45rem 0.8rem 0; font-size: 0.85rem; line-height: 1.35; }
+.oordeel b { display: block; font-weight: 600; color: var(--c-blauw); }
+.oordeel span { display: block; font-size: 0.78rem; color: var(--muted); }
+.oordeel.ok b { color: var(--c-groen); }
+.oordeel.let b { color: var(--c-oranje); }
+.oordeel.grijs { color: var(--faint); font-style: italic; }
+
+.card .sums {
+  /* de oude .sums tekende een raster met een grijze voeg; op het kaartje moet het rustig zijn */
+  background: none; border: 0; border-radius: 0; overflow: visible;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.8rem;
+  margin: 0.55rem 0.8rem 0; padding-top: 0.5rem; border-top: 1px solid var(--rule);
+}
+.card .sums > div { background: none; display: flex; justify-content: space-between; align-items: baseline; padding: 0.12rem 0; }
+.card .sums .k { display: inline; font-size: 0.74rem; color: var(--muted); }
+.card .sums .v { font-family: var(--font-mono); font-size: 0.8rem; }
+.card .sums .v.pos { color: var(--c-groen); font-weight: 500; }
+.card .sums .v.neg { color: var(--bad); }
+
+.card .flags { display: flex; flex-wrap: wrap; gap: 0.3rem; padding: 0.5rem 0.8rem 0.1rem; }
+.flag {
+  font-size: 0.68rem; padding: 0.12rem 0.4rem; border-radius: 4px;
+  background: var(--sunk); color: var(--muted);
+}
+.flag.let { background: var(--c-oranje-bg); color: var(--c-oranje); }
+.flag.ok { background: var(--c-groen-bg); color: var(--c-groen); }
+
+.acts { display: flex; border-top: 1px solid var(--rule); margin-top: 0.6rem; }
+.acts .act {
+  flex: 1; min-height: 44px; border: 0; background: none; color: var(--muted);
+  font-size: 0.78rem; cursor: pointer; border-right: 1px solid var(--rule);
+}
+.acts .act:last-child { border-right: 0; }
+.acts .act.on { background: var(--c-groen-bg); color: var(--c-groen); font-weight: 500; }
+.acts .act.weg { color: var(--faint); }
+.acts .act:active { background: var(--sunk); }
+
+/* --- teller op de onderbalk: als badge op het pictogram, anders wordt de balk hoger --- */
+.tb { position: relative; }
+.tb .tn {
+  position: absolute; top: 0.3rem; left: 50%; margin-left: 0.3rem;
+  font-family: var(--font-mono); font-size: 0.58rem; line-height: 1.1;
+  background: var(--beige); color: var(--deep-pine);
+  border-radius: 7px; padding: 0.02rem 0.24rem; min-width: 0.95rem; text-align: center;
+}
+.tb .tn:empty { display: none; }
+
+/* --- kort berichtje na een tik --- */
+.toast {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(var(--bar-h) + 0.7rem); z-index: 60;
+  background: var(--deep-pine); color: #f2efe8; font-size: 0.8rem;
+  padding: 0.5rem 0.9rem; border-radius: 999px; box-shadow: 0 3px 12px rgba(28, 34, 32, 0.3);
+  max-width: calc(100vw - 2rem); text-align: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .toast { animation: opkomen 0.18s ease-out; }
+  @keyframes opkomen { from { opacity: 0; transform: translate(-50%, 6px); } to { opacity: 1; transform: translate(-50%, 0); } }
+}
+
+/* meldingen als één regel: twee gekleurde blokken namen het halve scherm in beslag */
+.alertline {
+  margin: 0 0 0.5rem; padding: 0.4rem 0.6rem; font-size: 0.8rem; color: var(--ink);
+  background: var(--c-groen-bg); border-radius: 7px;
+}
+.alertline b { color: var(--c-groen); }
+
+
+/* weg naar de instellingen: Jan kan vanaf zijn telefoon geen bestand bewerken */
+.instelknop {
+  display: block; text-align: center; min-height: 44px; line-height: 44px;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  text-decoration: none; color: var(--ink-strong); font-size: 0.88rem; margin-bottom: 0.4rem;
+}
+
+/* Link naar de advertentie in plaats van een foto (Jan, 26-09-2026). Volle breedte en 44 px hoog,
+   zodat hij met een duim te raken is zonder dat je het kaartje per ongeluk opent. */
+.card .adv {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 44px; padding: 0 0.8rem; margin-top: 0.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem; font-weight: 500; color: var(--c-blauw);
+  text-decoration: none;
+}
+.card .adv:active { background: var(--sunk); }
+.card .adv .pijl { color: var(--faint); font-size: 0.95rem; }

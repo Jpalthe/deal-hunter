@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.tree.deal-hunter-review</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/root-admin/.hermes/hermes-agent/venv/bin/python</string>
+        <string>-m</string>
+        <string>uvicorn</string>
+        <string>dh.review:app</string>
+        <string>--host</string>
+        <string>127.0.0.1</string>
+        <string>--port</string>
+        <string>8710</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/root-admin/tree-es/deal-hunter</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/root-admin/tree-es/deal-hunter/logs/review.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/root-admin/tree-es/deal-hunter/logs/review.err.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>/Users/root-admin</string>
+        <key>TZ</key>
+        <string>Europe/Madrid</string>
+    </dict>
+</dict>
+</plist>

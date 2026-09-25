@@ -1,0 +1,1241 @@
+{
+ "toelichting": "Makelaars met een eigen website in Jávea, Benitachell en Moraira. Per kantoor staat of automatisch lezen mag (robots.txt en gebruiksvoorwaarden, gecontroleerd op de genoemde datum) en welke pagina's het aanbod tonen. 'lezen' betekent dat de lezer de site elke ronde uitleest; 'feed vragen' dat het niet mag maar het systeem een exportfeed kent; 'overslaan' dat het niet mag en er geen alternatief is.",
+ "bijgewerkt": "24-09-2026",
+ "kantoren": [
+  {
+   "naam": "Xabiacasa",
+   "website": "https://www.xabiacasa.com",
+   "plaats": "Jávea",
+   "cms": "Inmoweb",
+   "advies": "lezen",
+   "robots": "User-agent: * verbiedt alleen URL's met de sorteer- en filterparameters modo=, od= en dt=; aanbod- en objectpagina's zijn vrij (gecontroleerd 24-09-2026).",
+   "sitemap_url": "https://www.xabiacasa.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.xabiacasa.com/casas-chalets-en-venta-3-1.html",
+    "https://www.xabiacasa.com/apartamentos-en-venta-1-1.html",
+    "https://www.xabiacasa.com/casas-adosadas-en-venta-21-1.html",
+    "https://www.xabiacasa.com/casas-de-campo-en-venta-16-1.html",
+    "https://www.xabiacasa.com/casas-de-pueblo-en-venta-20-1.html"
+   ],
+   "bron": "eigen controle 24-09-2026; kantoor stond al in het register (Inmoweb-lid, zoekronde 17-09)"
+  },
+  {
+   "naam": "Randof Real Estate",
+   "website": "https://www.randofrealestate.com",
+   "plaats": "Jávea (ook Dénia, Benitachell, Moraira, Benissa)",
+   "cms": "Inmoweb",
+   "advies": "lezen",
+   "robots": "User-agent: * verbiedt alleen URL's met de sorteer- en filterparameters modo=, od=, dt=, i= en c=; aanbod- en objectpagina's zijn vrij (gecontroleerd 24-09-2026).",
+   "voorwaarden": "Geen aviso legal of gebruiksvoorwaarden gevonden op de homepage of in de sitemap (24-09-2026).",
+   "sitemap_url": "https://www.randofrealestate.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.randofrealestate.com/casas-chalets-en-venta-3-1.html",
+    "https://www.randofrealestate.com/apartamentos-en-venta-1-1.html",
+    "https://www.randofrealestate.com/casas-adosadas-en-venta-21-1.html",
+    "https://www.randofrealestate.com/casas-de-campo-en-venta-16-1.html",
+    "https://www.randofrealestate.com/casas-de-pueblo-en-venta-20-1.html",
+    "https://www.randofrealestate.com/solares-urbanos-en-venta-27-1.html"
+   ],
+   "opmerking": "Sitemap 24-09-2026: 388 objectpagina's, 145 in Jávea, Benitachell, Moraira of Teulada. Het oude adres randof.com uit het register is een geparkeerd domein; het juiste adres kwam van Jan.",
+   "bron": "eigen controle 24-09-2026"
+  },
+  {
+   "naam": "Alensol S.L.",
+   "website": "https://www.alensol-javea.com",
+   "plaats": "Jávea (Ctra. de la Granadella 23)",
+   "cms": "eigen",
+   "advies": "lezen",
+   "robots": "robots.txt (24-09-2026): \"User-agent: * / Disallow: /*.php / Disallow: /*.css / Disallow: /*.htaccess / Allow:/index.php / Allow:/login.php / Allow:/empresa.php / Allow:/clients/\". Alleen .php-, .css- en .htaccess-URL's zijn verboden. De aanbodpagina (/venta-490-2903, zonder extensie) en de objectpagina's (producto-...-2903-es.html) vallen daar niet onder en mogen dus gelezen worden. Geen Sitemap-",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.alensol-javea.com/venta-490-2903"
+   ],
+   "geschat_aantal": 2,
+   "gebied": "Van de 2 beschikbare objecten ligt er 1 in Jávea (Urb. Costa Nova) en 1 is een perceel in Dénia. Daarnaast 2 gereserveerde en 13 verkochte objecten nog online (plaats niet bekeken). Kantoor zit zelf i",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat het lezen van aanbod- en objectpagina's toe; de aviso legal (aviso-legal-490-25.html, 24-09-2026) is inhoudelijk leeg en bevat geen verbod; condiciones de venta en política de privacidad zijn niet opgehaald (paginabudget). Geen sitemap (/sitemap.xml geeft 404). Objectpagina heeft ge",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-alensol-javea.com.md"
+  },
+  {
+   "naam": "A.V. Costamar S.L.",
+   "website": "https://www.avcostamar.com",
+   "plaats": "Jávea (Av. Jaime I 15)",
+   "cms": "WordPress",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200). Voor \"User-agent: *\" staat alleen \"Disallow: /wp-admin/\" (met \"Allow: /wp-admin/admin-ajax.php\"); verder alles toegestaan. Objectpagina's (/propiedad/...) en aanbodpagina's (/estado-propiedad/en-venta/, /ciudad-propiedad/...) vallen daar niet onder. Bevat \"Sitemap: https://www.avcostamar.com/wp-sitemap.xml\".",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.avcostamar.com/wp-sitemap-posts-property-1.xml",
+   "aanbod_urls": [
+    "https://www.avcostamar.com/estado-propiedad/en-venta/"
+   ],
+   "geschat_aantal": 42,
+   "gebied": "Minstens 11 van 44 URL's zeker in Jávea (8, incl. puerto/Arenal/Montgó), Benitachell (2) of Moraira (1); 3 elders (Benissa, Dénia, Mascarat); van 30 URL's is de plaats niet uit de URL af te leiden. Ka",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 5 pagina's opgehaald (robots.txt, sitemap-index, objecten-sitemap, 1 objectpagina, /aviso-legal/). robots.txt staat lezen toe. Aviso Legal bevat alleen de LSSI-bedrijfsidentificatie (A.V. Costamar S.L., CIF B53047791, Avda. Jaime I 15, 03730 Jávea, 966 460 047, info@avcostamar.com)",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-avcostamar.com.md"
+  },
+  {
+   "naam": "Casitas Ibérica",
+   "website": "https://www.casitasiberica.com",
+   "plaats": "Jávea (Ctra. Jesús Pobre 164)",
+   "cms": "WordPress",
+   "advies": "lezen",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent: * / Disallow: /wp-admin/ / Allow: /wp-admin/admin-ajax.php\". Alleen de beheeromgeving is verboden; /property-list/, /properties/... en /locations/... mogen gelezen worden. Geen Sitemap-regel.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.casitasiberica.com/property-list/"
+   ],
+   "geschat_aantal": 91,
+   "gebied": "Jávea 55 van 91 (ca. 60%; bron /locations/javea/ \"55 Properties Found\", 24-09-2026; de site telt Jesús Pobre mee onder Jávea). Benitachell/Cumbre del Sol en Moraira niet apart geteld (paginabudget); s",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe; geen voorwaarden gevonden (geen link in menu/footer, 0 treffers in de HTML van 4 pagina's; webzoekopdracht niet meer mogelijk, /privacy-policy/ niet geprobeerd wegens budget van 5 pagina's). Sitemap ontbreekt: /sitemap.xml geeft 404, geen Sitemap-regel, WordPress 5.1.19 h",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-casitasiberica.com.md"
+  },
+  {
+   "naam": "Inmobiliaria Calablanca (opdracht: Cala Blanca Villas S.L.; aviso legal noemt Mediterranean Living, S.L.)",
+   "website": "https://www.calablanca.com",
+   "plaats": "Jávea (Av. de la Fontana 2, local 6)",
+   "cms": "Sooprema",
+   "advies": "lezen",
+   "robots": "User-agent: * eindigt op \"Allow: /\"; aanbod- en objectpagina's mogen gelezen worden. Uitgesloten: formulieren (/html/formulario/...), galerij-modals, printversies (*/imprimir/*, */print/*) en bladerpagina's (/*/*/*/pagina/*, /page/*). Tweede blok \"User-agent: * / Crawl-delay: 14\" = maximaal 1 verzoek per 14 s. 131 tools met naam geblokkeerd, o.a. Wget, Python-urllib, HTTrack; geen AI-bots genoemd.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.calablanca.com/propiedades-en-venta-en-costa-blanca/"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Zwaartepunt Jávea. Homepage (24-09-2026): 11 objectlinks, 8 met \"javea\" in de slug, 1 Moraira, 2 garages zonder plaats. Zoekfilter \"Localidad\" biedt alleen Benitachell, Calpe, Denia, Jávea, Moraira, T",
+   "crawl_delay_s": 14,
+   "opmerking": "Toets 24-09-2026, precies 5 fetches (robots.txt, homepage, aviso legal, /sitemap.xml, 1 objectpagina), >2 s ertussen; zoekbudget was op. robots.txt staat lezen toe met Crawl-delay 14 s en verbod op bladerpagina's/printversies. Aviso legal (https://www.calablanca.com/aviso-legal/) noemt robots/scrapi",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-calablanca.com.md"
+  },
+  {
+   "naam": "Crown Properties S.L.",
+   "website": "https://www.crown-property.com",
+   "plaats": "Jávea (Av. de París 2)",
+   "cms": "Sooprema (Paagees-platform) [te verifiëren]",
+   "advies": "feed vragen",
+   "robots": "robots.txt (24-09-2026): \"User-agent: *\", \"Allow: /\", Disallow alleen voor /admin/, /crm/, /api/, /ajax/, /cgi-bin/, /tmp/, /cache/. De aanbodpagina's (/venta/..., /villas-de-lujo-javea/ enz.) zijn dus toegestaan; geen Sitemap-regel. Let op: de eerste poging (curl, eigen user-agent) kreeg geen robots.txt maar een JavaScript-botcontrole \"Security Check — Powered by Paagees Shield\" (SHA-256 proof-of",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.crown-property.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.crown-property.com/venta/relevant/"
+   ],
+   "geschat_aantal": 712,
+   "gebied": "Grofweg 70% van de sitemap-URL's met plaatsnaam ligt in Jávea (ca. 420), Moraira (ca. 95), Benitachell (ca. 45) en Cumbre del Sol (ca. 10); rest Dénia ca. 85, Benissa ca. 60, Calpe ca. 25, Pedreguer c",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe en de aviso legal (https://www.crown-property.com/aviso-legal/, 24-09-2026; CROWN PROPERTIES S.L., CIF B03092723, Avd. París 2, Playa Arenal, Jávea) noemt scraping/bots niet — wel een gewone clausule intellectueel eigendom (reproductie/distributie zonder toestemming verbod",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-crown-property.com.md"
+  },
+  {
+   "naam": "Aguila Rent a Villa",
+   "website": "https://www.aguilarent.com",
+   "plaats": "Jávea (Av. de Palmela 56)",
+   "cms": "eigen (verhuurplatform i-rent.net op ASP.NET/IIS; geen makelaars-CMS)",
+   "advies": "overslaan",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent:*\" / \"Allow: /\" plus twee Sitemap-regels (sitemap_gb.xml?lang=gb en sitemap_fr.xml?lang=fr). Geen Disallow, geen Crawl-delay; iedereen mag alles lezen.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.aguilarent.com/sitemap_gb.xml?lang=gb",
+   "aanbod_urls": [
+    "https://www.aguilarent.com/holiday-rentals/for-sale"
+   ],
+   "geschat_aantal": 2,
+   "gebied": "Koopaanbod: 0 van 2 (1 Calpe, 1 Dénia) op 24-09-2026. Verhuuraanbod: 408 van 672 accommodaties (61 %) in Jávea (324), Moraira (58) en Benitachell (26).",
+   "crawl_delay_s": null,
+   "opmerking": "Vakantieverhuurkantoor met 2 koopobjecten buiten ons gebied; voorwaarden verbieden overname van inhoud. Niet lezen. Vakantieverhuurkantoor, geen makelaar. robots.txt staat alles toe; de \"Legal notice and disclaimer\" (https://www.aguilarent.com/holiday-rentals/information/leral-notice-and-disclaimer) noemt scraping/",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-aguilarent.com.md"
+  },
+  {
+   "naam": "AR Luxury Living (Antonio Roselló Luxury Living)",
+   "website": "https://www.arluxuryliving.com",
+   "plaats": "Jávea",
+   "cms": "onbekend",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200, 421 regels). Blok 'User-agent: *' eindigt met 'Allow: /' en sluit alleen formulieren, galerij-modals, printversies (imprimir/print/drucken/imprimer/afdrukken) en paginanummer-URL's (/*/*/*/pagina|pages|page|seite|stranitsa|siden/*) af. Aanbod- en objectpagina's mogen dus gelezen worden, vervolgpagina's van lijsten niet. Daarna 129 met naam genoemde bots volledig geb",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.arluxuryliving.com/en/villas-for-sale-cumbre-del-sol-benitachell/"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Onbekend voor het geheel. Menu noemt zeven gebieden: Jávea, Moraira, Altea, Calpe, Dénia, Benissa, Benitachell — drie daarvan zijn doelgebied. Alleen de Benitachell-pagina is gelezen: 8 objecten, alle",
+   "crawl_delay_s": 14,
+   "opmerking": "Toets 24-09-2026, 5 verzoeken. robots.txt staat lezen toe (Allow: /) met Crawl-delay 14 s en verbod op paginanummer-, print- en formulier-URL's. Voorwaarden: niet gevonden — de homepage en /sitemap.xml gaven met een gewone HTTP-client alleen de bot-controlepagina 'Security Check / Verifying your bro",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-arluxuryliving.com.md"
+  },
+  {
+   "naam": "Bartolomé Bas (Inmobiliaria Bartolomé Bas, S.L.)",
+   "website": "https://bartolomebas.com",
+   "plaats": "Jávea (Av. Libertad 2, Edif. Estrella del Sur)",
+   "cms": "WordPress",
+   "advies": "feed vragen",
+   "robots": "Eén blok \"User-agent: *\" (Last-Modified 29-10-2025, opgehaald 24-09-2026). Geen Disallow op /propiedades/ of een andere aanbodmap. Geblokkeerd zijn alleen tracking-parameters (?_ga= ?utm_… ?fbclid= ?glang=), /wp-admin/ (behalve admin-ajax.php), /wp-includes/, /wp-content/plugins/ en /themes/, feeds (/feed/, /*/feed/$), trackbacks, zoekresultaten (/*?s=), paginering (/*&paged_), sorteer-/filterpara",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://bartolomebas.com/sitemap_index.xml",
+   "aanbod_urls": [
+    "https://bartolomebas.com/todas-las-propiedades/"
+   ],
+   "geschat_aantal": 120,
+   "gebied": "Ca. 94% in Jávea, Benitachell of Moraira: van de 200 object-slugs in propiedades-sitemap1.xml (24-09-2026) noemen 182 een plaats — Jávea 160 (88%), Benitachell/Cumbre del Sol 7 (4%), Moraira 4 (2%); d",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe en de objectpagina's zijn technisch goed uitleesbaar (gegevens als gewone tekst in JetEngine-velden: REF. 1114, Chalet, Trencall/Jávea, 799.000 €, 161 m² bebouwd, 711 m² perceel, 4 slaapkamers, 2 badkamers; JSON-LD is alleen Rank Math-SEO zonder prijs/oppervlakte; og:title",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-bartolomebas.com.md"
+  },
+  {
+   "naam": "Engel & Völkers Valencia Jávea",
+   "website": "https://www.engelvoelkers.com/es/en/shops/valencia-javea",
+   "plaats": "Jávea (Av. del Mediterráneo 238 volgens E&V-site; Av. de la Libertad 47 volgens gemeente)",
+   "cms": "eigen",
+   "advies": "overslaan",
+   "robots": "Het letterlijke pad /es/en/shops/valencia-javea/robots.txt geeft 404; de echte robots.txt staat op de root (opgehaald 24-09-2026). Voor User-agent: * zijn de zoek- en resultaatpagina's verboden: \"Disallow: */search/*\", \"Disallow: */propertysearch?*\", \"Disallow: */busca?*\" (en dezelfde regel in zeven andere talen) plus \"Disallow: /*/account/\". Objectpagina's (/es/en/exposes/<id>) en kantoorpagina's",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://www.engelvoelkers.com/es/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.engelvoelkers.com/es/en/propertysearch?businessArea[]=residential&currency=EUR&marketCountryCode=es&masterDataShopIds[]=906d38b1&measurementSystem=metric&normalizedStatuses[]=ACTIVE&placeIds[]=ChIJkzEHbEwDnhIR0Ngh126vAgQ&propertyMarketingType[]=sale&sortingOptions[]=PUBLISHED_AT_DESC"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Onbekend. De kantoorpagina toont alleen een blok van 6 koop- en 6 huurobjecten (blokgrootte, niet het totaal); het volledige overzicht zit achter de door robots.txt verboden zoekpagina. Alle twaalf zi",
+   "crawl_delay_s": null,
+   "opmerking": "Gestopt na stap 2. De gebruiksvoorwaarden (https://www.engelvoelkers.com/de/en/terms-of-use, \"General Terms of Use and Business\" versie 2.0, stand februari 2026, opgehaald 24-09-2026) verbieden in art. 7.2 \"any form of automated reading, extraction, or collection of content and data from the Platfor",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-engelvoelkers.com.md"
+  },
+  {
+   "naam": "Houses Investment Holding S.L. (Javea Houses)",
+   "website": "https://www.javeahouses.com",
+   "plaats": "Jávea (Av. de la Libertad bl. 7F, Arenal)",
+   "cms": "WordPress (thema RealHomes 4.5.2 + plugin Easy Real Estate 2.4.2, Elementor); REST API wp-json/wp/v2/properties open",
+   "advies": "lezen",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent: * / Disallow: /wp-admin/ / Allow: /wp-admin/admin-ajax.php / Sitemap: https://www.javeahouses.com/wp-sitemap.xml\". Alleen het beheergedeelte is afgeschermd; /property/, /busqueda-propiedades/ en /property-city/ zijn toegestaan.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.javeahouses.com/wp-sitemap-posts-property-1.xml",
+   "aanbod_urls": [
+    "https://www.javeahouses.com/busqueda-propiedades/"
+   ],
+   "geschat_aantal": 80,
+   "gebied": "Vrijwel alles in Jávea (naar schatting 90%+): 33 slugs noemen javea, plus Jávea-wijken (Arenal 9, Montgó 3, Tosalet 2, Costa Nova, Cap Martí, casco antiguo, puerto); 1 Benitachell, 0 Moraira, 1 Dénia,",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt laat alles behalve /wp-admin/ toe; de enige juridische pagina (https://www.javeahouses.com/avisos-legales/, 24-09-2026) is een LSSI- en privacyverklaring zonder gebruiksvoorwaarden en zonder een woord over scraping, robots of reproductie (0 treffers). De property-sitemap telt 80 object-UR",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeahouses.com.md"
+  },
+  {
+   "naam": "Deluxe Homes Javea (DELUXE HOMES JAVEA, S.L.)",
+   "website": "https://www.deluxehomesjavea.com",
+   "plaats": "Jávea",
+   "cms": "eigen (Astro v5.13.2 + Payload CMS op het Tesoro-vastgoedplatform, tesorohq.io; objecten via Kyero-import)",
+   "advies": "feed vragen",
+   "robots": "HTTP 200 op 24-09-2026. Inhoud: \"User-agent: *\" met Disallow alleen voor /404, /payload-error en /{en,es,nl,de,fr}/not-found, gevolgd door \"Allow: /\" en \"Sitemap: https://www.deluxehomesjavea.com/sitemap.xml\". Aanbod- en objectpagina's (/en/properties, /en/properties/property-…) zijn dus voor elke robot toegestaan; geen Crawl-delay.",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://www.deluxehomesjavea.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.deluxehomesjavea.com/en/properties"
+   ],
+   "geschat_aantal": 1216,
+   "gebied": "Onbekend voor het geheel [te verifiëren]. Steekproef van de 12 objecten op de eerste aanbodpagina (24-09-2026): Jávea 7, Altea 2, Dénia 1, Benissa 1, Calpe 1; geen Benitachell of Moraira in de steekpr",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe en de pagina's zijn technisch uitstekend leesbaar: alle objectgegevens (tesoro_reference DHJ2235A, interne ref V684, price 775000 EUR, for_sale, villa, builded_area 202, plot_size 1088, 4 slk/2 bad, Jávea) zitten als JSON in de Astro-island-props; JSON-LD is alleen een leg",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-deluxehomesjavea.com.md"
+  },
+  {
+   "naam": "EuroJavea Inmobiliaria (EUROJAVEA, S.L.)",
+   "website": "https://www.eurojavea.com",
+   "plaats": "Jávea (Pl. President Adolfo Suárez 9, Puerto)",
+   "cms": "WordPress met Inmoba-plugin (thema inmobasolidbase), aanbod en foto's uit het Inmobalia-CRM (media.inmobalia.com)",
+   "advies": "feed vragen",
+   "robots": "Opgehaald 24-09-2026 21:08 UTC (bestand van 01-06-2023). Inhoud: \"User-agent: * / Disallow: /wp-admin/ / Disallow: /*=* / Disallow: /*?* / Disallow: /*&*\" plus twee Sitemap-regels (sitemap/sitemap.xml.gz en sitemap_index.xml). Alleen de beheeromgeving en URL's met parameters (zoekfilters, paginering) zijn verboden; aanbod- en objectpagina's hebben schone URL's en mogen door elke robot gelezen word",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://www.eurojavea.com/sitemap/sitemap-search-1.xml.gz",
+   "aanbod_urls": [
+    "https://www.eurojavea.com/properties"
+   ],
+   "geschat_aantal": 204,
+   "gebied": "Circa 180 van 204 objecten (≈ 88 %): Jávea 173, Teulada/Moraira 7 (5 met 'moraira' in het pad), Benitachell 2. Rest: Dénia 13, Benissa 3, overige plaatsen 6. Telling op de Engelse objectpagina's in de",
+   "crawl_delay_s": null,
+   "opmerking": "Technisch is de site uitstekend leesbaar: robots.txt staat het toe, de sitemap sitemap/sitemap-search-1.xml.gz (dagelijks vernieuwd, 3.105 URL's in 4 talen, 204 unieke objecten: 135 villa's EJV, 36 percelen EJP, 30 appartementen EJA) noemt elk object, en de objectpagina heeft schema.org JSON-LD Prod",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-eurojavea.com.md"
+  },
+  {
+   "naam": "Indarte Inmobiliaria (REAL ESTATE INDARTE)",
+   "website": "https://www.indarteinmobiliaria.com",
+   "plaats": "Jávea (Carrer Thiviers 2)",
+   "cms": "eigen (statische archiefkopie van een oude WordPress-site met RealHomes-thema; geen draaiend CMS, geen feed)",
+   "advies": "overslaan",
+   "robots": "robots.txt bestaat (HTTP 200, 51 bytes, last-modified 06-11-2025) en bevat één regel: \"Sitemap: http://indarteinmobiliaria.com/sitemap.xml\". Geen User-agent- of Disallow-regels, dus voor User-agent: * is niets verboden.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.indarteinmobiliaria.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.indarteinmobiliaria.com/"
+   ],
+   "geschat_aantal": null,
+   "gebied": "100% Jávea in het zichtbare deel: alle 20 objecttitels op homepage/sitemap bevatten \"javea\" (Arenal, Puerto, Pueblo, Thiviers, Balcón al Mar, Costa Nova, La Cala, Montañar). Benitachell en Moraira sta",
+   "crawl_delay_s": null,
+   "opmerking": "De site is geen levende website maar een onvolledige, statische \"gratis demo\"-kopie van een Wayback-Machine-downloader van de oude WordPress-site (RealHomes-thema, Yoast 5.7, uploads t/m april 2019; kopie op 06-11-2025 op een Apache-server gezet). De objectpagina (jv-1951) is een stub van 719 bytes ",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-indarteinmobiliaria.com.md"
+  },
+  {
+   "naam": "Inmo Villas Jávea",
+   "website": "https://www.inmovillasjavea.com",
+   "plaats": "Jávea (Av. del Mediterráneo 41, nº 30)",
+   "cms": "WordPress met Inmobalia-plugin (WordPress 7.0.1, WPML, Rank Math, Breeze, Complianz; aanbod via /wp-content/plugins/inmobaliaplugin/, media.inmobalia.com, service.inmobalia.com ag=819; Cloudflare CDN)",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 21:10 UTC. \"User-Agent: * / Disallow: /wp-admin/ / Allow: /wp-admin/admin-ajax.php\" plus twee Disallow-regels voor /wp-content/plugins/inmobaliaplugin/image.php (dynamische afbeeldingen). Aanbodpagina's (/propiedades, /propiedad/...) vallen nergens onder een Disallow. Sitemap-regel: https://www.inmovillasjavea.com/sitemap_index.xml. Afspraak: image.php niet aanroepen.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.inmovillasjavea.com/property-sitemap.xml",
+   "aanbod_urls": [
+    "https://www.inmovillasjavea.com/propiedades"
+   ],
+   "geschat_aantal": 330,
+   "gebied": "Circa 87% van de 330 koopobjecten: Jávea incl. wijken 246 (75%), Benitachell/Cumbre del Sol 24 (7%), Moraira 18 (5%). Rest 42: Dénia 17, Benissa 9, Calpe 7, Altea 7, Pedreguer 1, Benidorm 1. Schatting",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt (24-09-2026) staat lezen van alle aanbodpagina's toe; alleen /wp-admin/ en het script image.php zijn geblokkeerd. Geen aviso legal of gebruiksvoorwaarden gevonden in menu of voettekst; de enige juridische pagina (/privacy → /en/privacy, standaard WordPress-privacytekst) bevat geen verbod ",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-inmovillasjavea.com.md"
+  },
+  {
+   "naam": "Javea Homes",
+   "website": "https://www.javeahomes.com",
+   "plaats": "Jávea (Av. de la Fontana 2, Edif. Estrella del Sur, local 3)",
+   "cms": "onbekend",
+   "advies": "overslaan",
+   "robots": "robots.txt (24-09-2026 21:12 UTC, HTTP 200): voor User-agent: * geldt \"Allow: /\", met uitzonderingen: doorbladeren van lijstpagina's is verboden (\"Disallow: /*/*/*/pagina/*\", \"/page/*\", \"/seite/*\", \"/stranitsa/*\", \"/siden/*\", \"/pages/*\"), evenals formulieren (/html/formulario/llamanos/, /html/formulario/48horas/, /html/formucontraoferta/*), fotogalerij-vensters (/html/galeriamodal/*), printversies",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [],
+   "geschat_aantal": null,
+   "gebied": "onbekend: geen aanbod zichtbaar; de domeinnaam wijst op Jávea als kernmarkt, maar dat is niet geverifieerd",
+   "crawl_delay_s": 14,
+   "opmerking": "Site staat in onderhoud (24-09-2026 21:12-21:14 UTC): homepage en /sitemap.xml geven allebei dezelfde lege pagina \"System Updating\" (HTTP 200, 1529 bytes, alleen een afbeelding /imagenes/web/info.png met de tekst \"We are updating our system... Soon You get all the information of interest\"). Bevestig",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeahomes.com.md"
+  },
+  {
+   "naam": "Jávea Continental (INMOBILIARIA JAVEA CONTINENTAL)",
+   "website": "https://www.javeacontinental.com",
+   "plaats": "Jávea (Av. Jaime I 11 B, Puerto)",
+   "cms": "Inmoweb",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200, 292 regels). Circa 140 bots worden op naam geblokkeerd (SemrushBot, Bytespider, ahrefsbot, dotbot, Baiduspider, wget, HTTrack, WebCopier enz.). Voor alle overige lezers geldt alleen: \"User-agent: * / Disallow: /*?*modo= / Disallow: /*?*od= / Disallow: /*?*dt= / Disallow: /*?*i= / Disallow: /*?*c=\". Aanbod- en objectpagina's zijn dus toegestaan; alleen URL's met die ",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.javeacontinental.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.javeacontinental.com/results/?id_tipo_operacion=1"
+   ],
+   "geschat_aantal": 49,
+   "gebied": "49 van 49 objecten in Jávea (100%); 0 in Benitachell, 0 in Moraira. Het zoekfilter kent alleen Jávea-wijken (Ambolo, Arenal, Capsades, La Corona, Tosalet, Puerto, enz.).",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 5 verzoeken met 2 s ertussen. (1) robots.txt staat lezen toe voor User-agent: *, op vijf query-parameters na. (2) De enige juridische pagina is /lopd/ (\"Avisos legales\"): puur privacybeleid (LOPD 15/1999) plus cookies; nul treffers op scraping, robots, automatisch lezen, extracción",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeacontinental.com.md"
+  },
+  {
+   "naam": "Giuliano Villas (Giuliano Villas SL, Jávea)",
+   "website": "https://www.costablancajaveaproperties.com",
+   "plaats": null,
+   "cms": "eigen (Mattis-Framework 4.0 / madstudio, PHP-maatwerk van een Spaans webbureau; niet Inmoweb/Mediaelx/Sooprema/Inmovilla/Witei/WordPress)",
+   "advies": "lezen",
+   "robots": "giuliano-villas.com/robots.txt: 404 (24-09-2026); de homepage daar is een 102-byte JavaScript-doorverwijzing naar costablancajaveaproperties.com. Op de echte site (robots.txt, last-modified 25-07-2025): voor User-agent: * geldt \"Allow: /\" met uitzonderingen, letterlijk: \"Disallow: /*/*/*/page/*\" (en pagina/pages/seite/stranitsa/siden), \"Disallow: */print/*\", \"Disallow: /html/galeriamodal/*\", formu",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.costablancajaveaproperties.com/properties/sell/all/"
+   ],
+   "geschat_aantal": 450,
+   "gebied": "Ruwweg twee derde tot driekwart. Steekproef 24-09-2026: pagina 1 van de lijst 8 van 12 in Jávea (Costa Nova, Cap Martí, Adsubia 3x, Avenida Augusta, Town, Covatelles), 0 Benitachell, 0 Moraira, rest J",
+   "crawl_delay_s": 14,
+   "opmerking": "Website-adres opgeschoond uit \"https://www.costablancajaveaproperties.com (opgegeven adres http://www.giuliano-\". Lezen mag, maar beperkt: alleen objectpagina's en pagina 1 van /properties/sell/all/, /properties/sell/work-new/ en de vier landingspagina's (villas/luxury-villas/apartments-for-sale-in-javea, category giuliano-villas-s-exclusive); vervolgpagina's en printversies zijn verboden; 14 seconden tussen ve",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-costablancajaveaproperties.com (opgegeven adres http:.md"
+  },
+  {
+   "naam": "Javea Home Finders (JAVEA HOME FINDERS XXI, S.L.)",
+   "website": "https://www.javeahomefinders.com",
+   "plaats": "Jávea (Av. Libertad 19, local 11, Arenal; ook Puerto)",
+   "cms": "eigen (EasyInmo, makelaars-CMS uit Alicante met XML-exportfeed)",
+   "advies": "feed vragen",
+   "robots": "robots.txt (HTTP 200, 24-09-2026) bevat alleen: \"User-agent: * / disallow: /your-page/ / disallow: /admin/ / disallow: /admin2/\". Objectpagina's (/<id>/property/...) en aanbodpagina's zijn niet afgeschermd. Geen Sitemap-regel.",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://www.javeahomefinders.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.javeahomefinders.com/search-property"
+   ],
+   "geschat_aantal": 107,
+   "gebied": "90 van 107 object-URL's (84%): Jávea 60, Benitachell 25, Moraira 5; rest Llíber 4, Dénia 4, Benissa 3, Altea 3, Calpe 2, 1 onbekend (sitemap 24-09-2026)",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt laat lezen toe, maar de Terms & Conditions (https://www.javeahomefinders.com/terms-and-conditions, 24-09-2026) art. 4 verbieden uitdrukkelijk \"extracting, reusing ... by any means or procedure\" en staan alleen een tijdelijke privékopie toe \"provided that this is not for the purpose of car",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeahomefinders.com.md"
+  },
+  {
+   "naam": "Javea Immo",
+   "website": "https://www.javeaimmo.com",
+   "plaats": "Jávea (Av. de Estrasburgo, local 3)",
+   "cms": "Paagees (weblaag met botcontrole; onderliggend CRM onbekend)",
+   "advies": "feed vragen",
+   "robots": "User-agent: * / Allow: / / Disallow: /admin/, /crm/, /api/, /ajax/, /cgi-bin/, /tmp/, /cache/. Geen Sitemap-regel. Aanbodpagina's (/venta/...) zijn toegestaan. Maar: een gewone HTTP-client (curl) krijgt in plaats van robots.txt een JavaScript-botcontrole \"Security Check — Powered by Paagees Shield\" (SHA-256-rekenpuzzel + cookie __shield); alleen de standaard ophaaltool kwam er zonder kunstgrepen d",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://www.javeaimmo.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.javeaimmo.com/venta/"
+   ],
+   "geschat_aantal": 174,
+   "gebied": "Ruwweg 55-65% Jávea, ca. 4% Benitachell/Cumbre del Sol, ca. 6% Moraira/Teulada — samen circa twee derde; rest Dénia, La Sella/Pedreguer, Jalón-vallei, Gata, Calpe, Benissa. Schatting op basis van 289 ",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe, maar de site zet de Paagees Shield (JS-rekenpuzzel) voor elke pagina, die een gewone automatische lezer tegenhoudt; die is niet omzeild. De aviso legal (https://www.javeaimmo.com/aviso-legal/, 24-09-2026) verbiedt \"la reproducción, la distribución y la comunicación públic",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeaimmo.com.md"
+  },
+  {
+   "naam": "L'Aurora Villas Selection",
+   "website": "https://www.lauroravillas.com",
+   "plaats": "Jávea (Ronda Norte 6)",
+   "cms": "Inmoweb",
+   "advies": "lezen",
+   "robots": "robots.txt (HTTP 200, 24-09-2026) blokkeert eerst een lange lijst specifieke bots volledig (o.a. SemrushBot, Bytespider, HTTrack, wget/Wget, libwww, httplib, lwp-trivial, ia_archiver, ahrefsbot, Baiduspider: \"Disallow: /\"). Voor alle overige bots: \"User-agent: * / Disallow: /*?*modo= / Disallow: /*?*od= / Disallow: /*?*dt= / Disallow: /*?*i= / Disallow: /*?*c=\". Een User-agent: * mag dus alle aanb",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.lauroravillas.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.lauroravillas.com/results/?id_tipo_operacion=1"
+   ],
+   "geschat_aantal": 50,
+   "gebied": "32 van 50 objecten (64%): Jávea 30 (pueblo, Montgó, La Plana, Tosalet, Castellans, Cansalades, Cala Blanca, Arenal, Frechinal, Montañar II), Benitachell 1, Teulada 1 (Moraira zelf 0). Rest: Gata de Go",
+   "crawl_delay_s": null,
+   "opmerking": "Gecontroleerd 24-09-2026, vijf pagina's opgehaald (robots.txt, sitemap.xml, /lopd/, casas-chalets-en-venta-3-1.html, één objectpagina), minimaal 2-3 s tussenpoos. (1) robots.txt staat een gewone bot toe op alle aanbod- en objectpagina's; alleen URL's met de parameters modo=/od=/dt=/i=/c= zijn verbod",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-lauroravillas.com.md"
+  },
+  {
+   "naam": "Maravilla Costa S.L.",
+   "website": "https://www.maravilla-costa.com",
+   "plaats": "Jávea (Av. del Pla 124, local 8)",
+   "cms": "Sooprema",
+   "advies": "feed vragen",
+   "robots": "User-agent: * heeft \"Allow: /\", dus /for-sale/ en de objectpagina's mogen gelezen worden. Verboden: /images/, formulieren, fotogalerij-modal, printversies en paginering op diepere filterpagina's (Disallow: /*/*/*/page/*, /pagina/, /seite/ enz.). Een tweede User-agent: *-blok zet Crawl-delay: 14 (max. één verzoek per 14 s). Daarnaast ca. 140 blokken die downloaders/scrapers bij naam volledig uitslu",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.maravilla-costa.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.maravilla-costa.com/for-sale/"
+   ],
+   "geschat_aantal": 25,
+   "gebied": "Circa 63 %: van de 24 objectpagina's in de sitemap liggen 10 in Jávea, 4 in Moraira (1 daarvan Fanadix/Teulada-Moraira) en 1 in Benitachell = 15 van 24. Rest: Calpe 2, La Sella 2, Teulada 1, Altea 1, ",
+   "crawl_delay_s": 14,
+   "opmerking": "Toets 24-09-2026, 5 verzoeken met ≥ 14 s tussenruimte (robots.txt, sitemap.xml, homepage, /legal-notice/, één objectpagina); /for-sale/ zelf niet opgehaald (budget op). robots.txt laat lezen toe met Crawl-delay 14 en zonder paginering op diepere filterpagina's. De Legal notice (alleen in het Spaans)",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-maravilla-costa.com.md"
+  },
+  {
+   "naam": "MG Villas (MG Villas Luxury Property; rechtspersoon MARSAL PROPIEDADES S.L.)",
+   "website": "https://www.mgvillas.com",
+   "plaats": "Jávea (Av. de la Libertad 11, local 11)",
+   "cms": "Paagees (Spaans vastgoed-/websiteplatform op Nuxt); niet Inmoweb/Mediaelx/Sooprema/Inmovilla/Witei/WordPress",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 21:16 UTC (HTTP 200). Inhoud: \"User-agent: * / Disallow: /_edit / Disallow: /_canvas / Disallow: /_debug / Disallow: /__sitemap__ / Disallow: /*? / Sitemap: https://www.mgvillas.com/sitemap.xml\" (gegenereerd door nuxt-robots). Objectpagina's (/propiedad/venta/...) en de aanbodpagina /venta/ zijn toegestaan; alle URL's met een vraagteken zijn verboden, dus de paginering /venta/",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.mgvillas.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.mgvillas.com/venta/"
+   ],
+   "geschat_aantal": 346,
+   "gebied": "Circa 78% van de 346 koopobjecten (±270) op basis van plaatsnaam in de URL (sitemap 24-09-2026): Jávea ±209 (60%), Moraira/Teulada ±44 (13%), Benitachell/Cumbre del Sol ±17 (5%). Rest: Benissa 19, Dén",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 5 verzoeken met ≥ 2 s tussenruimte (robots.txt, sitemap.xml, /aviso-legal/, /venta/, één objectpagina). Aviso legal (https://www.mgvillas.com/aviso-legal/) noemt scraping, robots of geautomatiseerd lezen nergens; wel verbiedt zij reproductie, distributie en \"utilización para fines ",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-mgvillas.com.md"
+  },
+  {
+   "naam": "Moragues Pons Mediterranean Houses (DESARROLLOS MORAGUES PUGA S.L.)",
+   "website": "https://www.moraguespons.com",
+   "plaats": "Jávea (Av. Ausias March 13)",
+   "cms": "eigen",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200, Last-Modified 04-05-2026). Inhoud: \"User-agent: * / Allow: /\" plus \"Disallow: /login/\" en \"Disallow: /admin/*\"; \"Sitemap: https://www.moraguespons.com/sitemap.xml\". Aanbodpagina's (/venta/..., /alquiler/...) zijn dus toegestaan voor alle robots. Het bestand verwijst zelf naar een llms.txt (\"LLM-friendly content summary\"): de eigenaar houdt bewust rekening met automa",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.moraguespons.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.moraguespons.com/venta/"
+   ],
+   "geschat_aantal": 575,
+   "gebied": "Minimaal 86% (493 van 575 koop-slugs in sitemap-es.xml, 24-09-2026): Jávea/Xàbia 450 + 27 Jávea-zones (Montgó, Arenal, Granadella, Portichol, Adsubia ...) = 477 (83%), Benitachell/Cumbre del Sol 5, Mo",
+   "crawl_delay_s": null,
+   "opmerking": "Vijf verzoeken gedaan (robots.txt, sitemap.xml, sitemap-es.xml, /aviso-legal/, één objectpagina) met minimaal 3 s ertussen. robots.txt staat alles toe behalve /login/ en /admin/*. Aviso legal (24-09-2026) noemt scraping/robots/automatisch lezen nergens; wel een algemene IE-clausule: reproductie/kopi",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-moraguespons.com.md"
+  },
+  {
+   "naam": "Paradise Real Estate (Paradise Property Solutions)",
+   "website": "https://www.paradiserealestate.es",
+   "plaats": "Jávea (Av. de la Libertad 5 / bl. 5 47C)",
+   "cms": "Paagees-weblaag (nginx, 'Powered by Paagees Shield'); robots.txt is het Sooprema/Mattis-sjabloon, dus onderliggend CRM vermoedelijk Sooprema [te verifiëren]",
+   "advies": "feed vragen",
+   "robots": "robots.txt (24-09-2026, Last-Modified 07-01-2025, Apache, 5.717 bytes) heeft voor User-agent: * een blok met 'Allow: /' en Disallow-regels voor formulieren (/html/formulario/...), galerij-modal (/html/galeriamodal/*), printversies (*/print/*, */imprimir/*, */drucken/*, */imprimer/*, */afdrukken/*), /admin/, /images/, /cgi-bin/ en alle vervolgpagina's van lijsten (/*/*/*/page/*, pagina, pages, seit",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [],
+   "geschat_aantal": null,
+   "gebied": "onbekend: geen lijst- of objectpagina leesbaar en geen webzoeken beschikbaar; kantoor zit in Jávea (Av. de la Libertad, gemeentelijst xabia.org/ver/2098), dus overwegend Jávea ligt voor de hand [te ve",
+   "crawl_delay_s": null,
+   "opmerking": "Drie verzoeken gedaan (robots.txt, /sitemap.xml, homepage), telkens > 2 s ertussen, eigen User-Agent. robots.txt staat lezen toe, maar /sitemap.xml en de homepage gaven beide (HTTP 200, nginx, 5.882 bytes, x-robots-tag noindex) de controlepagina 'Security Check / Verifying your browser — Powered by ",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-paradiserealestate.es.md"
+  },
+  {
+   "naam": "Llidomar Properties",
+   "website": "https://www.llidomarjavea.com",
+   "plaats": "Jávea (Av. Príncipe de Asturias 13)",
+   "cms": "Sooprema",
+   "advies": "lezen",
+   "robots": "User-agent: * krijgt \"Allow: /\"; alleen formulieren, /admin/, /images/, galerij-modals, printversies en pagineringspagina's (/*/*/*/pagina/*) zijn uitgesloten. Aanbod- en objectpagina's (/venta/, /venta/<slug>-<ref>/) vallen onder geen Disallow. Wel \"Crawl-delay: 14\" (één verzoek per 14 s) en ~130 specifieke bots (Wget, HTTrack, Python-urllib, WebZip, Teleport, EmailCollector ...) volledig geblokk",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.llidomarjavea.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.llidomarjavea.com/venta/"
+   ],
+   "geschat_aantal": 164,
+   "gebied": "Eigen verkoopaanbod (85 objecten in de sitemap): 39 slugs noemen expliciet Jávea (34), Benitachell (4) of Moraira/Teulada (2) = 46 %; nog ~20 noemen een Jávea-wijk (Arenal, Tosalet, La Corona, Montgó,",
+   "crawl_delay_s": 14,
+   "opmerking": "Toets 24-09-2026, 5 verzoeken met >= 14 s tussenruimte (robots.txt, sitemap.xml, /venta/, 1 objectpagina, /aviso-legal/). robots.txt staat lezen toe met Crawl-delay 14. Aviso legal (https://www.llidomarjavea.com/aviso-legal/) noemt scraping/robots/crawlers nergens; wel verbod op reproductie/versprei",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-llidomarjavea.com.md"
+  },
+  {
+   "naam": "Promociones Jávea S.L.",
+   "website": "https://www.promocionesjavea.com",
+   "plaats": "Jávea (Av. del Pla 124, local 15)",
+   "cms": "eigen (eGO Real Estate / Janela Digital WebsiteBuilder — niet op de lijst; header x-served-by: JanelaDigital, assets van admin.egorealestate.com, footer \"CRM y páginas inmobiliarias por eGO Real Estate\")",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200). User-agent: * mag alles behalve print-/deelpagina's en foutpagina's: \"Disallow: /virtual/PrintProperty.aspx\", \"/virtual/PrintDevelopment.aspx\", \"/virtual/SmartLink.aspx\", \"/virtual/SmartLinkDetail.aspx\", \"/tel:\", \"*/smartLink/*\", \"*/gerir-dados-rgpd\", \"*/rgpd-update\", \"/404\", \"/500\" (ook per taal). Aanbod- en objectpagina's (/comprar, /inmuebles/..., /inmueble/...)",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.promocionesjavea.com/sitemap-es-es.xml",
+   "aanbod_urls": [
+    "https://www.promocionesjavea.com/comprar"
+   ],
+   "geschat_aantal": 37,
+   "gebied": "Uit de 37 URL-slugs in de Spaanse sitemap (24-09-2026): 16 noemen Jávea of een Jávea-wijk expliciet (Arenal, Cumbres del Tosalet, Granadella, Ambolo, Fontana, Montgó, Balcón al Mar, Puerto), 3 liggen ",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe. De voorwaardenpagina /terminos-y-condiciones (24-09-2026) is zonder JavaScript leeg: de juridische tekst wordt door het eGO-platform nageladen, dus er is geen verbod gevonden maar de tekst is ook niet echt gelezen (⏸️ Jan kan die in een browser nakijken). Objectpagina bev",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-promocionesjavea.com.md"
+  },
+  {
+   "naam": "Proxabia Inmobiliaria",
+   "website": "https://www.proxabia.com",
+   "plaats": "Jávea (Av. La Fontana 2, local 5)",
+   "cms": "eigen (AiDweb, PHP 8.3 op Apache)",
+   "advies": "lezen",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent: *\" gevolgd door een lege \"Disallow:\" — alles mag gelezen worden, ook de aanbodpagina's. Geen crawl-delay. Sitemap-regel: http://www.proxabia.com/sitemap.xml.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "http://www.proxabia.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.proxabia.com/es/propiedades"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Onbekend, niet geteld. Kantoor zit in Jávea (Avda. la Fontana 2) en noemt zich \"Su inmobiliaria en Jávea\", maar de plaatsfilter op de site telt ruim 40 plaatsen (Jávea, Arenal de Javea, Benitachell, C",
+   "crawl_delay_s": null,
+   "opmerking": "Robots.txt staat alles toe; de aviso legal (https://www.proxabia.com/es/aviso_legal, 24-09-2026) noemt scraping of geautomatiseerd lezen nergens, verbiedt alleen hergebruik/openbaar tonen van de site zonder schriftelijke toestemming en noemt de inhoud \"louter indicatief\" (dus intern gebruiken, niet ",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-proxabia.com.md"
+  },
+  {
+   "naam": "New Life Property Spain",
+   "website": "https://www.newlifepropertyspain.com",
+   "plaats": "Jávea (Av. de Lepanto 7, Puerto)",
+   "cms": "Sooprema",
+   "advies": "feed vragen",
+   "robots": "robots.txt (24-09-2026 21:17 UTC): \"User-agent: * / Allow: /\" met alleen Disallow voor /admin/, /crm/, /api/, /ajax/, /cgi-bin/, /tmp/, /cache/. Aanbod- en objectpagina's (/for-sale/...) zijn dus toegestaan; geen Crawl-delay, geen Sitemap-regel. Let op: met curl en een eigen user-agent kwam niet robots.txt maar een controlepagina \"Security Check — Powered by Paagees Shield\" (HTTP 200, x-robots-tag",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.newlifepropertyspain.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.newlifepropertyspain.com/for-sale/"
+   ],
+   "geschat_aantal": 400,
+   "gebied": "Circa 43 % van de object-URL's ligt in de drie doelplaatsen: Jávea ±12 %, Benitachell/Cumbre del Sol ±14 %, Moraira ±17 % (telling op 284 opgesomde object-URL's; een tweede telling op 341 gaf 42 %). O",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe en de legal notice (https://www.newlifepropertyspain.com/legal-notice/, 24-09-2026, versie 27/12/2020, Spaans) noemt robots/scraping niet, maar verbiedt wel \"la reproducción, distribución o modificación, total o parcial\" zonder toestemming en \"su utilización para fines com",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-newlifepropertyspain.com.md"
+  },
+  {
+   "naam": "ValuVillas",
+   "website": "https://www.valuvillas.com",
+   "plaats": "Jávea (Ctra. Cabo la Nao 141)",
+   "cms": "WordPress (Elementor + JetEngine, Yoast, Schema Pro, WP Rocket; woningdata uit Sooprema)",
+   "advies": "lezen",
+   "robots": "robots.txt (HTTP 200, 24-09-2026): \"User-agent: *\" met alleen Disallow voor /wp-admin/, /wp-includes/, /tag/, /author/, /refer/ en /date/; Allow /wp-content/uploads/. De aanbodpagina /properties/ en de objectpagina's /properties/<slug>/ zijn niet verboden. De vijf Sitemap-regels wijzen opvallend genoeg naar het zusterdomein javea.properties (post-, page-, properties-, category- en property-types-s",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.valuvillas.com/properties-sitemap.xml",
+   "aanbod_urls": [
+    "https://www.valuvillas.com/properties/"
+   ],
+   "geschat_aantal": 176,
+   "gebied": "±143 van 176 sitemap-URL's (±81%): Jávea ±125 (incl. Montgó, El Tosalet, Cala Blanca en 6x typo \"jvea\"), Moraira 11, Benitachell/Cumbre del Sol 7. Rest: Pedreguer 8, Dénia 7, Calpe 4, Benissa 4, Teula",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat het lezen van /properties/ toe; geen gebruiksvoorwaarden gevonden (homepage/voettekst zonder juridische links, /privacy-policy/ geeft 301 naar de homepage; alleen een misbruik-notitie onder het contactformulier). Eigen Yoast-sitemap met 176 object-URL's (lastmod 18-09-2024 t/m 24-09",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-valuvillas.com.md"
+  },
+  {
+   "naam": "RE/MAX Inmomás IV (groepssite van GRUPO INMOMÁS, vier kantoren: Elche, La Marina, Alicante Centro, Jávea)",
+   "website": "https://www.remaxinmomas.es",
+   "plaats": "Jávea (Ctra. Cabo la Nao 124, local 5)",
+   "cms": "WordPress (eigen plugin \"Nexora\", custom post type nexora_property; data uit Inmovilla — foto's op fotos15.apinmo.com, referentie 3009_031879)",
+   "advies": "lezen",
+   "robots": "Standaard Yoast-robots.txt (HTTP 200, 24-09-2026): \"User-agent: *\" met een lege \"Disallow:\" — alles mag, ook /propiedad/… en /propiedades/. Bevat de regel \"Sitemap: https://www.remaxinmomas.es/sitemap_index.xml\".",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.remaxinmomas.es/sitemap_index.xml",
+   "aanbod_urls": [
+    "https://www.remaxinmomas.es/propiedades/"
+   ],
+   "geschat_aantal": 1216,
+   "gebied": "Ongeveer 8 % op basis van de slugs: 97 van 1.216 (Jávea/Xàbia 36, Benitachell/Cumbre del Sol 48, Moraira/Teulada 13). Ondergrens, want 269 slugs noemen geen plaats; realistisch 8–12 % (100–145 objecte",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat alles toe; geen aviso legal/condiciones gevonden (niet in voettekst, niet in page-sitemap, /aviso-legal/ geeft 404) en de privacyverklaring zegt niets over scraping of automatisch lezen. Sitemap levert alle 1.216 object-URL's (/propiedad/<slug>/), elke nacht rond 03:00 opnieuw ingel",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-remaxinmomas.es.md"
+  },
+  {
+   "naam": "Villa Lingo Real Estate (grupo Villa Lingo S.L)",
+   "website": "https://www.villalingo.com",
+   "plaats": "Jávea (Av. de la Fontana 18C)",
+   "cms": "eigen",
+   "advies": "lezen",
+   "robots": "robots.txt (24-09-2026): \"User-agent: *\" gevolgd door \"Allow: /\" — geen Disallow, geen Crawl-delay. Daarnaast 21 Sitemap-regels (sitemap.xml plus 20 genummerde bestanden zoals sitemap813.xml), die verdacht zijn omdat de hoofdsitemap uitsluitend spam-URL's bevat.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.villalingo.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.villalingo.com/properties-for-sale-in-costa-blanca"
+   ],
+   "geschat_aantal": 34,
+   "gebied": "21 van de 34 objecten op de homepage (62%): Jávea 9, Benitachell 6, Moraira 6. Overige: Benissa 3, Pedreguer 3, Dénia 2, Calpe 2, Teulada 1, Altea 1, Benidorm 1 (bron: homepage, 24-09-2026).",
+   "crawl_delay_s": null,
+   "opmerking": "Lezen mag: robots.txt staat alles toe en de enige voorwaardenpagina (/disclaimer, waar de formulieren met \"general conditions of use\" naar verwijzen) bevat alleen een garantie- en aansprakelijkheidsuitsluiting, geen verbod op automatisch lezen (/privacy-policy-cookies niet geopend, budget op). Kantt",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-villalingo.com.md"
+  },
+  {
+   "naam": "Terramar Costa Blanca S.L. (TerramaR Costa Blanca)",
+   "website": "https://www.terramar.es",
+   "plaats": "Jávea (Pl. President Adolfo Suárez 18)",
+   "cms": "Sooprema",
+   "advies": "feed vragen",
+   "robots": "Voor User-agent: * geldt Allow: / — aanbodpagina en objectpagina's mogen gelezen worden — maar niet de vervolgpagina's van lijsten (Disallow: /*/*/*/pagina/*, /page/*, /seite/* enz.), printversies, formulieren (/html/formulario/…, /html/formucontraoferta/*), /images/ en de galerij-modal. Tweede blok: User-agent: * Crawl-delay: 14. Ruim 100 programma's met naam (Wget, Python-urllib, httplib, HTTrac",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.terramar.es/propiedades/venta/todas/"
+   ],
+   "geschat_aantal": 40,
+   "gebied": "Ruwweg twee derde in het doelgebied, vrijwel allemaal Jávea: steekproef homepage 24-09-2026 toont 20+ objecten in Jávea/Xàbia, 3 in Benitachell/Cumbre del Sol, 0 in Moraira en 10+ elders (Calpe, Orba,",
+   "crawl_delay_s": 14,
+   "opmerking": "robots.txt staat een gewone lezer toe (pauze 14 s, geen bladerpagina's), maar de site zet vóór elke HTML-pagina de Paagees Shield-botcontrole; curl kreeg op homepage en /sitemap.xml alleen de 'Security Check'-pagina (nginx, x-robots-tag noindex). Niet omzeild. Daardoor zijn de aviso legal (link /avi",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-terramar.es.md"
+  },
+  {
+   "naam": "Rimontgó",
+   "website": "https://www.rimontgo.com",
+   "plaats": "Jávea (Av. de Lepanto 1, Puerto; ook Arenal)",
+   "cms": "eigen",
+   "advies": "lezen",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent: *\" / \"Allow: /\" / \"Sitemap: https://www.rimontgo.com/sitemap.xml\". Geen Disallow, geen Crawl-delay: elke lezer mag de aanbod- en objectpagina's lezen.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.rimontgo.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.rimontgo.com/properties/javea"
+   ],
+   "geschat_aantal": 181,
+   "gebied": "83–85 van 181 objecten (ca. 46 %): Jávea 80 (+2 onzeker: casco-antiguo, la-marquesa-v), Benitachell/Cumbre del Sol 1, Moraira 2. De eigen Jávea-pagina toont hoogstens ca. 60 objecten (6 pagina's x 10)",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat alles toe; de Legal Notice (https://www.rimontgo.com/legal-notice, 24-09-2026) noemt scraping, robots, crawlers of automatisch lezen nergens, maar bevat een brede auteursrechtclausule (\"reproduction, distribution, public communication, transformation or any other activity ... with t",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-rimontgo.com.md"
+  },
+  {
+   "naam": "Villalux (rechtspersoon volgens legal notice: Sanders Mediterráneo S.L.)",
+   "website": "https://www.villalux.com",
+   "plaats": "Jávea (C.C. La Nao 5, Ctra. Cabo la Nao, Jávea Park)",
+   "cms": "onbekend",
+   "advies": "lezen",
+   "robots": "User-agent: * mag objectpagina's en de eerste overzichtspagina lezen (Allow: /), maar bladerpagina's zijn verboden (Disallow: /*/*/*/pagina/*, /*/*/*/page/*, /*/*/*/pages/*), net als /images/, formulieren, galerij-modals en printversies. Crawl-delay: 14 seconden. Lange lijst met verboden bots (Wget, Python-urllib, HTTrack e.d.). Geen Sitemap-regel. Gecontroleerd 24-09-2026.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.villalux.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.villalux.com/for-sale/price-asc/"
+   ],
+   "geschat_aantal": 100,
+   "gebied": "Circa 90 procent Jávea: van de ~86 object-URL's in de sitemap noemen er ~76 Jávea/Xàbia, 1 Moraira en 1 Benitachell/Cumbre (24-09-2026, telling bij benadering).",
+   "crawl_delay_s": 14,
+   "opmerking": "Robots.txt staat lezen toe (met Crawl-delay 14 s en verbod op bladerpagina's), de legal notice (https://www.villalux.com/legal-notice/, 24-09-2026) bevat geen bepaling over scraping of geautomatiseerde toegang, alleen het gebruikelijke auteursrecht op foto's en teksten. Sitemap.xml: 153 URL's, waarv",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-villalux.com.md"
+  },
+  {
+   "naam": "Vicens Ash Properties",
+   "website": "https://www.vicensash.com",
+   "plaats": "Jávea (Av. del Pla 137)",
+   "cms": "eigen (vicensash.com = lege schil op Mobilia Gestión/ASP.NET die live de startpagina van valuvillas.com toont); valuvillas.com = WordPress + Elementor + JetEngine, waarschijnlijk gevoed vanuit Sooprema",
+   "advies": "overslaan",
+   "robots": "HTTP 200 (24-09-2026). \"User-agent: *\" met alleen Disallow voor zes ASP.NET/DNN-systeemmappen: /app_code/, /aspnet_client/, /bin/, /configuration/, /DesktopModules/, /Portals/. Geen Sitemap-regel. Aanbodpagina's zouden leesbaar zijn, maar bestaan op dit domein niet: alleen \"/\" antwoordt (met de startpagina van valuvillas.com), elk ander pad geeft 302 → /app_support/ErrorCode.aspx?id=404 → /app_sup",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://valuvillas.com/properties-sitemap.xml",
+   "aanbod_urls": [
+    "https://www.valuvillas.com/properties/"
+   ],
+   "geschat_aantal": 177,
+   "gebied": "Geen eigen aanbod op vicensash.com. Het getoonde aanbod is dat van Valu Villas: op slug van 176 sitemap-objecten ≈126 Jávea, 14 Moraira/Teulada, 7 Benitachell/Cumbre del Sol (≈147 van 176, ≈83%); 28 o",
+   "crawl_delay_s": null,
+   "opmerking": "www.vicensash.com is op 24-09-2026 geen zelfstandige makelaarssite meer: het domein draait op het Mobilia Gestión-platform (cookies Esperantus_Language_vicensash.mobiliagestion.es, ZwPortalAlias=www.vicensash.com, ASP.NET_SessionId) en geeft op \"/\" een live kopie van de startpagina van valuvillas.co",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-vicensash.com.md"
+  },
+  {
+   "naam": "Lucas Fox Jávea (Dils Lucas Fox)",
+   "website": "https://www.lucasfox.com/property/spain/costa-blanca/javea.html",
+   "plaats": "Jávea (Pl. Adolfo Suárez 23, Puerto)",
+   "cms": "eigen",
+   "advies": "overslaan",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200). Voor User-agent: * geldt: Crawl-delay: 10; Disallow: /admin/, /udf/, /pdf/, /information-request.html, /viewing-request.html; Sitemap: https://www.lucasfox.com/sitemap.xml. De aanbod- en objectpagina's onder /property/ zijn dus toegestaan, met minimaal 10 seconden tussen verzoeken. Het letterlijke pad .../javea.html/robots.txt uit de opdracht geeft een 404; het bes",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.lucasfox.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.lucasfox.com/property/spain/costa-blanca/javea.html"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Onbekend, niet gemeten. Landelijk kantoor (hoofdkantoor met Barcelonees netnummer 93, AICAT 3265) met een vestiging in Jávea; URL-opbouw land > regio > plaats. Het Jávea-aanbod is naar verwachting een",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe, maar de site zit achter Cloudflare-botbeveiliging: sitemap.xml, de Jávea-aanbodpagina en /legal-notice.html gaven op 24-09-2026 alle een HTTP 403 met een \"Just a moment...\"-controlepagina (header cf-mitigated: challenge). Die controle is niet omzeild. Daardoor zijn de geb",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-lucasfox.com.md"
+  },
+  {
+   "naam": "Xabiga S.L.",
+   "website": "https://www.xabiga.com",
+   "plaats": "Jávea (Pl. Almirante Bastarreche 13, Puerto)",
+   "cms": "WordPress (vastgoedthema Houzez + Elementor; eigen ingerichte site, geen makelaars-CMS, geen exportfeed)",
+   "advies": "lezen",
+   "robots": "Standaard WordPress-robots.txt (HTTP 200, 24-09-2026): \"User-agent: * / Disallow: /wp-admin/ / Allow: /wp-admin/admin-ajax.php / Sitemap: https://www.xabiga.com/wp-sitemap.xml\". Alleen het beheerdersgedeelte is verboden; /ventas/ en /property/… mogen door elke bot gelezen worden. Geen crawl-delay, geen noindex op de objectpagina.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.xabiga.com/wp-sitemap-posts-property-1.xml",
+   "aanbod_urls": [
+    "https://www.xabiga.com/ventas/"
+   ],
+   "geschat_aantal": 141,
+   "gebied": "Hoog: 89 van 141 slugs (63%) noemen Jávea/Xàbia of een Jávea-wijk (Puerto, Arenal, Montañar, Portichol, Cala Blanca, Nou Fontana, Costa Nova); 49 slugs zonder plaatsnaam liggen gezien het kantoor in P",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe; de objectpagina's zijn gewone HTML met vaste Houzez-labels (ref in titel, prijs 1.700.000 EUR, Chalet, 5 slaapkamers, 4 badkamers, 1 garage, 347 m2, Ciudad \"Javea / Xabia\", Zona \"Crtra del Portichol\"; perceel 2.500 m2 alleen in de beschrijvingstekst; kaartcoördinaten zijn",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-xabiga.com.md"
+  },
+  {
+   "naam": "Ahermar (AHERMAR Jávea Real Estate - Inmobiliaria Xàbia)",
+   "website": "https://www.ahermar.com",
+   "plaats": "Jávea (Av. de la Fontana 4)",
+   "cms": "eigen",
+   "advies": "lezen",
+   "robots": "https://www.ahermar.com/robots.txt geeft HTTP 404 (24-09-2026, 21:30 UTC); de server toont de gewone 404-pagina. Er is dus geen enkele Disallow-regel voor User-agent: * en ook geen Sitemap-regel. Volgens de gangbare conventie is lezen dan toegestaan, maar het is geen uitdrukkelijke toestemming.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.ahermar.com/venta"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Kantoor in Jávea (Arenal); zoekformulier kent zes plaatsen: Jávea, Denia, Pedreguer, Jesus Pobre, Ondara en Benitachell. Moraira ontbreekt. Alle op de homepage getoonde objecten liggen in Jávea (Playa",
+   "crawl_delay_s": null,
+   "opmerking": "Vijf pagina's opgehaald op 24-09-2026 (21:30-21:33 UTC): robots.txt (404), homepage, sitemap.xml (404), /aviso-legal en één objectpagina. Geen robots.txt, dus niets verboden. De aviso-legal-pagina bestaat (HTTP 200) maar bevat alleen de kop \"Aviso Legal\" zonder enige tekst; /politica-privacidad en /",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-ahermar.com.md"
+  },
+  {
+   "naam": "iad España (asesores Jávea)",
+   "website": "https://www.iadespana.es",
+   "plaats": "Jávea (netwerk van zelfstandige adviseurs, geen kantoor)",
+   "cms": "eigen",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200). Voor User-agent: * geen algemeen verbod: objectpagina's (/anuncio/...) en schone aanbodpagina's (/anuncios/javea_03/venta/...) mogen. Uitgesloten: */account/*, */print, /agente-inmobiliario/*/valoracion, /liste/annonces*, alle gefilterde/gesorteerde zoek-URL's met parameters (*?priceMin=*, *?priceMax=*, *?location=*, *?sort=priceAsc, /*&*), */v2_*, /*modal=property",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.iadespana.es/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.iadespana.es/anuncios/javea_03/venta"
+   ],
+   "geschat_aantal": 80,
+   "gebied": "Klein deel. De 12 asesores \"in Jávea of omgeving\" zitten volgens hun kaartjes 1× in Jávea, 1× in Moraira en 10× in Dénia; samen tonen ze 80 \"propiedades disponibles\" (bij 2 geen aantal). Van de 4 \"últ",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 5 van max. 5 pagina's opgehaald (robots.txt, sitemap.xml, sitemap/es/ads.xml, asesor-pagina Jávea, één objectpagina), steeds ruim 2 s tussenpauze. robots.txt staat het lezen van object- en aanbodpagina's toe (alleen parameter-URL's en enkele secties niet; Scrapy geblokkeerd). Objec",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-iadespana.es.md"
+  },
+  {
+   "naam": "COSTA HOUSES Luxury Villas S.L.",
+   "website": "https://www.costa-houses.com",
+   "plaats": "Jávea (Av. del Pla 126)",
+   "cms": "eigen (Paagees-platform op Nuxt, achter Cloudflare)",
+   "advies": "lezen",
+   "robots": "robots.txt (24-09-2026, HTTP 200) voor User-agent: * verbiedt alleen \"/_edit\", \"/_canvas\", \"/_debug\", \"/__sitemap__\" en \"/*?\" (alle URL's met een vraagteken) en geeft \"Sitemap: https://www.costa-houses.com/sitemap.xml\". Object- en aanbodpagina's (/venta/, /propiedad/venta/...) zijn dus toegestaan; paginering (/venta/?page=2) en filters niet. Objectpagina stuurt bovendien x-robots-tag: index, follo",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.costa-houses.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.costa-houses.com/venta/"
+   ],
+   "geschat_aantal": 417,
+   "gebied": "ca. 71 % (298 van 417): Jávea/Xàbia 224, Moraira/Teulada/El Portet 68, Benitachell/Cumbre del Sol 6 — geschat op plaatsnamen in de URL-slugs van de sitemap (24-09-2026); rest vooral Dénia, Benissa, Al",
+   "crawl_delay_s": null,
+   "opmerking": "Lezen mag, onder voorwaarden. (1) robots.txt staat object- en aanbodpagina's toe; alleen URL's met \"?\" zijn verboden, dus alleen via de sitemap werken, niet via paginering/filters. (2) Aviso legal (https://www.costa-houses.com/aviso-legal/, 24-09-2026) noemt scraping/bots nergens; wel verbod op \"rep",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-costa-houses.com.md"
+  },
+  {
+   "naam": "Luxia Properties",
+   "website": "https://luxiaproperties.com",
+   "plaats": "Jávea (centrum)",
+   "cms": "WordPress (thema WpResidence van WpEstate, custom post type estate_property; Elementor, Rank Math SEO Pro, Complianz, GTranslate)",
+   "advies": "lezen",
+   "robots": "Eén blok \"User-agent: *\" (24-09-2026). Alleen beheer- en zoekpaden en gefilterde URL's staan op Disallow: /wp-admin/, /?s=, /search/, /*?filter, /*?orderby, /*?sort, /*?price, /*?bedrooms, /*?bathrooms, /*?min, /*?max, /listas/, /tag/, /author/, /*.pdf$. De sitemap, de aanbodpagina /propiedades/ en alle objectpagina's /propiedad/<slug>/ zijn niet uitgesloten. Geen Crawl-delay. Sitemap-regel: https",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://luxiaproperties.com/estate_property-sitemap.xml",
+   "aanbod_urls": [
+    "https://luxiaproperties.com/propiedades/"
+   ],
+   "geschat_aantal": 146,
+   "gebied": "Ten minste 115 van 146 (79%) met Jávea/Xàbia (103), Moraira/Teulada (9) of Benitachell/Cumbre del Sol (3) in de URL; nog eens ca. 20 slugs noemen Jávea-wijken (Montgó, Arenal, Tosalet, Villes del Vent",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 5 verzoeken (robots.txt, sitemap_index.xml, estate_property-sitemap.xml, één objectpagina, aviso legal), elk ≥ 2 s uit elkaar. robots.txt staat aanbod- en objectpagina's toe; de aviso legal (https://luxiaproperties.com/aviso-legal/) kent geen scraping-, robot- of automatiseringsver",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-luxiaproperties.com.md"
+  },
+  {
+   "naam": "VillaMia Real Estate S.L.",
+   "website": "https://www.villamia.net",
+   "plaats": "Jávea (Av. de la Llibertat 9H, Arenal)",
+   "cms": "WordPress, eigen bouw (Oxygen Builder, custom post type property_sale)",
+   "advies": "feed vragen",
+   "robots": "Opgehaald 24-09-2026. Volledige inhoud: \"User-agent: * / Disallow: /wp-admin/ / Allow: /wp-admin/admin-ajax.php / Sitemap: https://www.villamia.net/sitemaps.xml\". Alleen /wp-admin/ is uitgesloten; de aanbodpagina's onder /property-sales/ mag iedere bot lezen.",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://www.villamia.net/property_sale-sitemap1.xml",
+   "aanbod_urls": [
+    "https://www.villamia.net/property-sales/"
+   ],
+   "geschat_aantal": 102,
+   "gebied": "77 van 102 objecten te koop (circa 75%): Jávea 70, Moraira 4, Benitachell 3. Rest vooral Dénia (13), Gata (3), Teulada (2), Benissa (2). Telling op plaatsnaam in de URL-slugs van de verkoop-sitemap, 2",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe, maar het Aviso Legal (https://www.villamia.net/aviso-legal/, punt 4, gelezen 24-09-2026) verbiedt uitdrukkelijk \"extracción, reutilización ... por cualquier medio o procedimiento\" van de inhoud en staat een kopie alleen toe voor privégebruik, \"siempre que no sea con la fi",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-villamia.net.md"
+  },
+  {
+   "naam": "Javea Estate Agent",
+   "website": "https://www.javeaestateagent.com",
+   "plaats": "Jávea (Ctra. Cabo la Nao 160, suite C)",
+   "cms": "WordPress",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 21:33 UTC (HTTP 200). Voor \"User-agent: *\" staat \"Allow: /\"; uitgesloten zijn alleen /wp-admin/ (behalve admin-ajax.php), /wp-login.php, /xmlrpc.php, de zoekfunctie (/?s=, /search/), parameter-URL's (/*?p=, /*?replytocom=) en /author/, /tag/. Geen Crawl-delay. Zeven SEO-bots (Baiduspider, AhrefsBot, MJ12bot, BLEXBot, DotBot, SemrushBot, YandexBot) krijgen apart \"Disallow: /\". ",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.javeaestateagent.com/properties-sitemap.xml",
+   "aanbod_urls": [
+    "https://www.javeaestateagent.com/properties/"
+   ],
+   "geschat_aantal": 86,
+   "gebied": "Alles gelabeld als Jávea: 86 van de 86 object-slugs bevatten \"javea\", alle vijf typepagina's heten \"...for-sale-in-javea\"; Benitachell en Moraira komen nergens voor. Per object niet verifieerbaar, wan",
+   "crawl_delay_s": null,
+   "opmerking": "Vijf opvragingen gedaan op 24-09-2026 (21:33–21:35 UTC), met tussenpozen van minstens twee seconden en een eigen user-agent; niets omzeild. robots.txt staat lezen toe. Gebruiksvoorwaarden, privacyverklaring of aviso legal bestaan niet: page-sitemap.xml bevat slechts zes pagina's (home, twee prijspag",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeaestateagent.com.md"
+  },
+  {
+   "naam": "123 Javea Villas",
+   "website": "https://www.123javeavillas.com",
+   "plaats": "Jávea (Av. Marina Española 5, Puerto)",
+   "cms": "Advance Agent (advanceagent.co.uk, Brits makelaars-CMS; niet in de standaardlijst)",
+   "advies": "lezen",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent: *\" gevolgd door een lege \"Disallow:\". Dat betekent dat alles gelezen mag worden, ook aanbod- en objectpagina's. Geen Crawl-delay en geen Sitemap-regel.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.123javeavillas.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.123javeavillas.com/properties-for-sale/location-javea/order-lowest-price"
+   ],
+   "geschat_aantal": 641,
+   "gebied": "Ca. 366 van 641 te-koop-objecten (57 %) in Jávea (307), Moraira (40) en Benitachell (19), geteld op de plaatsnaam in de URL-slug van de sitemap op 24-09-2026. Rest vooral Calpe (65), Dénia (43), Benis",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat alles toe en de Legal Notice (https://www.123javeavillas.com/legal-notice, gedateerd 27/11/2025, gelezen 24-09-2026) noemt scraping, crawling of automatisch lezen nergens; wel een standaard auteursrechtclausule (\"reproduction, distribution or modification without express authorizati",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-123javeavillas.com.md"
+  },
+  {
+   "naam": "Javea Estates",
+   "website": "https://www.javeaestates.com",
+   "plaats": "Jávea",
+   "cms": "Joomla + OS Property (joomdonation), template osprealestate4/T4 — geen van de bekende makelaars-CMS'en",
+   "advies": "lezen",
+   "robots": "Standaard Joomla-robots.txt (24-09-2026, HTTP 200). User-agent: * blokkeert alleen systeemmappen (/administrator/, /components/, /images/Logo/... enz.); de aanbod- en objectpagina's onder /en/properties/ zijn toegestaan. Aparte regel voor ClaudeBot, Claude-SearchBot, OAI-SearchBot, ChatGPT-User, meta-externalagent en facebookexternalhit: Disallow op de PDF-export (task=property_pdf) en op de fotom",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.javeaestates.com/en/properties"
+   ],
+   "geschat_aantal": 270,
+   "gebied": "Ca. 40–50 %: op pagina 1 van het aanbod 10 van 20 kaarten (Jávea 4, Moraira 4, Cumbre del Sol/Benitachell 2), na ontdubbeling 7–8 van 19 koopobjecten; de 10 uitgelichte objecten op de homepage liggen ",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 6 verzoeken met ≥ 10 s ertussen: robots.txt, /sitemap.xml (404), homepage, privacy-link (404), aanbodpagina, één objectpagina. Robots.txt staat de objectpagina's toe voor iedereen; voor AI-lezers gelden extra: geen PDF-export, geen fotomap, crawl-delay 10. Voorwaarden: de enige jur",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeaestates.com.md"
+  },
+  {
+   "naam": "New Home Javea (New Home Rentals & Sales)",
+   "website": "https://www.newhomejavea.com",
+   "plaats": "Jávea (Ctra. Cap de la Nau Pla 126, local 2.05)",
+   "cms": "Avantio (vakantieverhuursoftware; niet een van de genoemde makelaars-CMS'en)",
+   "advies": "lezen",
+   "robots": "robots.txt (opgehaald 24-09-2026, Last-Modified 05-03-2025) bevat maar twee regels: \"User-Agent: *\" en \"Sitemap: https://www.newhomejavea.com/sitemaps.xml\". Geen enkele Disallow-regel, dus een User-agent: * mag alle pagina's lezen, inclusief aanbod en objecten.",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.newhomejavea.com/olb-sitemap/",
+   "aanbod_urls": [
+    "https://www.newhomejavea.com/venta/ventas-d0/"
+   ],
+   "geschat_aantal": 25,
+   "gebied": "Vrijwel 100 %: 23 objecten met Jávea in de URL, 1 Benitachell (Cumbre del Sol), 1 zonder plaatsnaam; Moraira komt niet voor. Maar slechts 1 van de 25 objecten is te koop, de rest is vakantie- of winte",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, vijf ophalingen (robots.txt, sitemap-index, olb-sitemap, één objectpagina, aviso legal). robots.txt staat alles toe; de aviso legal (/aviso-legal/) bevat alleen de wettelijke identificatie van de verantwoordelijke en geen bepaling over scraping of automatisch lezen. Niet gelezen we",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-newhomejavea.com.md"
+  },
+  {
+   "naam": "Key2 Properties",
+   "website": "https://key2properties.es",
+   "plaats": "Jávea (Av. Príncipe de Asturias 33)",
+   "cms": "onbekend (Java/JSP multi-tenant platform met prefix \"rg\", kantoor-ID 2037; niet Inmoweb/Mediaelx/Sooprema/Inmovilla/Witei/WordPress)",
+   "advies": "lezen",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent: *\" / \"Disallow:\" (leeg) / \"Sitemap: https://key2properties.es/sitemap.xml\". Een lege Disallow betekent dat alles gelezen mag worden, ook aanbod- en objectpagina's. Geen Crawl-delay.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://key2properties.es/sitemap.xml",
+   "aanbod_urls": [
+    "https://key2properties.es/property-search/sale/javea/xabia"
+   ],
+   "geschat_aantal": 141,
+   "gebied": "110 van 141 koopobjecten (ca. 78%): Jávea 68, Cumbre del Sol 26 (25 daarvan uit een externe nieuwbouwfeed, ref 21222_), Benitachell 13, Moraira 3. Zonder de feed ca. 73%. Daarnaast 83 huurobjecten (58",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat alles toe; er is geen voorwaarden- of aviso-legal-pagina (alleen privacy- en cookiebeleid; de AVG-tekst zegt niets over scraping). Sitemap (236 URL's) bevat 225 objectpagina's onder /property/{slug}-{ref}: 141 te koop (80 villa's, 22 percelen, 18 appartementen, 6 penthouses, 6 townh",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-key2properties.es.md"
+  },
+  {
+   "naam": "Jávea Mia",
+   "website": "https://javeamia.com",
+   "plaats": "Jávea (C.C. Arenal, Ctra. Cabo la Nao Pla 130, 1.09)",
+   "cms": "WordPress",
+   "advies": "lezen",
+   "robots": "User-agent: * — alleen \"Disallow: /wp-admin/\" (met \"Allow: /wp-admin/admin-ajax.php\") en \"Disallow: /wp-content/uploads/wpo/wpo-plugins-tables-list.json\". De aanbodpagina's (/property/…, /properties/) zijn niet uitgesloten; geen crawl-delay. Sitemap-regel: https://javeamia.com/wp-sitemap.xml. Opgehaald 24-09-2026.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://javeamia.com/wp-sitemap-posts-property-1.xml",
+   "aanbod_urls": [
+    "https://javeamia.com/properties/"
+   ],
+   "geschat_aantal": 81,
+   "gebied": "Minimaal 47 van 95 URL's (49%) zeker Jávea; Benitachell 1, Moraira/Teulada 2, Dénia 3, Altea 1, Gata e.o. 2; 39 URL's zijn alleen een referentiecode zonder plaats. Waarschijnlijk 70–85% in Jávea/Benit",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt laat de aanbodpagina's toe en de voorwaardenpagina (https://javeamia.com/terms-and-conditions/) bevat alleen \"Terms and Conditions coming soon\" — er zijn dus geen voorwaarden die scraping verbieden. Site is WordPress 6.9.4 met het Houzez-vastgoedthema (WPBakery, Slider Revolution, Contact",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeamia.com.md"
+  },
+  {
+   "naam": "Vista Villas Javea",
+   "website": "https://vistavillasjavea.com",
+   "plaats": "Jávea (Av. de la Fontana)",
+   "cms": "WordPress, eigen (maatwerkthema JointsWP door webbureau Naos; eigen berichttypen listings/rentals; geen bekende vastgoedplugin, geen Inmoweb/Mediaelx/Sooprema/Inmovilla/Witei)",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200). Volledige inhoud: \"User-agent: * / Disallow: /wp-admin/ / Allow: /wp-admin/admin-ajax.php / Sitemap: https://vistavillasjavea.com/wp-sitemap.xml\". Alleen de beheermap is afgeschermd; de aanbodpagina's onder /listings/ mogen door elke robot gelezen worden.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://vistavillasjavea.com/wp-sitemap-posts-listings-1.xml",
+   "aanbod_urls": [
+    "https://vistavillasjavea.com/listings/"
+   ],
+   "geschat_aantal": 135,
+   "gebied": "Niet gemeten binnen het budget van vijf verzoeken. Bedrijfsnaam is \"Vista Villas Javea\" en het bekeken object ligt in Costa Nova (Jávea); de URL-slugs bevatten geen plaatsnamen. Verwachting: overwegen",
+   "crawl_delay_s": null,
+   "opmerking": "Controle 24-09-2026, 5 verzoeken (robots.txt, sitemap-index, listings-sitemap, één objectpagina, één REST-API-aanroep met de paginalijst), niets omzeild, niet ingelogd. Robots.txt staat lezen toe. Gebruiksvoorwaarden bestaan niet: de openbare WordPress-paginalijst (/wp-json/wp/v2/pages) kent precies",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-vistavillasjavea.com.md"
+  },
+  {
+   "naam": "Grupo García Inmobiliaria (INMOVALL ALCALALI, S.L.)",
+   "website": "https://grupo-garcia.es",
+   "plaats": "Jávea en Jalón",
+   "cms": "WordPress (eigen bouw: Bricks-thema + JetEngine/JetSmartFilters, WPML, Yoast, LiteSpeed Cache)",
+   "advies": "feed vragen",
+   "robots": "Eén blok 'User-agent: *' (24-09-2026). Alle Disallow-regels betreffen tracking-parameters (?_ga=, ?utm_*, ?fbclid=), WordPress-systeemmappen (/wp-admin/, /wp-includes/, /wp-content/plugins/, /wp-content/themes/), feeds/trackbacks, zoek- en sorteerparameters (?s=, ?sort=, &paged_) en back-upbestanden. Geen enkele regel raakt /properties/ of de objectpagina's. Sitemap-regel: 'Sitemap: https://grupo-",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://grupo-garcia.es/sitemap_index.xml",
+   "aanbod_urls": [
+    "https://grupo-garcia.es/properties/"
+   ],
+   "geschat_aantal": 350,
+   "gebied": "Ca. 45% van de 250 getelde objecten (sitemap 1, 24-09-2026): Jávea 70, Moraira 28, Benitachell/Cumbre del Sol ca. 15. Rest: Calpe 20, Dénia 19, Benissa 19, Altea 11, Jalón-vallei ca. 19, overig. Kanto",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe, maar de 'Condiciones Generales de Uso' (https://grupo-garcia.es/condiciones-generales-de-uso/, 24-09-2026) §4 verbieden uitdrukkelijk 'la reproducción, […] extracción, reutilización […] por cualquier medio o procedimiento', staan een kopie alleen toe voor privégebruik 'si",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-grupo-garcia.es.md"
+  },
+  {
+   "naam": "Sansy Villas Jávea, S.L.",
+   "website": "https://www.sansyvillasjavea.com",
+   "plaats": "Jávea (Ctra. Cabo la Nao Pla 131, local 12)",
+   "cms": "Inmobigrama (niet in de standaardlijst; eigen PHP-template van dat CRM, foto's op inmoserver.com, jQuery van inmobigrama.com)",
+   "advies": "lezen",
+   "robots": "robots.txt (24-09-2026, HTTP 200): het blok \"User-agent: *\" sluit alleen /wp-content/cache, /trackback, /category/*/* en /*/trackback uit; objectpagina's staan direct onder de root (/Venta-Villa-Jávea-Xàbia-Montgó-811) en de zoekpagina is /buscar.php, dus het aanbod mag gelezen worden. ClaudeBot, GPTBot e.a. krijgen expliciet \"Allow: /\". Een lange lijst downloadtools (wget, HTTrack, WebZIP …) staa",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.sansyvillasjavea.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.sansyvillasjavea.com/buscar.php?br=&o=Venta&check_tipo_inmueble%5B%5D=&p=&check_zona%5B%5D=&md=&pd=&ph="
+   ],
+   "geschat_aantal": 288,
+   "gebied": "176 van 288 te-koop-objecten (61 %): Jávea 131, Benitachell 27, Teulada-Moraira 18. Daarbuiten vooral Calpe (30), Dénia (25), Pedreguer (12). Plus 7 huurobjecten (5 Jávea, 1 Benitachell, 1 Moraira). V",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 5 verzoeken (robots.txt, sitemap.xml, één objectpagina, /privacidad, aanbodpagina), steeds ≥ 28 s ertussen. robots.txt staat het aanbod toe. De enige juridische pagina (/privacidad, met ankers #aviso-legal en #politica-cookies) verbiedt scraping, bots of automatisch lezen nergens; ",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-sansyvillasjavea.com.md"
+  },
+  {
+   "naam": "Villas Leon Javea (Villas Leon Javea Servicios Inmobiliarios, S.L.U.)",
+   "website": "https://www.villasleonjavea.com",
+   "plaats": "Jávea (Av. Trenc d'Alba 5)",
+   "cms": "eGO Real Estate (Janela Digital, Portugal) — niet in de standaardlijst; bewijs: header x-served-by: JanelaDigital, scripts van static.egorealestate.com, foto's van images.egorealestate.com, voettekst \"CRM y páginas inmobiliarias por eGO Real Estate\", data-API websiteapi.egorealestate.com/v1",
+   "advies": "lezen",
+   "robots": "User-agent: * mag de aanbod- en objectpagina's lezen (24-09-2026). Disallow alleen voor /virtual/PrintProperty.aspx, /virtual/PrintDevelopment.aspx, /virtual/SmartLink.aspx, /virtual/SmartLinkDetail.aspx, /tel:, */smartLink/*, drie Handlebars-tokens, */gerir-dados-rgpd, */rgpd-update en de 404/500-pagina's (ook /en-gb en /de-de). Geen Crawl-delay. Sitemap-regel: https://www.villasleonjavea.com/sit",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.villasleonjavea.com/sitemap-es-es.xml",
+   "aanbod_urls": [
+    "https://www.villasleonjavea.com/venta-de-inmuebles?bus=1"
+   ],
+   "geschat_aantal": 111,
+   "gebied": "Hoog, vrijwel alles Jávea. Van 111 objectslugs in de Spaanse sitemap (24-09-2026) noemen 56 Jávea/Xàbia, 1 Moraira, 1 Dénia, 1 Teulada, 3 Pedreguer/Jesús Pobre, 50 geen plaats; Benitachell komt nergen",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen toe en de \"Aviso Legal\"-pagina (/terminos-y-condiciones, HTTP 200) is leeg: alleen het placeholderwoord \"Párrafo\", geen juridische tekst, dus geen verbod op scraping of reproductie gevonden (/politica-de-privacidad en /politica-de-cookies niet opgehaald, budget). Sitemap-index",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-villasleonjavea.com.md"
+  },
+  {
+   "naam": "Spainlife and Houses (Spainlife and Houses, S.L., Jávea)",
+   "website": "https://www.spainlifeandhouses.es",
+   "plaats": "Jávea (C/ Canal Sur 1)",
+   "cms": "eGO Real Estate (Janela Digital) — niet in de lijst; bewijs: headers x-served-by: JanelaDigital / x-pb: EGR, footer 'CRM y páginas inmobiliarias por eGO Real Estate', scripts van static.egorealestate.com/egoforge/, media van media.egorealestate.com, /virtual/PrintProperty.aspx in robots.txt",
+   "advies": "feed vragen",
+   "robots": "Eén blok 'User-agent: *' (24-09-2026). Verboden: zoek-/filterpagina's (/busqueda-de-inmuebles, /busco-un-inmueble, /busqueda-de-promociones, /en-gb/property-search, /nl-nl/zoeken-in-ons-aanbod, idem voor 7 andere talen), /compare, /galeria, printversies (/virtual/PrintProperty.aspx, /virtual/PrintDevelopment.aspx) en 404/500. Niet verboden: de objectpagina's /realestate-details/<slug>/<id>, nieuwb",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://www.spainlifeandhouses.es/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.spainlifeandhouses.es/inmuebles"
+   ],
+   "geschat_aantal": 238,
+   "gebied": "Ondergrens uit URL-slugs in sitemap-es-es.xml (24-09-2026): 46 van 220 objecten (±21%) — Jávea 18, Benitachell/Cumbre del Sol 23, Moraira/Teulada 5 — plus 1 van 18 nieuwbouwprojecten in Jávea. Rest vo",
+   "crawl_delay_s": null,
+   "opmerking": "Technisch leesbaar: objectpagina's niet geblokkeerd in robots.txt en dagelijks bijgewerkte sitemap (index met 10 talen; ES-sitemap 325 URL's: 220 unieke objecten + 18 nieuwbouwprojecten + 60 categoriepagina's). Maar het aviso legal (https://www.spainlifeandhouses.es/aviso-legal, 24-09-2026, art. 4) ",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-spainlifeandhouses.es.md"
+  },
+  {
+   "naam": "Atina Inmobiliaria",
+   "website": "https://atinainmobiliaria.com",
+   "plaats": "Jávea (Av. Mediterráneo 27; ook Gandia, Daimús)",
+   "cms": "WordPress (Bricks-thema, WPML 4.9.7, Rank Math, LiteSpeed Cache) met Inmovilla-koppeling (maatwerkimport, geen Inmoweb/Mediaelx/Sooprema)",
+   "advies": "lezen",
+   "robots": "Eén blok \"User-agent: *\" (Last-Modified 29-10-2025, gelezen 24-09-2026). Disallow-regels raken alleen trackingparameters (?utm_, ?gclid=, ?fbclid= enz.), WordPress-systeemmappen (/wp-admin/, /wp-includes/, /wp-content/plugins/, /wp-content/themes/), feeds/trackbacks en zoek-/sorteerparameters (\"Disallow: /*?s=\", \"Disallow: /*?sort=\", \"Disallow: /*&paged_\"). Geen regel voor /properties/, /property-",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://atinainmobiliaria.com/sitemap_index.xml",
+   "aanbod_urls": [
+    "https://atinainmobiliaria.com/en/property-state/for-sale/"
+   ],
+   "geschat_aantal": 425,
+   "gebied": "Ruim 40 % van de steekproef (200 object-URL's in properties-sitemap1.xml, 24-09-2026): Jávea 80, Moraira 2, Teulada 1, Benitachell 0 = 83/200. Rest: Gandia 24, Dénia 19, El Verger 19, Daimús 15, Calpe",
+   "crawl_delay_s": null,
+   "opmerking": "Toets 24-09-2026, 5 pagina's opgehaald (robots.txt, sitemap_index.xml, properties-sitemap1.xml, één objectpagina, /en/legal-notice/), nooit sneller dan 1 per 2 s. (1) robots.txt staat lezen van aanbod en objecten toe. (2) Juridische kennisgeving (https://atinainmobiliaria.com/en/legal-notice/, Spaan",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-atinainmobiliaria.com.md"
+  },
+  {
+   "naam": "Blue Square Real Estate (Jávea) — handelsnaam Blue Square Spain / Blue Square International Property",
+   "website": "https://www.blue-square.es/",
+   "plaats": "Moraira, Av. de Madrid 3 (eerste Spaanse kantoor)",
+   "cms": "WordPress (eigen thema 'blue-square', Yoast SEO Premium 28.1, WPML 4.9.5, Site Kit) met objectdata uit het Inmobalia-CRM (service.inmobalia.com, agent-id 439); oudere media nog uit Propertybase",
+   "advies": "lezen",
+   "robots": "Opgegeven adres https://www.blue-square.com/javea-agency/ is een geparkeerd GoDaddy-domein (114-bytes-redirect naar /lander, parking-lander-script van img1.wsimg.com, nameservers domaincontrol.com); robots.txt daar: \"User-agent: * / Allow: /\" plus \"LLM-Policy: /llms.txt\" met \"Disallow-Training: /\" — lezen mag maar er is niets. Echte site blue-square.es: robots.txt HTTP 200 met 0 bytes = geen enkel",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.blue-square.es/sitemap_index.xml",
+   "aanbod_urls": [
+    "https://www.blue-square.es/spain/"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Niet vast te stellen met dit budget [te verifiëren]. De ≥ 4.001 object-URL's beslaan het hele netwerk: kantoren Jávea, Moraira, Orba Valley en Marbella plus Frans aanbod (referenties FR-VRO/FR-ANT/FR-",
+   "crawl_delay_s": null,
+   "opmerking": "Het opgegeven adres blue-square.com/javea-agency/ (uit K01-kantoren-javea.json regel 329) is GEEN makelaarssite maar een geparkeerd GoDaddy-domein: overslaan en de K01-lijst corrigeren naar https://www.blue-square.es/ (bron: K02-lijst regel 487, bevestigd door og:image 'Blue-Square-Javea-office.png'",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-blue-square.es.md"
+  },
+  {
+   "naam": "Villadom Immo Jávea",
+   "website": "https://www.villadomjavea.com",
+   "plaats": "Jávea (Av. Fontana 8, Arenal)",
+   "cms": "Paagees (weblaag; onderliggend CRM onbekend)",
+   "advies": "feed vragen",
+   "robots": "robots.txt (HTTP 200, last-modified 07-01-2025, opgehaald 24-09-2026): \"User-agent: *\" met \"Allow: /\", dus aanbod- en objectpagina's mogen gelezen worden. Uitgesloten: vervolgpagina's van lijsten (\"Disallow: /*/*/*/pagina/*\", ook /page/, /seite/ enz.), formulieren (/html/formulario/llamanos/, /48horas/, /html/formucontraoferta/*), galerij-vensters (/html/galeriamodal/*), printversies (*/imprimir/*",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [],
+   "geschat_aantal": null,
+   "gebied": "onbekend — niet meetbaar achter de botcontrole; kantoor zit in Jávea-Arenal (Av. Fontana 8, bron K01/spainhouses.net 24-09-2026) en naam/domein wijzen op Jávea als kerngebied, maar dat is geen telling",
+   "crawl_delay_s": 14,
+   "opmerking": "robots.txt staat lezen toe (met crawl-delay 14 s en zonder paginering), maar de homepage én /sitemap.xml gaven op 24-09-2026 alleen een \"Security Check\"-pagina van Paagees Shield terug (5.882 B, nginx, x-robots-tag noindex): een JavaScript-rekenpuzzel plus cookie die een gewone automatische lezer te",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-villadomjavea.com.md"
+  },
+  {
+   "naam": "Alta Villas (Alta Villas Properties, S.L.)",
+   "website": "https://altavillas.com",
+   "plaats": "Jávea (Av. de la Libertad 19, local 12, Arenal)",
+   "cms": "onbekend",
+   "advies": "overslaan",
+   "robots": "Volledige inhoud (24-09-2026): \"User-agent: *\" / \"Disallow:\" / \"Sitemap: https://altavillas.com/sitemap.xml\". Een lege Disallow betekent dat alle pagina's, ook aanbod- en objectpagina's, gelezen mogen worden.",
+   "voorwaarden": "verbieden automatisch lezen",
+   "sitemap_url": "https://altavillas.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://altavillas.com/properties/for-sale/javea"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Hoog: alle 11 uitgelichte objecten op de homepage en alle 8 gelinkte objecten op de bekeken objectpagina liggen in Jávea (24-09-2026). Kantoor gevestigd in Jávea; overige werkgebieden Moraira, Dénia e",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat alles toe, maar de gebruiksvoorwaarden (General Conditions of Use, op https://altavillas.com/privacy-policy, 24-09-2026, hoofdstuk 4) verbieden uitdrukkelijk \"extraction, reuse ... by any means or procedure\" en staan een kopie alleen toe voor privégebruik \"as long as this is not for",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-altavillas.com.md"
+  },
+  {
+   "naam": "A Place in Javea",
+   "website": "https://www.aplaceinjavea.com",
+   "plaats": "Jávea (Av. Ausias March, bl. V3)",
+   "cms": "WordPress, eigen bouw (GeneratePress-childthema apj-generatepress, eigen posttype property, AIOSEO Pro, Elementor, Breeze; geen makelaars-CMS)",
+   "advies": "lezen",
+   "robots": "Eén blok User-agent: *. Objectpagina's (/property/…) zijn nergens uitgesloten; /property-type/, /property-city/ en /property-area/ zijn expliciet toegestaan. Uitgesloten: /wp-admin/, /search/, /?s=, /property_tag/, /partner/, /municipality/, /province/ en 'Disallow: /*?' (alle URL's met een vraagteken, dus ook gefilterde zoekresultaten van /property-search/). Lezen moet dus via objectpagina's en s",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.aplaceinjavea.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.aplaceinjavea.com/property-search/"
+   ],
+   "geschat_aantal": 200,
+   "gebied": "Jávea: 200 objecten (startpagina 24-09-2026, 28 wijken). Daarnaast aparte secties voor Moraira, Benitachell, Cumbre del Sol en Denia, niet geteld (budget). Ruim de meerderheid ligt in het doelgebied J",
+   "crawl_delay_s": null,
+   "opmerking": "LET OP: geen makelaar maar een onafhankelijk portaal (eigen JSON-LD: 'Independent property portal'; voorwaarden: 'not an estate agency'), beheerd door een particulier. Objecten zijn advertenties van meerdere makelaars, ontwikkelaars en particulieren (referenties SEOJON-EHS/MLS/FMLS/MMC/SPE/MRG/WEN/M",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-aplaceinjavea.com.md"
+  },
+  {
+   "naam": "Sunshine Villas",
+   "website": "https://sunshinevillas.co.uk",
+   "plaats": "Jávea (Arenal 55)",
+   "cms": "Mediaelx",
+   "advies": "lezen",
+   "robots": "Eén blok \"User-agent: *\" (opgehaald 24-09-2026, HTTP 200). Disallow alleen voor systeemmappen (/Connections, /includes, /intramedianet, /xml, /templates, /modules) en de juridische, privacy-, cookie-, rss-, customer- en catalogsearch-pagina's in alle taalvarianten (/nota-legal, /en/legal-note, /nl/nota-legale, /privacidad, /en/privacy, /cookies, /rss/, /customer/, /catalogsearch/). /properties/ en",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://sunshinevillas.co.uk/sitemap.xml",
+   "aanbod_urls": [
+    "https://sunshinevillas.co.uk/properties/"
+   ],
+   "geschat_aantal": 303,
+   "gebied": "414 van 712 sitemap-objecten (58 %): Jávea/Xàbia 205 (29 %), Moraira 123 (17 %), Benitachell/Cumbre del Sol 86 (12 %). Rest vooral Benissa 71, Calpe 59, Dénia 56.",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt (24-09-2026) laat de aanbodpagina's toe; alle vier opgehaalde pagina's gaven gewone HTTP 200 zonder inlog of blokkade. Sitemap (985 kB, 4.636 URL's incl. es/fr/ru/pl) bevat 712 Engelse objectadressen van de vorm /property/<id>/<slug>/; de site zelf telt 303 objecten (koop + huur) op /prop",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-sunshinevillas.co.uk.md"
+  },
+  {
+   "naam": "Plots Direct S.L.",
+   "website": "https://plotsdirect.com",
+   "plaats": "Jávea (Cap Martí / Ctra. Cabo la Nao Pla 258)",
+   "cms": "eigen",
+   "advies": "lezen",
+   "robots": "robots.txt bestaat (HTTP 200, 24-09-2026) en bevat precies twee regels: \"User-agent: *\" en \"Allow: /\". Geen Disallow, geen Crawl-delay, geen Sitemap-regel. Alle aanbod- en objectpagina's mogen door iedere bot gelezen worden.",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://plotsdirect.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://plotsdirect.com/properties-for-sale---21866"
+   ],
+   "geschat_aantal": 115,
+   "gebied": "93 van 115 objecten (81%): Jávea/Xàbia 82, Moraira 7, Benitachell 4 — telling op de plaatsnaam in de object-URL's van sitemap.xml (17-09-2026). 64 van de 115 objecten zijn bouwpercelen.",
+   "crawl_delay_s": null,
+   "opmerking": "Vijf pagina's opgehaald op 24-09-2026: robots.txt, homepage, sitemap.xml, /privacy en één objectpagina. (1) robots.txt staat alles toe. (2) Er zijn geen gebruiksvoorwaarden, aviso legal of disclaimer gelinkt; alleen een AVG-privacyverklaring op /privacy, zonder één woord over scraping, robots, autom",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-plotsdirect.com.md"
+  },
+  {
+   "naam": "Hamiltons of London Jávea (Hamiltons Real Estate — INMO HAMILTONS REAL ESTATE SL)",
+   "website": "https://www.hamiltonsoflondon.net",
+   "plaats": "Jávea (Av. Lepanto 13)",
+   "cms": "Sooprema",
+   "advies": "feed vragen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200, 421 regels, geen Sitemap-regel). Voor 'User-agent: *' geldt 'Allow: /' met uitzonderingen: /cgi-bin/, /images/, /admin/, formulieren (/html/formulario/...), galerij-modals, printversies (*/print/*, */imprimir/* enz.) en paginering via jokertekens (/*/*/*/pagina/*, /page/*, /seite/* ...). Aanbod- en objectpagina's zijn dus niet uitgesloten, paginering wel. Daarna 132",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.hamiltonsoflondon.net/for-sale/price-asc/"
+   ],
+   "geschat_aantal": 445,
+   "gebied": "Tellers homepage 24-09-2026: Jávea 106 + Moraira 64 = 170 van 445 getelde objecten (ca. 38%); Benitachell heeft een eigen pagina zonder teller. Werkelijk totaal ligt hoger (ook Dénia, Alfaz del Pi, Be",
+   "crawl_delay_s": null,
+   "opmerking": "Automatisch lezen is technisch geblokkeerd: 'Paagees Shield' (JS-rekenpuzzel + cookie) verving sitemap.xml en de aanbodpagina door een 'Security Check'-pagina voor mijn script; robots.txt sluit bovendien 132 scrapetools expliciet uit. Dat omzeilen we niet. Gebruiksvoorwaarden: voettekst toont 'Legal",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-hamiltonsoflondon.net.md"
+  },
+  {
+   "naam": "Javea Casas",
+   "website": "https://www.javeacasas.com",
+   "plaats": "Jávea",
+   "cms": "Sooprema",
+   "advies": "feed vragen",
+   "robots": "User-agent: * krijgt \"Allow: /\" en mag objectpagina's en aanbodpagina's per plaats lezen, maar niet doorbladeren (Disallow: /*/*/*/pagina/*, /page/*, /seite/* enz.), geen formulieren, galerijvensters, printversies of /images/; Crawl-delay: 14. Ruim honderd bots (o.a. Python-urllib, Wget, HTTrack) krijgen Disallow: /. Geen Sitemap-regel. In de praktijk staat vóór elke HTML-pagina een JavaScript-bot",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": null,
+   "aanbod_urls": [
+    "https://www.javeacasas.com/properties-for-sale-in-javea/"
+   ],
+   "geschat_aantal": 211,
+   "gebied": "Tellers op de homepage (24-09-2026): 124 objecten Jávea en 87 Dénia; Moraira en Benitachell hebben eigen aanbodpagina's zonder zichtbare teller. Dus ongeveer 60 % Jávea, 40 % Dénia, plus een ongeteld ",
+   "crawl_delay_s": 14,
+   "opmerking": "robots.txt staat lezen van objectpagina's toe (met 14 s pauze en zonder bladerpagina's), maar de site zet een Paagees Shield-botcontrole vóór elke pagina die een gewone automatische lezer tegenhoudt; die omzeilen we niet. De legal notice (https://www.javeacasas.com/legal-notice/, 24-09-2026) noemt s",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-javeacasas.com.md"
+  },
+  {
+   "naam": "HG Hamburg (Hanseatische Gesellschaft Hamburg S.L.)",
+   "website": "https://www.hg-hamburg.de",
+   "plaats": "Jávea (Carrer Amedeo Modigliani 3)",
+   "cms": "eGO Real Estate (Janela Digital)",
+   "advies": "lezen",
+   "robots": "User-agent: * mag de aanbodpagina's (/unser-angebot, /immobilie/...) lezen. Alleen uitgesloten: /virtual/PrintProperty.aspx, /virtual/PrintDevelopment.aspx, /virtual/SmartLink*.aspx, */smartLink/*, */gerir-dados-rgpd, */rgpd-update, foutpagina's (/404, /500, /410, ook onder /es-es/ en /en-gb/), de downloadgidsen (kaufguide, verkaufsleitfaden en de ES/EN-varianten), /startdpl en de 'brief erhalten'",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://www.hg-hamburg.de/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.hg-hamburg.de/unser-angebot"
+   ],
+   "geschat_aantal": 151,
+   "gebied": "Onbekend aandeel. Kantoor in Jávea, paginatitel 'Jávea, Moraira & Altea'; categoriepagina's voor Jávea, Benitachell en Moraira, maar ook voor Altea, Benissa, Calpe, Dénia en Pedreguer. Slechts 6 van 1",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt (24-09-2026) staat lezen toe en de sitemap-index (3 talen) levert alle objecten: de Duitse sub-sitemap heeft 320 URL's waarvan 151 objectpagina's onder /immobilie/<slug>/<referentie>, plus 16 categoriepagina's onder /unser-angebot/. Aanbod is vooral villa's in het hogere segment (135x vil",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-hg-hamburg.de.md"
+  },
+  {
+   "naam": "Casa Connections",
+   "website": "https://casaconnections.co.uk",
+   "plaats": "Jávea (Ctra. Cabo la Nao Pla 116-4)",
+   "cms": "WordPress",
+   "advies": "lezen",
+   "robots": "Opgehaald 24-09-2026 (HTTP 200): \"User-agent: *\" gevolgd door \"Allow: /\" en verder geen enkele Disallow-regel; User-agent: * mag dus alle pagina's inclusief het aanbod lezen. Daarna 31 Sitemap-regels: sitemap.xml plus sitemap_index_0.xml t/m sitemap_index_30.xml (die genummerde bestanden niet opgehaald; sitemap.xml stuurt door naar de Yoast-index sitemap_index.xml).",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": "https://casaconnections.co.uk/property-sitemap.xml",
+   "aanbod_urls": [
+    "https://casaconnections.co.uk/properties/"
+   ],
+   "geschat_aantal": 84,
+   "gebied": "81 van 84 objecten (96%) in Javea, Benitachell of Moraira, geteld op plaatsnaam in de URL-slug (property-sitemap.xml, 24-09-2026): Javea 77, Moraira 3, Benitachell 1; rest Benissa 1, Teulada 1, Jesus ",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat alles toe (Allow: /). Er zijn geen gebruiksvoorwaarden: alleen een privacyverklaring (https://casaconnections.co.uk/privacy-policy/, laatst bijgewerkt 23-02-2022, sjabloontekst) zonder een woord over scraping, crawlen, kopiëren of auteursrecht; de drie treffers op \"automatically\" ga",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-casaconnections.co.uk.md"
+  },
+  {
+   "naam": "Ashton Villas",
+   "website": "https://www.ashtonvillas.com",
+   "plaats": "Jávea (Av. Augusta 20)",
+   "cms": "WordPress (thema RealHomes + WPML + Yoast + LiteSpeed Cache; vermoedelijk gevuld via externe feed-import)",
+   "advies": "lezen",
+   "robots": "Yoast-blok (24-09-2026): \"User-agent: * / Disallow: /?s= / Disallow: /page/*/?s= / Disallow: /search/ / Disallow: /wp-json/ / Disallow: /?rest_route=\" — alleen interne zoekfunctie en WordPress-REST-API zijn dicht; /property/ en alle objectpagina's zijn toegestaan. \"User-agent: AdsBot / Disallow: /\" (alleen Google AdsBot geweerd). \"Sitemap: https://www.ashtonvillas.com/sitemap_index.xml\".",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.ashtonvillas.com/property-sitemap.xml",
+   "aanbod_urls": [
+    "https://www.ashtonvillas.com/property/"
+   ],
+   "geschat_aantal": 157,
+   "gebied": "67 van 157 object-URL's (43 %) in de slug: Jávea/Xàbia 53, Moraira 14, Benitachell/Cumbre del Sol 0. Rest vooral Calpe (35), Benissa (20), Altea (13). Binnen Jávea+Moraira: 54 villa's, 5 appartementen",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat de aanbod- en objectpagina's toe (alleen zoekfunctie en /wp-json/ dicht). Geen terms/aviso legal; alleen /disclaimer/ met een gewone auteursrechtclausule: \"Copying, disseminating and any other use of these materials is not permitted without the written permission of [de eigenaar]\" —",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-ashtonvillas.com.md"
+  },
+  {
+   "naam": "Homes To Be Happy",
+   "website": "https://www.homestobehappy.com",
+   "plaats": "Jávea",
+   "cms": "Paagees-weblaag met Paagees Shield; onderliggend CRM vermoedelijk Sooprema (robots.txt-sjabloon), niet bevestigd",
+   "advies": "feed vragen",
+   "robots": "Opgehaald 24-09-2026 21:50 UTC (HTTP 200, 5.717 bytes, last-modified 07-01-2025). Blok \"User-agent: *\" eindigt op \"Allow: /\": aanbod- en objectpagina's mogen gelezen worden. Verboden: vervolgpagina's van lijsten (\"Disallow: /*/*/*/page/*\" en de vertalingen pagina/pages/seite/stranitsa/siden), printversies (*/print/*, */imprimir/* enz.), formulieren (/html/formulario/llamanos/, /html/formulario/48h",
+   "voorwaarden": "niet gevonden",
+   "sitemap_url": null,
+   "aanbod_urls": [],
+   "geschat_aantal": null,
+   "gebied": "onbekend — aanbod niet gezien; kantoor staat in K01 als Jávea-kantoor (bron: Google 'immobilier Javea' / 'Immobilienmakler Javea', 24-09-2026)",
+   "crawl_delay_s": null,
+   "opmerking": "robots.txt staat lezen van objectpagina's toe, maar in de praktijk zet de site vóór elke HTML-pagina én de sitemap een JavaScript-botcontrole (\"Security Check — Verifying your browser\", \"Powered by Paagees Shield\"; SHA-256-rekenpuzzel die een cookie __shield zet; server nginx, x-robots-tag noindex).",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-homestobehappy.com.md"
+  },
+  {
+   "naam": "Blanca International",
+   "website": "https://www.blancainternational.com",
+   "plaats": "Jávea (Av. Arenal 1, local C)",
+   "cms": "Paagees (weblaag op onbekend CRM) voor het aanbod op blanca-properties.com; hoofdsite blancainternational.com is WordPress 6.6.9 met thema Houzez (zonder woningen)",
+   "advies": "feed vragen",
+   "robots": "blancainternational.com (24-09-2026): \"User-agent: *\" / \"Allow: /\" plus 37 Sitemap-regels — alles mag. Het aanbod staat echter op het aparte domein blanca-properties.com; diens robots.txt (24-09-2026) zegt voor \"User-agent: *\" \"Allow: /\" met Disallow voor vervolgpagina's van lijsten (\"/*/*/*/page/*\" e.d.), printversies, formulieren en galerij-modal, blokkeert ruim 100 kopieerprogramma's met naam (",
+   "voorwaarden": "verbieden niets",
+   "sitemap_url": "https://www.blancainternational.com/sitemap.xml",
+   "aanbod_urls": [
+    "https://www.blanca-properties.com/en/for-sale/javea/relevant/"
+   ],
+   "geschat_aantal": null,
+   "gebied": "Niet te kwantificeren: aanbodlijsten onbereikbaar. Site positioneert zich op Jávea (titel \"Luxury Villa and Apartments in Javea\", kantoor Av. Arenal 1, Local C, Jávea) met aanbodlinks voor Jávea, Beni",
+   "crawl_delay_s": 14,
+   "opmerking": "Toets 24-09-2026. De hoofdsite blancainternational.com is een WordPress/Houzez-brochuresite: robots.txt staat alles toe, de sitemap (All in One SEO, 63 deelsitemaps, geen property-sitemap) bevat 0 objecten, en de pagina /terms-and-conditions/ bestaat uitsluitend uit Lorem-ipsum-vultekst (geen verbod",
+   "bron": "inventaris 24-09-2026 (agent), verslag onderzoek/makelaars/site-blancainternational.com.md"
+  }
+ ]
+}

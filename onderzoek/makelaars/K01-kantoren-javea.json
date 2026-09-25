@@ -1,0 +1,684 @@
+{
+  "kantoren": [
+    {
+      "naam": "Aguila Rent a Villa",
+      "website": "https://www.aguilarent.com",
+      "plaats": "Jávea (Av. de Palmela 56)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); site richt zich vooral op verhuur"
+    },
+    {
+      "naam": "Alensol S.L.",
+      "website": "https://www.alensol-javea.com",
+      "plaats": "Jávea (Ctra. de la Granadella 23)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "AR Luxury Living (Antonio Roselló Luxury Living)",
+      "website": "https://www.arluxuryliving.com",
+      "plaats": "Jávea",
+      "bron": "register TREE Deal Hunter; gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "A.V. Costamar S.L.",
+      "website": "https://www.avcostamar.com",
+      "plaats": "Jávea (Av. Jaime I 15)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); ook estateagentsespana.com"
+    },
+    {
+      "naam": "Bartolomé Bas",
+      "website": "https://bartolomebas.com",
+      "plaats": "Jávea (Av. Libertad 2, Edif. Estrella del Sur)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Rightmove-agentpagina 'BARTOLOME BAS SL' Javea-135488 (24-09-2026); oude domein inmobas.com verwijst door"
+    },
+    {
+      "naam": "Cala Blanca Villas S.L.",
+      "website": "https://www.calablanca.com",
+      "plaats": "Jávea (Av. de la Fontana 2, local 6)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "Casitas Ibérica",
+      "website": "https://www.casitasiberica.com",
+      "plaats": "Jávea (Ctra. Jesús Pobre 164)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); javeaguide.com"
+    },
+    {
+      "naam": "Crown Properties S.L.",
+      "website": "https://www.crown-property.com",
+      "plaats": "Jávea (Av. de París 2)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'immobilier Javea'"
+    },
+    {
+      "naam": "Deluxe Homes Javea",
+      "website": "https://www.deluxehomesjavea.com",
+      "plaats": "Jávea",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "Engel & Völkers Jávea",
+      "website": "https://www.engelvoelkers.com/es/en/shops/valencia-javea",
+      "plaats": "Jávea (Av. del Mediterráneo 238 volgens E&V-site; Av. de la Libertad 47 volgens gemeente)",
+      "bron": "register TREE Deal Hunter; gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'Engel & Völkers Jávea shop' (24-09-2026)"
+    },
+    {
+      "naam": "EuroJavea Inmobiliaria",
+      "website": "https://www.eurojavea.com",
+      "plaats": "Jávea (Pl. President Adolfo Suárez 9, Puerto)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Kyero-profiel euro-javea-a6414 (24-09-2026); Google 'estate agents Javea'"
+    },
+    {
+      "naam": "Giuliano Villas",
+      "website": "http://www.giuliano-villas.com",
+      "plaats": "Jávea (Av. de la Libertad 34, local 3)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); tweede site costablancajaveaproperties.com; alleen http bereikbaar op 24-09-2026"
+    },
+    {
+      "naam": "Houses Investment Holdings S.L. (Javea Houses)",
+      "website": "https://www.javeahouses.com",
+      "plaats": "Jávea (Av. de la Libertad bl. 7F, Arenal)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); realadvisor.es"
+    },
+    {
+      "naam": "Indarte Inmobiliaria",
+      "website": "https://www.indarteinmobiliaria.com",
+      "plaats": "Jávea (Carrer Thiviers 2)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "Inmo Villas Jávea",
+      "website": "https://www.inmovillasjavea.com",
+      "plaats": "Jávea (Av. del Mediterráneo 41, nº 30)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); javeaguide.com"
+    },
+    {
+      "naam": "Jávea Continental",
+      "website": "https://www.javeacontinental.com",
+      "plaats": "Jávea (Av. Jaime I 11 B, Puerto)",
+      "bron": "register TREE Deal Hunter; gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'inmobiliaria Javea'"
+    },
+    {
+      "naam": "Javea Homes",
+      "website": "https://www.javeahomes.com",
+      "plaats": "Jávea (Av. de la Fontana 2, Edif. Estrella del Sur, local 3)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); .es-domein gaf HTTP 500 op 24-09-2026, .com werkt"
+    },
+    {
+      "naam": "Javea Immo",
+      "website": "https://www.javeaimmo.com",
+      "plaats": "Jávea (Av. de Estrasburgo, local 3)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'inmobiliaria Javea' en 'Immobilien Javea'"
+    },
+    {
+      "naam": "Javea Home Finders",
+      "website": "https://www.javeahomefinders.com",
+      "plaats": "Jávea (Av. Libertad 19, local 11, Arenal; ook Puerto)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Kyero-profiel a4121; Rightmove Overseas agentpagina Javea-203873 (24-09-2026); Google 'makelaar Javea'"
+    },
+    {
+      "naam": "L'Aurora Villas Selection",
+      "website": "https://www.lauroravillas.com",
+      "plaats": "Jávea (Ronda Norte 6)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "Llidomar Properties",
+      "website": "https://www.llidomarjavea.com",
+      "plaats": "Jávea (Av. Príncipe de Asturias 13)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'inmobiliaria Javea'"
+    },
+    {
+      "naam": "Maravilla Costa S.L.",
+      "website": "https://www.maravilla-costa.com",
+      "plaats": "Jávea (Av. del Pla 124, local 8)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); javeaguide.com; Duitse site maravillacostablanca.de; immojavea.com is dezelfde firma (24-09-2026)"
+    },
+    {
+      "naam": "MG Villas",
+      "website": "https://www.mgvillas.com",
+      "plaats": "Jávea (Av. de la Libertad 11, local 11)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Rightmove 'MG Inmobiliaria' Javea-40167; spainhouses.net"
+    },
+    {
+      "naam": "Moragues Pons Mediterranean Houses",
+      "website": "https://www.moraguespons.com",
+      "plaats": "Jávea (Av. Ausias March 13)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'inmobiliaria Javea' en 'makelaar Javea'"
+    },
+    {
+      "naam": "New Life Property Spain",
+      "website": "https://www.newlifepropertyspain.com",
+      "plaats": "Jávea (Av. de Lepanto 7, Puerto)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); spainhouses.net"
+    },
+    {
+      "naam": "Paradise Real Estate (Paradise Property Solutions)",
+      "website": "https://www.paradiserealestate.es",
+      "plaats": "Jávea (Av. de la Libertad 5 / bl. 5 47C)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'estate agents Javea'; ook paradiserealestate.co.uk"
+    },
+    {
+      "naam": "Promociones Jávea",
+      "website": "https://www.promocionesjavea.com",
+      "plaats": "Jávea (Av. del Pla 124, local 15)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "Proxabia",
+      "website": "https://www.proxabia.com",
+      "plaats": "Jávea (Av. La Fontana 2, local 5)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "RE/MAX Inmomás IV",
+      "website": "https://www.remaxinmomas.es",
+      "plaats": "Jávea (Ctra. Cabo la Nao 124, local 5)",
+      "bron": "register TREE Deal Hunter ('RE/MAX Javea'); gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'RE/MAX Jávea' (24-09-2026)"
+    },
+    {
+      "naam": "Rimontgó",
+      "website": "https://www.rimontgo.com",
+      "plaats": "Jávea (Av. de Lepanto 1, Puerto; ook Arenal)",
+      "bron": "register TREE Deal Hunter; gemeentelijst xabia.org/ver/2098 (24-09-2026); Kyero-profiel a23710; spainhouses.net"
+    },
+    {
+      "naam": "Terramar Costa Blanca S.L.",
+      "website": "https://www.terramar.es",
+      "plaats": "Jávea (Pl. President Adolfo Suárez 18)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); javea.com bedrijvengids"
+    },
+    {
+      "naam": "ValuVillas",
+      "website": "https://www.valuvillas.com",
+      "plaats": "Jávea (Ctra. Cabo la Nao 141)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); spainhouses.net; javeaguide.com"
+    },
+    {
+      "naam": "Vicens Ash Properties",
+      "website": "https://www.vicensash.com",
+      "plaats": "Jávea (Av. del Pla 137)",
+      "bron": "register TREE Deal Hunter; gemeentelijst xabia.org/ver/2098 (24-09-2026); Kyero-profiel a2907; Rightmove Overseas BRANCH 52722 (24-09-2026)"
+    },
+    {
+      "naam": "Villa Lingo Real Estate",
+      "website": "https://www.villalingo.com",
+      "plaats": "Jávea (Av. de la Fontana 18C)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); spainhouses.net"
+    },
+    {
+      "naam": "Villalux S.L.",
+      "website": "https://www.villalux.com",
+      "plaats": "Jávea (C.C. La Nao 5, Ctra. Cabo la Nao, Jávea Park)",
+      "bron": "register TREE Deal Hunter; gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'makelaar Javea' en 'estate agents Javea'"
+    },
+    {
+      "naam": "Xàbiacasa",
+      "website": "https://www.xabiacasa.com",
+      "plaats": "Jávea (C/ Sant Agustí)",
+      "bron": "register TREE Deal Hunter; gemeentelijst xabia.org/ver/2098 (24-09-2026)"
+    },
+    {
+      "naam": "Xabiga S.L.",
+      "website": "https://www.xabiga.com",
+      "plaats": "Jávea (Pl. Almirante Bastarreche 13, Puerto)",
+      "bron": "gemeentelijst xabia.org/ver/2098 (24-09-2026); Google 'inmobiliaria Xàbia'"
+    },
+    {
+      "naam": "RANDOF Real Estate",
+      "website": "https://www.randofrealestate.com",
+      "plaats": "Jávea (ook Dénia en Moraira)",
+      "bron": "register TREE Deal Hunter; Google 'RANDOF Javea' (24-09-2026); javea.com bedrijvengids"
+    },
+    {
+      "naam": "Lucas Fox Jávea",
+      "website": "https://www.lucasfox.com/property/spain/costa-blanca/javea.html",
+      "plaats": "Jávea (Pl. Adolfo Suárez 23, Puerto)",
+      "bron": "register TREE Deal Hunter; Kyero-lijst Javea; spainhouses.net; Google 'Lucas Fox Jávea' (24-09-2026)"
+    },
+    {
+      "naam": "COSTA HOUSES Luxury Villas S.L.",
+      "website": "https://www.costa-houses.com",
+      "plaats": "Jávea (Av. del Pla 126)",
+      "bron": "register TREE Deal Hunter; Google 'Immobilien Javea'; Rightmove-lijst Javea; realadvisor.es (24-09-2026)"
+    },
+    {
+      "naam": "iad España (asesores Jávea)",
+      "website": "https://www.iadespana.es/encontrar-un-asesor/javea-03738",
+      "plaats": "Jávea (netwerk van zelfstandige adviseurs, geen kantoor)",
+      "bron": "register TREE Deal Hunter; Google 'iad Jávea' (24-09-2026)"
+    },
+    {
+      "naam": "Ahermar",
+      "website": "https://www.ahermar.com",
+      "plaats": "Jávea (Av. de la Fontana 4)",
+      "bron": "Google 'inmobiliaria Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Luxia Properties",
+      "website": "https://luxiaproperties.com",
+      "plaats": "Jávea (centrum)",
+      "bron": "Google 'inmobiliaria Javea' (24-09-2026); spainhouses.net"
+    },
+    {
+      "naam": "Javea Estates",
+      "website": "https://www.javeaestates.com",
+      "plaats": "Jávea",
+      "bron": "Google 'estate agents Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Javea Estate Agent",
+      "website": "https://www.javeaestateagent.com",
+      "plaats": "Jávea (Ctra. Cabo la Nao 160, suite C)",
+      "bron": "Google 'estate agents Javea' (24-09-2026)"
+    },
+    {
+      "naam": "VillaMia Real Estate S.L.",
+      "website": "https://www.villamia.net",
+      "plaats": "Jávea (Av. de la Llibertat 9H, Arenal)",
+      "bron": "Google 'estate agents Javea'; javeaonline24.com gids (24-09-2026)"
+    },
+    {
+      "naam": "123 Javea Villas",
+      "website": "https://www.123javeavillas.com",
+      "plaats": "Jávea (Av. Marina Española 5, Puerto)",
+      "bron": "Kyero-profiel a8639 (24-09-2026); spainhouses.net"
+    },
+    {
+      "naam": "New Home Javea",
+      "website": "https://www.newhomejavea.com",
+      "plaats": "Jávea (Ctra. Cap de la Nau Pla 126, local 2.05)",
+      "bron": "Kyero-profiel a7200 (24-09-2026)"
+    },
+    {
+      "naam": "Key2 Properties",
+      "website": "https://key2properties.es",
+      "plaats": "Jávea (Av. Príncipe de Asturias 33)",
+      "bron": "Kyero-profiel a5722; realadvisor.es (24-09-2026)"
+    },
+    {
+      "naam": "Grupo García Inmobiliaria",
+      "website": "https://grupo-garcia.es",
+      "plaats": "Jávea en Jalón",
+      "bron": "Rightmove agentpagina Javea-84564 (24-09-2026); Google 'inmobiliaria Xàbia'"
+    },
+    {
+      "naam": "Sansy Villas Jávea S.L.",
+      "website": "https://www.sansyvillasjavea.com",
+      "plaats": "Jávea (Ctra. Cabo la Nao Pla 131, local 12)",
+      "bron": "Kyero-profiel a18216 (24-09-2026); spainhouses.net"
+    },
+    {
+      "naam": "Villas Leon Javea",
+      "website": "https://www.villasleonjavea.com",
+      "plaats": "Jávea (Av. Trenc d'Alba 5)",
+      "bron": "Kyero-profiel a6217 (24-09-2026)"
+    },
+    {
+      "naam": "Vista Villas Javea",
+      "website": "https://vistavillasjavea.com",
+      "plaats": "Jávea (Av. de la Fontana)",
+      "bron": "Kyero-profiel a5781 (24-09-2026); ook op xabia.org"
+    },
+    {
+      "naam": "Jávea Mia",
+      "website": "https://javeamia.com",
+      "plaats": "Jávea (C.C. Arenal, Ctra. Cabo la Nao Pla 130, 1.09)",
+      "bron": "Kyero-profiel a13312 (24-09-2026)"
+    },
+    {
+      "naam": "Blue Square Real Estate (Jávea)",
+      "website": "https://www.blue-square.com/javea-agency/",
+      "plaats": "Jávea (Arenal)",
+      "bron": "Kyero-lijst Javea; javeaonline24.com gids (24-09-2026)"
+    },
+    {
+      "naam": "Atina Inmobiliaria",
+      "website": "https://atinainmobiliaria.com",
+      "plaats": "Jávea (Av. Mediterráneo 27; ook Gandia, Daimús)",
+      "bron": "spainhouses.net; javeaguide.com (24-09-2026)"
+    },
+    {
+      "naam": "Spainlife and Houses",
+      "website": "https://www.spainlifeandhouses.es",
+      "plaats": "Jávea (C/ Canal Sur 1)",
+      "bron": "spainhouses.net (24-09-2026)"
+    },
+    {
+      "naam": "Villadom Immo Jávea",
+      "website": "https://www.villadomjavea.com",
+      "plaats": "Jávea (Av. Fontana 8, Arenal)",
+      "bron": "spainhouses.net (24-09-2026)"
+    },
+    {
+      "naam": "Alta Villas",
+      "website": "https://altavillas.com",
+      "plaats": "Jávea (Av. de la Libertad 19, local 12, Arenal)",
+      "bron": "javeaonline24.com gids; javeaguide.com (24-09-2026)"
+    },
+    {
+      "naam": "Hamiltons of London Jávea",
+      "website": "https://www.hamiltonsoflondon.net",
+      "plaats": "Jávea (Av. Lepanto 13)",
+      "bron": "javeaonline24.com gids; Rightmove-lijst Javea; estateagentsespana.com (24-09-2026)"
+    },
+    {
+      "naam": "Sunshine Villas",
+      "website": "https://sunshinevillas.co.uk",
+      "plaats": "Jávea (Arenal 55)",
+      "bron": "estateagentsespana.com; Kyero a1605 (24-09-2026)"
+    },
+    {
+      "naam": "A Place in Javea",
+      "website": "https://www.aplaceinjavea.com",
+      "plaats": "Jávea (Av. Ausias March, bl. V3)",
+      "bron": "estateagentsespana.com; javea.com bedrijvengids (24-09-2026)"
+    },
+    {
+      "naam": "Javea Casas",
+      "website": "https://www.javeacasas.com",
+      "plaats": "Jávea",
+      "bron": "estateagentsespana.com (24-09-2026)"
+    },
+    {
+      "naam": "Plots Direct S.L.",
+      "website": "https://plotsdirect.com",
+      "plaats": "Jávea (Cap Martí / Ctra. Cabo la Nao Pla 258)",
+      "bron": "estateagentsespana.com; javeaguide.com (24-09-2026)"
+    },
+    {
+      "naam": "HG Hamburg (Hanseatische Gesellschaft Hamburg)",
+      "website": "https://www.hg-hamburg.de",
+      "plaats": "Jávea (Carrer Amedeo Modigliani 3)",
+      "bron": "realadvisor.es; javeaguide.com (24-09-2026)"
+    },
+    {
+      "naam": "Blanca International",
+      "website": "https://www.blancainternational.com",
+      "plaats": "Jávea (Av. Arenal 1, local C)",
+      "bron": "javeaonline24.com gids ('Property Investments Spain') (24-09-2026)"
+    },
+    {
+      "naam": "Casaconnections",
+      "website": "https://casaconnections.co.uk",
+      "plaats": "Jávea (Ctra. Cabo la Nao Pla 116-4)",
+      "bron": "javeaguide.com (24-09-2026)"
+    },
+    {
+      "naam": "Hernani Homes S.L.",
+      "website": "http://www.hernanihomes.com",
+      "plaats": "Jávea (Av. Fontana 2, Edif. Estrella del Sur, local 7B)",
+      "bron": "javeaguide.com (24-09-2026); alleen http bereikbaar"
+    },
+    {
+      "naam": "Ashton Villas",
+      "website": "https://www.ashtonvillas.com",
+      "plaats": "Jávea (Av. Augusta 20)",
+      "bron": "javeaguide.com (24-09-2026)"
+    },
+    {
+      "naam": "Andrea y Olaf Inmobiliaria",
+      "website": "https://www.andreayolaf.com",
+      "plaats": "Jávea (C/ Sertorio 5)",
+      "bron": "javea.com bedrijvengids; Google 'immobilier Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Homes To Be Happy",
+      "website": "https://www.homestobehappy.com",
+      "plaats": "Jávea",
+      "bron": "Google 'immobilier Javea' en 'Immobilienmakler Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Soluciones Inmobiliaria Jávea",
+      "website": "https://www.solucionesinmojavea.com",
+      "plaats": "Jávea (Av. Trenc d'Alba 1)",
+      "bron": "Google 'inmobiliaria Xàbia'; javea.com bedrijvengids ('Real Estate Solutions Jávea') (24-09-2026)"
+    },
+    {
+      "naam": "Moments Estates",
+      "website": "https://www.momentsestates.com",
+      "plaats": "Jávea",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Xcellence Properties",
+      "website": "https://xcellence.es",
+      "plaats": "Jávea (Carrer de la Dauradella 4)",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Real Estate Javea",
+      "website": "https://real-estate-javea.com",
+      "plaats": "Jávea",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Javea Property",
+      "website": "https://www.javeaproperty.com",
+      "plaats": "Jávea",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Coldwell Banker Solaris Real Estate",
+      "website": "https://www.coldwellbanker.es/en/real-estate-javea-solaris",
+      "plaats": "Jávea (Av. de la Libertad 12, Arenal)",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Montgó Villas S.L.",
+      "website": "https://www.montgovillas.com",
+      "plaats": "Jávea (Av. Ultramar)",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Costa Blanca Homes",
+      "website": "https://www.costablanca.homes",
+      "plaats": "Jávea",
+      "bron": "Google (24-09-2026); tweede site javea.properties (zelfde telefoonnummer)"
+    },
+    {
+      "naam": "Plots and Villas Javea",
+      "website": "https://www.plotsandvillasjavea.com",
+      "plaats": "Jávea",
+      "bron": "Google; javeaconnect.co.uk gids (24-09-2026)"
+    },
+    {
+      "naam": "Miralbo (Miralbo Properties)",
+      "website": "https://www.miralbo.com",
+      "plaats": "Jávea (Av. de la Llibertat 18)",
+      "bron": "javea.com bedrijvengids (24-09-2026); bouwer plus makelaardij"
+    },
+    {
+      "naam": "Deseo Homes",
+      "website": "https://deseohomes.com",
+      "plaats": "Jávea",
+      "bron": "Google 'Immobilienmakler Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Costa Blanca Exclusive (Javea Online S.L.)",
+      "website": "https://www.costablanca-exclusive.com",
+      "plaats": "Jávea (C/ Lago Ontario 48)",
+      "bron": "Google 'Immobilienmakler Javea' (24-09-2026); Duitse site cbexclusive.de"
+    },
+    {
+      "naam": "Luxinmo Real Estate (Jávea)",
+      "website": "https://www.luxinmo.com",
+      "plaats": "Jávea (Av. del Pla 36, local 2)",
+      "bron": "Kyero-lijst Javea a9294 (24-09-2026)"
+    },
+    {
+      "naam": "Luxury Javea",
+      "website": "https://www.luxuryjavea.com",
+      "plaats": "Jávea (divisie van Javea Home Finders)",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "A.F. Costa Blanca S.L. (Costa Blanca Inmobiliaria)",
+      "website": "https://www.costablanca-sl.com",
+      "plaats": "Jávea",
+      "bron": "javeaguide.com; Google (24-09-2026)"
+    },
+    {
+      "naam": "Orange Villas (kantoor Jávea)",
+      "website": "https://orangevillas.com",
+      "plaats": "Jávea (Av. de la Llibertat 7, local B) en Moraira",
+      "bron": "Google 'Immobilienmakler Javea' (24-09-2026)"
+    },
+    {
+      "naam": "BoCasa",
+      "website": "https://bocasa.nl",
+      "plaats": "Jávea (C/ Henry Matisse 4) en Moraira",
+      "bron": "Google 'makelaar Javea' (24-09-2026)"
+    },
+    {
+      "naam": "AREA Costa Blanca",
+      "website": "https://www.areacostablanca.com",
+      "plaats": "Benissa (Av. de la Marina 302); ook Calpe",
+      "bron": "Kyero-profiel a7128; Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "Fine & Country Costa Blanca North",
+      "website": "https://www.fineandcountry.es/en/costa-blanca-north-estate-agents",
+      "plaats": "Dénia",
+      "bron": "Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "Blumelia Real Estate",
+      "website": "https://www.blumelia.com",
+      "plaats": "Dénia",
+      "bron": "Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "The Agency Costa Blanca North",
+      "website": "https://theagencyre-costablancanorth.com",
+      "plaats": "Moraira",
+      "bron": "Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "Tabaira Real Estate",
+      "website": "https://tabairarealestate.com",
+      "plaats": "Moraira (Av. Madrid 6)",
+      "bron": "Rightmove-lijst Javea, BRANCH 114982 (24-09-2026)"
+    },
+    {
+      "naam": "Home España",
+      "website": "https://www.homeespana.com",
+      "plaats": "Dénia",
+      "bron": "Rightmove agentpagina's (24-09-2026)"
+    },
+    {
+      "naam": "Infinity House Costa Blanca",
+      "website": "https://www.infinityhousecostablanca.com",
+      "plaats": "Dénia",
+      "bron": "Rightmove agentpagina Alicante-256190; Kyero a12741 (24-09-2026)"
+    },
+    {
+      "naam": "Prestige Property Group",
+      "website": "https://www.prestigeproperty.co.uk",
+      "plaats": "Verenigd Koninkrijk (netwerk, geen kantoor in Jávea)",
+      "bron": "Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "TEKCE",
+      "website": "https://tekce.com",
+      "plaats": "Orihuela Costa",
+      "bron": "Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "Chersun Properties S.L.",
+      "website": "https://www.chersun.com",
+      "plaats": "Sucina (Murcia)",
+      "bron": "Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "Welcome Estates",
+      "website": "https://www.welcome-estates.com",
+      "plaats": "Zuid-Costa Blanca",
+      "bron": "Rightmove-lijst Javea (24-09-2026)"
+    },
+    {
+      "naam": "MNM Costa Blanca",
+      "website": "https://www.mnmcostablanca.com",
+      "plaats": "Els Poblets (C/ Mirarrosa 3B)",
+      "bron": "Google 'makelaar Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Casas Ambiente",
+      "website": "https://casas-ambiente.com",
+      "plaats": "Moraira (Av. de la Paz 10)",
+      "bron": "Google 'makelaar Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Casas Costa Blanca",
+      "website": "https://casascostablanca.nl",
+      "plaats": "Moraira / Jávea (geen kantooradres gevonden)",
+      "bron": "Google 'makelaar Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Compare Properties Spain",
+      "website": "https://comparepropertiesspain.com",
+      "plaats": "Els Poblets (Ctra. de las Marinas km 8.5)",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "La Naya Real Estate",
+      "website": "https://www.lanayarealestate.com",
+      "plaats": "Dénia (Carrer de Diana 7)",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Ortolà Inmobiliaria",
+      "website": "https://www.ortolainmobiliaria.com",
+      "plaats": "Pego",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Schaich Immobilien S.L.",
+      "website": "https://immobilien-denia.com",
+      "plaats": "Els Poblets",
+      "bron": "Google 'Immobilienmakler Javea' (24-09-2026)"
+    },
+    {
+      "naam": "Dampier International",
+      "website": "https://www.dampierinternational.com",
+      "plaats": "Moraira / Benissa",
+      "bron": "Google (24-09-2026)"
+    },
+    {
+      "naam": "Costa Blanca Investments",
+      "website": "https://www.costablancainvestments.com",
+      "plaats": "Altea",
+      "bron": "Google (24-09-2026)"
+    }
+  ],
+  "meta": {
+    "datum": "24-09-2026",
+    "aantal": 108,
+    "bronnen": [
+      "https://www.xabia.org/ver/2098/Real-estate-agents-and-promoters.html",
+      "Google: inmobiliaria Javea / estate agents Javea / makelaar Javea / Immobilien Javea / immobilier Javea / Immobilienmakler Javea",
+      "Kyero (via zoekresultaten; kyero.com zelf toont een browsercontrole en is niet omzeild)",
+      "Rightmove Overseas: overseas-property-for-sale/Javea.html en agentpagina's",
+      "javeaonline24.com, spainhouses.net, estateagentsespana.com, realadvisor.es, javea.com, javeaguide.com"
+    ],
+    "niet_opgenomen_site_offline_op_24-09-2026": [
+      "FPI Inmobiliaria (fpi-inmobiliaria.com)",
+      "Villas-Plots (villas-plots.com)",
+      "Sun Villas Javea (sunvillasjavea.com)",
+      "Villax Mediterranean (villaxmediterranean.com)",
+      "Ultimate Property Javea (ultimatepropertyjavea.com / ultimatepropertyspain.com)",
+      "Javea-International (javea-international.com)",
+      "Inmobiliaria Javea (inmobiliariajavea.es)",
+      "Bemax Javea (bemaxjavea.com; volgens Google gestopt)",
+      "Sukup & Partner (sukupjavea.com)",
+      "Sunset Real Estate (sunsetjavea.com: 'Account Suspended')",
+      "Javea Property and Builders (verlopen certificaat)"
+    ],
+    "niet_opgenomen_overig": [
+      "5 Real Estate: Rightmove noemt een Jávea-vestiging, eigen site noemt alleen 8 kantoren in het zuiden",
+      "1 Real Estate (Ondara): geen eigen site gevonden",
+      "Euro Villas Javea, Javea 1, La Nao, Acre: geen eigen website gevonden",
+      "Mestral Gestión Inmobiliaria: opgeheven",
+      "BonCasa / MMC Property Services, Rentals Javea, Spain Villas La Marina, Webvillas: verhuur/beheer, geen verkoop",
+      "Inmover: Els Poblets/El Verger, niet in Jávea actief"
+    ]
+  }
+}

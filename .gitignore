@@ -1,0 +1,31 @@
+# Geheimen — nooit committen.
+.env
+.env.local
+.env.*
+!.env.example
+
+# De databank. 9,6 MB binair dat twee keer per dag verandert; in git zou de repo
+# per ronde opzwellen. Hij hoort in de back-up, niet hier.
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+data/makelaars-stand.json
+
+# Gegenereerde rapporten en dossiers: worden opnieuw gemaakt uit de databank.
+rapporten/
+
+# Draailogs. Bevatten geen sleutels (nagemeten 26-09) maar zijn ruis.
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# macOS
+.DS_Store
+
+# Back-upkopieën van bewerkte bestanden
+*.bak
+*.bak-*

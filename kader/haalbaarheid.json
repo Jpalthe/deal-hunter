@@ -1,0 +1,4152 @@
+{
+ "kader_versie": "2026-09-25",
+ "results": [
+  {
+   "id": "K01",
+   "code": "108910753",
+   "url": "https://www.idealista.com/es/inmueble/108910753/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad",
+   "comps_zone": "centro",
+   "type": "renovatie",
+   "price_ask": 399000,
+   "built_m2": 232,
+   "plot_m2": 161,
+   "year": "onbekend",
+   "claims": [
+    "'dos accesos independientes' → 'dos viviendas totalmente independientes' (1)",
+    "'patio interior… viable integrar una pequeña piscina' (1)",
+    "'posibilidad de desarrollar una tercera planta, previa licencia' (1)",
+    "Zelfde object vermoedelijk ook onder 109038046 en 108922636; die laatste noemt 'licencia de obra mayor' (4)"
+   ],
+   "blockers": [
+    "Casco antiguo: ZUR-NHT-regime; NUT gaven begane grond + 1 + zolder, PGOU per blok II–V lagen — welke geldt is ONBEKEND (7); derde bouwlaag dus onzeker [01 §2.11]",
+    "Ingrepen met erfgoedbelang vragen toestemming van Cultura; na 3 maanden zonder antwoord geldt weigering (2) [01 §2.2]",
+    "Verdelen in 2 woningen: parkeereis en división horizontal [te verifiëren]",
+    "Bouwjaar niet vermeld; constructie (draagt de opbouw?) niet beoordeeld; bouwlogistiek smalle straat",
+    "Datakwaliteit: Idealista typeert als 'Finca rústica' met perceel 161 m² midden in het casco (R15-verif. A10)"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 232 m² (casa de pueblo)",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 232,
+     "comps_key": "townhouse_renovated",
+     "vat_recoverable": false,
+     "notes": "Zwembad niet begroot: patio van ±45 m² (perceel 161 minus voetafdruk); claim 'pequeña piscina' is van de aanbieder.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "232 m² gebouwd = veld Idealista (1); geen kadastrale m² gezien.",
+      "Geen zwembad opgenomen (perceel 161 m² in het casco) — aanname 4."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 8,
+      "n_used": 8,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 2674,
+       "base": 2872,
+       "upside": 3316
+      },
+      "sale": {
+       "conservative": 620368,
+       "base": 666304,
+       "upside": 769312
+      },
+      "source": "Idealista-assistent (MCP) search_properties district Centro Ciudad, Jávea/Xàbia (chalets per prijsband + adosados, filter buen estado) + property_detail op 12 objecten",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 106,
+       "examples_m2_max": 729,
+       "examples_m2_median": 236
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -314030.75,
+       "roi_on_costs": -0.3360778789569228,
+       "margin_on_sale": -0.5062007550357207,
+       "total_costs": 934398.75,
+       "equity_needed": 915889.55,
+       "construction_total": 349835.36,
+       "purchase_taxes": 35910.0
+      },
+      "base": {
+       "result": -269243.15,
+       "roi_on_costs": -0.28779217594751905,
+       "margin_on_sale": -0.40408454699356455,
+       "total_costs": 935547.15,
+       "equity_needed": 915889.55,
+       "construction_total": 349835.36,
+       "purchase_taxes": 35910.0
+      },
+      "upside": {
+       "result": -168810.3500000001,
+       "roi_on_costs": -0.1799449186985046,
+       "margin_on_sale": -0.2194302831620982,
+       "total_costs": 938122.3500000001,
+       "equity_needed": 915889.55,
+       "construction_total": 349835.36,
+       "purchase_taxes": 35910.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 61000,
+      "base": 89000,
+      "upside": 150000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": -0.28779217594751905,
+      "sale_-10pct": -0.3578696326735883,
+      "build_+15pct": -0.3286913825087015,
+      "delay_+6m": -0.3231138502889167
+     },
+     "detail_base": {
+      "price": 399000,
+      "sale": 666304,
+      "purchase_taxes": {
+       "itp": 35910.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 35910.0
+      },
+      "purchase_costs": 9096.0,
+      "construction": {
+       "renovation": 232000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 18000,
+        "overlap": 26000,
+        "total": 0,
+        "skp_revenue": 26000,
+        "skp_margin": 7800.0
+       },
+       "pem": 232000.0,
+       "fees": 18560.0,
+       "icio": 9280.0,
+       "tasa": 4640.0,
+       "surveys": 2000,
+       "contingency": 25056.0,
+       "subtotal_ex_vat": 291536.0,
+       "vat_rate": 0.21,
+       "vat": 58299.36,
+       "vat_cost": 58299.36,
+       "total": 349835.36
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 83251.125,
+       "on_build": 32797.064999999995,
+       "fee": 0.0,
+       "total": 116048.19,
+       "per_month": 7736.546
+      },
+      "selling": {
+       "commission_incl_vat": 9994.56,
+       "plusvalia": 6663.04,
+       "misc": 3000,
+       "total": 19657.6,
+       "channel": "intern",
+       "saved_vs_extern": 30316.83200000001
+      },
+      "total_costs": 935547.15,
+      "result": -269243.15,
+      "margin_on_sale": -0.40408454699356455,
+      "roi_on_costs": -0.28779217594751905,
+      "equity_needed": 915889.55,
+      "break_even_sale": 942278.22875,
+      "skp_margin": 7800.0,
+      "group_result": -261443.15000000002,
+      "group_margin_on_sale": -0.39237817872922875
+     }
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + derde bouwlaag (claim aanbieder)",
+     "kind": "renovatie_plus_uitbreiding",
+     "months": 20,
+     "result_m2": 348,
+     "comps_key": "townhouse_renovated",
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als de derde bouwlaag planologisch en constructief mogelijk is (NHT/Cultura).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Claim aanbieder: 'posibilidad de desarrollar una tercera planta, previa licencia' — geen m² genoemd (1).",
+      "116 m² = voetafdruk (232 m² / 2 verdiepingen) als omvang van één extra laag — AANNAME (5).",
+      "Opbouw tegen nieuwbouwtarief 2.000 €/m² — aanname 5."
+     ],
+     "fitout": {
+      "kitchens": 2,
+      "bathrooms": 6,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 8,
+      "n_used": 8,
+      "basis": "hoogste kwart van de reeks: 174 m² is kleiner dan de vergelijkingsobjecten (236 m²)",
+      "eur_m2": {
+       "conservative": 2872,
+       "base": 3316,
+       "upside": 3647.6000000000004
+      },
+      "sale": {
+       "conservative": 999456,
+       "base": 1153968,
+       "upside": 1269364.8
+      },
+      "source": "Idealista-assistent (MCP) search_properties district Centro Ciudad, Jávea/Xàbia (chalets per prijsband + adosados, filter buen estado) + property_detail op 12 objecten",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 106,
+       "examples_m2_max": 729,
+       "examples_m2_median": 236
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -395436.8669461538,
+       "roi_on_costs": -0.28348905949450137,
+       "margin_on_sale": -0.3956521016894729,
+       "total_costs": 1394892.8669461538,
+       "equity_needed": 1366906.466946154,
+       "construction_total": 714576.8595076923,
+       "purchase_taxes": 35910.0
+      },
+      "base": {
+       "result": -244787.66694615385,
+       "roi_on_costs": -0.17500387861204436,
+       "margin_on_sale": -0.21212691075155798,
+       "total_costs": 1398755.6669461539,
+       "equity_needed": 1366906.466946154,
+       "construction_total": 714576.8595076923,
+       "purchase_taxes": 35910.0
+      },
+      "upside": {
+       "result": -132275.78694615397,
+       "roi_on_costs": -0.09437211520419216,
+       "margin_on_sale": -0.10420628250141642,
+       "total_costs": 1401640.586946154,
+       "equity_needed": 1366906.466946154,
+       "construction_total": 714576.8595076923,
+       "purchase_taxes": 35910.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 0,
+      "base": 51000,
+      "upside": 116000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": -0.17500387861204436,
+      "sale_-10pct": -0.25596893389151076,
+      "build_+15pct": -0.23881158089940685,
+      "delay_+6m": -0.21028856873023105
+     },
+     "detail_base": {
+      "price": 399000,
+      "sale": 1153968,
+      "purchase_taxes": {
+       "itp": 35910.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 35910.0
+      },
+      "purchase_costs": 9096.0,
+      "construction": {
+       "renovation": 232000,
+       "newbuild": 232000,
+       "demolition": 0,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 3686.153846153846,
+       "bathroom": 8293.846153846154,
+       "fitout": {
+        "kitchens": 2,
+        "bathrooms": 6,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 16000,
+        "bathroom": 36000,
+        "overlap": 40020,
+        "total": 11980,
+        "skp_revenue": 52000,
+        "skp_margin": 15600.0
+       },
+       "pem": 472293.8461538461,
+       "fees": 37783.50769230769,
+       "icio": 18891.753846153846,
+       "tasa": 9445.876923076923,
+       "surveys": 2000,
+       "contingency": 51376.350769230776,
+       "subtotal_ex_vat": 595477.4892307692,
+       "vat_rate": 0.21,
+       "vat": 119099.37027692307,
+       "vat_cost": 119099.37027692307,
+       "total": 714576.8595076923
+      },
+      "earthworks": 0.0,
+      "holding": 8000,
+      "financing": {
+       "rate": 0.15,
+       "months": 20,
+       "build_months": null,
+       "on_purchase": 111001.5,
+       "on_build": 89322.10743846153,
+       "fee": 0.0,
+       "total": 200323.60743846153,
+       "per_month": 10016.180371923077
+      },
+      "selling": {
+       "commission_incl_vat": 17309.52,
+       "plusvalia": 11539.68,
+       "misc": 3000,
+       "total": 31849.2,
+       "channel": "intern",
+       "saved_vs_extern": 52505.543999999994
+      },
+      "total_costs": 1398755.6669461539,
+      "result": -244787.66694615385,
+      "margin_on_sale": -0.21212691075155798,
+      "roi_on_costs": -0.17500387861204436,
+      "equity_needed": 1366906.466946154,
+      "break_even_sale": 1404875.3586198078,
+      "skp_margin": 15600.0,
+      "group_result": -229187.66694615385,
+      "group_margin_on_sale": -0.1986083383128075
+     }
+    }
+   ]
+  },
+  {
+   "id": "K02",
+   "code": "110974608",
+   "url": "https://www.idealista.com/es/inmueble/110974608/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad",
+   "comps_zone": "centro",
+   "type": "renovatie",
+   "price_ask": 499000,
+   "built_m2": 264,
+   "plot_m2": null,
+   "year": "onbekend",
+   "claims": [
+    "'acceso desde dos calles' (1)",
+    "'amplio garaje… con acceso directo y terraza superior' (1) — legaliteit garage-inrit in het casco niet aangetoond",
+    "'numerosos elementos originales' (1)"
+   ],
+   "blockers": [
+    "Perceel-m² en bouwjaar niet vermeld (7)",
+    "Casco antiguo: ZUR-NHT-regime en Cultura-toets bij erfgoedbelang (2) [01 §2.2]",
+    "Legaliteit en registratie van de garage (zelfde finca?) — nota simple nodig",
+    "1 badkamer, label G, 'elementos originales': verborgen structurele kosten niet beoordeeld; geen bezichtiging",
+    "Geen transactiereferentie: 499.000 + renovatie tegen centrum-vraagprijzen (mediaan 2.417 €/m², R15 §3.1, één dag)"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 264 m² (casa de pueblo met garage)",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 264,
+     "comps_key": "townhouse_renovated",
+     "vat_recoverable": false,
+     "notes": "Geen uitbreiding geclaimd; perceel onbekend, dus geen sloop/nieuwbouw-scenario.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "264 m² gebouwd = veld Idealista (1).",
+      "Geen zwembad (casco, patio) — aanname 4."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 4,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 8,
+      "n_used": 8,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 2674,
+       "base": 2872,
+       "upside": 3316
+      },
+      "sale": {
+       "conservative": 705936,
+       "base": 758208,
+       "upside": 875424
+      },
+      "source": "Idealista-assistent (MCP) search_properties district Centro Ciudad, Jávea/Xàbia (chalets per prijsband + adosados, filter buen estado) + property_detail op 12 objecten",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 106,
+       "examples_m2_max": 729,
+       "examples_m2_median": 236
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -415537.698875,
+       "roi_on_costs": -0.37052826053062526,
+       "margin_on_sale": -0.5886336705806192,
+       "total_costs": 1121473.698875,
+       "equity_needed": 1100825.298875,
+       "construction_total": 400142.33040000004,
+       "purchase_taxes": 44910.0
+      },
+      "base": {
+       "result": -364572.49887500005,
+       "roi_on_costs": -0.324705050755952,
+       "margin_on_sale": -0.48083441334699717,
+       "total_costs": 1122780.498875,
+       "equity_needed": 1100825.298875,
+       "construction_total": 400142.33040000004,
+       "purchase_taxes": 44910.0
+      },
+      "upside": {
+       "result": -250286.8988750002,
+       "roi_on_costs": -0.22233674660619257,
+       "margin_on_sale": -0.2859036294127191,
+       "total_costs": 1125710.8988750002,
+       "equity_needed": 1100825.298875,
+       "construction_total": 400142.33040000004,
+       "purchase_taxes": 44910.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 70000,
+      "base": 101000,
+      "upside": 171000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": -0.324705050755952,
+      "sale_-10pct": -0.39120675817701434,
+      "build_+15pct": -0.361584372974457,
+      "delay_+6m": -0.3583704908271887
+     },
+     "detail_base": {
+      "price": 499000,
+      "sale": 758208,
+      "purchase_taxes": {
+       "itp": 44910.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 44910.0
+      },
+      "purchase_costs": 9496.0,
+      "construction": {
+       "renovation": 264000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 410.0,
+       "bathroom": 1230.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 4,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 24000,
+        "overlap": 30360,
+        "total": 1640,
+        "skp_revenue": 32000,
+        "skp_margin": 9600.0
+       },
+       "pem": 265230.0,
+       "fees": 21218.4,
+       "icio": 10609.2,
+       "tasa": 5304.6,
+       "surveys": 2000,
+       "contingency": 28685.840000000004,
+       "subtotal_ex_vat": 333458.04000000004,
+       "vat_rate": 0.21,
+       "vat": 66684.29040000001,
+       "vat_cost": 66684.29040000001,
+       "total": 400142.33040000004
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 103763.625,
+       "on_build": 37513.343475,
+       "fee": 0.0,
+       "total": 141276.968475,
+       "per_month": 9418.464565
+      },
+      "selling": {
+       "commission_incl_vat": 11373.119999999999,
+       "plusvalia": 7582.08,
+       "misc": 3000,
+       "total": 21955.199999999997,
+       "channel": "intern",
+       "saved_vs_extern": 34498.46400000001
+      },
+      "total_costs": 1122780.498875,
+      "result": -364572.49887500005,
+      "margin_on_sale": -0.48083441334699717,
+      "roi_on_costs": -0.324705050755952,
+      "equity_needed": 1100825.298875,
+      "break_even_sale": 1131894.811346875,
+      "skp_margin": 9600.0,
+      "group_result": -354972.49887500005,
+      "group_margin_on_sale": -0.46817298007275054
+     }
+    }
+   ]
+  },
+  {
+   "id": "K03",
+   "code": "110273579",
+   "url": "https://www.idealista.com/es/inmueble/110273579/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Montgó - Ermita (Calle del Montgó)",
+   "comps_zone": "montgo_ermita",
+   "type": "renovatie",
+   "price_ask": 565000,
+   "built_m2": 120,
+   "plot_m2": 1050,
+   "year": "onbekend",
+   "claims": [
+    "'edificabilidad no agotada del 20%' — betekenis (20% totaal of 20% resterend) niet te herleiden (1)",
+    "'ampliar la vivienda… añadiendo más dormitorios o una suite principal' (1)"
+   ],
+   "blockers": [
+    "Planklasse en gebied onbekend: SNU, zona E of plan parcial (7); bij SNU geen uitbreiding met 0,20 [01 §2.2 type R2]",
+    "Ligt in/bij het PORN Montgó-gebied: rapport Conselleria voor grondverzet mogelijk nodig (2/3) [01 §2.11 K07-analogie, te toetsen op dit perceel]",
+    "Bouwjaar niet vermeld; prijs zit in het perceel (4.708 €/m² gebouwd)",
+    "Resterend bouwvolume, bezetting en hoogte alleen via certificado/informe urbanístico"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 120 m² + nieuw zwembad",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 120,
+     "comps_key": "villa_renovated",
+     "vat_recoverable": false,
+     "notes": "Klein eindproduct (120 m²) op een groot perceel; scenario dient vooral als ondergrens.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Geen zwembad aanwezig (veld hasSwimmingPool=false); nieuw zwembad opgenomen omdat het perceel (1.050 m²) dat toelaat — aanname 4."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 2,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 17,
+      "n_used": 17,
+      "basis": "hoogste kwart van de reeks: 120 m² is kleiner dan de vergelijkingsobjecten (281 m²)",
+      "eur_m2": {
+       "conservative": 4364,
+       "base": 5087,
+       "upside": 5595.700000000001
+      },
+      "sale": {
+       "conservative": 523680,
+       "base": 610440,
+       "upside": 671484.0000000001
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), zones Montgó–Ermita (n=12) en Partida Tosal–Zona dels Castellans (n=5), Jávea; vraagprijs / m² gebouwd zoals de tool geeft; 17/17 via property_detail bevestigd; ontdubbeld (zelfde prijs+m²+zone en evidente dubbelen bij meerdere makelaars)",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 165,
+       "examples_m2_max": 324,
+       "examples_m2_median": 281
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -513835.18404069764,
+       "roi_on_costs": -0.495255579816692,
+       "margin_on_sale": -0.9812007027969325,
+       "total_costs": 1037515.1840406976,
+       "equity_needed": 1021423.1840406976,
+       "construction_total": 249153.19683720928,
+       "purchase_taxes": 50850.0
+      },
+      "base": {
+       "result": -429244.18404069764,
+       "roi_on_costs": -0.41286016525946806,
+       "margin_on_sale": -0.7031717843534133,
+       "total_costs": 1039684.1840406976,
+       "equity_needed": 1021423.1840406976,
+       "construction_total": 249153.19683720928,
+       "purchase_taxes": 50850.0
+      },
+      "upside": {
+       "result": -369726.2840406975,
+       "roi_on_costs": -0.35509280853995684,
+       "margin_on_sale": -0.5506107130485572,
+       "total_costs": 1041210.2840406976,
+       "equity_needed": 1021423.1840406976,
+       "construction_total": 249153.19683720928,
+       "purchase_taxes": 50850.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 88000,
+      "base": 140000,
+      "upside": 177000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.41286016525946806,
+      "sale_-10pct": -0.47079735885535645,
+      "build_+15pct": -0.4290502112007855,
+      "delay_+6m": -0.44421995527950053
+     },
+     "detail_base": {
+      "price": 565000,
+      "sale": 610440,
+      "purchase_taxes": {
+       "itp": 50850.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 50850.0
+      },
+      "purchase_costs": 9760.0,
+      "construction": {
+       "renovation": 120000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 0,
+       "kitchen": 12902.32558139535,
+       "bathroom": 16297.67441860465,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 2,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 24000,
+        "overlap": 13800,
+        "total": 29200,
+        "skp_revenue": 43000,
+        "skp_margin": 12900.0
+       },
+       "pem": 153297.67441860464,
+       "fees": 12263.813953488372,
+       "icio": 6131.906976744186,
+       "tasa": 3065.953488372093,
+       "surveys": 2000,
+       "contingency": 17846.38139534884,
+       "subtotal_ex_vat": 207508.05581395348,
+       "vat_rate": 0.21,
+       "vat": 41645.14102325581,
+       "vat_cost": 41645.14102325581,
+       "total": 249153.19683720928
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 117301.875,
+       "on_build": 23358.112203488367,
+       "fee": 0.0,
+       "total": 140659.98720348836,
+       "per_month": 9377.332480232557
+      },
+      "selling": {
+       "commission_incl_vat": 9156.6,
+       "plusvalia": 6104.400000000001,
+       "misc": 3000,
+       "total": 18261.0,
+       "channel": "intern",
+       "saved_vs_extern": 27775.019999999997
+      },
+      "total_costs": 1039684.1840406976,
+      "result": -429244.18404069764,
+      "margin_on_sale": -0.7031717843534133,
+      "roi_on_costs": -0.41286016525946806,
+      "equity_needed": 1021423.1840406976,
+      "break_even_sale": 1050415.2886417152,
+      "skp_margin": 12900.0,
+      "group_result": -416344.18404069764,
+      "group_margin_on_sale": -0.6820394863388665
+     }
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + uitbreiding tot 210 m² (lezing van '20%')",
+     "kind": "renovatie_plus_uitbreiding",
+     "months": 20,
+     "result_m2": 210,
+     "comps_key": "villa_renovated",
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als het certificado urbanístico ±210 m² totaal bevestigt.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Claim aanbieder: 'edificabilidad no agotada del 20%' (1).",
+      "Lezing: 0,20 × 1.050 = 210 m² totaal → 90 m² uitbreiding — AANNAME (5); alternatieve lezing ('20% resterend' = +24 m²) niet doorgerekend.",
+      "Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 17,
+      "n_used": 17,
+      "basis": "hoogste kwart van de reeks: 210 m² is kleiner dan de vergelijkingsobjecten (281 m²)",
+      "eur_m2": {
+       "conservative": 4364,
+       "base": 5087,
+       "upside": 5595.700000000001
+      },
+      "sale": {
+       "conservative": 916440,
+       "base": 1068270,
+       "upside": 1175097.0000000002
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), zones Montgó–Ermita (n=12) en Partida Tosal–Zona dels Castellans (n=5), Jávea; vraagprijs / m² gebouwd zoals de tool geeft; 17/17 via property_detail bevestigd; ontdubbeld (zelfde prijs+m²+zone en evidente dubbelen bij meerdere makelaars)",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 165,
+       "examples_m2_max": 324,
+       "examples_m2_median": 281
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -486220.7196409092,
+       "roi_on_costs": -0.34664171658374027,
+       "margin_on_sale": -0.5305537947284157,
+       "total_costs": 1402660.7196409092,
+       "equity_needed": 1376749.7196409092,
+       "construction_total": 521544.1952363637,
+       "purchase_taxes": 50850.0
+      },
+      "base": {
+       "result": -338186.4696409092,
+       "roi_on_costs": -0.24045285221465376,
+       "margin_on_sale": -0.3165739650471409,
+       "total_costs": 1406456.4696409092,
+       "equity_needed": 1376749.7196409092,
+       "construction_total": 521544.1952363637,
+       "purchase_taxes": 50850.0
+      },
+      "upside": {
+       "result": -234030.14464090904,
+       "roi_on_costs": -0.16608163821906036,
+       "margin_on_sale": -0.19915815004285517,
+       "total_costs": 1409127.1446409093,
+       "equity_needed": 1376749.7196409092,
+       "construction_total": 521544.1952363637,
+       "purchase_taxes": 50850.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 75000,
+      "base": 161000,
+      "upside": 222000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.24045285221465376,
+      "sale_-10pct": -0.3151070457683761,
+      "build_+15pct": -0.2792995888847652,
+      "delay_+6m": -0.27591366837473963
+     },
+     "detail_base": {
+      "price": 565000,
+      "sale": 1068270,
+      "purchase_taxes": {
+       "itp": 50850.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 50850.0
+      },
+      "purchase_costs": 9760.0,
+      "construction": {
+       "renovation": 120000,
+       "newbuild": 180000,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 0,
+       "kitchen": 10657.272727272728,
+       "bathroom": 20192.727272727272,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 36000,
+        "overlap": 24150,
+        "total": 30850,
+        "skp_revenue": 55000,
+        "skp_margin": 16500.0
+       },
+       "pem": 337192.7272727273,
+       "fees": 26975.418181818182,
+       "icio": 13487.709090909091,
+       "tasa": 6743.854545454546,
+       "surveys": 2000,
+       "contingency": 37482.541818181824,
+       "subtotal_ex_vat": 434539.5236363637,
+       "vat_rate": 0.21,
+       "vat": 87004.6716,
+       "vat_cost": 87004.6716,
+       "total": 521544.1952363637
+      },
+      "earthworks": 0.0,
+      "holding": 8000,
+      "financing": {
+       "rate": 0.15,
+       "months": 20,
+       "build_months": null,
+       "on_purchase": 156402.5,
+       "on_build": 65193.02440454546,
+       "fee": 0.0,
+       "total": 221595.52440454546,
+       "per_month": 11079.776220227273
+      },
+      "selling": {
+       "commission_incl_vat": 16024.05,
+       "plusvalia": 10682.7,
+       "misc": 3000,
+       "total": 29706.75,
+       "channel": "intern",
+       "saved_vs_extern": 48606.285
+      },
+      "total_costs": 1406456.4696409092,
+      "result": -338186.4696409092,
+      "margin_on_sale": -0.3165739650471409,
+      "roi_on_costs": -0.24045285221465376,
+      "equity_needed": 1376749.7196409092,
+      "break_even_sale": 1414911.131381932,
+      "skp_margin": 16500.0,
+      "group_result": -321686.4696409092,
+      "group_margin_on_sale": -0.30112843161458175
+     }
+    },
+    {
+     "key": "N_sloop",
+     "label": "Sloop en nieuwbouw villa ±210 m²",
+     "kind": "nieuwbouw",
+     "months": 24,
+     "result_m2": 210,
+     "comps_key": "villa_new",
+     "vat_recoverable": true,
+     "notes": "Nieuwbouw verkocht met btw; btw op bouw terugvorderbaar verondersteld (koper = btw-plichtige entiteit).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Nieuwbouwvolume min(0,20 × 1.050; 450) = 210 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden — aanname 5; vergunningswachttijd Xàbia tot een jaar gemeld [01 §4]."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 14,
+      "n_used": 14,
+      "basis": "hoogste kwart van de reeks: 210 m² is kleiner dan de vergelijkingsobjecten (337 m²)",
+      "eur_m2": {
+       "conservative": 5002,
+       "base": 6831,
+       "upside": 7514.1
+      },
+      "sale": {
+       "conservative": 1050420,
+       "base": 1434510,
+       "upside": 1577961.0
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), Montgó–Ermita (n=13) en Partida Tosal–Zona dels Castellans (n=1); vraagprijs / m² gebouwd zoals de tool geeft; 9/14 via property_detail bevestigd; ontdubbeld",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 230,
+       "examples_m2_max": 491,
+       "examples_m2_median": 337
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -519753.39218181814,
+       "roi_on_costs": -0.3310165582793377,
+       "margin_on_sale": -0.49480530852594024,
+       "total_costs": 1570173.3921818181,
+       "equity_needed": 1540912.8921818181,
+       "construction_total": 624365.1236363637,
+       "purchase_taxes": 50850.0
+      },
+      "base": {
+       "result": -145265.64218181814,
+       "roi_on_costs": -0.09195333710880153,
+       "margin_on_sale": -0.10126499095985259,
+       "total_costs": 1579775.6421818181,
+       "equity_needed": 1540912.8921818181,
+       "construction_total": 624365.1236363637,
+       "purchase_taxes": 50850.0
+      },
+      "upside": {
+       "result": -5400.9171818180475,
+       "roi_on_costs": -0.003411044009086053,
+       "margin_on_sale": -0.0034227190544113876,
+       "total_costs": 1583361.917181818,
+       "equity_needed": 1540912.8921818181,
+       "construction_total": 624365.1236363637,
+       "purchase_taxes": 50850.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 51000,
+      "base": 261000,
+      "upside": 339000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.09195333710880153,
+      "sale_-10pct": -0.18089854754674764,
+      "build_+15pct": -0.14111136138590688,
+      "delay_+6m": -0.1319205773005177
+     },
+     "detail_base": {
+      "price": 565000,
+      "sale": 1434510,
+      "purchase_taxes": {
+       "itp": 50850.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 50850.0
+      },
+      "purchase_costs": 9760.0,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 420000,
+       "demolition": 7200,
+       "pool": 17000.0,
+       "exterior": 22500,
+       "kitchen": 10657.272727272728,
+       "bathroom": 20192.727272727272,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 36000,
+        "overlap": 24150,
+        "total": 30850,
+        "skp_revenue": 55000,
+        "skp_margin": 16500.0
+       },
+       "pem": 486892.7272727273,
+       "fees": 38951.41818181818,
+       "icio": 19475.70909090909,
+       "tasa": 9737.854545454546,
+       "surveys": 5000,
+       "contingency": 53650.14181818182,
+       "subtotal_ex_vat": 624365.1236363637,
+       "vat_rate": 0.1,
+       "vat": 59515.15600000001,
+       "vat_cost": 0.0,
+       "total": 624365.1236363637
+      },
+      "earthworks": 0.0,
+      "holding": 9600,
+      "financing": {
+       "rate": 0.15,
+       "months": 24,
+       "build_months": null,
+       "on_purchase": 187683.0,
+       "on_build": 93654.76854545454,
+       "fee": 0.0,
+       "total": 281337.76854545454,
+       "per_month": 11722.407022727273
+      },
+      "selling": {
+       "commission_incl_vat": 21517.649999999998,
+       "plusvalia": 14345.1,
+       "misc": 3000,
+       "total": 38862.75,
+       "channel": "intern",
+       "saved_vs_extern": 65270.205
+      },
+      "total_costs": 1579775.6421818181,
+      "result": -145265.64218181814,
+      "margin_on_sale": -0.10126499095985259,
+      "roi_on_costs": -0.09195333710880153,
+      "equity_needed": 1540912.8921818181,
+      "break_even_sale": 1583407.2832363637,
+      "skp_margin": 16500.0,
+      "group_result": -128765.64218181814,
+      "group_margin_on_sale": -0.0897628055446237
+     }
+    }
+   ]
+  },
+  {
+   "id": "K04",
+   "code": "112342245",
+   "url": "https://www.idealista.com/es/inmueble/112342245/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Partida Tosal - Zona dels Castellans (Carretera de Jesús Pobre)",
+   "comps_zone": "montgo_ermita",
+   "type": "renovatie",
+   "price_ask": 520000,
+   "built_m2": 241,
+   "plot_m2": 2895,
+   "year": "1974",
+   "claims": [
+    "'dispone todavía de más edificabilidad, pudiendo ampliar… unos 300m2 más' (1)",
+    "'Posibilidad de combinar vivienda con negocio en la parte de delante de la parcela' (1)",
+    "'La casa necesita reforma integral' (1); 'trastero/estudio que podría convertirse en un apartamento de invitados' (1)"
+   ],
+   "blockers": [
+    "Planklasse onbekend; zonelabels spreken elkaar tegen (Partida Tosal / 'Montgó-Carrasquetes' bij Villalux) (7) [01 §2.11]",
+    "Bij SNU ander regime, uitbreiding niet vastgesteld [te verifiëren]; in gebied Montgó-Castellans (minimum 1.500 m²) is <3.000 m² ondeelbaar (2/5)",
+    "Commercieel gebruik in zona E alleen aan hoofdweg >10 m breed, 10 m afstand, ondeelbaar perceel (2) — claim 'negocio' niet gedekt",
+    "Ligging aan doorgaande weg (Carretera de Jesús Pobre): wegreservering en eindwaarde toetsen; waterlopen toetsen (PATRICOVA)",
+    "Constructie 1974, label G: renovatie kan duurder uitvallen dan sloop — constructeur nodig"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 241 m² + zwembadrenovatie",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 241,
+     "comps_key": "villa_renovated",
+     "vat_recoverable": false,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Bestaand zwembad 'necesita ser reformada' (1) → zwembadrenovatie opgenomen.",
+      "Buitenruimte (2.895 m²) niet begroot — aanname 4."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 17,
+      "n_used": 17,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 3922,
+       "base": 4364,
+       "upside": 5087
+      },
+      "sale": {
+       "conservative": 945202,
+       "base": 1051724,
+       "upside": 1225967
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), zones Montgó–Ermita (n=12) en Partida Tosal–Zona dels Castellans (n=5), Jávea; vraagprijs / m² gebouwd zoals de tool geeft; 17/17 via property_detail bevestigd; ontdubbeld (zelfde prijs+m²+zone en evidente dubbelen bij meerdere makelaars)",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 165,
+       "examples_m2_max": 324,
+       "examples_m2_median": 281
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -182355.49375000014,
+       "roi_on_costs": -0.1617261157508937,
+       "margin_on_sale": -0.1929275369180346,
+       "total_costs": 1127557.4937500001,
+       "equity_needed": 1100927.44375,
+       "construction_total": 375292.52,
+       "purchase_taxes": 46800.0
+      },
+      "base": {
+       "result": -78496.54375000019,
+       "roi_on_costs": -0.0694524127915368,
+       "margin_on_sale": -0.07463606778014022,
+       "total_costs": 1130220.5437500002,
+       "equity_needed": 1100927.44375,
+       "construction_total": 375292.52,
+       "purchase_taxes": 46800.0
+      },
+      "upside": {
+       "result": 91390.38124999986,
+       "roi_on_costs": 0.08055020678170471,
+       "margin_on_sale": 0.07454554751473723,
+       "total_costs": 1134576.6187500001,
+       "equity_needed": 1100927.44375,
+       "construction_total": 375292.52,
+       "purchase_taxes": 46800.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 234000,
+      "base": 297000,
+      "upside": 401000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.0694524127915368,
+      "sale_-10pct": -0.16055431111141355,
+      "build_+15pct": -0.11577441048085547,
+      "delay_+6m": -0.11614076690804225
+     },
+     "detail_base": {
+      "price": 520000,
+      "sale": 1051724,
+      "purchase_taxes": {
+       "itp": 46800.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 46800.0
+      },
+      "purchase_costs": 9580.0,
+      "construction": {
+       "renovation": 241000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 8000.0,
+       "exterior": 0,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 18000,
+        "overlap": 26000,
+        "total": 0,
+        "skp_revenue": 26000,
+        "skp_margin": 7800.0
+       },
+       "pem": 249000.0,
+       "fees": 19920.0,
+       "icio": 9960.0,
+       "tasa": 4980.0,
+       "surveys": 2000,
+       "contingency": 26892.0,
+       "subtotal_ex_vat": 312752.0,
+       "vat_rate": 0.21,
+       "vat": 62540.52,
+       "vat_cost": 62540.52,
+       "total": 375292.52
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 108071.25,
+       "on_build": 35183.67375,
+       "fee": 0.0,
+       "total": 143254.92375000002,
+       "per_month": 9550.32825
+      },
+      "selling": {
+       "commission_incl_vat": 15775.859999999999,
+       "plusvalia": 10517.24,
+       "misc": 3000,
+       "total": 29293.1,
+       "channel": "intern",
+       "saved_vs_extern": 47853.442
+      },
+      "total_costs": 1130220.5437500002,
+      "result": -78496.54375000019,
+      "margin_on_sale": -0.07463606778014022,
+      "roi_on_costs": -0.0694524127915368,
+      "equity_needed": 1100927.44375,
+      "break_even_sale": 1132182.9573437502,
+      "skp_margin": 7800.0,
+      "group_result": -70696.54375000019,
+      "group_margin_on_sale": -0.06721967336487537
+     }
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + uitbreiding 300 m² (claim aanbieder)",
+     "kind": "renovatie_plus_uitbreiding",
+     "months": 20,
+     "result_m2": 541,
+     "comps_key": "villa_renovated",
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als zona E netto op dit perceel geldt: 2.895 × 0,20 = 579 m²t → ±338 over; bij bruto-lezing (0,142) ±170 over [01 §2.11].",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Uitbreiding 300 m² = claim aanbieder 'unos 300m2 más' (1).",
+      "Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 5,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 17,
+      "n_used": 17,
+      "basis": "laagste kwart van de reeks: 541 m² is 1.9 keer de maat van de vergelijkingsobjecten (281 m²)",
+      "eur_m2": {
+       "conservative": 3529.8,
+       "base": 3922,
+       "upside": 4364
+      },
+      "sale": {
+       "conservative": 1909621.8,
+       "base": 2121802,
+       "upside": 2360924
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), zones Montgó–Ermita (n=12) en Partida Tosal–Zona dels Castellans (n=5), Jávea; vraagprijs / m² gebouwd zoals de tool geeft; 17/17 via property_detail bevestigd; ontdubbeld (zelfde prijs+m²+zone en evidente dubbelen bij meerdere makelaars)",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 165,
+       "examples_m2_max": 324,
+       "examples_m2_median": 281
+      },
+      "warnings": [
+       "Dit object is met 541 m² flink groter dan de vergelijkingsobjecten (mediaan 281 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+      ],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -302596.82999999984,
+       "roi_on_costs": -0.13678432407017557,
+       "margin_on_sale": -0.1584590362342951,
+       "total_costs": 2212218.63,
+       "equity_needed": 2161478.085,
+       "construction_total": 1273780.52,
+       "purchase_taxes": 46800.0
+      },
+      "base": {
+       "result": -95721.13499999978,
+       "roi_on_costs": -0.04316578866267377,
+       "margin_on_sale": -0.04511313261086557,
+       "total_costs": 2217523.135,
+       "equity_needed": 2161478.085,
+       "construction_total": 1273780.52,
+       "purchase_taxes": 46800.0
+      },
+      "upside": {
+       "result": 137422.81499999994,
+       "roi_on_costs": 0.061804696092392655,
+       "margin_on_sale": 0.058207216750729776,
+       "total_costs": 2223501.185,
+       "equity_needed": 2161478.085,
+       "construction_total": 1273780.52,
+       "purchase_taxes": 46800.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 19000,
+      "base": 139000,
+      "upside": 275000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": false,
+     "warnings": [
+      "Dit object is met 541 m² flink groter dan de vergelijkingsobjecten (mediaan 281 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+     ],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.04316578866267377,
+      "sale_-10pct": -0.13678432407017557,
+      "build_+15pct": -0.12684612803266504,
+      "delay_+6m": -0.08183603719271852
+     },
+     "detail_base": {
+      "price": 520000,
+      "sale": 2121802,
+      "purchase_taxes": {
+       "itp": 46800.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 46800.0
+      },
+      "purchase_costs": 9580.0,
+      "construction": {
+       "renovation": 241000,
+       "newbuild": 600000,
+       "demolition": 0,
+       "pool": 8000.0,
+       "exterior": 0,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 5,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 30000,
+        "overlap": 38000,
+        "total": 0,
+        "skp_revenue": 38000,
+        "skp_margin": 11400.0
+       },
+       "pem": 849000.0,
+       "fees": 67920.0,
+       "icio": 33960.0,
+       "tasa": 16980.0,
+       "surveys": 2000,
+       "contingency": 91692.0,
+       "subtotal_ex_vat": 1061552.0,
+       "vat_rate": 0.21,
+       "vat": 212228.52,
+       "vat_cost": 212228.52,
+       "total": 1273780.52
+      },
+      "earthworks": 0.0,
+      "holding": 8000,
+      "financing": {
+       "rate": 0.15,
+       "months": 20,
+       "build_months": null,
+       "on_purchase": 144095.0,
+       "on_build": 159222.565,
+       "fee": 0.0,
+       "total": 303317.565,
+       "per_month": 15165.87825
+      },
+      "selling": {
+       "commission_incl_vat": 31827.03,
+       "plusvalia": 21218.02,
+       "misc": 3000,
+       "total": 56045.05,
+       "channel": "intern",
+       "saved_vs_extern": 96541.99100000001
+      },
+      "total_costs": 2217523.135,
+      "result": -95721.13499999978,
+      "margin_on_sale": -0.04511313261086557,
+      "roi_on_costs": -0.04316578866267377,
+      "equity_needed": 2161478.085,
+      "break_even_sale": 2219916.163375,
+      "skp_margin": 11400.0,
+      "group_result": -84321.13499999978,
+      "group_margin_on_sale": -0.03974034099317456
+     }
+    },
+    {
+     "key": "N_sloop",
+     "label": "Sloop en nieuwbouw villa 450 m² (plafond)",
+     "kind": "nieuwbouw",
+     "months": 24,
+     "result_m2": 450,
+     "comps_key": "villa_new",
+     "vat_recoverable": true,
+     "notes": "0,20 × 2.895 = 579 m²; gemaximeerd op 450 m² (modelplafond). Nieuwbouw verkocht met btw.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Nieuwbouwvolume min(0,20 × 2.895; 450) = 450 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden — aanname 5."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 5,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 14,
+      "n_used": 14,
+      "basis": "laagste kwart van de reeks: 450 m² is 1.3 keer de maat van de vergelijkingsobjecten (337 m²)",
+      "eur_m2": {
+       "conservative": 3953.7000000000003,
+       "base": 4393,
+       "upside": 5002
+      },
+      "sale": {
+       "conservative": 1779165.0000000002,
+       "base": 1976850,
+       "upside": 2250900
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), Montgó–Ermita (n=13) en Partida Tosal–Zona dels Castellans (n=1); vraagprijs / m² gebouwd zoals de tool geeft; 9/14 via property_detail bevestigd; ontdubbeld",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 230,
+       "examples_m2_max": 491,
+       "examples_m2_median": 337
+      },
+      "warnings": [
+       "Dit object is met 450 m² flink groter dan de vergelijkingsobjecten (mediaan 337 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+      ],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -402081.51699999976,
+       "roi_on_costs": -0.18433566030537746,
+       "margin_on_sale": -0.22599450697377685,
+       "total_costs": 2181246.517,
+       "equity_needed": 2133767.392,
+       "construction_total": 1195542.0799999998,
+       "purchase_taxes": 46800.0
+      },
+      "base": {
+       "result": -209338.642,
+       "roi_on_costs": -0.09575506796544779,
+       "margin_on_sale": -0.10589505627639932,
+       "total_costs": 2186188.642,
+       "equity_needed": 2133767.392,
+       "construction_total": 1195542.0799999998,
+       "purchase_taxes": 46800.0
+      },
+      "upside": {
+       "result": 57860.10800000001,
+       "roi_on_costs": 0.02638351824381679,
+       "margin_on_sale": 0.025705321426984763,
+       "total_costs": 2193039.892,
+       "equity_needed": 2133767.392,
+       "construction_total": 1195542.0799999998,
+       "purchase_taxes": 46800.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 0,
+      "base": 94000,
+      "upside": 244000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": false,
+     "warnings": [
+      "Dit object is met 450 m² flink groter dan de vergelijkingsobjecten (mediaan 337 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+     ],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.09575506796544779,
+      "sale_-10pct": -0.18433566030537757,
+      "build_+15pct": -0.16937004011211806,
+      "delay_+6m": -0.1316847007447525
+     },
+     "detail_base": {
+      "price": 520000,
+      "sale": 1976850,
+      "purchase_taxes": {
+       "itp": 46800.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 46800.0
+      },
+      "purchase_costs": 9580.0,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 900000,
+       "demolition": 14460,
+       "pool": 17000.0,
+       "exterior": 22500,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 5,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 30000,
+        "overlap": 38000,
+        "total": 0,
+        "skp_revenue": 38000,
+        "skp_margin": 11400.0
+       },
+       "pem": 953960.0,
+       "fees": 76316.8,
+       "icio": 38158.4,
+       "tasa": 19079.2,
+       "surveys": 5000,
+       "contingency": 103027.68000000001,
+       "subtotal_ex_vat": 1195542.0799999998,
+       "vat_rate": 0.1,
+       "vat": 113830.448,
+       "vat_cost": 0.0,
+       "total": 1195542.0799999998
+      },
+      "earthworks": 0.0,
+      "holding": 9600,
+      "financing": {
+       "rate": 0.15,
+       "months": 24,
+       "build_months": null,
+       "on_purchase": 172914.0,
+       "on_build": 179331.31199999998,
+       "fee": 0.0,
+       "total": 352245.312,
+       "per_month": 14676.887999999999
+      },
+      "selling": {
+       "commission_incl_vat": 29652.75,
+       "plusvalia": 19768.5,
+       "misc": 3000,
+       "total": 52421.25,
+       "channel": "intern",
+       "saved_vs_extern": 89946.675
+      },
+      "total_costs": 2186188.642,
+      "result": -209338.642,
+      "margin_on_sale": -0.10589505627639932,
+      "roi_on_costs": -0.09575506796544779,
+      "equity_needed": 2133767.392,
+      "break_even_sale": 2191422.10805,
+      "skp_margin": 11400.0,
+      "group_result": -197938.642,
+      "group_margin_on_sale": -0.1001283061436123
+     }
+    }
+   ]
+  },
+  {
+   "id": "K05",
+   "code": "97576395",
+   "url": "https://www.idealista.com/es/inmueble/97576395/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Partida Tosal - Zona dels Castellans (Camino dels Castellans)",
+   "comps_zone": "montgo_ermita",
+   "type": "renovatie",
+   "price_ask": 395000,
+   "built_m2": 460,
+   "plot_m2": 960,
+   "year": "onbekend",
+   "claims": [
+    "'necesita de reforma integral' (1)",
+    "Aanbieder zelf: 'de manera legal no es posible su ampliación o la construcción de una piscina por encontrarse en un área protegida por afección del cauce del barranco' (1)",
+    "Dat het bestaande volume (460 m²) legaal/geconsolideerd is — niet aangetoond (7)"
+   ],
+   "blockers": [
+    "Barranco-affectie volgens de aanbieder zelf: geen uitbreiding, geen (buiten)zwembad; reikwijdte (fuera de ordenación? overstromingsrisico lage verdieping?) ONBEKEND (7) [R15 §2A, 01 §2.5]",
+    "Langs openbare waterlopen 5 m vrijwaringsstrook en 100 m politiezone (2) [01 §2.2]; PATRICOVA-toets op het perceel nodig",
+    "Legaliteit en verzekerbaarheid/financierbaarheid van het bestaande gebouw niet aangetoond; kadastrale m² tegenover 460 m² advertentie",
+    "Sloop/nieuwbouw niet doorgerekend: aanbieder meldt uitbreidingsverbod en 0,20 × 960 = 192 m² < bestaande 460 m² (5)",
+    "Bouwjaar niet vermeld; laagste €/m² van de set kan terecht laag zijn [01 §4.1]"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 460 m² binnen bestaand volume + renovatie binnenzwembad",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 460,
+     "comps_key": "villa_renovated",
+     "vat_recoverable": false,
+     "notes": "Alleen zinvol als de barranco-affectie zich beperkt tot 'geen uitbreiding' en het bestaande volume legaal is; anders afwijzen.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "460 m² gebouwd = veld Idealista (1); perceel 960 m² = veld (tekst 980).",
+      "Bestaand binnenzwembad → zwembadrenovatie opgenomen (1/4).",
+      "Geen R_plus en geen N_sloop: uitbreidingsverbod volgens aanbieder (1)."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 5,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 17,
+      "n_used": 17,
+      "basis": "laagste kwart van de reeks: 460 m² is 1.6 keer de maat van de vergelijkingsobjecten (281 m²)",
+      "eur_m2": {
+       "conservative": 3529.8,
+       "base": 3922,
+       "upside": 4364
+      },
+      "sale": {
+       "conservative": 1623708.0,
+       "base": 1804120,
+       "upside": 2007440
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), zones Montgó–Ermita (n=12) en Partida Tosal–Zona dels Castellans (n=5), Jávea; vraagprijs / m² gebouwd zoals de tool geeft; 17/17 via property_detail bevestigd; ontdubbeld (zelfde prijs+m²+zone en evidente dubbelen bij meerdere makelaars)",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 165,
+       "examples_m2_max": 324,
+       "examples_m2_median": 281
+      },
+      "warnings": [
+       "Dit object is met 460 m² flink groter dan de vergelijkingsobjecten (mediaan 281 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+      ],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": 282885.22499999986,
+       "roi_on_costs": 0.21097883350019903,
+       "margin_on_sale": 0.17422173506566443,
+       "total_costs": 1340822.7750000001,
+       "equity_needed": 1297230.0750000002,
+       "construction_total": 703240.64,
+       "purchase_taxes": 35550.0
+      },
+      "base": {
+       "result": 458786.9249999998,
+       "roi_on_costs": 0.34102107019111216,
+       "margin_on_sale": 0.25429956155909794,
+       "total_costs": 1345333.0750000002,
+       "equity_needed": 1297230.0750000002,
+       "construction_total": 703240.64,
+       "purchase_taxes": 35550.0
+      },
+      "upside": {
+       "result": 657023.9249999998,
+       "roi_on_costs": 0.48653443717337247,
+       "margin_on_sale": 0.3272944272307017,
+       "total_costs": 1350416.0750000002,
+       "equity_needed": 1297230.0750000002,
+       "construction_total": 703240.64,
+       "purchase_taxes": 35550.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 362000,
+      "base": 470000,
+      "upside": 591000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": true,
+      "upside": true
+     },
+     "over_max_duration": false,
+     "reliable": false,
+     "warnings": [
+      "Dit object is met 460 m² flink groter dan de vergelijkingsobjecten (mediaan 281 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+     ],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": 0.34102107019111216,
+      "sale_-10pct": 0.21097883350019903,
+      "build_+15pct": 0.23710009613930655,
+      "delay_+6m": 0.2821758820651308
+     },
+     "detail_base": {
+      "price": 395000,
+      "sale": 1804120,
+      "purchase_taxes": {
+       "itp": 35550.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 35550.0
+      },
+      "purchase_costs": 9080.0,
+      "construction": {
+       "renovation": 460000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 8000.0,
+       "exterior": 0,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 5,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 30000,
+        "overlap": 38000,
+        "total": 0,
+        "skp_revenue": 38000,
+        "skp_margin": 11400.0
+       },
+       "pem": 468000.0,
+       "fees": 37440.0,
+       "icio": 18720.0,
+       "tasa": 9360.0,
+       "surveys": 2000,
+       "contingency": 50544.0,
+       "subtotal_ex_vat": 586064.0,
+       "vat_rate": 0.21,
+       "vat": 117176.64,
+       "vat_cost": 117176.64,
+       "total": 703240.64
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 82430.625,
+       "on_build": 65928.81,
+       "fee": 0.0,
+       "total": 148359.435,
+       "per_month": 9890.628999999999
+      },
+      "selling": {
+       "commission_incl_vat": 27061.8,
+       "plusvalia": 18041.2,
+       "misc": 3000,
+       "total": 48103.0,
+       "channel": "intern",
+       "saved_vs_extern": 82087.45999999999
+      },
+      "total_costs": 1345333.0750000002,
+      "result": 458786.9249999998,
+      "margin_on_sale": 0.25429956155909794,
+      "roi_on_costs": 0.34102107019111216,
+      "equity_needed": 1297230.0750000002,
+      "break_even_sale": 1333863.4018750002,
+      "skp_margin": 11400.0,
+      "group_result": 470186.9249999998,
+      "group_margin_on_sale": 0.2606184317007737
+     }
+    }
+   ]
+  },
+  {
+   "id": "K06",
+   "code": "106514871",
+   "url": "https://www.idealista.com/es/inmueble/106514871/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Puerto (Aduanas)",
+   "comps_zone": "puerto_arenal",
+   "type": "appartement",
+   "price_ask": 345000,
+   "built_m2": 125,
+   "plot_m2": null,
+   "year": "onbekend",
+   "claims": [
+    "'a solo 60 metros de la playa', 'segunda línea del mar' (1)",
+    "'plano de una propuesta de distribución tras la reforma' — indelingsvoorstel, geen vergunning (1)",
+    "'trastero en la cubierta' (1)"
+   ],
+   "blockers": [
+    "Comunidad de propietarios: statuten, achterstallige bijdragen, geplande gevel-/liftwerken — certificaat nodig (7)",
+    "Legaliteit van de casco-toestand (is er een licentie voor de eerdere sloopwerkzaamheden?) (7)",
+    "Kust- en overstromingsregels Puerto/Arenal (PATRICOVA; ARPSI en PATRICOVA spreken elkaar bij Arenal tegen) [01 §2.2, §3.4]",
+    "Marge dun: 2.760 €/m² casco + renovatie tegen Puerto-vraagprijzen (Q3: mediaan 3.242 €/m², kleine unit in renovatie tot 6.556 op renders) — geen transactiebewijs",
+    "Particuliere verkoper: geen ongevraagde benadering; contact alleen na akkoord van Jan"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie appartement 125 m²",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 125,
+     "comps_key": "apartment_renovated_puerto",
+     "vat_recoverable": false,
+     "notes": "Korte renovatie zonder sloopfase; declaración responsable mogelijk (R3-type) [01 §2.3].",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "125 m² gebouwd (120 m² bruikbaar + 15 m² terras) = velden/tekst Idealista (1).",
+      "Doorlooptijd 15 maanden is de standaard van dit model; korter is denkbaar (aanname 5).",
+      "verkoopprijs uit de specifiekere wijkreeks apartment_renovated_puerto (15-09-2026)"
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 2,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 6,
+      "n_used": 6,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 3924,
+       "base": 4803,
+       "upside": 5468
+      },
+      "sale": {
+       "conservative": 490500,
+       "base": 600375,
+       "upside": 683500
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": null,
+       "examples_m2_max": null,
+       "examples_m2_median": null
+      },
+      "warnings": [],
+      "verification": "gecorrigeerd na controle: Deelreeks die de rekenaar voor K06 gebruikt. Na samenvoegen van clusters A en B blijven 6 objecten over. Welke advertentie je als representant neemt, bepaalt de mediaan: 4.515–4.803; p75 5.076–5.468. "
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -204050.65859374998,
+       "roi_on_costs": -0.2937880139756679,
+       "margin_on_sale": -0.4160054201707441,
+       "total_costs": 694550.65859375,
+       "equity_needed": 679288.15859375,
+       "construction_total": 197653.745,
+       "purchase_taxes": 31050.0
+      },
+      "base": {
+       "result": -96922.53359374998,
+       "roi_on_costs": -0.13899738479530843,
+       "margin_on_sale": -0.16143665807828436,
+       "total_costs": 697297.53359375,
+       "equity_needed": 679288.15859375,
+       "construction_total": 197653.745,
+       "purchase_taxes": 31050.0
+      },
+      "upside": {
+       "result": -15875.658593749977,
+       "roi_on_costs": -0.022699758561330993,
+       "margin_on_sale": -0.023227005989392795,
+       "total_costs": 699375.65859375,
+       "equity_needed": 679288.15859375,
+       "construction_total": 197653.745,
+       "purchase_taxes": 31050.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 112000,
+      "base": 177000,
+      "upside": 227000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": -0.13899738479530843,
+      "sale_-10pct": -0.22342606584526004,
+      "build_+15pct": -0.17531764428021332,
+      "delay_+6m": -0.18425015378794254
+     },
+     "detail_base": {
+      "price": 345000,
+      "sale": 600375,
+      "purchase_taxes": {
+       "itp": 31050.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 31050.0
+      },
+      "purchase_costs": 8880.0,
+      "construction": {
+       "renovation": 125000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 2250.0,
+       "bathroom": 3375.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 2,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 12000,
+        "overlap": 14375,
+        "total": 5625,
+        "skp_revenue": 20000,
+        "skp_margin": 6000.0
+       },
+       "pem": 128375.0,
+       "fees": 10270.0,
+       "icio": 5135.0,
+       "tasa": 2567.5,
+       "surveys": 2000,
+       "contingency": 14089.5,
+       "subtotal_ex_vat": 164687.0,
+       "vat_rate": 0.21,
+       "vat": 32966.744999999995,
+       "vat_cost": 32966.744999999995,
+       "total": 197653.745
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 72174.375,
+       "on_build": 18530.03859375,
+       "fee": 0.0,
+       "total": 90704.41359375,
+       "per_month": 6046.960906249999
+      },
+      "selling": {
+       "commission_incl_vat": 9005.625,
+       "plusvalia": 6003.75,
+       "misc": 3000,
+       "total": 18009.375,
+       "channel": "intern",
+       "saved_vs_extern": 27317.0625
+      },
+      "total_costs": 697297.53359375,
+      "result": -96922.53359374998,
+      "margin_on_sale": -0.16143665807828436,
+      "roi_on_costs": -0.13899738479530843,
+      "equity_needed": 679288.15859375,
+      "break_even_sale": 699720.5969335937,
+      "skp_margin": 6000.0,
+      "group_result": -90922.53359374998,
+      "group_margin_on_sale": -0.15144290417447426
+     }
+    }
+   ]
+  },
+  {
+   "id": "K07",
+   "code": "112280961",
+   "url": "https://www.idealista.com/es/inmueble/112280961/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Montgó - Ermita (Urb. Garroferal del Montgó)",
+   "comps_zone": "montgo_ermita",
+   "type": "perceel",
+   "price_ask": 505000,
+   "built_m2": 0,
+   "plot_m2": 1570,
+   "year": "n.v.t.",
+   "claims": [
+    "'En el precio de venta se incluye la licencia de obras del Ayuntamiento, las tasas, el aval bancario de la urbanización y el 70 % del proyecto. Todos estos conceptos están pagados' (1)",
+    "Project: woning op twee verdiepingen, 4 suites, aseo, lavadero, zwembad (1); BP-tekst 4676JAV: projectvilla ±310 m² (1, R15 §2B)",
+    "'Urbanización Garroferal del Montgó' (1)"
+   ],
+   "blockers": [
+    "HARDE UITSLUITING (Jan, 15-09-2026): 'aval bancario de la urbanización' wijst op een niet-opgeleverde urbanisatie; geen gebruik vóór oplevering en de voorwaarde gaat mee bij verkoop (2/4) — proef op K07 toetst precies dit [investeringskader; 01 §2.11]",
+    "Licentie niet gezien: nummer, datum, resterende termijn (zonder eigen termijn 6 mnd start / 24 mnd afbouw, daarna verval), overdraagbaarheid en herontwerp (= nieuwe licentie) ONBEKEND (7)",
+    "Idealista-veld 'Terreno urbanizable / Calificado para otra'; GVA-planlaag op de pin: plan parcial Ermita II (SUZ); BP-pin raakt ook SU — planklasse per perceel ONBEKEND (7)",
+    "PORN Montgó, zone 'Áreas urbanas y urbanizables', ZIF 500 m: rapport Conselleria voor grondverzet en aansluitingen (2/3); brandcartografie Xàbia 28-05-2026 (3/4)",
+    "Fiscaal: ITP 45.450 € óf btw 106.050 € + AJD 7.070 €, afhankelijk van de verkoper (5) — verkoper onbekend",
+    "Wordt breed en niet-exclusief aangeboden (≥10 codes, prijsspreiding 500–550k); BP-gegevens: contract/toestemming nodig; benadering alleen via partner en na akkoord van Jan"
+   ],
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw projectvilla ±310 m² op licentie (claim)",
+     "kind": "nieuwbouw",
+     "months": 18,
+     "result_m2": 310,
+     "comps_key": "villa_new",
+     "vat_recoverable": true,
+     "notes": "18 maanden alleen als de geclaimde licentie geldig en overdraagbaar is; anders 24+ (nieuwe licentie). Vervalt geheel bij niet-opgeleverde urbanisatie (harde uitsluiting).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Bouwvolume 310 m² = claim uit de BP-tekst 4676JAV (1); Idealista-tekst noemt geen m². Ter controle: 0,20 × 1.570 = 314 m² (5).",
+      "Betaald project (70 %) en licentie: geen waarde toegekend en geen kosten bespaard in het model — architectkosten volledig meegerekend (conservatief, 5).",
+      "Zwembad in project (1) → nieuw zwembad opgenomen; buitenruimte 150 m² — standaardaanname (5).",
+      "Btw op bouw terugvorderbaar: koper is btw-plichtige entiteit en verkoopt met btw — aanname 4 (entiteit per deal, Jan)."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 4,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 14,
+      "n_used": 14,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 4393,
+       "base": 5002,
+       "upside": 6831
+      },
+      "sale": {
+       "conservative": 1361830,
+       "base": 1550620,
+       "upside": 2117610
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), Montgó–Ermita (n=13) en Partida Tosal–Zona dels Castellans (n=1); vraagprijs / m² gebouwd zoals de tool geeft; 9/14 via property_detail bevestigd; ontdubbeld",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 230,
+       "examples_m2_max": 491,
+       "examples_m2_median": 337
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -331653.8523507463,
+       "roi_on_costs": -0.19584116606153248,
+       "margin_on_sale": -0.24353542832126351,
+       "total_costs": 1693483.8523507463,
+       "equity_needed": 1656438.1023507463,
+       "construction_total": 865865.0358208956,
+       "purchase_taxes": 45450.0
+      },
+      "base": {
+       "result": -147583.60235074628,
+       "roi_on_costs": -0.08690571739834552,
+       "margin_on_sale": -0.09517715646047793,
+       "total_costs": 1698203.6023507463,
+       "equity_needed": 1656438.1023507463,
+       "construction_total": 865865.0358208956,
+       "purchase_taxes": 45450.0
+      },
+      "upside": {
+       "result": 405231.6476492537,
+       "roi_on_costs": 0.2366484294157032,
+       "margin_on_sale": 0.19136273801561843,
+       "total_costs": 1712378.3523507463,
+       "equity_needed": 1656438.1023507463,
+       "construction_total": 865865.0358208956,
+       "purchase_taxes": 45450.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 54000,
+      "base": 163000,
+      "upside": 491000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.08690571739834552,
+      "sale_-10pct": -0.1763349360067335,
+      "build_+15pct": -0.1514261733846012,
+      "delay_+6m": -0.1264463530605856
+     },
+     "detail_base": {
+      "price": 505000,
+      "sale": 1550620,
+      "purchase_taxes": {
+       "itp": 45450.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 45450.0
+      },
+      "purchase_costs": 9520.0,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 620000,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 22500,
+       "kitchen": 8890.298507462687,
+       "bathroom": 22459.701492537315,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 4,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 48000,
+        "overlap": 35650,
+        "total": 31350,
+        "skp_revenue": 67000,
+        "skp_margin": 20100.0
+       },
+       "pem": 681959.7014925373,
+       "fees": 54556.77611940298,
+       "icio": 27278.38805970149,
+       "tasa": 13639.194029850745,
+       "surveys": 5000,
+       "contingency": 74540.6776119403,
+       "subtotal_ex_vat": 865865.0358208956,
+       "vat_rate": 0.1,
+       "vat": 82494.74537313433,
+       "vat_cost": 0.0,
+       "total": 865865.0358208956
+      },
+      "earthworks": 0.0,
+      "holding": 7200,
+      "financing": {
+       "rate": 0.15,
+       "months": 18,
+       "build_months": null,
+       "on_purchase": 125993.25,
+       "on_build": 97409.81652985075,
+       "fee": 0.0,
+       "total": 223403.06652985077,
+       "per_month": 12411.281473880597
+      },
+      "selling": {
+       "commission_incl_vat": 23259.3,
+       "plusvalia": 15506.2,
+       "misc": 3000,
+       "total": 41765.5,
+       "channel": "intern",
+       "saved_vs_extern": 70553.20999999999
+      },
+      "total_costs": 1698203.6023507463,
+      "result": -147583.60235074628,
+      "margin_on_sale": -0.09517715646047793,
+      "roi_on_costs": -0.08690571739834552,
+      "equity_needed": 1656438.1023507463,
+      "break_even_sale": 1701893.192409515,
+      "skp_margin": 20100.0,
+      "group_result": -127483.60235074628,
+      "group_margin_on_sale": -0.08221459954775914
+     }
+    }
+   ]
+  },
+  {
+   "id": "K08",
+   "code": "90705084",
+   "url": "https://www.idealista.com/es/inmueble/90705084/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "El Rafalet (Calle Mar Amarillo)",
+   "comps_zone": "rafalet_pinosol",
+   "type": "perceel",
+   "price_ask": 150000,
+   "built_m2": 0,
+   "plot_m2": 1120,
+   "year": "n.v.t.",
+   "claims": [
+    "'parcela urbana… con licencia de construcción vigente' (1) — nummer/datum ontbreken",
+    "'planos de la villa aprobados' (1)",
+    "'la parcela pertenece actualmente a una sociedad limitada española (SL)' (1)",
+    "Hoofdfoto volgens aanbieder zelf 'generada por IA' (1)"
+   ],
+   "blockers": [
+    "Licentie niet gezien: geldigheid, termijnen, overdraagbaarheid ONBEKEND (7)",
+    "SL-eigendom: asset deal vs share deal; verborgen schulden/verplichtingen — nota simple op naam SL + uittreksel Registro Mercantil + fiscalist [01 §2.5 B2]",
+    "Btw-vraag: levering van bouwgrond door een vennootschap is in de regel btw-plichtig (21 % + AJD) in plaats van ITP — hier NIET als btw gerekend omdat verkoper/structuur niet aantoonbaar zijn; fiscalist bevestigen [te verifiëren]",
+    "GVA-planlaag op de pin: urbaniseerbare grond (SUZ), terwijl de advertentie 'parcela urbana' zegt (3) [01 §2.2]",
+    "Hellend perceel: keermuren 90–250 €/m² muurvlak en mogelijk PORN-rapport voor grondverzet (2) — buitenruimte 150 m² is dan te laag",
+    "Vraagprijs 150.000 € ligt onder Jan's budgetondergrens (500.000 €) — geen uitsluiting, wel buiten het zoekprofiel"
+   ],
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw villa ±224 m² op geclaimde licentie",
+     "kind": "nieuwbouw",
+     "months": 18,
+     "result_m2": 224,
+     "comps_key": "villa_new",
+     "vat_recoverable": true,
+     "notes": "18 maanden alleen bij geldige, overdraagbare licentie; het goedgekeurde ontwerp is niet gezien.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Geen bouwvolume in de advertentie; 224 m² = 0,20 × 1.120 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5); helling maakt keermuren waarschijnlijk (kosten niet begroot).",
+      "Btw op bouw terugvorderbaar — aanname 4 (entiteit per deal)."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 9,
+      "n_used": 9,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 3868,
+       "base": 5717,
+       "upside": 8185
+      },
+      "sale": {
+       "conservative": 866432,
+       "base": 1280608,
+       "upside": 1833440
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; vraagprijzen, nieuwbouw in de regel excl. 10% IVA",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 177,
+       "examples_m2_max": 420,
+       "examples_m2_median": 223
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -96979.9713818183,
+       "roi_on_costs": -0.1006630333259408,
+       "margin_on_sale": -0.11193027425328046,
+       "total_costs": 963411.9713818183,
+       "equity_needed": 938751.1713818182,
+       "construction_total": 648396.5585454546,
+       "purchase_taxes": 13500.0
+      },
+      "base": {
+       "result": 306841.6286181818,
+       "roi_on_costs": 0.315108056342878,
+       "margin_on_sale": 0.2396062094084855,
+       "total_costs": 973766.3713818182,
+       "equity_needed": 938751.1713818182,
+       "construction_total": 648396.5585454546,
+       "purchase_taxes": 13500.0
+      },
+      "upside": {
+       "result": 845852.8286181818,
+       "roi_on_costs": 0.8564842204609404,
+       "margin_on_sale": 0.46134742812319013,
+       "total_costs": 987587.1713818182,
+       "equity_needed": 938751.1713818182,
+       "construction_total": 648396.5585454546,
+       "purchase_taxes": 13500.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 0,
+      "base": 187000,
+      "upside": 507000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": true,
+      "upside": true
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": 0.315108056342878,
+      "sale_-10pct": 0.1875014826253894,
+      "build_+15pct": 0.20011974726949192,
+      "delay_+6m": 0.26373556029688444
+     },
+     "detail_base": {
+      "price": 150000,
+      "sale": 1280608,
+      "purchase_taxes": {
+       "itp": 13500.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 13500.0
+      },
+      "purchase_costs": 8100.0,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 448000,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 22500,
+       "kitchen": 10101.09090909091,
+       "bathroom": 19138.909090909092,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 36000,
+        "overlap": 25760,
+        "total": 29240,
+        "skp_revenue": 55000,
+        "skp_margin": 16500.0
+       },
+       "pem": 506638.9090909091,
+       "fees": 40531.11272727273,
+       "icio": 20265.556363636366,
+       "tasa": 10132.778181818183,
+       "surveys": 5000,
+       "contingency": 55727.111272727285,
+       "subtotal_ex_vat": 648396.5585454546,
+       "vat_rate": 0.1,
+       "vat": 61799.822400000005,
+       "vat_cost": 0.0,
+       "total": 648396.5585454546
+      },
+      "earthworks": 0.0,
+      "holding": 7200,
+      "financing": {
+       "rate": 0.15,
+       "months": 18,
+       "build_months": null,
+       "on_purchase": 38610.0,
+       "on_build": 72944.61283636365,
+       "fee": 0.0,
+       "total": 111554.61283636365,
+       "per_month": 6197.478490909092
+      },
+      "selling": {
+       "commission_incl_vat": 19209.12,
+       "plusvalia": 12806.08,
+       "misc": 3000,
+       "total": 35015.2,
+       "channel": "intern",
+       "saved_vs_extern": 58267.664000000004
+      },
+      "total_costs": 973766.3713818182,
+      "result": 306841.6286181818,
+      "margin_on_sale": 0.2396062094084855,
+      "roi_on_costs": 0.315108056342878,
+      "equity_needed": 938751.1713818182,
+      "break_even_sale": 966095.3306663637,
+      "skp_margin": 16500.0,
+      "group_result": 323341.6286181818,
+      "group_margin_on_sale": 0.2524907142686769
+     }
+    }
+   ]
+  },
+  {
+   "id": "K09",
+   "code": "109915149",
+   "url": "https://www.idealista.com/es/inmueble/109915149/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Pinomar - Pinosol (Urb. Pino Sol)",
+   "comps_zone": "rafalet_pinosol",
+   "type": "perceel",
+   "price_ask": 299000,
+   "built_m2": 0,
+   "plot_m2": 1299,
+   "year": "n.v.t.",
+   "claims": [
+    "'Suelo Urbano – Residencial Extensivo (Zona E, grado II)' (1)",
+    "'Edificabilidad 0,20 m²/m² (aprox. 259 m² construibles)', 'Ocupación máxima del 30%', 'PB + 1 planta', 'Parcela mínima 1.000 m²' (1)",
+    "'Orange Villas… cuenta con su propia constructora/promotora' (1)"
+   ],
+   "blockers": [
+    "Alle parameters zijn aanbiedersclaims; veld zegt 'urbanizable' terwijl de tekst 'suelo urbano' zegt (3/7) — informe urbanístico nodig",
+    "Buurperceel 111340209 (700 m², 149.000) rekent met andere parameters (20 % bezetting, 0,30 m²/m²) — minstens één klopt niet of de zones verschillen (7) [R15-verif. R15-08]",
+    "Mogelijke koppeling aan de constructora van de makelaar (gebonden bouwer?) — contractueel toetsen (7)",
+    "Veld 'A 5,0 km del núcleo urbano más cercano' (3)",
+    "Vraagprijs 299.000 € ligt onder Jan's budgetondergrens (500.000 €) — geen uitsluiting, wel buiten het zoekprofiel"
+   ],
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw villa 259 m² (geclaimde parameters)",
+     "kind": "nieuwbouw",
+     "months": 24,
+     "result_m2": 259,
+     "comps_key": "villa_new",
+     "vat_recoverable": true,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Bouwvolume 259 m² = claim aanbieder (0,20 × 1.299) én veld 'Superficie edificable 259 m²' (1); komt overeen met de zona-E-lezing (5).",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden incl. licentie — aanname 5.",
+      "Btw op bouw terugvorderbaar — aanname 4."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 9,
+      "n_used": 9,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 3868,
+       "base": 5717,
+       "upside": 8185
+      },
+      "sale": {
+       "conservative": 1001812,
+       "base": 1480703,
+       "upside": 2119915
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; vraagprijzen, nieuwbouw in de regel excl. 10% IVA",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 177,
+       "examples_m2_max": 420,
+       "examples_m2_median": 223
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -311401.1176909092,
+       "roi_on_costs": -0.23712915557717085,
+       "margin_on_sale": -0.31083787945333974,
+       "total_costs": 1313213.1176909092,
+       "equity_needed": 1285167.8176909091,
+       "construction_total": 730939.1458181819,
+       "purchase_taxes": 26910.0
+      },
+      "base": {
+       "result": 155517.6073090909,
+       "roi_on_costs": 0.11735535885533593,
+       "margin_on_sale": 0.10502957534974326,
+       "total_costs": 1325185.392690909,
+       "equity_needed": 1285167.8176909091,
+       "construction_total": 730939.1458181819,
+       "purchase_taxes": 26910.0
+      },
+      "upside": {
+       "result": 778749.3073090909,
+       "roi_on_costs": 0.5806510795445502,
+       "margin_on_sale": 0.3673493075472794,
+       "total_costs": 1341165.6926909091,
+       "equity_needed": 1285167.8176909091,
+       "construction_total": 730939.1458181819,
+       "purchase_taxes": 26910.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 0,
+      "base": 200000,
+      "upside": 548000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": true
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": 0.11735535885533593,
+      "sale_-10pct": 0.008436778566297013,
+      "build_+15pct": 0.030627517266543173,
+      "delay_+6m": 0.0729023918848224
+     },
+     "detail_base": {
+      "price": 299000,
+      "sale": 1480703,
+      "purchase_taxes": {
+       "itp": 26910.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 26910.0
+      },
+      "purchase_costs": 8696.0,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 518000,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 22500,
+       "kitchen": 8710.636363636364,
+       "bathroom": 16504.363636363636,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 36000,
+        "overlap": 29785,
+        "total": 25215,
+        "skp_revenue": 55000,
+        "skp_margin": 16500.0
+       },
+       "pem": 574004.3636363636,
+       "fees": 45920.34909090909,
+       "icio": 22960.174545454545,
+       "tasa": 11480.087272727273,
+       "surveys": 5000,
+       "contingency": 62863.534909090915,
+       "subtotal_ex_vat": 730939.1458181819,
+       "vat_rate": 0.1,
+       "vat": 69649.88840000001,
+       "vat_cost": 0.0,
+       "total": 730939.1458181819
+      },
+      "earthworks": 0.0,
+      "holding": 9600,
+      "financing": {
+       "rate": 0.15,
+       "months": 24,
+       "build_months": null,
+       "on_purchase": 100381.8,
+       "on_build": 109640.87187272728,
+       "fee": 0.0,
+       "total": 210022.67187272728,
+       "per_month": 8750.944661363637
+      },
+      "selling": {
+       "commission_incl_vat": 22210.545,
+       "plusvalia": 14807.03,
+       "misc": 3000,
+       "total": 40017.575,
+       "channel": "intern",
+       "saved_vs_extern": 67371.98650000001
+      },
+      "total_costs": 1325185.392690909,
+      "result": 155517.6073090909,
+      "margin_on_sale": 0.10502957534974326,
+      "roi_on_costs": 0.11735535885533593,
+      "equity_needed": 1285167.8176909091,
+      "break_even_sale": 1321297.4525081818,
+      "skp_margin": 16500.0,
+      "group_result": 172017.6073090909,
+      "group_margin_on_sale": 0.11617293090450341
+     }
+    }
+   ]
+  },
+  {
+   "id": "K10",
+   "code": "107655781",
+   "url": "https://www.idealista.com/es/inmueble/107655781/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Portichol - Balcón al Mar (Calle Sergei Rachmaninov)",
+   "comps_zone": "granadella_balcon",
+   "type": "perceel",
+   "price_ask": 45313,
+   "built_m2": 0,
+   "plot_m2": 1111,
+   "year": "n.v.t.",
+   "claims": [
+    "'Se venden 16 suelos urbanizables… plan de reparcelación Ciudad La Guardia' (1)",
+    "'Edificabilidad máxima tras las gestiones y transformaciones pertinentes de 3.554 m2 en total, 222m2 de media por unidad' (1)",
+    "'Porcentaje de participación en el ámbito de 26,85 %' (1); kavels 1.000–1.422 m² (1)"
+   ],
+   "blockers": [
+    "PAKKET: alleen als geheel te koop (16 kavels, 725.000 €); per-kavel cijfers zijn rekenkundig (5)",
+    "ONBEKENDE herverkavelings- en urbanisatiekosten bij 26,85 % participatie in het ámbito — komen boven op de prijs; niet in het model (7)",
+    "Planklasse tegenstrijdig: 'urbanizable' (Idealista) tegenover 'urbano no consolidado', UA Balcón al Mar 1 (Servihabitat) (7); zonder programma/reparcelación geen bouwrecht (2) [01 §2.2, §2.5]",
+    "Doorlooptijd: deliverable 01 plaatst K10 op > 36 maanden (herverkaveling); de 24 maanden in het model zijn het kadermaximum, geen schatting (5)",
+    "Bankgrond (Sareb via Servihabitat): alleen voor professionals, btw-plichtig, transparantieperiode max. 20 kalenderdagen, belastingen en kosten boven op de prijs (1)",
+    "Omgeving: PATIVEL 'Litoral 1' rond el Portitxol (nieuwbouw verboden) en vernietigde homologación Portitxol nog in de GVA-laag — ligging van de 16 fincas t.o.v. die vlakken ONBEKEND (7) [01 §2.2]",
+    "Past alleen bij een expliciet ontwikkelmandaat van Jan (R15: watchlist); bouwcapaciteit 1 project tegelijk (kader)"
+   ],
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw villa ±222 m² per kavel (gemiddelde uit het pakket)",
+     "kind": "nieuwbouw",
+     "months": 24,
+     "result_m2": 222,
+     "comps_key": "villa_new",
+     "vat_recoverable": true,
+     "notes": "Per-kavel rekensom van een pakket dat alleen als geheel te koop is; urbanisatiekosten (26,85 % participatie) ONBEKEND en niet opgenomen; realistische doorlooptijd > 36 maanden (01).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoop met btw 21 % + AJD (verkoper Sareb via Servihabitat, 1/4).",
+      "Bouwvolume 222 m² = claim aanbieder ('222m2 de media', 3.554 / 16) (1); komt overeen met 0,20 × 1.111 (5).",
+      "Kavelprijs 45.313 € = 725.000 / 16 (5). Urbanisatie-, herverkavelings- en aansluitkosten: ONBEKEND, niet begroot (7).",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden = kadermaximum; 01 §2.9 rekent > 36 maanden — het resultaat is dus te optimistisch (5).",
+      "Btw op bouw terugvorderbaar — aanname 4.",
+      "verkoopprijs uit de gecontroleerde nieuwbouwreeks van de hele wijk (deelreeks Balcón al Mar niet apart gecontroleerd en hoger)"
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 31,
+      "n_used": 31,
+      "basis": "hoogste kwart van de reeks: 222 m² is kleiner dan de vergelijkingsobjecten (527 m²)",
+      "eur_m2": {
+       "conservative": 4750,
+       "base": 6645,
+       "upside": 7309.500000000001
+      },
+      "sale": {
+       "conservative": 1054500,
+       "base": 1475190,
+       "upside": 1622709.0000000002
+      },
+      "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; obra nueva / a estrenar / in aanbouw / project met licentie, alleen advertenties met m²-veld; 9 van 26 met property_detail bevestigd",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 220,
+       "examples_m2_max": 772,
+       "examples_m2_median": 527
+      },
+      "warnings": [
+       "kosten niet te ramen: herverkaveling en urbanisatie (26,85 % aandeel in het plangebied)"
+      ],
+      "verification": "gecorrigeerd na controle: 3/3 voorbeelden via property_detail bevestigd als obra-nueva-promotie notFinished: 104311957 (min; 'met licentie' niet in de detailtekst [te verifiëren]), 108643000 (mediaan) en 107915996 (max). Reken"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": 193218.0116363638,
+       "roi_on_costs": 0.22433768991670416,
+       "margin_on_sale": 0.18323187447734832,
+       "total_costs": 861281.9883636362,
+       "equity_needed": 831919.4883636362,
+       "construction_total": 643679.839272727,
+       "purchase_taxes": 10150.112
+      },
+      "base": {
+       "result": 603390.7616363638,
+       "roi_on_costs": 0.6921212305357435,
+       "margin_on_sale": 0.4090257943969006,
+       "total_costs": 871799.2383636362,
+       "equity_needed": 831919.4883636362,
+       "construction_total": 643679.839272727,
+       "purchase_taxes": 10150.112
+      },
+      "upside": {
+       "result": 747221.7866363641,
+       "roi_on_costs": 0.8534925184863932,
+       "margin_on_sale": 0.4604779949062734,
+       "total_costs": 875487.2133636362,
+       "equity_needed": 831919.4883636362,
+       "construction_total": 643679.839272727,
+       "purchase_taxes": 10150.112
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 34000,
+      "base": 238000,
+      "upside": 310000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": true,
+      "upside": true
+     },
+     "over_max_duration": false,
+     "reliable": false,
+     "warnings": [
+      "kosten niet te ramen: herverkaveling en urbanisatie (26,85 % aandeel in het plangebied)"
+     ],
+     "within_budget": false,
+     "sensitivity_at_asking_base": {
+      "base": 0.6921212305357435,
+      "sale_-10pct": 0.5293788435087525,
+      "build_+15pct": 0.5249277158434824,
+      "delay_+6m": 0.6335223205462562
+     },
+     "detail_base": {
+      "price": 45313,
+      "sale": 1475190,
+      "purchase_taxes": {
+       "itp": 0.0,
+       "vat_purchase": 9515.73,
+       "ajd": 634.3820000000001,
+       "total": 10150.112
+      },
+      "purchase_costs": 7681.252,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 444000,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 22500,
+       "kitchen": 10180.545454545454,
+       "bathroom": 19289.454545454544,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 36000,
+        "overlap": 25530,
+        "total": 29470,
+        "skp_revenue": 55000,
+        "skp_margin": 16500.0
+       },
+       "pem": 502789.45454545453,
+       "fees": 40223.156363636364,
+       "icio": 20111.578181818182,
+       "tasa": 10055.789090909091,
+       "surveys": 5000,
+       "contingency": 55319.31563636363,
+       "subtotal_ex_vat": 643679.839272727,
+       "vat_rate": 0.1,
+       "vat": 61351.24719999998,
+       "vat_cost": 0.0,
+       "total": 643679.839272727
+      },
+      "earthworks": 0.0,
+      "holding": 9600,
+      "financing": {
+       "rate": 0.15,
+       "months": 24,
+       "build_months": null,
+       "on_purchase": 18943.3092,
+       "on_build": 96551.97589090905,
+       "fee": 0.0,
+       "total": 115495.28509090905,
+       "per_month": 4812.303545454543
+      },
+      "selling": {
+       "commission_incl_vat": 22127.85,
+       "plusvalia": 14751.9,
+       "misc": 3000,
+       "total": 39879.75,
+       "channel": "intern",
+       "saved_vs_extern": 67121.14499999999
+      },
+      "total_costs": 871799.2383636362,
+      "result": 603390.7616363638,
+      "margin_on_sale": 0.4090257943969006,
+      "roi_on_costs": 0.6921212305357435,
+      "equity_needed": 831919.4883636362,
+      "break_even_sale": 856714.4693227271,
+      "skp_margin": 16500.0,
+      "group_result": 619890.7616363638,
+      "group_margin_on_sale": 0.4202107942952188
+     }
+    }
+   ]
+  },
+  {
+   "id": "K11",
+   "code": "111856637",
+   "url": "https://www.idealista.com/es/inmueble/111856637/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "El Tosalet - Cap Martí (Carretera de la Guardia s/n)",
+   "comps_zone": "tosalet_adsubia",
+   "type": "perceel",
+   "price_ask": 229000,
+   "built_m2": 0,
+   "plot_m2": 2867,
+   "year": "n.v.t.",
+   "claims": [
+    "Aanbieder zelf: 'La Calificación urbanística de la parcela es Dotacional. Servicio Público Administrativo Privado' (1)",
+    "'No se permite el uso residencial en la parcela' (1)",
+    "Toegestane gebruiken: 'docente, deportivo, socio-cultural, sanitario-asistencial, servicios públicos, administrativos y aparcamientos' (1); 299 m² bebouwbaar (veld)"
+   ],
+   "blockers": [
+    "Harde blokkade voor route A en B: geen woonbestemming volgens de aanbieder zelf (1) — afwijzen [R15 §2B; 01 §2.11]",
+    "Prijsdaling −32 % illustreert een dunne markt voor deze bestemming, geen kans ('prijsdaling ≠ kans')",
+    "Alleen opnieuw bekijken bij een eigen dotationeel exploitatieconcept van Jan (buiten dit kader)"
+   ],
+   "scenarios": [
+    {
+     "key": "geen",
+     "label": "Geen woonscenario (dotacional)",
+     "kind": "geen",
+     "months": 0,
+     "result_m2": 0,
+     "comps_key": "geen",
+     "vat_recoverable": false,
+     "notes": "geen woonbestemming",
+     "assumptions": [
+      "Aanbieder meldt zelf 'No se permite el uso residencial' (1); niet doorgerekend. comps_key 'geen' zodat het model geen verkoopwaarde toekent."
+     ],
+     "status": "GEEN VERGELIJKINGSOBJECTEN"
+    }
+   ]
+  },
+  {
+   "id": "K12",
+   "code": "111364793",
+   "url": "https://www.idealista.com/es/inmueble/111364793/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "La Granadella - Costa Nova",
+   "comps_zone": "granadella_balcon",
+   "type": "renovatie",
+   "price_ask": 795000,
+   "built_m2": 256,
+   "plot_m2": 2192,
+   "year": "1979",
+   "claims": [
+    "'En la planta inferior encontramos una construcción sin terminar, de las mismas dimensiones que la vivienda principal' (1)",
+    "'500 m² construidos' (tekst) tegenover 256 m² (veld) (1/3)",
+    "'a tan solo 2 minutos caminando de la famosa cala'; 'crear apartamentos independientes' (1)",
+    "Dat de onderverdieping vergund is en binnen het bouwvolume valt — niet aangetoond (7)"
+   ],
+   "blockers": [
+    "SNU-P-signaal op de pin: testpunt P2 uit R13 (38,7312412 / 0,1934719) valt samen met de pin; kaartlaag geeft SNU-P, ZEC zone B, strategisch bosterrein, brandinterface 'Alta', brandperimeter 2016, 14 m van een barranco (3) [01 §2.11]",
+    "Op SNU verjaart handhaving van een bouwdeel zonder vergunning niet (art. 255.5) en minimización geeft nooit extra m² (231.3) (2) — waarde van afbouw én van sloop/nieuwbouw vervalt als de perceelgeometrie dit bevestigt",
+    "Legaliteit/registratie van de onafgebouwde onderverdieping (kadaster: welke m² staan geregistreerd?) en vergunningshistorie ONBEKEND (7)",
+    "Beschermingsstatus rond Granadella (ZEC/PORN) en brandstrookverplichting: geen officiële bron per perceel geraadpleegd (7)",
+    "Advies deliverable 01: watchlist tot de perceeltoets is gedaan (4)"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie bovenwoning 256 m² + nieuw zwembad",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 256,
+     "comps_key": "villa_renovated_granadella",
+     "vat_recoverable": false,
+     "notes": "Nieuw zwembad alleen als de planklasse dat toelaat (SNU-P-signaal); onderverdieping blijft dan casco.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "256 m² = veld Idealista (1).",
+      "Geen zwembad in velden/tekst; nieuw zwembad opgenomen omdat het perceel (2.192 m²) dat toelaat — aanname 4, onder voorbehoud SNU-P.",
+      "verkoopprijs uit de specifiekere wijkreeks villa_renovated_granadella (15-09-2026)"
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 3,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 9,
+      "n_used": 9,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 4120,
+       "base": 5777,
+       "upside": 7226
+      },
+      "sale": {
+       "conservative": 1054720,
+       "base": 1478912,
+       "upside": 1849856
+      },
+      "source": "Idealista-assistent 15-09-2026, deelreeks La Granadella – Costa Nova",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": null,
+       "examples_m2_max": null,
+       "examples_m2_median": null
+      },
+      "warnings": [],
+      "verification": "niet afzonderlijk beoordeeld"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -512399.7944818181,
+       "roi_on_costs": -0.32696912915406545,
+       "margin_on_sale": -0.4858159459210199,
+       "total_costs": 1567119.794481818,
+       "equity_needed": 1537751.794481818,
+       "construction_total": 448037.6406690909,
+       "purchase_taxes": 71550.0
+      },
+      "base": {
+       "result": -98812.59448181815,
+       "roi_on_costs": -0.06262981183624876,
+       "margin_on_sale": -0.06681438414308502,
+       "total_costs": 1577724.5944818181,
+       "equity_needed": 1537751.794481818,
+       "construction_total": 448037.6406690909,
+       "purchase_taxes": 71550.0
+      },
+      "upside": {
+       "result": 262857.805518182,
+       "roi_on_costs": 0.16563207597347618,
+       "margin_on_sale": 0.14209636075358406,
+       "total_costs": 1586998.194481818,
+       "equity_needed": 1537751.794481818,
+       "construction_total": 448037.6406690909,
+       "purchase_taxes": 71550.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 238000,
+      "base": 491000,
+      "upside": 712000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.06262981183624876,
+      "sale_-10pct": -0.1543851953813252,
+      "build_+15pct": -0.09856449223201316,
+      "delay_+6m": -0.11054564135738057
+     },
+     "detail_base": {
+      "price": 795000,
+      "sale": 1478912,
+      "purchase_taxes": {
+       "itp": 71550.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 71550.0
+      },
+      "purchase_costs": 10680.0,
+      "construction": {
+       "renovation": 256000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 0,
+       "kitchen": 8829.818181818182,
+       "bathroom": 16730.18181818182,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 3,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 36000,
+        "overlap": 29440,
+        "total": 25560,
+        "skp_revenue": 55000,
+        "skp_margin": 16500.0
+       },
+       "pem": 289730.1818181818,
+       "fees": 23178.414545454547,
+       "icio": 11589.207272727273,
+       "tasa": 5794.603636363637,
+       "surveys": 2000,
+       "contingency": 32173.841454545458,
+       "subtotal_ex_vat": 373296.0669090909,
+       "vat_rate": 0.21,
+       "vat": 74741.57376,
+       "vat_cost": 74741.57376,
+       "total": 448037.6406690909
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 164480.625,
+       "on_build": 42003.52881272727,
+       "fee": 0.0,
+       "total": 206484.15381272728,
+       "per_month": 13765.610254181818
+      },
+      "selling": {
+       "commission_incl_vat": 22183.68,
+       "plusvalia": 14789.12,
+       "misc": 3000,
+       "total": 39972.8,
+       "channel": "intern",
+       "saved_vs_extern": 67290.49600000001
+      },
+      "total_costs": 1577724.5944818181,
+      "result": -98812.59448181815,
+      "margin_on_sale": -0.06681438414308502,
+      "roi_on_costs": -0.06262981183624876,
+      "equity_needed": 1537751.794481818,
+      "break_even_sale": 1580194.9093438636,
+      "skp_margin": 16500.0,
+      "group_result": -82312.59448181815,
+      "group_margin_on_sale": -0.05565753370167944
+     }
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + afbouw onderverdieping tot ±500 m² (claim aanbieder)",
+     "kind": "renovatie_plus_uitbreiding",
+     "months": 20,
+     "result_m2": 500,
+     "comps_key": "villa_renovated_granadella",
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als het casco vergund is en binnen het toegestane volume valt; op SNU-P vervalt dit scenario.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Uitbreiding 244 m² = tekstclaim 500 m² totaal minus 256 m² veld (1/5); 'mismas dimensiones' zou 256 m² betekenen.",
+      "Afbouw casco tegen nieuwbouwtarief 2.000 €/m² — conservatieve aanname (5); werkelijke afbouwkosten onbekend.",
+      "verkoopprijs uit de specifiekere wijkreeks villa_renovated_granadella (15-09-2026)"
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 5,
+      "level": "hoog"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 9,
+      "n_used": 9,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 4120,
+       "base": 5777,
+       "upside": 7226
+      },
+      "sale": {
+       "conservative": 2060000,
+       "base": 2888500,
+       "upside": 3613000
+      },
+      "source": "Idealista-assistent 15-09-2026, deelreeks La Granadella – Costa Nova",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": null,
+       "examples_m2_max": null,
+       "examples_m2_median": null
+      },
+      "warnings": [],
+      "verification": "niet afzonderlijk beoordeeld"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -419041.90724683553,
+       "roi_on_costs": -0.16903381343489002,
+       "margin_on_sale": -0.20341840157613375,
+       "total_costs": 2479041.9072468355,
+       "equity_needed": 2424541.9072468355,
+       "construction_total": 1173337.250886076,
+       "purchase_taxes": 71550.0
+      },
+      "base": {
+       "result": 388745.59275316447,
+       "roi_on_costs": 0.15551351429811808,
+       "margin_on_sale": 0.13458389917021446,
+       "total_costs": 2499754.4072468355,
+       "equity_needed": 2424541.9072468355,
+       "construction_total": 1173337.250886076,
+       "purchase_taxes": 71550.0
+      },
+      "upside": {
+       "result": 1095133.0927531645,
+       "roi_on_costs": 0.4349447898144223,
+       "margin_on_sale": 0.30310907632249223,
+       "total_costs": 2517866.9072468355,
+       "equity_needed": 2424541.9072468355,
+       "construction_total": 1173337.250886076,
+       "purchase_taxes": 71550.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 187000,
+      "base": 656000,
+      "upside": 1048000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": true
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": 0.15551351429811808,
+      "sale_-10pct": 0.042975092404179675,
+      "build_+15pct": 0.0746855199533344,
+      "delay_+6m": 0.10588010269006938
+     },
+     "detail_base": {
+      "price": 795000,
+      "sale": 2888500,
+      "purchase_taxes": {
+       "itp": 71550.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 71550.0
+      },
+      "purchase_costs": 10680.0,
+      "construction": {
+       "renovation": 256000,
+       "newbuild": 488000,
+       "demolition": 0,
+       "pool": 17000.0,
+       "exterior": 0,
+       "kitchen": 5170.886075949367,
+       "bathroom": 16329.113924050633,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 5,
+        "level": "hoog",
+        "kitchen_rate": 19000,
+        "bathroom_rate": 12000,
+        "kitchen": 19000,
+        "bathroom": 60000,
+        "overlap": 57500,
+        "total": 21500,
+        "skp_revenue": 79000,
+        "skp_margin": 23700.0
+       },
+       "pem": 777329.1139240506,
+       "fees": 62186.32911392405,
+       "icio": 31093.164556962023,
+       "tasa": 15546.582278481012,
+       "surveys": 2000,
+       "contingency": 84468.63291139241,
+       "subtotal_ex_vat": 977794.7088607594,
+       "vat_rate": 0.21,
+       "vat": 195542.54202531645,
+       "vat_cost": 195542.54202531645,
+       "total": 1173337.250886076
+      },
+      "earthworks": 0.0,
+      "holding": 8000,
+      "financing": {
+       "rate": 0.15,
+       "months": 20,
+       "build_months": null,
+       "on_purchase": 219307.5,
+       "on_build": 146667.1563607595,
+       "fee": 0.0,
+       "total": 365974.6563607595,
+       "per_month": 18298.732818037977
+      },
+      "selling": {
+       "commission_incl_vat": 43327.5,
+       "plusvalia": 28885.0,
+       "misc": 3000,
+       "total": 75212.5,
+       "channel": "intern",
+       "saved_vs_extern": 131426.75
+      },
+      "total_costs": 2499754.4072468355,
+      "result": 388745.59275316447,
+      "margin_on_sale": 0.13458389917021446,
+      "roi_on_costs": 0.15551351429811808,
+      "equity_needed": 2424541.9072468355,
+      "break_even_sale": 2490035.7674280065,
+      "skp_margin": 23700.0,
+      "group_result": 412445.59275316447,
+      "group_margin_on_sale": 0.14278884983665033
+     }
+    },
+    {
+     "key": "N_sloop",
+     "label": "Sloop en nieuwbouw villa ±438 m²",
+     "kind": "nieuwbouw",
+     "months": 24,
+     "result_m2": 438,
+     "comps_key": "villa_new_granadella",
+     "vat_recoverable": true,
+     "notes": "Op SNU-P is nieuwbouw met 0,20 uitgesloten; scenario alleen ter vergelijking zolang de planklasse niet vaststaat.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Nieuwbouwvolume min(0,20 × 2.192; 450) = 438 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Sloop 500 m² = bovenwoning 256 + casco van gelijke omvang (tekst 500 m²) — aanname 5.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "verkoopprijs uit de specifiekere wijkreeks villa_new_granadella (15-09-2026)"
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 5,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 9,
+      "n_used": 9,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 3686,
+       "base": 4242,
+       "upside": 4455
+      },
+      "sale": {
+       "conservative": 1614468,
+       "base": 1857996,
+       "upside": 1951290
+      },
+      "source": "Idealista-assistent 15-09-2026, deelreeks La Granadella – Costa Nova",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": null,
+       "examples_m2_max": null,
+       "examples_m2_median": null
+      },
+      "warnings": [],
+      "verification": "niet afzonderlijk beoordeeld"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -941624.3000000003,
+       "roi_on_costs": -0.36838431069175404,
+       "margin_on_sale": -0.5832412286895747,
+       "total_costs": 2556092.3000000003,
+       "equity_needed": 2512730.6,
+       "construction_total": 1184984.0,
+       "purchase_taxes": 71550.0
+      },
+      "base": {
+       "result": -704184.5,
+       "roi_on_costs": -0.2748379749201901,
+       "margin_on_sale": -0.37900216146859306,
+       "total_costs": 2562180.5,
+       "equity_needed": 2512730.6,
+       "construction_total": 1184984.0,
+       "purchase_taxes": 71550.0
+      },
+      "upside": {
+       "result": -613222.8500000001,
+       "roi_on_costs": -0.23911864976617297,
+       "margin_on_sale": -0.31426535778894993,
+       "total_costs": 2564512.85,
+       "equity_needed": 2512730.6,
+       "construction_total": 1184984.0,
+       "purchase_taxes": 71550.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 0,
+      "base": 38000,
+      "upside": 89000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.2748379749201901,
+      "sale_-10pct": -0.3461688436146093,
+      "build_+15pct": -0.32455317951497864,
+      "delay_+6m": -0.30537262716993707
+     },
+     "detail_base": {
+      "price": 795000,
+      "sale": 1857996,
+      "purchase_taxes": {
+       "itp": 71550.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 71550.0
+      },
+      "purchase_costs": 10680.0,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 876000,
+       "demolition": 30000,
+       "pool": 17000.0,
+       "exterior": 22500,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 5,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 30000,
+        "overlap": 38000,
+        "total": 0,
+        "skp_revenue": 38000,
+        "skp_margin": 11400.0
+       },
+       "pem": 945500.0,
+       "fees": 75640.0,
+       "icio": 37820.0,
+       "tasa": 18910.0,
+       "surveys": 5000,
+       "contingency": 102114.0,
+       "subtotal_ex_vat": 1184984.0,
+       "vat_rate": 0.1,
+       "vat": 112825.40000000001,
+       "vat_cost": 0.0,
+       "total": 1184984.0
+      },
+      "earthworks": 0.0,
+      "holding": 9600,
+      "financing": {
+       "rate": 0.15,
+       "months": 24,
+       "build_months": null,
+       "on_purchase": 263169.0,
+       "on_build": 177747.6,
+       "fee": 0.0,
+       "total": 440916.6,
+       "per_month": 18371.524999999998
+      },
+      "selling": {
+       "commission_incl_vat": 27869.94,
+       "plusvalia": 18579.96,
+       "misc": 3000,
+       "total": 49449.899999999994,
+       "channel": "intern",
+       "saved_vs_extern": 84538.818
+      },
+      "total_costs": 2562180.5,
+      "result": -704184.5,
+      "margin_on_sale": -0.37900216146859306,
+      "roi_on_costs": -0.2748379749201901,
+      "equity_needed": 2512730.6,
+      "break_even_sale": 2579785.1125000003,
+      "skp_margin": 11400.0,
+      "group_result": -692784.5,
+      "group_margin_on_sale": -0.3728665185500938
+     }
+    }
+   ]
+  },
+  {
+   "id": "K13",
+   "code": "111439256",
+   "url": "https://www.idealista.com/es/inmueble/111439256/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad",
+   "comps_zone": "centro",
+   "type": "pand",
+   "price_ask": 520000,
+   "built_m2": 487,
+   "plot_m2": null,
+   "year": "1968",
+   "claims": [
+    "'posibilidad de configurar hasta tres viviendas independientes' (1)",
+    "'construcción adicional actualmente en estado de ruina… previa consulta y verificación con el Ayuntamiento' (1)",
+    "'balcones con vistas al mar' (1); 'requiere una reforma integral' (1)"
+   ],
+   "blockers": [
+    "Casco: ZUR-NHT-regime (NUT begane grond + 1 + zolder vs PGOU II–V) en Cultura-toets (2/7) [01 §2.2]",
+    "Splitsing in 3 woningen: división horizontal, minimale woninggrootte en parkeernorm (PGOU: boven 4 woningen 0,6/woning [OCR]; bij 3 [te verifiëren]) (2/7)",
+    "Ruïne: bestemming (woning/parkeren/bergingen) en legaliteit ONBEKEND; m² niet vermeld (7)",
+    "Constructie 1968, 3 lagen, label G, geen verwarming: structurele renovatie kan op sloop/nieuwbouw uitlopen — constructeur nodig",
+    "Perceel-m² niet vermeld; kadastrale m² tegenover 487 m² advertentie toetsen"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 487 m² als één pand",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 487,
+     "comps_key": "townhouse_renovated",
+     "vat_recoverable": false,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "487 m² gebouwd = veld Idealista (1); ruïne niet meegerekend.",
+      "Geen zwembad (casco) — aanname 4."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 5,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 8,
+      "n_used": 8,
+      "basis": "laagste kwart van de reeks: 487 m² is 2.1 keer de maat van de vergelijkingsobjecten (236 m²)",
+      "eur_m2": {
+       "conservative": 2406.6,
+       "base": 2674,
+       "upside": 2872
+      },
+      "sale": {
+       "conservative": 1172014.2,
+       "base": 1302238,
+       "upside": 1398664
+      },
+      "source": "Idealista-assistent (MCP) search_properties district Centro Ciudad, Jávea/Xàbia (chalets per prijsband + adosados, filter buen estado) + property_detail op 12 objecten",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 106,
+       "examples_m2_max": 729,
+       "examples_m2_median": 236
+      },
+      "warnings": [
+       "Dit object is met 487 m² flink groter dan de vergelijkingsobjecten (mediaan 236 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+      ],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -351026.3612500001,
+       "roi_on_costs": -0.23047735574547232,
+       "margin_on_sale": -0.29950691830354964,
+       "total_costs": 1523040.56125,
+       "equity_needed": 1490740.20625,
+       "construction_total": 731692.76,
+       "purchase_taxes": 46800.0
+      },
+      "base": {
+       "result": -224058.15625,
+       "roi_on_costs": -0.14679861135239625,
+       "margin_on_sale": -0.1720562264731946,
+       "total_costs": 1526296.15625,
+       "equity_needed": 1490740.20625,
+       "construction_total": 731692.76,
+       "purchase_taxes": 46800.0
+      },
+      "upside": {
+       "result": -130042.80625000014,
+       "roi_on_costs": -0.08506719909817248,
+       "margin_on_sale": -0.09297644484307892,
+       "total_costs": 1528706.8062500001,
+       "equity_needed": 1490740.20625,
+       "construction_total": 731692.76,
+       "purchase_taxes": 46800.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 69000,
+      "base": 147000,
+      "upside": 204000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": false,
+     "warnings": [
+      "Dit object is met 487 m² flink groter dan de vergelijkingsobjecten (mediaan 236 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+     ],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.14679861135239625,
+      "sale_-10pct": -0.23047735574547232,
+      "build_+15pct": -0.20881924795571993,
+      "delay_+6m": -0.18577715610310366
+     },
+     "detail_base": {
+      "price": 520000,
+      "sale": 1302238,
+      "purchase_taxes": {
+       "itp": 46800.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 46800.0
+      },
+      "purchase_costs": 9580.0,
+      "construction": {
+       "renovation": 487000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 5,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 30000,
+        "overlap": 38000,
+        "total": 0,
+        "skp_revenue": 38000,
+        "skp_margin": 11400.0
+       },
+       "pem": 487000.0,
+       "fees": 38960.0,
+       "icio": 19480.0,
+       "tasa": 9740.0,
+       "surveys": 2000,
+       "contingency": 52596.0,
+       "subtotal_ex_vat": 609776.0,
+       "vat_rate": 0.21,
+       "vat": 121916.76,
+       "vat_cost": 121916.76,
+       "total": 731692.76
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 108071.25,
+       "on_build": 68596.19625000001,
+       "fee": 0.0,
+       "total": 176667.44625,
+       "per_month": 11777.82975
+      },
+      "selling": {
+       "commission_incl_vat": 19533.57,
+       "plusvalia": 13022.380000000001,
+       "misc": 3000,
+       "total": 35555.95,
+       "channel": "intern",
+       "saved_vs_extern": 59251.829000000005
+      },
+      "total_costs": 1526296.15625,
+      "result": -224058.15625,
+      "margin_on_sale": -0.1720562264731946,
+      "roi_on_costs": -0.14679861135239625,
+      "equity_needed": 1490740.20625,
+      "break_even_sale": 1531897.61015625,
+      "skp_margin": 11400.0,
+      "group_result": -212658.15625,
+      "group_margin_on_sale": -0.16330206632735336
+     }
+    },
+    {
+     "key": "R_split",
+     "label": "Integrale renovatie + verdeling in 3 appartementen (claim aanbieder)",
+     "kind": "renovatie",
+     "months": 18,
+     "result_m2": 487,
+     "comps_key": "apartment_renovated",
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als ordenanza, parkeernorm en división horizontal het toelaten; verkoop per unit tegen appartement-comps.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Drie eenheden = claim aanbieder (1); gemeenschappelijke ruimte niet afgetrokken van 487 m² (5).",
+      "Doorlooptijd 18 maanden i.v.m. división horizontal en licentie — aanname 5."
+     ],
+     "fitout": {
+      "kitchens": 3,
+      "bathrooms": 9,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 9,
+      "n_used": 9,
+      "basis": "laagste kwart van de reeks: 162 m² is 1.2 keer de maat van de vergelijkingsobjecten (132 m²)",
+      "eur_m2": {
+       "conservative": 3267.9,
+       "base": 3631,
+       "upside": 4008
+      },
+      "sale": {
+       "conservative": 1591467.3,
+       "base": 1768297,
+       "upside": 1951896
+      },
+      "source": "Idealista-assistent (MCP) search_properties pisos buen estado in Centro Ciudad (50 van 127 opgehaald, geen paginering) + property_detail op 6 objecten",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 64,
+       "examples_m2_max": 235,
+       "examples_m2_median": 132
+      },
+      "warnings": [
+       "Dit object is met 162 m² flink groter dan de vergelijkingsobjecten (mediaan 132 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+      ],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -13982.1337428845,
+       "roi_on_costs": -0.008709171057656472,
+       "margin_on_sale": -0.008785687109552612,
+       "total_costs": 1605449.4337428845,
+       "equity_needed": 1562662.7512428844,
+       "construction_total": 763503.1471846153,
+       "purchase_taxes": 46800.0
+      },
+      "base": {
+       "result": 158426.82375711552,
+       "roi_on_costs": 0.0984096892377074,
+       "margin_on_sale": 0.08959288160140266,
+       "total_costs": 1609870.1762428845,
+       "equity_needed": 1562662.7512428844,
+       "construction_total": 763503.1471846153,
+       "purchase_taxes": 46800.0
+      },
+      "upside": {
+       "result": 337435.84875711566,
+       "roi_on_costs": 0.2090084716537242,
+       "margin_on_sale": 0.1728759364008716,
+       "total_costs": 1614460.1512428843,
+       "equity_needed": 1562662.7512428844,
+       "construction_total": 763503.1471846153,
+       "purchase_taxes": 46800.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 272000,
+      "base": 374000,
+      "upside": 480000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": false,
+     "warnings": [
+      "Dit object is met 162 m² flink groter dan de vergelijkingsobjecten (mediaan 132 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+     ],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": 0.0984096892377074,
+      "sale_-10pct": -0.008709171057656472,
+      "build_+15pct": 0.02121166543509408,
+      "delay_+6m": 0.049976518158109245
+     },
+     "detail_base": {
+      "price": 520000,
+      "sale": 1768297,
+      "purchase_taxes": {
+       "itp": 46800.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 46800.0
+      },
+      "purchase_costs": 9580.0,
+      "construction": {
+       "renovation": 487000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 6767.692307692308,
+       "bathroom": 15227.307692307691,
+       "fitout": {
+        "kitchens": 3,
+        "bathrooms": 9,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 24000,
+        "bathroom": 54000,
+        "overlap": 56005,
+        "total": 21995,
+        "skp_revenue": 78000,
+        "skp_margin": 23400.0
+       },
+       "pem": 502227.3076923077,
+       "fees": 40178.18461538461,
+       "icio": 20089.092307692306,
+       "tasa": 10044.546153846153,
+       "surveys": 2000,
+       "contingency": 54917.31846153846,
+       "subtotal_ex_vat": 636224.1415384614,
+       "vat_rate": 0.21,
+       "vat": 127279.00564615382,
+       "vat_cost": 127279.00564615382,
+       "total": 763503.1471846153
+      },
+      "earthworks": 0.0,
+      "holding": 7200,
+      "financing": {
+       "rate": 0.15,
+       "months": 18,
+       "build_months": null,
+       "on_purchase": 129685.5,
+       "on_build": 85894.10405826922,
+       "fee": 0.0,
+       "total": 215579.60405826924,
+       "per_month": 11976.644669903846
+      },
+      "selling": {
+       "commission_incl_vat": 26524.454999999998,
+       "plusvalia": 17682.97,
+       "misc": 3000,
+       "total": 47207.425,
+       "channel": "intern",
+       "saved_vs_extern": 80457.5135
+      },
+      "total_costs": 1609870.1762428845,
+      "result": 158426.82375711552,
+      "margin_on_sale": 0.08959288160140266,
+      "roi_on_costs": 0.0984096892377074,
+      "equity_needed": 1562662.7512428844,
+      "break_even_sale": 1605909.5056489566,
+      "skp_margin": 23400.0,
+      "group_result": 181826.82375711552,
+      "group_margin_on_sale": 0.10282595274273243
+     }
+    }
+   ]
+  },
+  {
+   "id": "K14",
+   "code": "108456665",
+   "url": "https://www.idealista.com/es/inmueble/108456665/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad (Calle de la Mare de Déu dels Àngels)",
+   "comps_zone": "centro",
+   "type": "pand",
+   "price_ask": 650000,
+   "built_m2": 434,
+   "plot_m2": 310,
+   "year": "1970",
+   "claims": [
+    "'el edificio esta en ordenanza A CASCO' (1)",
+    "'No tiene necesidad de reserva de aparcamiento y pueden construirse 4 alturas. Bajo +3 y bajocubierta' (1)",
+    "'como la unidad mínima es de 100 metros cuadrados por vivienda salen 12 viviendas' (1)"
+   ],
+   "blockers": [
+    "Parkeereis: volgens het PGOU geldt boven 4 woningen 0,6 plaats per woning [OCR] — botst met 'no tiene necesidad de reserva' bij 12 woningen (2/7) [01 §2.11]",
+    "NHT-regime: NUT gaven begane grond + 1 + zolder, PGOU per blok II–V; GVA-laag op de pin: SU, ZUR-NHT (3/7); Cultura-toets bij sloop/opbouw (2)",
+    "Rekenkundig: 12 × 100 m² = 1.200 m² op 310 m² perceel vraagt ±97 % bebouwing per laag over vier lagen (5)",
+    "Advies deliverable 01: watchlist; risico 'Hoog (claim botst met de regeltekst)'; eerst informe urbanístico met de exacte ordenanza en het aantal bouwlagen voor dit blok",
+    "Constructie 1970, label G: bij herontwikkeling sloop/nieuwbouw; bij afwijzing van de claim resteert een gewone renovatie op 650.000 €"
+   ],
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 434 m² als één pand",
+     "kind": "renovatie",
+     "months": 15,
+     "result_m2": 434,
+     "comps_key": "townhouse_renovated",
+     "vat_recoverable": false,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "434 m² gebouwd = veld Idealista (1).",
+      "Geen zwembad (casco) — aanname 4."
+     ],
+     "fitout": {
+      "kitchens": 1,
+      "bathrooms": 5,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 8,
+      "n_used": 8,
+      "basis": "laagste kwart van de reeks: 434 m² is 1.8 keer de maat van de vergelijkingsobjecten (236 m²)",
+      "eur_m2": {
+       "conservative": 2406.6,
+       "base": 2674,
+       "upside": 2872
+      },
+      "sale": {
+       "conservative": 1044464.3999999999,
+       "base": 1160516,
+       "upside": 1246448
+      },
+      "source": "Idealista-assistent (MCP) search_properties district Centro Ciudad, Jávea/Xàbia (chalets per prijsband + adosados, filter buen estado) + property_detail op 12 objecten",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 106,
+       "examples_m2_max": 729,
+       "examples_m2_median": 236
+      },
+      "warnings": [
+       "Dit object is met 434 m² flink groter dan de vergelijkingsobjecten (mediaan 236 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+      ],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -557466.6225,
+       "roi_on_costs": -0.3479966457169975,
+       "margin_on_sale": -0.5337344408291945,
+       "total_costs": 1601931.0225,
+       "equity_needed": 1572819.4124999999,
+       "construction_total": 652326.32,
+       "purchase_taxes": 58500.0
+      },
+      "base": {
+       "result": -444316.31249999977,
+       "roi_on_costs": -0.27686151944924764,
+       "margin_on_sale": -0.3828609967462747,
+       "total_costs": 1604832.3124999998,
+       "equity_needed": 1572819.4124999999,
+       "construction_total": 652326.32,
+       "purchase_taxes": 58500.0
+      },
+      "upside": {
+       "result": -360532.6124999998,
+       "roi_on_costs": -0.2243540523734849,
+       "margin_on_sale": -0.2892480171655776,
+       "total_costs": 1606980.6124999998,
+       "equity_needed": 1572819.4124999999,
+       "construction_total": 652326.32,
+       "purchase_taxes": 58500.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 60000,
+      "base": 129000,
+      "upside": 180000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": false,
+     "warnings": [
+      "Dit object is met 434 m² flink groter dan de vergelijkingsobjecten (mediaan 236 m²). De prijs per m² daalt hier met de omvang, dus er is met het laagste kwart van de wijkprijzen gerekend. Dat blijft een schatting: voor deze maatklasse zijn te weinig vergelijkingsobjecten."
+     ],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.27686151944924764,
+      "sale_-10pct": -0.34799664571699745,
+      "build_+15pct": -0.32191365908568104,
+      "delay_+6m": -0.31150735934246476
+     },
+     "detail_base": {
+      "price": 650000,
+      "sale": 1160516,
+      "purchase_taxes": {
+       "itp": 58500.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 58500.0
+      },
+      "purchase_costs": 10100.0,
+      "construction": {
+       "renovation": 434000,
+       "newbuild": 0,
+       "demolition": 0,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 0.0,
+       "bathroom": 0.0,
+       "fitout": {
+        "kitchens": 1,
+        "bathrooms": 5,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 8000,
+        "bathroom": 30000,
+        "overlap": 38000,
+        "total": 0,
+        "skp_revenue": 38000,
+        "skp_margin": 11400.0
+       },
+       "pem": 434000.0,
+       "fees": 34720.0,
+       "icio": 17360.0,
+       "tasa": 8680.0,
+       "surveys": 2000,
+       "contingency": 46872.0,
+       "subtotal_ex_vat": 543632.0,
+       "vat_rate": 0.21,
+       "vat": 108694.31999999999,
+       "vat_cost": 108694.31999999999,
+       "total": 652326.32
+      },
+      "earthworks": 0.0,
+      "holding": 6000,
+      "financing": {
+       "rate": 0.15,
+       "months": 15,
+       "build_months": null,
+       "on_purchase": 134737.5,
+       "on_build": 61155.59249999999,
+       "fee": 0.0,
+       "total": 195893.0925,
+       "per_month": 13059.5395
+      },
+      "selling": {
+       "commission_incl_vat": 17407.739999999998,
+       "plusvalia": 11605.16,
+       "misc": 3000,
+       "total": 32012.899999999998,
+       "channel": "intern",
+       "saved_vs_extern": 52803.47800000001
+      },
+      "total_costs": 1604832.3124999998,
+      "result": -444316.31249999977,
+      "margin_on_sale": -0.3828609967462747,
+      "roi_on_costs": -0.27686151944924764,
+      "equity_needed": 1572819.4124999999,
+      "break_even_sale": 1615940.2203125,
+      "skp_margin": 11400.0,
+      "group_result": -432916.31249999977,
+      "group_margin_on_sale": -0.37303778017709344
+     }
+    },
+    {
+     "key": "N_herontwikkeling",
+     "label": "Sloop en nieuwbouw 12 appartementen ±1.200 m² (claim aanbieder)",
+     "kind": "nieuwbouw",
+     "months": 24,
+     "result_m2": 1200,
+     "comps_key": "apartment_new",
+     "vat_recoverable": true,
+     "notes": "Alleen geldig als ordenanza A casco, 4 bouwlagen en het ontbreken van een parkeereis schriftelijk worden bevestigd; deliverable 01 acht de claim strijdig met de regeltekst.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "12 woningen × 100 m² = 1.200 m² = claim aanbieder (1); volledige sloop verondersteld (5).",
+      "Verkoop als nieuwbouwappartementen (apartment_new, centro) met btw; btw op bouw terugvorderbaar — aanname 4.",
+      "Doorlooptijd 24 maanden = kadermaximum; 01 §2.9 plaatst herontwikkeling op > 36 maanden (5).",
+      "Gemeenschappelijke ruimte niet afgetrokken van 1.200 m² (5)."
+     ],
+     "fitout": {
+      "kitchens": 12,
+      "bathrooms": 24,
+      "level": "midden"
+     },
+     "status": "berekend",
+     "sale_band": {
+      "n": 50,
+      "n_used": 50,
+      "basis": "hele reeks",
+      "eur_m2": {
+       "conservative": 3436,
+       "base": 3620,
+       "upside": 4132
+      },
+      "sale": {
+       "conservative": 4123200,
+       "base": 4344000,
+       "upside": 4958400
+      },
+      "source": "Idealista-assistent (MCP) search_properties pisos + obra nueva in Centro Ciudad (total 50, alle 50 opgehaald) + 1 object in aanbouw uit de tweedehandsset; property_detail op 6 objecten",
+      "date": "2026-09-15",
+      "size": {
+       "examples_m2_min": 85,
+       "examples_m2_max": 188,
+       "examples_m2_median": 102
+      },
+      "warnings": [],
+      "verification": "bevestigd"
+     },
+     "at_asking": {
+      "conservative": {
+       "result": -553708.8480000002,
+       "roi_on_costs": -0.11839205466593267,
+       "margin_on_sale": -0.13429104772991857,
+       "total_costs": 4676908.848,
+       "equity_needed": 4570828.848,
+       "construction_total": 3153955.52,
+       "purchase_taxes": 58500.0
+      },
+      "base": {
+       "result": -338428.84800000023,
+       "roi_on_costs": -0.07227634609857508,
+       "margin_on_sale": -0.0779071933701658,
+       "total_costs": 4682428.848,
+       "equity_needed": 4570828.848,
+       "construction_total": 3153955.52,
+       "purchase_taxes": 58500.0
+      },
+      "upside": {
+       "result": 260611.15199999977,
+       "roi_on_costs": 0.05547528005881965,
+       "margin_on_sale": 0.052559525653436544,
+       "total_costs": 4697788.848,
+       "equity_needed": 4570828.848,
+       "construction_total": 3153955.52,
+       "purchase_taxes": 58500.0
+      }
+     },
+     "max_price_for_roi": {
+      "conservative": 0,
+      "base": 0,
+      "upside": 135000
+     },
+     "meets_roi_at_asking": {
+      "conservative": false,
+      "base": false,
+      "upside": false
+     },
+     "over_max_duration": false,
+     "reliable": true,
+     "warnings": [],
+     "within_budget": true,
+     "sensitivity_at_asking_base": {
+      "base": -0.07227634609857508,
+      "sale_-10pct": -0.16310769953143592,
+      "build_+15pct": -0.16447091006687073,
+      "delay_+6m": -0.10562023426993214
+     },
+     "detail_base": {
+      "price": 650000,
+      "sale": 4344000,
+      "purchase_taxes": {
+       "itp": 58500.0,
+       "vat_purchase": 0.0,
+       "ajd": 0.0,
+       "total": 58500.0
+      },
+      "purchase_costs": 10100.0,
+      "construction": {
+       "renovation": 0,
+       "newbuild": 2400000,
+       "demolition": 26040,
+       "pool": 0.0,
+       "exterior": 0,
+       "kitchen": 40800.0,
+       "bathroom": 61200.0,
+       "fitout": {
+        "kitchens": 12,
+        "bathrooms": 24,
+        "level": "midden",
+        "kitchen_rate": 8000,
+        "bathroom_rate": 6000,
+        "kitchen": 96000,
+        "bathroom": 144000,
+        "overlap": 138000,
+        "total": 102000,
+        "skp_revenue": 240000,
+        "skp_margin": 72000.0
+       },
+       "pem": 2487240.0,
+       "fees": 198979.2,
+       "icio": 99489.6,
+       "tasa": 49744.8,
+       "surveys": 5000,
+       "contingency": 272701.92000000004,
+       "subtotal_ex_vat": 3153955.52,
+       "vat_rate": 0.1,
+       "vat": 300472.112,
+       "vat_cost": 0.0,
+       "total": 3153955.52
+      },
+      "earthworks": 0.0,
+      "holding": 9600,
+      "financing": {
+       "rate": 0.15,
+       "months": 24,
+       "build_months": null,
+       "on_purchase": 215580.0,
+       "on_build": 473093.328,
+       "fee": 0.0,
+       "total": 688673.328,
+       "per_month": 28694.721999999998
+      },
+      "selling": {
+       "commission_incl_vat": 65160.0,
+       "plusvalia": 43440.0,
+       "misc": 3000,
+       "total": 111600.0,
+       "channel": "intern",
+       "saved_vs_extern": 197652.0
+      },
+      "total_costs": 4682428.848,
+      "result": -338428.84800000023,
+      "margin_on_sale": -0.0779071933701658,
+      "roi_on_costs": -0.07227634609857508,
+      "equity_needed": 4570828.848,
+      "break_even_sale": 4690889.5692,
+      "skp_margin": 72000.0,
+      "group_result": -266428.84800000023,
+      "group_margin_on_sale": -0.061332607734806685
+     }
+    }
+   ]
+  }
+ ]
+}

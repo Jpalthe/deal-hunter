@@ -1,0 +1,32 @@
+{
+ "toelichting": "Handmatig gecontroleerde correcties op wat een bron doorgeeft. Een bron overschrijft deze waarden niet: wat hier staat is nagekeken en gaat voor. Per correctie staat waar hij vandaan komt en wanneer hij is gecontroleerd.",
+ "bijgewerkt": "18-09-2026",
+ "per_referentie": {
+  "110566607": {
+   "plot_m2": 2260,
+   "bron": "Idealista-assistent, property_detail 18-09-2026: 'Parcela de 2260 m²'. Onze oogst had geen perceeloppervlakte.",
+   "let_op": "De advertentie noemt 378 m² zowel als construida in het kenmerkenblok als usableArea in het gegevensveld. Dat kan niet allebei. Ook 'varias construcciones auxiliares' zonder te zeggen of die meetellen. Oppervlakte is hier de grootste onzekerheid."
+  },
+  "106031463": {
+   "plot_m2": 4831,
+   "bron": "Idealista-assistent, property_detail 18-09-2026: twee percelen samen 4.831 m², afzonderlijk 2.540 m² en 2.291 m². Onze oogst had 2.400 m².",
+   "let_op": "Twee aparte percelen die samen worden aangeboden. Elk perceel heeft zijn eigen bouwrecht; reken niet met de som alsof het één kavel is."
+  },
+  "109503188": {
+   "plot_m2": 1950,
+   "bron": "Idealista-assistent, property_detail 18-09-2026: perceel 1 is 1.000 m², perceel 2 is 950 m². Onze oogst had 2.000 m².",
+   "let_op": "Ook hier twee percelen. Bij een parcela mínima van 1.000 m² haalt het tweede perceel die drempel net niet."
+  },
+  "84039627": {
+   "plot_m2": 2220,
+   "uitsluiten": "Geen woonbestemming. De advertentie zegt onder Situación urbanística letterlijk 'Calificado para terciario comercial' en noemt supermarkten, restaurants en dienstverleners. Wonen komt er niet in voor. Het nieuwbouwscenario voor een villa gaat hier dus niet op.",
+   "bron": "Idealista-assistent, property_detail 18-09-2026, veld Situación urbanística; tegenspraakrapport onderzoek/kandidaten-2026-09-18/84039627-tegenspraak.md. Het perceel is ook 2.220 m² in plaats van de 1.707 m² uit onze oogst.",
+   "let_op": null
+  },
+  "112369400": {
+   "plot_m2": 118,
+   "bron": "Idealista-assistent, property_detail 18-09-2026: perceel 118 m². Onze oogst had geen perceeloppervlakte.",
+   "let_op": "118 m² perceel met 268 m² gebouwd betekent een pand over meerdere lagen in de dorpskern, geen villa. De vergelijkingsreeks voor gerenoveerde villa's past hier waarschijnlijk niet; de opbrengst is daarmee te hoog geraamd."
+  }
+ }
+}

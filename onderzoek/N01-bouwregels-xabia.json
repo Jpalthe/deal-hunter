@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "titel": "Bouwregels per zone, gemeente Xàbia (Jávea)",
+    "id": "N01",
+    "controledatum": "2026-09-18",
+    "geldend_plan": "PGOU Xàbia, definitief goedgekeurd CTU Alicante 31-01-1990 (BOP 26-02-1990); restgebieden bij resolución conseller 08-03-1991 (BOP 03-06-1991)",
+    "plan_in_procedure": "Plan General Estructural (PGE). Pleno 30-04-2019 keurde de propuesta definitiva goed en zond die naar de Conselleria. Per 18-09-2026 niet definitief goedgekeurd en niet opgenomen in het Registro Autonómico de Planeamiento. GEEN BOUWRECHT.",
+    "bewijstypes": {
+      "1": "zelf getest of opgehaald",
+      "2": "officiele wettekst of planvoorschrift",
+      "3": "officiele kaart of database",
+      "4": "officiele publicatie van een overheid",
+      "5": "eigen afleiding of berekening",
+      "6": "bericht van een marktpartij",
+      "7": "onbekend of onbevestigd"
+    },
+    "hoofdwaarschuwing": "Deze tabel geldt alleen voor percelen die rechtstreeks onder de PGOU-zonetabel vallen. Eigen telling op de GVA-zonelaag (18-09-2026): van de 356 zonevlakken in Xabia valt 42,7 procent onder een eigen plan parcial, homologacion, PRI, estudio de detalle of modificacion puntual met eigen parameters. Bouwrecht staat pas vast na informe urbanistico of cedula de garantia urbanistica (TRLOTUP art. 246) plus toets door een lokale architect.",
+    "brondocument": "Registro Autonomico de Planeamiento GVA, 03082-1000 PLAN GENERAL / 3 NORMAS URBANISTICAS / 03082-1000 ORDENANZAS.pdf (240 blz. scan, md5 db38f0d14bd4b5953430aec35f640ffa, opgehaald 15-09-2026, sleutelpagina's visueel herlezen 18-09-2026)",
+    "brondocument_url": "https://mediambient.gva.es/auto/urbanismo/reg-planeamiento/2%20ALICANTE/03082%20X%C0BIA/1%20P.%20GENERAL/03082-1000%20PLAN%20GENERAL/3%20NORMAS%20URBAN%CDSTICAS/03082-1000%20ORDENANZAS.pdf"
+  },
+
+  "zones": [
+    {
+      "code": "E",
+      "naam": "Residencial extensivo (vrijstaande woningen in de urbanisaties)",
+      "grados": [
+        {
+          "grado": "I",
+          "edificabilidad_neto": 0.20,
+          "edificabilidad_bruto": 0.142,
+          "ocupacion_pct": 20,
+          "bouwlagen_max": 1,
+          "kroonlijst_m": 3.5,
+          "totale_hoogte_m": 6.0,
+          "retranqueo_fachada_m": 5,
+          "retranqueo_lindero_m": 5
+        },
+        {
+          "grado": "II",
+          "is_standaard": true,
+          "standaard_grond": "art. 2.1.6: manzanas suelo urbano residencial extensivo zonder letter op plano B1 vallen in zona de ordenanzas E2",
+          "edificabilidad_neto": 0.20,
+          "edificabilidad_bruto": 0.142,
+          "ocupacion_pct": 30,
+          "bouwlagen_max": 2,
+          "kroonlijst_m": 7.0,
+          "totale_hoogte_m": 9.5,
+          "retranqueo_fachada_m": 5,
+          "retranqueo_lindero_m": 5
+        },
+        {
+          "grado": "III",
+          "edificabilidad_neto": 0.20,
+          "edificabilidad_bruto": 0.142,
+          "ocupacion_pct": 50,
+          "bouwlagen_max": 2,
+          "kroonlijst_m": 7.0,
+          "totale_hoogte_m": 9.5,
+          "retranqueo_fachada_m": 0,
+          "retranqueo_lindero_m": 2.5
+        }
+      ],
+      "parcela_minima_m2": "per gebied, zie gebieden[]",
+      "uitzondering_coefficient": {
+        "gebieden": ["Calvario", "Puchol", "Soberana", "Mesquides", "Cuesta de S. Antonio", "Caleta Puerto", "La Corona"],
+        "edificabilidad_neto": 0.28,
+        "edificabilidad_bruto": 0.198,
+        "opmerking": "La Corona is toegevoegd bij Modificacion I (blad full nr. 146, goedgekeurd 14-02-1994) en komt niet voor in de parcela-minima-tabel"
+      },
+      "bron": "ordenanzas art. 10.5.1.3 t/m 10.5.1.6, full nr. 146 (Mod. I-blad) en full nr. 147; art. 2.1.6 full nr. 17",
+      "bewijstype": 2,
+      "open_punt": "Het Mod. I-vervangingsblad (full nr. 146) eindigt na punt 5 (separacion a linderos). De ocupacion-percentages 20/30/50 staan alleen op het doorgehaalde oorspronkelijke blad full nr. 147. Of Mod. I ze ongewijzigd laat is niet bevestigd. Bewijstype 7."
+    },
+    {
+      "code": "A",
+      "naam": "Casco (oude kern)",
+      "rekenwijze": "GEEN edificabilidad-coefficient. Bouwrecht volgt uit rooilijn, bouwdiepte en aantal bouwlagen van plano B1.",
+      "edificabilidad_neto": null,
+      "ocupacion_pct": "begane grond volledig; verdiepingen tot 20 m vanaf de rooilijn [OCR, te verifieren]",
+      "hoogte_per_bouwlagen": {
+        "II": {"kroonlijst_m": 6.1, "totale_hoogte_m": 9.1},
+        "III": {"kroonlijst_m": 9.0, "totale_hoogte_m": 12.0},
+        "IV": {"kroonlijst_m": 12.0, "totale_hoogte_m": 15.0},
+        "V": {"kroonlijst_m": 15.0, "totale_hoogte_m": 18.0}
+      },
+      "tolerantie": "twee bouwlagen minder toegestaan, behalve tussen al geconsolideerde gebouwen",
+      "sotano": "een planta sotano toegestaan binnen de ocupable oppervlakte",
+      "parcela_minima_m2": 700,
+      "parcela_minima_toelichting": "700 m2 geldt voor het gebied Casco in de B2-tabel; art. 10.1 eist daarnaast dat het perceel een minimale woning kan bevatten en begrenst de gevelbreedte van nieuwe verkavelingen tot 15 m (hoekperceel 15/25 m)",
+      "extra_regime": "ZUR-NHT, nucleo historico tradicional. Voorafgaande toestemming Conselleria de Cultura bij ingrepen met patrimoniale betekenis.",
+      "bron": "ordenanzas art. 10.1, Mod. I-blad full nr. 131 (Modificacion 114-C, goedgekeurd 14-02-1994)",
+      "bewijstype": 2
+    },
+    {
+      "code": "B",
+      "naam": "Ensanche",
+      "rekenwijze": "GEEN edificabilidad-coefficient. Rooilijn, bouwdiepte en bouwlagen van plano B1.",
+      "edificabilidad_neto": null,
+      "parcela_minima_m2": 100,
+      "gevelbreedte_min_m": 6,
+      "ocupacion_pct": "begane grond volledig; verdiepingen 20 m diep bij binnenterrein",
+      "bouwlagen_max": "volgens plano B1",
+      "bron": "ordenanzas art. 10.2 (pdf-p. 139-141)",
+      "bewijstype": 2,
+      "kwaliteit": "OCR, niet visueel herlezen"
+    },
+    {
+      "code": "C",
+      "naam": "Edificacion abierta (o.a. Montanar I; delen Arenal/Puerto afhankelijk van plano B1)",
+      "grados": [
+        {"grado": "I", "parcela_minima_m2": 500, "ocupacion_pct": 70, "retranqueo_fachada_m": null, "retranqueo_lindero_m": 5},
+        {"grado": "II", "parcela_minima_m2": 500, "ocupacion_pct": 50, "retranqueo_fachada_m": 5, "retranqueo_lindero_m": 5},
+        {"grado": "III", "parcela_minima_m2": 1000, "ocupacion_pct": 50, "retranqueo_fachada_m": 14, "retranqueo_fachada_toelichting": "14 m aan zeezijde, anders 5 m", "retranqueo_lindero_m": 5, "edificabilidad_neto": 0.80},
+        {"grado": "IV", "parcela_minima_m2": 1000, "ocupacion_pct": 50, "retranqueo_fachada_m": 5, "retranqueo_lindero_m": 5}
+      ],
+      "gevelbreedte_min_m": 20,
+      "retranqueo_lindero_regel": "minimaal 5 m of de helft van de kroonlijsthoogte, met 5 m als ondergrens",
+      "edificabilidad_algemeen": "per unidad de actuacion vast te stellen via estudio de detalle; C3 0,80 m2t/m2 neto en C3A 0,80 bruto",
+      "bouwlagen_max": "volgens plano B1",
+      "bron": "ordenanzas art. 10.3, wijzigingsbladen pdf-p. 143-145, gestempeld MOD. P. Nr. 5",
+      "bewijstype": 2,
+      "kwaliteit": "deels OCR"
+    },
+    {
+      "code": "D",
+      "naam": "Conjuntos arquitectonicos",
+      "status": "ONBEKEND",
+      "toelichting": "Zone komt voor in de inhoudsopgave van titel X van de ordenanzas; parameters niet opgehaald.",
+      "bewijstype": 7
+    },
+    {
+      "code": "F",
+      "naam": "Terciario (strandboulevard)",
+      "bouwlagen_max": 1,
+      "totale_hoogte_m": 3.5,
+      "parcela_minima_m2": "heel bouwblok",
+      "bijzonder": "verplichte naya, overdekte galerij, rondom (Mod. XII)",
+      "bron": "registerdocument 03082-1020 NNUU",
+      "bewijstype": 2
+    },
+    {
+      "code": "G",
+      "naam": "Industrial",
+      "status": "ONBEKEND",
+      "toelichting": "Gebieden Pla en Catarrojes in de B2-tabel; parameters niet opgehaald.",
+      "bewijstype": 7
+    },
+    {
+      "code": "H",
+      "naam": "Comercial concentrado",
+      "status": "ONBEKEND",
+      "toelichting": "Gebieden Aduanas en Arenal in de B2-tabel suelo urbano comercial; parameters niet opgehaald.",
+      "bewijstype": 7
+    },
+    {
+      "code": "SNU-G1",
+      "naam": "Suelo no urbanizable generico grado I (alles behalve El Pla en La Plana)",
+      "edificabilidad_pgou": 0.03,
+      "max_vloeroppervlak_m2": 300,
+      "parcela_minima_pgou_m2": 5000,
+      "parcela_minima_geldend_m2": 10000,
+      "parcela_minima_geldend_bron": "TRLOTUP art. 211.1.b: in geen geval minder dan een hectare per woning",
+      "ocupacion_geldend_pct": 2,
+      "bouwlagen_max": 2,
+      "totale_hoogte_m": 7,
+      "retranqueo_lindero_m": 10,
+      "gevelbreedte_min_m": 20,
+      "bron": "ordenanzas titel VII, pdf-p. 65 (visueel) + TRLOTUP geconsolideerd 02-07-2026",
+      "bewijstype": 2,
+      "waarschuwing": "De regionale wet is strenger dan het PGOU en gaat voor. Reken hier nooit met een PGOU-coefficient alleen."
+    },
+    {
+      "code": "SNU-G2",
+      "naam": "Suelo no urbanizable generico grado II (La Plana)",
+      "edificabilidad_pgou": 0.03,
+      "max_vloeroppervlak_m2": 300,
+      "parcela_minima_pgou_m2": 5000,
+      "parcela_minima_geldend_m2": 10000,
+      "ocupacion_geldend_pct": 2,
+      "bouwlagen_max": 2,
+      "totale_hoogte_m": 5,
+      "bijzonder": "gevel in natuursteen",
+      "bron": "ordenanzas titel VII + TRLOTUP art. 211.1.b",
+      "bewijstype": 2
+    },
+    {
+      "code": "SNU-G3",
+      "naam": "Suelo no urbanizable generico grado III (El Pla)",
+      "edificabilidad_pgou": 0.01,
+      "max_vloeroppervlak_m2": 300,
+      "parcela_minima_pgou_m2": 10000,
+      "parcela_minima_geldend_m2": 10000,
+      "ocupacion_geldend_pct": 2,
+      "bouwlagen_max": 2,
+      "totale_hoogte_m": 7,
+      "gevelbreedte_min_m": 40,
+      "bron": "ordenanzas titel VII + TRLOTUP art. 211.1.b",
+      "bewijstype": 2
+    },
+    {
+      "code": "SNUEP",
+      "naam": "Suelo no urbanizable de proteccion ecologico-paisajistica (o.a. La Granadella vanaf 1991, Parque Natural del Montgo, PATIVEL-kuststrook)",
+      "edificabilidad_neto": 0,
+      "toelichting": "Geen nieuwe woning. Bestaande woningen vallen onder het minimalisatieregime, TRLOTUP art. 228 en verder.",
+      "bron": "ordenanzas titel VII; resolucion conseller 08-03-1991; GVA-zonelaag ZRP-NA-LG en ZRP-NA-MU",
+      "bewijstype": 2
+    },
+    {
+      "code": "SUZ-PP",
+      "naam": "Suelo urbanizable met goedgekeurd plan parcial",
+      "edificabilidad_neto": null,
+      "rekenwijze": "Parameters uit het plan parcial zelf, niet uit de PGOU-zonetabel.",
+      "voorbeelden": ["PLAN PARCIAL ERMITA II", "HOMOLOGACION Y PLAN PARCIAL SUNP CANSALADES-UMBRIA", "PLAN PARCIAL DEL SECTOR CANSALADES-10", "PLAN PARCIAL LA GUARDIA-3", "PLAN PARCIAL POU DEL MORO-1", "PLAN PARCIAL DEL SECTOR S.U.P. RAFALS", "HOMOLOGACION Y PLAN PARCIAL SECTOR ADUANES-1", "PLAN PARCIAL EL CABO", "PLAN PARCIAL PLA-1", "PLAN PARCIAL TURISTICO RESIDENCIAL LA MAQUETONA", "PLAN PARCIAL HOTEL-APART CAPSADES-9", "Homo y PP del SUP Saladar 2 y UE Saladar 4", "HOMOLOGACION CON PLAN DE REFORMA INTERIOR U.E. ARENAL-3 Y ARENAL 3-A"],
+      "bron": "ordenanzas art. 2.1.3; GVA-zonelaag Planeamiento.Zonificacion, eigen telling 18-09-2026",
+      "bewijstype": 3
+    },
+    {
+      "code": "SUZ-GEEN-PROGRAMA",
+      "naam": "Suelo urbanizable zonder vastgesteld programa",
+      "edificabilidad_neto": 0,
+      "toelichting": "Alleen agrarische en vergelijkbare bouwwerken en nutsvoorzieningen. Woningbouw uitdrukkelijk verboden, perceel niet splitsbaar.",
+      "bron": "TRLOTUP art. 226.1 en 248.e",
+      "bewijstype": 2,
+      "waarschuwing": "Grond die in 1990 urbanizable werd maar nooit is ontwikkeld, heeft geen woonbouwrecht. Reken hier 0."
+    }
+  ],
+
+  "gebieden_zona_e": {
+    "toelichting": "Tabel SUELO URBANO - RESUMEN (SU), ordenanzas full nr. 145-146, visueel gelezen 18-09-2026. Oppervlakte in m2, parcela minima in m2. Eigen sommatie van de extensieve gebieden geeft 16.420.331 m2, gelijk aan het totaal dat het plan zelf noemt. Bewijstype 2. De coefficient is 0,20 neto tenzij anders vermeld.",
+    "categorie_intensief_extensief": {
+      "Aduanas": {"oppervlakte_m2": 71800, "parcela_minima_m2": 700},
+      "Casco": {"oppervlakte_m2": 89820, "parcela_minima_m2": 700},
+      "Playas": {"oppervlakte_m2": 62600, "parcela_minima_m2": 600},
+      "Saladar": {"oppervlakte_m2": 99700, "parcela_minima_m2": 1000},
+      "Granadella": {"oppervlakte_m2": 48920, "parcela_minima_m2": 1000}
+    },
+    "categorie_extensief": {
+      "Adsubia-Cansalades": {"oppervlakte_m2": 700420, "parcela_minima_m2": 1000},
+      "Adsubia-Cap Marti": {"oppervlakte_m2": 1194190, "parcela_minima_m2": 1000},
+      "Adsubia-Rebaldi": {"oppervlakte_m2": 749468, "parcela_minima_m2": 1000},
+      "Balcon al Mar": {"oppervlakte_m2": 1471895, "parcela_minima_m2": 1000},
+      "C.S. Antonio": {"oppervlakte_m2": 234318, "parcela_minima_m2": 1000, "edificabilidad_neto": 0.28, "edificabilidad_bruto": 0.198},
+      "Cala Blanca Norte": {"oppervlakte_m2": 79000, "parcela_minima_m2": 1500},
+      "Cala Blanca Sur": {"oppervlakte_m2": 170400, "parcela_minima_m2": 1000},
+      "Caleta-Puerto": {"oppervlakte_m2": 18568, "parcela_minima_m2": 500, "edificabilidad_neto": 0.28, "edificabilidad_bruto": 0.198},
+      "Calvario": {"oppervlakte_m2": 111280, "parcela_minima_m2": 700, "edificabilidad_neto": 0.28, "edificabilidad_bruto": 0.198},
+      "Cansalades": {"oppervlakte_m2": 150400, "parcela_minima_m2": 1000},
+      "Capsades 1": {"oppervlakte_m2": 78000, "parcela_minima_m2": 1000},
+      "Capsades 2": {"oppervlakte_m2": 35200, "parcela_minima_m2": 1000},
+      "Cap Marti": {"oppervlakte_m2": 213720, "parcela_minima_m2": 1000},
+      "Costa Nova": {"oppervlakte_m2": 633808, "parcela_minima_m2": 1000},
+      "Covatelles": {"oppervlakte_m2": 550720, "parcela_minima_m2": 1500},
+      "Entrepinos": {"oppervlakte_m2": 82840, "parcela_minima_m2": 1000},
+      "Lluca": {"oppervlakte_m2": 953400, "parcela_minima_m2": 1500},
+      "Lluca-Rafalet": {"oppervlakte_m2": 197640, "parcela_minima_m2": 1000},
+      "Mar Azul": {"oppervlakte_m2": 91400, "parcela_minima_m2": 1000},
+      "Masenes": {"oppervlakte_m2": 104000, "parcela_minima_m2": 1000},
+      "Media Luna": {"oppervlakte_m2": 165600, "parcela_minima_m2": 1000},
+      "Mesquides": {"oppervlakte_m2": 286925, "parcela_minima_m2": 1000, "edificabilidad_neto": 0.28, "edificabilidad_bruto": 0.198},
+      "Montgo": {"oppervlakte_m2": 822949, "parcela_minima_m2": 1500},
+      "Montgo-Barranqueres": {"oppervlakte_m2": 564310, "parcela_minima_m2": 1500},
+      "Montgo-Castellans": {"oppervlakte_m2": 1061000, "parcela_minima_m2": 1500},
+      "Montgo-Ermita": {"oppervlakte_m2": 1271700, "parcela_minima_m2": 1500},
+      "Portichol 1 Norte": {"oppervlakte_m2": 133200, "parcela_minima_m2": 1500},
+      "Portichol 1 Sur": {"oppervlakte_m2": 127800, "parcela_minima_m2": 1000},
+      "Portichol 2": {"oppervlakte_m2": 139960, "parcela_minima_m2": 1000},
+      "Puchol": {"oppervlakte_m2": 295760, "parcela_minima_m2": 1000, "edificabilidad_neto": 0.28, "edificabilidad_bruto": 0.198},
+      "Rafals": {"oppervlakte_m2": 42000, "parcela_minima_m2": 1000},
+      "Senioles": {"oppervlakte_m2": 422700, "parcela_minima_m2": 1500},
+      "Senioles-Colomer": {"oppervlakte_m2": 1069310, "parcela_minima_m2": 1500},
+      "Soberana": {"oppervlakte_m2": 72360, "parcela_minima_m2": 1000, "edificabilidad_neto": 0.28, "edificabilidad_bruto": 0.198},
+      "Toscal-Cap Marti": {"oppervlakte_m2": 475560, "parcela_minima_m2": 1000},
+      "Tosalet": {"oppervlakte_m2": 1066130, "parcela_minima_m2": 1000},
+      "Trencall": {"oppervlakte_m2": 172000, "parcela_minima_m2": 1000},
+      "Valls": {"oppervlakte_m2": 410400, "parcela_minima_m2": 1500}
+    },
+    "totalen": {
+      "extensief_m2": 16420331,
+      "intensief_extensief_m2": 372840,
+      "totaal_residencial_extensivo_m2": 16793171,
+      "aandeel_0_28_pct": 6.21,
+      "aandeel_0_20_pct": 93.79
+    }
+  },
+
+  "meetregels": {
+    "edificabilidad_telt_mee": [
+      "alle beloopbare verdiepingen van het gebouw, ongeacht gebruik, behalve toegestane kelders (art. 8.1.15.a)",
+      "terrassen, balkons en overdekte uitkragingen, of ze nu dicht zijn of niet; halve telling bij overdekte terrassen die aan een zijde open zijn (art. 8.1.15.b)",
+      "bijgebouwen op het vrije deel van het perceel als uit omhulling, dak en materiaal blijkt dat een gesloten, permanent volume ontstaat (art. 8.1.15.c)",
+      "in zona E: bijgebouwen tellen als bebouwde oppervlakte als ze gesloten EN overdekt zijn (art. 10.5.1.7)"
+    ],
+    "edificabilidad_telt_niet_mee": [
+      "binnenpatio's, ook gesloten (art. 8.1.15)",
+      "platte daken, ook beloopbaar",
+      "openbare arcades",
+      "kassen en afdaken van doorschijnend materiaal met lichte, demontabele constructie",
+      "sierelementen op het dak zonder gebruiksmogelijkheid",
+      "toegestane kelders (art. 8.1.15.a en 8.1.27)"
+    ],
+    "zwembad": {
+      "telt_mee_edificabilidad": false,
+      "telt_mee_ocupacion": false,
+      "onderbouwing": "Het zwembadbassin staat niet in de opsomming van art. 8.1.15 en is onder art. 8.1.5 noch overdekt noch gesloten. Het PGOU noemt het bassin alleen in art. 10.5.1.7 als element van de urbanisatie, met een afstandseis.",
+      "bewijstype": 5,
+      "afstand_tot_lindero_m": 2,
+      "hoogte_boven_natuurlijk_terrein_max_m": 2.5,
+      "pomphuis": "hoger dan 1 m boven het terrein: minimaal 5 m van de perceelgrens",
+      "zuivering": "verplicht"
+    },
+    "ocupacion_definitie": "overdekte OF gesloten oppervlakte op begane grond of bij de funderingsaanzet, ten opzichte van het TOTALE perceel. Overdekt = elke doorlopende, permanente overkapping, licht of zwaar. Gesloten = begrensd door verticale elementen hoger dan 40 cm. Uitkragingen boven 3 m hoogte tellen niet mee als de oppervlakte niet gesloten is. (art. 8.1.5)",
+    "bruto_versus_neto": "Edificabilidad bruta rekent over het polygoon inclusief interne wegen en cessiegronden; neta over het netto perceel exclusief wegen en cessies (art. 8.1.13 en 8.1.14). In suelo extensivo bedraagt de cessie 29,07 procent; dat verschil zit tussen 0,142 bruto en 0,20 neto (art. 4.1.7 t/m 4.1.9).",
+    "volume_plafond": "maximaal volume = toegestane vloeroppervlakte maal 3 m bij wonen (art. 8.1.15)",
+    "kelder": "toegestaan recht onder de bovenliggende bouwlagen, bovenkant plafond minder dan 1,20 m boven het natuurlijke terrein op elk punt van de omtrek; in zones C, E, F, G en H minimaal 2,5 m van de perceelgrens (art. 8.1.27, tekst Mod. I)",
+    "carport": "geen zijwanden, dak van doorlatend materiaal, maximaal 30 m2 en 2,20 m hoog, hoekstijlen maximaal 25 bij 25 cm; daken van metselwerk, dakpan of vezelcement uitdrukkelijk verboden (art. 10.5.1.7)",
+    "parkeren": "twee plaatsen per woning binnen het perceel (art. 10.5.4.3, tekst Mod. 27, DOGV 08-01-2004)",
+    "watertank": "elke woning een regeltank van minimaal 10.000 liter, onder de woning of ingegraven",
+    "septic_tank": "5 m van de gevel, 2 m van de perceelgrens"
+  },
+
+  "perceelregels_zona_e": {
+    "frente_min_m": 20,
+    "frente_min_cul_de_sac_m": 10,
+    "frente_reductie": "aan doodlopende wegen mag het minimale gevelfront tot 70 procent van het geeiste worden teruggebracht",
+    "inpasbare_rechthoek_m": [15, 24],
+    "kleinere_percelen_toch_bebouwbaar": {
+      "gevallen": [
+        "ingesloten door percelen met bestaande bebouwing",
+        "percelen onder art. 8.1.3.3",
+        "percelen in suelo urbano extensivo dat al voor de informatieronde van Mod. XXV als consolidado por la urbanizacion gold"
+      ],
+      "ondergrens": "altijd meer dan 70 procent van de parcela minima van het gebied, met een absolute ondergrens van 700 m2",
+      "toegang_min_m": 3.0,
+      "bron": "art. 10.5.1.1, tekst Mod. XXV, BOP nr. 240 van 16-12-2016"
+    },
+    "splitsen": "percelen kleiner dan tweemaal de parcela minima zijn ondeelbaar (TRLOTUP art. 248.c en PGOU art. 8.1.3); licencia de parcelacion nodig (TRLOTUP art. 247)",
+    "meer_woningen_op_een_perceel": {
+      "agrupacion_art_10_5_5": "via estudio de detalle: minimaal 100 m2 per woning, per twee geschakeld, groepen van maximaal 10, perceel minimaal 5.000 m2, niet meer woningen dan bij losse verkaveling volgens het minimum, 15 m tot grenzen en rooilijn",
+      "parcela_mancomunada_art_10_5_6": "via estudio de detalle: perceel minimaal 1,3 maal aantal woningen maal parcela minima, 10 m tussen woningen, woning minimaal 100 m2, perceel ondeelbaar ingeschreven, totaal binnen het zonemaximum"
+    }
+  },
+
+  "wijken": [
+    {
+      "wijk": "Montgo / Ermita",
+      "waarschijnlijke_zone": "E",
+      "b2_gebieden": ["Montgo", "Montgo-Ermita", "Montgo-Castellans", "Montgo-Barranqueres"],
+      "parcela_minima_m2": 1500,
+      "edificabilidad_neto": 0.20,
+      "let_op": ["Parque Natural del Montgo hogerop is SNU-P (ZRP-NA-LG): geen nieuwbouw", "Delen vallen onder PLAN PARCIAL ERMITA II (SUZ): eigen parameters", "Van de vier Montgo-gebieden is de parcela minima overal 1.500 m2, dus splitsen pas vanaf 3.000 m2"],
+      "bewijstype": 5
+    },
+    {
+      "wijk": "Centrum",
+      "waarschijnlijke_zone": "A (casco) en B (ensanche)",
+      "b2_gebieden": ["Casco", "Calvario"],
+      "parcela_minima_m2": 700,
+      "edificabilidad_neto": null,
+      "let_op": ["Zona A kent geen edificabilidad-coefficient: reken met rooilijn, bouwdiepte en bouwlagen van plano B1", "ZUR-NHT erfgoedregime; toestemming Conselleria de Cultura", "Calvario is zona E met de afwijkende coefficient 0,28 neto"],
+      "bewijstype": 5
+    },
+    {
+      "wijk": "Puerto / Arenal",
+      "waarschijnlijke_zone": "A, B, C en E door elkaar",
+      "b2_gebieden": ["Aduanas", "Playas", "Caleta-Puerto", "Saladar"],
+      "parcela_minima_m2": "500 tot 1.000, per gebied",
+      "edificabilidad_neto": null,
+      "let_op": ["Caleta-Puerto heeft de afwijkende coefficient 0,28 neto en de laagste parcela minima van de gemeente, 500 m2", "Welke zone per bouwblok geldt is niet vastgesteld: plano B1 nodig", "Hier liggen homologaciones en PRI's, o.a. ARENAL-3 en ARENAL 3-A en ADUANES-1", "PATIVEL-kuststrook beperkt het bouwen langs de kust"],
+      "bewijstype": 5
+    },
+    {
+      "wijk": "Tosalet / Adsubia",
+      "waarschijnlijke_zone": "E",
+      "b2_gebieden": ["Tosalet", "Adsubia-Cansalades", "Adsubia-Cap Marti", "Adsubia-Rebaldi", "Cansalades"],
+      "parcela_minima_m2": 1000,
+      "edificabilidad_neto": 0.20,
+      "let_op": ["Delen vallen onder PLAN PARCIAL DEL SECTOR CANSALADES-10 en HOMOLOGACION Y PLAN PARCIAL SUNP CANSALADES-UMBRIA (SUZ): eigen parameters", "Modificacion 38 raakt Adsubia-Rebaldi", "Splitsen pas vanaf 2.000 m2"],
+      "bewijstype": 5
+    },
+    {
+      "wijk": "Granadella / Balcon al Mar",
+      "waarschijnlijke_zone": "E",
+      "b2_gebieden": ["Granadella", "Balcon al Mar", "Cap Marti", "Toscal-Cap Marti", "Portichol 1 Norte", "Portichol 1 Sur", "Portichol 2", "Covatelles"],
+      "parcela_minima_m2": "1.000, behalve Covatelles en Portichol 1 Norte 1.500",
+      "edificabilidad_neto": 0.20,
+      "let_op": ["La Granadella werd in 1991 SNU proteccion ecologico-paisajistica: geen nieuwbouw, alleen de bestaande woningen in het gehucht volgen SNU grado 1", "Modificacion XIV betreft het gebied La Granadella", "Balcon al Mar is met 1.471.895 m2 het grootste extensieve gebied van de gemeente"],
+      "bewijstype": 5
+    },
+    {
+      "wijk": "Rafalet / Pinosol",
+      "waarschijnlijke_zone": "E",
+      "b2_gebieden": ["Lluca-Rafalet", "Lluca", "Rafals"],
+      "parcela_minima_m2": "Lluca-Rafalet en Rafals 1.000, Lluca 1.500",
+      "edificabilidad_neto": 0.20,
+      "let_op": ["Pinosol komt niet als eigen gebied voor in de B2-tabel: onder welk gebied het valt is ONBEKEND, op te maken uit plano B2", "Homologacion en PRI van de UE Lluca-Rafalet 7 en 13 en PLAN PARCIAL DEL SECTOR S.U.P. RAFALS hebben eigen parameters"],
+      "bewijstype": 5
+    }
+  ],
+
+  "model_aanname_0_20": {
+    "huidige_regel": "min(0,20 maal perceeloppervlak; 450) in dh/feasibility.py regel 52 en 61 en dh/prefilter.py regel 121",
+    "klopt_wanneer": "perceel valt rechtstreeks onder PGOU zona E, ligt in suelo urbano, is een solar, valt niet in een van de zeven gebieden met 0,28, en de gemeente past de netto-lezing toe zonder cessietoets",
+    "afwijkingen": [
+      {"situatie": "zona E, gewone gebieden, netto-lezing", "werkelijke_coefficient": 0.20, "afwijking_pct": 0.0, "aandeel_opp_pct": 93.79},
+      {"situatie": "zona E, gebieden Calvario, Puchol, Soberana, Mesquides, C.S. Antonio, Caleta-Puerto en La Corona", "werkelijke_coefficient": 0.28, "afwijking_pct": -28.6, "aandeel_opp_pct": 6.21, "toelichting": "model rekent 28,6 procent te weinig; het bouwrecht is 40 procent hoger dan aangenomen"},
+      {"situatie": "zona E, bruto-lezing als de cessie van 29,07 procent niet is voldaan", "werkelijke_coefficient": 0.142, "afwijking_pct": 40.8, "toelichting": "model rekent 40,8 procent te veel"},
+      {"situatie": "zona C grado III", "werkelijke_coefficient": 0.80, "afwijking_pct": -75.0},
+      {"situatie": "zona A casco en zona B ensanche", "werkelijke_coefficient": null, "afwijking_pct": null, "toelichting": "geen coefficient; 0,20 is hier betekenisloos en meestal veel te laag"},
+      {"situatie": "SNU generico grado I en II", "werkelijke_coefficient": 0.03, "afwijking_pct": 566.7, "toelichting": "plus het wettelijke plafond van 300 m2 en de bezettingsgrens van 2 procent"},
+      {"situatie": "SNU generico grado III, El Pla", "werkelijke_coefficient": 0.01, "afwijking_pct": 1900.0},
+      {"situatie": "SNUEP en Parque Natural del Montgo", "werkelijke_coefficient": 0.0, "afwijking_pct": null, "toelichting": "geen nieuwbouw"},
+      {"situatie": "suelo urbanizable zonder vastgesteld programa", "werkelijke_coefficient": 0.0, "afwijking_pct": null, "toelichting": "geen woonbouwrecht"},
+      {"situatie": "perceel onder een plan parcial of homologacion", "werkelijke_coefficient": null, "afwijking_pct": null, "toelichting": "eigen parameters; voorbeeld Cansalades-Umbria, advertentie noemt 16,5 procent"}
+    ],
+    "plafond_450_m2": {
+      "kritiek_perceel_m2": 2250,
+      "toelichting": "Het PGOU kent in zona E geen absoluut plafond in m2. Boven 2.250 m2 perceel knipt het model het bouwrecht af.",
+      "voorbeelden": [
+        {"perceel_m2": 3000, "pgou_m2t": 600, "model_m2t": 450, "afwijking_pct": -25.0},
+        {"perceel_m2": 5000, "pgou_m2t": 1000, "model_m2t": 450, "afwijking_pct": -55.0},
+        {"perceel_m2": 10000, "pgou_m2t": 2000, "model_m2t": 450, "afwijking_pct": -77.5}
+      ]
+    },
+    "aanbevolen_regel": "bouwvolume = perceel maal coefficient(gebied, lezing), waarbij lezing standaard 'neto' is en 'bruto' als gevoeligheidsvariant; daarnaast de footprint toetsen aan ocupacion(grado) en het aantal bouwlagen; het plafond van 450 m2 loskoppelen als commerciele keuze, niet als bouwrecht"
+  },
+
+  "in_procedure_geen_bouwrecht": [
+    {
+      "naam": "Plan General Estructural (PGE)",
+      "stand": "pleno 30-04-2019 keurde de propuesta definitiva goed en zond die naar de Conselleria voor validatie; per 18-09-2026 niet definitief goedgekeurd",
+      "bewijs": "Registro Autonomico de Planeamiento GVA bevat op 18-09-2026 voor Xabia 34 instrumenten, geen PGE",
+      "inhoud": "ongeveer 8 miljoen m2 minder suelo urbanizable, 40 procent meer suelo dotacional",
+      "bewijstype": 3
+    },
+    {
+      "naam": "Modificacion nr. 41 PGOU, viviendas de uso turistico",
+      "stand": "aanvankelijk goedgekeurd in het pleno van 28-05-2026, daarna 45 dagen ter inzage; definitieve goedkeuring niet vastgesteld",
+      "inhoud": "plafond 4.584 VUT voor de hele gemeente, verdeeld per wijk; schorsing van nieuwe licenties voor meergezins-VUT gedurende een jaar na BOP-publicatie of tot definitieve goedkeuring",
+      "raakt_edificabilidad": false,
+      "bewijstype": 1
+    },
+    {
+      "naam": "Normas Urbanisticas Transitorias de Urgencia (NUT)",
+      "stand": "in werking vanaf publicatie DOGV 20-09-2021; volgens de eigen tekst geldig tot goedkeuring van het PGE, maar de schorsing eindigt hoe dan ook vier jaar na 15-03-2021, dus rond 15-03-2025",
+      "raakt_edificabilidad": false,
+      "raakt_wel": "zona A casco (art. 10.1.5 NHT: bouwhoogte PB+I plus cambra, historische verkaveling en rooilijnen) en in zona E de esthetiek en de afvalwaterzuivering",
+      "bewijstype": 2,
+      "open_vraag": "Of de NUT na 15-03-2025 nog worden toegepast is een interpretatievraag. Voor het rekenmodel maakt het voor de edificabilidad niets uit: de NUT bevatten geen edificabilidad- of ocupacion-coefficient."
+    }
+  ]
+}

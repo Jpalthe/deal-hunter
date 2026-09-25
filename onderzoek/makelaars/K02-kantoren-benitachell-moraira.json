@@ -1,0 +1,764 @@
+{
+ "meta": {
+  "titel": "K02 — Makelaarskantoren met eigen website die verkopen in El Poble Nou de Benitatxell (Benitachell, incl. Cumbre del Sol) en Teulada-Moraira",
+  "datum": "24-09-2026",
+  "aantal_kantoren": 112,
+  "werkwijze": [
+   "Google-zoekopdrachten in ES/EN/NL/DE (o.a. 'inmobiliaria Benitachell Cumbre del Sol', 'estate agents Moraira', 'makelaar Moraira Benitachell', 'Immobilienmakler Moraira Benitachell', 'inmobiliaria Teulada', 'Immobilien Cumbre del Sol Makler'); zoekbudget (200) volledig gebruikt.",
+   "Rightmove Overseas: robots.txt gelezen (zoekpagina's toegestaan); alle resultaatpagina's Moraira (17) en Benitachell (7) opgehaald en per adverteerder geteld ('brandTradingName').",
+   "Kyero: robots.txt gelezen (makelaarslijst toegestaan, crawl-delay 1), maar de site weigert zowel curl als WebFetch met HTTP 403; niets omzeild — kantoornamen komen uit Google-zoekresultaten van kyero.com-pagina's.",
+   "Register: Mediaelx-cluster (Casas Ambiente, BoCasa, Tabaira, Orange Villas) en Sooprema-cluster (TerramaR, Calablanca, Benitachell Properties, Llidomar, AREA Costa Blanca) uit R06 en bronnenregister R2-81/R2-88.",
+   "Directories (robots.txt vooraf gelezen): Thinkspain, Spainhouses, RealAdvisor, Indomio, Trustlocal, morairaonline24/costablancaonline24, UrbanCostaBlanca, gemeentedirectory Teulada, MLS03724. yaencontre (captcha), Kyero (403) en Páginas Amarillas (Incapsula) niet verder bekeken.",
+   "Elke website is op 24-09-2026 met curl gecontroleerd (HTTP-status en paginatitel); afwijkingen staan in 'bron'.",
+   "Geen persoonsgegevens opgenomen: alleen bedrijfsnamen, kantooradressen en eigen websites."
+  ],
+  "beperkingen": [
+   "Kyero-makelaarslijsten (Moraira l1499, Benitachell l1620, Teulada l1801) konden niet zelf gelezen worden (403); de Kyero-dekking is daardoor onvolledig.",
+   "Guides tonen Rightmove-vestigingsnamen; internationale ketens (Hamptons, John D Wood, Prestige, TEKCE, Zenia Homes, Castle Homes, Welcome Estates, I-VEO, Su Asesor) adverteren wel in het gebied maar zitten er niet.",
+   "Vier domeinen zijn alleen via titel-/inhoudscontrole gekoppeld (Blue Square, Design Villas, Campana Home, Zenia Homes, Welcome Estates) — [te verifiëren].",
+   "Drie sites waren op 24-09-2026 niet bereikbaar of in onderhoud (Premium Estate Moraira, Moraira Estates, Harvey Estates); Grupo Moraira toont 'System Updating'; Celenia gaf 404 op de startpagina."
+  ]
+ },
+ "kantoren": [
+  {
+   "naam": "Casas Ambiente",
+   "website": "https://casas-ambiente.com/",
+   "plaats": "Moraira, Av. de la Paz 10",
+   "bron": "Opdracht; register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 114 (#51, Mediaelx); Google ES 'Casas Ambiente inmobiliaria Moraira Benitachell' → https://casas-ambiente.com/about-us/; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/casas-ambiente-moraira-s-l-a5039; ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "BoCasa",
+   "website": "https://bocasa.nl/",
+   "plaats": "Moraira, Av. Madrid 16",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 115 (#52, Mediaelx); Google NL 'makelaar Moraira Benitachell woningen te koop' → https://bocasa.nl/en/dutch-estate-agent-in-moraira.html; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Tabaira Real Estate",
+   "website": "https://tabairarealestate.com/",
+   "plaats": "Moraira, C/ Iglesia 4",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 116 (#53, Mediaelx); Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 61 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 6; Google EN/DE/ES (tabairarealestate.com/estate-agents-in-benitachell.html); RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Orange Villas",
+   "website": "https://orangevillas.com/",
+   "plaats": "Moraira, Ctra. Moraira–Calpe 19",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 117 (#54, Mediaelx); Google DE 'Immobilienmakler Moraira Benitachell' → https://orangevillas.com/; RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Benitachell Properties S.L.",
+   "website": "https://www.benitachellproperties.com/",
+   "plaats": "Benitachell, C/ Padre Plácido 57",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 123 (#60, Sooprema); Google NL/DE → https://www.benitachellproperties.com/nederlandse-makelaar/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "TerramaR Costa Blanca",
+   "website": "https://www.terramar.es/",
+   "plaats": "Jávea, Pl. Adolfo Suárez 18 (aanbod Costa Blanca Noord)",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 95 (#37, Sooprema); bronnenregister R2-88; site HTTP 200 (botcontrole 'Security Check') 24-09-2026"
+  },
+  {
+   "naam": "Calablanca",
+   "website": "https://www.calablanca.com/",
+   "plaats": "Jávea (aanbod Costa Blanca Noord)",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 130 (#67, Sooprema); bronnenregister R2-88; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Llidomar Properties",
+   "website": "https://www.llidomarjavea.com/",
+   "plaats": "Jávea (adres niet getoond; aanbod hele Costa Blanca)",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 81 (#23); bronnenregister R2-88 noemt Llidomar als Sooprema-kantoor; sitemap 200 (R06, 14-09-2026)"
+  },
+  {
+   "naam": "AREA Costa Blanca",
+   "website": "https://www.areacostablanca.com/",
+   "plaats": "Benissa, Av. de la Marina 302 (+ kantoor Calpe); aanbod Moraira/Benitachell/Teulada",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 125 (#62); bronnenregister R2-88 (Sooprema); Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 48 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 22; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/benitachell-l1620; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "VAPF (Grupo VAPF)",
+   "website": "https://www.vapf.com/",
+   "plaats": "Benissa (hoofdkantoor) + verkoopkantoren Cumbre del Sol Noord- en Zuidingang, Benitachell",
+   "bron": "Opdracht; Google ES 'VAPF Cumbre del Sol inmobiliaria' → https://www.vapf.com/en/real-estate-developer/residential-areas/cumbre-del-sol en https://www.vapf.com/en/contact-us; ook https://www.cumbredelsol.com/ (HTTP 200); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Cumbre del Sol Pre-Owned",
+   "website": "https://www.cumbredelsolpreowned.com/",
+   "plaats": "Benitachell, Cumbre del Sol, Acceso Norte s/n",
+   "bron": "Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 14 advertenties; Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 1; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/cumbre-del-sol-pre-owned-a14717; Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026); RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); Google NL → https://www.cumbredelsolpreowned.com/nl; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Bindley Properties",
+   "website": "https://www.bindleyproperties.com/",
+   "plaats": "Moraira, Av. Madrid 11",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 120 (#57); Google ES/EN/DE (bindleyproperties.com/property-for-sale-in-benitachell/); Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/moraira-l1499; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Ferrando Estate Agents (Inmobiliaria Ferrando)",
+   "website": "https://www.ferrando-moraira.com/",
+   "plaats": "Moraira, Av. del Portet 36",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 121 (#58); Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 42 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 19; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/ferrando-estate-agents-a3898; Google ES/NL/DE (ferrandomoraira.de); gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Holidaydream Homes Costa Blanca",
+   "website": "https://www.holidaydream.es/",
+   "plaats": "Moraira, C/ Laurel 15",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 122 (#59, 48 parcelas); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Inmobiliaria Celenia",
+   "website": "https://www.inmobiliariacelenia.com/",
+   "plaats": "Moraira, C/ Dr. Calatayud 55",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 119 (#56); startpagina gaf HTTP 404 op 24-09-2026 (site was 200 op 14-09-2026 volgens R06)"
+  },
+  {
+   "naam": "Casas Costa Blanca",
+   "website": "https://casascostablanca.nl/",
+   "plaats": "Moraira",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 118 (#55); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Laura Villas",
+   "website": "https://lauravillas.com/",
+   "plaats": "Benitachell, Cumbre del Sol 101-M",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 124 (#61); Google → https://lauravillas.com/en/inmobiliaria-benitachell.asp; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Grupo García Inmobiliaria",
+   "website": "https://grupo-garcia.es/",
+   "plaats": "Jávea/Jalón (aanbod Moraira, Benitachell)",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 79 (#21); Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 1 advertentie; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 2; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "COSTA HOUSES Luxury Villas",
+   "website": "https://www.costa-houses.com/",
+   "plaats": "Jávea, Av. del Pla 126 (+ Moraira, Calle Mar 15 volgens R06)",
+   "bron": "register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 60 (#2); Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 2 advertenties; RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); Indomio Teulada https://www.indomio.es/en/agencias-inmobiliarias/teulada/ (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); Google EN → https://www.costa-houses.com/en/estate-agents-benitachell/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Invermobe",
+   "website": "https://invermobe.com/",
+   "plaats": "Moraira, C/ Murcia 25",
+   "bron": "Google ES 'inmobiliaria Moraira Teulada agencia venta' → https://invermobe.com/; RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Hispania Homes by Keller Williams",
+   "website": "https://hispaniahomesmoraira.com/",
+   "plaats": "Moraira",
+   "bron": "Google ES → https://hispaniahomesmoraira.com/; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Montesinos Falcón Real Estate",
+   "website": "https://www.montesinosestate.com/",
+   "plaats": "Moraira, Av. del Portet 20",
+   "bron": "Google ES → https://www.montesinosestate.com/en/; Indomio Teulada https://www.indomio.es/en/agencias-inmobiliarias/teulada/ (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Unique Homes Spain",
+   "website": "https://www.uniquehomesmoraira.com/",
+   "plaats": "Moraira (hoofdkantoor; ook Dénia, Valencia, Torrevieja)",
+   "bron": "Google EN 'estate agents Moraira property for sale' → https://www.uniquehomesmoraira.com/en/; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/teulada-l1801; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Villa Spain of Moraira",
+   "website": "https://villaspainofmoraira.com/",
+   "plaats": "Moraira",
+   "bron": "Google EN → https://villaspainofmoraira.com/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Cuñat Weber (Immo Moraira)",
+   "website": "https://www.immomoraira.com/",
+   "plaats": "Moraira",
+   "bron": "Google EN/DE → https://www.immomoraira.com/en/; gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "MNM Costa Blanca",
+   "website": "https://www.mnmcostablanca.com/",
+   "plaats": "Moraira",
+   "bron": "Google EN → https://www.mnmcostablanca.com/estate-agents-in-moraira/; site geeft HTTP 403 (Cloudflare) voor curl op 24-09-2026"
+  },
+  {
+   "naam": "Advanced Property Group",
+   "website": "https://advancedpropertygroup.es/",
+   "plaats": "Moraira (hoofdkantoor centrum)",
+   "bron": "Google EN → https://advancedpropertygroup.es/; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) (Moraira-lijst); Spainhouses Teulada https://www.spainhouses.net/es/inmobiliarias-teulada-alicante.html (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Select Villas of Moraira",
+   "website": "https://select-villas.es/",
+   "plaats": "Moraira, Av. de Madrid 5",
+   "bron": "Google EN/NL/DE/ES (selectvillasofmoraira.nl/.de/.es); Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/select-villas-of-moraira-a10827; Indomio Teulada https://www.indomio.es/en/agencias-inmobiliarias/teulada/ (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Moraira Invest Group",
+   "website": "https://www.morairainvest.com/",
+   "plaats": "Moraira (centrum)",
+   "bron": "Google NL 'makelaar Moraira Benitachell' → https://www.morairainvest.com/nl/huizen-te-koop-in-benitachell/; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Buenaventura Villas",
+   "website": "https://www.buenaventuravillas.com/",
+   "plaats": "Moraira, Ctra. Moraira–Calpe 27",
+   "bron": "Google NL → https://www.buenaventuravillas.nl/; Google EN → https://www.buenaventuravillas.com/; adres via Páginas Amarillas-zoekresultaat; ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Villas Buigues",
+   "website": "https://www.villasbuigues.com/",
+   "plaats": "Moraira, C/ les Tosqueres 9",
+   "bron": "Google EN → https://www.villasbuigues.com/property-for-sale-in-benitachell-cumbre-del-sol/; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Mediterránea Villas",
+   "website": "https://www.mediterraneavillas.com/",
+   "plaats": "Teulada, C/ Sant Vicent Ferrer 30",
+   "bron": "Google ES 'inmobiliaria Teulada' → https://www.mediterraneavillas.com/properties-for-sale-in-teulada/; Google NL/DE; RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Koop Villa Costa Blanca",
+   "website": "https://www.koopvillacostablanca.nl/",
+   "plaats": "Moraira (volgens eigen site; kantooradres niet gezien)",
+   "bron": "Google NL → https://www.koopvillacostablanca.nl/en/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Kosta Vista (Nederlandse makelaar)",
+   "website": "https://www.kostavista.nl/",
+   "plaats": "Nederlandse bemiddelaar met Moraira-pagina; kantoorplaats niet gezien",
+   "bron": "Google NL 'makelaar Teulada Moraira bouwgrond' → https://www.kostavista.nl/nederlandse-makelaar-spanje/moraira/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Premium Villas Costa Blanca",
+   "website": "https://www.premium-villas-costa-blanca.com/",
+   "plaats": "Altea, C/ la Quilla 11 (aanbod Moraira/Teulada/Cumbre del Sol)",
+   "bron": "Google DE/NL → https://www.premium-villas-costa-blanca.com/de/hauser-und-villen-zu-verkaufen-in-cumbre-del-sol/; RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Deluxe Sweet Homes",
+   "website": "https://www.deluxesweethomes.com/",
+   "plaats": "Kantoorplaats niet gezien (pagina Moraira-Teulada)",
+   "bron": "Google EN → https://www.deluxesweethomes.com/en/properties-for-sale-in-moraira-teulada/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Moraguespons Mediterranean Houses",
+   "website": "https://www.moraguespons.com/",
+   "plaats": "Jávea (pagina nieuwbouw Teulada-Moraira)",
+   "bron": "Google DE → https://www.moraguespons.com/de/verkauf/neubau/teulada-moraira/; register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 17; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Andrea y Olaf",
+   "website": "https://www.andreayolaf.com/",
+   "plaats": "Jávea (pagina Teulada/Moraira; '30 samenwerkende kantoren')",
+   "bron": "Google ES → https://www.andreayolaf.com/propiedades-en-venta/teulada/moraira; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Coldwell Banker España",
+   "website": "https://www.coldwellbanker.es/",
+   "plaats": "Concernsite; Jávea-kantoor CB Solaris volgens R06 regel 100",
+   "bron": "Google ES 'inmobiliaria Benitachell Cumbre del Sol' → https://www.coldwellbanker.es/propiedades-en-venta-en-cumbre-del-sol-benitachell-el-poble-nou-de-benitatxell; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "AR Luxury Living",
+   "website": "https://www.arluxuryliving.com/",
+   "plaats": "Jávea (adres niet getoond)",
+   "bron": "Google ES/EN → https://www.arluxuryliving.com/en/villas-for-sale-cumbre-del-sol-benitachell/; register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 85 (#27); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Salco la Cumbre",
+   "website": "https://www.salcolacumbre.com/",
+   "plaats": "Benitachell, Cumbre del Sol, C.C. Adelfas local 1",
+   "bron": "Google ES → https://www.salcolacumbre.com/villas-de-lujo-en-venta-en-benitachell/; Google DE → https://www.salcolacumbre.com/eigenschaften/alle/; Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Gestalihome",
+   "website": "https://gestalihome.com/",
+   "plaats": "Kantoorplaats niet gezien (nieuwbouw Cumbre del Sol)",
+   "bron": "Google ES → https://gestalihome.com/es/cumbre-del-sol-benitachell; bronnenregister R2-89 (partnerlijst); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "MG Villas Luxury Property",
+   "website": "https://www.mgvillas.co.uk/",
+   "plaats": "Jávea, Av. de la Libertad 11",
+   "bron": "Google DE/NL → https://www.mgvillas.co.uk/properties-for-sale-in-benitachell-cumbre-del-sol/ en https://www.mgvillas.nl/…; register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 88 (#30); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Luxinmo Real Estate",
+   "website": "https://www.luxinmo.com/",
+   "plaats": "Kantoorplaats niet gezien (Costa Blanca; pagina Cumbre del Sol)",
+   "bron": "Google NL → https://www.luxinmo.com/properties-for-sale/spain/costa-blanca/alicante/benitachell/cumbre-del-sol; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Benimo Villas",
+   "website": "https://www.benimo-villas.com/",
+   "plaats": "Benissa (aanbod Benitachell: Cumbre del Sol tot dorp)",
+   "bron": "Google DE/EN → https://www.benimo-villas.com/en/property-for-sale-benitachell/; gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "New Life Property Spain",
+   "website": "https://www.newlifepropertyspain.com/",
+   "plaats": "Alicante-regio (Rightmove-vestiging 'Alicante'); kantoorplaats niet gezien",
+   "bron": "Google EN → https://www.newlifepropertyspain.com/villas-for-sale-benitachell/ en /cumbre-del-sol-properties-for-sale/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "HomeEspaña",
+   "website": "https://www.homeespana.com/",
+   "plaats": "Dénia-vestiging (keten Costa Blanca)",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 3 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 1; Google EN → https://www.homeespana.com/property-for-sale/benitachell/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Sunshine Villas",
+   "website": "https://sunshinevillas.co.uk/",
+   "plaats": "Jávea (pagina's Moraira/Benitachell estate agents)",
+   "bron": "Google → https://sunshinevillas.co.uk/moraira-estate-agents.html en /benitachell-estate-agents.html; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Costa Group Estates",
+   "website": "https://costagroupestates.com/",
+   "plaats": "Kantoorplaats niet gezien (pagina Benitachell)",
+   "bron": "Google → https://costagroupestates.com/en/costa-blanca-north/benitachell.html; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "InmoVillas Jávea",
+   "website": "https://www.inmovillasjavea.com/",
+   "plaats": "Jávea, Av. Augusta 22",
+   "bron": "Google → https://www.inmovillasjavea.com/en (villa's met zeezicht Benitachell); register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 73 (#15); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Engel & Völkers Moraira",
+   "website": "https://www.engelvoelkers.com/",
+   "plaats": "Moraira, Av. de la Paz 23 (shop)",
+   "bron": "Páginas Amarillas-zoekresultaat 'Engel Voelkers Moraira - Teulada - Avenida Paz 23'; Google EN noemt E&V bij Cumbre del Sol; register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 17; concernsite HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Plusvillas",
+   "website": "https://www.plusvillas.es/",
+   "plaats": "Moraira (adres niet gezien)",
+   "bron": "Google-zoekresultaat 'Inmobiliaria Moraira - Venta de villas y apartamentos - Plusvillas' → https://www.plusvillas.es/inmobiliaria-moraira/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "CBT Inmocons",
+   "website": "https://www.cbt-inmocons.com/",
+   "plaats": "Moraira/Teulada (adres niet gezien)",
+   "bron": "Google-zoekresultaat 'Inmobiliaria y Construcción en Moraira y Teulada | CBT Inmocons' → https://www.cbt-inmocons.com/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "GH Costa Blanca",
+   "website": "https://www.ghcostablanca.com/",
+   "plaats": "Kantoorplaats niet gezien (site: Calpe, Moraira, Benissa)",
+   "bron": "Google-zoekresultaat → https://www.ghcostablanca.com/en/luxury-villas-for-sale-in-moraira-costa-blanca/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Blanca International",
+   "website": "https://www.blancainternational.com/",
+   "plaats": "Jávea, Av. Arenal 1 local C (aanbod Moraira, Benitachell, Benissa)",
+   "bron": "Gidsprofiel https://www.costablancaonline24.com/info/blanca-international-moraira-estate-agent-properties-for-sale (24-09-2026)"
+  },
+  {
+   "naam": "Hamiltons of London",
+   "website": "https://www.hamiltonsoflondon.net/",
+   "plaats": "Moraira",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 51 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 24; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/benitachell-property-for-sale-0l1620/a3067-hamiltons-of-london; Google → https://www.hamiltonsoflondon.net/moraira-estate-agents/; gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "CB Property Sales",
+   "website": "https://cbpropertysales.co.uk/",
+   "plaats": "Moraira, Ctra. Moraira–Calpe, Ed. Norte 7 local 3-A",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 41 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 23; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/cb-property-sales-a4220; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "The Agency Costa Blanca North",
+   "website": "https://theagencyre-costablancanorth.com/",
+   "plaats": "Moraira, Ctra. Moraira a Calpe 142",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 27 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 9; Google → https://theagencyre-costablancanorth.com/about-us/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Fine & Country Costa Blanca North",
+   "website": "https://www.fineandcountry.es/",
+   "plaats": "Dénia (regiokantoor; dekking Moraira, Benitachell)",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 45 advertenties; Google → https://www.fineandcountry.es/en/costa-blanca-north-estate-agents; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "David Lloyd Signature Homes (Rightmove: 'David Lloyd Estates')",
+   "website": "https://www.davidlloyd-signaturehomes.com/",
+   "plaats": "Kantoorplaats niet gezien (Rightmove-vestiging 'Costa Blanca')",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 33 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 1; Google → https://www.davidlloyd-signaturehomes.com/properties/spain-north-costa-blanca/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Prestige Property Group",
+   "website": "https://prestigeproperty.co.uk/",
+   "plaats": "VK (internationale aanbieder; Rightmove-vestiging 'International')",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 12 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 16; Google → https://www.prestigeproperty.co.uk/for-sale/europe/spain/properties/valencia/alicante-costa-blanca/moraira/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Hamptons International",
+   "website": "https://www.hamptons.co.uk/",
+   "plaats": "VK (Rightmove-vestiging 'International')",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 27 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 13; site gaf HTTP 403 voor curl op 24-09-2026"
+  },
+  {
+   "naam": "TEKCE",
+   "website": "https://tekce.com/",
+   "plaats": "Spanje, landelijke keten (Rightmove-vestiging 'Spain')",
+   "bron": "Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 13 advertenties; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Zenia Homes S.L.",
+   "website": "https://zeniahomes.com/",
+   "plaats": "Orihuela Costa (Rightmove-vestiging)",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 4 advertenties; Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 5; domein via titelcontrole ('Home | Zenia Homes', noemt Orihuela/La Zenia/Moraira/Benitachell) op 24-09-2026"
+  },
+  {
+   "naam": "1 Real Estate",
+   "website": "https://1re.es/",
+   "plaats": "Ondara (Dénia)",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 3 advertenties; gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026) (go/website → https://1re.es/); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Welcome Estates",
+   "website": "https://www.welcome-estates.com/",
+   "plaats": "La Finca Golf / La Zenia (Costa Blanca Zuid)",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 2 advertenties; Rightmove-profiel https://www.rightmove.co.uk/estate-agents/agent/Welcome-Estates/Alicante-291068.html; domein via titelcontrole op 24-09-2026"
+  },
+  {
+   "naam": "John D Wood International",
+   "website": "https://www.johndwood.co.uk/",
+   "plaats": "VK (Rightmove-vestiging 'RoW')",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 2 advertenties; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Bartolomé Bas",
+   "website": "https://bartolomebas.com/",
+   "plaats": "Jávea, Av. de la Libertad 2 (aanbod o.a. Benitachell, Moraira/Teulada)",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 1 advertentie; Google → https://www.bartolomebas.com/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Blumelia Real Estate",
+   "website": "https://www.blumelia.com/",
+   "plaats": "Dénia",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 1 advertentie; Google → https://www.blumelia.com/about-us; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Castle Homes",
+   "website": "https://www.castlehomes.es/",
+   "plaats": "Almería (Rightmove-vestiging)",
+   "bron": "Rightmove Overseas Moraira https://www.rightmove.co.uk/overseas-property-for-sale/Moraira.html (17 pagina's, 392 advertenties, 24-09-2026): 1 advertentie; site HTTP 200 (titel 'Properties for sale in Almería, Granada…') 24-09-2026"
+  },
+  {
+   "naam": "Elia Living",
+   "website": "https://www.elialiving.es/",
+   "plaats": "Costa Blanca (kantoorplaats niet gezien)",
+   "bron": "Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 1 advertentie; Google → https://www.elialiving.es/en/about; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "I-VEO Synergy",
+   "website": "https://i-veo.com/",
+   "plaats": "Girona (Rightmove-vestiging); Europees netwerk",
+   "bron": "Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 1 advertentie; Google → https://www.i-veo.com/ca/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Su Asesor Inmobiliario y Contable",
+   "website": "https://suasesorinmobiliarioycontable.es/",
+   "plaats": "L'Ametlla de Mar (Tarragona)",
+   "bron": "Rightmove Overseas Benitachell https://www.rightmove.co.uk/overseas-property-for-sale/Benitachell.html (7 pagina's, 164 advertenties, 24-09-2026): 1 advertentie; Google-zoekresultaten (idealista/fotocasa-profiel); site gaf HTTP 403 voor curl op 24-09-2026"
+  },
+  {
+   "naam": "House Hunters Moraira",
+   "website": "https://www.househuntersmoraira.com/",
+   "plaats": "Moraira",
+   "bron": "Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/house-hunters-moraira-a19875; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); Thinkspain-listing https://www.thinkspain.com/spain-listings/o22040; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Moraira Immobilien",
+   "website": "https://www.moraira.immobilien/",
+   "plaats": "Moraira, Ctra. Moraira–Calpe 140 (Les Playetes)",
+   "bron": "Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/moraira-immobilien-a9189; Páginas Amarillas-zoekresultaat; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "General Home Service (GHS Villas)",
+   "website": "https://www.generalhomeservice.com/",
+   "plaats": "Moraira",
+   "bron": "Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) (Moraira-lijst https://www.kyero.com/en/spain/estate-agents/moraira-l1499); Google → https://www.generalhomeservice.com/en/moraira/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Medcasas by Aldertons of Spain",
+   "website": "https://www.medcasas.com/",
+   "plaats": "Moraira, C/ Dr. Calatayud 55",
+   "bron": "Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/medcasas-by-aldertons-a12557; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026) (blog); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Blue Square",
+   "website": "https://www.blue-square.es/",
+   "plaats": "Moraira, Av. de Madrid 3 (eerste Spaanse kantoor)",
+   "bron": "Gidsprofiel https://www.morairaonline24.com/info/blue-square; Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) (Teulada-lijst); domein via titelcontrole ('Spanish Property for Sale | Costa Blanca & Costa del Sol', noemt Moraira/Jávea) op 24-09-2026 — niet via zoekresultaat bevestigd"
+  },
+  {
+   "naam": "Construcciones Cresmarta",
+   "website": "https://www.cresmarta.com/",
+   "plaats": "Moraira, C/ Dr. Calatayud 55 + Teulada, Pl. Benimarco 3 (bouwer met verkoop)",
+   "bron": "Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina) https://www.kyero.com/en/spain/estate-agents/profile/construcciones-cresmarta-a19501; Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Rukawe Homes",
+   "website": "https://www.rukawehomes.com/",
+   "plaats": "Dénia/Calpe (aanbod Teulada-Moraira)",
+   "bron": "Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); Google → https://rukawehomes.com/en/properties/property-rh20530; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Blom Group Real Estate",
+   "website": "https://blomgroup.eu/",
+   "plaats": "Dénia (aanbod Moraira/Teulada/Jávea)",
+   "bron": "Indomio Teulada https://www.indomio.es/en/agencias-inmobiliarias/teulada/ (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); Google → https://blomgroup.eu/about-us/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Direct Owner Moraira",
+   "website": "https://directowner.co.uk/",
+   "plaats": "Moraira, C/ Dr. Calatayud",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "C & C Properties",
+   "website": "https://www.candcproperties.es/",
+   "plaats": "Moraira (centrum)",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); Rightmove-profiel https://www.rightmove.co.uk/estate-agents/profile/CC-Properties/Alicante-278414.html; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Color Villas Internacional",
+   "website": "https://www.colorvillas.com/",
+   "plaats": "Moraira",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 (titel 'Color Villas - Inmobiliaria Moraira') 24-09-2026"
+  },
+  {
+   "naam": "Hoffmann International",
+   "website": "https://www.hoffmann-international.com/",
+   "plaats": "Moraira",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Watkins Wilson",
+   "website": "https://watkinswilson.com/",
+   "plaats": "Moraira (centrum)",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 (titel 'Watkins Wilson Real Estate Agent Moraira') 24-09-2026"
+  },
+  {
+   "naam": "Gecko Villas",
+   "website": "https://www.geckovillas.com/",
+   "plaats": "Moraira (twee kantoren)",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Brassa Homes",
+   "website": "https://www.brassahomes.com/",
+   "plaats": "Moraira, Av. del Portet 16",
+   "bron": "Gidsprofiel https://www.morairaonline24.com/info/brassa-estate-agents; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Campana Home",
+   "website": "https://campanahome.com/",
+   "plaats": "Moraira, Av. de la Paz 3 (bouw + verkoop)",
+   "bron": "Gidsprofiel https://www.morairaonline24.com/info/campana-home-real-estate-construction; domein via titelcontrole ('Campana Home · Construcción y venta de villas en Moraira') op 24-09-2026"
+  },
+  {
+   "naam": "Design Villas Moraira",
+   "website": "https://designvillas.es/",
+   "plaats": "Moraira, Camino de la Viuda 15",
+   "bron": "Gidsprofiel https://www.morairaonline24.com/info/design-villas-moraira; domein via titel-/inhoudscontrole (noemt Moraira, Benitachell, Jávea) op 24-09-2026 — niet via zoekresultaat bevestigd"
+  },
+  {
+   "naam": "iberEstates",
+   "website": "https://www.iberestates.com/",
+   "plaats": "Benissa, Av. de la Marina 3-K local D (weg Moraira–Calpe)",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); Google → https://www.iberestates.com/en/about-us/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "MAX Villas & Constructions",
+   "website": "https://max-villas.com/",
+   "plaats": "Benissa/Moraira (tussen Moraira en Calpe)",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026) (go/website → max-villas.com); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Solinea Real Estate",
+   "website": "https://solinearealestate.com/",
+   "plaats": "Calpe (dekking Moraira, Benissa, Altea)",
+   "bron": "gidspagina's https://www.morairaonline24.com/guide/estate-agents-moraira-calpe-costa-blanca-spain en https://www.costablancaonline24.com/guide/moraira-estate-agents (doorverwijslink naar eigen site opgelost, 24-09-2026); site gaf HTTP 403 voor curl op 24-09-2026"
+  },
+  {
+   "naam": "Marti Projects",
+   "website": "https://www.martiprojects.com/",
+   "plaats": "Teulada, Pl. de la Constitución 1",
+   "bron": "Spainhouses Teulada https://www.spainhouses.net/es/inmobiliarias-teulada-alicante.html (24-09-2026); Indomio Teulada https://www.indomio.es/en/agencias-inmobiliarias/teulada/ (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026); ledenlijst MLS03724 https://www.mls03724.com/en/ (24-09-2026); site gaf HTTP 403 (Cloudflare) voor curl op 24-09-2026"
+  },
+  {
+   "naam": "LT Property",
+   "website": "https://lt-property.com/",
+   "plaats": "Teulada, C/ Castillo de San Fernando 3",
+   "bron": "Spainhouses Teulada https://www.spainhouses.net/es/inmobiliarias-teulada-alicante.html (24-09-2026); Google → https://lt-property.com/es/nuestra-agencia; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Inmo Arc en Ciel",
+   "website": "https://www.immoarcenciel.com/",
+   "plaats": "Teulada/Moraira, Av. Madrid 20",
+   "bron": "Spainhouses Teulada https://www.spainhouses.net/es/inmobiliarias-teulada-alicante.html (24-09-2026); Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026) (Thinkspain-listing o22136); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Llobell Inmobiliaris Multiservice",
+   "website": "https://www.llobellinmobiliaris.com/",
+   "plaats": "Teulada, Av. del Mediterráneo 67",
+   "bron": "Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026); Indomio-profiel https://www.indomio.es/en/agencias-inmobiliarias/387499/llobell-inmobiliaris/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Royal Style Villas",
+   "website": "https://www.royalstylevillas.com/",
+   "plaats": "Teulada, Av. del Mediterráneo 22",
+   "bron": "Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026); Google → https://www.royalstylevillas.com/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Salvador Sendra (asesoría met vastgoedbemiddeling)",
+   "website": "https://salvadorsendra.com/",
+   "plaats": "Teulada, Av. Mediterráneo 183",
+   "bron": "Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026) (Thinkspain-listing o5513); Google → https://salvadorsendra.com/en/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Premium Estate Moraira",
+   "website": "https://www.premiumestatemoraira.com/",
+   "plaats": "Moraira, Ctra. Moraira–Calpe, C.C. Kristalmar 24E",
+   "bron": "Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026); Google-zoekresultaat → https://www.premiumestatemoraira.com/; site onbereikbaar vanaf deze machine (verbinding mislukt) op 24-09-2026"
+  },
+  {
+   "naam": "Harvey Estates",
+   "website": "https://harveyestates.com/",
+   "plaats": "Moraira, Ctra. Moraira a Calpe 159 (ook Jávea, Valencia)",
+   "bron": "Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026); site gaf HTTP 503 'under maintenance' op 24-09-2026"
+  },
+  {
+   "naam": "Inmoart",
+   "website": "https://www.inmoart.co.uk/",
+   "plaats": "Moraira, C/ les Tosqueres 2 local C",
+   "bron": "RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); Thinkspain-listing https://www.thinkspain.com/spain-listings/o15781; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "MB Villas Domus (Domus Moraira S.L.)",
+   "website": "https://www.mbvillasdomus.com/",
+   "plaats": "Moraira (centrum)",
+   "bron": "Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Moraira Estates",
+   "website": "https://www.morairaestate.com/",
+   "plaats": "Moraira, Av. del Portet 161",
+   "bron": "UrbanCostaBlanca-profiel https://urbancostablanca.com/agency/morairaestates/172 (24-09-2026); site onbereikbaar (verbinding mislukt) op 24-09-2026"
+  },
+  {
+   "naam": "Grupo Moraira I, S.L.",
+   "website": "https://www.grupomoraira.es/",
+   "plaats": "Moraira, Av. Portet 1 (Ed. La Casona); bouwer met verkoop",
+   "bron": "Google-zoekresultaat → https://www.grupomoraira.es/; register R06 /Users/root-admin/tree-es/deal-hunter/onderzoek/R06-makelaars-javea-register.md regel 157; site toont 'System Updating' op 24-09-2026 (ook al op 14-09-2026)"
+  },
+  {
+   "naam": "Villas Costa Mar (by Villas del Sol)",
+   "website": "https://www.villascostamar.com/",
+   "plaats": "Benitachell, C/ les Capelletes 33",
+   "bron": "Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026); Google → https://www.villascostamar.com/quienes-somos/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Martin & Price Real Estate",
+   "website": "https://www.martinandprice.com/",
+   "plaats": "Benitachell, Cumbre del Sol",
+   "bron": "Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026); Google → https://www.martinandprice.com/; site gaf HTTP 403 (Cloudflare) voor curl op 24-09-2026"
+  },
+  {
+   "naam": "Belles Villas Costa Blanca",
+   "website": "https://www.bellesvillascostablanca.com/",
+   "plaats": "Benitachell, Cumbre del Sol (Pueblo Panorama 45); Spainhouses: Moraira/Paichi",
+   "bron": "Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026); Spainhouses Moraira https://www.spainhouses.net/en/real-estate-agencies-moraira-alicante.html (24-09-2026); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Inmobres",
+   "website": "https://www.inmobres.com/",
+   "plaats": "Calpe, C/ la Santamaría 11",
+   "bron": "RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); site HTTP 200 (titel 'Estate Agency in Calpe') 24-09-2026"
+  },
+  {
+   "naam": "Dinhjelper Real Estate",
+   "website": "https://www.dinhjelper-realestate.com/",
+   "plaats": "Alfaz del Pi (pagina villa's Benitachell)",
+   "bron": "RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026); Google → https://www.dinhjelper-realestate.com/benitachell/villas-en-venta-en-benitachell/; site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "Hoomy Homes",
+   "website": "https://www.hoomyhomes.com/",
+   "plaats": "Dénia",
+   "bron": "RealAdvisor https://realadvisor.es/es/agencias-inmobiliarias/03724-teulada, /03725-teulada en /03726-benitachell (24-09-2026) (03726-lijst); site HTTP 200 24-09-2026"
+  },
+  {
+   "naam": "MLS 03724 (Asociación Inmobiliaria Teulada-Moraira, samenwerkingsverband van ca. 15 kantoren)",
+   "website": "https://www.mls03724.com/",
+   "plaats": "Moraira, Ctra. Moraira a Calpe 27",
+   "bron": "Google ES → https://www.mls03724.com/en/ ; leden op de site: Marti Projects, iberEstates, Moraira Invest Group, Hispania Homes, Buenaventura Villas, Benimo Villas, Casas Ambiente, Direct Owner, CB Property Sales, Aldertons (24-09-2026); site HTTP 200 24-09-2026"
+  }
+ ],
+ "aanvullend_zonder_website": [
+  {
+   "naam": "Jenafer Consulting",
+   "plaats": "Teulada, Av. Santa Catalina 7, 1º",
+   "opmerking": "52 percelen in aanbod volgens buscainmobiliarias; eigen website niet gevonden",
+   "bron": "Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026); Indomio https://www.indomio.es/agencias-inmobiliarias/380366/jenafer-consulting/"
+  },
+  {
+   "naam": "Ramminger Inmobiliaria",
+   "plaats": "Benitachell, Pueblo de la Luz B11 / Cumbre del Sol",
+   "opmerking": "zoekresultaat wees naar domein teumoelectro.com; onbereikbaar op 24-09-2026, dus niet opgenomen",
+   "bron": "Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026)"
+  },
+  {
+   "naam": "Costa Blanca Villas",
+   "plaats": "Benitachell, Los Romeros 19",
+   "opmerking": "eigen website niet gevonden",
+   "bron": "Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026)"
+  },
+  {
+   "naam": "Inmobiliaria Cap Moraira",
+   "plaats": "Teulada, Av. de Madrid 2",
+   "opmerking": "geen website getoond",
+   "bron": "gemeentedirectory https://teulada.comercioscomunitatvalenciana.com/es/comercios/view/inmobiliaria-cap-moraira (24-09-2026)"
+  },
+  {
+   "naam": "HMR Villas",
+   "plaats": "Moraira, Ctra. Moraira–Calpe 78",
+   "opmerking": "alleen Páginas Amarillas-vermelding gezien; website niet gevonden",
+   "bron": "Páginas Amarillas-zoekresultaat (24-09-2026)"
+  },
+  {
+   "naam": "Avencio Inmobiliaria",
+   "plaats": "Benissa, Av. La Marina 5 local 6E",
+   "opmerking": "gidsprofiel zonder websitelink",
+   "bron": "https://www.morairaonline24.com/info/avencio-inmobiliaria-calpe-estate-agents (24-09-2026)"
+  },
+  {
+   "naam": "Mi Casa Tu Casa",
+   "plaats": "Jávea/Moraira",
+   "opmerking": "bemiddelaar; website niet getoond",
+   "bron": "https://www.costablancaonline24.com/info/mi-casa-es-tu-casa (24-09-2026)"
+  },
+  {
+   "naam": "Gálvez Real Estate",
+   "plaats": "niet gezien",
+   "opmerking": "alleen in Kyero-lijst Benitachell (via Google); website niet gevonden",
+   "bron": "Kyero (kyero.com weigert curl én WebFetch met HTTP 403 op 24-09-2026; kantoornaam uit Google-zoekresultaat van de Kyero-pagina)"
+  },
+  {
+   "naam": "catorce inmobiliaria / Casasdediez",
+   "plaats": "Teulada (werkgebied)",
+   "opmerking": "alleen in Indomio/Trustlocal-lijsten; websites niet gevonden",
+   "bron": "Indomio Teulada https://www.indomio.es/en/agencias-inmobiliarias/teulada/ (24-09-2026); Trustlocal Teulada https://trustlocal.es/alacant-alicante/teulada/agencia-inmobiliaria/ (24-09-2026)"
+  },
+  {
+   "naam": "Fernández Consulting / De Lujo",
+   "plaats": "Teulada, Av. Mediterráneo 135",
+   "opmerking": "Fernández Consulting is een gestoría; 'De Lujo' niet terug te vinden",
+   "bron": "Thinkspain-directory Teulada https://www.thinkspain.com/directory-spain/teulada/estate-agents (24-09-2026)"
+  },
+  {
+   "naam": "Moraira and Javea Villa Rentals",
+   "plaats": "Benitachell, Ctra. Moraira 4",
+   "opmerking": "verhuurkantoor, geen verkoop — niet opgenomen",
+   "bron": "Thinkspain-directory Benitachell https://www.thinkspain.com/directory-spain/benitachell/estate-agents (24-09-2026)"
+  }
+ ]
+}

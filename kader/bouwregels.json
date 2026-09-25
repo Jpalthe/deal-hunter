@@ -1,0 +1,110 @@
+{
+ "bron": "onderzoek/N01-bouwregels-xabia.md en .json, PGOU Xàbia zoals gepubliceerd in het register (18-09-2026)",
+ "datum": "18-09-2026",
+ "let_op": "Dit zijn planregels, geen toestemming. Welk gebied en welke grado op een perceel gelden staat op de scans plano B1 en B2 en is niet gegeorefereerd; per perceel bevestigen met een informe urbanístico.",
+ "standaard": {
+  "edificabilidad_neto": 0.2,
+  "parcela_minima_m2": 1000,
+  "max_per_woning_m2": 600,
+  "bron": "PGOU zona E, geldt voor 93,8 % van het zona E-oppervlak"
+ },
+ "zones": {
+  "javea:montgo_ermita": {
+   "wijk": "Montgó – Ermita",
+   "zone": "E",
+   "edificabilidad_neto": 0.2,
+   "parcela_minima_m2": 1500,
+   "ocupacion_pct": 30,
+   "bouwlagen": 2,
+   "hoogte_kroonlijst_m": 7.0,
+   "hoogte_totaal_m": 9.5,
+   "retranqueo_m": 5,
+   "let_op": "Het Parque Natural del Montgó hogerop is SNU-P: daar mag niet gebouwd worden. Delen vallen onder Plan Parcial Ermita II met eigen parameters."
+  },
+  "javea:centro": {
+   "wijk": "Centrum",
+   "zone": "A casco en B ensanche",
+   "edificabilidad_neto": null,
+   "parcela_minima_m2": 700,
+   "bouwlagen": null,
+   "let_op": "Zona A kent geen coëfficiënt: het bouwrecht volgt uit rooilijn, bouwdiepte en bouwlagen van plano B1. Erfgoedregime ZUR-NHT met toestemming van Cultura. Calvario is zona E met 0,28."
+  },
+  "javea:puerto_arenal": {
+   "wijk": "Puerto – Arenal",
+   "zone": "A, B, C en E door elkaar",
+   "edificabilidad_neto": 0.28,
+   "parcela_minima_m2": 500,
+   "let_op": "Caleta-Puerto heeft 0,28 neto en de laagste parcela mínima van de gemeente. Welke zone per bouwblok geldt is niet vastgesteld; er lopen ook homologaciones en PRI's."
+  },
+  "javea:tosalet_adsubia": {
+   "wijk": "Tosalet – Adsubia",
+   "zone": "E",
+   "edificabilidad_neto": 0.2,
+   "parcela_minima_m2": 1000,
+   "ocupacion_pct": 30,
+   "bouwlagen": 2,
+   "hoogte_totaal_m": 9.5,
+   "retranqueo_m": 5
+  },
+  "javea:granadella_balcon": {
+   "wijk": "Granadella – Balcón al Mar",
+   "zone": "E",
+   "edificabilidad_neto": 0.2,
+   "parcela_minima_m2": 1000,
+   "ocupacion_pct": 30,
+   "bouwlagen": 2,
+   "hoogte_totaal_m": 9.5,
+   "retranqueo_m": 5,
+   "let_op": "Rond Granadella liggen beschermde zones (ZEC, PORN) en steile hellingen; per perceel toetsen."
+  },
+  "javea:rafalet_pinosol": {
+   "wijk": "Rafalet – Pinosol",
+   "zone": "E",
+   "edificabilidad_neto": 0.2,
+   "parcela_minima_m2": 1000,
+   "ocupacion_pct": 30,
+   "bouwlagen": 2,
+   "hoogte_totaal_m": 9.5,
+   "retranqueo_m": 5,
+   "let_op": "Onder welk B2-gebied Pinosol valt is niet vastgesteld; de parcela mínima is daarmee onzeker."
+  },
+  "benitachell": {
+   "wijk": "Benitachell",
+   "zone": "ONBEKEND",
+   "edificabilidad_neto": null,
+   "parcela_minima_m2": null,
+   "let_op": "De bouwregels van Benitatxell zijn nog niet uitgezocht; het onderzoek daarnaar is afgebroken op het maandplafond. Tot die tijd geldt de standaardaanname van 0,20 en is elke bouwconclusie hier zwakker."
+  },
+  "moraira": {
+   "wijk": "Moraira",
+   "zone": "ONBEKEND",
+   "edificabilidad_neto": null,
+   "parcela_minima_m2": null,
+   "let_op": "Idem voor Teulada-Moraira: nog niet uitgezocht."
+  }
+ },
+ "hoge_coefficient_gebieden": [
+  "calvario",
+  "puchol",
+  "soberana",
+  "mesquides",
+  "c.s. antonio",
+  "cap sant antoni",
+  "caleta-puerto",
+  "caleta",
+  "la corona",
+  "corona"
+ ],
+ "snu": {
+  "edificabilidad_neto": 0.03,
+  "max_m2": 300,
+  "min_perceel_ha": 1,
+  "ocupacion_pct": 2,
+  "bron": "TRLOTUP art. 211.1.b; genérico grado III (El Pla) 0,01"
+ },
+ "model": {
+  "oude_aanname": "min(0,20 × perceel, 450 m²)",
+  "wat_er_mis_was": "Het plafond van 450 m² stond niet in het plan maar in onze code. Boven 2.250 m² perceel knipte het model het bouwrecht af: bij 3.000 m² 25 % te weinig, bij 5.000 m² 55 %, bij 10.000 m² 77,5 %.",
+  "nu": "Coëfficiënt per wijk, 0,28 in de zeven gebieden die dat kennen. Een perceel van twee keer de parcela mínima of meer wordt als meerdere woningen gerekend, want dat is wat het waard is. Per woning geldt een praktisch plafond van 600 m²; daarboven vallen de vergelijkingsobjecten weg en wordt de uitkomst onbetrouwbaar."
+ }
+}

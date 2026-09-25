@@ -1,0 +1,1279 @@
+{
+ "versie": "15-09-2026",
+ "doel": "Invoer voor tools/haalbaarheid.py: de veertien kandidaten K01–K14 uit onderzoek/R15-kandidaten-javea-live.md, gecorrigeerd met R15-...verificatie.md en deliverable 01 §2.11, met actuele advertentiegegevens van 15-09-2026.",
+ "bron_hoofd": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026 — 14 detailopvragingen, alle 'outcome: active'. Vraagprijzen zijn vraagprijzen van één aanbieder op één dag, géén transactieprijzen. Alle stedenbouwkundige beweringen zijn beweringen van de aanbieder (bewijstype 1) tenzij anders vermeld.",
+ "bewijstypen": "1 = bewering aanbieder; 2 = wet-/plantekst; 3 = door ons gezien in een tool/bron; 4 = inferentie; 5 = eigen berekening op benoemde aannames; 7 = onbekend (masterprompt §5).",
+ "regels": [
+  "Geen telefoonnummers en geen namen van particulieren overgenomen (K06: alleen zone).",
+  "vat_purchase alleen true als de verkoper aantoonbaar btw-plichtig is (K10 via Servihabitat/Sareb).",
+  "Sloop/nieuwbouw-scenario's gebruiken min(0,20 × perceel; 450) m² als AANNAME (PGOU zona E netto); nooit een standaardpercentage voor heel Jávea als bewijs.",
+  "Percelen: eerst kadastrale referentie en geometrie, dan pas bouwconclusies (masterprompt §14–17).",
+  "K10: pakket van 16 kavels, alleen als geheel te koop; per-kavel cijfers zijn rekenkundig; urbanisatiekosten ONBEKEND."
+ ],
+ "comps_zones": [
+  "montgo_ermita",
+  "centro",
+  "puerto_arenal",
+  "tosalet_adsubia",
+  "granadella_balcon",
+  "rafalet_pinosol"
+ ],
+ "kandidaten": [
+  {
+   "id": "K01",
+   "code": "108910753",
+   "url": "https://www.idealista.com/es/inmueble/108910753/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad",
+   "comps_zone": "centro",
+   "type": "renovatie",
+   "price_ask": 399000,
+   "price_drop": null,
+   "built_m2": 232,
+   "plot_m2": 161,
+   "year": "onbekend",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 230,
+    "rooms": 5,
+    "bathrooms": 2,
+    "floors": 2,
+    "pool": false,
+    "condition": "Segunda mano/para reformar",
+    "energy": "F / E",
+    "typology_idealista": "countryHouse / Finca rústica (aantoonbaar verkeerde typering, R15-verif. A10)",
+    "modification": "Anuncio actualizado hace más de un mes",
+    "agency": "MORAGUESPONS Mediterranean Houses (ref. V-1488)"
+   },
+   "claims": [
+    "'dos accesos independientes' → 'dos viviendas totalmente independientes' (1)",
+    "'patio interior… viable integrar una pequeña piscina' (1)",
+    "'posibilidad de desarrollar una tercera planta, previa licencia' (1)",
+    "Zelfde object vermoedelijk ook onder 109038046 en 108922636; die laatste noemt 'licencia de obra mayor' (4)"
+   ],
+   "blockers": [
+    "Casco antiguo: ZUR-NHT-regime; NUT gaven begane grond + 1 + zolder, PGOU per blok II–V lagen — welke geldt is ONBEKEND (7); derde bouwlaag dus onzeker [01 §2.11]",
+    "Ingrepen met erfgoedbelang vragen toestemming van Cultura; na 3 maanden zonder antwoord geldt weigering (2) [01 §2.2]",
+    "Verdelen in 2 woningen: parkeereis en división horizontal [te verifiëren]",
+    "Bouwjaar niet vermeld; constructie (draagt de opbouw?) niet beoordeeld; bouwlogistiek smalle straat",
+    "Datakwaliteit: Idealista typeert als 'Finca rústica' met perceel 161 m² midden in het casco (R15-verif. A10)"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/108910753/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 232 m² (casa de pueblo)",
+     "kind": "renovatie",
+     "renovation_m2": 232,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 232,
+     "comps_key": "townhouse_renovated",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "Zwembad niet begroot: patio van ±45 m² (perceel 161 minus voetafdruk); claim 'pequeña piscina' is van de aanbieder.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "232 m² gebouwd = veld Idealista (1); geen kadastrale m² gezien.",
+      "Geen zwembad opgenomen (perceel 161 m² in het casco) — aanname 4."
+     ]
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + derde bouwlaag (claim aanbieder)",
+     "kind": "renovatie_plus_uitbreiding",
+     "renovation_m2": 232,
+     "newbuild_m2": 116,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 348,
+     "comps_key": "townhouse_renovated",
+     "months": 20,
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als de derde bouwlaag planologisch en constructief mogelijk is (NHT/Cultura).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Claim aanbieder: 'posibilidad de desarrollar una tercera planta, previa licencia' — geen m² genoemd (1).",
+      "116 m² = voetafdruk (232 m² / 2 verdiepingen) als omvang van één extra laag — AANNAME (5).",
+      "Opbouw tegen nieuwbouwtarief 2.000 €/m² — aanname 5."
+     ],
+     "units": 2
+    }
+   ],
+   "lat": 38.7898,
+   "lon": 0.1589,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K02",
+   "code": "110974608",
+   "url": "https://www.idealista.com/es/inmueble/110974608/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad",
+   "comps_zone": "centro",
+   "type": "renovatie",
+   "price_ask": 499000,
+   "price_drop": null,
+   "built_m2": 264,
+   "plot_m2": null,
+   "year": "onbekend",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 264,
+    "rooms": 4,
+    "bathrooms": 1,
+    "floors": 2,
+    "pool": false,
+    "condition": "Segunda mano/para reformar",
+    "energy": "G",
+    "typology_idealista": "flat (tekst: casa de pueblo; inconsistent)",
+    "modification": "Anuncio actualizado hace más de un mes",
+    "agency": "EURO JAVEA Real Estate (ref. EJA-1197)"
+   },
+   "claims": [
+    "'acceso desde dos calles' (1)",
+    "'amplio garaje… con acceso directo y terraza superior' (1) — legaliteit garage-inrit in het casco niet aangetoond",
+    "'numerosos elementos originales' (1)"
+   ],
+   "blockers": [
+    "Perceel-m² en bouwjaar niet vermeld (7)",
+    "Casco antiguo: ZUR-NHT-regime en Cultura-toets bij erfgoedbelang (2) [01 §2.2]",
+    "Legaliteit en registratie van de garage (zelfde finca?) — nota simple nodig",
+    "1 badkamer, label G, 'elementos originales': verborgen structurele kosten niet beoordeeld; geen bezichtiging",
+    "Geen transactiereferentie: 499.000 + renovatie tegen centrum-vraagprijzen (mediaan 2.417 €/m², R15 §3.1, één dag)"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/110974608/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 264 m² (casa de pueblo met garage)",
+     "kind": "renovatie",
+     "renovation_m2": 264,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 264,
+     "comps_key": "townhouse_renovated",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "Geen uitbreiding geclaimd; perceel onbekend, dus geen sloop/nieuwbouw-scenario.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "264 m² gebouwd = veld Idealista (1).",
+      "Geen zwembad (casco, patio) — aanname 4."
+     ]
+    }
+   ],
+   "lat": 38.7899,
+   "lon": 0.1629,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K03",
+   "code": "110273579",
+   "url": "https://www.idealista.com/es/inmueble/110273579/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Montgó - Ermita (Calle del Montgó)",
+   "comps_zone": "montgo_ermita",
+   "type": "renovatie",
+   "price_ask": 565000,
+   "price_drop": {
+    "former_price": 595000,
+    "drop_eur": 30000,
+    "drop_pct": 5,
+    "bron": "priceDropInfo 15-09-2026"
+   },
+   "built_m2": 120,
+   "plot_m2": 1050,
+   "year": "onbekend",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 120,
+    "rooms": 2,
+    "bathrooms": 2,
+    "floors": 2,
+    "pool": false,
+    "garage": true,
+    "condition": "Segunda mano/para reformar",
+    "energy": "F (70 kWh/m²·jr)",
+    "orientation": "zuid",
+    "modification": "Anuncio actualizado hace 13 días",
+    "agency": "InmovillasJávea (ref. JV1071)"
+   },
+   "claims": [
+    "'edificabilidad no agotada del 20%' — betekenis (20% totaal of 20% resterend) niet te herleiden (1)",
+    "'ampliar la vivienda… añadiendo más dormitorios o una suite principal' (1)"
+   ],
+   "blockers": [
+    "Planklasse en gebied onbekend: SNU, zona E of plan parcial (7); bij SNU geen uitbreiding met 0,20 [01 §2.2 type R2]",
+    "Ligt in/bij het PORN Montgó-gebied: rapport Conselleria voor grondverzet mogelijk nodig (2/3) [01 §2.11 K07-analogie, te toetsen op dit perceel]",
+    "Bouwjaar niet vermeld; prijs zit in het perceel (4.708 €/m² gebouwd)",
+    "Resterend bouwvolume, bezetting en hoogte alleen via certificado/informe urbanístico"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/110273579/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 120 m² + nieuw zwembad",
+     "kind": "renovatie",
+     "renovation_m2": 120,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 120,
+     "comps_key": "villa_renovated",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "Klein eindproduct (120 m²) op een groot perceel; scenario dient vooral als ondergrens.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Geen zwembad aanwezig (veld hasSwimmingPool=false); nieuw zwembad opgenomen omdat het perceel (1.050 m²) dat toelaat — aanname 4."
+     ]
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + uitbreiding tot 210 m² (lezing van '20%')",
+     "kind": "renovatie_plus_uitbreiding",
+     "renovation_m2": 120,
+     "newbuild_m2": 90,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 210,
+     "comps_key": "villa_renovated",
+     "months": 20,
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als het certificado urbanístico ±210 m² totaal bevestigt.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Claim aanbieder: 'edificabilidad no agotada del 20%' (1).",
+      "Lezing: 0,20 × 1.050 = 210 m² totaal → 90 m² uitbreiding — AANNAME (5); alternatieve lezing ('20% resterend' = +24 m²) niet doorgerekend.",
+      "Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig."
+     ]
+    },
+    {
+     "key": "N_sloop",
+     "label": "Sloop en nieuwbouw villa ±210 m²",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 210,
+     "demolition_m2": 120,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 150,
+     "result_m2": 210,
+     "comps_key": "villa_new",
+     "months": 24,
+     "vat_recoverable": true,
+     "notes": "Nieuwbouw verkocht met btw; btw op bouw terugvorderbaar verondersteld (koper = btw-plichtige entiteit).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Nieuwbouwvolume min(0,20 × 1.050; 450) = 210 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden — aanname 5; vergunningswachttijd Xàbia tot een jaar gemeld [01 §4]."
+     ]
+    }
+   ],
+   "lat": 38.7934,
+   "lon": 0.1269,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K04",
+   "code": "112342245",
+   "url": "https://www.idealista.com/es/inmueble/112342245/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Partida Tosal - Zona dels Castellans (Carretera de Jesús Pobre)",
+   "comps_zone": "montgo_ermita",
+   "type": "renovatie",
+   "price_ask": 520000,
+   "price_drop": null,
+   "built_m2": 241,
+   "plot_m2": 2895,
+   "year": "1974",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 241,
+    "rooms": 3,
+    "bathrooms": 3,
+    "floors": 2,
+    "pool": true,
+    "pool_state": "necesita ser reformada",
+    "condition": "Segunda mano/para reformar",
+    "energy": "G (veldwaarde 15 kWh/m²·jr — onwaarschijnlijk, invoerfout?)",
+    "orientation": "zuid",
+    "modification": "Anuncio actualizado hace 13 días",
+    "agency": "MG Villas (ref. MGC217401)",
+    "duplicate": "108002564 (zelfde prijs/m²/kamers, R15)"
+   },
+   "claims": [
+    "'dispone todavía de más edificabilidad, pudiendo ampliar… unos 300m2 más' (1)",
+    "'Posibilidad de combinar vivienda con negocio en la parte de delante de la parcela' (1)",
+    "'La casa necesita reforma integral' (1); 'trastero/estudio que podría convertirse en un apartamento de invitados' (1)"
+   ],
+   "blockers": [
+    "Planklasse onbekend; zonelabels spreken elkaar tegen (Partida Tosal / 'Montgó-Carrasquetes' bij Villalux) (7) [01 §2.11]",
+    "Bij SNU ander regime, uitbreiding niet vastgesteld [te verifiëren]; in gebied Montgó-Castellans (minimum 1.500 m²) is <3.000 m² ondeelbaar (2/5)",
+    "Commercieel gebruik in zona E alleen aan hoofdweg >10 m breed, 10 m afstand, ondeelbaar perceel (2) — claim 'negocio' niet gedekt",
+    "Ligging aan doorgaande weg (Carretera de Jesús Pobre): wegreservering en eindwaarde toetsen; waterlopen toetsen (PATRICOVA)",
+    "Constructie 1974, label G: renovatie kan duurder uitvallen dan sloop — constructeur nodig"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/112342245/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "comps_zone_note": "Comps-zone montgo_ermita gekozen als dichtstbijzijnde reeks (Partida Tosal ligt tussen dorp en Montgó) — aanname 4.",
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 241 m² + zwembadrenovatie",
+     "kind": "renovatie",
+     "renovation_m2": 241,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": true,
+     "exterior_m2": 0,
+     "result_m2": 241,
+     "comps_key": "villa_renovated",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Bestaand zwembad 'necesita ser reformada' (1) → zwembadrenovatie opgenomen.",
+      "Buitenruimte (2.895 m²) niet begroot — aanname 4."
+     ]
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + uitbreiding 300 m² (claim aanbieder)",
+     "kind": "renovatie_plus_uitbreiding",
+     "renovation_m2": 241,
+     "newbuild_m2": 300,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": true,
+     "exterior_m2": 0,
+     "result_m2": 541,
+     "comps_key": "villa_renovated",
+     "months": 20,
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als zona E netto op dit perceel geldt: 2.895 × 0,20 = 579 m²t → ±338 over; bij bruto-lezing (0,142) ±170 over [01 §2.11].",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Uitbreiding 300 m² = claim aanbieder 'unos 300m2 más' (1).",
+      "Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig."
+     ]
+    },
+    {
+     "key": "N_sloop",
+     "label": "Sloop en nieuwbouw villa 450 m² (plafond)",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 450,
+     "demolition_m2": 241,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 150,
+     "result_m2": 450,
+     "comps_key": "villa_new",
+     "months": 24,
+     "vat_recoverable": true,
+     "notes": "0,20 × 2.895 = 579 m²; gemaximeerd op 450 m² (modelplafond). Nieuwbouw verkocht met btw.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Nieuwbouwvolume min(0,20 × 2.895; 450) = 450 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden — aanname 5."
+     ]
+    }
+   ],
+   "lat": 38.7867,
+   "lon": 0.1426,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K05",
+   "code": "97576395",
+   "url": "https://www.idealista.com/es/inmueble/97576395/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Partida Tosal - Zona dels Castellans (Camino dels Castellans)",
+   "comps_zone": "montgo_ermita",
+   "type": "renovatie",
+   "price_ask": 395000,
+   "price_drop": null,
+   "built_m2": 460,
+   "plot_m2": 960,
+   "year": "onbekend",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 460,
+    "rooms": 6,
+    "bathrooms": 5,
+    "floors": 3,
+    "pool": true,
+    "pool_state": "binnenzwembad met jacuzzi en sauna (tekst)",
+    "plot_note": "veld 960 m², tekst 980 m² (tegenstrijdig)",
+    "condition": "Segunda mano/para reformar",
+    "energy": "A (onwaarschijnlijk voor renovatieobject — mogelijk invoerfout)",
+    "modification": "Anuncio actualizado hace más de 2 meses",
+    "agency": "LYT Properties (ref. LTV573-44)"
+   },
+   "claims": [
+    "'necesita de reforma integral' (1)",
+    "Aanbieder zelf: 'de manera legal no es posible su ampliación o la construcción de una piscina por encontrarse en un área protegida por afección del cauce del barranco' (1)",
+    "Dat het bestaande volume (460 m²) legaal/geconsolideerd is — niet aangetoond (7)"
+   ],
+   "blockers": [
+    "Barranco-affectie volgens de aanbieder zelf: geen uitbreiding, geen (buiten)zwembad; reikwijdte (fuera de ordenación? overstromingsrisico lage verdieping?) ONBEKEND (7) [R15 §2A, 01 §2.5]",
+    "Langs openbare waterlopen 5 m vrijwaringsstrook en 100 m politiezone (2) [01 §2.2]; PATRICOVA-toets op het perceel nodig",
+    "Legaliteit en verzekerbaarheid/financierbaarheid van het bestaande gebouw niet aangetoond; kadastrale m² tegenover 460 m² advertentie",
+    "Sloop/nieuwbouw niet doorgerekend: aanbieder meldt uitbreidingsverbod en 0,20 × 960 = 192 m² < bestaande 460 m² (5)",
+    "Bouwjaar niet vermeld; laagste €/m² van de set kan terecht laag zijn [01 §4.1]"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/97576395/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "comps_zone_note": "Comps-zone montgo_ermita gekozen als dichtstbijzijnde reeks — aanname 4.",
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 460 m² binnen bestaand volume + renovatie binnenzwembad",
+     "kind": "renovatie",
+     "renovation_m2": 460,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": true,
+     "exterior_m2": 0,
+     "result_m2": 460,
+     "comps_key": "villa_renovated",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "Alleen zinvol als de barranco-affectie zich beperkt tot 'geen uitbreiding' en het bestaande volume legaal is; anders afwijzen.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "460 m² gebouwd = veld Idealista (1); perceel 960 m² = veld (tekst 980).",
+      "Bestaand binnenzwembad → zwembadrenovatie opgenomen (1/4).",
+      "Geen R_plus en geen N_sloop: uitbreidingsverbod volgens aanbieder (1)."
+     ]
+    }
+   ],
+   "lat": 38.7906,
+   "lon": 0.155,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K06",
+   "code": "106514871",
+   "url": "https://www.idealista.com/es/inmueble/106514871/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Puerto (Aduanas)",
+   "comps_zone": "puerto_arenal",
+   "type": "appartement",
+   "price_ask": 345000,
+   "price_drop": null,
+   "built_m2": 125,
+   "plot_m2": null,
+   "year": "onbekend",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 120,
+    "terrace_m2": 15,
+    "floor": "1ª exterior, met lift",
+    "rooms": 4,
+    "bathrooms": 3,
+    "condition": "Segunda mano/para reformar (diáfano, één badkamer)",
+    "energy": "G (382,6 kWh/m²·jr)",
+    "modification": "Anuncio actualizado hace más de 7 meses",
+    "seller": "particulier (naam en straat bewust weggelaten, R15-verif. F12)"
+   },
+   "claims": [
+    "'a solo 60 metros de la playa', 'segunda línea del mar' (1)",
+    "'plano de una propuesta de distribución tras la reforma' — indelingsvoorstel, geen vergunning (1)",
+    "'trastero en la cubierta' (1)"
+   ],
+   "blockers": [
+    "Comunidad de propietarios: statuten, achterstallige bijdragen, geplande gevel-/liftwerken — certificaat nodig (7)",
+    "Legaliteit van de casco-toestand (is er een licentie voor de eerdere sloopwerkzaamheden?) (7)",
+    "Kust- en overstromingsregels Puerto/Arenal (PATRICOVA; ARPSI en PATRICOVA spreken elkaar bij Arenal tegen) [01 §2.2, §3.4]",
+    "Marge dun: 2.760 €/m² casco + renovatie tegen Puerto-vraagprijzen (Q3: mediaan 3.242 €/m², kleine unit in renovatie tot 6.556 op renders) — geen transactiebewijs",
+    "Particuliere verkoper: geen ongevraagde benadering; contact alleen na akkoord van Jan"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/106514871/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie appartement 125 m²",
+     "kind": "renovatie",
+     "renovation_m2": 125,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 125,
+     "comps_key": "apartment_renovated_puerto",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "Korte renovatie zonder sloopfase; declaración responsable mogelijk (R3-type) [01 §2.3].",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "125 m² gebouwd (120 m² bruikbaar + 15 m² terras) = velden/tekst Idealista (1).",
+      "Doorlooptijd 15 maanden is de standaard van dit model; korter is denkbaar (aanname 5).",
+      "verkoopprijs uit de specifiekere wijkreeks apartment_renovated_puerto (15-09-2026)"
+     ]
+    }
+   ],
+   "lat": 38.793,
+   "lon": 0.1812,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K07",
+   "code": "112280961",
+   "url": "https://www.idealista.com/es/inmueble/112280961/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Montgó - Ermita (Urb. Garroferal del Montgó)",
+   "comps_zone": "montgo_ermita",
+   "type": "perceel",
+   "price_ask": 505000,
+   "price_drop": null,
+   "built_m2": 0,
+   "plot_m2": 1570,
+   "year": "n.v.t.",
+   "vat_purchase": false,
+   "detail": {
+    "urban_field": "Terreno urbanizable / Calificado para otra (tegenstrijdig met tekst 'urbanización')",
+    "equipment": "Electricidad",
+    "energy": "Inmueble exento",
+    "modification": "Anuncio actualizado hace más de un mes",
+    "agency": "Atina Inmobiliaria (ref. T-3481A)",
+    "duplicates": "≥10 Idealista-codes (500.000–550.000 €) + BP-feed 4676JAV (R15-verif. R15-06)"
+   },
+   "claims": [
+    "'En el precio de venta se incluye la licencia de obras del Ayuntamiento, las tasas, el aval bancario de la urbanización y el 70 % del proyecto. Todos estos conceptos están pagados' (1)",
+    "Project: woning op twee verdiepingen, 4 suites, aseo, lavadero, zwembad (1); BP-tekst 4676JAV: projectvilla ±310 m² (1, R15 §2B)",
+    "'Urbanización Garroferal del Montgó' (1)"
+   ],
+   "blockers": [
+    "HARDE UITSLUITING (Jan, 15-09-2026): 'aval bancario de la urbanización' wijst op een niet-opgeleverde urbanisatie; geen gebruik vóór oplevering en de voorwaarde gaat mee bij verkoop (2/4) — proef op K07 toetst precies dit [investeringskader; 01 §2.11]",
+    "Licentie niet gezien: nummer, datum, resterende termijn (zonder eigen termijn 6 mnd start / 24 mnd afbouw, daarna verval), overdraagbaarheid en herontwerp (= nieuwe licentie) ONBEKEND (7)",
+    "Idealista-veld 'Terreno urbanizable / Calificado para otra'; GVA-planlaag op de pin: plan parcial Ermita II (SUZ); BP-pin raakt ook SU — planklasse per perceel ONBEKEND (7)",
+    "PORN Montgó, zone 'Áreas urbanas y urbanizables', ZIF 500 m: rapport Conselleria voor grondverzet en aansluitingen (2/3); brandcartografie Xàbia 28-05-2026 (3/4)",
+    "Fiscaal: ITP 45.450 € óf btw 106.050 € + AJD 7.070 €, afhankelijk van de verkoper (5) — verkoper onbekend",
+    "Wordt breed en niet-exclusief aangeboden (≥10 codes, prijsspreiding 500–550k); BP-gegevens: contract/toestemming nodig; benadering alleen via partner en na akkoord van Jan"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/112280961/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)",
+    "bp": "Background Properties 4676JAV via lokale feed (R15 §4.2, 14-09-2026)"
+   },
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw projectvilla ±310 m² op licentie (claim)",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 310,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 150,
+     "result_m2": 310,
+     "comps_key": "villa_new",
+     "months": 18,
+     "vat_recoverable": true,
+     "notes": "18 maanden alleen als de geclaimde licentie geldig en overdraagbaar is; anders 24+ (nieuwe licentie). Vervalt geheel bij niet-opgeleverde urbanisatie (harde uitsluiting).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Bouwvolume 310 m² = claim uit de BP-tekst 4676JAV (1); Idealista-tekst noemt geen m². Ter controle: 0,20 × 1.570 = 314 m² (5).",
+      "Betaald project (70 %) en licentie: geen waarde toegekend en geen kosten bespaard in het model — architectkosten volledig meegerekend (conservatief, 5).",
+      "Zwembad in project (1) → nieuw zwembad opgenomen; buitenruimte 150 m² — standaardaanname (5).",
+      "Btw op bouw terugvorderbaar: koper is btw-plichtige entiteit en verkoopt met btw — aanname 4 (entiteit per deal, Jan)."
+     ]
+    }
+   ],
+   "lat": 38.7936,
+   "lon": 0.1214,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K08",
+   "code": "90705084",
+   "url": "https://www.idealista.com/es/inmueble/90705084/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "El Rafalet (Calle Mar Amarillo)",
+   "comps_zone": "rafalet_pinosol",
+   "type": "perceel",
+   "price_ask": 150000,
+   "price_drop": null,
+   "built_m2": 0,
+   "plot_m2": 1120,
+   "year": "n.v.t.",
+   "vat_purchase": false,
+   "detail": {
+    "plot_note": "veld 1.120 m², tekst '1000 m2' (tegenstrijdig)",
+    "urban_field": "Terreno urbanizable / Calificado para otra (tegenstrijdig met tekst 'parcela urbana')",
+    "topography": "elevada e inclinada (tekst)",
+    "energy": "Inmueble exento",
+    "modification": "Anuncio actualizado hace 10 días",
+    "agency": "Grupo García (ref. NC201823)",
+    "duplicate_bp": "mogelijk BP 4104JAV (150.000, 1.100 m²) — identiteit zwak (R15-verif. R15-07)"
+   },
+   "claims": [
+    "'parcela urbana… con licencia de construcción vigente' (1) — nummer/datum ontbreken",
+    "'planos de la villa aprobados' (1)",
+    "'la parcela pertenece actualmente a una sociedad limitada española (SL)' (1)",
+    "Hoofdfoto volgens aanbieder zelf 'generada por IA' (1)"
+   ],
+   "blockers": [
+    "Licentie niet gezien: geldigheid, termijnen, overdraagbaarheid ONBEKEND (7)",
+    "SL-eigendom: asset deal vs share deal; verborgen schulden/verplichtingen — nota simple op naam SL + uittreksel Registro Mercantil + fiscalist [01 §2.5 B2]",
+    "Btw-vraag: levering van bouwgrond door een vennootschap is in de regel btw-plichtig (21 % + AJD) in plaats van ITP — hier NIET als btw gerekend omdat verkoper/structuur niet aantoonbaar zijn; fiscalist bevestigen [te verifiëren]",
+    "GVA-planlaag op de pin: urbaniseerbare grond (SUZ), terwijl de advertentie 'parcela urbana' zegt (3) [01 §2.2]",
+    "Hellend perceel: keermuren 90–250 €/m² muurvlak en mogelijk PORN-rapport voor grondverzet (2) — buitenruimte 150 m² is dan te laag",
+    "Vraagprijs 150.000 € ligt onder Jan's budgetondergrens (500.000 €) — geen uitsluiting, wel buiten het zoekprofiel"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/90705084/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw villa ±224 m² op geclaimde licentie",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 224,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 150,
+     "result_m2": 224,
+     "comps_key": "villa_new",
+     "months": 18,
+     "vat_recoverable": true,
+     "notes": "18 maanden alleen bij geldige, overdraagbare licentie; het goedgekeurde ontwerp is niet gezien.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Geen bouwvolume in de advertentie; 224 m² = 0,20 × 1.120 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5); helling maakt keermuren waarschijnlijk (kosten niet begroot).",
+      "Btw op bouw terugvorderbaar — aanname 4 (entiteit per deal)."
+     ]
+    }
+   ],
+   "lat": 38.7621,
+   "lon": 0.1544,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K09",
+   "code": "109915149",
+   "url": "https://www.idealista.com/es/inmueble/109915149/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Pinomar - Pinosol (Urb. Pino Sol)",
+   "comps_zone": "rafalet_pinosol",
+   "type": "perceel",
+   "price_ask": 299000,
+   "price_drop": {
+    "former_price": 325000,
+    "drop_eur": 26000,
+    "drop_pct": 8,
+    "bron": "tekst noemt nog '325.000 €', prijsveld 299.000; geen priceDropInfo (stille verlaging, 3) 15-09-2026"
+   },
+   "built_m2": 0,
+   "plot_m2": 1299,
+   "year": "n.v.t.",
+   "vat_purchase": false,
+   "detail": {
+    "urban_field": "Terreno urbanizable / Calificado para residencial unifamiliar (chalets); Superficie edificable 259 m² (gecorrigeerd per R15-verif. R15-05)",
+    "equipment": "Agua, Electricidad",
+    "orientation": "zuid",
+    "energy": "Inmueble exento",
+    "modification": "Anuncio actualizado hace más de 3 meses",
+    "agency": "Orange Villas (ref. OV4419; eigen constructora/promotora)"
+   },
+   "claims": [
+    "'Suelo Urbano – Residencial Extensivo (Zona E, grado II)' (1)",
+    "'Edificabilidad 0,20 m²/m² (aprox. 259 m² construibles)', 'Ocupación máxima del 30%', 'PB + 1 planta', 'Parcela mínima 1.000 m²' (1)",
+    "'Orange Villas… cuenta con su propia constructora/promotora' (1)"
+   ],
+   "blockers": [
+    "Alle parameters zijn aanbiedersclaims; veld zegt 'urbanizable' terwijl de tekst 'suelo urbano' zegt (3/7) — informe urbanístico nodig",
+    "Buurperceel 111340209 (700 m², 149.000) rekent met andere parameters (20 % bezetting, 0,30 m²/m²) — minstens één klopt niet of de zones verschillen (7) [R15-verif. R15-08]",
+    "Mogelijke koppeling aan de constructora van de makelaar (gebonden bouwer?) — contractueel toetsen (7)",
+    "Veld 'A 5,0 km del núcleo urbano más cercano' (3)",
+    "Vraagprijs 299.000 € ligt onder Jan's budgetondergrens (500.000 €) — geen uitsluiting, wel buiten het zoekprofiel"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/109915149/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw villa 259 m² (geclaimde parameters)",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 259,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 150,
+     "result_m2": 259,
+     "comps_key": "villa_new",
+     "months": 24,
+     "vat_recoverable": true,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Bouwvolume 259 m² = claim aanbieder (0,20 × 1.299) én veld 'Superficie edificable 259 m²' (1); komt overeen met de zona-E-lezing (5).",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden incl. licentie — aanname 5.",
+      "Btw op bouw terugvorderbaar — aanname 4."
+     ]
+    }
+   ],
+   "lat": 38.7563,
+   "lon": 0.1856,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K10",
+   "code": "107655781",
+   "url": "https://www.idealista.com/es/inmueble/107655781/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Portichol - Balcón al Mar (Calle Sergei Rachmaninov)",
+   "comps_zone": "granadella_balcon",
+   "type": "perceel",
+   "price_ask": 45313,
+   "price_ask_note": "PAKKET: 725.000 € voor 16 kavels, alleen als geheel te koop (1). 45.313 € = 725.000 / 16, rekenkundig per kavel (5). Het pakket zelf valt binnen Jan's budget (500.000–1.000.000), de kavelprijs niet.",
+   "price_drop": {
+    "former_price": 904000,
+    "drop_eur": 179000,
+    "drop_pct": 20,
+    "bron": "priceDropInfo (pakket) 15-09-2026"
+   },
+   "built_m2": 0,
+   "plot_m2": 1111,
+   "plot_m2_note": "gemiddelde kavel 17.775 / 16 = 1.111 m² (5); kavels 1.000–1.422 m² volgens de tekst (1)",
+   "year": "n.v.t.",
+   "vat_purchase": true,
+   "vat_purchase_note": "Btw + AJD in plaats van ITP: dubbel 111869151 wordt aangeboden door Servihabitat (Idealista 'de bancos'), eigenaar volgens de servicer Sareb, 'sujetos a IVA', alleen voor professionals (1) [01 §1.1, §2.5, S78/S79]. Koppeling K10 = 111869151 = Sareb-perceel A rust op identieke cijfers (4).",
+   "detail": {
+    "urban_field": "Terreno urbanizable / Calificado para residencial unifamiliar (chalets) / 2 plantas edificables; Superficie edificable 3.554 m²",
+    "servicer_field": "Servihabitat: 'TERRENO URBANO NO CONSOLIDADO', sector 'PGOU UA BALCON AL MAR 1' (1) — tegenstrijdige planklasse",
+    "energy": "Inmueble exento",
+    "modification": "Anuncio actualizado hace 4 días",
+    "agency": "Leukante Realty S.L. (ref. SH0697); dubbel 111869151 = Servihabitat",
+    "isAuction": false
+   },
+   "claims": [
+    "'Se venden 16 suelos urbanizables… plan de reparcelación Ciudad La Guardia' (1)",
+    "'Edificabilidad máxima tras las gestiones y transformaciones pertinentes de 3.554 m2 en total, 222m2 de media por unidad' (1)",
+    "'Porcentaje de participación en el ámbito de 26,85 %' (1); kavels 1.000–1.422 m² (1)"
+   ],
+   "blockers": [
+    "PAKKET: alleen als geheel te koop (16 kavels, 725.000 €); per-kavel cijfers zijn rekenkundig (5)",
+    "ONBEKENDE herverkavelings- en urbanisatiekosten bij 26,85 % participatie in het ámbito — komen boven op de prijs; niet in het model (7)",
+    "Planklasse tegenstrijdig: 'urbanizable' (Idealista) tegenover 'urbano no consolidado', UA Balcón al Mar 1 (Servihabitat) (7); zonder programma/reparcelación geen bouwrecht (2) [01 §2.2, §2.5]",
+    "Doorlooptijd: deliverable 01 plaatst K10 op > 36 maanden (herverkaveling); de 24 maanden in het model zijn het kadermaximum, geen schatting (5)",
+    "Bankgrond (Sareb via Servihabitat): alleen voor professionals, btw-plichtig, transparantieperiode max. 20 kalenderdagen, belastingen en kosten boven op de prijs (1)",
+    "Omgeving: PATIVEL 'Litoral 1' rond el Portitxol (nieuwbouw verboden) en vernietigde homologación Portitxol nog in de GVA-laag — ligging van de 16 fincas t.o.v. die vlakken ONBEKEND (7) [01 §2.2]",
+    "Past alleen bij een expliciet ontwikkelmandaat van Jan (R15: watchlist); bouwcapaciteit 1 project tegelijk (kader)"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/107655781/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)",
+    "servicer": "Servihabitat Profesionales, perceel A Balcón al Mar (S79, 15-09-2026, via deliverable 01)"
+   },
+   "scenarios": [
+    {
+     "key": "N_villa",
+     "label": "Nieuwbouw villa ±222 m² per kavel (gemiddelde uit het pakket)",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 222,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 150,
+     "result_m2": 222,
+     "comps_key": "villa_new",
+     "months": 24,
+     "vat_recoverable": true,
+     "notes": "Per-kavel rekensom van een pakket dat alleen als geheel te koop is; urbanisatiekosten (26,85 % participatie) ONBEKEND en niet opgenomen; realistische doorlooptijd > 36 maanden (01).",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoop met btw 21 % + AJD (verkoper Sareb via Servihabitat, 1/4).",
+      "Bouwvolume 222 m² = claim aanbieder ('222m2 de media', 3.554 / 16) (1); komt overeen met 0,20 × 1.111 (5).",
+      "Kavelprijs 45.313 € = 725.000 / 16 (5). Urbanisatie-, herverkavelings- en aansluitkosten: ONBEKEND, niet begroot (7).",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "Doorlooptijd 24 maanden = kadermaximum; 01 §2.9 rekent > 36 maanden — het resultaat is dus te optimistisch (5).",
+      "Btw op bouw terugvorderbaar — aanname 4.",
+      "verkoopprijs uit de gecontroleerde nieuwbouwreeks van de hele wijk (deelreeks Balcón al Mar niet apart gecontroleerd en hoger)"
+     ],
+     "unknown_costs": [
+      "herverkaveling en urbanisatie (26,85 % aandeel in het plangebied)"
+     ]
+    }
+   ],
+   "lat": 38.7411,
+   "lon": 0.2175,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K11",
+   "code": "111856637",
+   "url": "https://www.idealista.com/es/inmueble/111856637/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "El Tosalet - Cap Martí (Carretera de la Guardia s/n)",
+   "comps_zone": "tosalet_adsubia",
+   "type": "perceel",
+   "price_ask": 229000,
+   "price_drop": {
+    "former_price": 336000,
+    "drop_eur": 107000,
+    "drop_pct": 32,
+    "bron": "priceDropInfo 15-09-2026"
+   },
+   "built_m2": 0,
+   "plot_m2": 2867,
+   "year": "n.v.t.",
+   "vat_purchase": false,
+   "detail": {
+    "urban_field": "Terreno urbano (solar) / Calificado para terciario comercial; Superficie edificable 299 m² (tegenstrijdig met tekst 'Dotacional')",
+    "energy": "Inmueble exento",
+    "modification": "Anuncio actualizado hace 21 horas",
+    "agency": "Pluricasa (Torremolinos)",
+    "isAuction": false
+   },
+   "claims": [
+    "Aanbieder zelf: 'La Calificación urbanística de la parcela es Dotacional. Servicio Público Administrativo Privado' (1)",
+    "'No se permite el uso residencial en la parcela' (1)",
+    "Toegestane gebruiken: 'docente, deportivo, socio-cultural, sanitario-asistencial, servicios públicos, administrativos y aparcamientos' (1); 299 m² bebouwbaar (veld)"
+   ],
+   "blockers": [
+    "Harde blokkade voor route A en B: geen woonbestemming volgens de aanbieder zelf (1) — afwijzen [R15 §2B; 01 §2.11]",
+    "Prijsdaling −32 % illustreert een dunne markt voor deze bestemming, geen kans ('prijsdaling ≠ kans')",
+    "Alleen opnieuw bekijken bij een eigen dotationeel exploitatieconcept van Jan (buiten dit kader)"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/111856637/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "geen",
+     "label": "Geen woonscenario (dotacional)",
+     "kind": "geen",
+     "renovation_m2": 0,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 0,
+     "comps_key": "geen",
+     "months": 0,
+     "vat_recoverable": false,
+     "notes": "geen woonbestemming",
+     "assumptions": [
+      "Aanbieder meldt zelf 'No se permite el uso residencial' (1); niet doorgerekend. comps_key 'geen' zodat het model geen verkoopwaarde toekent."
+     ]
+    }
+   ],
+   "lat": 38.7478,
+   "lon": 0.2061,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K12",
+   "code": "111364793",
+   "url": "https://www.idealista.com/es/inmueble/111364793/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "La Granadella - Costa Nova",
+   "comps_zone": "granadella_balcon",
+   "type": "renovatie",
+   "price_ask": 795000,
+   "price_drop": null,
+   "built_m2": 256,
+   "plot_m2": 2192,
+   "year": "1979",
+   "vat_purchase": false,
+   "detail": {
+    "built_note": "veld 256 m²; tekst '500 m² construidos, distribuidos en dos plantas' (tegenstrijdig: vermoedelijk 256 afgebouwd + ±244 casco)",
+    "usable_m2": 256,
+    "rooms": 6,
+    "bathrooms": 2,
+    "floors": 2,
+    "pool": false,
+    "heating": "geen",
+    "condition": "Segunda mano/para reformar",
+    "energy": "G",
+    "label": "Vistas al mar",
+    "modification": "Anuncio actualizado hace más de un mes",
+    "agency": "Engel & Völkers València (ref. W-048TXS)"
+   },
+   "claims": [
+    "'En la planta inferior encontramos una construcción sin terminar, de las mismas dimensiones que la vivienda principal' (1)",
+    "'500 m² construidos' (tekst) tegenover 256 m² (veld) (1/3)",
+    "'a tan solo 2 minutos caminando de la famosa cala'; 'crear apartamentos independientes' (1)",
+    "Dat de onderverdieping vergund is en binnen het bouwvolume valt — niet aangetoond (7)"
+   ],
+   "blockers": [
+    "SNU-P-signaal op de pin: testpunt P2 uit R13 (38,7312412 / 0,1934719) valt samen met de pin; kaartlaag geeft SNU-P, ZEC zone B, strategisch bosterrein, brandinterface 'Alta', brandperimeter 2016, 14 m van een barranco (3) [01 §2.11]",
+    "Op SNU verjaart handhaving van een bouwdeel zonder vergunning niet (art. 255.5) en minimización geeft nooit extra m² (231.3) (2) — waarde van afbouw én van sloop/nieuwbouw vervalt als de perceelgeometrie dit bevestigt",
+    "Legaliteit/registratie van de onafgebouwde onderverdieping (kadaster: welke m² staan geregistreerd?) en vergunningshistorie ONBEKEND (7)",
+    "Beschermingsstatus rond Granadella (ZEC/PORN) en brandstrookverplichting: geen officiële bron per perceel geraadpleegd (7)",
+    "Advies deliverable 01: watchlist tot de perceeltoets is gedaan (4)"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/111364793/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie bovenwoning 256 m² + nieuw zwembad",
+     "kind": "renovatie",
+     "renovation_m2": 256,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 256,
+     "comps_key": "villa_renovated_granadella",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "Nieuw zwembad alleen als de planklasse dat toelaat (SNU-P-signaal); onderverdieping blijft dan casco.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "256 m² = veld Idealista (1).",
+      "Geen zwembad in velden/tekst; nieuw zwembad opgenomen omdat het perceel (2.192 m²) dat toelaat — aanname 4, onder voorbehoud SNU-P.",
+      "verkoopprijs uit de specifiekere wijkreeks villa_renovated_granadella (15-09-2026)"
+     ]
+    },
+    {
+     "key": "R_plus",
+     "label": "Renovatie + afbouw onderverdieping tot ±500 m² (claim aanbieder)",
+     "kind": "renovatie_plus_uitbreiding",
+     "renovation_m2": 256,
+     "newbuild_m2": 244,
+     "demolition_m2": 0,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 500,
+     "comps_key": "villa_renovated_granadella",
+     "months": 20,
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als het casco vergund is en binnen het toegestane volume valt; op SNU-P vervalt dit scenario.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Uitbreiding 244 m² = tekstclaim 500 m² totaal minus 256 m² veld (1/5); 'mismas dimensiones' zou 256 m² betekenen.",
+      "Afbouw casco tegen nieuwbouwtarief 2.000 €/m² — conservatieve aanname (5); werkelijke afbouwkosten onbekend.",
+      "verkoopprijs uit de specifiekere wijkreeks villa_renovated_granadella (15-09-2026)"
+     ]
+    },
+    {
+     "key": "N_sloop",
+     "label": "Sloop en nieuwbouw villa ±438 m²",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 438,
+     "demolition_m2": 500,
+     "pool": true,
+     "pool_renovation": false,
+     "exterior_m2": 150,
+     "result_m2": 438,
+     "comps_key": "villa_new_granadella",
+     "months": 24,
+     "vat_recoverable": true,
+     "notes": "Op SNU-P is nieuwbouw met 0,20 uitgesloten; scenario alleen ter vergelijking zolang de planklasse niet vaststaat.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Nieuwbouwvolume min(0,20 × 2.192; 450) = 438 m² — Bouwvolume 0,20 m²t/m² netto = PGOU zona E — AANNAME (5); planklasse en grado van dit perceel niet bevestigd, informe urbanístico nodig.",
+      "Sloop 500 m² = bovenwoning 256 + casco van gelijke omvang (tekst 500 m²) — aanname 5.",
+      "Buitenruimte 150 m² en nieuw zwembad — standaardaanname (5).",
+      "verkoopprijs uit de specifiekere wijkreeks villa_new_granadella (15-09-2026)"
+     ]
+    }
+   ],
+   "lat": 38.7312,
+   "lon": 0.1935,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K13",
+   "code": "111439256",
+   "url": "https://www.idealista.com/es/inmueble/111439256/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad",
+   "comps_zone": "centro",
+   "type": "pand",
+   "price_ask": 520000,
+   "price_drop": null,
+   "built_m2": 487,
+   "plot_m2": null,
+   "year": "1968",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 487,
+    "rooms": 6,
+    "bathrooms": 4,
+    "floors": 3,
+    "pool": false,
+    "heating": "geen",
+    "condition": "Segunda mano/para reformar",
+    "energy": "G",
+    "label": "Vistas al mar",
+    "extra": "renders orientativos bijgevoegd; 'construcción adicional en estado de ruina' (m² onbekend)",
+    "modification": "Anuncio actualizado hace más de un mes",
+    "agency": "Engel & Völkers València (ref. W-049N5K)"
+   },
+   "claims": [
+    "'posibilidad de configurar hasta tres viviendas independientes' (1)",
+    "'construcción adicional actualmente en estado de ruina… previa consulta y verificación con el Ayuntamiento' (1)",
+    "'balcones con vistas al mar' (1); 'requiere una reforma integral' (1)"
+   ],
+   "blockers": [
+    "Casco: ZUR-NHT-regime (NUT begane grond + 1 + zolder vs PGOU II–V) en Cultura-toets (2/7) [01 §2.2]",
+    "Splitsing in 3 woningen: división horizontal, minimale woninggrootte en parkeernorm (PGOU: boven 4 woningen 0,6/woning [OCR]; bij 3 [te verifiëren]) (2/7)",
+    "Ruïne: bestemming (woning/parkeren/bergingen) en legaliteit ONBEKEND; m² niet vermeld (7)",
+    "Constructie 1968, 3 lagen, label G, geen verwarming: structurele renovatie kan op sloop/nieuwbouw uitlopen — constructeur nodig",
+    "Perceel-m² niet vermeld; kadastrale m² tegenover 487 m² advertentie toetsen"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/111439256/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 487 m² als één pand",
+     "kind": "renovatie",
+     "renovation_m2": 487,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 487,
+     "comps_key": "townhouse_renovated",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "487 m² gebouwd = veld Idealista (1); ruïne niet meegerekend.",
+      "Geen zwembad (casco) — aanname 4."
+     ]
+    },
+    {
+     "key": "R_split",
+     "label": "Integrale renovatie + verdeling in 3 appartementen (claim aanbieder)",
+     "kind": "renovatie",
+     "renovation_m2": 487,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 487,
+     "comps_key": "apartment_renovated",
+     "months": 18,
+     "vat_recoverable": false,
+     "notes": "Alleen geldig als ordenanza, parkeernorm en división horizontal het toelaten; verkoop per unit tegen appartement-comps.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "Drie eenheden = claim aanbieder (1); gemeenschappelijke ruimte niet afgetrokken van 487 m² (5).",
+      "Doorlooptijd 18 maanden i.v.m. división horizontal en licentie — aanname 5."
+     ],
+     "units": 3
+    }
+   ],
+   "lat": 38.7921,
+   "lon": 0.1658,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  },
+  {
+   "id": "K14",
+   "code": "108456665",
+   "url": "https://www.idealista.com/es/inmueble/108456665/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+   "zone": "Centro Ciudad (Calle de la Mare de Déu dels Àngels)",
+   "comps_zone": "centro",
+   "type": "pand",
+   "price_ask": 650000,
+   "price_drop": null,
+   "built_m2": 434,
+   "plot_m2": 310,
+   "year": "1970",
+   "vat_purchase": false,
+   "detail": {
+    "usable_m2": 434,
+    "rooms": 8,
+    "bathrooms": 3,
+    "floors": 2,
+    "pool": false,
+    "garage": "Plaza de garaje incluida en el precio",
+    "condition": "Segunda mano/para reformar",
+    "energy": "G (382,6 kWh/m²·jr)",
+    "orientation": "zuid, oost, west",
+    "modification": "Anuncio actualizado hace más de 3 meses",
+    "agency": "Grupo en la Mar (ref. DRE 24 JVEA-25)",
+    "isAuction": false
+   },
+   "claims": [
+    "'el edificio esta en ordenanza A CASCO' (1)",
+    "'No tiene necesidad de reserva de aparcamiento y pueden construirse 4 alturas. Bajo +3 y bajocubierta' (1)",
+    "'como la unidad mínima es de 100 metros cuadrados por vivienda salen 12 viviendas' (1)"
+   ],
+   "blockers": [
+    "Parkeereis: volgens het PGOU geldt boven 4 woningen 0,6 plaats per woning [OCR] — botst met 'no tiene necesidad de reserva' bij 12 woningen (2/7) [01 §2.11]",
+    "NHT-regime: NUT gaven begane grond + 1 + zolder, PGOU per blok II–V; GVA-laag op de pin: SU, ZUR-NHT (3/7); Cultura-toets bij sloop/opbouw (2)",
+    "Rekenkundig: 12 × 100 m² = 1.200 m² op 310 m² perceel vraagt ±97 % bebouwing per laag over vier lagen (5)",
+    "Advies deliverable 01: watchlist; risico 'Hoog (claim botst met de regeltekst)'; eerst informe urbanístico met de exacte ordenanza en het aantal bouwlagen voor dit blok",
+    "Constructie 1970, label G: bij herontwikkeling sloop/nieuwbouw; bij afwijzing van de claim resteert een gewone renovatie op 650.000 €"
+   ],
+   "bron": {
+    "tool": "Idealista-assistent property_detail (locale es-ES, country es), 15-09-2026",
+    "url": "https://www.idealista.com/es/inmueble/108456665/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+    "outcome": "active",
+    "bewijstype": "1 (inhoud advertentie) / 3 (bestaan en velden)"
+   },
+   "scenarios": [
+    {
+     "key": "R_integraal",
+     "label": "Integrale renovatie 434 m² als één pand",
+     "kind": "renovatie",
+     "renovation_m2": 434,
+     "newbuild_m2": 0,
+     "demolition_m2": 0,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 434,
+     "comps_key": "townhouse_renovated",
+     "months": 15,
+     "vat_recoverable": false,
+     "notes": "",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "434 m² gebouwd = veld Idealista (1).",
+      "Geen zwembad (casco) — aanname 4."
+     ]
+    },
+    {
+     "key": "N_herontwikkeling",
+     "label": "Sloop en nieuwbouw 12 appartementen ±1.200 m² (claim aanbieder)",
+     "kind": "nieuwbouw",
+     "renovation_m2": 0,
+     "newbuild_m2": 1200,
+     "demolition_m2": 434,
+     "pool": false,
+     "pool_renovation": false,
+     "exterior_m2": 0,
+     "result_m2": 1200,
+     "comps_key": "apartment_new",
+     "months": 24,
+     "vat_recoverable": true,
+     "notes": "Alleen geldig als ordenanza A casco, 4 bouwlagen en het ontbreken van een parkeereis schriftelijk worden bevestigd; deliverable 01 acht de claim strijdig met de regeltekst.",
+     "assumptions": [
+      "Vraagprijs van één aanbieder op één dag (15-09-2026), géén transactieprijs.",
+      "Bouwkosten renovatie 1.000 €/m² en nieuwbouw 2.000 €/m² excl. btw: opgave Jan (investeringskader 15-09-2026, bewijstype 3); geen offerte.",
+      "Aankoopbelasting: ITP verondersteld (verkoper niet aantoonbaar btw-plichtig) — aanname 4.",
+      "12 woningen × 100 m² = 1.200 m² = claim aanbieder (1); volledige sloop verondersteld (5).",
+      "Verkoop als nieuwbouwappartementen (apartment_new, centro) met btw; btw op bouw terugvorderbaar — aanname 4.",
+      "Doorlooptijd 24 maanden = kadermaximum; 01 §2.9 plaatst herontwikkeling op > 36 maanden (5).",
+      "Gemeenschappelijke ruimte niet afgetrokken van 1.200 m² (5)."
+     ],
+     "units": 12
+    }
+   ],
+   "lat": 38.7899,
+   "lon": 0.1638,
+   "pin_note": "benaderende advertentiepin uit R15 (14-09-2026); geen perceelidentificatie"
+  }
+ ]
+}

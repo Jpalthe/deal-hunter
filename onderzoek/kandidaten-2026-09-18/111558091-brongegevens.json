@@ -1,0 +1,106 @@
+{
+  "_toelichting": "Velden zoals teruggegeven door de officiele Idealista-assistent (MCP property_detail) op 18-09-2026. Telefoonnummer van het kantoor is bewust niet overgenomen (regel: geen persoonsgegevens/telefoonnummers in dossiers). Foto-URL's ingekort tot het aantal en de tags.",
+  "_opgehaald": "2026-09-18",
+  "_tool": "mcp property_detail, propertyCode 111558091, locale nl-NL, country es",
+  "outcome": "active",
+  "propertyCode": "111558091",
+  "url": "https://www.idealista.com/inmueble/111558091/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_detail",
+  "price": 775000,
+  "priceInfo": {
+    "price": {
+      "amount": 775000,
+      "currencySuffix": "€",
+      "priceDropInfo": {
+        "formerPrice": 797000,
+        "priceDropValue": 22000,
+        "priceDropPercentage": 3
+      }
+    }
+  },
+  "priceByArea": 2279,
+  "size": 340,
+  "areas": { "usableArea": 340 },
+  "rooms": 3,
+  "bathrooms": 3,
+  "status": "good",
+  "detailedType": { "typology": "chalet", "subTypology": "independantHouse" },
+  "labels": [ { "name": "villaType", "text": "Villa" } ],
+  "suggestedTexts": {
+    "title": "Casa o chalet independiente en venta en Monte Olimpo",
+    "subtitle": "Jávea/Xàbia, Marina Alta, Alicante"
+  },
+  "latitude": 38.7527082,
+  "longitude": 0.156081,
+  "showAddress": false,
+  "features": {
+    "hasAirConditioning": true,
+    "hasTerrace": true,
+    "hasSwimmingPool": true,
+    "hasParking": true,
+    "hasBoxRoom": true,
+    "hasWardrobe": true,
+    "hasGreenZones": true
+  },
+  "parkingSpace": { "hasParkingSpace": true, "isParkingSpaceIncludedInPrice": true },
+  "energyCertification": {
+    "title": "Certificado energético",
+    "consumption": { "type": "g", "prefix": "Consumo:" }
+  },
+  "characteristicsDescriptions": [
+    {
+      "key": "features",
+      "title": "Características básicas",
+      "phrases": [
+        "Casa independiente",
+        "2 plantas",
+        "340 m² construidos",
+        "3 habitaciones",
+        "3 baños",
+        "Parcela de 3000 m²",
+        "Terraza y balcón",
+        "Plaza de garaje incluida en el precio",
+        "Segunda mano/buen estado",
+        "Armarios empotrados",
+        "Trastero",
+        "Orientación sur",
+        "Construido en 2001"
+      ]
+    },
+    {
+      "key": "equipment",
+      "title": "Equipamiento",
+      "phrases": [ "Aire acondicionado", "Piscina", "Jardín" ]
+    },
+    {
+      "key": "costs",
+      "title": "Precio",
+      "phrases": [ "Precio del inmueble: 775.000 €", "Precio por m²: 2.279 €/m²" ]
+    }
+  ],
+  "modificationDateText": "Anuncio actualizado hace 13 días",
+  "contactInfo": {
+    "userType": "professional",
+    "professional": true,
+    "commercialName": "Blue Square Spain",
+    "externalReference": "ES-JAV-018070",
+    "agencyAddress": "Moraira",
+    "micrositeUrl": "https://www.idealista.com/pro/bluesquarespain/?utm_medium=generativeAI&utm_campaign=appChatgpt&utm_creation=link&utm_source=idGpt&utm_project=leadGeneration&utm_link=inChat_microsite",
+    "_telefoon": "niet overgenomen"
+  },
+  "fotos": {
+    "aantal": 37,
+    "tags": {
+      "swimmingPool": 7,
+      "terrace": 6,
+      "livingRoom": 6,
+      "bedroom": 5,
+      "facade": 6,
+      "kitchen": 3,
+      "bathroom": 3,
+      "communalareas": 1,
+      "unknown": 2
+    },
+    "_opmerking": "Geen enkele foto is getagd als garage, sotano, trastero of naya. Geen plattegrond in de reeks."
+  },
+  "description_es": "Situado a poca distancia de la playa del Arenal de Jávea esta villa cuenta con una gran parcela plana.\n\nLa propiedad se accede a través de puertas eléctricas a una grande entrada de hormigón impreso que rodea la propiedad en el frente, y los lados proporcionando aparcamiento fuera de la calle para un montón de coches y acceso al garaje y al sótano.\nLos pasos conducen a la terraza cubierta acristalada (Naya) con vistas al campo, a la montaña del Montó y al jardín trasero, la puerta principal conduce al salón comedor.\n\nEl salón comedor tiene una chimenea, escaleras que bajan a la planta baja, puerta que da a la cocina y un arco a las habitaciones y el baño, puertas correderas de patio en la parte trasera que dan a la terraza trasera con vistas al jardín y escaleras que bajan.\n\nLa cocina es luminosa y espaciosa con ventanas al frente y al lado, hay espacio para una mesa de comedor y sillas y una barra de desayuno adicional.\n\nHay dos dormitorios dobles que comparten un baño familiar y luego el dormitorio principal de buen tamaño tiene una ducha ensuite.\n\nEl jardín en la parte trasera está cerrado con una zona de césped, patio pavimentado con parte cubierta que conduce a la piscina de entrada de la playa. Los jardines están plantados con una variedad de palmeras y arbustos. Al final de la piscina hay una gran cocina de verano con aseo de invitados. La cocina de verano es un gran espacio de ocio con barbacoa, horno de leña para pizzas, horno convencional y vitrocerámica, además de espacio para un lavavajillas y un gran frigorífico.\n\nEn la parte trasera de la cocina de verano,una parte adicional de la parcela se puede acceder a través de una puerta. Esta zona es perfecta para cultivar sus propias frutas, verduras y ensaladas.\n\nDebajo de la villa hay un gran garaje, además de una zona que está lista para ser convertida en espacio de vida adicional al que se puede acceder desde el nivel principal de la villa si es necesario.\n\nJávea es un excelente lugar para vivir de forma permanente con dos escuelas internacionales cerca.\n\nJávea, situada en la costa norte de la Costa Blanca, es una ciudad muy apreciada para residir permanentemente o como lugar de vacaciones para visitantes nacionales y extranjeros, la ciudad tiene la espectacular montaña del Montó como telón de fondo. Jávea tiene un casco antiguo con sus típicas calles estrechas que conducen a casas y apartamentos tradicionales, el puerto con la flota pesquera, la playa de piedras y el Arenal con su playa de arena.\nHay una gran cantidad de restaurantes y bares que sirven a los mejores platos tradicionales como la paella, cocina internacional y cocina con estrellas Michelin."
+}

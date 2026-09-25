@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TREE Deal Hunter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">TREE</span><span class="brand-name">Deal Hunter</span></div>
+  <div class="runinfo" id="runinfo">Laden…</div>
+  <div class="sources" id="sources"></div>
+</header>
+
+<section class="kpis" id="kpis" aria-label="Kerncijfers"></section>
+
+<div class="viewswitch" role="tablist" aria-label="Weergave">
+  <button class="vs on" data-view="lijst" role="tab" aria-selected="true">Lijst</button>
+  <button class="vs" data-view="kaart" role="tab" aria-selected="false">Kaart</button>
+</div>
+
+<main class="workspace">
+  <aside class="sidebar" aria-label="Objecten en filters">
+    <nav class="tabs" role="tablist">
+      <button role="tab" class="tab active" data-tab="objecten">Objecten</button>
+      <button role="tab" class="tab" data-tab="veilingen">Veilingen</button>
+      <button role="tab" class="tab" data-tab="wijken">Wijken</button>
+      <button role="tab" class="tab" data-tab="rapporten">Rapporten</button>
+    </nav>
+
+    <div class="tabpanel" data-panel="objecten">
+      <div class="filters">
+        <input type="search" id="q" placeholder="Zoek op referentie, wijk of signaal" aria-label="Zoeken">
+        <div class="chipgroup" id="f-area" aria-label="Gebied"></div>
+        <div class="chipgroup" id="f-cat" aria-label="Categorie"></div>
+        <div class="chipgroup" id="f-class" aria-label="Kansrijkheid"></div>
+        <div class="row">
+          <label class="toggle"><input type="checkbox" id="f-new"> Nieuw of gewijzigd (7 dagen)</label>
+          <label class="toggle"><input type="checkbox" id="f-open"> Nog niet beoordeeld</label>
+        </div>
+        <div class="row">
+          <label class="toggle"><input type="checkbox" id="f-ideal"> Alleen kandidaten Idealista</label>
+          <label class="toggle"><input type="checkbox" id="f-loss"> Ook objecten met verlies</label>
+          <select id="sort" aria-label="Sorteren">
+            <option value="room">Meeste onderhandelingsruimte</option>
+            <option value="price">Laagste vraagprijs</option>
+            <option value="new">Nieuwste eerst</option>
+          </select>
+        </div>
+      </div>
+      <div class="listmeta" id="listmeta"></div>
+      <div class="cards" id="cards"></div>
+    </div>
+
+    <div class="tabpanel" data-panel="veilingen" hidden><div id="auctions"></div></div>
+    <div class="tabpanel" data-panel="wijken" hidden><div id="zones"></div></div>
+    <div class="tabpanel" data-panel="rapporten" hidden><div id="reports"></div></div>
+  </aside>
+
+  <section class="mapwrap" aria-label="Kaart">
+    <div id="map"></div>
+    <div class="legend" id="legend"></div>
+    <aside class="drawer" id="drawer" aria-label="Dossier" hidden>
+      <button class="drawer-close" id="drawer-close" aria-label="Sluiten">×</button>
+      <div id="drawer-body"></div>
+    </aside>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

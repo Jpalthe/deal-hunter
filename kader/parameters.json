@@ -1,0 +1,307 @@
+{
+  "versie": "2026-09-18b",
+  "values": {
+    "itp_rate": 0.09,
+    "itp_rate_above_threshold": 0.11,
+    "itp_threshold": 1000000,
+    "vat_purchase_rate": 0.21,
+    "ajd_rate": 0.014,
+    "notary_registry_pct": 0.004,
+    "legal_dd_eur": 5000,
+    "technical_dd_eur": 2500,
+    "demolition_eur_per_m2": 60,
+    "pool_new_eur": 17000,
+    "pool_renovation_eur": 8000,
+    "exterior_eur_per_m2": 150,
+    "architect_pct_of_pem": 0.06,
+    "aparejador_pct_of_pem": 0.02,
+    "icio_pct_of_pem": 0.04,
+    "tasa_licencia_pct_of_pem": 0.02,
+    "surveys_geotech_eur": 5000,
+    "surveys_renovation_eur": 2000,
+    "contingency_pct": 0.1,
+    "vat_construction_rate": 0.1,
+    "vat_renovation_rate": 0.21,
+    "holding_eur_per_month": 400,
+    "agent_commission_pct": 0.05,
+    "commission_vat_rate": 0.21,
+    "plusvalia_pct_of_sale": 0.01,
+    "selling_misc_eur": 3000,
+    "kitchen_eur": 8000,
+    "kitchen_eur_high": 19000,
+    "bathroom_eur": 6000,
+    "skp_margin_pct": 0.3,
+    "internal_selling_cost_pct": 0.015,
+    "bathroom_eur_high": 12000,
+    "fitout_overlap_eur_per_m2": 115,
+    "earthworks_light_eur": 15000,
+    "earthworks_steep_eur": 50000,
+    "finance_rate_default": 0.15,
+    "finance_fee_pct": 0.0
+  },
+  "sources": {
+    "itp_rate": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §1.1 (Ley 13/1997 CV art. 13.Uno, BOE-A-1998-8202; Ley 5/2025 art. 33; ATV-tabel modelo 600 code TU1) · bevestigd in onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-01 (https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1998-8202/texto/bloque/a13 · https://atv.gva.es/es/itpajd)",
+      "datum": "15-09-2026",
+      "bewijstype": "2",
+      "aanname": false,
+      "toelichting": "9 % voor belastbare feiten vanaf 01-06-2026 (was 10 %). Geen verlaagd tarief voor koop-voor-wederverkoop (R14 §1.2; R14V F4: alleen 8 % vestigingszetel en bonificatie art. 14 bis.Tres bij inruil, niet bij veilingen). Grondslag = hoogste van prijs en valor de referencia (art. 10.2 TRLITPAJD, R14 §1.5) — het script rekent alleen met de prijs; per kandidaat de valor de referencia opvragen."
+    },
+    "itp_rate_above_threshold": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §1.1 (art. 13.Uno Ley 13/1997: 'superior a un millón de euros … 11 %'; ATV code TUM) · bevestigd in onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-01",
+      "datum": "15-09-2026",
+      "bewijstype": "2",
+      "aanname": false,
+      "toelichting": "11 % over de HELE grondslag, geen schijf: 1.000.001 € kost 110.000 € tegenover 90.000 € bij 1.000.000 € (R14 §2.2). Art. 13.Ocho: aankopen van dezelfde finca van dezelfde verkoper binnen 3 jaar tellen als één transmissie."
+    },
+    "itp_threshold": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §1.1 (art. 13.Uno Ley 13/1997) · bevestigd in onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-01",
+      "datum": "15-09-2026",
+      "bewijstype": "2",
+      "aanname": false,
+      "toelichting": "Drempel 1.000.000 € grondslag (max(prijs, valor de referencia)). Het script toetst 'price > threshold', conform 'superior a'."
+    },
+    "vat_purchase_rate": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §1.4 en §1.7 (Ley 37/1992 art. 20.Uno.20º en 90.Uno: solares/bouwrijpe grond van een ondernemer 21 % + AJD 1,4 %) · bevestigd in onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-06 (ook 'terrenos urbanizados o en curso de urbanización' niet vrijgesteld)",
+      "datum": "15-09-2026",
+      "bewijstype": "2",
+      "aanname": false,
+      "toelichting": "Geldt voor perceel/bouwgrond van een btw-plichtige verkoper (route B). Let op: het script kent één tarief. Voor een WONING van een ondernemer met afstand van vrijstelling geldt 10 % + AJD 2 % (R14V F1, art. 91.Uno.1.7º) en voor een nieuwbouwwoning van een promotor 10 % + AJD 1,4 %. Btw op grond is aftrekbaar voor een promotor-SL die met btw verkoopt (R14 §1.7, type 4) — het script telt hem als kosten; dat is de voorzichtige kant."
+    },
+    "ajd_rate": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §1.3 (Ley 13/1997 art. 14.Cuatro 'en los demás casos 1,4 %'; Ley 5/2025 art. 34; ATV codes DN2/DN4) · bevestigd in onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-02 (…/bloque/a14)",
+      "datum": "15-09-2026",
+      "bewijstype": "2",
+      "aanname": false,
+      "toelichting": "1,4 % vanaf 01-06-2026 (was 1,5 %). Bij afstand van de btw-vrijstelling (art. 20.Dos LIVA) 2 % (art. 14.Dos; ATV DA4). Grondslag AJD bij declaración de obra nueva/división horizontal (route B) is niet vastgesteld (R14 §1.3, type 7)."
+    },
+    "notary_registry_pct": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §2.1–2.2 en §2.2 rekenvoorbeeld (RD 1426/1989 Anexo I Nº 2 en RD 1427/1989 Nº 2, −5 % RDL 8/2010: 500.000 € → 483,01 + 262,40 €; 1.000.000 € → 644,71 + 367,00 €) · nagerekend in onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-08 · R14 §2.1 'reken indicatief het dubbele van Número 2' (aanname 5) · btw 21 % [te verifiëren] (R14 §2.1, §7 vraag 4) · gestoría ONBEKEND (R14 §2.3)",
+      "datum": "15-09-2026",
+      "bewijstype": "5",
+      "aanname": true,
+      "toelichting": "AANNAME (afgeleid uit type-2-schaal): matriz + inschrijving ×2 (folios, kopieën) ×1,21 btw = ≈ 1.800 € (0,36 %) bij 500 k€ en ≈ 2.450 € (0,24 %) bij 1 M€; 0,4 % dekt beide binnen het koopbudget en laat ruimte voor een gestoría-stelpost. Notaris + register alleen zijn < 0,2 % (R14 §2.2)."
+    },
+    "legal_dd_eur": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §2.3 (advocaat/due diligence: geen gepubliceerde tarieven; art. 14 Ley 2/1974 verbiedt baremos; ONBEKEND, offerte) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-09 (verbod geldt colegios, niet bedrijven) · enige bron-component: nota simple 9,02 € + btw per finca (onderzoek/R11-catastro-registro-perceelidentificatie.verificatie.md A3; 05-bouwplan-fase-b-mvp.md §6.7)",
+      "datum": "15-09-2026",
+      "bewijstype": "4",
+      "aanname": true,
+      "toelichting": "AANNAME: stelpost juridische due diligence per aankoop (nota simple, lasten, urbanistische controle, contracten, begeleiding akte) door de vaste advocaat, exclusief btw. Te vervangen door de offerte van de vaste advocaat (deliverable 04 §7, actie 3)."
+    },
+    "technical_dd_eur": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §2.3 en §7 (geen bron voor technische keuring) · 05-bouwplan-fase-b-mvp.md §6.7 en poort 2 (informe urbanístico/cédula: tasa ONBEKEND; architect: offerte) · onderzoek/R12-urbanisme-xabia-plan-en-vergunning.md leges-tabel (tasa cédula/informe ONBEKEND)",
+      "datum": "15-09-2026",
+      "bewijstype": "4",
+      "aanname": true,
+      "toelichting": "AANNAME: stelpost technische keuring vóór aankoop (bezoek vaste architect, constructieve opname, informe urbanístico of cédula de garantía urbanística incl. gemeentelijke tasa), exclusief btw. Te vervangen door offerte van de vaste architect."
+    },
+    "demolition_eur_per_m2": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §4.3 (habitissimo demoliciones, bijgewerkt 10-06-2026: gemiddeld 50 €/m², band 10–90 €/m², machinaal vanaf 60 €/m²; https://www.habitissimo.es/presupuestos/demolicion) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-17 (bedragen bevestigd; btw-status niet vermeld)",
+      "datum": "15-09-2026",
+      "bewijstype": "1",
+      "aanname": true,
+      "toelichting": "AANNAME: bovengrens van de landelijke band gekozen, omdat het Jávea-villasegment (hellend terrein, afvoer, kelders) naar verwachting boven de landelijke gemiddelden ligt (R14 §4.3 waarschuwing, type 4). Btw-status van de bron onbekend; behandeld als exclusief btw. Te vervangen door nacalculatie van Jan."
+    },
+    "pool_new_eur": {
+      "bron": "onderzoek/N05-bouwkosten-keuken-badkamer.md (18-09-2026), met bronvermelding per bedrag in dat rapport",
+      "datum": "18-09-2026",
+      "bewijstype": "6",
+      "aanname": false,
+      "toelichting": "N05 §0: zwembad 8×4 m gebouwd, inclusief techniek en randterras, band 20.000–30.000 € middensegment."
+    },
+    "pool_renovation_eur": {
+      "bron": "Geen bron in onderzoek/R14-financieel-fiscaal-kostenkengetallen.md, onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md of de deliverables (post niet onderzocht)",
+      "datum": "15-09-2026",
+      "bewijstype": "4",
+      "aanname": true,
+      "toelichting": "AANNAME zonder bron: stelpost voor het opknappen van een bestaand zwembad (bekleding, pomp/filter, randen), exclusief btw. Offerte of nacalculatie nodig; tot dan alleen als stelpost gebruiken."
+    },
+    "exterior_eur_per_m2": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §4.3 (habitissimo muros de contención, bijgewerkt 16-09-2024: gemiddeld 150 €/m² muurvlak, band 90–250 €/m²; https://www.habitissimo.es/presupuestos/muro-contencion) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-17 (bedragen bevestigd; btw niet vermeld)",
+      "datum": "15-09-2026",
+      "bewijstype": "5",
+      "aanname": true,
+      "toelichting": "AANNAME: het keermuur-gemiddelde per m² MUURVLAK is als proxy gebruikt voor buitenruimte per m² TERREIN (terrassen, keermuren, verharding); voor tuin- en terrasaanleg zelf is in R14 geen kengetal. Exclusief btw. Te vervangen door nacalculatie van Jan (R14 §4.4 punt 5)."
+    },
+    "architect_pct_of_pem": {
+      "bron": "Jan, gesprek 15-09-2026: architect en aparejador samen ongeveer 8 % van de bouwsom (praktijk TREE)",
+      "datum": "15-09-2026",
+      "bewijstype": "3",
+      "aanname": false,
+      "toelichting": "Verdeling 6 % architect / 2 % aparejador is een rekenkundige splitsing; alleen het totaal van 8 % is door Jan opgegeven. Vorige waarde 12 % + 5 % (landelijke bovengrens)."
+    },
+    "aparejador_pct_of_pem": {
+      "bron": "Jan, gesprek 15-09-2026: architect en aparejador samen ongeveer 8 % van de bouwsom (praktijk TREE)",
+      "datum": "15-09-2026",
+      "bewijstype": "3",
+      "aanname": false,
+      "toelichting": "Verdeling 6 % architect / 2 % aparejador is een rekenkundige splitsing; alleen het totaal van 8 % is door Jan opgegeven. Vorige waarde 12 % + 5 % (landelijke bovengrens)."
+    },
+    "icio_pct_of_pem": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-13 (weerlegging van 'ONBEKEND') en aanvullende bevinding 1: Ministerio de Hacienda SGFAL 'Consulta Información Impositiva Municipal' rij 03-082 Jávea/Xàbia ICIO 4,00 % (2025 en 2026) — https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/ImpuestosExcel.aspx?provincia=TODAS&anosel=2026 · onderzoek/R12-urbanisme-xabia-plan-en-vergunning.md leges-tabel en onderzoek/R12-urbanisme-xabia-plan-en-vergunning.verificatie.md R12-13 (Hacienda-pdf 2025/2026 zelf gelezen: '03-082 Jávea/Xàbia 4,00') · grondslag PEM excl. btw/tasas/honoraria/winst: art. 102 TRLRHL (onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §4.2)",
+      "datum": "15-09-2026",
+      "bewijstype": "2",
+      "aanname": false,
+      "toelichting": "4 % = wettelijk maximum (art. 102.3 TRLRHL) en tevens het door de gemeente aan Hacienda gemelde tarief. De ordenanza zelf is niet gezien (R14V §3); bevestiging via BOP/Xàbia Gestió Tributària wenselijk. Het script rekent ICIO over de benaderde PEM (bouwkosten van Jan + sloop/zwembad/buitenruimte)."
+    },
+    "tasa_licencia_pct_of_pem": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §4.2 en onderzoek/R12-urbanisme-xabia-plan-en-vergunning.md leges-tabel: tasa por licencia urbanística Xàbia ONBEKEND (type 7; ordenanzas alleen handmatig via xabia.sedelectronica.es, onderzoek/R12-urbanisme-xabia-plan-en-vergunning.verificatie.md R12-14/A5: rubriek '2.3.4. Tasas (27)') · afgeleid uit onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md aanvullende bevinding 7 (habitissimo: 'licencias + ICIO alrededor de un 6% del PEM') minus ICIO 4 %",
+      "datum": "15-09-2026",
+      "bewijstype": "5",
+      "aanname": true,
+      "toelichting": "AANNAME (berekening op een type-1-indicatie): 6 % − 4 % = 2 % van de PEM voor tasa licencia/DR. Geen Xàbia-bron. ⏸️ ACTIE VOOR JAN: ordenanza tasas licencias urbanísticas opvragen bij Xàbia Gestió Tributària of Urbanismo (deliverable 01 actie 6)."
+    },
+    "surveys_geotech_eur": {
+      "bron": "Geen bedrag in onderzoek/R14-financieel-fiscaal-kostenkengetallen.md; onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §6.2 noemt geotechniek en topografie alleen als ONBEKEND onderdeel van de honoraria · 01-acquisitiekader-javea.md §2.6 (hellend perceel: 'topografie en geotechnisch onderzoek; kostenpost')",
+      "datum": "15-09-2026",
+      "bewijstype": "4",
+      "aanname": true,
+      "toelichting": "AANNAME zonder bron: stelpost geotechnisch onderzoek + topografische opname voor nieuwbouw (route B), exclusief btw. Te vervangen door offerte via de vaste architect."
+    },
+    "surveys_renovation_eur": {
+      "bron": "Geen bron in onderzoek/R14-financieel-fiscaal-kostenkengetallen.md, onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md of de deliverables",
+      "datum": "15-09-2026",
+      "bewijstype": "4",
+      "aanname": true,
+      "toelichting": "AANNAME zonder bron: stelpost constructieve opname/opmeting bestaande villa vóór renovatie (naast de technische keuring bij aankoop), exclusief btw. Offerte nodig."
+    },
+    "contingency_pct": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §6.1 (risicoreserve '% van bouw + honoraria — input Jan (werkhypothese 10 %)', type 5) en §6.4 testuitvoer (reserve 10 %) · 01-acquisitiekader-javea.md §2.4 rekenvoorbeeld",
+      "datum": "15-09-2026",
+      "bewijstype": "5",
+      "aanname": true,
+      "toelichting": "AANNAME/werkhypothese uit R14, niet door Jan bevestigd. Het script rekent de reserve over PEM + honoraria (zonder btw), zoals R14 §6.1 beschrijft."
+    },
+    "vat_construction_rate": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §1.4 en §6.2 (Ley 37/1992 art. 91.Uno.3.1º: bouw-/rehabilitatiecontract promotor–aannemer voor gebouwen ≥ 50 % woning → 10 %) · bevestigd in onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-06 (…/bloque/a91)",
+      "datum": "15-09-2026",
+      "bewijstype": "2",
+      "aanname": false,
+      "toelichting": "10 % geldt voor de aanneemsom van een woning (route B). Honoraria dragen 21 % (R14V A7); zwembad/keermuren/aansluitingen 10 % of 21 % [te verifiëren per post] (R14 §6.2). Het script past één tarief toe op PEM + honoraria + onderzoeken + reserve; bij verkoop met btw (vat_recoverable=true, promotor-SL) is de btw geen kostenpost en speelt het tarief niet (R14 §6.2, type 4)."
+    },
+    "vat_renovation_rate": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §1.4 rij 'Renovatie voor een vennootschap die niet aan de rehabilitación-definitie voldoet: 21 % (art. 90 LIVA; voorwaarden art. 91.Uno.2.10º: destinatario = persona física)' en §6.1 ('21 % voor vennootschap; niet-aftrekbaar als verkoop btw-vrij') · onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-06 en R14-07 · 01-acquisitiekader-javea.md §2.4 ('Route A via een SL: 21 % bouw-btw is een echte kostenpost, tenzij de rehabilitatieroute past [fiscalist]')",
+      "datum": "15-09-2026",
+      "bewijstype": "2 (tarief) / 4 (toepassing op de structuur)",
+      "aanname": false,
+      "toelichting": "KEUZE 21 %: een vennootschap die een tweedehands woning renoveert en zonder btw (tweede levering, vrijgesteld → koper betaalt ITP) doorverkoopt, betaalt 21 % op de renovatie en kan die niet aftrekken. WANNEER 10 % (niet gekozen, per scenario te overschrijven via renovation_vat_rate): (a) art. 91.Uno.2.10º — opdrachtgever is een natuurlijk persoon voor eigen gebruik of een VvE, woning ≥ 2 jaar opgeleverd, materiaal ≤ 40 % van de grondslag; (b) art. 91.Uno.3.1º + 20.Uno.22º.B — de werken tellen als 'rehabilitación' (> 50 % van de kosten voor structuur/gevel/dak of analoge werken én totale kosten > 25 % van de aankoopprijs zonder grondaandeel, aankoop < 2 jaar vóór de start, anders marktwaarde): dan 10 % op het contract promotor–aannemer, de verkoop wordt weer een eerste levering met 10 % btw en de bouw-btw is aftrekbaar (zet dan ook vat_recoverable=true). Fiscalist moet dit per deal bevestigen (R14 §7 vraag 2, type 6 nodig)."
+    },
+    "holding_eur_per_month": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §5.2 (IBI Xàbia 0,83 % × kadastrale waarde — type 2 via onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-13/A1; afvalheffing Ordenanza 03/03 variabel, bedrag ONBEKEND; verzekering, nuts, comunidad, tuin/zwembad ONBEKEND) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §6.4 testuitvoer (werkhypothese 400 €/maand) · 01-acquisitiekader-javea.md §2.4",
+      "datum": "15-09-2026",
+      "bewijstype": "5",
+      "aanname": true,
+      "toelichting": "AANNAME/werkhypothese 400 €/maand voor IBI + afvalheffing + verzekering + nuts + onderhoud, overgenomen uit R14 §6.4. Alleen het IBI-tarief heeft een bron; de kadastrale waarde is per object op te vragen (R04). Door Jan in te vullen (R14 §5.2)."
+    },
+    "agent_commission_pct": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §3 (BP-feeds gesplitst op '5 % commissie' en '3–4 % commissie', ~/tree-hermes/properties-api/feeds.js alleen gelezen, type 3; modelaanname verkoopkosten 3–5 % + btw, type 5; veilingplatform procuradores 4 %, type 1 via R08) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-20 en F16 (labels bewijzen niet wie betaalt, of het de totale courtage is en incl./excl. btw → toepassing type 4)",
+      "datum": "15-09-2026",
+      "bewijstype": "4/5",
+      "aanname": true,
+      "toelichting": "AANNAME: bovengrens 5 % van de verkoopprijs, exclusief btw. Bij verkoop via TREE Properties zelf kan dit lager zijn; Jan bepaalt welke commissie het project draagt."
+    },
+    "commission_vat_rate": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §3 ('Commissie is dienst → +21 % btw (algemene regel, art. 90.Uno LIVA)', type 4) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §7 open vraag 4 (btw op makelaarscommissie [te verifiëren]) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-06 (21 % algemeen tarief bevestigd)",
+      "datum": "15-09-2026",
+      "bewijstype": "2 (tarief) / 4 (toepassing)",
+      "aanname": false,
+      "toelichting": "21 % algemeen btw-tarief op bemiddelingsdiensten. Niet aftrekbaar als de eigen verkoop btw-vrij is (tweede levering); bij verkoop met btw (nieuwbouw/rehabilitación) wél aftrekbaar — het script telt hem altijd als kosten (voorzichtig)."
+    },
+    "plusvalia_pct_of_sale": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §3 (IIVTNU: kadastrale grondwaarde × coëfficiënt 0,15 (< 1 jaar en 1 jaar) / 0,14 (2 jaar), art. 107.4 TRLRHL; tarief ≤ 30 %, art. 108.1; nihil bij geen waardestijging, art. 104.5; Xàbia-tarief en coëfficiënten ONBEKEND) · onderzoek/R14-financieel-fiscaal-kostenkengetallen.verificatie.md R14-12 en §3 (Xàbia 2021: 30 %; 'conservatieve aanname 30 % [te verifiëren]') · 04-aanpak-veilingen-en-bijzondere-verkopen.md §2.5 ('model rekent 30 %')",
+      "datum": "15-09-2026",
+      "bewijstype": "5",
+      "aanname": true,
+      "toelichting": "AANNAME (berekening): maximum bij 1–2 jaar bezit = 0,15 × 30 % = 4,5 % van de KADASTRALE GRONDWAARDE; 1 % van de verkoopprijs komt overeen met een kadastrale grondwaarde van ≈ 22 % van de verkoopprijs (Xàbia: kadastrale herziening 1995, dus lage waarden). Per object de kadastrale grondwaarde opvragen en werkelijk berekenen; bij aantoonbaar geen waardestijging is de heffing nihil. Koper wordt plaatsvervanger als de verkoper een niet-residente natuurlijke persoon is (art. 106.2) — relevant bij onze AANKOOP, niet in deze verkoopparameter."
+    },
+    "selling_misc_eur": {
+      "bron": "onderzoek/R14-financieel-fiscaal-kostenkengetallen.md §3 (certificado de eficiencia energética verplicht, kosten ONBEKEND; cédula/declaración responsable de segunda ocupación Xàbia: tasa ONBEKEND; staging/fotografie/juridisch ONBEKEND, type 7)",
+      "datum": "15-09-2026",
+      "bewijstype": "4",
+      "aanname": true,
+      "toelichting": "AANNAME zonder bron: stelpost CEE + cédula/DR segunda ocupación + fotografie/staging + juridische afwikkeling verkoop, exclusief btw. Offertes nodig."
+    },
+    "kitchen_eur": {
+      "bron": "onderzoek/N05-bouwkosten-keuken-badkamer.md (18-09-2026), met bronvermelding per bedrag in dat rapport",
+      "datum": "18-09-2026",
+      "bewijstype": "6",
+      "aanname": false,
+      "toelichting": "N05 §0: complete keuken middensegment, band 9.000–15.000 €, excl. btw, geleverd en gemonteerd."
+    },
+    "kitchen_eur_high": {
+      "bron": "onderzoek/N05-bouwkosten-keuken-badkamer.md (18-09-2026), met bronvermelding per bedrag in dat rapport",
+      "datum": "18-09-2026",
+      "bewijstype": "6",
+      "aanname": false,
+      "toelichting": "N05 §0: complete keuken hoger villasegment, band 22.000–40.000 €."
+    },
+    "bathroom_eur": {
+      "bron": "onderzoek/N05-bouwkosten-keuken-badkamer.md (18-09-2026), met bronvermelding per bedrag in dat rapport",
+      "datum": "18-09-2026",
+      "bewijstype": "6",
+      "aanname": false,
+      "toelichting": "N05 §0: complete badkamer 5–8 m² middensegment, band 7.000–11.000 €, inclusief tegelwerk, sanitair en montage."
+    },
+    "skp_margin_pct": {
+      "bron": "Jan, gesprek 17-09-2026 (keuken en badkamers los van het €/m²-tarief; verkoop via eigen kantoor) — bedragen nog niet onderbouwd",
+      "datum": "18-09-2026",
+      "bewijstype": "7",
+      "aanname": true,
+      "toelichting": "Aanname 18-09-2026: brutomarge van Sani Kitchen Projects op keuken en sanitair. Telt niet mee in het projectresultaat, wel in het groepsresultaat."
+    },
+    "internal_selling_cost_pct": {
+      "bron": "Jan, gesprek 17-09-2026 (keuken en badkamers los van het €/m²-tarief; verkoop via eigen kantoor) — bedragen nog niet onderbouwd",
+      "datum": "18-09-2026",
+      "bewijstype": "7",
+      "aanname": true,
+      "toelichting": "Aanname 18-09-2026: werkelijke verkoopkosten als TREE Properties zelf verkoopt (fotografie, portalen, advertenties, kantoortijd) in plaats van 5 % courtage aan een derde."
+    },
+    "bathroom_eur_high": {
+      "bron": "onderzoek/N05-bouwkosten-keuken-badkamer.md (18-09-2026), met bronvermelding per bedrag in dat rapport",
+      "datum": "18-09-2026",
+      "bewijstype": "6",
+      "aanname": false,
+      "toelichting": "N05 §0: complete badkamer hoger segment, band 14.000–25.000 €."
+    },
+    "fitout_overlap_eur_per_m2": {
+      "bron": "onderzoek/N05-bouwkosten-keuken-badkamer.md (18-09-2026), met bronvermelding per bedrag in dat rapport",
+      "datum": "18-09-2026",
+      "bewijstype": "5",
+      "aanname": true,
+      "toelichting": "N05 §9.2: een normale aanneemsom bevat al tegelwerk, leidingwerk en een eenvoudige keuken- en badkameruitrusting, ongeveer 10 à 13 % van de bouwsom oftewel 100–130 €/m² bij een tarief van 1.000 €/m². Zonder deze aftrek tel je keuken en badkamers dubbel."
+    }
+  },
+  "open": [
+    "Tasa licencia urbanística Xàbia (tasa_licencia_pct_of_pem = 2 % PEM is een afgeleide aanname, 6 % − ICIO 4 %). ⏸️ ACTIE VOOR JAN: ordenanzas fiscales (tasas licencias urbanísticas, cédula/DR, informe urbanístico) opvragen bij Xàbia Gestió Tributària of Urbanismo; het portaal xabia.sedelectronica.es is handmatig leesbaar (R12-verif A5).",
+    "Plusvalía Xàbia 2026: tarief (2021: 30 %; wettelijk max. 30 %) en gemeentelijke coëfficiënten ONBEKEND; plusvalia_pct_of_sale = 1 % is een rekenaanname (4,5 % van de kadastrale grondwaarde). Per kandidaat de kadastrale grondwaarde opvragen en werkelijk rekenen; nihil bij geen waardestijging (art. 104.5 TRLRHL).",
+    "Holdingkosten 400 €/maand zijn een werkhypothese uit R14 §6.4. Alleen IBI 0,83 % × kadastrale waarde heeft een bron; afvalheffing (variabel), verzekering, nuts, comunidad en tuin/zwembadonderhoud: Jan invullen (R14 §5.2).",
+    "Sloop (90 €/m²), nieuw zwembad (20.000 €) en buitenruimte (150 €/m²) komen uit landelijke habitissimo-indicaties (type 1, lage zekerheid; bovengrens gekozen). ⏸️ ACTIE VOOR JAN: 3–5 nacalculaties uit de Excel-administratie (PEM en aanneemsom per m², excl. btw, met jaar) voor villa-nieuwbouw, integrale renovatie, keuken/bad, zwembad en keermuren/terrein (R14 §4.4).",
+    "Zwembad-renovatie (12.000 €), geotechniek + topografie (5.000 €), constructieve opname bij renovatie (2.000 €), technische keuring bij aankoop (2.500 €), juridische due diligence (5.000 €) en verkoop-diversen (3.000 €) zijn stelposten zonder bron (type 4). Offertes van de vaste advocaat, gestor en architect vervangen ze (deliverable 04 §7 actie 3; 05 §6.7).",
+    "Risicoreserve 10 % (contingency_pct) is een werkhypothese uit R14 §6.1; Jan bevestigt of wijzigt.",
+    "Makelaarscommissie 5 % + 21 % btw: de BP-feedlabels (5 % / 3–4 %) bewijzen niet wie betaalt, of het de totale courtage is en of het incl. of excl. btw is (R14-verif R14-20). Jan bepaalt welke commissie een eigen project draagt bij verkoop via TREE Properties.",
+    "Btw op renovatie: gekozen 21 % (vennootschap, verkoop btw-vrij). Of de rehabilitación-route (art. 20.Uno.22º.B LIVA: > 50 % structuur/gevel/dak én > 25 % van de aankoopprijs zonder grond) haalbaar en voordelig is (10 % op het contract, verkoop met 10 % btw, bouw-btw aftrekbaar), moet een fiscalist per deal bevestigen (R14 §7 vraag 2). Bij een privé-koper voor eigen gebruik geldt 10 % onder art. 91.Uno.2.10º. Per scenario te overschrijven met renovation_vat_rate en vat_recoverable.",
+    "Btw op notaris-/registerhonoraria en op de makelaarscommissie (21 %) is de algemene regel maar staat in R14 §7 vraag 4 als [te verifiëren].",
+    "Modelbeperkingen van haalbaarheid.py die uit de bronnen volgen: (a) ITP/AJD-grondslag is max(prijs, valor de referencia) — het script rekent alleen met de prijs; per kandidaat de valor de referencia opvragen (R14 §1.5); (b) vat_purchase_rate kent één waarde (21 % grond); een woning van een ondernemer met afstand van vrijstelling kost 10 % + AJD 2 % (R14-verif F1) en een nieuwbouwwoning van een promotor 10 % + AJD 1,4 %; (c) btw op grond is aftrekbaar voor een promotor-SL die met btw verkoopt, maar het script telt hem als kosten; (d) honoraria dragen altijd 21 % btw, het script past het bouwtarief toe (bij nieuwbouw 10 % te laag, tenzij vat_recoverable); (e) ICIO en tasa worden over de benaderde PEM gerekend (bouwkosten Jan + sloop/zwembad/buitenruimte), niet over de werkelijke PEM uit het proyecto.",
+    "ICIO 4 % en IBI 0,83 % komen uit de door de gemeente aan Hacienda gemelde dataset (type 2); de ordenanzas zelf zijn niet gezien. Bevestiging via BOP Alicante of Xàbia Gestió Tributària blijft wenselijk (R14-verif §3).",
+    "Bij veilingen (route via deliverable 04): ATV-praktijk voor de ITP-grondslag (valor de referencia vs. remate) [te verifiëren]; het script rekent alleen met de prijs.",
+    "⏸️ ACTIE VOOR JAN: bevestig de werkelijke verkoopkosten van TREE Properties per verkocht object (nu 1,5 % van de verkoopprijs). Daarmee staat of valt hoeveel de eigen verkoop je oplevert bij het bieden.",
+    "⏸️ ACTIE VOOR JAN: N05 geeft voor renovatie 1.100 €/m² als richtgetal en voor nieuwbouw 1.750 €/m² (middensegment). Jouw kader staat op 1.000 en 2.000. Bevestig of die tarieven blijven staan; het verschil werkt direct door in elke maximale koopprijs.",
+    "⏸️ ACTIE VOOR JAN: bevestig de aftrek van 115 €/m² voor wat al in de aanneemsom zit aan tegelwerk, leidingwerk en basisuitrusting. Zonder die aftrek tellen keuken en badkamers dubbel; met een te hoge aftrek juist te weinig."
+  ],
+  "herkomst": {
+    "25-09-2026": {
+      "wie": "Jan",
+      "wat": "Eigen ploeg, dus keuken, badkamers, zwembad en sloop liggen ongeveer een derde lager dan de marktprijzen die hier stonden. Grondwerk en keermuren toegevoegd: € 15.000 bij een licht hellend perceel, € 50.000 bij een steil perceel. Financiering 100 %, standaard 15 %, per project te wijzigen.",
+      "oude_waarden": {
+        "kitchen_eur": 12000,
+        "kitchen_eur_high": 28000,
+        "bathroom_eur": 9000,
+        "bathroom_eur_high": 18000,
+        "pool_new_eur": 25000,
+        "pool_renovation_eur": 12000,
+        "demolition_eur_per_m2": 90
+      }
+    }
+  }
+}

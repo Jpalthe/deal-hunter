@@ -1,0 +1,2455 @@
+{
+ "alles": [
+  {
+   "ref": "3061CAL",
+   "rc": "3827801BC6832N",
+   "wijk": null,
+   "prijs": 1850000.0,
+   "adv": 410.0,
+   "adv_plot": 820.0,
+   "cat_tot": 291.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1994",
+   "ldt": "PD CUCARRES LES 4(J) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 184.0,
+   "buiten": 27.0,
+   "bij": 48.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "3230CAL",
+   "rc": "6647201BC6864N",
+   "wijk": null,
+   "prijs": 1550000.0,
+   "adv": 440.0,
+   "adv_plot": 637.0,
+   "cat_tot": 377.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1987",
+   "ldt": "PD TOSAL DE LA COMETA 15(B) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 245.0,
+   "buiten": 0,
+   "bij": 104.0,
+   "overig": 28.0
+  },
+  {
+   "ref": "3628DEN",
+   "rc": "0905510BD5000S",
+   "wijk": null,
+   "prijs": 1380000.0,
+   "adv": 259.0,
+   "adv_plot": 1118.0,
+   "cat_tot": 199.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "CL MANDARINA 8 03700 DENIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 146.0,
+   "buiten": 0,
+   "bij": 21.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "3631CAL",
+   "rc": "3430704BC4833S",
+   "wijk": null,
+   "prijs": 2450000.0,
+   "adv": 675.0,
+   "adv_plot": 1079.0,
+   "cat_tot": 285.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2001",
+   "ldt": "PL POLIGONO 11A 13(G) GARDUIX 13G 00160140BC68D 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "TERR.C 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 103.0,
+   "buiten": 48.0,
+   "bij": 102.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "4466BEN",
+   "rc": "3596901BC4839N",
+   "wijk": null,
+   "prijs": 360000.0,
+   "adv": 328.0,
+   "adv_plot": 125.0,
+   "cat_tot": 187.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1900",
+   "ldt": "CL SANT FRANCESC 2 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "VIVIENDA"
+   ],
+   "wonen": 156.0,
+   "buiten": 0,
+   "bij": 31.0,
+   "overig": 0
+  },
+  {
+   "ref": "4490JAV",
+   "rc": "0881285BC5908S",
+   "wijk": "javea",
+   "prijs": 1980000.0,
+   "adv": 292.0,
+   "adv_plot": 1500.0,
+   "cat_tot": 427.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2016",
+   "ldt": "CL PIC DE REBALSADORS 19 PARCELA 69 GARROFERAL 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 314.0,
+   "buiten": 24.0,
+   "bij": 38.0,
+   "overig": 51.0
+  },
+  {
+   "ref": "4517BEN",
+   "rc": "5547603BC4854N",
+   "wijk": null,
+   "prijs": 2995000.0,
+   "adv": 458.0,
+   "adv_plot": 1500.0,
+   "cat_tot": 232.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1983",
+   "ldt": "CL TULIPA LA-RACO DE GALENO 17 PARCELA 121/122 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "OTROS USOS",
+    "VIVIENDA"
+   ],
+   "wonen": 149.0,
+   "buiten": 0,
+   "bij": 7.0,
+   "overig": 76.0
+  },
+  {
+   "ref": "4534ALC",
+   "rc": "7342111YH5974S",
+   "wijk": null,
+   "prijs": 530000.0,
+   "adv": 198.0,
+   "adv_plot": 348.0,
+   "cat_tot": 406.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1987",
+   "ldt": "LG CUMBRES DE ALCALALI 7 UE-16 03728 ALCALALI (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 302.0,
+   "buiten": 17.0,
+   "bij": 41.0,
+   "overig": 46.0
+  },
+  {
+   "ref": "4537ALC",
+   "rc": "7039401YH5973N",
+   "wijk": null,
+   "prijs": 940000.0,
+   "adv": 311.0,
+   "adv_plot": 696.0,
+   "cat_tot": 716.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1988",
+   "ldt": "CL ALCORNOQUES LOS 6 03728 ALCALALI (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 597.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 119.0
+  },
+  {
+   "ref": "4538ALC",
+   "rc": "0012010YH5950N",
+   "wijk": null,
+   "prijs": 545000.0,
+   "adv": 212.0,
+   "adv_plot": null,
+   "cat_tot": 161.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1981",
+   "ldt": "CM MONTE 14 03728 ALCALALI (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 117.0,
+   "buiten": 0,
+   "bij": 44.0,
+   "overig": 0
+  },
+  {
+   "ref": "4552BEN",
+   "rc": "5652203BC4855S",
+   "wijk": null,
+   "prijs": 2450000.0,
+   "adv": 786.0,
+   "adv_plot": 1530.0,
+   "cat_tot": 190.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "CL GUIXA LA 3 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 175.0,
+   "buiten": 0,
+   "bij": 15.0,
+   "overig": 0
+  },
+  {
+   "ref": "4570CAL",
+   "rc": "7434612BC6872S",
+   "wijk": null,
+   "prijs": 1150000.0,
+   "adv": 273.0,
+   "adv_plot": 1179.0,
+   "cat_tot": 211.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2000",
+   "ldt": "UR COSTERES 13(A) 03710 CALP (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 180.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 31.0
+  },
+  {
+   "ref": "4594CAL",
+   "rc": "7919304BC5972S",
+   "wijk": "javea",
+   "prijs": 1749000.0,
+   "adv": 471.0,
+   "adv_plot": 1015.0,
+   "cat_tot": 213.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2001",
+   "ldt": "CR GUARDIA LA 800(B) 03738 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 137.0,
+   "buiten": 26.0,
+   "bij": 0,
+   "overig": 50.0
+  },
+  {
+   "ref": "4597CAL",
+   "rc": "3724218BC6832S",
+   "wijk": null,
+   "prijs": 1100000.0,
+   "adv": 529.0,
+   "adv_plot": 2210.0,
+   "cat_tot": 427.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2005",
+   "ldt": "PD CUCARRES LES 4(D) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 266.0,
+   "buiten": 60.0,
+   "bij": 49.0,
+   "overig": 52.0
+  },
+  {
+   "ref": "4601BEN",
+   "rc": "6548749BC4864N",
+   "wijk": null,
+   "prijs": 1150000.0,
+   "adv": 230.0,
+   "adv_plot": 800.0,
+   "cat_tot": 239.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1981",
+   "ldt": "CL ROSELLA LA 24 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "",
+    "VIVIENDA"
+   ],
+   "wonen": 178.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 61.0
+  },
+  {
+   "ref": "4643JAV",
+   "rc": "7620108BC5972S",
+   "wijk": "javea",
+   "prijs": 625000.0,
+   "adv": 150.0,
+   "adv_plot": 1000.0,
+   "cat_tot": 1220.0,
+   "n_bi": 1,
+   "usos": [
+    "Ocio y Hosteleria"
+   ],
+   "bouwjaar": "1990",
+   "ldt": "UR COSTA NOVA PLA 107(A) 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "OCIO HOSTEL."
+   ],
+   "wonen": 0,
+   "buiten": 0,
+   "bij": 76.0,
+   "overig": 1144.0
+  },
+  {
+   "ref": "4650JAV",
+   "rc": "4042145BC5944S",
+   "wijk": "javea",
+   "prijs": 750000.0,
+   "adv": 255.0,
+   "adv_plot": 1037.0,
+   "cat_tot": 328.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2005",
+   "ldt": "CL RIU PALANCIA DEL 20 PARCELA RESULTANTE 37 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 271.0,
+   "buiten": 0,
+   "bij": 2.0,
+   "overig": 55.0
+  },
+  {
+   "ref": "4671MOR",
+   "rc": "7467352BC4876N",
+   "wijk": "moraira",
+   "prijs": 2350000.0,
+   "adv": 557.0,
+   "adv_plot": 1274.0,
+   "cat_tot": 314.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1973",
+   "ldt": "CL AGUILA L' 38 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 209.0,
+   "buiten": 44.0,
+   "bij": 31.0,
+   "overig": 30.0
+  },
+  {
+   "ref": "6294JAV",
+   "rc": "7912104BC5971S",
+   "wijk": "javea",
+   "prijs": 2900000.0,
+   "adv": 319.0,
+   "adv_plot": 1003.0,
+   "cat_tot": 222.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1999",
+   "ldt": "CL AGRO BLAU 7 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 134.0,
+   "buiten": 32.0,
+   "bij": 24.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "7107BELL",
+   "rc": "4094908BC5849S",
+   "wijk": "benitachell",
+   "prijs": 1300000.0,
+   "adv": 215.0,
+   "adv_plot": 813.0,
+   "cat_tot": 307.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1992",
+   "ldt": "PL PP CDS ADELFAS 1(S) 03726 BENITACHELL/EL POBLE NOU DE BE (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "COMERCIO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 78.0,
+   "buiten": 11.0,
+   "bij": 140.0,
+   "overig": 78.0
+  },
+  {
+   "ref": "7120MOR",
+   "rc": "9667922BC4896N",
+   "wijk": "moraira",
+   "prijs": 1499000.0,
+   "adv": 394.0,
+   "adv_plot": 800.0,
+   "cat_tot": 317.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2003",
+   "ldt": "CL NISPERO 14 03725 TEULADA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 232.0,
+   "buiten": 0,
+   "bij": 47.0,
+   "overig": 38.0
+  },
+  {
+   "ref": "8100SEL",
+   "rc": "5099903BC6959N",
+   "wijk": null,
+   "prijs": 1499000.0,
+   "adv": 392.0,
+   "adv_plot": 1382.0,
+   "cat_tot": 500.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1991",
+   "ldt": "AV L'ALACANTI DE 33 Es:1 Pl:00 Pt:01 03750 PEDREGUER (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 226.0,
+   "buiten": 0,
+   "bij": 221.0,
+   "overig": 53.0
+  },
+  {
+   "ref": "8176DEN",
+   "rc": "1322006BD5012S",
+   "wijk": null,
+   "prijs": 1060000.0,
+   "adv": 426.0,
+   "adv_plot": 5500.0,
+   "cat_tot": 184.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1963",
+   "ldt": "CL ESCORPI 2 03700 DENIA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 157.0,
+   "buiten": 0,
+   "bij": 27.0,
+   "overig": 0
+  },
+  {
+   "ref": "8209MOR",
+   "rc": "0473213BC5807S",
+   "wijk": "moraira",
+   "prijs": 1790000.0,
+   "adv": 310.0,
+   "adv_plot": 1048.0,
+   "cat_tot": 251.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1985",
+   "ldt": "CL SANTIAGO DE COMPOSTELA 9 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 161.0,
+   "buiten": 0,
+   "bij": 57.0,
+   "overig": 33.0
+  },
+  {
+   "ref": "8215PED",
+   "rc": "1577403BC6917S",
+   "wijk": null,
+   "prijs": 792000.0,
+   "adv": 160.0,
+   "adv_plot": 1000.0,
+   "cat_tot": 212.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2024",
+   "ldt": "CL COMUNITAT VALENCIANA 4 03750 PEDREGUER (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 176.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 36.0
+  },
+  {
+   "ref": "8219MOR",
+   "rc": "0081513BC5808S",
+   "wijk": "moraira",
+   "prijs": 2175000.0,
+   "adv": 395.0,
+   "adv_plot": 814.0,
+   "cat_tot": 73.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1980",
+   "ldt": "CL LOGROÑO 7 Es:1 Pl:BJ Pt:01 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "VIVIENDA"
+   ],
+   "wonen": 73.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 0
+  },
+  {
+   "ref": "8245CAL",
+   "rc": "3407039BC6830N",
+   "wijk": null,
+   "prijs": 1690000.0,
+   "adv": 489.0,
+   "adv_plot": 770.0,
+   "cat_tot": 241.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1980",
+   "ldt": "PD MARYVILLA 11(G) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 99.0,
+   "buiten": 0,
+   "bij": 112.0,
+   "overig": 30.0
+  },
+  {
+   "ref": "8256ALT",
+   "rc": "5108708YH5850N",
+   "wijk": null,
+   "prijs": 530000.0,
+   "adv": 200.0,
+   "adv_plot": 964.0,
+   "cat_tot": 163.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1979",
+   "ldt": "CL XOP EL-STA.CLARA 6 03599 ALTEA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 85.0,
+   "buiten": 0,
+   "bij": 47.0,
+   "overig": 31.0
+  },
+  {
+   "ref": "8272MOR",
+   "rc": "1972110BC5817S",
+   "wijk": "moraira",
+   "prijs": 550000.0,
+   "adv": 115.0,
+   "adv_plot": 836.0,
+   "cat_tot": 136.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1985",
+   "ldt": "CL PUERTO DE ENCINA 28 03725 TEULADA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 91.0,
+   "buiten": 0,
+   "bij": 22.0,
+   "overig": 23.0
+  },
+  {
+   "ref": "8300",
+   "rc": "8473104BC4887S",
+   "wijk": "moraira",
+   "prijs": 4250000.0,
+   "adv": 606.0,
+   "adv_plot": 1601.0,
+   "cat_tot": 388.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1983",
+   "ldt": "CL BENIRRAMA 38 Es:1 Pl:SS Pt:01 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 325.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 63.0
+  },
+  {
+   "ref": "8318BEN",
+   "rc": "5944124BC4864S",
+   "wijk": null,
+   "prijs": 1250000.0,
+   "adv": 627.0,
+   "adv_plot": 860.0,
+   "cat_tot": 145.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1974",
+   "ldt": "CL ORENGA L' 18 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 83.0,
+   "buiten": 0,
+   "bij": 16.0,
+   "overig": 46.0
+  },
+  {
+   "ref": "8343MOR",
+   "rc": "9878410BC4897N",
+   "wijk": "moraira",
+   "prijs": 2250000.0,
+   "adv": 310.0,
+   "adv_plot": 817.0,
+   "cat_tot": 188.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1978",
+   "ldt": "CL MELILLA 11 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 158.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 30.0
+  },
+  {
+   "ref": "9006BEN",
+   "rc": "7356924BC4875S",
+   "wijk": null,
+   "prijs": 1990000.0,
+   "adv": 565.0,
+   "adv_plot": 924.0,
+   "cat_tot": 144.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1973",
+   "ldt": "AV MEDITERRANIA 62 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 84.0,
+   "buiten": 2.0,
+   "bij": 30.0,
+   "overig": 28.0
+  },
+  {
+   "ref": "9007JAL",
+   "rc": "0006040YH6900S",
+   "wijk": null,
+   "prijs": 625000.0,
+   "adv": 253.0,
+   "adv_plot": 1549.0,
+   "cat_tot": 225.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "CM CUTAS A PEMICAS 3 03727 XALO (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 129.0,
+   "buiten": 0,
+   "bij": 68.0,
+   "overig": 28.0
+  },
+  {
+   "ref": "C3XY4414CAL",
+   "rc": "3732803BC6833S",
+   "wijk": null,
+   "prijs": 1400000.0,
+   "adv": 288.0,
+   "adv_plot": 890.0,
+   "cat_tot": 233.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1973",
+   "ldt": "PD OLTAMAR 12(B) 03710 CALP (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 162.0,
+   "buiten": 20.0,
+   "bij": 0,
+   "overig": 51.0
+  },
+  {
+   "ref": "C3XY4492JAV",
+   "rc": "4783007BC5948S",
+   "wijk": "javea",
+   "prijs": 2000000.0,
+   "adv": 297.0,
+   "adv_plot": 1600.0,
+   "cat_tot": 506.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1986",
+   "ldt": "CL BENIMUSLEM 39 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 452.0,
+   "buiten": 13.0,
+   "bij": 0,
+   "overig": 41.0
+  },
+  {
+   "ref": "C3XY4524JAV",
+   "rc": "7435508BC5973S",
+   "wijk": "javea",
+   "prijs": 790000.0,
+   "adv": 178.0,
+   "adv_plot": 667.0,
+   "cat_tot": 123.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1983",
+   "ldt": "UR TOSCAL 26 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 98.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 25.0
+  },
+  {
+   "ref": "C3XY4620CAL",
+   "rc": "7433506BC6873S",
+   "wijk": null,
+   "prijs": 950000.0,
+   "adv": 216.0,
+   "adv_plot": 486.0,
+   "cat_tot": 296.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2004",
+   "ldt": "UR COSTERES 7(E) 03710 CALP (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 204.0,
+   "buiten": 16.0,
+   "bij": 47.0,
+   "overig": 29.0
+  },
+  {
+   "ref": "C3XY6376MOR",
+   "rc": "7967917BC4886N",
+   "wijk": "moraira",
+   "prijs": 1550000.0,
+   "adv": 370.0,
+   "adv_plot": 785.0,
+   "cat_tot": 501.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2000",
+   "ldt": "CL LLISA LA 1 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 336.0,
+   "buiten": 20.0,
+   "bij": 104.0,
+   "overig": 41.0
+  },
+  {
+   "ref": "C3XY7000ALT",
+   "rc": "9211014YH5891S",
+   "wijk": null,
+   "prijs": 3500000.0,
+   "adv": 680.0,
+   "adv_plot": 1680.0,
+   "cat_tot": 140.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1978",
+   "ldt": "CL COSTA VERDE-URLISA I 32 03599 ALTEA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 121.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 19.0
+  },
+  {
+   "ref": "C3XY8350BEN",
+   "rc": "9515103YH5091S",
+   "wijk": null,
+   "prijs": 799000.0,
+   "adv": 376.0,
+   "adv_plot": 752.0,
+   "cat_tot": 137.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2003",
+   "ldt": "CL CLAVELL DEL 4 03778 BENIARBEIG (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 116.0,
+   "buiten": 0,
+   "bij": 21.0,
+   "overig": 0
+  },
+  {
+   "ref": "C3XY9003BEN",
+   "rc": "7160503BC4876S",
+   "wijk": "moraira",
+   "prijs": 695000.0,
+   "adv": 224.0,
+   "adv_plot": 1010.0,
+   "cat_tot": 294.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1978",
+   "ldt": "CL RAJADA LA 20 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 174.0,
+   "buiten": 13.0,
+   "bij": 75.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "C4XY4382JAV",
+   "rc": "3520516BC5932S",
+   "wijk": "javea",
+   "prijs": 1245000.0,
+   "adv": 321.0,
+   "adv_plot": 1000.0,
+   "cat_tot": 147.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1900",
+   "ldt": "CL LEONARDO DA VINCI 11(D) 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 64.0,
+   "buiten": 64.0,
+   "bij": 19.0,
+   "overig": 0
+  },
+  {
+   "ref": "C4XY4596CAL",
+   "rc": "3724237BC6832N",
+   "wijk": null,
+   "prijs": 690000.0,
+   "adv": 264.0,
+   "adv_plot": 800.0,
+   "cat_tot": 125.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1974",
+   "ldt": "PD CUCARRES LES 2(F) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "VIVIENDA"
+   ],
+   "wonen": 105.0,
+   "buiten": 0,
+   "bij": 20.0,
+   "overig": 0
+  },
+  {
+   "ref": "C4XY4634BELL",
+   "rc": "03042A00400139",
+   "wijk": "benitachell",
+   "prijs": 450000.0,
+   "adv": 202.0,
+   "adv_plot": 2419.0,
+   "cat_tot": 484.0,
+   "n_bi": 1,
+   "usos": [
+    "Agrario"
+   ],
+   "bouwjaar": "",
+   "ldt": "LG POLIGONO 4 DISEMINADO 445 Polígono 4 Parcela 139 VARIOS LLUCA. 03726 BENITACHELL/EL POBLE NOU DE BE (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 202.0,
+   "buiten": 0,
+   "bij": 240.0,
+   "overig": 42.0
+  },
+  {
+   "ref": "C4XY4675JAL",
+   "rc": "8237918YH5983N",
+   "wijk": null,
+   "prijs": 599000.0,
+   "adv": 229.0,
+   "adv_plot": null,
+   "cat_tot": 143.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2002",
+   "ldt": "UR LA ALMAZARA 97 03727 XALO (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 91.0,
+   "buiten": 0,
+   "bij": 20.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "C4XY6411CAL",
+   "rc": "5119607BC6851N",
+   "wijk": null,
+   "prijs": 435000.0,
+   "adv": 90.0,
+   "adv_plot": 800.0,
+   "cat_tot": 386.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1953",
+   "ldt": "CL PEDRO GARCIA OR 7 03710 CALP (ALICANTE)",
+   "codes": [
+    "COMERCIO",
+    "VIVIENDA"
+   ],
+   "wonen": 244.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 142.0
+  },
+  {
+   "ref": "C4XY8166MOR",
+   "rc": "1865112BC5816S",
+   "wijk": "moraira",
+   "prijs": 2264000.0,
+   "adv": 340.0,
+   "adv_plot": 1070.0,
+   "cat_tot": 42.0,
+   "n_bi": 1,
+   "usos": [
+    "Industrial"
+   ],
+   "bouwjaar": "1980",
+   "ldt": "AV PORTET DEL 169 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "ALMACEN"
+   ],
+   "wonen": 0,
+   "buiten": 0,
+   "bij": 42.0,
+   "overig": 0
+  },
+  {
+   "ref": "C4XY8326DEN",
+   "rc": "9367017BD3096N",
+   "wijk": null,
+   "prijs": 659000.0,
+   "adv": 126.0,
+   "adv_plot": 612.0,
+   "cat_tot": 94.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "PD DEVESES B 26(A) 03700 DENIA (ALICANTE)",
+   "codes": [
+    "VIVIENDA"
+   ],
+   "wonen": 94.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 0
+  },
+  {
+   "ref": "C4XY8333DEN",
+   "rc": "7808001BD4070N",
+   "wijk": null,
+   "prijs": 565000.0,
+   "adv": 238.0,
+   "adv_plot": 772.0,
+   "cat_tot": 183.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1980",
+   "ldt": "CL LEARCO 44 03700 DENIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 121.0,
+   "buiten": 3.0,
+   "bij": 34.0,
+   "overig": 25.0
+  },
+  {
+   "ref": "108910753",
+   "rc": "3274907BC5937S",
+   "wijk": "javea",
+   "prijs": 399000.0,
+   "adv": 232.0,
+   "adv_plot": 161.0,
+   "cat_tot": 2773.0,
+   "n_bi": 1,
+   "usos": [
+    "Sanidad y Beneficencia"
+   ],
+   "bouwjaar": "2008",
+   "ldt": "CL DE RAFAEL ECHAGUE 5 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "ENSEÑANZA"
+   ],
+   "wonen": 0,
+   "buiten": 0,
+   "bij": 200.0,
+   "overig": 2573.0
+  },
+  {
+   "ref": "110974608",
+   "rc": "3765517BC5937S",
+   "wijk": "javea",
+   "prijs": 499000.0,
+   "adv": 264.0,
+   "adv_plot": null,
+   "cat_tot": 233.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1880",
+   "ldt": "CL TOSSAL DE DALT 10 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "VIVIENDA"
+   ],
+   "wonen": 206.0,
+   "buiten": 0,
+   "bij": 27.0,
+   "overig": 0
+  },
+  {
+   "ref": "97576395",
+   "rc": "3075405BC5927N",
+   "wijk": "javea",
+   "prijs": 395000.0,
+   "adv": 460.0,
+   "adv_plot": 960.0,
+   "cat_tot": 227.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1969",
+   "ldt": "CL LAGO LANGREO 8 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 128.0,
+   "buiten": 0,
+   "bij": 79.0,
+   "overig": 20.0
+  },
+  {
+   "ref": "C3XY4685JAV",
+   "rc": "4740206BC5944S",
+   "wijk": "javea",
+   "prijs": 1685000.0,
+   "adv": 295.0,
+   "adv_plot": 1045.0,
+   "cat_tot": 258.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1996",
+   "ldt": "CL AMELIA PELAEZ 25 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 192.0,
+   "buiten": 0,
+   "bij": 66.0,
+   "overig": 0
+  }
+ ],
+ "schoon": [
+  {
+   "ref": "3061CAL",
+   "rc": "3827801BC6832N",
+   "wijk": null,
+   "prijs": 1850000.0,
+   "adv": 410.0,
+   "adv_plot": 820.0,
+   "cat_tot": 291.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1994",
+   "ldt": "PD CUCARRES LES 4(J) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 184.0,
+   "buiten": 27.0,
+   "bij": 48.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "3230CAL",
+   "rc": "6647201BC6864N",
+   "wijk": null,
+   "prijs": 1550000.0,
+   "adv": 440.0,
+   "adv_plot": 637.0,
+   "cat_tot": 377.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1987",
+   "ldt": "PD TOSAL DE LA COMETA 15(B) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 245.0,
+   "buiten": 0,
+   "bij": 104.0,
+   "overig": 28.0
+  },
+  {
+   "ref": "3628DEN",
+   "rc": "0905510BD5000S",
+   "wijk": null,
+   "prijs": 1380000.0,
+   "adv": 259.0,
+   "adv_plot": 1118.0,
+   "cat_tot": 199.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "CL MANDARINA 8 03700 DENIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 146.0,
+   "buiten": 0,
+   "bij": 21.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "3631CAL",
+   "rc": "3430704BC4833S",
+   "wijk": null,
+   "prijs": 2450000.0,
+   "adv": 675.0,
+   "adv_plot": 1079.0,
+   "cat_tot": 285.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2001",
+   "ldt": "PL POLIGONO 11A 13(G) GARDUIX 13G 00160140BC68D 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "TERR.C 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 103.0,
+   "buiten": 48.0,
+   "bij": 102.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "4466BEN",
+   "rc": "3596901BC4839N",
+   "wijk": null,
+   "prijs": 360000.0,
+   "adv": 328.0,
+   "adv_plot": 125.0,
+   "cat_tot": 187.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1900",
+   "ldt": "CL SANT FRANCESC 2 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "VIVIENDA"
+   ],
+   "wonen": 156.0,
+   "buiten": 0,
+   "bij": 31.0,
+   "overig": 0
+  },
+  {
+   "ref": "4490JAV",
+   "rc": "0881285BC5908S",
+   "wijk": "javea",
+   "prijs": 1980000.0,
+   "adv": 292.0,
+   "adv_plot": 1500.0,
+   "cat_tot": 427.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2016",
+   "ldt": "CL PIC DE REBALSADORS 19 PARCELA 69 GARROFERAL 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 314.0,
+   "buiten": 24.0,
+   "bij": 38.0,
+   "overig": 51.0
+  },
+  {
+   "ref": "4517BEN",
+   "rc": "5547603BC4854N",
+   "wijk": null,
+   "prijs": 2995000.0,
+   "adv": 458.0,
+   "adv_plot": 1500.0,
+   "cat_tot": 232.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1983",
+   "ldt": "CL TULIPA LA-RACO DE GALENO 17 PARCELA 121/122 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "OTROS USOS",
+    "VIVIENDA"
+   ],
+   "wonen": 149.0,
+   "buiten": 0,
+   "bij": 7.0,
+   "overig": 76.0
+  },
+  {
+   "ref": "4534ALC",
+   "rc": "7342111YH5974S",
+   "wijk": null,
+   "prijs": 530000.0,
+   "adv": 198.0,
+   "adv_plot": 348.0,
+   "cat_tot": 406.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1987",
+   "ldt": "LG CUMBRES DE ALCALALI 7 UE-16 03728 ALCALALI (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 302.0,
+   "buiten": 17.0,
+   "bij": 41.0,
+   "overig": 46.0
+  },
+  {
+   "ref": "4537ALC",
+   "rc": "7039401YH5973N",
+   "wijk": null,
+   "prijs": 940000.0,
+   "adv": 311.0,
+   "adv_plot": 696.0,
+   "cat_tot": 716.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1988",
+   "ldt": "CL ALCORNOQUES LOS 6 03728 ALCALALI (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 597.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 119.0
+  },
+  {
+   "ref": "4538ALC",
+   "rc": "0012010YH5950N",
+   "wijk": null,
+   "prijs": 545000.0,
+   "adv": 212.0,
+   "adv_plot": null,
+   "cat_tot": 161.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1981",
+   "ldt": "CM MONTE 14 03728 ALCALALI (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 117.0,
+   "buiten": 0,
+   "bij": 44.0,
+   "overig": 0
+  },
+  {
+   "ref": "4552BEN",
+   "rc": "5652203BC4855S",
+   "wijk": null,
+   "prijs": 2450000.0,
+   "adv": 786.0,
+   "adv_plot": 1530.0,
+   "cat_tot": 190.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "CL GUIXA LA 3 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 175.0,
+   "buiten": 0,
+   "bij": 15.0,
+   "overig": 0
+  },
+  {
+   "ref": "4570CAL",
+   "rc": "7434612BC6872S",
+   "wijk": null,
+   "prijs": 1150000.0,
+   "adv": 273.0,
+   "adv_plot": 1179.0,
+   "cat_tot": 211.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2000",
+   "ldt": "UR COSTERES 13(A) 03710 CALP (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 180.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 31.0
+  },
+  {
+   "ref": "4594CAL",
+   "rc": "7919304BC5972S",
+   "wijk": "javea",
+   "prijs": 1749000.0,
+   "adv": 471.0,
+   "adv_plot": 1015.0,
+   "cat_tot": 213.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2001",
+   "ldt": "CR GUARDIA LA 800(B) 03738 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 137.0,
+   "buiten": 26.0,
+   "bij": 0,
+   "overig": 50.0
+  },
+  {
+   "ref": "4597CAL",
+   "rc": "3724218BC6832S",
+   "wijk": null,
+   "prijs": 1100000.0,
+   "adv": 529.0,
+   "adv_plot": 2210.0,
+   "cat_tot": 427.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2005",
+   "ldt": "PD CUCARRES LES 4(D) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 266.0,
+   "buiten": 60.0,
+   "bij": 49.0,
+   "overig": 52.0
+  },
+  {
+   "ref": "4601BEN",
+   "rc": "6548749BC4864N",
+   "wijk": null,
+   "prijs": 1150000.0,
+   "adv": 230.0,
+   "adv_plot": 800.0,
+   "cat_tot": 239.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1981",
+   "ldt": "CL ROSELLA LA 24 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "",
+    "VIVIENDA"
+   ],
+   "wonen": 178.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 61.0
+  },
+  {
+   "ref": "4650JAV",
+   "rc": "4042145BC5944S",
+   "wijk": "javea",
+   "prijs": 750000.0,
+   "adv": 255.0,
+   "adv_plot": 1037.0,
+   "cat_tot": 328.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2005",
+   "ldt": "CL RIU PALANCIA DEL 20 PARCELA RESULTANTE 37 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 271.0,
+   "buiten": 0,
+   "bij": 2.0,
+   "overig": 55.0
+  },
+  {
+   "ref": "4671MOR",
+   "rc": "7467352BC4876N",
+   "wijk": "moraira",
+   "prijs": 2350000.0,
+   "adv": 557.0,
+   "adv_plot": 1274.0,
+   "cat_tot": 314.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1973",
+   "ldt": "CL AGUILA L' 38 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 209.0,
+   "buiten": 44.0,
+   "bij": 31.0,
+   "overig": 30.0
+  },
+  {
+   "ref": "6294JAV",
+   "rc": "7912104BC5971S",
+   "wijk": "javea",
+   "prijs": 2900000.0,
+   "adv": 319.0,
+   "adv_plot": 1003.0,
+   "cat_tot": 222.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1999",
+   "ldt": "CL AGRO BLAU 7 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 134.0,
+   "buiten": 32.0,
+   "bij": 24.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "7120MOR",
+   "rc": "9667922BC4896N",
+   "wijk": "moraira",
+   "prijs": 1499000.0,
+   "adv": 394.0,
+   "adv_plot": 800.0,
+   "cat_tot": 317.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2003",
+   "ldt": "CL NISPERO 14 03725 TEULADA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 232.0,
+   "buiten": 0,
+   "bij": 47.0,
+   "overig": 38.0
+  },
+  {
+   "ref": "8100SEL",
+   "rc": "5099903BC6959N",
+   "wijk": null,
+   "prijs": 1499000.0,
+   "adv": 392.0,
+   "adv_plot": 1382.0,
+   "cat_tot": 500.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1991",
+   "ldt": "AV L'ALACANTI DE 33 Es:1 Pl:00 Pt:01 03750 PEDREGUER (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 226.0,
+   "buiten": 0,
+   "bij": 221.0,
+   "overig": 53.0
+  },
+  {
+   "ref": "8176DEN",
+   "rc": "1322006BD5012S",
+   "wijk": null,
+   "prijs": 1060000.0,
+   "adv": 426.0,
+   "adv_plot": 5500.0,
+   "cat_tot": 184.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1963",
+   "ldt": "CL ESCORPI 2 03700 DENIA (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 157.0,
+   "buiten": 0,
+   "bij": 27.0,
+   "overig": 0
+  },
+  {
+   "ref": "8209MOR",
+   "rc": "0473213BC5807S",
+   "wijk": "moraira",
+   "prijs": 1790000.0,
+   "adv": 310.0,
+   "adv_plot": 1048.0,
+   "cat_tot": 251.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1985",
+   "ldt": "CL SANTIAGO DE COMPOSTELA 9 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 161.0,
+   "buiten": 0,
+   "bij": 57.0,
+   "overig": 33.0
+  },
+  {
+   "ref": "8215PED",
+   "rc": "1577403BC6917S",
+   "wijk": null,
+   "prijs": 792000.0,
+   "adv": 160.0,
+   "adv_plot": 1000.0,
+   "cat_tot": 212.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2024",
+   "ldt": "CL COMUNITAT VALENCIANA 4 03750 PEDREGUER (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 176.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 36.0
+  },
+  {
+   "ref": "8219MOR",
+   "rc": "0081513BC5808S",
+   "wijk": "moraira",
+   "prijs": 2175000.0,
+   "adv": 395.0,
+   "adv_plot": 814.0,
+   "cat_tot": 73.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1980",
+   "ldt": "CL LOGROÑO 7 Es:1 Pl:BJ Pt:01 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "VIVIENDA"
+   ],
+   "wonen": 73.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 0
+  },
+  {
+   "ref": "8245CAL",
+   "rc": "3407039BC6830N",
+   "wijk": null,
+   "prijs": 1690000.0,
+   "adv": 489.0,
+   "adv_plot": 770.0,
+   "cat_tot": 241.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1980",
+   "ldt": "PD MARYVILLA 11(G) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 99.0,
+   "buiten": 0,
+   "bij": 112.0,
+   "overig": 30.0
+  },
+  {
+   "ref": "8256ALT",
+   "rc": "5108708YH5850N",
+   "wijk": null,
+   "prijs": 530000.0,
+   "adv": 200.0,
+   "adv_plot": 964.0,
+   "cat_tot": 163.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1979",
+   "ldt": "CL XOP EL-STA.CLARA 6 03599 ALTEA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 85.0,
+   "buiten": 0,
+   "bij": 47.0,
+   "overig": 31.0
+  },
+  {
+   "ref": "8272MOR",
+   "rc": "1972110BC5817S",
+   "wijk": "moraira",
+   "prijs": 550000.0,
+   "adv": 115.0,
+   "adv_plot": 836.0,
+   "cat_tot": 136.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1985",
+   "ldt": "CL PUERTO DE ENCINA 28 03725 TEULADA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 91.0,
+   "buiten": 0,
+   "bij": 22.0,
+   "overig": 23.0
+  },
+  {
+   "ref": "8300",
+   "rc": "8473104BC4887S",
+   "wijk": "moraira",
+   "prijs": 4250000.0,
+   "adv": 606.0,
+   "adv_plot": 1601.0,
+   "cat_tot": 388.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1983",
+   "ldt": "CL BENIRRAMA 38 Es:1 Pl:SS Pt:01 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 325.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 63.0
+  },
+  {
+   "ref": "8318BEN",
+   "rc": "5944124BC4864S",
+   "wijk": null,
+   "prijs": 1250000.0,
+   "adv": 627.0,
+   "adv_plot": 860.0,
+   "cat_tot": 145.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1974",
+   "ldt": "CL ORENGA L' 18 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 83.0,
+   "buiten": 0,
+   "bij": 16.0,
+   "overig": 46.0
+  },
+  {
+   "ref": "8343MOR",
+   "rc": "9878410BC4897N",
+   "wijk": "moraira",
+   "prijs": 2250000.0,
+   "adv": 310.0,
+   "adv_plot": 817.0,
+   "cat_tot": 188.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1978",
+   "ldt": "CL MELILLA 11 03724 TEULADA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 158.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 30.0
+  },
+  {
+   "ref": "9006BEN",
+   "rc": "7356924BC4875S",
+   "wijk": null,
+   "prijs": 1990000.0,
+   "adv": 565.0,
+   "adv_plot": 924.0,
+   "cat_tot": 144.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1973",
+   "ldt": "AV MEDITERRANIA 62 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 84.0,
+   "buiten": 2.0,
+   "bij": 30.0,
+   "overig": 28.0
+  },
+  {
+   "ref": "9007JAL",
+   "rc": "0006040YH6900S",
+   "wijk": null,
+   "prijs": 625000.0,
+   "adv": 253.0,
+   "adv_plot": 1549.0,
+   "cat_tot": 225.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "CM CUTAS A PEMICAS 3 03727 XALO (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 129.0,
+   "buiten": 0,
+   "bij": 68.0,
+   "overig": 28.0
+  },
+  {
+   "ref": "C3XY4414CAL",
+   "rc": "3732803BC6833S",
+   "wijk": null,
+   "prijs": 1400000.0,
+   "adv": 288.0,
+   "adv_plot": 890.0,
+   "cat_tot": 233.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1973",
+   "ldt": "PD OLTAMAR 12(B) 03710 CALP (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 162.0,
+   "buiten": 20.0,
+   "bij": 0,
+   "overig": 51.0
+  },
+  {
+   "ref": "C3XY4492JAV",
+   "rc": "4783007BC5948S",
+   "wijk": "javea",
+   "prijs": 2000000.0,
+   "adv": 297.0,
+   "adv_plot": 1600.0,
+   "cat_tot": 506.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1986",
+   "ldt": "CL BENIMUSLEM 39 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 452.0,
+   "buiten": 13.0,
+   "bij": 0,
+   "overig": 41.0
+  },
+  {
+   "ref": "C3XY4524JAV",
+   "rc": "7435508BC5973S",
+   "wijk": "javea",
+   "prijs": 790000.0,
+   "adv": 178.0,
+   "adv_plot": 667.0,
+   "cat_tot": 123.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1983",
+   "ldt": "UR TOSCAL 26 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 98.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 25.0
+  },
+  {
+   "ref": "C3XY4620CAL",
+   "rc": "7433506BC6873S",
+   "wijk": null,
+   "prijs": 950000.0,
+   "adv": 216.0,
+   "adv_plot": 486.0,
+   "cat_tot": 296.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2004",
+   "ldt": "UR COSTERES 7(E) 03710 CALP (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 204.0,
+   "buiten": 16.0,
+   "bij": 47.0,
+   "overig": 29.0
+  },
+  {
+   "ref": "C3XY6376MOR",
+   "rc": "7967917BC4886N",
+   "wijk": "moraira",
+   "prijs": 1550000.0,
+   "adv": 370.0,
+   "adv_plot": 785.0,
+   "cat_tot": 501.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2000",
+   "ldt": "CL LLISA LA 1 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "PORCHE 100%",
+    "VIVIENDA"
+   ],
+   "wonen": 336.0,
+   "buiten": 20.0,
+   "bij": 104.0,
+   "overig": 41.0
+  },
+  {
+   "ref": "C3XY7000ALT",
+   "rc": "9211014YH5891S",
+   "wijk": null,
+   "prijs": 3500000.0,
+   "adv": 680.0,
+   "adv_plot": 1680.0,
+   "cat_tot": 140.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1978",
+   "ldt": "CL COSTA VERDE-URLISA I 32 03599 ALTEA (ALICANTE)",
+   "codes": [
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 121.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 19.0
+  },
+  {
+   "ref": "C3XY8350BEN",
+   "rc": "9515103YH5091S",
+   "wijk": null,
+   "prijs": 799000.0,
+   "adv": 376.0,
+   "adv_plot": 752.0,
+   "cat_tot": 137.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2003",
+   "ldt": "CL CLAVELL DEL 4 03778 BENIARBEIG (ALICANTE)",
+   "codes": [
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 116.0,
+   "buiten": 0,
+   "bij": 21.0,
+   "overig": 0
+  },
+  {
+   "ref": "C3XY9003BEN",
+   "rc": "7160503BC4876S",
+   "wijk": "moraira",
+   "prijs": 695000.0,
+   "adv": 224.0,
+   "adv_plot": 1010.0,
+   "cat_tot": 294.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1978",
+   "ldt": "CL RAJADA LA 20 03720 BENISSA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 174.0,
+   "buiten": 13.0,
+   "bij": 75.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "C4XY4382JAV",
+   "rc": "3520516BC5932S",
+   "wijk": "javea",
+   "prijs": 1245000.0,
+   "adv": 321.0,
+   "adv_plot": 1000.0,
+   "cat_tot": 147.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1900",
+   "ldt": "CL LEONARDO DA VINCI 11(D) 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 64.0,
+   "buiten": 64.0,
+   "bij": 19.0,
+   "overig": 0
+  },
+  {
+   "ref": "C4XY4596CAL",
+   "rc": "3724237BC6832N",
+   "wijk": null,
+   "prijs": 690000.0,
+   "adv": 264.0,
+   "adv_plot": 800.0,
+   "cat_tot": 125.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1974",
+   "ldt": "PD CUCARRES LES 2(F) 03710 CALP (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "VIVIENDA"
+   ],
+   "wonen": 105.0,
+   "buiten": 0,
+   "bij": 20.0,
+   "overig": 0
+  },
+  {
+   "ref": "C4XY4675JAL",
+   "rc": "8237918YH5983N",
+   "wijk": null,
+   "prijs": 599000.0,
+   "adv": 229.0,
+   "adv_plot": null,
+   "cat_tot": 143.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "2002",
+   "ldt": "UR LA ALMAZARA 97 03727 XALO (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 91.0,
+   "buiten": 0,
+   "bij": 20.0,
+   "overig": 32.0
+  },
+  {
+   "ref": "C4XY8326DEN",
+   "rc": "9367017BD3096N",
+   "wijk": null,
+   "prijs": 659000.0,
+   "adv": 126.0,
+   "adv_plot": 612.0,
+   "cat_tot": 94.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1970",
+   "ldt": "PD DEVESES B 26(A) 03700 DENIA (ALICANTE)",
+   "codes": [
+    "VIVIENDA"
+   ],
+   "wonen": 94.0,
+   "buiten": 0,
+   "bij": 0,
+   "overig": 0
+  },
+  {
+   "ref": "C4XY8333DEN",
+   "rc": "7808001BD4070N",
+   "wijk": null,
+   "prijs": 565000.0,
+   "adv": 238.0,
+   "adv_plot": 772.0,
+   "cat_tot": 183.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1980",
+   "ldt": "CL LEARCO 44 03700 DENIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "DEPORTIVO",
+    "SOPORT. 50%",
+    "VIVIENDA"
+   ],
+   "wonen": 121.0,
+   "buiten": 3.0,
+   "bij": 34.0,
+   "overig": 25.0
+  },
+  {
+   "ref": "110974608",
+   "rc": "3765517BC5937S",
+   "wijk": "javea",
+   "prijs": 499000.0,
+   "adv": 264.0,
+   "adv_plot": null,
+   "cat_tot": 233.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1880",
+   "ldt": "CL TOSSAL DE DALT 10 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "VIVIENDA"
+   ],
+   "wonen": 206.0,
+   "buiten": 0,
+   "bij": 27.0,
+   "overig": 0
+  },
+  {
+   "ref": "97576395",
+   "rc": "3075405BC5927N",
+   "wijk": "javea",
+   "prijs": 395000.0,
+   "adv": 460.0,
+   "adv_plot": 960.0,
+   "cat_tot": 227.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1969",
+   "ldt": "CL LAGO LANGREO 8 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "DEPORTIVO",
+    "VIVIENDA"
+   ],
+   "wonen": 128.0,
+   "buiten": 0,
+   "bij": 79.0,
+   "overig": 20.0
+  },
+  {
+   "ref": "C3XY4685JAV",
+   "rc": "4740206BC5944S",
+   "wijk": "javea",
+   "prijs": 1685000.0,
+   "adv": 295.0,
+   "adv_plot": 1045.0,
+   "cat_tot": 258.0,
+   "n_bi": 1,
+   "usos": [
+    "Residencial"
+   ],
+   "bouwjaar": "1996",
+   "ldt": "CL AMELIA PELAEZ 25 03730 JAVEA/XABIA (ALICANTE)",
+   "codes": [
+    "ALMACEN",
+    "APARCAMIENTO",
+    "VIVIENDA"
+   ],
+   "wonen": 192.0,
+   "buiten": 0,
+   "bij": 66.0,
+   "overig": 0
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deal Hunter Instellingen</title>
+<meta name="theme-color" content="#1c2220">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/static/m.css">
+<style>
+  .veld { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+          padding: 0.85rem 0.9rem; margin-bottom: 0.7rem; }
+  .veld h3 { margin: 0 0 0.15rem; font: 600 0.95rem/1.3 var(--font-body); color: var(--ink-strong); }
+  .veld p { margin: 0 0 0.55rem; font-size: 0.8rem; color: var(--muted); }
+  .veld input { width: 100%; min-height: 44px; padding: 0.5rem 0.6rem; border: 1px solid var(--rule-strong);
+                border-radius: 8px; background: var(--paper); font-family: var(--font-mono); font-size: 0.82rem; }
+  .veld .rij { display: flex; gap: 0.5rem; margin-top: 0.55rem; }
+  .veld button { min-height: 44px; padding: 0 1rem; border: 0; border-radius: 8px; cursor: pointer;
+                 background: var(--deep-pine); color: #f2efe8; font-size: 0.85rem; font-weight: 500; }
+  .veld button.leeg { background: var(--sunk); color: var(--muted); }
+  .stand { font-size: 0.76rem; font-weight: 500; }
+  .stand.ja { color: var(--c-groen); } .stand.nee { color: var(--faint); }
+  .uitslag { font-size: 0.8rem; margin-top: 0.4rem; min-height: 1.1rem; }
+  .uitslag.ok { color: var(--c-groen); } .uitslag.fout { color: var(--bad); }
+  .hoe { background: var(--sunk); border-radius: var(--radius); padding: 0.9rem 1rem; margin: 0.2rem 0 1rem; }
+  .hoe ol { margin: 0.4rem 0 0; padding-left: 1.1rem; font-size: 0.85rem; }
+  .hoe li { margin: 0.3rem 0; }
+  .terug { display: inline-block; margin-top: 1.4rem; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-title"><span class="mark">TREE</span> Instellingen</div>
+  <div class="bar-sub">Sleutels voor de meldingen. Wat je invult blijft op deze Mac.</div>
+</header>
+
+<main id="main">
+  <section class="view">
+    <div class="hoe">
+      <b>Het Discord-adres ophalen op je telefoon</b>
+      <ol>
+        <li>Open Discord en ga naar het kanaal waar de meldingen heen moeten.</li>
+        <li>Tik op de naam van het kanaal bovenaan, dan op het tandwiel.</li>
+        <li>Kies Integraties, dan Webhooks, dan Nieuwe webhook.</li>
+        <li>Tik op Webhook-URL kopiëren.</li>
+        <li>Kom hier terug en plak hem in het eerste vak.</li>
+      </ol>
+    </div>
+
+    <div id="velden"></div>
+
+    <div class="veld">
+      <h3>Proefbericht</h3>
+      <p>Stuurt één bericht via alles wat hierboven is ingevuld, zodat je weet dat het werkt.</p>
+      <div class="rij"><button id="test">Stuur een proefbericht</button></div>
+      <p class="uitslag" id="testuitslag"></p>
+    </div>
+
+    <a class="terug" href="/m">← Terug naar de kansen</a>
+  </section>
+</main>
+
+<script>
+'use strict';
+const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, (c) =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+async function laad() {
+  const r = await fetch('/api/instellingen');
+  const d = await r.json();
+  document.getElementById('velden').innerHTML = d.sleutels.map((s) => `
+    <div class="veld" data-naam="${esc(s.naam)}">
+      <h3>${esc(s.uitleg)}</h3>
+      <p><span class="stand ${s.gevuld ? 'ja' : 'nee'}">${s.gevuld ? '✓ ingevuld' : 'nog leeg'}</span>
+         · de waarde wordt hier nooit getoond</p>
+      <input type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+             placeholder="${s.gevuld ? 'plak hier een nieuwe waarde om te vervangen' : 'plak hier'}">
+      <div class="rij">
+        <button data-doe="zet">Bewaren</button>
+        ${s.gevuld ? '<button class="leeg" data-doe="wis">Wissen</button>' : ''}
+      </div>
+      <p class="uitslag"></p>
+    </div>`).join('');
+}
+
+document.addEventListener('click', async (e) => {
+  const knop = e.target.closest('[data-doe]');
+  if (knop) {
+    const veld = knop.closest('.veld');
+    const invoer = veld.querySelector('input');
+    const uit = veld.querySelector('.uitslag');
+    const waarde = knop.dataset.doe === 'wis' ? '' : invoer.value.trim();
+    if (knop.dataset.doe === 'zet' && !waarde) { uit.className = 'uitslag fout'; uit.textContent = 'Er staat niets in het vak.'; return; }
+    uit.className = 'uitslag'; uit.textContent = 'Bewaren…';
+    try {
+      const r = await fetch('/api/instellingen', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ naam: veld.dataset.naam, waarde: waarde }) });
+      const d = await r.json();
+      if (!r.ok) { uit.className = 'uitslag fout'; uit.textContent = d.detail || 'Bewaren mislukt.'; return; }
+      invoer.value = '';
+      await laad();
+    } catch (err) { uit.className = 'uitslag fout'; uit.textContent = 'Geen verbinding met de server.'; }
+    return;
+  }
+  if (e.target.id === 'test') {
+    const uit = document.getElementById('testuitslag');
+    uit.className = 'uitslag'; uit.textContent = 'Versturen…';
+    try {
+      const r = await fetch('/api/instellingen/test', { method: 'POST' });
+      const d = await r.json();
+      const gelukt = /verzonden/.test(d.status || '');
+      uit.className = 'uitslag ' + (gelukt ? 'ok' : 'fout');
+      uit.textContent = d.status || 'Geen antwoord.';
+    } catch (err) { uit.className = 'uitslag fout'; uit.textContent = 'Geen verbinding met de server.'; }
+  }
+});
+
+laad();
+</script>
+</body>
+</html>

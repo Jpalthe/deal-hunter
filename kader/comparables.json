@@ -1,0 +1,2644 @@
+{
+ "versie": "2026-09-15",
+ "bron": "Idealista-assistent; vraagprijzen per m² gebouwd; geen transacties; controle per wijk in onderzoek/H01-*.verificatie.md",
+ "zones": {
+  "benitachell": {
+   "villa_renovated": {
+    "n": 37,
+    "min": 1180,
+    "p25": 3451,
+    "median": 4614,
+    "p75": 5960,
+    "max": 8996,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; bewijstype 2; H01-comparables-benitachell.md §1 en §4",
+    "date": "2026-09-15",
+    "note": "VRAAGPRIJZEN in €/m² gebouwd (m² construidos zoals de tool geeft), geen transactieprijzen. Mengt bewust twee producten: gerenoveerd ouder casco (n=11, mediaan 3.738) en modern gebouwd ≥ 2014 verkocht als tweedehands (n=26, mediaan 5.320). 34 van 37 in Cumbre del Sol, verder Les Fonts, Alcassar, Calistros. Ontdubbeld over objecten (74 advertenties -> 37). 28 van 37 met property_detail bevestigd; 4 moderne villa's zonder bouwjaar [claim agent]. m²-definitie wisselt sterk per makelaar: ruwe zeef, geen taxatie.",
+    "examples": [
+     {
+      "code": "111522880",
+      "price": 2450000,
+      "m2": 279,
+      "eur_m2": 8781,
+      "year": "2014",
+      "label": "Calle Dalias, Cumbre del Sol; modern, bouwjaar 2014, 179 m² nuttig; bovenkant moderne tweedehandsmarkt"
+     },
+     {
+      "code": "104929998",
+      "price": 1200000,
+      "m2": 163,
+      "eur_m2": 7362,
+      "year": "1985",
+      "label": "Camelias 100, Cumbre del Sol; 'villa reformada' op casco 1985, perceel 1.113 m²; m² klein opgegeven"
+     },
+     {
+      "code": "104423998",
+      "price": 1200000,
+      "m2": 190,
+      "eur_m2": 6316,
+      "year": "renovatie 2018",
+      "label": "Cumbre del Sol; 'completamente renovada en 2018', sauna, jacuzzi"
+     },
+     {
+      "code": "110881013",
+      "price": 1495000,
+      "m2": 324,
+      "eur_m2": 4614,
+      "year": "1988 (renovatie 2025)",
+      "label": "Ibiza-villa Dalias, Cumbre del Sol; casco 1988, 'completamente renovada' (2025), perceel 1.032 m²; bij 7 makelaars 1.485.000–1.700.000"
+     },
+     {
+      "code": "109384452",
+      "price": 1680000,
+      "m2": 412,
+      "eur_m2": 4078,
+      "year": "2002",
+      "label": "Kalmias, Cumbre del Sol; 'totalmente reformada' op casco 2002, EPS-isolatie, vloerverwarming, domotica"
+     },
+     {
+      "code": "107642605",
+      "price": 650000,
+      "m2": 250,
+      "eur_m2": 2600,
+      "year": "1987",
+      "label": "Camelias 12, Cumbre del Sol; 'completamente reformada', bouwjaar 1987; onderkant gerenoveerd aanbod"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_renovated_gerenoveerd": {
+    "n": 11,
+    "min": 1180,
+    "p25": 2646,
+    "median": 3738,
+    "p75": 4470,
+    "max": 7362,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; H01 §1 (deelreeks van villa_renovated)",
+    "date": "2026-09-15",
+    "note": "Deelreeks: alleen villa's met renovatieclaim op ouder casco (renovatie niet vóór ±2015). Vraagprijzen, geen transacties. Indicatief (n=11). Laagste waarde (1.180, Girasoles, 500 m² over 3 lagen) is als uitschieter gemarkeerd in het bestand.",
+    "examples": [
+     {
+      "code": "104929998",
+      "price": 1200000,
+      "m2": 163,
+      "eur_m2": 7362,
+      "year": "1985",
+      "label": "Camelias 100; 'villa reformada', casco 1985"
+     },
+     {
+      "code": "110881013",
+      "price": 1495000,
+      "m2": 324,
+      "eur_m2": 4614,
+      "year": "1988 (renovatie 2025)",
+      "label": "Ibiza-villa Dalias; casco 1988, 'completamente renovada'"
+     },
+     {
+      "code": "107642605",
+      "price": 650000,
+      "m2": 250,
+      "eur_m2": 2600,
+      "year": "1987",
+      "label": "Camelias 12; 'completamente reformada', bouwjaar 1987"
+     }
+    ],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_renovated_modern": {
+    "n": 26,
+    "min": 2363,
+    "p25": 4245,
+    "median": 5320,
+    "p75": 6025,
+    "max": 8996,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; H01 §1 (deelreeks van villa_renovated)",
+    "date": "2026-09-15",
+    "note": "Deelreeks: modern gebouwd ≥ 2014 (of hedendaags zonder bouwjaar, [claim agent]) en niet als obra nueva vermarkt. Vraagprijzen, geen transacties.",
+    "examples": [
+     {
+      "code": "111522880",
+      "price": 2450000,
+      "m2": 279,
+      "eur_m2": 8781,
+      "year": "2014",
+      "label": "Calle Dalias; contemporary villa, bouwjaar 2014"
+     },
+     {
+      "code": "110936304",
+      "price": 950000,
+      "m2": 200,
+      "eur_m2": 4750,
+      "year": "2020",
+      "label": "Blue Square, bouwjaar 2020; zelfde huis bij andere makelaar met 418 m² (m²-probleem)"
+     },
+     {
+      "code": "107271254",
+      "price": 950000,
+      "m2": 402,
+      "eur_m2": 2363,
+      "year": "2020",
+      "label": "Begonias 33 b; bouwjaar 2020; 402 m² incl. 136 m² terras en 62 m² parking"
+     }
+    ],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_renovated_cumbre_del_sol": {
+    "n": 34,
+    "min": 1180,
+    "p25": 3545,
+    "median": 4696,
+    "p75": 6025,
+    "max": 8996,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; H01 §1",
+    "date": "2026-09-15",
+    "note": "villa_renovated beperkt tot Idealista-zone Cumbre del Sol (zonder Les Fonts, Alcassar, Calistros). Vraagprijzen, geen transacties. De tool-zone Cumbre del Sol omvat zowel eerste-lijn klif als lagere zones richting Moraira.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_new": {
+    "n": 17,
+    "min": 2832,
+    "p25": 3312,
+    "median": 4577,
+    "p75": 4843,
+    "max": 7971,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; bewijstype 2; H01-comparables-benitachell.md §1 en §5",
+    "date": "2026-09-15",
+    "note": "VRAAGPRIJZEN €/m² gebouwd. Obra nueva, a estrenar, in aanbouw, project of promotie; alleen advertenties met m²-veld (6 promotievermeldingen zonder m² overgeslagen; 111712601 geschrapt omdat 870 m² het perceel is). 13 Cumbre del Sol, 3 Alcassar, 1 Les Fonts; 16 van 17 met property_detail. Nieuwbouw telt terrassen, kelder en parking mee in m² construidos: niet één-op-één vergelijken met renovatie-€/m². Bevat ook een geschakelde nieuwbouw (Vall del Portet, 'pareado').",
+    "examples": [
+     {
+      "code": "112516125",
+      "price": 1650000,
+      "m2": 207,
+      "eur_m2": 7971,
+      "year": null,
+      "label": "Alcassar (Spain Life); promotie in aanbouw, lift, perceel 1.000 m²; m² krap opgegeven (alleen woning)"
+     },
+     {
+      "code": "110510885",
+      "price": 3250000,
+      "m2": 544,
+      "eur_m2": 5974,
+      "year": "2025",
+      "label": "Jazmines 140 j, Cumbre del Sol; 'obra nueva terminada en 2025'; andere makelaar geeft 424 m² (7.665 €/m²)"
+     },
+     {
+      "code": "110511033",
+      "price": 2250000,
+      "m2": 441,
+      "eur_m2": 5102,
+      "year": "2024",
+      "label": "Magnolias 179, Cumbre del Sol; 'a estrenar'; 240 woning + 45 kelder + 153 terras"
+     },
+     {
+      "code": "105209614",
+      "price": 1429000,
+      "m2": 299,
+      "eur_m2": 4779,
+      "year": "2024",
+      "label": "Lirios 84, Cumbre del Sol; 'obra nueva a estrenar'; 181 woning + 93 terras + 25 parking"
+     },
+     {
+      "code": "111499349",
+      "price": 1499000,
+      "m2": 317,
+      "eur_m2": 4729,
+      "year": "2026",
+      "label": "Palmeras 111 p, Cumbre del Sol; 'a estrenar'; zelfde huis elders met 214 m² en 188 m²"
+     },
+     {
+      "code": "111273264",
+      "price": 1375000,
+      "m2": 471,
+      "eur_m2": 2919,
+      "year": null,
+      "label": "Villa Nara, Magnolias 123, Cumbre del Sol; in aanbouw; 217 m² nuttig + 141 m² terras; laagste €/m² door ruime m²-opgave"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_new_cumbre_del_sol": {
+    "n": 13,
+    "min": 2832,
+    "p25": 4273,
+    "median": 4729,
+    "p75": 4843,
+    "max": 6706,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; H01 §1",
+    "date": "2026-09-15",
+    "note": "villa_new beperkt tot Idealista-zone Cumbre del Sol. Vraagprijzen, geen transacties.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "townhouse_renovated": {
+    "n": 5,
+    "min": 1853,
+    "p25": 2153,
+    "median": 2714,
+    "p75": 2889,
+    "max": 3646,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; bewijstype 2; H01-comparables-benitachell.md §1 en §6",
+    "date": "2026-09-15",
+    "note": "n < 6, INDICATIEF. Casco Poble Nou (2 dorpshuizen) plus 3 gerenoveerde adosados in urbanisaties (Cumbre del Sol 2, Las Mimosas/Calistros 1). Twee verschillende markten: het casco ligt duidelijk lager (1.853–2.153). Vraagprijzen, geen transacties; alle 5 met property_detail.",
+    "examples": [
+     {
+      "code": "112205586",
+      "price": 435000,
+      "m2": 202,
+      "eur_m2": 2153,
+      "year": "1940 (renovatie 2026)",
+      "label": "Centro/casco Poble Nou; hoekhuis 1940, 'reformada íntegramente en 2026', nieuw dak/gevel/installaties, 4 lagen"
+     },
+     {
+      "code": "111508676",
+      "price": 365000,
+      "m2": 197,
+      "eur_m2": 1853,
+      "year": "1930 (renovatie 2019/2020)",
+      "label": "Calle de l'Església, casco; dorpshuis 1930, reforma integral 2019/2020; bij 8 makelaars met 192–219 m²"
+     },
+     {
+      "code": "109365710",
+      "price": 350000,
+      "m2": 96,
+      "eur_m2": 3646,
+      "year": "1999",
+      "label": "Las Mimosas (Calistros); geschakeld, 'reformada en 2025'"
+     },
+     {
+      "code": "110120728",
+      "price": 260000,
+      "m2": 90,
+      "eur_m2": 2889,
+      "year": null,
+      "label": "Thomas-Wilson 51, Cumbre del Sol; 'recién reformada', 60 m² nuttig"
+     },
+     {
+      "code": "110955242",
+      "price": 190000,
+      "m2": 70,
+      "eur_m2": 2714,
+      "year": "2006",
+      "label": "Zurbarán (El Portet), Cumbre del Sol; 'reformado en 2016', incl. beglaasd terras"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "townhouse_renovated_casco": {
+    "n": 2,
+    "min": 1853,
+    "p25": 1928,
+    "median": 2003,
+    "p75": 2078,
+    "max": 2153,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; H01 §1 en §6",
+    "date": "2026-09-15",
+    "note": "Alleen casco Poble Nou (Idealista-zone Centro, Benitachell). n=2, zeer indicatief; p25/p75 geïnterpoleerd tussen twee waarden. Overig casco-aanbod was 'para reformar' of 'parcialmente reformado'.",
+    "examples": [
+     {
+      "code": "112205586",
+      "price": 435000,
+      "m2": 202,
+      "eur_m2": 2153,
+      "year": "1940 (renovatie 2026)",
+      "label": "Hoekhuis 1940, 'reformada íntegramente en 2026'"
+     },
+     {
+      "code": "111508676",
+      "price": 365000,
+      "m2": 197,
+      "eur_m2": 1853,
+      "year": "1930 (renovatie 2019/2020)",
+      "label": "Dorpshuis 1930, Calle de l'Església, reforma integral 2019/2020"
+     }
+    ],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "apartment_renovated": {
+    "n": 9,
+    "min": 2111,
+    "p25": 2907,
+    "median": 3318,
+    "p75": 3794,
+    "max": 4358,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; bewijstype 2; H01-comparables-benitachell.md §1 en §7",
+    "date": "2026-09-15",
+    "note": "Indicatief (n=9). 8 Cumbre del Sol, 1 Alcassar; 7 van 9 met property_detail. Vraagprijzen, geen transacties. Sommige m²-opgaven bevatten terras, tuin of gemeenschappelijke delen (bijv. Novamar Suites II: 56 m² gemeenschappelijk meegeteld).",
+    "examples": [
+     {
+      "code": "110844494",
+      "price": 475000,
+      "m2": 109,
+      "eur_m2": 4358,
+      "year": "2005",
+      "label": "Pueblo Panorama dúplex; 'bellamente reformado', prijs verlaagd van 495.000"
+     },
+     {
+      "code": "112369674",
+      "price": 510000,
+      "m2": 127,
+      "eur_m2": 4016,
+      "year": "1990",
+      "label": "Pueblo de la Luz 162; 'remodelación interior concluida en 2026'; incl. gemeenschappelijk en trastero"
+     },
+     {
+      "code": "110959894",
+      "price": 239000,
+      "m2": 63,
+      "eur_m2": 3794,
+      "year": "1998",
+      "label": "Pueblo de la Paz, bovenwoning; 'reformado'; ook aangeboden als 58 m² en op 249.000"
+     },
+     {
+      "code": "112012203",
+      "price": 890000,
+      "m2": 248,
+      "eur_m2": 3589,
+      "year": "2016",
+      "label": "Novamar Suites II; 'reformado en profundidad en 2025'; 122 binnen + 70 terras + 56 gemeenschappelijk"
+     },
+     {
+      "code": "110755051",
+      "price": 259000,
+      "m2": 109,
+      "eur_m2": 2376,
+      "year": "2002",
+      "label": "Pueblo de la Paz dúplex; 'reformada recientemente'; 73 woning + terras + tuin"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "apartment_new": {
+    "n": 8,
+    "min": 2489,
+    "p25": 3101,
+    "median": 4905,
+    "p75": 5660,
+    "max": 6543,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; bewijstype 2; H01-comparables-benitachell.md §1 en §8",
+    "date": "2026-09-15",
+    "note": "Alleen Cumbre del Sol (Montecala Gardens/Pueblo Montecala, Jardines Montecarlo, Calle Greco). Sterk vertekend door m²-definitie: SJW-promotie-units geven alleen woning-m² (4.579–6.543), doorverkopende makelaars tellen terras en gemeenschappelijke delen mee (2.489–2.720). Drie advertenties op 473.000 met 83/176/190 m² (vermoedelijk 'vanaf'-prijs). Vraagprijzen, geen transacties; 6 van 10 met property_detail.",
+    "examples": [
+     {
+      "code": "112440425",
+      "price": 687000,
+      "m2": 105,
+      "eur_m2": 6543,
+      "year": null,
+      "label": "Montecala Gardens ático 3 slk; promotie 'terminada' (SJW)"
+     },
+     {
+      "code": "112440545",
+      "price": 612000,
+      "m2": 117,
+      "eur_m2": 5231,
+      "year": null,
+      "label": "Montecala Gardens piso 3 slk; promotie 'finished'"
+     },
+     {
+      "code": "109493518",
+      "price": 355000,
+      "m2": 114,
+      "eur_m2": 3114,
+      "year": "2023",
+      "label": "Calle Greco; 'nueva construcción'; 91 woning + 23 terras"
+     },
+     {
+      "code": "106847061",
+      "price": 355000,
+      "m2": 116,
+      "eur_m2": 3060,
+      "year": "2024",
+      "label": "Jardines Montecarlo; 'terminado en 2024'"
+     },
+     {
+      "code": "109808739",
+      "price": 389000,
+      "m2": 143,
+      "eur_m2": 2720,
+      "year": "2025",
+      "label": "Montecala Gardens, Greco 21; 'a estrenar'; 91 binnen + 23 terras + 29 gemeenschappelijk"
+     },
+     {
+      "code": "111087729",
+      "price": 473000,
+      "m2": 190,
+      "eur_m2": 2489,
+      "year": null,
+      "label": "Montecala Gardens, Palmeras; oplevering 2026, 109 m² nuttig"
+     }
+    ],
+    "original": {
+     "n": 10,
+     "p25": 2805,
+     "median": 3847,
+     "p75": 5543
+    },
+    "verification": "gecorrigeerd na controle: Eigen zoekopdracht met obra-nueva-filter geeft alleen de 5 SJW-units van Montecala Gardens, mediaan 5.648: +46,8 % en dus buiten ±15 %. Volgens property_detail zijn 111087729 (473.000/190, 3 slk, 'seg"
+   },
+   "apartment_new_montecala_promotie": {
+    "n": 5,
+    "min": 4579,
+    "p25": 5231,
+    "median": 5648,
+    "p75": 5699,
+    "max": 6543,
+    "source": "Officiële Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es, maxResults 50; H01 §1 en §8",
+    "date": "2026-09-15",
+    "note": "Alleen de 5 promotie-units Montecala Gardens (SJW) met woning-m². n < 6, indicatief. Vraagprijzen, geen transacties.",
+    "examples": [
+     {
+      "code": "112440425",
+      "price": 687000,
+      "m2": 105,
+      "eur_m2": 6543,
+      "year": null,
+      "label": "Ático 3 slk"
+     },
+     {
+      "code": "112440488",
+      "price": 473000,
+      "m2": 83,
+      "eur_m2": 5699,
+      "year": null,
+      "label": "Ático 2 slk"
+     },
+     {
+      "code": "112440440",
+      "price": 0,
+      "m2": 0,
+      "eur_m2": null,
+      "year": null,
+      "label": "PLACEHOLDER"
+     }
+    ],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "_caveats": [
+    "Alle cijfers zijn VRAAGPRIJZEN op Idealista (peildatum 15-09-2026) gedeeld door 'm² construidos' zoals de tool die geeft; geen transactieprijzen. Het bestand noemt prijsverlagingen (Villa Moraig -18%, Girasoles -14%, Pueblo Panorama -4%) als teken dat eerste vraagprijzen hier vaak te hoog zitten.",
+    "Cijfers letterlijk overgenomen uit §1 van het bestand. Controle-herberekening op de afgeronde €/m²-waarden uit de tabellen gaf dezelfde uitkomst, op drie afrondingsverschillen van 1 €/m² na (villa_renovated_modern p25 4.245 vs 4.246; apartment_new mediaan 3.847 vs 3.846 en p75 5.543 vs 5.544) — die komen door afronding van de €/m² per object; de bestandswaarden zijn aangehouden.",
+    "Onder de sleutel townhouse_renovated staat de reeks van 5 objecten (casco + adosados in urbanisaties), zoals §6 van het bestand die noemt; de casco-only reeks (n=2) staat apart als townhouse_renovated_casco. Beide n < 6, indicatief.",
+    "m²-definitie is in deze zone onbetrouwbaar: hetzelfde huis staat bij makelaars met 188–317 m², 200–418 m² of 424–544 m². Nieuwbouw en appartementen tellen terrassen, kelders, parking en soms gemeenschappelijke delen mee. €/m² alleen als eerste zeef gebruiken, nooit als taxatie.",
+    "Volledigheid: de tool geeft max. 50 resultaten zonder paginering; vier prijsbanden overschreden die limiet, dus enkele advertenties in de gemeente zijn niet gezien.",
+    "Idealista-zone 'Cumbre del Sol' omvat zowel eerste-lijn klif als lagere zones richting Moraira; 'Poble Nou de Benitatxell' bestaat bij de tool niet als eigen zone (casco = 'Centro, Benitachell').",
+    "Voorbeeld-URL's zijn ingekort tot de kale Idealista-objectlink (utm-trackingparameters uit het bestand weggelaten); objectcodes zijn ongewijzigd.",
+    "Het bestand levert alleen referentieprijzen, geen kandidaten; niets gecontroleerd op vergunbaarheid, kadaster of bouwkundige staat."
+   ]
+  },
+  "centro": {
+   "townhouse_renovated": {
+    "n": 8,
+    "min": 2383,
+    "p25": 2674,
+    "median": 2872,
+    "p75": 3316,
+    "max": 3967,
+    "source": "Idealista-assistent (MCP) search_properties district Centro Ciudad, Jávea/Xàbia (chalets per prijsband + adosados, filter buen estado) + property_detail op 12 objecten",
+    "date": "2026-09-15",
+    "note": "Dorpshuis/adosado/casa señorial in casco of centrum met expliciete renovatie/restauratie in tekst of property_detail; alle 8 met property_detail bevestigd. Zes casco-huizen 'buen estado' zonder renovatieclaim uitgesloten (zou mediaan naar ca. 2.664 drukken). Vraagprijzen.",
+    "examples": [
+     {
+      "code": "112281781",
+      "price": 348900,
+      "m2": 110,
+      "eur_m2": 3172,
+      "year": "1960, renovada 2025",
+      "label": "Casa de pueblo hart van Jávea, renovada 2025 (detail)"
+     },
+     {
+      "code": "112149106",
+      "price": 595000,
+      "m2": 150,
+      "eur_m2": 3967,
+      "year": "renovada 2026",
+      "label": "Casa de pueblo casco antiguo, completamente renovada 2026, licencia turística (detail)"
+     },
+     {
+      "code": "111473433",
+      "price": 525000,
+      "m2": 140,
+      "eur_m2": 3750,
+      "year": "onbekend",
+      "label": "Casa adosada casco antiguo, totalmente renovada a alto nivel (detail)"
+     },
+     {
+      "code": "112029927",
+      "price": 285000,
+      "m2": 106,
+      "eur_m2": 2689,
+      "year": "onbekend",
+      "label": "C/ de la Coma 2, casa de pueblo, reforma integral (detail; dubbel 111821811)"
+     },
+     {
+      "code": "110212994",
+      "price": 765000,
+      "m2": 321,
+      "eur_m2": 2383,
+      "year": "1957",
+      "label": "C/ Roques, centro histórico, bellamente renovada, gastenhuis (detail; dubbel 111816211)"
+     },
+     {
+      "code": "112501218",
+      "price": 620000,
+      "m2": 236,
+      "eur_m2": 2627,
+      "year": "reformada 2018",
+      "label": "Casa de pueblo de lujo centrum, reformada 2018, patio met zwembad (detail)"
+     },
+     {
+      "code": "111260725",
+      "price": 995000,
+      "m2": 330,
+      "eur_m2": 3015,
+      "year": "1960",
+      "label": "Casco antiguo, 4 lagen, herbouwd met architect, hoog niveau (detail)"
+     },
+     {
+      "code": "112342304",
+      "price": 1990000,
+      "m2": 729,
+      "eur_m2": 2730,
+      "year": "onbekend",
+      "label": "Casa señorial casco antiguo, gerestaureerd, patio+zwembad+garage (detail; dubbel 111542413)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_renovated": {
+    "n": 6,
+    "min": 2370,
+    "p25": 3071,
+    "median": 3531,
+    "p75": 4063,
+    "max": 4474,
+    "source": "Idealista-assistent (MCP) search_properties district Centro Ciudad, Jávea/Xàbia, CHALET per prijsband (<600k / 600k–1M / >1M = 101 chalets, volledige inventaris) + property_detail op 8 objecten",
+    "date": "2026-09-15",
+    "note": "Vrijstaande villa in district Centro Ciudad, expliciet gerenoveerd of gebouwd ≥ 2005, tekst plaatst object in centrum of aangrenzende partida (Senioles, Piver, Comunes). 111536032 heeft geen bouwjaar (alleen 'contemporánea', label C): zonder dat object is de mediaan 3.460 (n=5). Villa's die de tekst in Rafalet/Tosalet/Granadella/Arenal/Calpe plaatst zijn uitgesloten. Vraagprijzen.",
+    "examples": [
+     {
+      "code": "111936571",
+      "price": 820000,
+      "m2": 346,
+      "eur_m2": 2370,
+      "year": "onbekend (renovada)",
+      "label": "Senioles, completamente renovada, gastenapp. (detail; ook onder 112075070 voor 795.000)"
+     },
+     {
+      "code": "112284489",
+      "price": 850000,
+      "m2": 236,
+      "eur_m2": 3602,
+      "year": "reformada 2024",
+      "label": "Completamente reformada 2024, 6 slk, perceel 1.210 m² (detail)"
+     },
+     {
+      "code": "107009337",
+      "price": 850000,
+      "m2": 190,
+      "eur_m2": 4474,
+      "year": "2013",
+      "label": "Piver, gebouwd 2013, gelijkvloers, perceel 995 m² (detail)"
+     },
+     {
+      "code": "111672497",
+      "price": 750000,
+      "m2": 255,
+      "eur_m2": 2941,
+      "year": "2009",
+      "label": "Gebouwd 2009, perceel 1.037 m², zwembad (detail)"
+     },
+     {
+      "code": "107770973",
+      "price": 519000,
+      "m2": 150,
+      "eur_m2": 3460,
+      "year": "1975 (reformada)",
+      "label": "Villa reformada, landelijk, perceel 1.414 m², 1 badkamer (detail)"
+     },
+     {
+      "code": "111536032",
+      "price": 1400000,
+      "m2": 332,
+      "eur_m2": 4217,
+      "year": "onbekend (contemporánea, label C)",
+      "label": "Piver, villa contemporánea zeezicht (detail) — zwakste bewijs"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_new": {
+    "n": 1,
+    "min": 6781,
+    "p25": 6781,
+    "median": 6781,
+    "p75": 6781,
+    "max": 6781,
+    "source": "Idealista-assistent (MCP): filter villas + obra nueva in Centro Ciudad geeft 0; dit object komt uit de chalet-inventaris (>1M) en is via property_detail als nieuwbouw 2025 bevestigd",
+    "date": "2026-09-15",
+    "note": "Minder dan 6: n = 1, geen reeks. Ligt in El Garroferal, 3 km van het centrum. Vraagprijs.",
+    "examples": [
+     {
+      "code": "111672511",
+      "price": 1980000,
+      "m2": 292,
+      "eur_m2": 6781,
+      "year": "2025",
+      "label": "El Garroferal, villa de obra nueva, label A, gastenapp. (detail)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "townhouse_new": {
+    "n": 3,
+    "min": 3551,
+    "p25": 3674,
+    "median": 3797,
+    "p75": 3818,
+    "max": 3839,
+    "source": "Idealista-assistent (MCP) search_properties CHALET + obra nueva in Centro Ciudad (total 3) + property_detail op alle 3",
+    "date": "2026-09-15",
+    "note": "Minder dan 6: n = 3, alle drie in de promotie Blooming Village (C/ José de Espronceda 2), promotie niet afgerond. Vraagprijzen; btw-vermelding ontbreekt.",
+    "examples": [
+     {
+      "code": "109710781",
+      "price": 696000,
+      "m2": 196,
+      "eur_m2": 3551,
+      "year": "obra nueva (niet afgerond)",
+      "label": "Blooming Village, adosado 4 slk (detail)"
+     },
+     {
+      "code": "111031699",
+      "price": 691000,
+      "m2": 182,
+      "eur_m2": 3797,
+      "year": "obra nueva (niet afgerond)",
+      "label": "Blooming Village, adosado 4 slk, parkeerplaats (detail)"
+     },
+     {
+      "code": "110314601",
+      "price": 595000,
+      "m2": 155,
+      "eur_m2": 3839,
+      "year": "obra nueva (niet afgerond)",
+      "label": "Blooming Village, adosado 4 slk (detail)"
+     }
+    ],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "apartment_renovated": {
+    "n": 9,
+    "min": 2638,
+    "p25": 3631,
+    "median": 4008,
+    "p75": 5443,
+    "max": 7826,
+    "source": "Idealista-assistent (MCP) search_properties pisos buen estado in Centro Ciudad (50 van 127 opgehaald, geen paginering) + property_detail op 6 objecten",
+    "date": "2026-09-15",
+    "note": "Bouwjaar ≥ 2015 of expliciete integrale renovatie. Geen enkel object ligt in de casco antiguo zelf; alle liggen in de nieuwbouwgordel dorp–haven (UNIC, Essential, Trenc d'Alba). m² gebouwd bevat bij áticos het dakterras (111574952: 235 m² gebouwd / 115 m² útiles). Steekproef, geen inventaris. Vraagprijzen.",
+    "examples": [
+     {
+      "code": "111051168",
+      "price": 650000,
+      "m2": 148,
+      "eur_m2": 4392,
+      "year": "2019",
+      "label": "Ático dúplex Haya, gebouwd 2019; 87 m² woning (tekst)"
+     },
+     {
+      "code": "108606753",
+      "price": 485000,
+      "m2": 149,
+      "eur_m2": 3255,
+      "year": "2023",
+      "label": "Av. Trenc d'Alba, gebouwd 2023, tussen casco en haven (tekst)"
+     },
+     {
+      "code": "107684589",
+      "price": 529000,
+      "m2": 132,
+      "eur_m2": 4008,
+      "year": "2023",
+      "label": "Essential, gebouwd 2023, label B (tekst)"
+     },
+     {
+      "code": "111575229",
+      "price": 430000,
+      "m2": 79,
+      "eur_m2": 5443,
+      "year": "2025",
+      "label": "UNIC, C/ Castellet 6, gebouwd 2025 (detail)"
+     },
+     {
+      "code": "109777059",
+      "price": 540000,
+      "m2": 69,
+      "eur_m2": 7826,
+      "year": "2024",
+      "label": "C/ Castellet, modern complex, gebouwd 2024 (detail)"
+     },
+     {
+      "code": "112319877",
+      "price": 595000,
+      "m2": 101,
+      "eur_m2": 5891,
+      "year": "2023",
+      "label": "Essential ático dúplex, gebouwd 2023, solárium 97 m² (detail)"
+     },
+     {
+      "code": "111574952",
+      "price": 620000,
+      "m2": 235,
+      "eur_m2": 2638,
+      "year": "2023",
+      "label": "Essential ático dúplex, 115 m² útiles + dakterras 120 m² (detail) — €/m² gedrukt door terras"
+     },
+     {
+      "code": "109854808",
+      "price": 255000,
+      "m2": 64,
+      "eur_m2": 3984,
+      "year": "2000, reforma integral (oplevering sept. 2026)",
+      "label": "C/ Thiviers, 1 slk, reforma integral in uitvoering (detail)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "apartment_new": {
+    "n": 50,
+    "min": 2811,
+    "p25": 3436,
+    "median": 3620,
+    "p75": 4132,
+    "max": 6453,
+    "source": "Idealista-assistent (MCP) search_properties pisos + obra nueva in Centro Ciudad (total 50, alle 50 opgehaald) + 1 object in aanbouw uit de tweedehandsset; property_detail op 6 objecten",
+    "date": "2026-09-15",
+    "note": "Volledige inventaris. Promoties: Jávea Garden (n 15, mediaan 3.530), Serestar Jávea 'centro histórico' (n 11, 3.696), Av. Rei Juan Carlos I (n 7, 4.181), Residencial Living (n 5, 3.911), Natura Beach (n 5, 4.004), Blooming Village (n 5, 4.313), 'Apartamentos en Jávea' (3.318–3.424). Btw (10 %) waarschijnlijk niet in de prijs; tool vermeldt het niet. Vraagprijzen.",
+    "examples": [
+     {
+      "code": "112372503",
+      "price": 650000,
+      "m2": 102,
+      "eur_m2": 6373,
+      "year": "obra nueva",
+      "label": "Residencial Living Jávea, ático 3 slk, terras 90 m² (detail)"
+     },
+     {
+      "code": "111705285",
+      "price": 548500,
+      "m2": 85,
+      "eur_m2": 6453,
+      "year": "obra nueva",
+      "label": "Natura Beach Xàbia, C/ Garcilaso de la Vega 8 (max van de reeks)"
+     },
+     {
+      "code": "111479225",
+      "price": 528500,
+      "m2": 188,
+      "eur_m2": 2811,
+      "year": "obra nueva",
+      "label": "Natura Beach Xàbia (min van de reeks)"
+     },
+     {
+      "code": "112503269",
+      "price": 362300,
+      "m2": 95,
+      "eur_m2": 3814,
+      "year": "obra nueva",
+      "label": "Serestar Jávea, C/ Arquitecte Urteaga 2, centro histórico, licentie verleend (detail)"
+     },
+     {
+      "code": "111059780",
+      "price": 351000,
+      "m2": 100,
+      "eur_m2": 3510,
+      "year": "obra nueva",
+      "label": "Jávea Garden, C/ Historiador Palau 23, 72 woningen (detail)"
+     },
+     {
+      "code": "109912037",
+      "price": 512000,
+      "m2": 99,
+      "eur_m2": 5172,
+      "year": "obra nueva",
+      "label": "Av. Rei Juan Carlos I s/n"
+     },
+     {
+      "code": "108918177",
+      "price": 498000,
+      "m2": 129,
+      "eur_m2": 3860,
+      "year": "obra nueva",
+      "label": "Blooming Village, C/ José de Espronceda 2"
+     },
+     {
+      "code": "112539584",
+      "price": 428000,
+      "m2": 129,
+      "eur_m2": 3318,
+      "year": "2026 (in aanbouw)",
+      "label": "9 woningen, rand centro histórico, 2e-hands gelabeld (detail)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "_caveats": [
+    "Alle cijfers zijn VRAAGPRIJZEN van 15-09-2026 op Idealista, geen transactieprijzen; [te verifiëren] met Registradores/notariaat zodra die bron er is.",
+    "Kleine steekproeven: townhouse_renovated n=8, villa_renovated n=6 (1 met zwak bewijs; zonder dat object mediaan 3.460), villa_new n=1 (geen reeks), townhouse_new n=3 (minder dan 6). Alleen apartment_new (n=50) is een volledige inventaris; apartment_renovated (n=9) komt uit 50 van 127 opgehaalde advertenties.",
+    "Het Idealista-district 'Centro Ciudad' is breder dan de casco antiguo: het bevat villapartidas (Senioles, Piver, Comunes, Cansalades, Cap Martí, Garroferal), de nieuwbouwgordel dorp–haven, én foutief gelabelde objecten (Rafalet, Tosalet, Granadella, Arenal, Cabo San Antonio, Calpe). Villa's die de tekst buiten het centrum plaatst zijn uitgesloten; per object staat de ligging uit de tekst.",
+    "Geen van de apartment_renovated-objecten ligt in de casco antiguo zelf; casco-appartementen zonder renovatieclaim vragen 3.702 €/m² (104 m², lift) en 4.342 €/m² (complex uit 2006). Voor splitsingsscenario's van K13/K14 is dit een zwakke referentie.",
+    "m² gebouwd is het 'size'-getal van de tool; bij áticos en dorpshuizen met dakterras zit het terras erin (bijv. 111574952: 235 m² gebouwd / 115 m² útiles → 2.638 vs 5.391 €/m²). Kadastrale oppervlakten zijn niet opgevraagd.",
+    "Tool-gedrag: vrije tekst wordt vrijwel genegeerd en omgezet in een structurele filter; 'Jávea centro histórico / casco antiguo' wordt naar Málaga gegeocodeerd (3 queries verworpen); geen paginering (max 50), daarom prijsbanden; 'total' geeft wel de echte omvang.",
+    "Deduplicatie op prijs+m²; K01 (ook 110967853) en K02 (ook 112342283, 112205878, 110900124) zijn uit alle reeksen gehouden. Hetzelfde huis met twee prijzen (111936571 820.000 / 112075070 795.000) is één keer geteld tegen 820.000.",
+    "Energielabel G bij 'totalmente renovada' (111473433, 111260725) laat zien dat 'gerenoveerd' niet altijd 'geïsoleerd' betekent; de opgeleverde staat voor een verkoopcalculatie moet apart worden gedefinieerd.",
+    "Bij nieuwbouw komt 10 % btw + AJD bovenop de vraagprijs; de Jávea-promoties vermelden niet of de btw in de prijs zit.",
+    "Dit bestand overschrijft een eerdere versie van 09:41 dezelfde dag (zelfde methode, nieuwe meting); de oude versie staat als back-up in de sessie-scratchpad (H01-comparables-centro.v0941.bak.md). Geen telefoonnummers of contactgegevens overgenomen."
+   ]
+  },
+  "granadella_balcon": {
+   "villa_renovated": {
+    "n": 43,
+    "min": 3016,
+    "p25": 4746,
+    "median": 6081,
+    "p75": 7248,
+    "max": 16176,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; 24 zoekopdrachten, 25 detailopvragingen; vraagprijs / m² construidos zoals de tool geeft; 13 van 34 met property_detail bevestigd",
+    "date": "2026-09-15",
+    "note": "Beide zones samen (25 Portichol–Balcón al Mar, 9 La Granadella–Costa Nova). 12 objecten gevlagd (5 alleen claim 'moderna/contemporánea' zonder bouwjaar, 3 renovaties die pas in 2026 worden opgeleverd, 2 tegenstrijdige advertenties, 1 renovatie als obra-nueva-promotie); zonder die 12: n=22, p25 5305, mediaan 6248, p75 7220. Per zone: Balcón al Mar n=25 mediaan 6306 (p25 4981, p75 7415); Granadella n=9 mediaan 5777 (p25 4120, p75 7226). Ontdubbeld op prijs+m²+zone plus handmatig (Wagner-villa 2021: 10 advertenties; Mendelssohn 12: 9; Isola Blu: 3 zeker + 2 vermoedelijk).",
+    "examples": [
+     {
+      "code": "110507768",
+      "price": 3500000,
+      "m2": 264,
+      "eur_m2": 13258,
+      "year": "onbekend (reforma integral)",
+      "label": "Villa Isola Blu, Balcón al Mar: reforma integral llave en mano, tweede lijn; bovenkant markt"
+     },
+     {
+      "code": "110940632",
+      "price": 1890000,
+      "m2": 260,
+      "eur_m2": 7269,
+      "year": "2025 (renovatiejaar volgens tool; herbouwd met behoud structuur)",
+      "label": "Isaac Albéniz 9, Balcón al Mar (Elia Living): reconstruida desde cero; bevestigd met property_detail; doublure 111681766 (306 m²)"
+     },
+     {
+      "code": "112100580",
+      "price": 1495000,
+      "m2": 260,
+      "eur_m2": 5750,
+      "year": "onbekend (completamente reconstruida)",
+      "label": "Villa Granados, Balcón al Mar: volledig herbouwd, verkoop door architectenbureau; 180 m² binnen, 260 m² incl. terrassen; bevestigd"
+     },
+     {
+      "code": "112065295",
+      "price": 1295000,
+      "m2": 260,
+      "eur_m2": 4981,
+      "year": "gerenoveerd 2024 (tool geeft geen bouwjaar)",
+      "label": "George Gershwin 16, Balcón al Mar: renovada en 2024, verwarmd zwembad, zonnepanelen; bevestigd"
+     },
+     {
+      "code": "109434288",
+      "price": 1350000,
+      "m2": 300,
+      "eur_m2": 4500,
+      "year": "1982, reformada hasta 2020",
+      "label": "Rimontgó, bij Cala Barraca: bouwjaar 1982, gerenoveerd tot 2020; bevestigd; nieuw t.o.v. vorige run"
+     },
+     {
+      "code": "111856808",
+      "price": 1425000,
+      "m2": 380,
+      "eur_m2": 3750,
+      "year": "1980, completamente renovada 2023",
+      "label": "Felix Mendelssohn 12: negen advertenties met uiteenlopende claims; prijs verlaagd van 1.500.000; bevestigd; gevlagd tegenstrijdig"
+     },
+     {
+      "code": "110549860",
+      "price": 1190000,
+      "m2": 206,
+      "eur_m2": 5777,
+      "year": "1983, renovada",
+      "label": "Villa Marina, Costa Nova: gerenoveerd, perceel 1.489 m²; dichtste vergelijking met K12 (zelfde zone en bouwperiode); bevestigd"
+     },
+     {
+      "code": "101444351",
+      "price": 1090000,
+      "m2": 318,
+      "eur_m2": 3428,
+      "year": "1982; reforma integral wordt eind 2026 opgeleverd",
+      "label": "Calle del Morell, Costa Nova: goedkoopste 'gerenoveerde' is een belofte, beelden illustratief; bevestigd; gevlagd belofte"
+     }
+    ],
+    "original": {
+     "n": 34,
+     "p25": 4851,
+     "median": 6248,
+     "p75": 7378
+    },
+    "verification": "gecorrigeerd na controle: 3/3 voorbeelden via property_detail bevestigd: 93589452 (min, 2014), 106825516 (mediaan, 2016) en 110816768 (max, 5.500.000/340; zwakke claim 'renovada y mantenida', bouwjaar 1980, niet gevlagd). Reke"
+   },
+   "villa_new": {
+    "n": 31,
+    "min": 3196,
+    "p25": 4139,
+    "median": 4750,
+    "p75": 6645,
+    "max": 10263,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; obra nueva / a estrenar / in aanbouw / project met licentie, alleen advertenties met m²-veld; 9 van 26 met property_detail bevestigd",
+    "date": "2026-09-15",
+    "note": "17 Portichol–Balcón al Mar (mediaan 6136, p25 4472, p75 7045), 9 La Granadella–Costa Nova (mediaan 4242, p25 3686, p75 4455). Slechts 4 van 26 aantoonbaar afgebouwd (Casa Iroko, Atina 2024, Anton Webern 2024, Jucavi 'terminada'): mediaan 4911. Nieuwbouw-m² bevat souterrain/terras/zwembadplateau (Villa Bella 527 m² gebouwd vs 191 nuttig; Villa Horizon 550 incl. 169 terras): niet één-op-één met renovatie-€/m² vergelijken. Zeven 'render-projecten' (codes 1086xxxxx) vermoedelijk ontwerp-plus-bouw op nog te kopen kavels [te verifiëren].",
+    "examples": [
+     {
+      "code": "111605544",
+      "price": 1749000,
+      "m2": 476,
+      "eur_m2": 3674,
+      "year": "2025, promotie 'finished'",
+      "label": "Casa Iroko, La Guardia Park: afgebouwd, A++, incl. 180 m² souterrain; vier codes onder twee zonelabels; bevestigd"
+     },
+     {
+      "code": "110085651",
+      "price": 3290000,
+      "m2": 467,
+      "eur_m2": 7045,
+      "year": "2024, afgebouwd",
+      "label": "Balcón al Mar (Atina): recién construcción, lista para habitar, A-label, lift; tool-status segunda mano; bevestigd"
+     },
+     {
+      "code": "111003348",
+      "price": 1350000,
+      "m2": 220,
+      "eur_m2": 6136,
+      "year": "2024",
+      "label": "Anton Webern, urb. La Cala: nieuwbouw 2024 op 1.000 m²; zelfde villa als particuliere advertentie 109547558; bevestigd"
+     },
+     {
+      "code": "107030914",
+      "price": 1995000,
+      "m2": 527,
+      "eur_m2": 3786,
+      "year": "project, promotie 'notFinished'",
+      "label": "Villa Bella (Miralbo), Balcón al Mar f 21: 527 m² gebouwd tegenover 191 m² nuttig — m²-inflatie bij nieuwbouw; bevestigd"
+     },
+     {
+      "code": "107029688",
+      "price": 2625000,
+      "m2": 550,
+      "eur_m2": 4773,
+      "year": "project",
+      "label": "Villa Horizon (Miralbo), Ambolo: 365 m² woning + 169 m² terras/zwembad = 550 m² 'construidos'; nog niet gebouwd"
+     },
+     {
+      "code": "108771720",
+      "price": 1290000,
+      "m2": 350,
+      "eur_m2": 3686,
+      "year": "afgebouwd volgens tekst; promotie 'notFinished'",
+      "label": "Costa Nova Pla 107 (Jucavi): 'completamente terminada', tekst 200 m² woning vs 350 m² tool; bevestigd"
+     },
+     {
+      "code": "111917256",
+      "price": 4500000,
+      "m2": 676,
+      "eur_m2": 6657,
+      "year": "in aanbouw, oplevering dec 2026",
+      "label": "Villa Granadella: 677 m² op 925 m² naast natuurpark, lift"
+     },
+     {
+      "code": "112309956",
+      "price": 6900000,
+      "m2": 772,
+      "eur_m2": 8938,
+      "year": "project met licentie, promotie 'notFinished'",
+      "label": "Nao Horizon (EuroJávea), Cabo de la Nao eerste lijn: 772 m² gebouwd / 592 nuttig; plafond van de reeks; bevestigd"
+     }
+    ],
+    "original": {
+     "n": 26,
+     "p25": 4178,
+     "median": 4727,
+     "p75": 6651
+    },
+    "verification": "gecorrigeerd na controle: 3/3 voorbeelden via property_detail bevestigd als obra-nueva-promotie notFinished: 104311957 (min; 'met licentie' niet in de detailtekst [te verifiëren]), 108643000 (mediaan) en 107915996 (max). Reken"
+   },
+   "villa_renovated_balcon": {
+    "n": 25,
+    "min": 3750,
+    "p25": 4981,
+    "median": 6306,
+    "p75": 7415,
+    "max": 16176,
+    "source": "Idealista-assistent 15-09-2026, deelreeks Portichol – Balcón al Mar",
+    "date": "2026-09-15",
+    "note": "Deelreeks van villa_renovated.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_renovated_granadella": {
+    "n": 9,
+    "min": 3016,
+    "p25": 4120,
+    "median": 5777,
+    "p75": 7226,
+    "max": 11170,
+    "source": "Idealista-assistent 15-09-2026, deelreeks La Granadella – Costa Nova",
+    "date": "2026-09-15",
+    "note": "Kleine steekproef; mediaan hangt aan Villa Marina (110549860). Relevant voor K12.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_renovated_strikt": {
+    "n": 22,
+    "min": 3016,
+    "p25": 5305,
+    "median": 6248,
+    "p75": 7220,
+    "max": 16176,
+    "source": "Idealista-assistent 15-09-2026, villa_renovated zonder de 12 gevlagde objecten (claim/belofte/tegenstrijdig/promotie)",
+    "date": "2026-09-15",
+    "note": "Gevoeligheidsanalyse: mediaan gelijk, p25 hoger.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_new_balcon": {
+    "n": 17,
+    "min": 3786,
+    "p25": 4472,
+    "median": 6136,
+    "p75": 7045,
+    "max": 10263,
+    "source": "Idealista-assistent 15-09-2026, deelreeks Portichol – Balcón al Mar",
+    "date": "2026-09-15",
+    "note": "Deelreeks van villa_new; relevant voor K10 (Balcón al Mar), met m²-kanttekening.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_new_granadella": {
+    "n": 9,
+    "min": 3196,
+    "p25": 3686,
+    "median": 4242,
+    "p75": 4455,
+    "max": 6657,
+    "source": "Idealista-assistent 15-09-2026, deelreeks La Granadella – Costa Nova",
+    "date": "2026-09-15",
+    "note": "Zeven van negen zijn projecten/renders.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_new_afgebouwd": {
+    "n": 4,
+    "min": 3674,
+    "p25": 3683,
+    "median": 4911,
+    "p75": 6363,
+    "max": 7045,
+    "source": "Idealista-assistent 15-09-2026, alleen nieuwbouw die volgens tool of tekst af is (111605544, 108771720, 111003348, 110085651)",
+    "date": "2026-09-15",
+    "note": "Te kleine steekproef voor kwartielen; alleen als richtwaarde.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "apartment_renovated": {
+    "n": 1,
+    "min": null,
+    "p25": 4906,
+    "median": 4906,
+    "p75": 4906,
+    "max": null,
+    "source": "Idealista-assistent 15-09-2026: geen appartementen in deze villazones (alleen Apartamentos Halcón 105453470, niet gerenoveerd)",
+    "date": "2026-09-15",
+    "note": "Niet van toepassing; hoort bij puerto_arenal.",
+    "examples": [],
+    "original": {
+     "n": 0,
+     "p25": null,
+     "median": 0,
+     "p75": null
+    },
+    "verification": "gecorrigeerd na controle: Het origineel gaf n=0 zonder op pisos te zoeken. Gevonden: 111264150 in Granadella, 'bungalow totalmente reformado', 260.000/53 m² (hoort mogelijk bij het renovatieproject van de adosados van 260.000 "
+   },
+   "apartment_new": {
+    "n": 5,
+    "min": null,
+    "p25": 4611,
+    "median": 4885,
+    "p75": 6304,
+    "max": null,
+    "source": "Idealista-assistent 15-09-2026: geen nieuwbouwappartementen in deze zones",
+    "date": "2026-09-15",
+    "note": "Niet van toepassing; hoort bij puerto_arenal.",
+    "examples": [],
+    "original": {
+     "n": 0,
+     "p25": null,
+     "median": 0,
+     "p75": null
+    },
+    "verification": "gecorrigeerd na controle: Het origineel gaf n=0. Een zoekopdracht naar pisos in Portichol leverde 5 nieuwbouwappartementen op: 112497428, 111289156, 110908436, 110085751 en 110085760. Vier daarvan liggen in één complex (Reside"
+   },
+   "townhouse_renovated": {
+    "n": 5,
+    "min": null,
+    "p25": 3611,
+    "median": 4815,
+    "p75": 5000,
+    "max": null,
+    "source": "Idealista-assistent 15-09-2026: geen casas de pueblo; wel drie gerenoveerde adosados in Balcón al Mar ter info (111904945 260.000/73 m² = 3.562; 109404683 260.000/52 m² = 5.000; 110850566 260.000/54 m² = 4.815), niet als reeks gebruikt",
+    "date": "2026-09-15",
+    "note": "Niet van toepassing; hoort bij centro (casco).",
+    "examples": [],
+    "original": {
+     "n": 0,
+     "p25": null,
+     "median": 0,
+     "p75": null
+    },
+    "verification": "gecorrigeerd na controle: Het origineel gaf n=0, maar noemde zelf 3 gerenoveerde adosados 'ter informatie'. Gevonden: 111904945, 110306838, 110850566 (= 110799770), 109404683 en 110158525 (Jada Residence, Granadella). Vier van"
+   },
+   "_caveats": [
+    "Alle cijfers zijn VRAAGPRIJZEN van één dag (15-09-2026, 10:41–10:52), geen transactieprijzen; gebruik de mediaan als plafond-indicatie, niet als taxatie.",
+    "Het bestand vervangt een eerdere versie van 09:38 uit een eerdere run van dezelfde opdracht (n was 31/20, medianen 6.250/4.464); deze run zag meer aanbod (170 i.p.v. 94 unieke advertenties in Balcón al Mar) doordat de prijsbanden zonder het 'con balcón'-filter zijn bevraagd; de conclusie verandert niet, de nieuwbouwmediaan stijgt van 4.464 naar 4.727.",
+    "Zonelabels: de assistent beeldt een meerzone-query op één Idealista-zone af; de twee zones zijn apart bevraagd. 'Cala Blanca' is op Idealista een aparte zone bij het Arenal (2 treffers, buiten de reeksen). Enkele objecten staan onder twee zonelabels (Casa Iroko, Villa Nevis) en zijn één keer geteld.",
+    "De tool voegt bij de zonenaam 'Balcón al Mar' soms eigenhandig het filter 'con balcón' toe; queries met 'Portichol' gaven dat niet. Trefwoorden reformada/moderna filteren niet op renovatie; selectie is op de advertentietekst gedaan.",
+    "Volledigheid: Balcón al Mar 171 'casas y chalets' volgens de tool, 170 gezien; Granadella 51 villa's, 51 gezien; 221 unieke advertenties totaal. Geen paginering, totalen wisselen per filtercombinatie.",
+    "12 van de 34 gerenoveerde/moderne objecten zijn gevlagd (5 alleen aanbiedersclaim 'moderna/contemporánea' zonder bouwjaar, 3 renovaties die pas in 2026 worden opgeleverd, 2 tegenstrijdige advertentieclusters, 1 renovatie verkocht als obra-nueva-promotie). Zonder die 12: n=22, mediaan 6.248, p25 5.305, p75 7.220.",
+    "m² gebouwd is niet uniform: nieuwbouw telt souterrain, terras en zwembadplateau mee (Villa Bella 527 m² gebouwd vs 191 nuttig; Villa Horizon 550 incl. 169 terras; Casa Iroko 476 incl. 180 kelder); dezelfde woning krijgt bij verschillende makelaars afwijkende m² (260/306, 400/574/344, 666/670/780). Nieuwbouw-€/m² nooit één-op-één met renovatie-€/m² vergelijken.",
+    "Van de 26 nieuwbouwobjecten zijn er maar 4 aantoonbaar af; zeven 'render-projecten' (codes 1086xxxxx) zijn vermoedelijk ontwerp-plus-bouw op nog te kopen kavels [te verifiëren].",
+    "Het veld 'Construido en' van de tool kan het renovatie- of projectjaar zijn (Isaac Albéniz 2025 = renovatie; Rimontgó-project '2026').",
+    "Granadella/Costa Nova heeft maar 9 gerenoveerde objecten (3.016–11.170 €/m²); de mediaan 5.777 hangt aan één object (Villa Marina 1983, 206 m²), tegelijk de best passende vergelijking voor K12 (795.000/256 m² = 3.105 €/m², net boven het minimum en ruim onder de p25 van 4.120).",
+    "Vermoedelijke doublures van Isola Blu (107274281: bouwjaar 2000, 'recientemente reformada', 3.500.000/263 m², label G; 107274288: 3.500.000/249 m²) zijn niet apart geteld [te verifiëren]; zouden het aparte huizen zijn, dan komt er één object van 13.308 €/m² bij zonder effect op de mediaan.",
+    "Uitschieters (16.176, 13.258, 10.263, 9.857, 8.938 €/m²) zijn kliflocaties op de eerste/tweede lijn of kleine projecten; ze trekken max en p75 omhoog, niet de mediaan.",
+    "Verificatie: property_detail in deze run voor 13 van 34 gerenoveerde en 9 van 26 nieuwbouwobjecten plus 3 doublurecontroles; de overige objecten rusten op de zoekresultaattekst (bewijstype 1/3).",
+    "Apartment- en townhouse-reeksen zijn hier niet van toepassing (villazones, n=0); drie gerenoveerde adosados in Balcón al Mar staan ter info in §6.",
+    "Geen telefoonnummers of namen van particulieren overgenomen; particuliere advertenties alleen met code, zone en cijfers.",
+    "Ruwe zoekresultaten en de dataset staan in de tijdelijke sessie-scratchpad (…/scratchpad/gb2/); het rapport bevat alle gebruikte gegevens en URL's letterlijk."
+   ]
+  },
+  "montgo_ermita": {
+   "villa_renovated": {
+    "n": 17,
+    "min": 3176,
+    "p25": 3922,
+    "median": 4364,
+    "p75": 5087,
+    "max": 9342,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), zones Montgó–Ermita (n=12) en Partida Tosal–Zona dels Castellans (n=5), Jávea; vraagprijs / m² gebouwd zoals de tool geeft; 17/17 via property_detail bevestigd; ontdubbeld (zelfde prijs+m²+zone en evidente dubbelen bij meerdere makelaars)",
+    "date": "2026-09-15",
+    "note": "Vraagprijzen, geen transactieprijzen. 'Gerenoveerd' = expliciete claim in advertentie (13 objecten); 'modern' = bouwjaar 2014/2016/2023 volgens property_detail (3) of contemporaine architectuur zonder bouwjaar (1, Ca Malva 9.342 €/m², uitschieter). Zonder de twee uitschieters (Ca Malva; villa 2014 met 885 m² incl. ±200 m² ruwbouw): n=15, p25 3.964, mediaan 4.364, p75 5.075, max 7.500. Montgó–Ermita apart: n=12, mediaan 4.325 (p25 3.986, p75 4.680). Tosal–Castellans n=5 te klein voor eigen mediaan.",
+    "examples": [
+     {
+      "code": "110437594",
+      "price": 720000,
+      "m2": 165,
+      "eur_m2": 4364,
+      "year": "onbekend",
+      "label": "Villa 1 laag, 4 sk, 'completamente renovada', Los Huertos del Montgó; ook als 110753189 (zonelabel Tosal) — één object"
+     },
+     {
+      "code": "112088816",
+      "price": 1025000,
+      "m2": 281,
+      "eur_m2": 3648,
+      "year": "1981",
+      "label": "Villa 4 sk 'completamente renovada' (property_detail); prijs -5 %; dubbel 110560477"
+     },
+     {
+      "code": "109920552",
+      "price": 1090000,
+      "m2": 272,
+      "eur_m2": 4007,
+      "year": "onbekend",
+      "label": "Villa contemporánea 'completamente reformada', Montgó Valls; dubbels 111233612/111669594; zelfde huis bij 111550632 met 218 m² (5.000 €/m²)"
+     },
+     {
+      "code": "109732217",
+      "price": 1350000,
+      "m2": 315,
+      "eur_m2": 4286,
+      "year": "1980, reformada y ampliada 2022",
+      "label": "Villa met gastenappartement (property_detail); dubbel 111224213"
+     },
+     {
+      "code": "110085864",
+      "price": 1475000,
+      "m2": 324,
+      "eur_m2": 4552,
+      "year": "2023",
+      "label": "Contemporaine villa opgeleverd 2023, tweedehands (modern)"
+     },
+     {
+      "code": "112387090",
+      "price": 1595000,
+      "m2": 315,
+      "eur_m2": 5063,
+      "year": "2016",
+      "label": "Contemporaine villa gebouwd 2016, energielabel C (modern)"
+     },
+     {
+      "code": "111361293",
+      "price": 1399000,
+      "m2": 275,
+      "eur_m2": 5087,
+      "year": "onbekend",
+      "label": "Tosal–Castellans (Calle Elche): 'renovación integral' incl. elektra/sanitair (property_detail)"
+     },
+     {
+      "code": "107385205",
+      "price": 794000,
+      "m2": 250,
+      "eur_m2": 3176,
+      "year": "1978",
+      "label": "Tosal–Castellans: 'reformada recientemente' (property_detail); laagste van de reeks; advertentie >1 jaar oud"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_new": {
+    "n": 14,
+    "min": 3646,
+    "p25": 4393,
+    "median": 5002,
+    "p75": 6831,
+    "max": 7532,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), Montgó–Ermita (n=13) en Partida Tosal–Zona dels Castellans (n=1); vraagprijs / m² gebouwd zoals de tool geeft; 9/14 via property_detail bevestigd; ontdubbeld",
+    "date": "2026-09-15",
+    "note": "Twee lagen: (a) opgeleverd/vrijwel opgeleverd 2025–2026: 6.758–7.532 €/m² bij 290–340 m² (112208312, 112229257, 111080148, 111656915) en 4.009 bij 459 m² incl. kelder (111697961); (b) projecten met licentie, nog te bouwen: 3.646–5.258 €/m², vaak incl. kelder/terras en soms excl. IVA (Villa Piscis expliciet '+ IVA'). Zonder Ca Áurea (759 m² incl. 365 m² terras): n=13, mediaan 5.258, p25 4.572, p75 6.848. Vraagprijzen, geen transacties.",
+    "examples": [
+     {
+      "code": "112208312",
+      "price": 2350000,
+      "m2": 337,
+      "eur_m2": 6973,
+      "year": "2025",
+      "label": "'Construido en 2025', nieuwbouw 2 lagen, 4 sk (property_detail)"
+     },
+     {
+      "code": "112229257",
+      "price": 2350000,
+      "m2": 312,
+      "eur_m2": 7532,
+      "year": "2025",
+      "label": "'Construido en 2025', één laag, 5 sk, energielabel B (property_detail); hoogste van de reeks"
+     },
+     {
+      "code": "111080148",
+      "price": 1980000,
+      "m2": 293,
+      "eur_m2": 6758,
+      "year": "2026",
+      "label": "'Construido en 2026', ibiza-stijl (property_detail); 59 m van 111938184, mogelijk zelfde ontwikkeling"
+     },
+     {
+      "code": "111938184",
+      "price": 1980000,
+      "m2": 292,
+      "eur_m2": 6781,
+      "year": "in aanbouw, oplevering eind 2026",
+      "label": "Nieuwbouwvilla El Garroferal (property_detail); zelfde villa bij BHHS 111281212 voor 1.875.000 (6.421 €/m²)"
+     },
+     {
+      "code": "111697961",
+      "price": 1840000,
+      "m2": 459,
+      "eur_m2": 4009,
+      "year": "in aanbouw, oplevering aug 2026",
+      "label": "Promotie obra nueva, lift, kelder/garage 4 auto's (property_detail)"
+     },
+     {
+      "code": "111598568",
+      "price": 2245000,
+      "m2": 491,
+      "eur_m2": 4572,
+      "year": "project (licentie LOM 2025/77)",
+      "label": "Villa Piscis, te bouwen; prijs + IVA volgens promotietekst; 491 m² incl. kelder (300 m² útiles)"
+     },
+     {
+      "code": "108643937",
+      "price": 1495000,
+      "m2": 410,
+      "eur_m2": 3646,
+      "year": "project",
+      "label": "Villa NOVA, renders, promotie 'notFinished' (property_detail); laagste van de reeks"
+     },
+     {
+      "code": "111928138",
+      "price": 1575000,
+      "m2": 230,
+      "eur_m2": 6848,
+      "year": "project",
+      "label": "Tosal–Castellans: enige nieuwbouwvermelding, plattegronden, zeezicht (property_detail)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "_caveats": [
+    "Alle cijfers zijn VRAAGPRIJZEN van Idealista op 15-09-2026, geen transactieprijzen; prijsdalingen zijn zichtbaar, verkochte prijzen niet.",
+    "De Idealista-assistent vertaalt 'reformado'/'moderna' naar het filter 'buen estado' (goede staat), niet naar 'gerenoveerd'; de indeling gerenoveerd/modern/nieuw is daarom gemaakt op advertentietekst en property_detail-velden ('Construido en …', 'reformada', promotiestatus). Claims zijn aanbiedersclaims, niet fysiek gecontroleerd.",
+    "Steekproef klein: villa_renovated n=17 (Montgó–Ermita 12, Tosal–Castellans 5), villa_new n=14 waarvan 8 papieren projecten. Tosal–Castellans is te klein voor een eigen mediaan.",
+    "Zonelabels van Idealista zijn onbetrouwbaar: hetzelfde huis staat bij de ene makelaar als Montgó–Ermita en bij de andere als Tosal–Castellans (110437594/110753189; 107287245/108549029). 'Montgó–Ermita' omvat ook Montgó Valls en Garroferal.",
+    "Vrijwel elk object staat bij 2–4 makelaars, soms met afwijkende m² of prijs; ontdubbeling is deels handmatig. Twee gevallen zijn niet sluitend (109732217 vs 110002941; 111938184 vs 111080148) en zijn als aparte objecten geteld en gemarkeerd.",
+    "m² gebouwd is wat de aanbieder opgeeft: kelders, garages, terrassen en ruwbouw zitten er soms in (99656305: 885 m² incl. ±200 m² ruwbouw; 106741296: 759 m² incl. 365 m² terras; 111598568: 491 m² incl. kelder). Dat drukt de €/m² van grote objecten.",
+    "Projectprijzen (te bouwen villa's) kunnen exclusief IVA zijn (Villa Piscis expliciet) en gelden voor levering over 16–18 maanden; zij zijn geen vergelijking voor een bestaand huis. Opgeleverde nieuwbouw 2025–2026 vraagt 6.750–7.550 €/m².",
+    "Twee uitschieters in villa_renovated: Ca Malva (111433078, 9.342 €/m², bouwjaar onbekend) en een villa uit 2014 met 885 m² (3.333 €/m²); zonder beide: mediaan 4.364, p25 3.964, p75 5.075.",
+    "Reeksen apartment_renovated, apartment_new en townhouse_renovated zijn voor deze zone niet van toepassing (geen Puerto/Arenal, geen casco); één casco-dorpshuis met TC-label is uitgesloten.",
+    "Geen telefoonnummers of persoonsgegevens overgenomen; alleen makelaarsnamen/referenties zoals de advertentie ze toont. Dit is geen taxatie en geen biedadvies."
+   ]
+  },
+  "moraira": {
+   "villa_renovated": {
+    "n": 20,
+    "min": 2850,
+    "p25": 4184,
+    "median": 4641,
+    "p75": 5859,
+    "max": 15000,
+    "source": "Idealista-assistent (MCP) search_properties + property_detail, locale es-ES, country es, SALE; queries 'villa reformada en Moraira' per prijsband (<900k / 900k-1,5M / >1,5M), 'villa moderna reformada en Moraira', 'chalet reformado en Teulada', 'chalet reformado en Moraira, Teulada'; tekstclassificatie (hele woning reformada/renovada, renovatie 2013+ of 'recientemente/completamente'), gededupliceerd op prijs+m²+ligging",
+    "date": "2026-09-15",
+    "note": "Vraagprijzen, geen transactieprijzen. Kern zonder de twee eerstelijns-strandvilla's (106691029, 105615749): n=18, min 2.850, p25 3.904, mediaan 4.580, p75 5.006, max 7.237. 7 objecten via property_detail bevestigd (bouwjaar uit fiche, renovatiejaar uit tekst). Steekproef: ca. 63% van de 217 Moraira-villa's in 'buen estado' gezien.",
+    "examples": [
+     {
+      "code": "111635309",
+      "price": 1580000,
+      "m2": 230,
+      "eur_m2": 6870,
+      "year": "gebouwd 1997, reformada 2023",
+      "label": "El Portet (Gavilán), 1 laag, 4 suites, 900 m² perceel; detail bevestigd"
+     },
+     {
+      "code": "107160549",
+      "price": 1495000,
+      "m2": 324,
+      "eur_m2": 4614,
+      "year": "gebouwd 2011, renovada 2024",
+      "label": "Arnella (Paichi), lift, infinity pool, licencia turística, verlaagd van 1.650.000; detail bevestigd"
+     },
+     {
+      "code": "108919992",
+      "price": 1750000,
+      "m2": 344,
+      "eur_m2": 5087,
+      "year": "gebouwd 2007, renovada 2024",
+      "label": "El Portet, ibicenco, 1 km van strand; ook onder 108536057 (376 m²) en 109321569; detail bevestigd"
+     },
+     {
+      "code": "112526858",
+      "price": 1195000,
+      "m2": 256,
+      "eur_m2": 4668,
+      "year": "gebouwd 1985, completamente renovada (geen jaar)",
+      "label": "Pinar de l'Advocat, zuid, zeezicht, vloerverwarming, zonnepanelen; detail bevestigd"
+     },
+     {
+      "code": "111385148",
+      "price": 1780000,
+      "m2": 281,
+      "eur_m2": 6335,
+      "year": "gebouwd 1997, completamente renovada",
+      "label": "El Portet (Paichi), 800 m van strand, energielabel B (E&V); detail bevestigd"
+     },
+     {
+      "code": "109301382",
+      "price": 1100000,
+      "m2": 242,
+      "eur_m2": 4545,
+      "year": "fiche: construido 2025; tekst: reformada 2025, a estrenar",
+      "label": "El Portet-Pla del Mar, 1.000 m² perceel, zeezicht; detail bevestigd"
+     },
+     {
+      "code": "111013342",
+      "price": 1495000,
+      "m2": 521,
+      "eur_m2": 2869,
+      "year": "gebouwd 1978, totalmente reformada",
+      "label": "El Portet, 400 m van strand, kelder met binnenzwembad telt mee in m²; ook onder 110509460/106029837/105965027; detail bevestigd"
+     },
+     {
+      "code": "111400332",
+      "price": 1995000,
+      "m2": 530,
+      "eur_m2": 3764,
+      "year": "gebouwd 2006, reformada 2018 en 2023 (tekst)",
+      "label": "Paichi/Arnella, ibicenco, 6 suites, 1.882 m² perceel; ook onder 111224262 en 111473262"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_new": {
+    "n": 44,
+    "min": 2758,
+    "p25": 4283,
+    "median": 5112,
+    "p75": 6546,
+    "max": 10590,
+    "source": "Idealista-assistent (MCP): 'villa obra nueva en Moraira' (CHALET, obra-nueva-filter, 35 = volledige inventaris) + nieuwbouw uit de 'buen estado'-sets met tekst obra nueva/nueva construcción/a estrenar/finalizada 2025-2026; 'villa obra nueva a estrenar en Teulada' = 0; 8 objecten via property_detail",
+    "date": "2026-09-15",
+    "note": "Vraagprijzen; nieuwbouw doorgaans exclusief 10% btw + AJD (expliciet bij 111640774). Reeks bevat opgeleverde villa's, villa's in aanbouw en projecten met vergunning (Essence Moraira 'licencia en trámite'). Kern zonder The White Collection x4 (579-758 m² 'gebouwd' incl. kelder vs 229 m² útil), project 112011604 en klifvilla 110514198: n=38, min 3.824, p25 4.720, mediaan 5.141, p75 6.584, max 8.723. Verworpen: 111596570 (casco, +900k afbouw) en 108642432 (1.100 m² op 425 m² perceel, datafout).",
+    "examples": [
+     {
+      "code": "112547722",
+      "price": 1850000,
+      "m2": 430,
+      "eur_m2": 4302,
+      "year": "obra nueva terminada (promotie 'finished')",
+      "label": "Villa Monte Tesoro, Benilloba 2, Benimeit, 811 m² perceel; ook onder 108587629 (411 m²); detail bevestigd"
+     },
+     {
+      "code": "111640774",
+      "price": 1450000,
+      "m2": 200,
+      "eur_m2": 7250,
+      "year": "opgeleverd juni 2026",
+      "label": "Benisoda 8, Benimeit, 1 laag, zeezicht; prijs excl. 10% btw + AJD; detail bevestigd"
+     },
+     {
+      "code": "112394327",
+      "price": 1499000,
+      "m2": 392,
+      "eur_m2": 3824,
+      "year": "gebouwd 2025, obra nueva finalizada",
+      "label": "Benimuslem 102, Benimeit, 800 m² perceel, ongemeubileerd; detail bevestigd"
+     },
+     {
+      "code": "112281455",
+      "price": 2275000,
+      "m2": 339,
+      "eur_m2": 6711,
+      "year": "obra nueva completamente terminada (fiche zegt segunda mano)",
+      "label": "Calle Haya, Pinar de l'Advocat, 1.100 m² perceel, 2,5 km van strand; detail bevestigd"
+     },
+     {
+      "code": "111316330",
+      "price": 2150000,
+      "m2": 382,
+      "eur_m2": 5628,
+      "year": "obra nueva, licencia en trámite (promotie 'notFinished')",
+      "label": "Essence Moraira villa 1, Benicolet, Benimeit, 1.413 m² perceel — projectprijs; detail bevestigd"
+     },
+     {
+      "code": "109248584",
+      "price": 1795000,
+      "m2": 579,
+      "eur_m2": 3100,
+      "year": "obra nueva, niet afgebouwd",
+      "label": "The White Collection, Camino del Estret 11, 4 min van strand; 579 m² gebouwd / 229 m² útil — m² vertekend; detail bevestigd"
+     },
+     {
+      "code": "112015369",
+      "price": 1500000,
+      "m2": 297,
+      "eur_m2": 5051,
+      "year": "project, licencia de obra 'para octubre'",
+      "label": "Benimeit, ibicenco met lift, 800 m² perceel; detail bevestigd"
+     },
+     {
+      "code": "110097322",
+      "price": 1895000,
+      "m2": 404,
+      "eur_m2": 4691,
+      "year": "obra nueva recién terminada, lista para estrenar (tekst)",
+      "label": "Benimeit-Tabaira, zeezicht, tuin aangelegd"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "apartment_renovated": {
+    "n": 5,
+    "min": 3348,
+    "p25": 3571,
+    "median": 4350,
+    "p75": 4622,
+    "max": 5463,
+    "source": "Idealista-assistent (MCP): 'apartamento reformado en Moraira' <400k (22) en >400k (41) = volledige inventaris pisos 'buen estado' Moraira; tekstclassificatie (hele woning gerenoveerd, 2013+ of 'completamente'); alle 5 via property_detail",
+    "date": "2026-09-15",
+    "note": "n<6: kwartielen indicatief. Vraagprijzen. Buiten reeks: 111337407 (reformada 2000), 85234065 (alleen keuken 2009), 112057485 (alleen badkamer 2026), 108320316 (eerste lijn, 7.978 €/m², 'reforma a terminar', keuken alleen voorbereid). Club Moraira-penthouse 111959253 telt 172 m² gebouwd tegen 80 m² útil (op útil 9.938 €/m²).",
+    "examples": [
+     {
+      "code": "112097940",
+      "price": 274500,
+      "m2": 82,
+      "eur_m2": 3348,
+      "year": "gebouwd 1979, completamente reformado 2020",
+      "label": "Paichi, 1e verd. zonder lift, 2 slk, geen gemeenschappelijk zwembad; detail bevestigd"
+     },
+     {
+      "code": "111298766",
+      "price": 225000,
+      "m2": 63,
+      "eur_m2": 3571,
+      "year": "gebouwd 1965, totalmente reformado",
+      "label": "Paichi, 1 slk, complex met zwembad, zeezicht, overdekte parkeerplaats; detail bevestigd"
+     },
+     {
+      "code": "110104344",
+      "price": 261000,
+      "m2": 60,
+      "eur_m2": 4350,
+      "year": "gebouwd 1975, completamente renovado",
+      "label": "Casco Urbano Moraira, studio, 2e verd. met lift, gemeubileerd; detail bevestigd"
+     },
+     {
+      "code": "111959253",
+      "price": 795000,
+      "m2": 172,
+      "eur_m2": 4622,
+      "year": "renovada 2026",
+      "label": "Club Moraira duplex-penthouse, 172 m² gebouwd / 80 m² útil, dakterras met plonsbad; ook onder 111656724 en 111958559; detail bevestigd"
+     },
+     {
+      "code": "109771748",
+      "price": 295000,
+      "m2": 54,
+      "eur_m2": 5463,
+      "year": "gebouwd 1983, modernizado",
+      "label": "Moraira Park (Pinar de l'Advocat), begane grond, 2 slk, gemeenschappelijk zwembad; detail bevestigd"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "townhouse_renovated": {
+    "n": 4,
+    "min": 1594,
+    "p25": 2040,
+    "median": 2326,
+    "p75": 2468,
+    "max": 2482,
+    "source": "Idealista-assistent (MCP): 'casa adosada reformada en Teulada, Alicante' (CHALET, 10 = volledige inventaris adosados Teulada), 'casa de pueblo reformada en Teulada, Alicante' en 'chalet reformado en Teulada' (50 van 79); tekstclassificatie; alle 4 via property_detail",
+    "date": "2026-09-15",
+    "note": "n=4 < 6: minder dan gevraagd; kwartielen niet betekenisvol. Vraagprijzen. Buiten reeks: 110736204 (casco, 1.750 €/m², reformada 2002), 111042650/110785868/110855864 (één huis, 480.000/300 m² = 1.600 €/m², geen renovatie genoemd). Te renoveren dorpshuizen casco Teulada vragen 1.053-1.235 €/m² (110741333, 110417044, 108486822). Query 'Teulada casco urbano' landde in Adeje (Tenerife) en is verworpen.",
+    "examples": [
+     {
+      "code": "111996463",
+      "price": 255000,
+      "m2": 160,
+      "eur_m2": 1594,
+      "year": "gebouwd 1900, renovada en su totalidad",
+      "label": "Calle de Colom, casco Teulada, 3 lagen, 3 slk/3 bad, 76 m² perceel; detail bevestigd"
+     },
+     {
+      "code": "112332296",
+      "price": 299900,
+      "m2": 137,
+      "eur_m2": 2189,
+      "year": "renovada (geen jaar)",
+      "label": "Calle Hermanas Oliver, casco Teulada, hoofdhuis + los 1-slk-appartement, dakterras, parkeren 2 auto's; verlaagd van 325.000; detail bevestigd"
+     },
+     {
+      "code": "112298899",
+      "price": 340000,
+      "m2": 138,
+      "eur_m2": 2464,
+      "year": "gebouwd 1900, bellamente modernizada",
+      "label": "casco Teulada, 3 lagen, 3 slk/2 bad, open woonkeuken, patio, dakterras; detail bevestigd"
+     },
+     {
+      "code": "109952365",
+      "price": 340000,
+      "m2": 137,
+      "eur_m2": 2482,
+      "year": "gebouwd 1900, completamente modernizada",
+      "label": "casco Teulada, 3 lagen, 4 slk + losse studio, zonnepanelen; detail bevestigd"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "_caveats": [
+    "Alle cijfers zijn vraagprijzen op Idealista van 15-09-2026, geen transactieprijzen; prijsverlagingen (tot -21%) wijzen op onderhandelingsruimte maar de werkelijke verkoopprijzen zijn uit deze bron niet af te leiden.",
+    "Steekproef: de tool geeft max. 50 resultaten per aanroep zonder paginering; van de 217 Moraira-villa's in 'buen estado' is ca. 63% gezien (band 900k-1,5M: 50 van 66; >1,5M: 50 van 115). Obra nueva villa's (35), appartementen Moraira (63) en adosados Teulada (10) zijn wel volledig opgehaald.",
+    "Classificatie 'gerenoveerd' berust op de advertentietekst van de aanbieder, bij 27 van de 33 reeksobjecten gecontroleerd met property_detail; geen fysieke of kadastrale controle. Alleen-keuken, alleen-zwembad, 'parcialmente' en renovaties van voor 2013 zijn uitgesloten.",
+    "m² gebouwd is zoals de tool die geeft en is niet uniform: The White Collection meldt 579-758 m² tegen 229 m² útil, 111013342 telt kelder en binnenzwembad mee, de Club Moraira-penthouse telt het dakterras mee (172 vs 80 m²). Daarom zijn naast de volledige reeksen 'kern'-varianten gegeven (villa_renovated kern mediaan 4.580, villa_new kern mediaan 5.141).",
+    "villa_new bevat opgeleverde villa's, villa's in aanbouw en projecten met vergunning (Essence Moraira 'licencia en trámite'; 112015369/112015676 'licencia para octubre'); nieuwbouwprijzen zijn doorgaans exclusief 10% btw + AJD (expliciet bij 111640774), tweedehands exclusief 10% ITP.",
+    "Zonelabels van Idealista voor Moraira (Casco Urbano, El Portet-Pla del Mar, Paichi, Benimeit-Tabaira, Pinar de Advocat-Cometa, Moravit-Cap Blanc) kloppen vaak niet met de tekst; de reeksen zijn niet naar sub-zone gesplitst. El Portet/eerste lijn vraagt duidelijk meer (twee gerenoveerde eerstelijns-villa's op 10.446 en 15.000 €/m² zijn als uitschieters in de volledige reeks gehouden).",
+    "Tool-valkuilen: 'Moraira, Teulada' wordt gegeocodeerd als de straat 'Carretera Moraira a Teulada'; 'Teulada casco urbano' landde in Adeje (Tenerife); 'villa completamente renovada' kreeg het filter 'para reformar'; vrije tekst zoals 'reformada' wordt door de tool genegeerd (alleen het staat-filter 'buen estado' wordt toegepast).",
+    "apartment_new: n=0 (geen nieuwbouwappartementen op Idealista in Moraira/Teulada); townhouse_renovated: n=4, minder dan de gevraagde 6; apartment_renovated: n=5.",
+    "Villa's in Teulada zelf leveren maar één gerenoveerde finca (111192567) en geen nieuwbouw met m²; de reeks villa_renovated is dus vrijwel geheel Moraira. Drie 'moderne' villa's met bouwjaar 2018-2023 zonder renovatievermelding (4.060-4.745 €/m²) staan als losse referentie in het rapport, niet in de reeks."
+   ]
+  },
+  "puerto_arenal": {
+   "villa_renovated": {
+    "n": 12,
+    "min": 3270,
+    "p25": 4295,
+    "median": 6253,
+    "p75": 7302,
+    "max": 11458,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Vrijstaande villa’s gerenoveerd of modern, Puerto + El Arenal (Puerto n=9 mediaan 6.759; El Arenal n=3 mediaan 4.310). Vraagprijzen, 12/12 met property_detail gecontroleerd.",
+    "examples": [
+     {
+      "code": "111998394",
+      "price": 1125000,
+      "m2": 152,
+      "eur_m2": 7401,
+      "year": "1996",
+      "label": "Puerto, magníficamente renovada, bouwjaar 1996 (D)"
+     },
+     {
+      "code": "111807268",
+      "price": 1890000,
+      "m2": 260,
+      "eur_m2": 7269,
+      "year": "reconstruida",
+      "label": "Puerto, totalmente renovada/reconstruida (D)"
+     },
+     {
+      "code": "111286574",
+      "price": 3400000,
+      "m2": 503,
+      "eur_m2": 6759,
+      "year": "1983",
+      "label": "Puerto, Cuesta San Antonio, renovada, bouwjaar 1983 (D)"
+     },
+     {
+      "code": "109709911",
+      "price": 3300000,
+      "m2": 574,
+      "eur_m2": 5749,
+      "year": "reforma in eindfase",
+      "label": "Puerto, La Corona, reforma integral in eindfase (D)"
+     },
+     {
+      "code": "111720790",
+      "price": 625000,
+      "m2": 165,
+      "eur_m2": 3788,
+      "year": "ref. 2023",
+      "label": "Puerto, reforma integral 2023 (D)"
+     },
+     {
+      "code": "108332489",
+      "price": 1190000,
+      "m2": 280,
+      "eur_m2": 4250,
+      "year": "n.v.",
+      "label": "El Arenal, Cala Blanca, renovación completa (D)"
+     },
+     {
+      "code": "112265864",
+      "price": 1250000,
+      "m2": 260,
+      "eur_m2": 4808,
+      "year": "ref. 2018",
+      "label": "El Arenal, Cap de la Nau, reformado 2018 (D)"
+     },
+     {
+      "code": "108111394",
+      "price": 2750000,
+      "m2": 240,
+      "eur_m2": 11458,
+      "year": "2020",
+      "label": "Puerto, La Corona, gebouwd 2020, modern (D)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_renovated_puerto": {
+    "n": 9,
+    "min": 3270,
+    "p25": 5749,
+    "median": 6759,
+    "p75": 7401,
+    "max": 11458,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Deelreeks Puerto (La Corona / Cuesta San Antonio). Zonder 108111394 (gebouwd 2020): n=8 mediaan 6.758.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_new": {
+    "n": 2,
+    "min": 6810,
+    "p25": 7564,
+    "median": 8318,
+    "p75": 9072,
+    "max": 9826,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Alleen 2 villa’s in aanbouw in La Corona (Puerto), beide 3.950.000 €, prijs op plan; El Arenal n=0. Met filter obra nueva 0 resultaten; gevonden via zoekopdrachten zonder staatfilter. Minder dan 6 objecten.",
+    "examples": [
+     {
+      "code": "111823302",
+      "price": 3950000,
+      "m2": 580,
+      "eur_m2": 6810,
+      "year": "2027 (in aanbouw)",
+      "label": "Villa Imperio, La Corona, in aanbouw, Construido en 2027 (D); dubbel 111343157 met 700 m²"
+     },
+     {
+      "code": "110755799",
+      "price": 3950000,
+      "m2": 402,
+      "eur_m2": 9826,
+      "year": "oplevering Q4 2027 (in aanbouw)",
+      "label": "Villa Azure, La Corona, promotie in aanbouw, oplevering Q4 2027 (D)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "apartment_renovated": {
+    "n": 41,
+    "min": 2633,
+    "p25": 3457,
+    "median": 4189,
+    "p75": 5000,
+    "max": 9725,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Appartementen met in de tekst bevestigde gehele renovatie, Puerto + El Arenal; 13 gedeeltelijke renovaties uitgesloten. 14/45 met property_detail gecontroleerd.",
+    "examples": [
+     {
+      "code": "109870004",
+      "price": 389000,
+      "m2": 82,
+      "eur_m2": 4744,
+      "year": "1960",
+      "label": "Puerto, Churruca, completamente reformado, bouwjaar 1960 (D)"
+     },
+     {
+      "code": "108883032",
+      "price": 389000,
+      "m2": 70,
+      "eur_m2": 5557,
+      "year": "n.v.",
+      "label": "Puerto, La Grava, recientemente reformado (D)"
+     },
+     {
+      "code": "110279888",
+      "price": 389000,
+      "m2": 80,
+      "eur_m2": 4862,
+      "year": "n.v.",
+      "label": "Puerto, perfectamente renovado (D)"
+     },
+     {
+      "code": "108819856",
+      "price": 399000,
+      "m2": 75,
+      "eur_m2": 5320,
+      "year": "1960 / ref. 2025",
+      "label": "Puerto, dúplex Churruca, reformada 2025, bouwjaar 1960 (D)"
+     },
+     {
+      "code": "111071237",
+      "price": 630000,
+      "m2": 147,
+      "eur_m2": 4286,
+      "year": "1980 / ref. 2023",
+      "label": "Puerto, ático reformado 2023, bouwjaar 1980, 147 m² (D)"
+     },
+     {
+      "code": "108265680",
+      "price": 340000,
+      "m2": 90,
+      "eur_m2": 3778,
+      "year": "1990",
+      "label": "Puerto, Doctor Fleming, completamente renovado, bouwjaar 1990 (D)"
+     },
+     {
+      "code": "108146741",
+      "price": 270000,
+      "m2": 71,
+      "eur_m2": 3803,
+      "year": "1988",
+      "label": "Puerto, Avda dels Furs, reformado, residencial 1988 (D)"
+     },
+     {
+      "code": "110614251",
+      "price": 595000,
+      "m2": 90,
+      "eur_m2": 6611,
+      "year": "1982",
+      "label": "El Arenal, eerste lijn Montañar II, completamente reformada, 1982 (D)"
+     }
+    ],
+    "original": {
+     "n": 45,
+     "p25": 3580,
+     "median": 4235,
+     "p75": 5064
+    },
+    "verification": "gecorrigeerd na controle: Alle 11 geopende advertenties hebben de prijs en m² uit het origineel en zijn volgens de tekst gerenoveerd. De ontdubbeling op prijs + m² mist bewezen dubbels met afwijkende m². Cluster A (één apparte"
+   },
+   "apartment_renovated_puerto": {
+    "n": 6,
+    "min": 3778,
+    "p25": 3924,
+    "median": 4803,
+    "p75": 5468,
+    "max": 9725,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Deelreeks Puerto, relevant voor K06. Zonder 112431449 (40 m², twijfelachtig): n=9 mediaan 4.862. Alleen 80–150 m² (grootteklasse K06): n=4, mediaan 4.515, spreiding 3.778–4.862.",
+    "examples": [],
+    "original": {
+     "n": 10,
+     "p25": 4400,
+     "median": 5024,
+     "p75": 5468
+    },
+    "verification": "gecorrigeerd na controle: Deelreeks die de rekenaar voor K06 gebruikt. Na samenvoegen van clusters A en B blijven 6 objecten over. Welke advertentie je als representant neemt, bepaalt de mediaan: 4.515–4.803; p75 5.076–5.468. "
+   },
+   "apartment_renovated_80_150m2": {
+    "n": 23,
+    "min": 2633,
+    "p25": 3232,
+    "median": 3778,
+    "p75": 4463,
+    "max": 6611,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Gevoeligheid: gerenoveerde appartementen 80–150 m² in Puerto + El Arenal samen (grootteklasse K06).",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "apartment_new": {
+    "n": 43,
+    "min": 1630,
+    "p25": 3412,
+    "median": 3944,
+    "p75": 5528,
+    "max": 8380,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Nieuwbouw (status obra nueva) + a estrenar / gebouwd 2023–2026; 42 in El Arenal (promoties), 1 in Puerto (110983899, 5.500). Zonder tuin-unit 110963269 en units >190 m²: n=36 mediaan 4.602; alleen ≤120 m²: n=18 mediaan 5.570. 9/43 met property_detail.",
+    "examples": [
+     {
+      "code": "110983899",
+      "price": 495000,
+      "m2": 90,
+      "eur_m2": 5500,
+      "year": "2026",
+      "label": "Puerto, gebouwd 2026, label A (D)"
+     },
+     {
+      "code": "109077975",
+      "price": 693000,
+      "m2": 94,
+      "eur_m2": 7372,
+      "year": "in aanbouw",
+      "label": "El Arenal, promotie Arenal Jávea Beach, in aanbouw (D)"
+     },
+     {
+      "code": "112383441",
+      "price": 489000,
+      "m2": 124,
+      "eur_m2": 3944,
+      "year": "in aanbouw",
+      "label": "El Arenal, promotie Adeya Jávea II, in aanbouw (D)"
+     },
+     {
+      "code": "111035010",
+      "price": 490000,
+      "m2": 103,
+      "eur_m2": 4757,
+      "year": "a estrenar",
+      "label": "El Arenal, a estrenar, begane grond (D)"
+     },
+     {
+      "code": "110479584",
+      "price": 699000,
+      "m2": 95,
+      "eur_m2": 7358,
+      "year": "2023",
+      "label": "El Arenal, gebouwd 2023 (D)"
+     },
+     {
+      "code": "108102709",
+      "price": 490000,
+      "m2": 90,
+      "eur_m2": 5444,
+      "year": "2024",
+      "label": "El Arenal, La Bardisa, gebouwd 2024 (D)"
+     },
+     {
+      "code": "111862474",
+      "price": 449000,
+      "m2": 101,
+      "eur_m2": 4446,
+      "year": "2026",
+      "label": "El Arenal (Portichol volgens tekst), gebouwd 2026 (D)"
+     },
+     {
+      "code": "110963269",
+      "price": 440000,
+      "m2": 270,
+      "eur_m2": 1630,
+      "year": "in aanbouw",
+      "label": "El Arenal, Marina Bay Sunset, 270 m² gebouwd / 55 nuttig — vertekend (D)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_new_javea_ref": {
+    "n": 43,
+    "min": 2829,
+    "p25": 3996,
+    "median": 4316,
+    "p75": 6254,
+    "max": 10263,
+    "source": "Idealista-assistent (MCP search_properties + property_detail, es-ES/es), vraagprijzen, 15-09-2026",
+    "date": "2026-09-15",
+    "note": "Referentie BUITEN de zone: nieuwbouwvilla’s heel Jávea (Tosalet, Portichol, Pinosol, Sol de Este, …), alleen ter oriëntatie.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "_caveats": [
+    "Alle cijfers zijn VRAAGPRIJZEN van Idealista op 15-09-2026 (peiling 10:41–11:05 uur), geen transactieprijzen; gebruik als bovengrens/richtpunt, nooit als taxatie.",
+    "Het bestand vervangt een eerdere versie van dezelfde dag (09:39). Verschillen: villa_renovated 14 → 12 (109649453 Finca Mezquida was niet gerenoveerd; 111343157 bleek nieuwbouwproject Villa Imperio) en villa_new 0 → 2 (Villa Imperio 111823302 en Villa Azure 110755799, beide in aanbouw in La Corona, gevonden via zoekopdrachten zonder staatfilter). Appartementreeksen ongewijzigd (45 en 43). Een kopie van de oude versie staat alleen in de scratchpad, niet in de projectmap.",
+    "villa_new heeft maar 2 objecten (minder dan de gevraagde 6) en beide zijn prijzen op plan van villa's in aanbouw (3.950.000 €); El Arenal 0. apartment_new Puerto n=1 (110983899, gebouwd 2026). villa_renovated El Arenal n=3. Kwartielen van deze deelreeksen hebben weinig betekenis.",
+    "K06 (106514871) is gecontroleerd: actief, 345.000 € / 125 m² = 2.760 €/m², 'segunda mano/para reformar', particuliere verkoper. De Puerto-comparables zijn bijna allemaal 29–90 m²; in de grootteklasse 80–150 m² zijn er in Puerto maar 4 (mediaan 4.515, spreiding 3.778–4.862 €/m²) en in beide zones samen 23 (mediaan 3.778). Voor het rekenmodel is 3.800–4.900 €/m² vraagprijs na renovatie de voorzichtige band; 5.000+ komt in Puerto alleen voor bij units ≤ 75 m².",
+    "'Gerenoveerd' is de tekst van de verkoper (Idealista kent geen veld daarvoor); 40 objecten zijn met property_detail gecontroleerd op bouwjaar en staat (alle 'active'), de rest alleen op tekst. 13 gedeeltelijke renovaties (alleen bad/keuken) zijn uitgesloten; renovaties uit 2015 en 2018 tellen wel mee. 109709911 is een renovatie in eindfase.",
+    "Zonelabels zijn die van Idealista: 'Puerto' omvat de hellingen La Corona en Cuesta de San Antonio (villa's), 'El Arenal' omvat Montañar II en Cala Blanca; 111862474/112503635 (Cap de la Nau Pla 95) noemen zichzelf Portichol/Balcón al Mar en 111807268 Balcón al Mar. Zoekopdrachten met 'Puerto y Arenal' in één zin werken niet (0 resultaten of alleen Puerto), daarom per zone gezocht en op prijsband gesplitst; alle totalen zijn volledig gedekt.",
+    "m² gebouwd is soms onbetrouwbaar: 110963269 (270 m² gebouwd / 55 nuttig → 1.630 €/m²), 112431449 (40 m² voor 2 slk/2 bad op 2 verdiepingen → 9.725 €/m²), 109870004 (tekst 40 m², kenmerken 82 m²), Villa Imperio 580 vs 700 m² bij twee makelaars. Medianen zijn robuust, min/max niet. Grote units drukken €/m², kleine units en eerste lijn verhogen het.",
+    "Dubbele advertenties (zelfde object bij meerdere makelaars) zijn ontdubbeld op prijs+m²+zone; dubbels met andere prijs of m² blijven aparte regels, behalve Villa Imperio (handmatig samengevoegd). Geen telefoonnummers, namen van particulieren of sleutels overgenomen; URL's letterlijk zoals de tool ze gaf.",
+    "Ruwe toolantwoorden en scripts staan in de scratchpad (pa2/), niet in de projectmap."
+   ]
+  },
+  "rafalet_pinosol": {
+   "villa_renovated": {
+    "n": 20,
+    "min": 3190,
+    "p25": 4147,
+    "median": 4807,
+    "p75": 5845,
+    "max": 9203,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; vraagprijzen, geen transacties",
+    "date": "2026-09-15",
+    "note": "Gerenoveerde of moderne villa's in El Rafalet (n=5, mediaan 5.660), Pinomar-Pinosol (n=7, mediaan 4.760) en La Lluca-Tarraula (n=8, mediaan 4.546) samen. Alle 20 bevestigd met property_detail. Zonder de twee fincas (112342262, 108679725): n=18, p25 4.250, mediaan 4.807, p75 5.662. Renovatiejaar ontbreekt bij 11/20; bouwjaar bij 7/20; 112509325 is nog in renovatie; 110895902 wordt onder IVA verkocht.",
+    "examples": [
+     {
+      "code": "111452530",
+      "price": 600000,
+      "m2": 140,
+      "eur_m2": 4286,
+      "year": "1955",
+      "label": "Rafalet, 'completamente reformada', renovatiejaar onbekend, geen zwembad"
+     },
+     {
+      "code": "111909291",
+      "price": 850000,
+      "m2": 236,
+      "eur_m2": 3602,
+      "year": "1980",
+      "label": "Rafalet, 'renovada por completo en 2024', 6 slk; 4 dubbele advertenties (236-270 m2)"
+     },
+     {
+      "code": "112229028",
+      "price": 1149000,
+      "m2": 203,
+      "eur_m2": 5660,
+      "year": "1980",
+      "label": "Rafalet, 'recientemente renovada por completo', PV 20 kW"
+     },
+     {
+      "code": "109546138",
+      "price": 1495000,
+      "m2": 264,
+      "eur_m2": 5663,
+      "year": "2017",
+      "label": "Rafalet, modern: bouwjaar 2017, 'villa contemporanea', label B/A"
+     },
+     {
+      "code": "112501089",
+      "price": 799950,
+      "m2": 173,
+      "eur_m2": 4624,
+      "year": "2007",
+      "label": "Pinosol, 'renovacion integral' 2023 incl. installaties, nieuw zwembad"
+     },
+     {
+      "code": "109645331",
+      "price": 849000,
+      "m2": 264,
+      "eur_m2": 3216,
+      "year": "1979",
+      "label": "Pinosol, 'recientemente renovada', zeezicht, verwarmd zwembad"
+     },
+     {
+      "code": "111189527",
+      "price": 995000,
+      "m2": 205,
+      "eur_m2": 4854,
+      "year": "2001",
+      "label": "La Lluca (Covatelles), 'recientemente reformada', 179 m2 nuttig"
+     },
+     {
+      "code": "112329948",
+      "price": 1685000,
+      "m2": 370,
+      "eur_m2": 4554,
+      "year": "2005",
+      "label": "Pinosol, 'magnificamente reformada', 7 slk, zeezicht; 6 dubbele advertenties (370/380 m2)"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_renovated_zonder_fincas": {
+    "n": 18,
+    "min": 3190,
+    "p25": 4250,
+    "median": 4807,
+    "p75": 5662,
+    "max": 9203,
+    "source": "Idealista-assistent (MCP), locale es-ES, country es; vraagprijzen",
+    "date": "2026-09-15",
+    "note": "villa_renovated zonder 112342262 (1.000 m2 op 5.850 m2, 3.450 EUR/m2) en 108679725 (526 m2 op 10.103 m2 met stallen, 7.510 EUR/m2).",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_new": {
+    "n": 9,
+    "min": 3307,
+    "p25": 3868,
+    "median": 5717,
+    "p75": 8185,
+    "max": 9750,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; vraagprijzen, nieuwbouw in de regel excl. 10% IVA",
+    "date": "2026-09-15",
+    "note": "7 van 9 in Pinomar-Pinosol, 1 El Rafalet, 1 La Lluca (finca rustica op 10.000 m2). Drie zijn op-plan-aanbiedingen: 112093850 (perceel + licentie, excl. IVA), 111718472 (levering 14 mnd na start), 112158635 (oplevering juni 2027). Drie in aanbouw (111918606, 111656885 maart 2027, 112165476), een 'eindfase' volgens advertentie >1 jaar oud (106823897), een zwak geval (112527650: veld 2026, tekst 'tradicional villa'). Alle 9 bevestigd met property_detail. Zonder op plan: n=6, p25 3.637, mediaan 4.573, p75 5.607.",
+    "examples": [
+     {
+      "code": "111918606",
+      "price": 1088000,
+      "m2": 329,
+      "eur_m2": 3307,
+      "year": "nieuwbouw (promotie notFinished)",
+      "label": "Rafalet, obra nueva 'lista en marzo de 2026 (sujeto a cambios)', perceel 1.085 m2; dubbel 110831782 (330 m2)"
+     },
+     {
+      "code": "112527650",
+      "price": 950000,
+      "m2": 180,
+      "eur_m2": 5278,
+      "year": "2026 (veld)",
+      "label": "Pinomar, veld 'construido en 2026', tekst 'tradicional villa' - zwak; dubbel 112462622 'construccion joven'"
+     },
+     {
+      "code": "112165476",
+      "price": 1495000,
+      "m2": 420,
+      "eur_m2": 3560,
+      "year": "2026 (veld)",
+      "label": "Pinosol, 'nueva construccion', 'cerca de su finalizacion'; dubbels 112422911, 109868268"
+     },
+     {
+      "code": "111656885",
+      "price": 1288000,
+      "m2": 333,
+      "eur_m2": 3868,
+      "year": "2026 (veld), oplevering maart 2027",
+      "label": "Pinosol, nieuwbouw in aanbouw, afwerking nog te kiezen"
+     },
+     {
+      "code": "106823897",
+      "price": 1275000,
+      "m2": 223,
+      "eur_m2": 5717,
+      "year": "in aanbouw (geen jaar)",
+      "label": "Pinosol, 'diseno contemporaneo', 'fase final de su construccion', advertentie >1 jaar niet bijgewerkt"
+     },
+     {
+      "code": "112093850",
+      "price": 1150000,
+      "m2": 177,
+      "eur_m2": 6497,
+      "year": "op plan",
+      "label": "Pinosol, project: perceel 889 m2 + goedgekeurde licentie, prijs excl. IVA"
+     },
+     {
+      "code": "111718472",
+      "price": 1650000,
+      "m2": 200,
+      "eur_m2": 8250,
+      "year": "op plan",
+      "label": "Pinosol, 'Casa Renoir', obra nueva met licentie, levering 14 maanden na start"
+     },
+     {
+      "code": "112515850",
+      "price": 1950000,
+      "m2": 200,
+      "eur_m2": 9750,
+      "year": "nieuwbouw (promotie notFinished)",
+      "label": "Pinosol, obra nueva, zeezicht, projectlabel A"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_new_zonder_op_plan": {
+    "n": 6,
+    "min": 3307,
+    "p25": 3637,
+    "median": 4573,
+    "p75": 5607,
+    "max": 9750,
+    "source": "Idealista-assistent (MCP), locale es-ES, country es; vraagprijzen",
+    "date": "2026-09-15",
+    "note": "villa_new zonder 112093850, 111718472 en 112158635 (op plan / oplevering 2027).",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_renovated_tosal": {
+    "n": 6,
+    "min": 3176,
+    "p25": 3869,
+    "median": 4726,
+    "p75": 6897,
+    "max": 9342,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; vraagprijzen",
+    "date": "2026-09-15",
+    "note": "Grenszone K05 (Partida Tosal - Zona dels Castellans), apart gehouden van de hoofdreeks. Alle 6 bevestigd met property_detail. Geen vergelijker zo groot als K05 (460 m2); grootste is 380 m2.",
+    "examples": [
+     {
+      "code": "110753189",
+      "price": 720000,
+      "m2": 165,
+      "eur_m2": 4364,
+      "year": "onbekend",
+      "label": "Tosal/Castellans, 'completamente renovada', ibiza-stijl, label C"
+     },
+     {
+      "code": "107385205",
+      "price": 794000,
+      "m2": 250,
+      "eur_m2": 3176,
+      "year": "1978",
+      "label": "Tosal/Castellans, 'reformada recientemente'; advertentie >1 jaar oud"
+     },
+     {
+      "code": "110122731",
+      "price": 800000,
+      "m2": 216,
+      "eur_m2": 3704,
+      "year": "1982",
+      "label": "Montgo (Ctra. Jesus Pobre), 'reforma integral de alta gama', label E"
+     },
+     {
+      "code": "111361293",
+      "price": 1399000,
+      "m2": 275,
+      "eur_m2": 5087,
+      "year": "onbekend",
+      "label": "Tosal (loopafstand casco), 'renovacion integral' incl. elektra en leidingen"
+     },
+     {
+      "code": "112504358",
+      "price": 2250000,
+      "m2": 300,
+      "eur_m2": 7500,
+      "year": "onbekend",
+      "label": "Tosal, 'recientemente renovada', vloerverwarming 2026, perceel 3.000 m2 + gastenhuis; 3 dubbels"
+     },
+     {
+      "code": "111433078",
+      "price": 3550000,
+      "m2": 380,
+      "eur_m2": 9342,
+      "year": "onbekend",
+      "label": "Tosal/Montgo 'Ca Malva', modern: 'arquitectura contemporanea', lift, infinity pool"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_new_tosal": {
+    "n": 1,
+    "min": 6848,
+    "p25": 6848,
+    "median": 6848,
+    "p75": 6848,
+    "max": 6848,
+    "source": "Idealista-assistent (MCP search_properties + property_detail), locale es-ES, country es; vraagprijs",
+    "date": "2026-09-15",
+    "note": "Een object; geen spreiding. Minder dan 6 beschikbaar in de tool.",
+    "examples": [
+     {
+      "code": "111928138",
+      "price": 1575000,
+      "m2": 230,
+      "eur_m2": 6848,
+      "year": "nieuwbouw (promotie notFinished)",
+      "label": "Tosal/Castellans, obra nueva, zeezicht, perceel 1.500 m2"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_renovated_rafalet": {
+    "n": 5,
+    "min": 3602,
+    "p25": 4286,
+    "median": 5660,
+    "p75": 5663,
+    "max": 6878,
+    "source": "Idealista-assistent (MCP), locale es-ES, country es; vraagprijzen",
+    "date": "2026-09-15",
+    "note": "Deelreeks van villa_renovated, zone El Rafalet (K08). Indicatief, n=5.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_renovated_pinosol": {
+    "n": 7,
+    "min": 3216,
+    "p25": 4589,
+    "median": 4760,
+    "p75": 6446,
+    "max": 9203,
+    "source": "Idealista-assistent (MCP), locale es-ES, country es; vraagprijzen",
+    "date": "2026-09-15",
+    "note": "Deelreeks van villa_renovated, zone Pinomar-Pinosol (K09). Indicatief, n=7; bevat 110895902 (verkoop onder IVA, 9.203) en 111229059 (130 m2 op 1.999 m2, 6.500).",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_renovated_la_lluca": {
+    "n": 8,
+    "min": 3190,
+    "p25": 3767,
+    "median": 4546,
+    "p75": 4947,
+    "max": 7510,
+    "source": "Idealista-assistent (MCP), locale es-ES, country es; vraagprijzen",
+    "date": "2026-09-15",
+    "note": "Deelreeks van villa_renovated, zone La Lluca-Tarraula. Indicatief, n=8; bevat beide fincas.",
+    "examples": [],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "_caveats": [
+    "Alle cijfers zijn VRAAGPRIJZEN van lopende Idealista-advertenties op 15-09-2026; geen transactieprijzen, geen marktwaarde. Zichtbare prijsdaling in de reeks: 111952972 -5 %.",
+    "Steekproef klein: villa_renovated n=20 (per zone 5/7/8), villa_new n=9 (7 in Pinosol; Rafalet 1, La Lluca 1 finca), Tosal 6 + 1. Per-zone-medianen zijn indicatief, geen zoneprijs.",
+    "villa_new bevat drie op-plan-aanbiedingen (112093850 perceel+licentie excl. IVA; 111718472 levering 14 mnd na start; 112158635 finca oplevering juni 2027) en drie objecten in aanbouw; zonder op plan: n=6, mediaan 4.573. Nieuwbouw in de regel excl. 10 % IVA; tweedehands excl. ITP 9 % - niet een op een vergelijkbaar.",
+    "'Gerenoveerd' is een claim van de aanbieder, bevestigd via property_detail-tekst en veld 'Construido en'; niemand heeft de woningen gezien. Renovatiejaar ontbreekt bij 11/20, bouwjaar bij 7/20. Zwakste gevallen: 112310283, 111952972; 112509325 is nog in renovatie; 108153256 'gerenoveerd juli 2026' wordt als nieuwbouw aangeprezen; 112527650 (villa_new) heeft veld 2026 maar tekst 'tradicional villa'.",
+    "m2 gebouwd uit de tool is onbetrouwbaar: hetzelfde object staat met 236/240/270, 1.000/1.100/1.350, 370/380 en 359/360 m2; 102167151 zegt 380 in het veld en 253 in de tekst. Voor een dossier kadastrale m2 gebruiken.",
+    "Zonelabels van de tool zijn benaderend en soms fout (109969426 'La Lluca' noemt zelf Tosalet/Cansalades; 110085483 en 108983977 'Pinosol' noemen Adsubia resp. Tosalet; 111351541 'Tosal' is een casco-huis). Lat/lon staat in de scratchpad-dataset.",
+    "Uitschieters rekken de spreiding op: twee fincas (3.450 en 7.510 EUR/m2), een villa van 130 m2 op 1.999 m2 (6.500), een ontwikkelaarsrenovatie onder IVA (9.203). Statistiek zonder fincas: mediaan 4.807, p75 5.662.",
+    "Tool-beperkingen (bewijstype 1, vandaag): meerdere wijknamen in een query worden naar een wijk (La Lluca) gegeocodeerd; 'reformado' wordt filter 'buen estado'; 'a estrenar'/'nueva construccion' wordt 'obra nueva' + subtype villa (0 resultaten); geen paginering, dus prijsbanden met overlap op de grens (Pinosol 24+24+24=72 bij totaal 71); property_detail geeft geen publicatiedatum, prijshistorie of kadastrale referentie.",
+    "apartment_renovated, apartment_new en townhouse_renovated zijn voor deze villazone niet bepaald (geen aanbod in de tool-uitvoer).",
+    "Meting is vandaag twee keer onafhankelijk uitgevoerd (eerdere run ca. 09:38 en deze run) met dezelfde 20 gerenoveerde objecten en dezelfde medianen; villa_new telt nu 9 i.p.v. 8 door de finca-advertentie 112158635 met m2. Ruwe JSON in sessie-scratchpad h01b/ (tijdelijk). Geen telefoonnummers, makelaarsnamen of sleutels overgenomen."
+   ]
+  },
+  "tosalet_adsubia": {
+   "villa_renovated": {
+    "n": 26,
+    "min": 2985,
+    "p25": 3973,
+    "median": 4782,
+    "p75": 6153,
+    "max": 12150,
+    "source": "Idealista-assistent (MCP) search_properties + property_detail, locale es-ES, zones El Tosalet - Cap Marti en Adsubia, propertyType CHALET; vraagprijs / m²-veld 'construidos'; gerenoveerd (strict, n=19) + modern (n=7) samen, ontdubbeld",
+    "date": "2026-09-15",
+    "note": "VRAAGPRIJZEN, geen transactieprijzen. Zonder de twee uitschieters > 9.000 €/m²: n=24, p25 3.929, mediaan 4.504, p75 6.084, max 8.462. 24 van 26 objecten met property_detail gecontroleerd.",
+    "examples": [
+     {
+      "code": "112342259",
+      "price": 1125000,
+      "m2": 346,
+      "eur_m2": 3251,
+      "year": "onbekend; 'completamente reformada en 2021'",
+      "label": "Calle del Enebro (tekst Costa Nova, label Tosalet), volledig gerenoveerd 2021; tweede code 111086527"
+     },
+     {
+      "code": "105714026",
+      "price": 1145000,
+      "m2": 344,
+      "eur_m2": 3328,
+      "year": "veld 'Construido en 2024' = renovatiejaar",
+      "label": "Calle de la Salvia 21, 'completamente reformada en 2024', 6 slaapkamers, perceel 808 m²"
+     },
+     {
+      "code": "111095558",
+      "price": 790000,
+      "m2": 178,
+      "eur_m2": 4438,
+      "year": "onbekend; 'completamente renovado'",
+      "label": "Calle de la Ceba, 13 advertentiecodes voor één villa; met m²-veld 145 (3 codes) 5.448 €/m²"
+     },
+     {
+      "code": "111643516",
+      "price": 2900000,
+      "m2": 549,
+      "eur_m2": 5282,
+      "year": "2005; 'renovación contemporánea'; prijs verlaagd van 3.500.000",
+      "label": "Villa Nadaleta, Calle Nadaleta 3, zeezicht; 305 m² nuttig"
+     },
+     {
+      "code": "112519520",
+      "price": 1600000,
+      "m2": 273,
+      "eur_m2": 5861,
+      "year": "1978 (veld); 'villa de estilo moderno', geen renovatieclaim",
+      "label": "Villa Sira, Calle de la Parra (Adsubia); tweede code 112497928 met 233 m² → 6.867"
+     },
+     {
+      "code": "111329930",
+      "price": 1378000,
+      "m2": 215,
+      "eur_m2": 6409,
+      "year": "1974; 'renovada en los últimos dos años'",
+      "label": "Calle del Ciclamen (Cap Martí), zeezicht, toeristische licentie"
+     },
+     {
+      "code": "108940959",
+      "price": 2750000,
+      "m2": 325,
+      "eur_m2": 8462,
+      "year": "1987; 'reconstruida desde cero' sept 2024–sept 2025",
+      "label": "Tosalet alto, villa ibicenca, 180° zeezicht, lift; vermoedelijk = 104650661 (Naranjo 18, 313 m² → 8.786)"
+     },
+     {
+      "code": "112196807",
+      "price": 2430000,
+      "m2": 200,
+      "eur_m2": 12150,
+      "year": "veld 'Construido en 2026' (herbouw); 'totalmente reformada'",
+      "label": "Tosalet, zeezicht, perceel 1.009 m² — uitschieter, prijs zit in ligging"
+     }
+    ],
+    "verification": "bevestigd"
+   },
+   "villa_renovated_strict": {
+    "n": 19,
+    "min": 2985,
+    "p25": 3910,
+    "median": 4571,
+    "p75": 6291,
+    "max": 12150,
+    "source": "Idealista-assistent (MCP), zelfde zoekopdrachten; alleen objecten waarvan de tekst een renovatie van de hele villa claimt; 18 van 19 met property_detail bevestigd",
+    "date": "2026-09-15",
+    "note": "Vraagprijzen. Bevat Juan de Borgoña (111704376, 9.106 €/m²; andere codes tot 12.946) en 112196807 (12.150) als uitschieters. Uitgesloten: keuken-/zwembad-/dakrenovaties, 'para reformar', en 111451577/111468637 (scope- en m²-conflict).",
+    "examples": [
+     {
+      "code": "105971886",
+      "price": 2000000,
+      "m2": 670,
+      "eur_m2": 2985,
+      "year": "1980; 'totalmente reformada' 2012 (andere code: 2009)",
+      "label": "Calle Bruselas (Adsubia), 3 lagen, perceel 3.000 m²; codes 40108831, 87504557"
+     },
+     {
+      "code": "112342259",
+      "price": 1125000,
+      "m2": 346,
+      "eur_m2": 3251,
+      "year": "'completamente reformada en 2021'",
+      "label": "Calle del Enebro, Costa Nova-tekst"
+     },
+     {
+      "code": "105714026",
+      "price": 1145000,
+      "m2": 344,
+      "eur_m2": 3328,
+      "year": "renovatie 2024",
+      "label": "Calle de la Salvia 21"
+     },
+     {
+      "code": "111095558",
+      "price": 790000,
+      "m2": 178,
+      "eur_m2": 4438,
+      "year": "onbekend",
+      "label": "Calle de la Ceba, 13 codes"
+     },
+     {
+      "code": "111643516",
+      "price": 2900000,
+      "m2": 549,
+      "eur_m2": 5282,
+      "year": "2005, recent gerenoveerd",
+      "label": "Villa Nadaleta"
+     },
+     {
+      "code": "111329930",
+      "price": 1378000,
+      "m2": 215,
+      "eur_m2": 6409,
+      "year": "1974, ren. laatste 2 jaar",
+      "label": "Calle del Ciclamen"
+     },
+     {
+      "code": "111704376",
+      "price": 2495000,
+      "m2": 274,
+      "eur_m2": 9106,
+      "year": "1982; 'completamente renovada'; prijs verlaagd van 2.900.000",
+      "label": "Calle Juan de Borgoña / Jaume Baco (Adsubia), perceel 2.728 m²; 5 codes (111825190, 111975320, 112136690, 111883479) met 224–274 m²"
+     }
+    ],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_modern": {
+    "n": 7,
+    "min": 3139,
+    "p25": 4358,
+    "median": 5861,
+    "p75": 6088,
+    "max": 6250,
+    "source": "Idealista-assistent (MCP); tweedehands villa's die als geheel 'moderna/contemporánea/de diseño' heten, zonder renovatieclaim en zonder nieuwbouwstatus; 6 van 7 met property_detail",
+    "date": "2026-09-15",
+    "note": "Vraagprijzen; kleine reeks (n=7). Villa Milan gebouwd 2016 (tekst), 98119662 gebouwd 2020, Villa Sira 1978 — 'modern' is deels presentatie.",
+    "examples": [
+     {
+      "code": "111318619",
+      "price": 995000,
+      "m2": 317,
+      "eur_m2": 3139,
+      "year": "onbekend",
+      "label": "Villa Luna, Calle de la Noguera, 'estilo contemporáneo', 5 slaapkamers"
+     },
+     {
+      "code": "98119662",
+      "price": 1620000,
+      "m2": 374,
+      "eur_m2": 4332,
+      "year": "2020",
+      "label": "Urbanización Tosalet, moderne villa, infinity pool; codes 110585303, 111276312, 104834419 (label Adsubia)"
+     },
+     {
+      "code": "108920763",
+      "price": 1995000,
+      "m2": 455,
+      "eur_m2": 4385,
+      "year": "onbekend (niet detail-gecontroleerd)",
+      "label": "El Tosalet, 'diseño contemporáneo', perceel ±2.500 m²"
+     },
+     {
+      "code": "112519520",
+      "price": 1600000,
+      "m2": 273,
+      "eur_m2": 5861,
+      "year": "1978",
+      "label": "Villa Sira (Adsubia); tweede code 112497928 → 6.867"
+     },
+     {
+      "code": "112357691",
+      "price": 1350000,
+      "m2": 222,
+      "eur_m2": 6081,
+      "year": "onbekend",
+      "label": "'Estilo moderno… El Portitxol' (label Tosalet–Cap Martí; pin bij Toscal)"
+     },
+     {
+      "code": "112335658",
+      "price": 1950000,
+      "m2": 320,
+      "eur_m2": 6094,
+      "year": "onbekend",
+      "label": "Calle del Cresolet 3 (Toscal), contemporain, domotica, particuliere verkoper"
+     },
+     {
+      "code": "109011069",
+      "price": 2700000,
+      "m2": 432,
+      "eur_m2": 6250,
+      "year": "2016 (tekst; veld zegt 1970)",
+      "label": "Villa Milan, Panorama, zeezicht, perceel 3.065 m²; tweede code 102601416"
+     }
+    ],
+    "verification": "niet afzonderlijk beoordeeld"
+   },
+   "villa_new": {
+    "n": 10,
+    "min": 2829,
+    "p25": 4108,
+    "median": 4825,
+    "p75": 5907,
+    "max": 9000,
+    "source": "Idealista-assistent (MCP): obra-nueva-filter El Tosalet - Cap Marti (9 villa's + 10 promoties zonder m²) en 'nueva construcción'/'Construido en 2026' in tweedehandsadvertenties; Adsubia obra nueva = 0; 11 van 12 met property_detail",
+    "date": "2026-09-15",
+    "note": "Vraagprijzen. Slechts 4 opgeleverd (villa_new_finished: n=4, min 5.333, p25 5.718, mediaan 5.887, p75 6.501, max 8.219); 8 zijn project/render (villa_new_project: n=8, mediaan 4.246, min 2.829, max 9.000) met m²-velden die de tekst tegenspreken (Begonia 350 vs 270, Ventamarina 425 vs 260) en Villa Amelia in projectfase met veldstatus 'para reformar'. Cumbres del Tosalet (106502380) is een chalet pareado.",
+    "examples": [
+     {
+      "code": "109963880",
+      "price": 990000,
+      "m2": 350,
+      "eur_m2": 2829,
+      "year": "nieuwbouw, promotie 'notFinished'",
+      "label": "Begonia 21, casa ibicenca (renders); tekst 270 m² → 3.667"
+     },
+     {
+      "code": "108644977",
+      "price": 2090000,
+      "m2": 515,
+      "eur_m2": 4058,
+      "year": "nieuwbouw, promotie 'notFinished'",
+      "label": "Villa Valenza, Calle Alber 11 (Costa Privee, renders)"
+     },
+     {
+      "code": "112043325",
+      "price": 1600000,
+      "m2": 300,
+      "eur_m2": 5333,
+      "year": "nieuwbouw, promotie 'finished' ('obra nueva terminada')",
+      "label": "Villa Kentia, Calle de la Kentia 15 (Tosalet alto); tweede code 110824450"
+     },
+     {
+      "code": "106502380",
+      "price": 1040000,
+      "m2": 193,
+      "eur_m2": 5389,
+      "year": "nieuwbouw, promotie 'notFinished', laatste unit",
+      "label": "Residencial Cumbres del Tosalet, chalet PAREADO, perceel 403 m²"
+     },
+     {
+      "code": "111889670",
+      "price": 2280000,
+      "m2": 390,
+      "eur_m2": 5846,
+      "year": "veld 'Construido en 2026'; als tweedehands geadverteerd",
+      "label": "Adsubia bij Consum, 'villa de diseño', 3 lagen met lift"
+     },
+     {
+      "code": "111665212",
+      "price": 2300000,
+      "m2": 388,
+      "eur_m2": 5928,
+      "year": "'nueva construcción', energielabel A; als tweedehands geadverteerd",
+      "label": "Villa Kismet, Calle Georges de la Tour 10 (Aires de Jávea)"
+     },
+     {
+      "code": "112041902",
+      "price": 1800000,
+      "m2": 219,
+      "eur_m2": 8219,
+      "year": "nieuwbouw, promotie 'finished'",
+      "label": "Villa Malva, Calle de la Malva 4; codes 110763829, 110755736, 112108954 (223 m² → 8.072)"
+     },
+     {
+      "code": "111926896",
+      "price": 1800000,
+      "m2": 200,
+      "eur_m2": 9000,
+      "year": "project, nog niet gestart (12 maanden bouwtijd); veldstatus 'para reformar'",
+      "label": "Villa Amelia, Partida Camí Cap Martí 249b — perceel + te bouwen villa"
+     }
+    ],
+    "original": {
+     "n": 12,
+     "p25": 4153,
+     "median": 5361,
+     "p75": 5942
+    },
+    "verification": "gecorrigeerd na controle: Het duurste voorbeeld, 111926896 (Villa Amelia, 9.000 €/m²), is volgens property_detail 'actualmente en fase de proyecto', met in het veld 'Segunda mano/para reformar' en alleen renders en plattegrond"
+   },
+   "townhouse_renovated": {
+    "n": 4,
+    "min": 2831,
+    "p25": 3018,
+    "median": 3132,
+    "p75": 3198,
+    "max": 3248,
+    "source": "Idealista-assistent (MCP), zone Adsubia; pareado/adosado of urbanisatie met gemeenschappelijk zwembad, met renovatieclaim; alle 4 met property_detail",
+    "date": "2026-09-15",
+    "note": "Minder dan de gevraagde 6 objecten; niet meer gevonden in de zone. 112277689 (415.000/137) samengevoegd met 112428067 als hetzelfde huis. Vraagprijzen.",
+    "examples": [
+     {
+      "code": "112428067",
+      "price": 385000,
+      "m2": 136,
+      "eur_m2": 2831,
+      "year": "1980, recent gerenoveerd",
+      "label": "Chalet adosado bij Arenal (10 woningen); = 112277689 (415.000/137 → 3.029)"
+     },
+     {
+      "code": "112517370",
+      "price": 419000,
+      "m2": 136,
+      "eur_m2": 3081,
+      "year": "1980, 'cuidadosamente renovada'",
+      "label": "Vivienda pareada Camí Cabanes, jacuzzi, laadpunt"
+     },
+     {
+      "code": "112243938",
+      "price": 385000,
+      "m2": 121,
+      "eur_m2": 3182,
+      "year": "'reformada en 2023'",
+      "label": "Chalet pareado Adsubia; prijs verlaagd van 415.000"
+     },
+     {
+      "code": "111952056",
+      "price": 445000,
+      "m2": 137,
+      "eur_m2": 3248,
+      "year": "1980, 'vivienda reformada'",
+      "label": "Camino Cabanes (Cabanes-Mores), urbanisatie met gedeeld zwembad, VvE 130 €/maand"
+     }
+    ],
+    "verification": "niet te bevestigen: Te klein voor een betrouwbare mediaan (n=4). Alle vier voorbeelden geopend: prijs, m² en renovatie kloppen, en de rekenkunde klopt. Een eigen zoekopdracht vond "
+   },
+   "_caveats": [
+    "Alle cijfers zijn VRAAGPRIJZEN van Idealista-advertenties op 15-09-2026; geen transactieprijzen en geen marktwaarde. Gemelde prijsdalingen (−14 % tot −17 % bij drie villa's) tonen dat vraagprijzen hier vaak boven de markt starten.",
+    "Steekproef: maximaal 50 resultaten per aanroep, geen paginering. Via twee zones en drie prijsbanden is ±80–90 % van het zoneaanbod bekeken (198 unieke codes); 'buen estado' is een zelfgekozen label van de adverteerder. De tool past de woorden 'reformada/moderna/de diseño' niet als filter toe; de selectie op staat is handmatig op de tekst gedaan.",
+    "Zonelabels van Idealista zijn ruim en soms fout: objecten met tekst Costa Nova, Portitxol, Pinosol, Toscal, Aires de Jávea en Pinomar dragen het label Tosalet–Cap Martí of Adsubia; dezelfde villa (98119662-groep) krijgt bij twee makelaars twee verschillende zonelabels.",
+    "Het m²-veld verschilt per makelaar voor hetzelfde huis (Calle de la Ceba 145–178 m², Juan de Borgoña 224–274, Malva 219–223) en wijkt bij nieuwbouwprojecten sterk af van de tekst (Begonia 350 vs 270, Ventamarina 425 vs 260). €/m² is steeds op het veld 'construidos' berekend; nuttige m² liggen soms ver lager (Begonia-villa 555/275, Nadaleta 549/305).",
+    "Het veld 'Construido en …' is onbetrouwbaar: '2026' staat bij echte nieuwbouw, bij een herbouwde villa (112196807) en bij een villa uit 1982 (111883479); '2024' bij Salvia 21 is het renovatiejaar.",
+    "Deduplicatie is een beoordeling: 198 codes = ±150 objecten; één villa (Calle de la Ceba, 790.000 €) staat 13 keer op Idealista en zou zonder ontdubbeling de mediaan bepalen. Samenvoegingen (o.a. 108940959 = 104650661, 112428067 = 112277689) staan per object toegelicht.",
+    "villa_new: slechts 4 van 12 objecten zijn opgeleverd; 8 zijn renders/projecten (één in projectfase met veldstatus 'para reformar', één chalet pareado). Gebruik villa_new_finished (n=4, mediaan 5.887) voor 'a estrenar' in letterlijke zin; de totale reeks villa_new (mediaan 5.361) mengt beide.",
+    "villa_renovated bevat twee uitschieters > 9.000 €/m² (zeezichtvilla's met veel grond); zonder hen is de mediaan 4.504 in plaats van 4.782. villa_modern is klein (n=7) en deels 'presentatie' (Villa Sira is uit 1978).",
+    "townhouse_renovated heeft slechts n=4 (minder dan de gevraagde 6); apartment-reeksen zijn voor deze villazone niet van toepassing en niet bepaald.",
+    "Grensgeval buiten de statistiek gelaten: 111451577/111468637 (zelfde villa als villa + tweede bouwperceel 1.995.000/450 m² en als villa alleen 1.595.000/185 m² → 4.433 vs 8.622 €/m²).",
+    "K11 (perceel 111856637, dotacional, afgewezen) is niet vergelijkbaar met deze villareeksen; de reeksen zeggen alleen waar gerenoveerde/nieuwe villa's in dezelfde ruime zone gevraagd worden.",
+    "Het bestand vervangt een eerdere versie van 15-09-2026 09:39 op hetzelfde pad (kopie in het sessiekladblok: scratchpad/tos/H01-vorige-versie-0939.md); de eerdere versie gaf voor villa_renovated n=30, mediaan 4.933 en voor villa_new n=10, mediaan 4.824 — verschil door strengere ontdubbeling en het scheiden van opgeleverde nieuwbouw en projecten."
+   ]
+  }
+ }
+}

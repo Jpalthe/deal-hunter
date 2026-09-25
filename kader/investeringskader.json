@@ -1,0 +1,140 @@
+{
+  "versie": "2026-09-25",
+  "bron": "Jan, gesprek 15-09-2026 (bewijstype 3)",
+  "koopbudget_eur": {
+    "min": 500000,
+    "max": 1000000
+  },
+  "rendementseis_op_projectkosten": 0.25,
+  "financiering": {
+    "datum": "25-09-2026",
+    "bron": "Jan, interactieve vragen 25-09-2026",
+    "dekking": "aankoop en bouw, 100 % geleend, geen eigen inbreng",
+    "rente_pct_default": 0.15,
+    "rente_per_project_instelbaar": true,
+    "rente_grondslag": "Aankoopsom plus kosten koper vanaf dag één over de hele doorlooptijd. Bouwkosten naar rato van de opgenomen tranches; gerekend als gemiddeld de helft van de bouwsom over de bouwperiode.",
+    "afsluitkosten": 0,
+    "boete_vervroegd_aflossen": null,
+    "toelichting": "Jan werkt met verschillende investeerders die elk een ander tarief rekenen, daarom is het percentage per project te wijzigen. 15 % is de standaard."
+  },
+  "rente_jaar": 0.0,
+  "doorlooptijd_max_maanden": 24,
+  "entiteit": "per deal",
+  "bouwkosten_eur_per_m2": {
+    "renovatie": 1000,
+    "nieuwbouw": 2000,
+    "btw": "exclusief",
+    "omvat": "alleen bouwkosten; keuken, badkamers en zwembad worden apart geteld (Jan 17-09-2026)"
+  },
+  "routes_prioriteit": [
+    "A",
+    "B"
+  ],
+  "objecttypen": [
+    "verouderde villa's op grote percelen",
+    "appartementen aan zee",
+    "bouwkavels met of zonder licentie"
+  ],
+  "werkgebied": [
+    "Jávea/Xàbia",
+    "Benitachell",
+    "Moraira/Teulada"
+  ],
+  "eindkoper": "Noord-Europese tweede-huiskopers",
+  "bouwcapaciteit_projecten_tegelijk": "hangt van de deal af (Jan 17-09-2026)",
+  "waarborg_max_tegelijk_eur": 150000,
+  "harde_uitsluitingen": [
+    "urbanisatie niet opgeleverd"
+  ],
+  "risicoposten_geen_uitsluiting": [
+    "bewoond zonder titel",
+    "gedeeld eigendom/blote eigendom/vruchtgebruik",
+    "bebouwing zonder vergunning op beschermde grond"
+  ],
+  "finders_fee": false,
+  "rondes": [
+    "08:00",
+    "18:30"
+  ],
+  "tijdzone": "Europe/Madrid",
+  "kanalen": [
+    "discord",
+    "email"
+  ],
+  "ai_budget_eur_maand": 100,
+  "installaties_toegestaan": true,
+  "feedback": "reviewpagina Tailscale",
+  "contact_extern": "mail na akkoord per bericht",
+  "winstmarge_op_verkoop_min": 0.2,
+  "rendementseis_toelichting": "Jan 15-09-2026: minimaal 20 % winstmarge tussen totale kosten en verkoopwaarde (marge op verkoop). Rekenkundig gelijk aan 25 % op totale projectkosten.",
+  "verkoop_via_eigen_kantoor": true,
+  "voorkeur_bij_gelijk_resultaat": "snel klaar: renovatie boven nieuwbouw",
+  "wijzigingen_18_09_2026": [
+    "Keuken en badkamers zitten niet in het €/m²-bouwtarief en worden apart geteld; SKP levert ze.",
+    "TREE Properties verkoopt het eindproduct zelf, dus de courtage van 5 % verlaat de groep niet.",
+    "Bij gelijk resultaat gaat een korter project voor."
+  ],
+  "focus": {
+    "vanaf": "25-09-2026",
+    "bron": "Jan, 25-09-2026 (nacht): twaalf keuzes, daarna herzien — géén prijsgrenzen. Zie kader/keuzes-25-09-2026.md",
+    "gebieden": [
+      "javea"
+    ],
+    "gebieden_apart": [
+      "benitachell",
+      "moraira"
+    ],
+    "categorieen": [
+      "renovatie",
+      "appartement-renovatie",
+      "perceel",
+      "bijzonder"
+    ],
+    "sloop_nieuwbouw_telt_mee": true,
+    "ondergrens_perceel": null,
+    "ondergrens_pand": null,
+    "bovengrens": null,
+    "appartementen": "meedoen_gemerkt",
+    "bestemming_streng": true,
+    "toelichting": "Jávea is de hoofdlijst. Benitachell en Moraira worden gelezen en doorgerekend maar staan op een eigen tabblad. Geen prijsgrenzen meer, boven noch onder (Jan, 25-09-2026): de rekensom bepaalt of iets interessant is, niet de vraagprijs. Appartementen doen mee met een eigen merkje. Percelen waarvan de officiële bestemming niet stedelijk is, gaan naar het tabblad 'misschien later'; is de bestemming nog niet opgevraagd, dan blijft het object in de hoofdlijst staan met de vermelding dat dit ONBEKEND is — een niet-gestelde vraag is geen afwijzing.",
+    "later_alleen_urbaniseerbaar": true
+  },
+  "bouwtarief_besluit": {
+    "datum": "25-09-2026",
+    "keuze": "€ 1.000/m² is het juiste tarief",
+    "reden": "Jan heeft eigen vaklieden in dienst. Het marktonderzoek N05 vond 1.400–1.800 €/m² voor een casco-renovatie in de Marina Alta, maar dat zijn prijzen die een opdrachtgever aan een aannemer betaalt, inclusief diens marge en risico-opslag. TREE koopt die renovatie niet in maar voert hem zelf uit. Het tarief is dus geen scherpe aanname meer maar een kostprijs.",
+    "tegenwerping_vervallen": "De eerdere waarschuwing dat de marge sneller verdampt dan de app toont, geldt niet op dezelfde manier: het risico zit nu in de eigen bezetting en doorlooptijd, niet in een aanneemsom die tegenvalt."
+  },
+  "valor_referencia": {
+    "datum": "25-09-2026",
+    "keuze": "alleen tonen als waarschuwing",
+    "toelichting": "De grondslag voor de overdrachtsbelasting blijft in de rekensom de koopprijs. Ligt de valor de referencia hoger, dan toont de app het verschil en de extra belasting, maar de som verandert niet."
+  },
+  "doorlooptijd": {
+    "datum": "25-09-2026",
+    "bron": "Jan, interactieve vragen 25-09-2026",
+    "toelichting": "Opgebouwd uit drie blokken in plaats van één vast getal per scenario. Vergunning: vrijwel elke renovatie binnen de bestaande buitenmuren gaat met een obra menor en die is er in een dag; uitbreiden of slopen en opnieuw bouwen moet via een obra mayor bij een ECUV, en dat duurt 4 tot 6 maanden. Bouw met eigen ploeg. Verkoop via TREE Properties zelf.",
+    "vergunning_maanden": {
+      "obra_menor": 0,
+      "obra_mayor_ecuv": 5
+    },
+    "bouw_maanden": {
+      "renovatie": 6,
+      "nieuwbouw": 12,
+      "splitsen": 14
+    },
+    "verkoop_maanden": 3,
+    "afgeleid": {
+      "renovatie": 9,
+      "sloop_nieuwbouw": 20,
+      "splitsen": 22
+    },
+    "aanname": "De 5 maanden voor een obra mayor is het midden van de 4 tot 6 die Jan noemde. De 14 maanden bouwtijd voor splitsen is door Jan bevestigd op 25-09-2026: in serie bouwen met dezelfde ploeg gaat sneller dan evenredig."
+  },
+  "capaciteit": {
+    "datum": "25-09-2026",
+    "projecten_tegelijk": 3,
+    "toelichting": "Twee tot drie tegelijk met de eigen ploeg. Jan wil géén waarschuwing in de app: Boeiend is een verlanglijst, geen planning.",
+    "waarschuwing_in_app": false
+  }
+}

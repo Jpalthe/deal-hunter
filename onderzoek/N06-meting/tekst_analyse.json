@@ -1,0 +1,7339 @@
+[
+ {
+  "ref": "2032JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1700,
+  "getallen": [
+   [
+    1700.0,
+    null,
+    "beautiful building plot of over"
+   ],
+   [
+    1700.0,
+    null,
+    ". preciosa parcela edificable de más de"
+   ],
+   [
+    1700.0,
+    null,
+    "o público. prachtige bouwgrond van ruim"
+   ],
+   [
+    1700.0,
+    null,
+    "g. wunderschönes baugrundstück von über"
+   ],
+   [
+    1700.0,
+    null,
+    ". beau terrain constructible de plus de"
+   ]
+  ],
+  "raak": [
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "3061CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 410,
+  "plot": 820,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "3205BEN",
+  "type": "Land",
+  "town": "Benissa",
+  "built": null,
+  "plot": 800,
+  "getallen": [
+   [
+    802.0,
+    null,
+    "et area facing south. the first plot is"
+   ],
+   [
+    798.0,
+    null,
+    "and costs 150.000€, the second plot is"
+   ],
+   [
+    802.0,
+    null,
+    "entada al sur. la primera parcela tiene"
+   ],
+   [
+    798.0,
+    null,
+    "esta 150.000€, la segunda parcela tiene"
+   ],
+   [
+    802.0,
+    null,
+    "op het zuiden. het eerste grondstuk is"
+   ],
+   [
+    798.0,
+    null,
+    "kost 150.000€, het tweede grondstuk is"
+   ],
+   [
+    802.0,
+    null,
+    "rtel gelegen.\r\ndas erste grundstück ist"
+   ],
+   [
+    798.0,
+    null,
+    "tet 150.000€, das zweite grundstück ist"
+   ],
+   [
+    802.0,
+    null,
+    "orienté au sud. le premier terrain fait"
+   ],
+   [
+    798.0,
+    null,
+    "ûte 150 000 €, le deuxième terrain fait"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "3230CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 440,
+  "plot": 637,
+  "getallen": [
+   [
+    60.0,
+    "berging",
+    "ntrance hall, a multifunctional room of"
+   ],
+   [
+    60.0,
+    "berging",
+    "de entrada, una sala multifuncional de"
+   ],
+   [
+    60.0,
+    null,
+    "komhal, een multifunctionele ruimte van"
+   ],
+   [
+    60.0,
+    "berging",
+    "ne eingangshalle, ein mehrzweckraum von"
+   ],
+   [
+    60.0,
+    null,
+    "entrée, une pièce multifonctionnelle de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "3290BELL",
+  "type": "Land",
+  "town": "Benitachell",
+  "built": null,
+  "plot": 1610,
+  "getallen": [
+   [
+    1610.0,
+    null,
+    "quiet, oriented north-west and measures"
+   ],
+   [
+    1610.0,
+    null,
+    "uila, está orientada al noroeste y mide"
+   ],
+   [
+    1610.0,
+    null,
+    "eoriënteerd op het noord-westen en meet"
+   ],
+   [
+    1610.0,
+    null,
+    "nach nordwesten ausgerichtet und misst"
+   ],
+   [
+    1610.0,
+    null,
+    "est calme, orienté nord-ouest et mesure"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "3299JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 676,
+  "plot": 925,
+  "getallen": [
+   [
+    925.0,
+    null,
+    "designer villa is located on a plot of"
+   ],
+   [
+    677.0,
+    null,
+    "925 m2 and has a total built-up area of"
+   ],
+   [
+    140.0,
+    "terras",
+    "e direct access to the large terrace of"
+   ],
+   [
+    925.0,
+    null,
+    "e diseño está situada en una parcela de"
+   ],
+   [
+    677.0,
+    "bebouwd",
+    "iene una superficie construida total de"
+   ],
+   [
+    140.0,
+    "terras",
+    "nes acceso directo a la gran terraza de"
+   ],
+   [
+    925.0,
+    null,
+    "signvilla is gelegen op een perceel van"
+   ],
+   [
+    677.0,
+    "bebouwd",
+    "eft een totale bebouwde oppervlakte van"
+   ],
+   [
+    140.0,
+    "terras",
+    "irecte toegang tot het grote terras van"
+   ],
+   [
+    925.0,
+    null,
+    "befindet sich auf einem grundstück von"
+   ],
+   [
+    677.0,
+    "bebouwd",
+    "925 m2 und hat eine bebaute fläche von"
+   ],
+   [
+    140.0,
+    "terras",
+    "haben sie direkten zugang zu der großen"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "berging",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "3311PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 130,
+  "plot": 900,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "3315PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 143,
+  "plot": 900,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "3319PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 180,
+  "plot": 900,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging"
+  ]
+ },
+ {
+  "ref": "3335JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1500,
+  "getallen": [
+   [
+    1500.0,
+    null,
+    "two flat building plots of"
+   ],
+   [
+    1500.0,
+    null,
+    "ding obligation. dos parcelas planas de"
+   ],
+   [
+    1500.0,
+    null,
+    "nstrucción. twee vlakke bouwgronden van"
+   ],
+   [
+    1500.0,
+    null,
+    "ichting. zwei flache baugrundstücke von"
+   ],
+   [
+    1500.0,
+    null,
+    "ichtung. deux terrains plats à bâtir de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "3386JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 450,
+  "plot": 1200,
+  "getallen": [
+   [
+    70.0,
+    null,
+    "utside in the garden there is a pool of"
+   ],
+   [
+    60.0,
+    "garage",
+    "ily bathroom.\nthere is also a garage of"
+   ],
+   [
+    70.0,
+    null,
+    "fuera, en el jardín, hay una piscina de"
+   ],
+   [
+    60.0,
+    "garage",
+    "año familiar.\r\ntambién hay un garaje de"
+   ],
+   [
+    70.0,
+    null,
+    "buiten in de tuin is er een zwembad van"
+   ],
+   [
+    60.0,
+    "garage",
+    "ebadkamer. er is ook nog een garage van"
+   ],
+   [
+    70.0,
+    null,
+    "m.\r\ndraußen im garten befindet sich ein"
+   ],
+   [
+    60.0,
+    "garage",
+    "nem familienbad.\r\naußerdem gibt es eine"
+   ],
+   [
+    70.0,
+    null,
+    ", dans le jardin, il y a une piscine de"
+   ],
+   [
+    60.0,
+    "garage",
+    "miliale.\r\nil y a également un garage de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "3497JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1000,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "3498JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 2355,
+  "getallen": [
+   [
+    1110.0,
+    null,
+    "h plots. the surface of the grounds are"
+   ],
+   [
+    1245.0,
+    null,
+    "surface of the grounds are 1110 m2 and"
+   ],
+   [
+    1110.0,
+    null,
+    "las superficies de las parcelas son de"
+   ],
+   [
+    1245.0,
+    null,
+    "ficies de las parcelas son de 1110 m2 y"
+   ],
+   [
+    1110.0,
+    null,
+    "ken. de oppervlakte van de gronden zijn"
+   ],
+   [
+    1245.0,
+    null,
+    "ervlakte van de gronden zijn 1110 m2 en"
+   ],
+   [
+    1110.0,
+    null,
+    "ücken. die flächen der grundstücke sind"
+   ],
+   [
+    1245.0,
+    null,
+    "lächen der grundstücke sind 1110 m2 und"
+   ],
+   [
+    1110.0,
+    null,
+    "rcelles. la surface des terrains est de"
+   ],
+   [
+    1245.0,
+    null,
+    "surface des terrains est de 1110 m2 et"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "3502BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 770,
+  "plot": 718,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "3578PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 230,
+  "plot": 719,
+  "getallen": [
+   [
+    122.0,
+    null,
+    "bathroom.the total area of the villa is"
+   ],
+   [
+    77.0,
+    "terras",
+    "the villa is 122m2. outside there is a"
+   ],
+   [
+    122.0,
+    null,
+    "e. la superficie total del chalet es de"
+   ],
+   [
+    77.0,
+    "terras",
+    "22m2. en el exterior hay una terraza de"
+   ],
+   [
+    122.0,
+    null,
+    "r.de totale oppervlakte van de villa is"
+   ],
+   [
+    77.0,
+    "terras",
+    "is 122m2.  buiten is er een terras van"
+   ],
+   [
+    122.0,
+    null,
+    "ein hauptschlafzimmer mit bad en suite."
+   ],
+   [
+    77.0,
+    "terras",
+    "22m2 gesamtfläche. draußen gibt es eine"
+   ],
+   [
+    122.0,
+    null,
+    "la superficie totale de la villa est de"
+   ],
+   [
+    77.0,
+    "terras",
+    ". a l'extérieur, il y a une terrasse de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "berging",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "3580JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1500,
+  "getallen": [
+   [
+    1500.0,
+    null,
+    "ing a business. the plot has an area of"
+   ],
+   [
+    1500.0,
+    null,
+    "cio. la parcela tiene una superficie de"
+   ],
+   [
+    1500.0,
+    null,
+    "het grondstuk heeft een oppervlakte van"
+   ],
+   [
+    1500.0,
+    null,
+    "ens. das grundstück hat eine fläche von"
+   ],
+   [
+    500.0,
+    null,
+    "ivité. le terrain a une superficie de 1"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "3628DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 259,
+  "plot": 1118,
+  "getallen": [
+   [
+    1200.0,
+    null,
+    "the villa is built on a plot of almost"
+   ],
+   [
+    1200.0,
+    "bebouwd",
+    "tá construido sobre una parcela de casi"
+   ],
+   [
+    1200.0,
+    null,
+    "wordt gebouwd op een perceel van bijna"
+   ],
+   [
+    1200.0,
+    null,
+    "villa ist auf einem grundstück von fast"
+   ],
+   [
+    1200.0,
+    null,
+    "st construite sur un terrain de près de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "3631CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 675,
+  "plot": 1079,
+  "getallen": [
+   [
+    1079.0,
+    null,
+    "d villa is located on a sloping plot of"
+   ],
+   [
+    1079.0,
+    null,
+    "stá ubicada en una parcela inclinada de"
+   ],
+   [
+    1079.0,
+    null,
+    "wvilla ligt op een glooiend perceel van"
+   ],
+   [
+    1079.0,
+    null,
+    "ane neubauvilla befindet sich auf einem"
+   ],
+   [
+    1079.0,
+    null,
+    "n est située sur un terrain en pente de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4043BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 387,
+  "plot": 877,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4078JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": 35,
+  "plot": 6000,
+  "getallen": [
+   [
+    6000.0,
+    null,
+    "you can! this plot has an area of up to"
+   ],
+   [
+    100.0,
+    null,
+    "in, this may be rebuilt to a maximum of"
+   ],
+   [
+    6000.0,
+    null,
+    "a parcela tiene una superficie de hasta"
+   ],
+   [
+    100.0,
+    null,
+    "puede reconstruirse hasta un máximo de"
+   ],
+   [
+    6000.0,
+    null,
+    "grondstuk heeft een oppervlakte van wel"
+   ],
+   [
+    100.0,
+    null,
+    "worden heropgebouwd tot een maximum van"
+   ],
+   [
+    6000.0,
+    null,
+    "s grundstück hat eine fläche von bis zu"
+   ],
+   [
+    100.0,
+    null,
+    "ine, die bis zu einer größe von maximal"
+   ],
+   [
+    6000.0,
+    null,
+    "terrain d'une superficie allant jusqu'à"
+   ],
+   [
+    100.0,
+    null,
+    "être reconstruite jusqu'à un maximum de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4104JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1100,
+  "getallen": [
+   [
+    1100.0,
+    null,
+    "ooded hills and the montgó. the plot is"
+   ],
+   [
+    1100.0,
+    null,
+    "boscosas y al montgó. la parcela tiene"
+   ],
+   [
+    1100.0,
+    null,
+    "uvels en op de montgó. het grondstuk is"
+   ],
+   [
+    1100.0,
+    null,
+    "ügel und den montgó. das grundstück ist"
+   ],
+   [
+    1100.0,
+    null,
+    "montgó. le terrain a une superficie de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4105JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1500,
+  "getallen": [
+   [
+    1500.0,
+    null,
+    "e historic center of jávea! the plot is"
+   ],
+   [
+    1500.0,
+    null,
+    "ro histórico de jávea. la parcela tiene"
+   ],
+   [
+    1500.0,
+    null,
+    "sch centrum van jávea! het grondstuk is"
+   ],
+   [
+    1500.0,
+    null,
+    "zentrums von jávea! das grundstück ist"
+   ],
+   [
+    1500.0,
+    null,
+    "historique de jávea ! le terrain est de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4140JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 2700,
+  "getallen": [
+   [
+    2700.0,
+    null,
+    "chool of javea.\nthe plot has an area of"
+   ],
+   [
+    600.0,
+    null,
+    "e plot has an area of 2700 m2 and up to"
+   ],
+   [
+    2700.0,
+    null,
+    "m.\r\nla parcela tiene una superficie de"
+   ],
+   [
+    600.0,
+    null,
+    "de 2700 m2 y se pueden construir hasta"
+   ],
+   [
+    2700.0,
+    null,
+    "het grondstuk heeft een oppervlakte van"
+   ],
+   [
+    600.0,
+    null,
+    "n oppervlakte van 2700 m2 en er mag tot"
+   ],
+   [
+    2700.0,
+    null,
+    "nt.\r\ndas grundstück hat eine fläche von"
+   ],
+   [
+    600.0,
+    null,
+    "fläche von 2700 m2 und kann mit bis zu"
+   ],
+   [
+    2700.0,
+    null,
+    "mètres.\r\nle terrain a une superficie de"
+   ],
+   [
+    600.0,
+    null,
+    "a une superficie de 2700 m2 et jusqu'à"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4170GAT",
+  "type": "Town house",
+  "town": "Gata de Gorgos",
+  "built": 136,
+  "plot": 73,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4178BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 615,
+  "plot": 951,
+  "getallen": [
+   [
+    70.0,
+    "terras",
+    "rooms. in addition, there is more than"
+   ],
+   [
+    70.0,
+    "terras",
+    "as las habitaciones. además, hay más de"
+   ],
+   [
+    70.0,
+    "terras",
+    "s er zeezicht. daarnaast is er meer dan"
+   ],
+   [
+    70.0,
+    "terras",
+    "an meerblick. außerdem gibt es mehr als"
+   ],
+   [
+    70.0,
+    "terras",
+    "les chambres. en outre, il y a plus de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4196JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 314,
+  "plot": 1400,
+  "getallen": [
+   [
+    1400.0,
+    null,
+    ". the property is situated on a plot of"
+   ],
+   [
+    1400.0,
+    null,
+    "ropiedad está situada en una parcela de"
+   ],
+   [
+    1400.0,
+    null,
+    "woning is gelegen op een grondstuk van"
+   ],
+   [
+    1400.0,
+    null,
+    "befindet sich auf einem grundstück von"
+   ],
+   [
+    1400.0,
+    null,
+    "propriété est située sur un terrain de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "gast"
+  ]
+ },
+ {
+  "ref": "4223CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 350,
+  "plot": 636,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4295BEN",
+  "type": "Land",
+  "town": "Benissa",
+  "built": null,
+  "plot": 826,
+  "getallen": [
+   [
+    826.0,
+    null,
+    "rar in benissa. the plot has an area of"
+   ],
+   [
+    200.0,
+    null,
+    "he plot has an area of 826 m2 and up to"
+   ],
+   [
+    826.0,
+    null,
+    "ssa. la parcela tiene una superficie de"
+   ],
+   [
+    200.0,
+    null,
+    "e de 826 m2 y se pueden construir hasta"
+   ],
+   [
+    826.0,
+    null,
+    "het grondstuk heeft een oppervlakte van"
+   ],
+   [
+    200.0,
+    null,
+    "en oppervlakte van 826 m2 en er mag tot"
+   ],
+   [
+    826.0,
+    null,
+    "rnt. das grundstück hat eine fläche von"
+   ],
+   [
+    200.0,
+    null,
+    "e fläche von 826 m2 und kann mit bis zu"
+   ],
+   [
+    826.0,
+    null,
+    "benissa. le terrain a une superficie de"
+   ],
+   [
+    200.0,
+    null,
+    "e 826 m2 et peut être construit jusqu'à"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4305MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 560,
+  "plot": 800,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4309BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 357,
+  "plot": 1058,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4310BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 330,
+  "plot": 1448,
+  "getallen": [
+   [
+    1448.0,
+    null,
+    "ern villa is located on a quiet plot of"
+   ],
+   [
+    1448.0,
+    null,
+    "stá situada en una tranquila parcela de"
+   ],
+   [
+    1448.0,
+    null,
+    "is gelegen op een rustig grondstuk van"
+   ],
+   [
+    1448.0,
+    null,
+    "e villa befindet sich auf einem ruhigen"
+   ],
+   [
+    1448.0,
+    null,
+    "erne est située sur un terrain calme de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4313ALC",
+  "type": "Villa",
+  "town": "Alcalali",
+  "built": 133,
+  "plot": 300,
+  "getallen": [
+   [
+    80.0,
+    "kelder",
+    "hroom. in the semi-basement there is an"
+   ],
+   [
+    30.0,
+    "terras",
+    "ice also includes a swimming pool and a"
+   ],
+   [
+    80.0,
+    "kelder",
+    "tido. en el semisótano hay un garaje de"
+   ],
+   [
+    30.0,
+    "terras",
+    "én incluye una piscina y una terraza de"
+   ],
+   [
+    80.0,
+    "kelder",
+    "rverdieping bevindt zich een garage van"
+   ],
+   [
+    30.0,
+    "terras",
+    "js is ook een zwembad en een terras van"
+   ],
+   [
+    80.0,
+    "garage",
+    "er. im untergeschoss befindet sich eine"
+   ],
+   [
+    30.0,
+    "terras",
+    "fen sind auch ein swimmingpool und eine"
+   ],
+   [
+    80.0,
+    "garage",
+    "mmune. au sous-sol, il y a un garage de"
+   ],
+   [
+    30.0,
+    "terras",
+    "galement une piscine et une terrasse de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4324BEN",
+  "type": "Land",
+  "town": "Benissa",
+  "built": null,
+  "plot": 1056,
+  "getallen": [
+   [
+    1565.0,
+    null,
+    "mation on request. the adjacent land of"
+   ],
+   [
+    1565.0,
+    null,
+    "ión a petición. la parcela adyacente de"
+   ],
+   [
+    1565.0,
+    null,
+    "anvraag. het aangrenzende grondstuk van"
+   ],
+   [
+    1565.0,
+    null,
+    "anfrage. das angrenzende grundstück von"
+   ],
+   [
+    1565.0,
+    null,
+    "ons sur demande. le terrain adjacent de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4402JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 3000,
+  "getallen": [
+   [
+    1000.0,
+    null,
+    "these are 3 adjacent building plots of"
+   ],
+   [
+    1000.0,
+    null,
+    "de 3 parcelas edificables contiguas de"
+   ],
+   [
+    1000.0,
+    null,
+    "reft 3 aangrenzende bouwgronden elk van"
+   ],
+   [
+    1000.0,
+    null,
+    "einandergrenzende baugrundstücke von je"
+   ],
+   [
+    1000.0,
+    null,
+    "agit de 3 terrains à bâtir attenants de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4411BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 199,
+  "plot": 836,
+  "getallen": [
+   [
+    836.0,
+    null,
+    "ming pool. the plot has a total area of"
+   ],
+   [
+    836.0,
+    null,
+    "a parcela tiene una superficie total de"
+   ],
+   [
+    836.0,
+    null,
+    "ndstuk heeft een totale oppervlakte van"
+   ],
+   [
+    836.0,
+    null,
+    "as grundstück hat eine gesamtfläche von"
+   ],
+   [
+    836.0,
+    null,
+    ". le terrain a une superficie totale de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4412ALT",
+  "type": "Land",
+  "town": "Altea",
+  "built": null,
+  "plot": 823,
+  "getallen": [
+   [
+    823.0,
+    null,
+    "you have always imagined. this plot of"
+   ],
+   [
+    823.0,
+    null,
+    "e siempre ha imaginado. esta parcela de"
+   ],
+   [
+    823.0,
+    null,
+    "jd al hebt voorgesteld. dit perceel van"
+   ]
+  ],
+  "raak": [
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4415ALC",
+  "type": "Villa",
+  "town": "Alcalali",
+  "built": 303,
+  "plot": 600,
+  "getallen": [
+   [
+    600.0,
+    null,
+    "llage of alcalalí. with a total area of"
+   ],
+   [
+    600.0,
+    null,
+    "e alcalalí. con una superficie total de"
+   ],
+   [
+    600.0,
+    null,
+    "lcalalí. met een totale oppervlakte van"
+   ],
+   [
+    600.0,
+    null,
+    "lí entfernt. mit einer gesamtfläche von"
+   ],
+   [
+    600.0,
+    null,
+    "alcalalí. avec une superficie totale de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4426DEN",
+  "type": "Apartment",
+  "town": "Denia",
+  "built": 80,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "4432JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 269,
+  "plot": 4008,
+  "getallen": [
+   [
+    4008.0,
+    null,
+    "spacious villa located on an impressive"
+   ],
+   [
+    4008.0,
+    null,
+    "situada en una impresionante parcela de"
+   ],
+   [
+    4008.0,
+    null,
+    "elegen op een indrukwekkend perceel van"
+   ],
+   [
+    4008.0,
+    null,
+    "lla, die sich auf einem beeindruckenden"
+   ],
+   [
+    4008.0,
+    null,
+    "située sur un impressionnant terrain de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4446BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 193,
+  "plot": 1350,
+  "getallen": [
+   [
+    38.0,
+    null,
+    "t. a sliding glass door leads to a cozy"
+   ],
+   [
+    38.0,
+    null,
+    "cristal conduce a un acogedor patio de"
+   ],
+   [
+    38.0,
+    null,
+    "deur leidt naar een gezellige patio van"
+   ],
+   [
+    38.0,
+    "terras",
+    "asschiebetür führt zu einer gemütlichen"
+   ],
+   [
+    38.0,
+    null,
+    "en verre mène à un patio confortable de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4457ALT",
+  "type": "Land",
+  "town": "Altea",
+  "built": null,
+  "plot": 985,
+  "getallen": [
+   [
+    818.0,
+    null,
+    "ther. the plots have areas ranging from"
+   ],
+   [
+    2475.0,
+    null,
+    "plots have areas ranging from 818 m2 to"
+   ],
+   [
+    6078.0,
+    null,
+    "e total area of the 5 plots together is"
+   ],
+   [
+    818.0,
+    null,
+    "rcelas tienen superficies que van desde"
+   ],
+   [
+    2475.0,
+    null,
+    "enen superficies que van desde 818 m2 a"
+   ],
+   [
+    6078.0,
+    null,
+    "ie total de las 5 parcelas juntas es de"
+   ],
+   [
+    818.0,
+    null,
+    "hebben een oppervlakte die varieert van"
+   ],
+   [
+    2475.0,
+    null,
+    "oppervlakte die varieert van 818 m2 tot"
+   ],
+   [
+    6078.0,
+    null,
+    "ervlakte van de 5 grondstukken samen is"
+   ],
+   [
+    818.0,
+    null,
+    "rden. die grundstücke haben flächen von"
+   ],
+   [
+    2475.0,
+    null,
+    "rundstücke haben flächen von 818 m2 bis"
+   ],
+   [
+    6078.0,
+    null,
+    "gesamtfläche der 5 grundstücke beträgt"
+   ]
+  ],
+  "raak": [
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4458BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 189,
+  "plot": 775,
+  "getallen": [
+   [
+    775.0,
+    null,
+    "ns on the costa blanca. the plot covers"
+   ],
+   [
+    189.0,
+    "terras",
+    "two floors, with a total living area of"
+   ],
+   [
+    112.0,
+    "terras",
+    "rea of 189 m² and a generous terrace of"
+   ],
+   [
+    775.0,
+    null,
+    "os de la costa blanca. la parcela tiene"
+   ],
+   [
+    189.0,
+    "terras",
+    ", con una superficie habitable total de"
+   ],
+   [
+    112.0,
+    "terras",
+    "tal de 189 m² y una generosa terraza de"
+   ],
+   [
+    775.0,
+    null,
+    "an de costa blanca. het perceel beslaat"
+   ],
+   [
+    189.0,
+    "terras",
+    "gen, met een totale woonoppervlakte van"
+   ],
+   [
+    112.0,
+    "terras",
+    "kte van 189 m² en een royaal terras van"
+   ],
+   [
+    775.0,
+    null,
+    "an der costa blanca. das grundstück ist"
+   ],
+   [
+    189.0,
+    "nuttig",
+    "etagen, mit einer gesamtwohnfläche von"
+   ],
+   [
+    112.0,
+    "terras",
+    "9 m² und einer großzügigen terrasse von"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4461CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 254,
+  "plot": 1005,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "4466BEN",
+  "type": "Town house",
+  "town": "Benissa",
+  "built": 328,
+  "plot": 125,
+  "getallen": [
+   [
+    328.0,
+    "bebouwd",
+    "nter of benissa and has a built area of"
+   ],
+   [
+    328.0,
+    "bebouwd",
+    "sa y tiene una superficie construida de"
+   ],
+   [
+    328.0,
+    "bebouwd",
+    "a en heeft een bebouwde oppervlakte van"
+   ],
+   [
+    328.0,
+    "bebouwd",
+    "benissa und hat eine bebaute fläche von"
+   ],
+   [
+    328.0,
+    null,
+    "benissa et a une surface construite de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "4473CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 209,
+  "plot": 1000,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "4480JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 337,
+  "plot": 1646,
+  "getallen": [
+   [
+    337.72,
+    null,
+    "the villa has a total built-up area of"
+   ],
+   [
+    130.0,
+    "kelder",
+    "with bathtub.\nthe basement comprises a"
+   ],
+   [
+    337.72,
+    "bebouwd",
+    "iene una superficie total construida de"
+   ],
+   [
+    130.0,
+    "kelder",
+    "bañera.\r\nen el sótano hay un garaje de"
+   ],
+   [
+    337.72,
+    "bebouwd",
+    "eft een totale bebouwde oppervlakte van"
+   ],
+   [
+    130.0,
+    "kelder",
+    "erverdieping bestaat uit een garage van"
+   ],
+   [
+    337.72,
+    null,
+    "villa hat eine bebaute gesamtfläche von"
+   ],
+   [
+    130.0,
+    "garage",
+    "e.\r\nim untergeschoss befinden sich eine"
+   ],
+   [
+    337.72,
+    null,
+    "ó.\r\nla villa a une superficie totale de"
+   ],
+   [
+    130.0,
+    "garage",
+    "ire.\r\nle sous-sol comprend un garage de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4490JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 292,
+  "plot": 1500,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4503POL",
+  "type": "Villa",
+  "town": "Polop",
+  "built": 293,
+  "plot": 434,
+  "getallen": [
+   [
+    434.0,
+    null,
+    "situated on a quiet private plot of"
+   ],
+   [
+    293.0,
+    "nuttig",
+    "lot of 434 m², this modern villa offers"
+   ],
+   [
+    434.0,
+    null,
+    "ada en una tranquila parcela privada de"
+   ],
+   [
+    293.0,
+    "nuttig",
+    "da de 434 m², esta moderna villa ofrece"
+   ],
+   [
+    434.0,
+    null,
+    "lla ligt op een rustig privéperceel van"
+   ],
+   [
+    293.0,
+    null,
+    "rustig privéperceel van 434 m² en biedt"
+   ],
+   [
+    434.0,
+    null,
+    "auf einem ruhigen privatgrundstück von"
+   ],
+   [
+    293.0,
+    "nuttig",
+    "m² gelegen, bietet diese moderne villa"
+   ],
+   [
+    434.0,
+    null,
+    "située sur un terrain privé et calme de"
+   ],
+   [
+    293.0,
+    "nuttig",
+    "me de 434 m², cette villa moderne offre"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4512BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 359,
+  "plot": 25208,
+  "getallen": [
+   [
+    359.0,
+    "nuttig",
+    "e.\n\nthe villa has a total built area of"
+   ],
+   [
+    250.0,
+    "nuttig",
+    "ilt area of 359 m2 and a usable area of"
+   ],
+   [
+    5000.0,
+    null,
+    "ating system. of the entire plot, about"
+   ],
+   [
+    359.0,
+    "nuttig",
+    "iene una superficie total construida de"
+   ],
+   [
+    250.0,
+    "nuttig",
+    "uida de 359 m2 y una superficie útil de"
+   ],
+   [
+    5000.0,
+    null,
+    "e calefacción. de toda la parcela, unos"
+   ],
+   [
+    359.0,
+    "bebouwd",
+    "eft een totale bebouwde oppervlakte van"
+   ],
+   [
+    250.0,
+    null,
+    "n 359 m2 en een gebruiksoppervlakte van"
+   ],
+   [
+    5000.0,
+    null,
+    "van het volledige grondstuk is ongeveer"
+   ],
+   [
+    359.0,
+    null,
+    "villa hat eine bebaute gesamtfläche von"
+   ],
+   [
+    250.0,
+    null,
+    "äche von 359 m2 und eine nutzfläche von"
+   ],
+   [
+    5000.0,
+    null,
+    "lage. vom gesamten grundstück sind etwa"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4516TEU",
+  "type": "Villa",
+  "town": "Teulada",
+  "built": 457,
+  "plot": 10920,
+  "getallen": [
+   [
+    10920.0,
+    null,
+    "-style villa will be built on a plot of"
+   ],
+   [
+    10920.0,
+    null,
+    "o finca se construirá en una parcela de"
+   ],
+   [
+    10920.0,
+    null,
+    "zal gebouwd worden op een grondstuk van"
+   ],
+   [
+    10920.0,
+    null,
+    "inca-stil wird auf einem grundstück von"
+   ],
+   [
+    920.0,
+    null,
+    "ca sera construite sur un terrain de 10"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4517BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 458,
+  "plot": 1500,
+  "getallen": [
+   [
+    1500.0,
+    null,
+    "build villa will be built on a spacious"
+   ],
+   [
+    459.0,
+    "bebouwd",
+    "a.\n\nthe villa has a total built area of"
+   ],
+   [
+    1500.0,
+    null,
+    "se construirá en una amplia parcela de"
+   ],
+   [
+    459.0,
+    "bebouwd",
+    "iene una superficie total construida de"
+   ],
+   [
+    1500.0,
+    null,
+    "gebouwd worden op een ruim perceel van"
+   ],
+   [
+    459.0,
+    "bebouwd",
+    "eft een totale bebouwde oppervlakte van"
+   ],
+   [
+    1500.0,
+    null,
+    "se neue villa wird auf einem geräumigen"
+   ],
+   [
+    459.0,
+    null,
+    "t.\n\ndie villa hat eine gesamtfläche von"
+   ],
+   [
+    1500.0,
+    null,
+    "a construite sur un terrain spacieux de"
+   ],
+   [
+    459.0,
+    null,
+    "illa a une surface construite totale de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4529JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 3885,
+  "getallen": [
+   [
+    1378.0,
+    null,
+    "hased separately. plot 1 has an area of"
+   ],
+   [
+    2507.0,
+    null,
+    "or 515,000 euros. plot 2 has an area of"
+   ],
+   [
+    1378.0,
+    null,
+    "o. la parcela 1 tiene una superficie de"
+   ],
+   [
+    2507.0,
+    null,
+    "s. la parcela 2 tiene una superficie de"
+   ],
+   [
+    1378.0,
+    null,
+    ". grondstuk 1 heeft een oppervlakte van"
+   ],
+   [
+    2507.0,
+    null,
+    ". grondstuk 2 heeft een oppervlakte van"
+   ],
+   [
+    1378.0,
+    null,
+    "werden. parzelle 1 hat eine fläche von"
+   ],
+   [
+    2507.0,
+    null,
+    "werden. parzelle 2 hat eine fläche von"
+   ],
+   [
+    1378.0,
+    null,
+    "ment. la parcelle 1 a une superficie de"
+   ],
+   [
+    2507.0,
+    null,
+    "uros. la parcelle 2 a une superficie de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4532JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1378,
+  "getallen": [
+   [
+    2507.0,
+    null,
+    "tunning sea views. the adjacent plot of"
+   ],
+   [
+    2507.0,
+    null,
+    "vistas al mar. la parcela contigua, de"
+   ],
+   [
+    2507.0,
+    null,
+    "op zee. het aangrenzende grondstuk van"
+   ],
+   [
+    2507.0,
+    null,
+    "enzende grundstück mit einer fläche von"
+   ],
+   [
+    507.0,
+    null,
+    "ue sur la mer. le terrain adjacent de 2"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4534ALC",
+  "type": "Villa",
+  "town": "Alcalali",
+  "built": 198,
+  "plot": 348,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4537ALC",
+  "type": "Villa",
+  "town": "Alcalali",
+  "built": 311,
+  "plot": 696,
+  "getallen": [
+   [
+    26.0,
+    "terras",
+    "er floor also has a spacious terrace of"
+   ],
+   [
+    26.0,
+    "terras",
+    "ambién cuenta con una amplia terraza de"
+   ],
+   [
+    26.0,
+    "terras",
+    "g beschikt ook over een ruim terras van"
+   ],
+   [
+    26.0,
+    "terras",
+    "ßerdem über eine geräumige terrasse von"
+   ],
+   [
+    26.0,
+    "terras",
+    "e également d’une terrasse spacieuse de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4538ALC",
+  "type": "Villa",
+  "town": "Alcalali",
+  "built": 212,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4544JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": 152,
+  "plot": 2600,
+  "getallen": [
+   [
+    2600.0,
+    null,
+    "interesting for investors - plot of"
+   ],
+   [
+    1300.0,
+    null,
+    "to two separate building plots of about"
+   ],
+   [
+    152.0,
+    null,
+    "le-storey villa with a built-up area of"
+   ],
+   [
+    2600.0,
+    null,
+    "nteresante para inversores - parcela de"
+   ],
+   [
+    1300.0,
+    null,
+    "elas edificables independientes de unos"
+   ],
+   [
+    152.0,
+    "bebouwd",
+    "planta con una superficie construida de"
+   ],
+   [
+    2600.0,
+    null,
+    "essant voor investeerders – perceel van"
+   ],
+   [
+    1300.0,
+    null,
+    "nderlijke bouwpercelen van elk ongeveer"
+   ],
+   [
+    152.0,
+    "bebouwd",
+    "villa met een bebouwde oppervlakte van"
+   ],
+   [
+    2600.0,
+    null,
+    "ressant für investoren - grundstück von"
+   ],
+   [
+    1300.0,
+    null,
+    "separate baugrundstücke von jeweils ca."
+   ],
+   [
+    152.0,
+    null,
+    "ige villa mit einer bebauten fläche von"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "4552BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 786,
+  "plot": 1530,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4553CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 225,
+  "plot": 742,
+  "getallen": [
+   [
+    742.0,
+    null,
+    "this villa is located on a flat plot of"
+   ],
+   [
+    139.61,
+    "bebouwd",
+    "nd outdoors. with a total built area of"
+   ],
+   [
+    32.37,
+    "terras",
+    "round. it includes a covered\nveranda of"
+   ],
+   [
+    52.28,
+    "terras",
+    "veranda of 32.37 m2, an open terrace of"
+   ],
+   [
+    29.5,
+    null,
+    "52.28 m2 and a private swimming pool of"
+   ],
+   [
+    742.0,
+    null,
+    "la está situada en una parcela llana de"
+   ],
+   [
+    139.61,
+    "bebouwd",
+    "con una superficie construida total de"
+   ],
+   [
+    32.37,
+    "terras",
+    "l año. incluye una terraza cubierta\r\nde"
+   ],
+   [
+    52.28,
+    "terras",
+    "ta\r\nde 32,37 m2, una terraza abierta de"
+   ],
+   [
+    29.5,
+    null,
+    "ta de 52,28 m2 y una piscina privada de"
+   ],
+   [
+    742.0,
+    null,
+    "illa is gelegen op een vlak perceel van"
+   ],
+   [
+    139.61,
+    "bebouwd",
+    "met een totale bebouwde oppervlakte van"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "bebouwd",
+   "nuttig",
+   "inclusief",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4554BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 532,
+  "plot": null,
+  "getallen": [
+   [
+    1000.0,
+    null,
+    "sential\nservices.\nset on a plot of over"
+   ],
+   [
+    122.38,
+    null,
+    "lity.\nconstructed areas\n– ground floor:"
+   ],
+   [
+    101.5,
+    "terras",
+    "ground floor: 122.38 m2\n– upper floor:"
+   ],
+   [
+    33.09,
+    "terras",
+    "m2\n– upper floor: 101.50 m2\n– porches:"
+   ],
+   [
+    11.3,
+    "terras",
+    "0 m2\n– porches: 33.09 m2\n– pergola bbq:"
+   ],
+   [
+    93.15,
+    "terras",
+    "m2\n– pergola bbq: 11.30 m2\n– terraces:"
+   ],
+   [
+    56.65,
+    "terras",
+    "ola bbq: 11.30 m2\n– terraces: 93.15 m2 ("
+   ],
+   [
+    36.5,
+    "terras",
+    ".30 m2\n– terraces: 93.15 m2 (56.65 m2 +"
+   ],
+   [
+    39.6,
+    null,
+    "(56.65 m2 + 36.50 m2)\n– swimming pool:"
+   ],
+   [
+    115.31,
+    null,
+    ".60 m2\n– exterior paving and sidewalks:"
+   ],
+   [
+    17.45,
+    null,
+    ".31 m2\n– technical rooms (underground):"
+   ],
+   [
+    1000.0,
+    null,
+    "es\r\n.\r\nsituada en una parcela de más de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "bebouwd",
+   "inclusief",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4570CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 273,
+  "plot": 1179,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4571CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 233,
+  "plot": 800,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "4573BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": null,
+  "plot": 1021,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4587BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 520,
+  "plot": 1142,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4594CAL",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 471,
+  "plot": 1015,
+  "getallen": [
+   [
+    180.0,
+    "terras",
+    "ace.\n\nthe villa additionally features a"
+   ],
+   [
+    212.0,
+    "terras",
+    "stallation for heating. the surrounding"
+   ],
+   [
+    180.0,
+    "kelder",
+    "a villa también cuenta con un sótano de"
+   ],
+   [
+    212.0,
+    "terras",
+    "alación para calefacción. la terraza de"
+   ],
+   [
+    180.0,
+    "kelder",
+    "beschikt bovendien over een kelder van"
+   ],
+   [
+    212.0,
+    "terras",
+    "r verwarming. het omringende terras van"
+   ],
+   [
+    180.0,
+    null,
+    "se.\r\n\r\nzudem verfügt die villa über ein"
+   ],
+   [
+    212.0,
+    "terras",
+    "für eine heizungsanlage. die umlaufende"
+   ],
+   [
+    180.0,
+    null,
+    "illa dispose également d’un sous-sol de"
+   ],
+   [
+    212.0,
+    "terras",
+    "chauffage. la terrasse environnante de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "4597CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 529,
+  "plot": 2210,
+  "getallen": [
+   [
+    2210.0,
+    null,
+    "arkable villa, built in 2006 on a large"
+   ],
+   [
+    2210.0,
+    null,
+    "ida en 2006 sobre una amplia parcela de"
+   ],
+   [
+    2210.0,
+    null,
+    "ebouwd in 2006 op een groot perceel van"
+   ],
+   [
+    2210.0,
+    null,
+    "eeindruckende villa, die 2006 auf einem"
+   ],
+   [
+    210.0,
+    null,
+    "ruite en 2006 sur un grand terrain de 2"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "inclusief",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4599ALC",
+  "type": "Villa",
+  "town": "Alcalali",
+  "built": 419,
+  "plot": 1021,
+  "getallen": [
+   [
+    211.0,
+    "bebouwd",
+    "ermission. with a planned built area of"
+   ],
+   [
+    1021.0,
+    "bebouwd",
+    "lt area of 211 m2 on a generous plot of"
+   ],
+   [
+    211.0,
+    "bebouwd",
+    "n una superficie construida prevista de"
+   ],
+   [
+    1021.0,
+    null,
+    "ta de 211 m2 en una generosa parcela de"
+   ],
+   [
+    211.0,
+    "bebouwd",
+    "t een geplande bebouwde oppervlakte van"
+   ],
+   [
+    1021.0,
+    null,
+    "te van 211 m2 op een royaal perceel van"
+   ],
+   [
+    211.0,
+    null,
+    "mit einer geplanten bebauten fläche von"
+   ],
+   [
+    1021.0,
+    null,
+    "m2 auf einem großzügigen grundstück von"
+   ],
+   [
+    211.0,
+    null,
+    ". avec une surface construite prévue de"
+   ],
+   [
+    21.0,
+    null,
+    "de 211 m2 sur un terrain spacieux de 1"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4601BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 230,
+  "plot": 800,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4603JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1008,
+  "getallen": [
+   [
+    200.0,
+    "kelder",
+    "ssibility of adding a basement of up to"
+   ],
+   [
+    200.0,
+    "kelder",
+    "bilidad de construir un sótano de hasta"
+   ],
+   [
+    200.0,
+    "kelder",
+    "om als exta nog een kelder van maximaal"
+   ],
+   [
+    200.0,
+    null,
+    "it, zusätzlich einen keller von maximal"
+   ],
+   [
+    200.0,
+    null,
+    "s une cave d'une superficie maximale de"
+   ]
+  ],
+  "raak": [
+   "kelder"
+  ]
+ },
+ {
+  "ref": "4607JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1298,
+  "getallen": [
+   [
+    1298.0,
+    null,
+    ""
+   ],
+   [
+    1298.0,
+    null,
+    "ocation on the costa blanca. parcela de"
+   ],
+   [
+    1298.0,
+    null,
+    "icada en la costa blanca. grondstuk van"
+   ],
+   [
+    1298.0,
+    null,
+    "tie aan de costa blanca. grundstück von"
+   ],
+   [
+    1298.0,
+    null,
+    "an der costa blanca suchen. terrain de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4608JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1042,
+  "getallen": [
+   [
+    1042.0,
+    null,
+    ""
+   ],
+   [
+    1042.0,
+    null,
+    "ocation on the costa blanca. parcela de"
+   ],
+   [
+    1042.0,
+    null,
+    "icada en la costa blanca. grondstuk van"
+   ],
+   [
+    1042.0,
+    null,
+    "tie aan de costa blanca. grundstück von"
+   ],
+   [
+    1042.0,
+    null,
+    "ort an der costa blanca suchen. terrain"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "4613BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 656,
+  "plot": 800,
+  "getallen": [
+   [
+    800.0,
+    null,
+    "bouwvilla is gelegen op een perceel van"
+   ],
+   [
+    716.0,
+    "bebouwd",
+    "met een totale bebouwde oppervlakte van"
+   ],
+   [
+    105.97,
+    "kelder",
+    "en comfort.\r\n\r\nde kelderverdieping van"
+   ],
+   [
+    137.93,
+    null,
+    "e begane grond, met een oppervlakte van"
+   ],
+   [
+    59.4,
+    "terras",
+    "neterrassen en een infinity zwembad van"
+   ],
+   [
+    70.19,
+    null,
+    "at in de zee.\r\n\r\nde bovenverdieping van"
+   ],
+   [
+    25.02,
+    "terras",
+    "biedt ook toegang tot een solarium van"
+   ],
+   [
+    800.0,
+    null,
+    "befindet sich auf einem grundstück von"
+   ],
+   [
+    716.0,
+    null,
+    "mit einer gesamten bebauten fläche von"
+   ],
+   [
+    105.97,
+    null,
+    "n und komfort.\r\n\r\ndas untergeschoss mit"
+   ],
+   [
+    137.93,
+    null,
+    "n gewährleisten.\r\n\r\ndas erdgeschoss mit"
+   ],
+   [
+    59.4,
+    "terras",
+    "enterrassen und einem infinity-pool von"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4618JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 374,
+  "plot": 1000,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "4623JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1018,
+  "getallen": [],
+  "raak": [
+   "kelder"
+  ]
+ },
+ {
+  "ref": "4624JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1000,
+  "getallen": [],
+  "raak": [
+   "kelder"
+  ]
+ },
+ {
+  "ref": "4628JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 200,
+  "plot": 7276,
+  "getallen": [
+   [
+    2210.0,
+    null,
+    "nca is located on a flat rustic plot of"
+   ],
+   [
+    2541.0,
+    null,
+    "ncludes three adjoining rustic plots of"
+   ],
+   [
+    639.0,
+    null,
+    "ree adjoining rustic plots of 2,541 m2,"
+   ],
+   [
+    1963.0,
+    null,
+    "ng rustic plots of 2,541 m2, 639 m2 and"
+   ],
+   [
+    200.0,
+    "bebouwd",
+    "the current built area is approximately"
+   ],
+   [
+    2210.0,
+    null,
+    "cuentra en una parcela rústica llana de"
+   ],
+   [
+    2541.0,
+    null,
+    "e tres parcelas rústicas colindantes de"
+   ],
+   [
+    639.0,
+    null,
+    "celas rústicas colindantes de 2.541 m2,"
+   ],
+   [
+    1963.0,
+    null,
+    "ticas colindantes de 2.541 m2, 639 m2 y"
+   ],
+   [
+    200.0,
+    "bebouwd",
+    "ruida es actualmente de aproximadamente"
+   ],
+   [
+    2210.0,
+    null,
+    "legen op een vlak rustiek grondstuk van"
+   ],
+   [
+    2541.0,
+    null,
+    "e rustieke percelen van respectievelijk"
+   ]
+  ],
+  "raak": [
+   "garage",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "4642JAV",
+  "type": "Apartment",
+  "town": "Javea",
+  "built": 60,
+  "plot": null,
+  "getallen": [
+   [
+    60.0,
+    "bebouwd",
+    "the property has a total built area of"
+   ],
+   [
+    55.0,
+    "bebouwd",
+    "operty has a total built area of 60 m2 ("
+   ],
+   [
+    60.0,
+    "nuttig",
+    "cuenta con una superficie construida de"
+   ],
+   [
+    55.0,
+    "nuttig",
+    "con una superficie construida de 60 m2 ("
+   ],
+   [
+    60.0,
+    "bebouwd",
+    "eft een totale bebouwde oppervlakte van"
+   ],
+   [
+    55.0,
+    "bebouwd",
+    "totale bebouwde oppervlakte van 60 m2 ("
+   ],
+   [
+    60.0,
+    "bebouwd",
+    "ie verfügt über eine bebaute fläche von"
+   ],
+   [
+    55.0,
+    "bebouwd",
+    "ügt über eine bebaute fläche von 60 m2 ("
+   ],
+   [
+    60.0,
+    "nuttig",
+    "ien dispose d’une surface construite de"
+   ],
+   [
+    55.0,
+    "nuttig",
+    "pose d’une surface construite de 60 m2 ("
+   ]
+  ],
+  "raak": [
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "inclusief",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4643JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 150,
+  "plot": 1000,
+  "getallen": [
+   [
+    150.0,
+    "bebouwd",
+    "gned villa offers a total built area of"
+   ],
+   [
+    1000.0,
+    null,
+    "ea of 150 m2 on a plot of approximately"
+   ],
+   [
+    150.0,
+    "bebouwd",
+    "ada ofrece una superficie construida de"
+   ],
+   [
+    1000.0,
+    null,
+    "m2 sobre una parcela de aproximadamente"
+   ],
+   [
+    150.0,
+    "bebouwd",
+    "lla een totale bebouwde oppervlakte van"
+   ],
+   [
+    1000.0,
+    null,
+    "van 150 m2 op een perceel van ongeveer"
+   ],
+   [
+    150.0,
+    "bebouwd",
+    "ávea und bietet eine bebaute fläche von"
+   ],
+   [
+    1000.0,
+    null,
+    "von 150 m2 auf einem grundstück von ca."
+   ],
+   [
+    150.0,
+    null,
+    "conçue offre une surface construite de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "bebouwd",
+   "nuttig",
+   "inclusief",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4644BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 202,
+  "plot": 1715,
+  "getallen": [
+   [
+    1715.0,
+    null,
+    "ly spacious and completely flat plot of"
+   ],
+   [
+    900.0,
+    null,
+    "additional garden area of approximately"
+   ],
+   [
+    205.0,
+    "bebouwd",
+    "garden.\n\nthe villa has a built area of"
+   ],
+   [
+    1715.0,
+    null,
+    "almente amplia y completamente llana de"
+   ],
+   [
+    900.0,
+    null,
+    "ajardinada adicional de aproximadamente"
+   ],
+   [
+    205.0,
+    "bebouwd",
+    "cuenta con una superficie construida de"
+   ],
+   [
+    1715.0,
+    null,
+    "rlijk ruim en volledig vlak perceel van"
+   ],
+   [
+    900.0,
+    null,
+    "extra tuinzone achter de villa van ca."
+   ],
+   [
+    205.0,
+    "bebouwd",
+    "illa heeft een bebouwde oppervlakte van"
+   ],
+   [
+    1715.0,
+    null,
+    "und vollständig flachen grundstück von"
+   ],
+   [
+    900.0,
+    null,
+    "gartenbereich hinter der villa von ca."
+   ],
+   [
+    205.0,
+    "bebouwd",
+    "la verfügt über eine bebaute fläche von"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4649JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 3737,
+  "getallen": [
+   [
+    3737.0,
+    null,
+    "a of mar azul, this exceptional plot of"
+   ],
+   [
+    747.0,
+    null,
+    "tential buildable area of approximately"
+   ],
+   [
+    1100.0,
+    null,
+    "loors and a maximum footprint exceeding"
+   ],
+   [
+    3737.0,
+    null,
+    "coast and main access roads.\nplot size:"
+   ],
+   [
+    747.0,
+    null,
+    "building capacity: 0.20 m2/m2 (approx."
+   ],
+   [
+    3737.0,
+    null,
+    "n mar azul, esta excepcional parcela de"
+   ],
+   [
+    747.0,
+    null,
+    "con una edificabilidad aproximada de"
+   ],
+   [
+    1100.0,
+    null,
+    "antas y una ocupación máxima superior a"
+   ],
+   [
+    3737.0,
+    null,
+    "vías de acceso.\r\nsuperficie de parcela:"
+   ],
+   [
+    747.0,
+    null,
+    "do.\r\nedificabilidad: 0,20 m2/m2 (aprox."
+   ],
+   [
+    3737.0,
+    null,
+    "ndt zich dit uitzonderlijke perceel van"
+   ],
+   [
+    747.0,
+    null,
+    "elijke bebouwbare oppervlakte van circa"
+   ]
+  ],
+  "raak": [
+   "garage",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4650JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 255,
+  "plot": 1037,
+  "getallen": [
+   [
+    1000.0,
+    null,
+    "is situated on a plot of approximately"
+   ],
+   [
+    1000.0,
+    null,
+    "da sobre una parcela de aproximadamente"
+   ],
+   [
+    1000.0,
+    null,
+    "evindt zich op een perceel van ongeveer"
+   ],
+   [
+    1000.0,
+    null,
+    "indet sich auf einem grundstück von ca."
+   ],
+   [
+    1000.0,
+    null,
+    "illa se trouve sur un terrain d’environ"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "4652BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 502,
+  "plot": 1017,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "4653ALT",
+  "type": "Apartment",
+  "town": "Altea",
+  "built": 143,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4654JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1000,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "4664ALB",
+  "type": "Villa",
+  "town": "Albir",
+  "built": 169,
+  "plot": 542,
+  "getallen": [
+   [
+    542.0,
+    null,
+    "cation in the heart of albir, on a flat"
+   ],
+   [
+    169.0,
+    "bebouwd",
+    "e.\n\nthe property offers a built area of"
+   ],
+   [
+    542.0,
+    null,
+    "ón de albir, sobre una parcela llana de"
+   ],
+   [
+    169.0,
+    "bebouwd",
+    "cuenta con una superficie construida de"
+   ],
+   [
+    542.0,
+    null,
+    "hart van albir, op een vlak perceel van"
+   ],
+   [
+    169.0,
+    "bebouwd",
+    "chikt over een bebouwde oppervlakte van"
+   ],
+   [
+    542.0,
+    null,
+    "n albir auf einem ebenen grundstück von"
+   ],
+   [
+    169.0,
+    "nuttig",
+    "obilie verfügt über eine wohnfläche von"
+   ],
+   [
+    542.0,
+    null,
+    "au cœur d'albir, sur un terrain plat de"
+   ],
+   [
+    169.0,
+    null,
+    "opriété offre une surface construite de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "berging",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4668ALT",
+  "type": "Land",
+  "town": "Altea",
+  "built": null,
+  "plot": 2120,
+  "getallen": [
+   [
+    2120.0,
+    null,
+    "n near altea\n\ndiscover this magnificent"
+   ],
+   [
+    442.4,
+    null,
+    "plot offers a maximum buildable area of"
+   ],
+   [
+    395.0,
+    null,
+    ".40 m2, a maximum building footprint of"
+   ],
+   [
+    2120.0,
+    null,
+    "gnífica parcela urbana independiente de"
+   ],
+   [
+    442.4,
+    null,
+    "la permite una edificabilidad máxima de"
+   ],
+   [
+    395.0,
+    null,
+    "a de 442,40 m2, una ocupación máxima de"
+   ],
+   [
+    2120.0,
+    null,
+    "prachtige, vrijstaande bouwperceel van"
+   ],
+   [
+    442.4,
+    null,
+    "een maximale bebouwbare oppervlakte van"
+   ],
+   [
+    395.0,
+    null,
+    "40 m², een maximale bebouwingsgraad van"
+   ],
+   [
+    2120.0,
+    null,
+    "ende baugrundstück mit einer fläche von"
+   ],
+   [
+    442.4,
+    null,
+    "etet eine maximale bebaubare fläche von"
+   ],
+   [
+    395.0,
+    null,
+    ", eine maximale bebaute grundfläche von"
+   ]
+  ],
+  "raak": [
+   "kelder"
+  ]
+ },
+ {
+  "ref": "4671MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 557,
+  "plot": 1274,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4676JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1570,
+  "getallen": [
+   [
+    1570.0,
+    null,
+    "ative procedures? this generous plot of"
+   ],
+   [
+    310.0,
+    null,
+    "ses an impressive and spacious villa of"
+   ],
+   [
+    1570.0,
+    null,
+    "inistrativos? esta espaciosa parcela de"
+   ],
+   [
+    310.0,
+    null,
+    "una impresionante y espaciosa villa de"
+   ],
+   [
+    1570.0,
+    null,
+    "ieve procedures? dit royale perceel van"
+   ],
+   [
+    310.0,
+    null,
+    "t een indrukwekkende en ruime villa van"
+   ],
+   [
+    1570.0,
+    null,
+    "läufe? dieses großzügige grundstück von"
+   ],
+   [
+    310.0,
+    null,
+    "eindrucksvolle und geräumige villa von"
+   ],
+   [
+    1570.0,
+    null,
+    "s et complexes ? ce généreux terrain de"
+   ],
+   [
+    310.0,
+    null,
+    "e impressionnante et spacieuse villa de"
+   ]
+  ],
+  "raak": [
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "4679JAV",
+  "type": "",
+  "town": "Javea",
+  "built": 136,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "4681TEU",
+  "type": "Apartment",
+  "town": "Teulada",
+  "built": 119,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "6054BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 464,
+  "plot": 1131,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "6167BEN",
+  "type": "Land",
+  "town": "Benissa",
+  "built": null,
+  "plot": 1565,
+  "getallen": [
+   [
+    1565.0,
+    null,
+    "this large building plot of"
+   ],
+   [
+    400.0,
+    null,
+    "uilding permit for a villa of more than"
+   ],
+   [
+    1565.0,
+    null,
+    "equest. esta gran parcela edificable de"
+   ],
+   [
+    400.0,
+    null,
+    "miso para construir un chalet de más de"
+   ],
+   [
+    1565.0,
+    null,
+    "n a petición. dit grote bouwperceel van"
+   ],
+   [
+    400.0,
+    null,
+    "wvergunning voor een villa van meer dan"
+   ],
+   [
+    1565.0,
+    null,
+    "amvraag. dieses große baugrundstück von"
+   ],
+   [
+    400.0,
+    null,
+    "baugenehmigung für eine villa von über"
+   ],
+   [
+    1565.0,
+    null,
+    "rage. ce grand terrain constructible de"
+   ],
+   [
+    400.0,
+    null,
+    "de construire pour une villa de plus de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "6197BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 392,
+  "plot": 2095,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "6232BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 832,
+  "plot": 1087,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "6294JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 319,
+  "plot": 1003,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "6295JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 422,
+  "plot": 1000,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "6303JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 739,
+  "plot": 908,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "6369ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 285,
+  "plot": 823,
+  "getallen": [
+   [
+    330.53,
+    null,
+    "the villa will have a built-up area of"
+   ],
+   [
+    823.0,
+    null,
+    "mpre ha imaginado.  \r\n\r\nesta parcela de"
+   ],
+   [
+    60.0,
+    "garage",
+    "orios, 5 baños, una piscina infinita de"
+   ],
+   [
+    330.53,
+    "bebouwd",
+    "lla tendrá una superficie construida de"
+   ],
+   [
+    823.0,
+    null,
+    "al hebt voorgesteld.\r\n\r\ndit perceel van"
+   ],
+   [
+    60.0,
+    "garage",
+    "s, 5 badkamers, een overloopzwembad van"
+   ],
+   [
+    330.53,
+    "bebouwd",
+    "zal een bebouwde oppervlakte hebben van"
+   ],
+   [
+    330.53,
+    "bebouwd",
+    "die villa wird eine bebaute fläche von"
+   ],
+   [
+    330.53,
+    null,
+    "res. la villa aura une surface bâtie de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "6414CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 167,
+  "plot": 1252,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging"
+  ]
+ },
+ {
+  "ref": "6461ALC",
+  "type": "Villa",
+  "town": "Alcalali",
+  "built": 149,
+  "plot": 830,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "7010PEN",
+  "type": "Villa",
+  "town": "Penaguila",
+  "built": 1529,
+  "plot": 510000,
+  "getallen": [
+   [
+    1529.0,
+    null,
+    "old ruin have a total building area of"
+   ],
+   [
+    1529.0,
+    "bebouwd",
+    "iene una superficie total construida de"
+   ],
+   [
+    1529.0,
+    null,
+    "e hebben een totale bouwoppervlakte van"
+   ],
+   [
+    1529.0,
+    null,
+    "r alten ruine hat eine gesamtfläche von"
+   ],
+   [
+    529.0,
+    null,
+    "le ruine ont une superficie totale de 1"
+   ],
+   [
+    420.0,
+    null,
+    "e 1 529 m2 sur un terrain clôturé de 22"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "7016CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 345,
+  "plot": 867,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "7030ALF",
+  "type": "Villa",
+  "town": "Alfaz del Pi",
+  "built": 810,
+  "plot": 1094,
+  "getallen": [
+   [
+    1100.0,
+    "berging",
+    "et laundry room and a storage room. the"
+   ],
+   [
+    1100.0,
+    "berging",
+    "a mascotas y un trastero. la parcela de"
+   ],
+   [
+    1100.0,
+    null,
+    "en een stockage ruimte. het perceel van"
+   ],
+   [
+    1100.0,
+    "berging",
+    "ür haustiere und einen abstellraum. das"
+   ],
+   [
+    1100.0,
+    null,
+    "et une salle de stockage. le terrain de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "7058NUC",
+  "type": "Villa",
+  "town": "La Nucia",
+  "built": 900,
+  "plot": 32900,
+  "getallen": [
+   [
+    90.0,
+    null,
+    "d bathroom.\n\nin the grounds, there is a"
+   ],
+   [
+    900.0,
+    "bebouwd",
+    "imponente y exclusiva se extiende sobre"
+   ],
+   [
+    90.0,
+    null,
+    "o.\n\nen los terrenos, hay un edificio de"
+   ],
+   [
+    900.0,
+    null,
+    "ante en exclusieve woning zich uit over"
+   ],
+   [
+    90.0,
+    null,
+    "op het terrein staat een gebouw van"
+   ],
+   [
+    900.0,
+    "bebouwd",
+    "es imposante und exklusive anwesen über"
+   ],
+   [
+    90.0,
+    null,
+    ".\n\nauf dem grundstück befindet sich ein"
+   ],
+   [
+    900.0,
+    null,
+    "iété imposante et exclusive s'étend sur"
+   ],
+   [
+    90.0,
+    null,
+    "bains.\n\nsur le terrain, un bâtiment de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "7100JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 300,
+  "plot": 1000,
+  "getallen": [
+   [
+    1000.0,
+    null,
+    "ibiza-style villa is set on a generous"
+   ],
+   [
+    300.0,
+    "bebouwd",
+    "on a generous 1,000 m2 plot and offers"
+   ],
+   [
+    80.0,
+    "terras",
+    "outside, the property offers a spacious"
+   ],
+   [
+    1000.0,
+    null,
+    "se sitúa sobre una generosa parcela de"
+   ],
+   [
+    300.0,
+    "bebouwd",
+    "a generosa parcela de 1.000 m² y ofrece"
+   ],
+   [
+    80.0,
+    "terras",
+    "propiedad ofrece una amplia terraza de"
+   ],
+   [
+    1000.0,
+    null,
+    "ch auf einem großzügigen grundstück von"
+   ],
+   [
+    300.0,
+    "bebouwd",
+    "igen grundstück von 1.000 m² und bietet"
+   ],
+   [
+    80.0,
+    "terras",
+    "immobilie eine großzügige terrasse von"
+   ],
+   [
+    1000.0,
+    null,
+    "st implantée sur un terrain généreux de"
+   ],
+   [
+    300.0,
+    null,
+    "n terrain généreux de 1.000 m² et offre"
+   ],
+   [
+    80.0,
+    "terras",
+    "opriété dispose d’une vaste terrasse de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "7101JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 300,
+  "plot": 1000,
+  "getallen": [
+   [
+    1000.0,
+    null,
+    "diterranean elegance, set on a generous"
+   ],
+   [
+    300.0,
+    "bebouwd",
+    "nerous 1,000 m2 plot with approximately"
+   ],
+   [
+    80.0,
+    "terras",
+    "ce the mediterranean lifestyle, with an"
+   ],
+   [
+    1000.0,
+    null,
+    "terráneo, sobre una generosa parcela de"
+   ],
+   [
+    300.0,
+    "bebouwd",
+    "a parcela de 1.000 m2 y aproximadamente"
+   ],
+   [
+    80.0,
+    "terras",
+    "e vida mediterráneo, con una terraza de"
+   ],
+   [
+    1000.0,
+    "bebouwd",
+    "ntie, gelegen op een royaal perceel van"
+   ],
+   [
+    300.0,
+    "bebouwd",
+    "n royaal perceel van 1.000 m2 met circa"
+   ],
+   [
+    80.0,
+    "terras",
+    "terrane levensstijl, met een terras van"
+   ],
+   [
+    1000.0,
+    null,
+    "z, auf einem großzügigen grundstück von"
+   ],
+   [
+    300.0,
+    null,
+    "ügigen grundstück von 1.000 m2 mit etwa"
+   ],
+   [
+    80.0,
+    "terras",
+    "nsstil optimal widerspiegeln, mit einer"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "bebouwd",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "7105MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 292,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "7107BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 215,
+  "plot": 813,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "7114PED",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 300,
+  "plot": 1070,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "7120MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 394,
+  "plot": 800,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "7122MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 331,
+  "plot": 10916,
+  "getallen": [
+   [
+    10916.0,
+    null,
+    "te estate.\n\nset on an expansive plot of"
+   ],
+   [
+    331.76,
+    "bebouwd",
+    "efficiency.\n\nwith a total built area of"
+   ],
+   [
+    10916.0,
+    null,
+    "situada sobre una extensa parcela de"
+   ],
+   [
+    331.76,
+    "bebouwd",
+    "con una superficie construida total de"
+   ],
+   [
+    10916.0,
+    null,
+    "gelegen op een uitgestrekt perceel van"
+   ],
+   [
+    331.76,
+    "bebouwd",
+    "met een totale bebouwde oppervlakte van"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "8034DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 411,
+  "plot": 1600,
+  "getallen": [
+   [
+    250.0,
+    null,
+    "ve into. it comprises a fully furnished"
+   ],
+   [
+    30.0,
+    null,
+    "eplace, a kitchen, a shower room, and a"
+   ],
+   [
+    250.0,
+    null,
+    "casa principal totalmente amueblada de"
+   ],
+   [
+    30.0,
+    null,
+    "to de ducha y un cuarto de baño de unos"
+   ],
+   [
+    250.0,
+    null,
+    "een volledig gemeubileerd hoofdhuis van"
+   ],
+   [
+    30.0,
+    null,
+    "n, een doucheruimte en een badkamer van"
+   ],
+   [
+    250.0,
+    null,
+    "besteht aus einem komplett möblierten,"
+   ],
+   [
+    30.0,
+    null,
+    "kamin, eine küche, ein duschbad und ein"
+   ],
+   [
+    250.0,
+    null,
+    "e se compose d'une maison principale de"
+   ],
+   [
+    30.0,
+    null,
+    "ne salle d'eau et une salle de bains de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "8100SEL",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 392,
+  "plot": 1382,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "8176DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 426,
+  "plot": 5500,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "8185PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 132,
+  "plot": 300,
+  "getallen": [
+   [
+    300.0,
+    null,
+    "c tiles on the floors and walls.\non the"
+   ],
+   [
+    300.0,
+    null,
+    "en suelos y paredes.\r\nen la parcela de"
+   ],
+   [
+    300.0,
+    null,
+    "e vloeren en muren.\r\nop het perceel van"
+   ],
+   [
+    300.0,
+    null,
+    "ikfliesen an böden und wänden.\r\nauf dem"
+   ],
+   [
+    300.0,
+    null,
+    "au sol et aux murs.\r\nsur le terrain de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8191DEN",
+  "type": "Land",
+  "town": "Denia",
+  "built": null,
+  "plot": 1240,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "8209MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 310,
+  "plot": 1048,
+  "getallen": [
+   [
+    81.0,
+    "terras",
+    "an living room that connects to a large"
+   ],
+   [
+    1000.0,
+    "bebouwd",
+    "ning in every room. with a plot of over"
+   ],
+   [
+    310.0,
+    "bebouwd",
+    "ot of over 1,000 m² and a built area of"
+   ],
+   [
+    81.0,
+    "terras",
+    "ta que se conecta a una gran terraza de"
+   ],
+   [
+    1000.0,
+    null,
+    "a habitación. con una parcela de más de"
+   ],
+   [
+    310.0,
+    "bebouwd",
+    "1.000 m² y una superficie construida de"
+   ],
+   [
+    81.0,
+    "terras",
+    "er die aansluit op een groot terras van"
+   ],
+   [
+    1000.0,
+    "bebouwd",
+    "lke kamer. met een perceel van meer dan"
+   ],
+   [
+    310.0,
+    "bebouwd",
+    ".000 m² en een bebouwde oppervlakte van"
+   ],
+   [
+    81.0,
+    "terras",
+    "lles, offenes wohnzimmer, das mit einer"
+   ],
+   [
+    1000.0,
+    null,
+    "dem raum. mit einem grundstück von über"
+   ],
+   [
+    310.0,
+    null,
+    "1.000 m² und einer bebauten fläche von"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "8214PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 160,
+  "plot": 1175,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8215PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 160,
+  "plot": 1000,
+  "getallen": [
+   [
+    160.0,
+    "nuttig",
+    "that surround it. with a living area of"
+   ],
+   [
+    160.0,
+    "nuttig",
+    "rodean. con una superficie habitable de"
+   ],
+   [
+    160.0,
+    "nuttig",
+    "t omringen. met een woonoppervlakte van"
+   ],
+   [
+    160.0,
+    "nuttig",
+    "imal ausnutzt. mit einer wohnfläche von"
+   ],
+   [
+    160.0,
+    "nuttig",
+    "ntourent. avec une surface habitable de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "8219MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 395,
+  "plot": 814,
+  "getallen": [
+   [
+    395.71,
+    null,
+    "very corner. with a constructed area of"
+   ],
+   [
+    395.71,
+    "bebouwd",
+    "incón.\ncon una superficie construida de"
+   ],
+   [
+    395.71,
+    "bebouwd",
+    "poelt. met een bebouwde oppervlakte van"
+   ],
+   [
+    395.71,
+    null,
+    "chflutet.\nmit einer bebauten fläche von"
+   ],
+   [
+    395.71,
+    null,
+    "ue coin.\navec une surface construite de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "8220PEG",
+  "type": "Land",
+  "town": "Pego",
+  "built": null,
+  "plot": 1215,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "8226NUC",
+  "type": "Villa",
+  "town": "La Nucia",
+  "built": 336,
+  "plot": null,
+  "getallen": [
+   [
+    297.0,
+    null,
+    "surrounded by tranquility on a plot of"
+   ],
+   [
+    370.0,
+    null,
+    "d by tranquility on a plot of 297 m² to"
+   ],
+   [
+    125.0,
+    null,
+    "a sunset in your own quiet space. these"
+   ],
+   [
+    297.0,
+    null,
+    "deado de tranquilidad en una parcela de"
+   ],
+   [
+    370.0,
+    null,
+    "tranquilidad en una parcela de 297 m² a"
+   ],
+   [
+    125.0,
+    null,
+    "opio espacio tranquilo. estas villas de"
+   ],
+   [
+    297.0,
+    null,
+    "dt omgeven door rust op een perceel van"
+   ],
+   [
+    370.0,
+    null,
+    "door rust op een perceel van 297 m² tot"
+   ],
+   [
+    125.0,
+    null,
+    "eigen rustige ruimte. deze villa's van"
+   ],
+   [
+    297.0,
+    null,
+    "geben von ruhe auf einem grundstück von"
+   ],
+   [
+    370.0,
+    null,
+    "uhe auf einem grundstück von 297 m² bis"
+   ],
+   [
+    125.0,
+    null,
+    "in ihrem eigenen ruhigen bereich. diese"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8231FIN",
+  "type": "Villa",
+  "town": "Finestrat",
+  "built": 270,
+  "plot": 396,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8235MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 568,
+  "plot": 869,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "8243MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 1443,
+  "getallen": [
+   [
+    1400.0,
+    null,
+    "s exclusive urban plot of approximately"
+   ],
+   [
+    1400.0,
+    null,
+    "usiva parcela urbana de aproximadamente"
+   ],
+   [
+    1400.0,
+    null,
+    "lusieve stedelijke perceel van ongeveer"
+   ],
+   [
+    1400.0,
+    null,
+    "exklusive städtische grundstück von ca."
+   ],
+   [
+    400.0,
+    null,
+    "ce terrain urbain exclusif d'environ 1"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "8245CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 489,
+  "plot": 770,
+  "getallen": [
+   [
+    489.0,
+    "bebouwd",
+    "nite blue horizon.\nwith a built area of"
+   ],
+   [
+    770.0,
+    "bebouwd",
+    "ith a built area of 489 m² on a plot of"
+   ],
+   [
+    489.0,
+    "bebouwd",
+    "nito.\r\ncon una superficie construida de"
+   ],
+   [
+    770.0,
+    "bebouwd",
+    "nstruida de 489 m² sobre una parcela de"
+   ],
+   [
+    489.0,
+    "bebouwd",
+    "izon.\r\nmet een bebouwde oppervlakte van"
+   ],
+   [
+    770.0,
+    null,
+    "pervlakte van 489 m² op een perceel van"
+   ],
+   [
+    489.0,
+    null,
+    "umrahmt.\r\nmit einer bebauten fläche von"
+   ],
+   [
+    770.0,
+    null,
+    "che von 489 m² auf einem grundstück von"
+   ],
+   [
+    489.0,
+    null,
+    "infini.\r\navec une surface construite de"
+   ],
+   [
+    770.0,
+    null,
+    "construite de 489 m² sur un terrain de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "berging",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "8256ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 200,
+  "plot": 964,
+  "getallen": [
+   [
+    200.0,
+    null,
+    "discover this charming villa of"
+   ],
+   [
+    1000.0,
+    null,
+    "la of 200 m², set on a generous plot of"
+   ],
+   [
+    200.0,
+    null,
+    "ave. descubra esta encantadora villa de"
+   ],
+   [
+    1000.0,
+    null,
+    "m², ubicada en una generosa parcela de"
+   ],
+   [
+    200.0,
+    null,
+    "egiado. ontdek deze charmante villa van"
+   ],
+   [
+    1000.0,
+    null,
+    "0 m², gelegen op een royaal perceel van"
+   ],
+   [
+    200.0,
+    null,
+    "entdecken sie diese charmante villa von"
+   ],
+   [
+    1000.0,
+    null,
+    "m² auf einem großzügigen grundstück von"
+   ],
+   [
+    200.0,
+    null,
+    "ave. découvrez cette charmante villa de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "8272MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 115,
+  "plot": 836,
+  "getallen": [
+   [
+    836.0,
+    null,
+    "n the costa blanca.\nbuilt on a spacious"
+   ],
+   [
+    836.0,
+    "bebouwd",
+    "construido sobre una amplia parcela de"
+   ],
+   [
+    836.0,
+    null,
+    "villa, gebouwd op een ruim perceel van"
+   ],
+   [
+    836.0,
+    null,
+    "ckige villa steht auf einem großzügigen"
+   ],
+   [
+    836.0,
+    null,
+    "ca.\r\nconstruite sur un vaste terrain de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "8275CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 249,
+  "plot": 800,
+  "getallen": [
+   [
+    800.0,
+    "berging",
+    "and utility rooms.\nlocated on a private"
+   ],
+   [
+    52.0,
+    "terras",
+    "located on a private 800 m² plot with a"
+   ],
+   [
+    249.0,
+    "bebouwd",
+    "e costa blanca climate year-round.\nwith"
+   ],
+   [
+    115.0,
+    "bebouwd",
+    "249 m² of built area and an additional"
+   ],
+   [
+    800.0,
+    null,
+    "res.\r\nubicada en una parcela privada de"
+   ],
+   [
+    52.0,
+    "terras",
+    "arcela privada de 800 m2 con piscina de"
+   ],
+   [
+    249.0,
+    "bebouwd",
+    "ma de la costa blanca todo el año.\r\ncon"
+   ],
+   [
+    115.0,
+    "bebouwd",
+    "todo el año.\r\ncon 249 m2 construidos y"
+   ],
+   [
+    800.0,
+    null,
+    "ukens.\r\ngelegen op een privéperceel van"
+   ],
+   [
+    52.0,
+    "terras",
+    "éperceel van 800 m2 met een zwembad van"
+   ],
+   [
+    249.0,
+    "bebouwd",
+    "anca.\r\nmet een bebouwde oppervlakte van"
+   ],
+   [
+    115.0,
+    "bebouwd",
+    "wde oppervlakte van 249 m2 en een extra"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "8288VER",
+  "type": "Villa",
+  "town": "El Vergel",
+  "built": 225,
+  "plot": 415,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8290DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 370,
+  "plot": 7565,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "8293DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 179,
+  "plot": 641,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "8295PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 361,
+  "plot": 2084,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "8300",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 606,
+  "plot": 1601,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "8303MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 1280,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "8304MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 1047,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "8305MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 801,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "8306MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 811,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "8307TEL",
+  "type": "Country house",
+  "town": "Teulada",
+  "built": 328,
+  "plot": 21442,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "8312VER",
+  "type": "Land",
+  "town": "El Verger",
+  "built": null,
+  "plot": 1094,
+  "getallen": [
+   [
+    1094.0,
+    null,
+    "a"
+   ],
+   [
+    1094.0,
+    null,
+    "ta region. se ofrece un solar urbano de"
+   ],
+   [
+    1094.0,
+    null,
+    "de la marina alta. een bouwperceel van"
+   ],
+   [
+    1094.0,
+    null,
+    "agen von el vergel (alicante) steht ein"
+   ],
+   [
+    94.0,
+    null,
+    "ina alta. un terrain constructible de 1"
+   ]
+  ],
+  "raak": [
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "8316POL",
+  "type": "Villa",
+  "town": "Polop",
+  "built": 165,
+  "plot": 351,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8317FIN",
+  "type": "Villa",
+  "town": "Finestrat",
+  "built": 230,
+  "plot": 409,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8318BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 627,
+  "plot": 860,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8319MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 1002,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "8325MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 440,
+  "plot": 828,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "8327DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 216,
+  "plot": 293,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "8334ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 609,
+  "plot": 1383,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8338MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 800,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "8341MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 856,
+  "getallen": [],
+  "raak": [
+   "totaal"
+  ]
+ },
+ {
+  "ref": "8343MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 310,
+  "plot": 817,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "8343VER",
+  "type": "Villa",
+  "town": "El Vergel",
+  "built": 88,
+  "plot": 239,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8345DEN",
+  "type": "Apartment",
+  "town": "Denia",
+  "built": 102,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "8351BEN",
+  "type": "Villa",
+  "town": "Beniarbeig",
+  "built": 225,
+  "plot": 800,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "9000JAL",
+  "type": "Land",
+  "town": "Jalon",
+  "built": null,
+  "plot": 653,
+  "getallen": [],
+  "raak": [
+   "totaal"
+  ]
+ },
+ {
+  "ref": "9005MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 434,
+  "plot": 1190,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "9006BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 565,
+  "plot": 924,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "9007JAL",
+  "type": "Villa",
+  "town": "Jalon",
+  "built": 253,
+  "plot": 1549,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "9008XAR",
+  "type": "Town house",
+  "town": "La Xara",
+  "built": 216,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "9009GAT",
+  "type": "Villa",
+  "town": "Gata de Gorgos",
+  "built": 150,
+  "plot": 1862,
+  "getallen": [
+   [
+    1800.0,
+    null,
+    "ted on a generous plot of approximately"
+   ],
+   [
+    1800.0,
+    null,
+    "una generosa parcela de aproximadamente"
+   ],
+   [
+    1800.0,
+    null,
+    ". gelegen op een ruim perceel van circa"
+   ]
+  ],
+  "raak": [
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "9010PED",
+  "type": "Apartment",
+  "town": "Pedreguer",
+  "built": 310,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C3XY2091JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 230,
+  "plot": 1500,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C3XY3343JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 1000,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "C3XY3382JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 260,
+  "plot": 1707,
+  "getallen": [
+   [
+    140.0,
+    "terras",
+    "infinity pool of 4x10m and a terrace of"
+   ],
+   [
+    140.0,
+    "terras",
+    "cina infinita de 4x10m y una terraza de"
+   ],
+   [
+    140.0,
+    "terras",
+    "loopzwembad van 4x10m en een terras van"
+   ],
+   [
+    140.0,
+    "terras",
+    "ty-pool von 4x10m und eine terrasse von"
+   ],
+   [
+    140.0,
+    "terras",
+    "débordement de 4x10m et une terrasse de"
+   ]
+  ],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "C3XY4211BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 165,
+  "plot": 820,
+  "getallen": [
+   [
+    100.0,
+    null,
+    "project approved to extend the villa by"
+   ],
+   [
+    100.0,
+    null,
+    "yecto aprobado para ampliar la villa en"
+   ],
+   [
+    100.0,
+    null,
+    "een project goedgekeurd om de villa met"
+   ],
+   [
+    100.0,
+    null,
+    "ein projekt genehmigt, um die villa um"
+   ],
+   [
+    100.0,
+    null,
+    "ojet approuvé pour agrandir la villa de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C3XY4251BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 540,
+  "plot": 10300,
+  "getallen": [
+   [
+    10000.0,
+    null,
+    "ntry house is located on a plot of over"
+   ],
+   [
+    10000.0,
+    null,
+    "is gelegen op een perceel van meer dan"
+   ],
+   [
+    10000.0,
+    null,
+    "ne est située sur un terrain de plus de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C3XY4294BEN",
+  "type": "Land",
+  "town": "Benissa",
+  "built": null,
+  "plot": 504,
+  "getallen": [
+   [
+    504.0,
+    null,
+    "this"
+   ],
+   [
+    504.0,
+    null,
+    "ral large supermarkets. esta parcela de"
+   ],
+   [
+    504.0,
+    null,
+    "randes supermercados. dit grondstuk van"
+   ],
+   [
+    504.0,
+    null,
+    "re grote supermarkten te vinden. dieses"
+   ],
+   [
+    504.0,
+    null,
+    "ehrere große supermärkte. ce terrain de"
+   ]
+  ],
+  "raak": []
+ },
+ {
+  "ref": "C3XY4395JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 157,
+  "plot": 1227,
+  "getallen": [
+   [
+    1000.0,
+    null,
+    "la is situated on a flat, sunny plot of"
+   ],
+   [
+    1000.0,
+    null,
+    "tuada en una parcela llana y soleada de"
+   ],
+   [
+    1000.0,
+    null,
+    "legen op een vlak, zonnig grondstuk van"
+   ],
+   [
+    1000.0,
+    null,
+    "einem flachen, sonnigen grundstück von"
+   ],
+   [
+    1000.0,
+    null,
+    "ée sur un terrain plat et ensoleillé de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C3XY4414CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 288,
+  "plot": 890,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "C3XY442222BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 696,
+  "plot": 11448,
+  "getallen": [
+   [
+    11000.0,
+    null,
+    "ic villa is situated on a plot of up to"
+   ],
+   [
+    5500.0,
+    "garage",
+    "age, a carport and a wine cellar. about"
+   ],
+   [
+    6000.0,
+    "terras",
+    "d terraces. the remaining land of about"
+   ],
+   [
+    11000.0,
+    null,
+    "la está situada en una parcela de hasta"
+   ],
+   [
+    5500.0,
+    "garage",
+    "ividual, una cochera y una bodega.\nunos"
+   ],
+   [
+    6000.0,
+    "terras",
+    "terrazas.\nel terreno restante, de unos"
+   ],
+   [
+    11000.0,
+    null,
+    "lla is gelegen op een grondstuk van wel"
+   ],
+   [
+    5500.0,
+    "kelder",
+    "een carport en een wijnkelder. ongeveer"
+   ],
+   [
+    6000.0,
+    null,
+    "t overblijvende stuk grond van ongeveer"
+   ],
+   [
+    11000.0,
+    null,
+    "et sich auf einem grundstück von bis zu"
+   ],
+   [
+    5500.0,
+    "garage",
+    "inen carport und einen weinkeller. etwa"
+   ],
+   [
+    6000.0,
+    null,
+    "bepflanzt. das restliche land von etwa"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "C3XY4476BELL",
+  "type": "Apartment",
+  "town": "Benitachell",
+  "built": 148,
+  "plot": null,
+  "getallen": [
+   [
+    91.0,
+    null,
+    "and elevator and has a total surface of"
+   ],
+   [
+    23.0,
+    "terras",
+    "there is a spacious covered terrace of"
+   ],
+   [
+    36.0,
+    "terras",
+    "of the terrace is a beautiful garden of"
+   ],
+   [
+    91.0,
+    null,
+    "a planta, tiene una superficie total de"
+   ],
+   [
+    23.0,
+    "terras",
+    "rior hay una amplia terraza cubierta de"
+   ],
+   [
+    36.0,
+    "terras",
+    "e de la terraza hay un bonito jardín de"
+   ],
+   [
+    91.0,
+    null,
+    "eping, heeft een totale oppervlakte van"
+   ],
+   [
+    23.0,
+    "terras",
+    "iten is er een ruim overdekt terras van"
+   ],
+   [
+    36.0,
+    "terras",
+    "voor het terras ligt een mooie tuin van"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "inclusief",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C3XY4483JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 250,
+  "plot": 1000,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C3XY4484ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 400,
+  "plot": 1404,
+  "getallen": [
+   [
+    173.0,
+    null,
+    "layout, the entire private residence of"
+   ],
+   [
+    113.0,
+    "gast",
+    "w is a spacious separate guest house of"
+   ],
+   [
+    44.0,
+    "gast",
+    "he guest house is a large room of about"
+   ],
+   [
+    173.0,
+    null,
+    "ribución, toda la residencia privada de"
+   ],
+   [
+    113.0,
+    "gast",
+    "iosa casa de invitados independiente de"
+   ],
+   [
+    44.0,
+    null,
+    "vitados hay una gran habitación de unos"
+   ],
+   [
+    173.0,
+    null,
+    "ng bevindt de volledige privéwoning van"
+   ],
+   [
+    113.0,
+    null,
+    "ch een ruim separaat gastenverblijf van"
+   ],
+   [
+    44.0,
+    null,
+    "indt zich een grote ruimte van ongeveer"
+   ],
+   [
+    173.0,
+    null,
+    "det sich die gesamte privatresidenz von"
+   ],
+   [
+    113.0,
+    "gast",
+    "ein geräumiges separates gästehaus von"
+   ],
+   [
+    44.0,
+    null,
+    "s befindet sich ein großer raum von ca."
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "C3XY4492JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 297,
+  "plot": 1600,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "C3XY4524JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 178,
+  "plot": 667,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "gast"
+  ]
+ },
+ {
+  "ref": "C3XY4617JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 2300,
+  "getallen": [
+   [
+    2300.0,
+    null,
+    "building plot with a total area of"
+   ],
+   [
+    700.0,
+    null,
+    "banised and a property of approximately"
+   ],
+   [
+    350.0,
+    null,
+    "ed to build two semi-detached villas of"
+   ],
+   [
+    2300.0,
+    null,
+    "edificable con una superficie total de"
+   ],
+   [
+    700.0,
+    null,
+    "nstruir una vivienda de aproximadamente"
+   ],
+   [
+    350.0,
+    null,
+    "ermite construir dos villas adosadas de"
+   ],
+   [
+    2300.0,
+    null,
+    "wperceel met een totale oppervlakte van"
+   ],
+   [
+    700.0,
+    null,
+    "aniseerd en er kan een woning van circa"
+   ],
+   [
+    350.0,
+    null,
+    "ijstaande villa’s te realiseren van elk"
+   ],
+   [
+    2300.0,
+    null,
+    "augrundstück mit einer gesamtfläche von"
+   ],
+   [
+    700.0,
+    null,
+    "kann ein haus mit einer fläche von ca."
+   ],
+   [
+    350.0,
+    null,
+    "ubt, zwei doppelhaushälften mit jeweils"
+   ]
+  ],
+  "raak": [
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C3XY4620CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 216,
+  "plot": 486,
+  "getallen": [],
+  "raak": [
+   "garage"
+  ]
+ },
+ {
+  "ref": "C3XY4638JAV",
+  "type": "Land",
+  "town": "Javea",
+  "built": null,
+  "plot": 752,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "C3XY4641JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 346,
+  "plot": 734,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C3XY4665ALB",
+  "type": "Villa",
+  "town": "Albir",
+  "built": 322,
+  "plot": 400,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C3XY4678JAV",
+  "type": "",
+  "town": "Javea",
+  "built": 104,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "C3XY4685JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 295,
+  "plot": 1045,
+  "getallen": [
+   [
+    370.0,
+    "bebouwd",
+    "ar.\n\nthe villa features a built area of"
+   ],
+   [
+    370.0,
+    "bebouwd",
+    "illa heeft een bebouwde oppervlakte van"
+   ],
+   [
+    370.0,
+    null,
+    "a verfügt über eine bebauter fläche von"
+   ],
+   [
+    370.0,
+    null,
+    "lla dispose d'une surface construite de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "C3XY6376MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 370,
+  "plot": 785,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast",
+   "nuttig",
+   "inclusief",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C3XY7000ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 680,
+  "plot": 1680,
+  "getallen": [
+   [
+    1680.0,
+    null,
+    "idorm.\n\nthe villa is built on a plot of"
+   ],
+   [
+    1120.0,
+    null,
+    "a is built on a plot of 1680m2 of which"
+   ],
+   [
+    680.0,
+    null,
+    "of 1680m2 of which 1120m2 is built with"
+   ],
+   [
+    190.0,
+    "nuttig",
+    "oor there is an immense living space of"
+   ],
+   [
+    80.0,
+    null,
+    "space of 190m2 with an open kitchen of"
+   ],
+   [
+    16.0,
+    null,
+    "se vastness, in addition a laundry room"
+   ],
+   [
+    32.0,
+    null,
+    "floor there is also the master bedroom"
+   ],
+   [
+    12.0,
+    null,
+    "r bedroom 32m2 with a walk-in closet of"
+   ],
+   [
+    22.0,
+    null,
+    "closet of 12m2, an ensuite bathroom of"
+   ],
+   [
+    240.0,
+    "terras",
+    "oom has direct access to the terrace of"
+   ],
+   [
+    16.0,
+    null,
+    "eathtaking views and an outdoor kitchen"
+   ],
+   [
+    30.0,
+    null,
+    "e bottom floor we find a living room of"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C3XY7121NUC",
+  "type": "Villa",
+  "town": "Polop",
+  "built": 123,
+  "plot": 203,
+  "getallen": [
+   [
+    203.0,
+    null,
+    "he property is set on a private plot of"
+   ],
+   [
+    123.0,
+    "bebouwd",
+    "on a private plot of 203 m2 and offers"
+   ],
+   [
+    18.0,
+    "terras",
+    "landscaped areas and an open terrace of"
+   ],
+   [
+    203.0,
+    null,
+    "encuentra sobre una parcela privada de"
+   ],
+   [
+    123.0,
+    "bebouwd",
+    "una parcela privada de 203 m2 y ofrece"
+   ],
+   [
+    18.0,
+    "terras",
+    "as ajardinadas y una terraza abierta de"
+   ],
+   [
+    203.0,
+    null,
+    "de woning zich op een privéperceel van"
+   ],
+   [
+    123.0,
+    "bebouwd",
+    "en privéperceel van 203 m2 en biedt zij"
+   ],
+   [
+    18.0,
+    "terras",
+    "angelegde tuinen en een open terras van"
+   ],
+   [
+    203.0,
+    null,
+    "sich auf einem privaten grundstück von"
+   ],
+   [
+    123.0,
+    "bebouwd",
+    "ivaten grundstück von 203 m2 und bietet"
+   ],
+   [
+    18.0,
+    "terras",
+    "enbereiche und eine offene terrasse von"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "bebouwd",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C3XY7123CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 346,
+  "plot": 931,
+  "getallen": [
+   [
+    931.0,
+    null,
+    "anean living.\n\nset on a private plot of"
+   ],
+   [
+    346.0,
+    "bebouwd",
+    "ate plot of 931 m2, the property offers"
+   ],
+   [
+    931.0,
+    null,
+    "situada sobre una parcela privada de"
+   ],
+   [
+    346.0,
+    "bebouwd",
+    "privada de 931 m2, la propiedad ofrece"
+   ],
+   [
+    931.0,
+    null,
+    "ijl.\r\n\r\ngelegen op een privéperceel van"
+   ],
+   [
+    346.0,
+    "bebouwd",
+    "privéperceel van 931 m2 biedt de woning"
+   ],
+   [
+    931.0,
+    null,
+    "n.\r\n\r\nauf einem privaten grundstück von"
+   ],
+   [
+    346.0,
+    "bebouwd",
+    "on 931 m2 gelegen, bietet die immobilie"
+   ],
+   [
+    931.0,
+    null,
+    "e.\r\n\r\nimplantée sur un terrain privé de"
+   ],
+   [
+    346.0,
+    null,
+    "ain privé de 931 m2, la propriété offre"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "C3XY8042DEN",
+  "type": "Land",
+  "town": "Denia",
+  "built": null,
+  "plot": 1315,
+  "getallen": [
+   [
+    1200.0,
+    null,
+    "urban plot of"
+   ],
+   [
+    300.0,
+    null,
+    "e opportunity to build a villa of up to"
+   ],
+   [
+    150.0,
+    null,
+    "wo semi-detached houses (townhouses) of"
+   ],
+   [
+    1200.0,
+    null,
+    "able natural setting. parcela urbana de"
+   ],
+   [
+    300.0,
+    null,
+    "tunidad de construir un chalet de hasta"
+   ],
+   [
+    150.0,
+    null,
+    "la dos viviendas pareadas (adosados) de"
+   ],
+   [
+    1200.0,
+    null,
+    "o natural inmejorable. stadsperceel van"
+   ],
+   [
+    300.0,
+    null,
+    "ijkheid biedt om een villa van maximaal"
+   ],
+   [
+    150.0,
+    null,
+    "alfvrijstaande huizen (herenhuizen) van"
+   ],
+   [
+    1200.0,
+    null,
+    "rlijke omgeving. urbanes grundstück von"
+   ],
+   [
+    300.0,
+    null,
+    "glichkeit bietet, eine villa von bis zu"
+   ],
+   [
+    150.0,
+    null,
+    "doppelhaushälften (stadthäuser) von je"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "C3XY8296DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 470,
+  "plot": 32100,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C3XY8299MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 835,
+  "getallen": [],
+  "raak": []
+ },
+ {
+  "ref": "C3XY8337DEN",
+  "type": "Apartment",
+  "town": "Denia",
+  "built": 106,
+  "plot": 107,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C3XY8339ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 232,
+  "plot": 1712,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "C3XY8348MOR",
+  "type": "Land",
+  "town": "Moraira",
+  "built": null,
+  "plot": 2503,
+  "getallen": [
+   [
+    2503.0,
+    null,
+    "vocat and moravit, this property boasts"
+   ],
+   [
+    2491.0,
+    null,
+    "s to life. it also includes an adjacent"
+   ],
+   [
+    2503.0,
+    null,
+    "at y moravit, esta propiedad cuenta con"
+   ],
+   [
+    2491.0,
+    null,
+    "ra proyectar sus ideas. además, incluye"
+   ],
+   [
+    2503.0,
+    null,
+    "t en moravit, beschikt dit perceel over"
+   ],
+   [
+    2491.0,
+    null,
+    "end stuk beschermd landelijk gebied van"
+   ],
+   [
+    2503.0,
+    null,
+    "moravit gelegen, bietet dieses anwesen"
+   ],
+   [
+    2491.0,
+    null,
+    "en zu verwirklichen. zusätzlich gehören"
+   ],
+   [
+    503.0,
+    null,
+    "cat et moravit, cette propriété offre 2"
+   ],
+   [
+    491.0,
+    null,
+    "vos projets. elle comprend également 2"
+   ]
+  ],
+  "raak": [
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C3XY8350BEN",
+  "type": "Villa",
+  "town": "Beniarbeig",
+  "built": 376,
+  "plot": 752,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C3XY9003BEN",
+  "type": "Villa",
+  "town": "Benissa",
+  "built": 224,
+  "plot": 1010,
+  "getallen": [
+   [
+    1010.0,
+    null,
+    "extended getaways.\nthe villa sits on a"
+   ],
+   [
+    224.0,
+    "bebouwd",
+    "e villa sits on a 1,010 m² plot and has"
+   ],
+   [
+    1010.0,
+    null,
+    "a villa se asienta sobre una parcela de"
+   ],
+   [
+    224.0,
+    "bebouwd",
+    "re una parcela de 1.010 m² y cuenta con"
+   ],
+   [
+    1010.0,
+    null,
+    "ips.\r\nde villa staat op een perceel van"
+   ],
+   [
+    224.0,
+    "nuttig",
+    "010 m² en heeft een woonoppervlakte van"
+   ],
+   [
+    1010.0,
+    null,
+    "aufenthalte. die villa steht auf einem"
+   ],
+   [
+    224.0,
+    "nuttig",
+    "m 1.010 m² großen grundstück und bietet"
+   ],
+   [
+    10.0,
+    null,
+    "villa est implantée sur un terrain de 1"
+   ],
+   [
+    224.0,
+    "nuttig",
+    "tée sur un terrain de 1 010 m² et offre"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C4XY4336PEG",
+  "type": "Villa",
+  "town": "Pego",
+  "built": 307,
+  "plot": 1307,
+  "getallen": [
+   [
+    280.0,
+    null,
+    "rough a very spacious driveway of up to"
+   ],
+   [
+    20.0,
+    "terras",
+    "s a very large covered terrace of about"
+   ],
+   [
+    18.0,
+    "berging",
+    "essible from outside). there is also an"
+   ],
+   [
+    30.0,
+    "garage",
+    "lity of converting the garage of almost"
+   ],
+   [
+    220.0,
+    null,
+    "outside, almost"
+   ],
+   [
+    280.0,
+    null,
+    "n camino de entrada muy amplio de hasta"
+   ],
+   [
+    20.0,
+    "terras",
+    "r hay una gran terraza cubierta de unos"
+   ],
+   [
+    18.0,
+    "berging",
+    "l exterior). también hay un trastero de"
+   ],
+   [
+    30.0,
+    "garage",
+    "ibilidad de convertir el garaje de casi"
+   ],
+   [
+    220.0,
+    null,
+    "en el exterior, se han colocado casi"
+   ],
+   [
+    280.0,
+    null,
+    "oning. via een zeer ruime oprit van wel"
+   ],
+   [
+    20.0,
+    "terras",
+    "zeer groot overdekt terras van ongeveer"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C4XY4382JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 321,
+  "plot": 1000,
+  "getallen": [
+   [
+    1000.0,
+    null,
+    "ul ibiza-style villa will be built on a"
+   ],
+   [
+    125.0,
+    "terras",
+    "ing swimming pool surrounded by a large"
+   ],
+   [
+    28.0,
+    "terras",
+    "rrounded by a large 125m2 terrace and a"
+   ],
+   [
+    1000.0,
+    null,
+    "se está construyendo en una parcela de"
+   ],
+   [
+    125.0,
+    "terras",
+    "piscina rodeada de una gran terraza de"
+   ],
+   [
+    28.0,
+    "terras",
+    "raza de 125m2 y una terraza cubierta de"
+   ],
+   [
+    1000.0,
+    null,
+    "a zal worden gebouwd op een perceel van"
+   ],
+   [
+    125.0,
+    "terras",
+    "mbad, omringd door een groot terras van"
+   ],
+   [
+    28.0,
+    "terras",
+    "as van 125m2 en een overdekt terras van"
+   ],
+   [
+    1000.0,
+    null,
+    "höne villa im ibiza-stil wird auf einem"
+   ],
+   [
+    125.0,
+    "terras",
+    "einladenden swimmingpool, der von einer"
+   ],
+   [
+    28.0,
+    "terras",
+    "einer 125 m2 großen terrasse und einer"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C4XY4383JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": 422,
+  "plot": 1514,
+  "getallen": [
+   [
+    1514.0,
+    null,
+    "autiful ibiza-style villa is built on a"
+   ],
+   [
+    80.0,
+    "terras",
+    "inviting swimming pool surrounded by an"
+   ],
+   [
+    18.0,
+    "terras",
+    "terrace with an outdoor kitchen and an"
+   ],
+   [
+    1514.0,
+    "bebouwd",
+    "co está construida sobre una parcela de"
+   ],
+   [
+    80.0,
+    "terras",
+    "adora piscina rodeada de una terraza de"
+   ],
+   [
+    18.0,
+    "terras",
+    "al aire libre y una terraza cubierta de"
+   ],
+   [
+    1514.0,
+    null,
+    "villa wordt gebouwd op een perceel van"
+   ],
+   [
+    80.0,
+    "terras",
+    "nd zwembad, omringd door een terras van"
+   ],
+   [
+    18.0,
+    "terras",
+    "buitenkeuken en een overdekt terras van"
+   ],
+   [
+    1514.0,
+    null,
+    "öne villa im ibiza-stil wurde auf einem"
+   ],
+   [
+    80.0,
+    "terras",
+    "einladenden swimmingpool, der von einer"
+   ],
+   [
+    18.0,
+    "terras",
+    "roßen terrasse mit außenküche und einer"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "C4XY4388BEN",
+  "type": "Land",
+  "town": "Benissa",
+  "built": null,
+  "plot": 1100,
+  "getallen": [
+   [
+    269.75,
+    null,
+    "ficable. la edificabilidad máxima es de"
+   ],
+   [
+    269.75,
+    null,
+    ". de maximale bebouwbare oppervlakte is"
+   ],
+   [
+    269.75,
+    null,
+    "f. die maximal bebaubare fläche beträgt"
+   ],
+   [
+    269.75,
+    null,
+    "a surface constructible maximale est de"
+   ]
+  ],
+  "raak": [
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "C4XY4481JAV",
+  "type": "Apartment",
+  "town": "Javea",
+  "built": 137,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C4XY4505CAL",
+  "type": "Apartment",
+  "town": "Calpe",
+  "built": 118,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C4XY4518JAV",
+  "type": "Villa",
+  "town": "Javea",
+  "built": null,
+  "plot": 1085,
+  "getallen": [
+   [
+    1085.0,
+    null,
+    "ach.\n\nthe villa is located on a plot of"
+   ],
+   [
+    329.0,
+    null,
+    "t of 1085 m2 and has a built-up area of"
+   ],
+   [
+    1085.0,
+    null,
+    "la villa se ubica en una parcela de"
+   ],
+   [
+    329.0,
+    "bebouwd",
+    "m2 y tiene una superficie construida de"
+   ],
+   [
+    1085.0,
+    "bebouwd",
+    "de villa is gelegen op een perceel van"
+   ],
+   [
+    329.0,
+    "bebouwd",
+    "2 en heeft een bebouwde oppervlakte van"
+   ],
+   [
+    1085.0,
+    null,
+    "befindet sich auf einem grundstück von"
+   ],
+   [
+    329.0,
+    "bebouwd",
+    "1085 m2 und hat eine bebaute fläche von"
+   ],
+   [
+    1085.0,
+    null,
+    "la villa est située sur un terrain de"
+   ],
+   [
+    329.0,
+    null,
+    "1085 m2 et a une surface construite de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd"
+  ]
+ },
+ {
+  "ref": "C4XY4556BEN",
+  "type": "Apartment",
+  "town": "Benissa",
+  "built": 88.3,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C4XY4569CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 284,
+  "plot": 967,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "C4XY4596CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 264,
+  "plot": 800,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C4XY4619JAV",
+  "type": "Apartment",
+  "town": "Javea",
+  "built": 130,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "C4XY4634BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 202,
+  "plot": 2419,
+  "getallen": [
+   [
+    2800.0,
+    null,
+    "l finca is situated on a rustic plot of"
+   ],
+   [
+    2800.0,
+    null,
+    "está situada en una parcela rústica de"
+   ],
+   [
+    2800.0,
+    null,
+    "is gelegen op een rustiek grondstuk van"
+   ],
+   [
+    2800.0,
+    null,
+    "egt auf einem rustikalen grundstück von"
+   ],
+   [
+    800.0,
+    null,
+    "est située sur un terrain rustique de 2"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C4XY4635BELL",
+  "type": "Villa",
+  "town": "Benitachell",
+  "built": 250,
+  "plot": 887,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C4XY4636BEN",
+  "type": "Commercial property",
+  "town": "Benissa",
+  "built": 301,
+  "plot": 940,
+  "getallen": [
+   [
+    301.0,
+    "bebouwd",
+    "the property has a total built area of"
+   ],
+   [
+    78.0,
+    null,
+    "separate external entrance and houses a"
+   ],
+   [
+    301.0,
+    "bebouwd",
+    "iene una superficie construida total de"
+   ],
+   [
+    78.0,
+    null,
+    "e el exterior y alberga una vivienda de"
+   ],
+   [
+    301.0,
+    "bebouwd",
+    "eft een totale bebouwde oppervlakte van"
+   ],
+   [
+    78.0,
+    null,
+    "uitentoegang en herbergt een woning van"
+   ],
+   [
+    301.0,
+    null,
+    "fügt über eine bebaute gesamtfläche von"
+   ],
+   [
+    78.0,
+    null,
+    "nzugang und beherbergt eine wohnung von"
+   ],
+   [
+    301.0,
+    null,
+    "pose d’une surface construite totale de"
+   ],
+   [
+    78.0,
+    null,
+    "ur indépendant et abrite un logement de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C4XY4674SAG",
+  "type": "Commercial property",
+  "town": "Sagra",
+  "built": 426,
+  "plot": 180,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging",
+   "totaal"
+  ]
+ },
+ {
+  "ref": "C4XY4675JAL",
+  "type": "Villa",
+  "town": "Jalon",
+  "built": 229,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "C4XY4680CAL",
+  "type": "Apartment",
+  "town": "Calpe",
+  "built": 100,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C4XY4683JAV",
+  "type": "Apartment",
+  "town": "Javea",
+  "built": 129,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C4XY6411CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 90,
+  "plot": 800,
+  "getallen": [],
+  "raak": [
+   "terras"
+  ]
+ },
+ {
+  "ref": "C4XY7056ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 547,
+  "plot": 908,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "C4XY8166MOR",
+  "type": "Villa",
+  "town": "Moraira",
+  "built": 340,
+  "plot": 1070,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C4XY8269DEN",
+  "type": "Apartment",
+  "town": "Denia",
+  "built": 114,
+  "plot": null,
+  "getallen": [
+   [
+    114.0,
+    null,
+    "tuated on a fourth floor with lift, has"
+   ],
+   [
+    94.0,
+    null,
+    "with lift, has 114 m² constructed area ("
+   ],
+   [
+    114.0,
+    "bebouwd",
+    "cuarta planta con ascensor, cuenta con"
+   ],
+   [
+    94.0,
+    "nuttig",
+    "scensor, cuenta con 114 m² construidos ("
+   ],
+   [
+    114.0,
+    "bebouwd",
+    "p een vierde verdieping met lift, heeft"
+   ],
+   [
+    94.0,
+    "bebouwd",
+    "t lift, heeft 114 m² bebouwd oppervlak ("
+   ],
+   [
+    114.0,
+    "bebouwd",
+    "vierten stock mit aufzug befindet, hat"
+   ],
+   [
+    94.0,
+    "bebouwd",
+    "ug befindet, hat 114 m² bebaute fläche ("
+   ],
+   [
+    114.0,
+    null,
+    "ascenseur, a une surface construite de"
+   ],
+   [
+    94.0,
+    null,
+    "ur, a une surface construite de 114 m² ("
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "bebouwd",
+   "nuttig",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C4XY8326DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 126,
+  "plot": 612,
+  "getallen": [
+   [
+    30.0,
+    "gast",
+    "a. in addition, the property includes a"
+   ],
+   [
+    30.0,
+    null,
+    "una vivienda auxiliar para invitados de"
+   ],
+   [
+    30.0,
+    null,
+    "t de woning over een gastenverblijf van"
+   ],
+   [
+    30.0,
+    "gast",
+    "latz. zusätzlich bietet das anwesen ein"
+   ],
+   [
+    30.0,
+    null,
+    "a propriété inclut une maison d'amis de"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "gast",
+   "inclusief"
+  ]
+ },
+ {
+  "ref": "C4XY8328DEN",
+  "type": "Apartment",
+  "town": "Denia",
+  "built": 88,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage",
+   "berging",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "C4XY8330OLI",
+  "type": "Town house",
+  "town": "Oliva",
+  "built": 289,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "berging"
+  ]
+ },
+ {
+  "ref": "C4XY8333DEN",
+  "type": "Villa",
+  "town": "Denia",
+  "built": 238,
+  "plot": 772,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "C4XY8336OND",
+  "type": "Villa",
+  "town": "Ondara",
+  "built": 1025,
+  "plot": 10000,
+  "getallen": [
+   [
+    10000.0,
+    null,
+    "5-bedroom villa with a"
+   ],
+   [
+    10000.0,
+    null,
+    "illa de 5 dormitorios con un terreno de"
+   ],
+   [
+    10000.0,
+    null,
+    "amer villa gelegen op een grondstuk van"
+   ],
+   [
+    10000.0,
+    null,
+    "reniteit. villa mit 5 schlafzimmern und"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "gast"
+  ]
+ },
+ {
+  "ref": "C4XY8342ALT",
+  "type": "Villa",
+  "town": "Altea",
+  "built": 390,
+  "plot": 1084,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "garage"
+  ]
+ },
+ {
+  "ref": "C4XY8344CAL",
+  "type": "Villa",
+  "town": "Calpe",
+  "built": 120,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage"
+  ]
+ },
+ {
+  "ref": "C4XY8346DEN",
+  "type": "Apartment",
+  "town": "Denia",
+  "built": 53,
+  "plot": null,
+  "getallen": [],
+  "raak": [
+   "terras",
+   "nuttig"
+  ]
+ },
+ {
+  "ref": "C·XY3224PED",
+  "type": "Villa",
+  "town": "Pedreguer",
+  "built": 550,
+  "plot": 10000,
+  "getallen": [
+   [
+    10000.0,
+    null,
+    "ocated and built on a flat plot of over"
+   ],
+   [
+    550.0,
+    "bebouwd",
+    "of 3 floors with a total built area of"
+   ],
+   [
+    50.0,
+    null,
+    "views. in the garden there is a pool of"
+   ],
+   [
+    1000.0,
+    null,
+    "aped garden with lawn and palm trees of"
+   ],
+   [
+    5000.0,
+    null,
+    "rd with almond trees and olive trees of"
+   ],
+   [
+    10000.0,
+    "bebouwd",
+    "nstruida en una parcela llana de más de"
+   ],
+   [
+    550.0,
+    "bebouwd",
+    "con una superficie total construida de"
+   ],
+   [
+    50.0,
+    null,
+    "al mar. en el jardín hay una piscina de"
+   ],
+   [
+    1000.0,
+    null,
+    "dín paisajista con césped y palmeras de"
+   ],
+   [
+    5000.0,
+    null,
+    "m2, un huerto con almendros y olivos de"
+   ],
+   [
+    10000.0,
+    null,
+    "d op een op een vlak grondstuk van ruim"
+   ],
+   [
+    550.0,
+    "bebouwd",
+    "met een totale bebouwde oppervlakte van"
+   ]
+  ],
+  "raak": [
+   "terras",
+   "kelder",
+   "garage",
+   "berging",
+   "bebouwd",
+   "totaal"
+  ]
+ }
+]

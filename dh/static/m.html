@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deal Hunter</title>
+<meta name="theme-color" content="#1c2220">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Deal Hunter">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/static/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/static/m.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-title"><span class="mark">TREE</span> Deal Hunter</div>
+  <div class="bar-sub" id="runinfo">Laden…</div>
+</header>
+
+<main id="main">
+
+  <section class="view" data-view="kansen">
+    <div class="seg" id="tabseg" role="tablist" aria-label="Welke objecten"></div>
+    <div id="alertbox"></div>
+    <div class="scroller" id="areachips" aria-label="Wijk"></div>
+    <details class="fold" id="fold">
+      <summary>Filteren en sorteren</summary>
+      <div class="toolrow">
+        <button class="pill" id="t-loss" aria-pressed="false">Toon verlies</button>
+        <button class="pill" id="t-new" aria-pressed="false">Nieuw 7 dagen</button>
+        <button class="pill" id="t-mak" aria-pressed="false">Niet op portalen gezien</button>
+        <button class="pill" id="t-reno" aria-pressed="false">Sterk renovatievermoeden</button>
+        <select id="sort" aria-label="Sorteren">
+          <option value="maand">Meeste winst per maand</option>
+          <option value="room">Meeste ruimte</option>
+          <option value="result">Hoogste resultaat</option>
+          <option value="price">Laagste vraagprijs</option>
+          <option value="new">Nieuwste eerst</option>
+        </select>
+      </div>
+      <div class="scroller" id="classchips" aria-label="Kansrijkheid"></div>
+    </details>
+    <p class="meta" id="listmeta"></p>
+    <div id="cards"></div>
+    <div id="dossierbox"></div>
+  </section>
+
+  <section class="view" data-view="boeiend" hidden>
+    <p class="meta">Wat je zelf hebt aangemerkt als boeiend.</p>
+    <div id="cards-boeiend"></div>
+  </section>
+
+  <section class="view" data-view="gebeld" hidden>
+    <p class="meta">Objecten waarover je de makelaar hebt gesproken.</p>
+    <div id="cards-gebeld"></div>
+  </section>
+
+  <section class="view" data-view="kaart" hidden>
+    <div id="map"></div>
+    <div class="maptools">
+      <select id="layer" aria-label="Kaartlaag">
+        <option value="ign">Kaart</option>
+        <option value="pnoa">Luchtfoto</option>
+      </select>
+      <button class="pill" id="t-cad" aria-pressed="false">Percelen</button>
+      <button class="pill" id="t-zones" aria-pressed="false">Wijkprijzen</button>
+    </div>
+    <p class="legend" id="legend"></p>
+  </section>
+
+  <section class="view" data-view="meer" hidden>
+    <a class="instelknop" href="/instellingen">⚙︎ Instellingen — sleutels voor de meldingen</a>
+    <h2>Veilingen</h2>
+    <p class="meta" id="auctionmeta"></p>
+    <div id="auctions"></div>
+    <h2>Vennootschappen onder druk</h2>
+    <p class="meta">Handelsregister Alicante: ontbinding, liquidatie of faillissement. Alleen de vennootschap, nooit personen.</p>
+    <div id="companies"></div>
+    <h2>Publicatieborden</h2>
+    <p class="meta">Deze borden mogen niet automatisch gelezen worden. Open ze zelf.</p>
+    <div id="boards"></div>
+    <h2>Wijkprijzen</h2>
+    <p class="meta">Vraagprijs per m² gebouwd van gerenoveerde en nieuwe woningen. Vraagprijzen, geen transactieprijzen.</p>
+    <div id="zones"></div>
+  </section>
+
+</main>
+
+<nav class="tabbar" role="tablist">
+  <button role="tab" class="tb on" data-go="kansen" aria-selected="true"><span class="ti">◆</span>Kansen</button>
+  <button role="tab" class="tb" data-go="boeiend" aria-selected="false"><span class="ti">♥</span>Boeiend<span class="tn" id="n-boeiend"></span></button>
+  <button role="tab" class="tb" data-go="gebeld" aria-selected="false"><span class="ti">☎</span>Gebeld<span class="tn" id="n-gebeld"></span></button>
+  <button role="tab" class="tb" data-go="kaart" aria-selected="false"><span class="ti">◎</span>Kaart</button>
+  <button role="tab" class="tb" data-go="meer" aria-selected="false"><span class="ti">≡</span>Meer</button>
+</nav>
+
+<div class="sheet" id="sheet" hidden aria-modal="true" role="dialog" aria-label="Dossier">
+  <div class="sheet-grip"><button id="sheet-close" aria-label="Sluiten">Sluiten</button></div>
+  <div class="sheet-body" id="sheet-body"></div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="/static/m.js"></script>
+</body>
+</html>
