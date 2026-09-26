@@ -84,8 +84,13 @@ button.kpi.on { border-color: var(--ink-strong); border-left-width: 3px; }
 .tab { background: none; border: 0; padding: 0.55rem 0.7rem; border-bottom: 2px solid transparent; color: var(--muted); cursor: pointer; font-weight: 500; }
 .tab.active { color: var(--ink-strong); border-bottom-color: var(--beige); }
 .tabpanel { flex: 1; min-height: 0; overflow-y: auto; }
-.filters { padding: 0.8rem; display: grid; gap: 0.55rem; border-bottom: 1px solid var(--rule); background: var(--paper); position: sticky; top: 0; z-index: 2; }
-.filters input[type=search] { width: 100%; padding: 0.5rem 0.7rem; border: 1px solid var(--rule-strong); border-radius: 0; background: var(--surface); }
+/* De filterbalk plakte in zijn geheel aan de bovenkant. Met drie rijen chips,
+   twee rijen vinkjes en een sorteerkeuze nam hij driekwart van de zijbalk, en
+   kwam de eerste kaart nauwelijks in beeld. Nu scrollen de filters mee; alleen
+   het zoekveld blijft staan, want dat is het enige dat je tussendoor pakt. */
+.filters { padding: 0.8rem; display: grid; gap: 0.55rem; border-bottom: 1px solid var(--rule); background: var(--paper); }
+.filters input[type=search] { position: sticky; top: 0; z-index: 3; }
+.filters input[type=search] { width: 100%; padding: 0.5rem 0.7rem; border: 1px solid var(--rule-strong); background: var(--paper); }
 .chipgroup { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .chip { border: 1px solid var(--rule-strong); background: var(--surface); border-radius: 0; padding: 0.2rem 0.6rem; font-size: 0.78rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; }
 .chip .n { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
@@ -94,7 +99,9 @@ button.kpi.on { border-color: var(--ink-strong); border-left-width: 3px; }
 .row { display: flex; gap: 0.6rem; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 .toggle { display: inline-flex; gap: 0.35rem; align-items: center; font-size: 0.8rem; color: var(--ink); cursor: pointer; }
 select { border: 1px solid var(--rule-strong); border-radius: 0; background: var(--surface); padding: 0.25rem 0.4rem; font-size: 0.8rem; }
-.listmeta { padding: 0.5rem 0.9rem; font-size: 0.78rem; color: var(--muted); }
+.listmeta { padding: 0.5rem 0.9rem; font-size: 0.78rem; color: var(--muted);
+  position: sticky; top: 0; z-index: 2; background: var(--paper);
+  border-bottom: 1px solid var(--rule); }
 
 /* ---------- cards ---------- */
 .cards { display: grid; gap: 0.5rem; padding: 0 0.8rem 1.2rem; }
