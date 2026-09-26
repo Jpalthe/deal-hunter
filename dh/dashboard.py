@@ -1,8 +1,14 @@
 """TREE Deal Hunter — dashboard (FastAPI + statische frontend).
 
-Draait als launchd-dienst com.tree.deal-hunter-review op 127.0.0.1:8710, via Tailscale alleen binnen
-het tailnet bereikbaar. Leest de SQLite-opslag, rekent haalbaarheid live met tools/haalbaarheid.py,
-schrijft alleen beoordelingen. Geen contactgegevens, geen berichten naar buiten.
+Draait als launchd-dienst com.tree.deal-hunter-review op 127.0.0.1:8710. Leest de SQLite-opslag,
+rekent haalbaarheid live met tools/haalbaarheid.py, schrijft alleen beoordelingen. Geen
+contactgegevens, geen berichten naar buiten.
+
+LET OP — deze applicatie heeft GEEN eigen authenticatie. Er is geen middleware, geen Depends en
+geen enkele controle: 27 endpoints staan open, waarvan vijf schrijven. De beveiliging zit er
+altijd vóór, nooit hierin. Tot 25-09-2026 was dat Tailscale (verwijderd); sindsdien is het de
+binding op 127.0.0.1, en vanaf oktober 2026 Cloudflare Access aan de rand van de tunnel
+(zie ~/tree-hub). Ontsluit deze dienst nooit zonder dat er een slot vóór staat.
 """
 from __future__ import annotations
 
