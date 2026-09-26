@@ -257,8 +257,14 @@ def test_focus_tabbladen():
         ({"area": "javea", "category": "villa-gewoon", "price": 900000}, None, None),       # geen renovatieobject
         # sloop en nieuwbouw telt altijd mee, ook als de voorfilter het een gewone woning noemt
         ({"area": "javea", "category": "villa-gewoon", "price": 900000, "scenario": "sloop en nieuwbouw"}, None, focus.KANSEN),
-        # zonder prijs valt niets af: dat is een gebrek aan gegevens, geen reden tot afwijzing
-        ({"area": "javea", "category": "renovatie", "price": None}, None, focus.KANSEN),
+        # Zonder prijs valt nog steeds niets áf — maar sinds 27-09-2026 hoort zo'n object op een
+        # eigen tabblad in plaats van tussen de kansen. Aanleiding: 819 objecten bleken een prijs
+        # uit een zoekfilter te dragen; die prijzen zijn weggestreept en dan blijft er niets te
+        # rekenen over. Weggooien is erger, want de advertentie bestaat wel (besluit Jan).
+        ({"area": "javea", "category": "renovatie", "price": None}, None, focus.ONVOLLEDIG),
+        ({"area": "moraira", "category": "renovatie", "price": None}, None, focus.ONVOLLEDIG),
+        # buiten het werkgebied blijft het ook zonder prijs buiten beeld
+        ({"area": "denia", "category": "renovatie", "price": None}, None, None),
     ]
     for item, urb, verwacht in geval:
         assert focus.tab(item, urb, met_grenzen) == verwacht, (item, urb)
