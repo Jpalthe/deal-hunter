@@ -32,20 +32,55 @@ from dh.store import Store                                         # noqa: E402
 ONMOGELIJK = "(built_m2 > 1500 OR plot_m2 > 60000 OR price > 15000000)"
 VELDEN = ("price", "built_m2", "plot_m2", "beds", "baths")
 
+# Tweede soort fout, gevonden dezelfde dag: waarden uit een keuzelijst. De prijs- en
+# oppervlaktefilters bovenaan een site staan in <option>-elementen en telden mee als paginatekst,
+# dus de lezer pakte de eerste waarde uit het filter. Gevolg: 293 objecten van één site met een
+# vraagprijs van € 50.000 (de echte was € 690.000) en 138 van een andere met 50 m² bebouwd.
+# Herkenbaar doordat één waarde een groot deel van één bron beslaat; bij een echte portaalbron komt
+# de vaakste prijs op een paar procent uit (idealista-zoek: 19 van ruim achthonderd).
+MIN_AANTAL = 9
+MIN_AANDEEL = 0.15
+
+
+def gedeelde_waarden(store) -> list[tuple[str, str, float, int, int]]:
+    """(bron, veld, waarde, aantal, totaal) voor waarden die een bron domineren."""
+    uit = []
+    for veld in ("price", "built_m2", "plot_m2"):
+        for r in store.con.execute(f"""
+            WITH v AS (SELECT source, {veld} w, count(*) n FROM listings
+                       WHERE gone_at IS NULL AND {veld} IS NOT NULL GROUP BY 1,2),
+                 t AS (SELECT source, count(*) tot FROM listings
+                       WHERE gone_at IS NULL AND {veld} IS NOT NULL GROUP BY 1)
+            SELECT v.source, v.w, v.n, t.tot FROM v JOIN t ON t.source=v.source
+            WHERE v.n >= ? AND v.n * 1.0 / t.tot >= ?""", (MIN_AANTAL, MIN_AANDEEL)):
+            uit.append((r["source"], veld, r["w"], r["n"], r["tot"]))
+    return uit
+
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--doen", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--gedeeld", action="store_true",
+                    help="ook objecten met een waarde die een hele bron domineert (keuzelijstwaarden)")
     a = ap.parse_args(argv)
     store = Store()
+    waar = ONMOGELIJK
+    if a.gedeeld:
+        gd = gedeelde_waarden(store)
+        print("waarden die een bron domineren en dus uit een keuzelijst komen:")
+        for bron, veld, w, n, tot in sorted(gd, key=lambda x: -x[3]):
+            print(f"  {n:4d} van {tot:4d}  {veld:9s} {w:>10,.0f}   {bron.split(':')[-1]}".replace(",", "."))
+        if gd:
+            stukken = " OR ".join(f"(source='{b}' AND {v}={w})" for b, v, w, _, _ in gd)
+            waar = f"({waar} OR {stukken})"
     q = (f"SELECT id, source, url, title, price, built_m2, plot_m2, beds, baths FROM listings "
-         f"WHERE gone_at IS NULL AND source LIKE 'makelaar:%' AND {ONMOGELIJK} ORDER BY id")
+         f"WHERE gone_at IS NULL AND source LIKE 'makelaar:%' AND {waar} ORDER BY id")
     if a.limit:
         q += f" LIMIT {int(a.limit)}"
     rijen = store.con.execute(q).fetchall()
     kantoren = {k.host: k for k in laad_kantoren()}
-    print(f"{len(rijen)} objecten met een onmogelijke waarde")
+    print(f"\n{len(rijen)} objecten om opnieuw te lezen")
     sites: dict[str, Site] = {}
     gewijzigd = mislukt = ongewijzigd = 0
     with httpx.Client(timeout=config.HTTP_TIMEOUT, follow_redirects=True,

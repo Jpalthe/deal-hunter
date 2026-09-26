@@ -1112,3 +1112,21 @@ def test_punt_is_niet_altijd_een_duizendtalscheiding():
     assert _num(" 1.760 ") == 1760  # vaste en smalle spatie
     assert _num("389") == 389
     assert _num("") is None and _num(None) is None and _num("abc") is None
+
+
+def test_keuzelijst_telt_niet_mee_als_paginatekst():
+    """De prijs- en oppervlaktefilters bovenaan een makelaarssite staan in <option>-elementen.
+    Die telden mee als tekst, en de prijslezer pakte de eerste waarde boven de 20.000 — dus de
+    laagste stap van het filter. 293 van de 320 objecten van één site stonden zo op € 50.000
+    terwijl de woning € 690.000 kostte; 138 objecten van een andere site kregen 50 m² bebouwd."""
+    from dh.adapters.makelaars import _tekst
+    html = ('<select name="precio"><option value="50000">50.000 €</option>'
+            '<option value="100000">100.000 €</option></select>'
+            '<datalist id="m2"><option>50 m2</option></datalist>'
+            '<div class="precio">690.000 €</div><p>Superficie construida: 214 m2</p>')
+    txt = _tekst(html)
+    assert "690.000" in txt and "214" in txt
+    assert "50.000" not in txt and "100.000" not in txt
+    assert "50 m2" not in txt
+    # gewone tekst blijft ongemoeid, ook als er het woord option in staat
+    assert "een optie" in _tekst("<p>een optie</p>")

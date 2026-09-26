@@ -324,7 +324,16 @@ def _jsonld(t: str) -> list[dict]:
 
 
 def _tekst(t: str) -> str:
-    t2 = re.sub(r"<script.*?</script>|<style.*?</style>|<noscript.*?</noscript>", " ", t, flags=re.S | re.I)
+    """HTML naar leesbare tekst. Wat in een keuzelijst staat hoort daar niet bij.
+
+    De prijs- en oppervlaktefilters bovenaan een makelaarssite staan in <option>-elementen:
+    "Precio min · 200 € · 400 € … 50.000 € · 100.000 €". Die telden mee als tekst, en de prijslezer
+    pakte de eerste waarde boven de 20.000 — dus 50.000. Op 27-09-2026 hadden 293 van de 320
+    objecten van één site daardoor een vraagprijs van € 50.000, en 130 van een andere € 47.000.
+    Een woning die € 690.000 kost stond als koopje van € 50.000 in de lijst. Hetzelfde gebeurde met
+    het oppervlak: 138 objecten van één site kregen 50 m² uit het oppervlaktefilter."""
+    t2 = re.sub(r"<select\b.*?</select>|<option\b.*?</option>|<datalist\b.*?</datalist>", " ", t, flags=re.S | re.I)
+    t2 = re.sub(r"<script.*?</script>|<style.*?</style>|<noscript.*?</noscript>", " ", t2, flags=re.S | re.I)
     t2 = re.sub(r"<(br|/p|/div|/li|/h\d|/tr)[^>]*>", "\n", t2, flags=re.I)
     txt = htmlmod.unescape(re.sub(r"<[^>]+>", " ", t2))
     return re.sub(r"[ \t\r\f\v]+", " ", txt)
