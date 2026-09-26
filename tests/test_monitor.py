@@ -851,3 +851,57 @@ def test_coordinaten_worden_rechtgezet():
     assert not W.in_ring(0.200, 38.790, ring)
     d = W.afstand_tot_ring_m((0.190, 38.7905), ring, 38.79)
     assert 700 < d < 850, d                                     # ongeveer 780 meter naar het oosten
+
+
+def test_discordkaartje_toont_bron_en_link():
+    """Jan 26-09-2026: het oude bericht was één lap tekst, zonder bron en zonder link."""
+    from dh import alerts
+    it = {"id": 1, "ref": "CHA0730", "zone_label": "Granadella – Balcón al Mar", "price": 430000,
+          "class": "blauw", "scenario": "Sloop en nieuwbouw 291 m²", "per_maand": 14814,
+          "source": "makelaar:randofrealestate.com",
+          "url": "https://www.randofrealestate.com/casa-chalet-es1771041.html",
+          "calc": {"result": 385168, "months": 20}, "bod": {"opening": 354000}}
+    k = alerts.kaartje(it)
+    assert k["title"].startswith("Granadella") and "430.000" in k["title"]
+    assert k["url"] == it["url"]                                   # de titel is aanklikbaar
+    namen = {f["name"]: f["value"] for f in k["fields"]}
+    assert namen["Resultaat"] == "€ 385.168"
+    assert namen["Per maand"] == "€ 14.814"
+    assert namen["Openen op"] == "€ 354.000"
+    assert namen["Staat bij"] == "Randof Real Estate"              # naam, niet het webadres
+    assert "CHA0730" in k["footer"]["text"] and "20 maanden" in k["footer"]["text"]
+    # een object zonder link krijgt geen url-veld in plaats van een kapotte
+    zonder = alerts.kaartje({**it, "url": ""})
+    assert "url" not in zonder
+    # de begeleidende tekst blijft kort
+    tekst = alerts.message([it], [], None)
+    assert len(tekst) < 300, tekst
+    assert "sterke kans" in tekst
+    # en niet meer dan tien kaartjes, want dat is de grens van Discord
+    veel = alerts.kaartjes_voor([it] * 8, [it] * 8)
+    assert len(veel) == alerts.MAX_KAARTJES == 10
+
+
+def test_rente_is_recht_evenredig_en_dat_staat_erbij():
+    """Jan 26-09-2026: standaard 5 %, want dat is het tarief van één investeerder en van daaruit
+    rekent hij zelf 10 of 15 % uit. Dat kan alleen als de rente lineair is in het percentage, en
+    daarom staat het bedrag per 5 procentpunt er los bij."""
+    h = _rekenmodule()
+    p = {"finance_rate_default": 0.05, "finance_fee_pct": 0.0}
+    sc = h.Scenario(key="N", label="n", kind="nieuwbouw", newbuild_m2=300, result_m2=300,
+                    permit_months=5, build_months=12, sale_months=3)
+    vijf = h.financing(400000, 50000, 600000, sc, p, rate=0.05)["total"]
+    tien = h.financing(400000, 50000, 600000, sc, p, rate=0.10)["total"]
+    vijftien = h.financing(400000, 50000, 600000, sc, p, rate=0.15)["total"]
+    assert abs(tien - 2 * vijf) < 1, (vijf, tien)
+    assert abs(vijftien - 3 * vijf) < 1, (vijf, vijftien)
+    # en het resultaat zakt met precies dat bedrag per 5 procentpunt
+    k = {"rendementseis_op_projectkosten": 0.25, "doorlooptijd_max_maanden": 24,
+         "bouwkosten_eur_per_m2": {"renovatie": 1000, "nieuwbouw": 2000},
+         "verkoop_via_eigen_kantoor": True}
+    par = json.loads((Path(__file__).resolve().parents[1] / "kader" / "parameters.json").read_text())["values"]
+    r5 = h.project(400000, sc, 1_500_000, k, par, False, finance_rate=0.05)
+    r10 = h.project(400000, sc, 1_500_000, k, par, False, finance_rate=0.10)
+    assert abs((r5["result"] - r10["result"]) - r5["financing"]["total"]) < 2
+    # het standaardtarief in de parameters staat op 5 %
+    assert par["finance_rate_default"] == 0.05

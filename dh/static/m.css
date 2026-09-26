@@ -373,3 +373,19 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
 .notitie .nuit { margin: 0.35rem 0 0; font-size: 0.76rem; min-height: 1rem; color: var(--muted); }
 .notitie .nuit.ok { color: var(--c-groen); }
 .notitie .nuit.fout { color: var(--bad); }
+
+/* Met welk rentetarief er is gerekend, en wat elke 5 procentpunt extra kost (Jan, 26-09-2026). */
+.card .rente { display: block; padding: 0.35rem 0.8rem 0; font-size: 0.72rem; color: var(--muted); }
+
+/* Waarschuwing als meldingen niet aankomen (26-09-2026). Tot die datum ging
+   dat geruisloos mis: 14 kansen zijn nooit bezorgd en dat was nergens te zien. */
+#bezorgbalk {
+  margin: 8px 0 4px;
+  padding: 10px 12px;
+  border: 1px solid #b86e12;
+  background: #fdf6ec;
+  color: #6b3f06;
+  font-size: 14px;
+  line-height: 1.45;
+}
+#bezorgbalk b { font-weight: 600; }

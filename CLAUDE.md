@@ -406,5 +406,20 @@ B grond en projectontwikkeling, C renovatie- en leveringsopdrachten
   - Register 94 → 98 regels. 54 tests groen.
   - **Nog niet gebouwd:** de vijftig meter van een doorgaande weg (er is een bron met weggeometrie
     nodig), brand en erfgoed, en het prijspeil uit de Catastro-zonemodules.
+- **26-09-2026: het Discord-bericht is nu een rij kaartjes.** Jan: "een grote lap tekst en lastig te
+  lezen, en ik mis de bron". Het oude bericht zette per object acht getallen op één regel en noemde
+  alleen een referentie als `TyM4RCYW4`. Nu stuurt `alerts.send` Discord-embeds: per object een
+  kaartje met de wijk en de vraagprijs als **aanklikbare titel** naar de advertentie, het scenario
+  eronder, vier vakjes (resultaat, per maand, openen op, staat bij) en in de voettekst de referentie
+  en de doorlooptijd. De bronnaam komt uit `kader/makelaars.json`, dus "Randof Real Estate" in plaats
+  van "randofrealestate.com". Hoogstens tien kaartjes per bericht; dat is de grens van Discord.
+  De begeleidende tekst is teruggebracht tot twee regels.
+- **26-09-2026: standaardrente van 15 % naar 5 %.** Jan werkt met meerdere investeerders en vond
+  15 % lastig als uitgangspunt; 5 % is het tarief van één van hen en daar rekent hij zelf vanaf.
+  Dat kán ook, want de rente is recht evenredig met het percentage: € 60.626 bij 5 % is € 121.252 bij
+  10 % en € 181.878 bij 15 %, en van het resultaat gaat telkens datzelfde bedrag af. Daarom staat
+  `financing_per_5pct` nu apart in de rekensom en op het kaartje ("Elke 5 % meer kost € 60.626 van
+  het resultaat"), ook in het Discord-kaartje. De schuif in het dossier blijft, zodat je per project
+  het tarief van die investeerder kunt zetten.
 - Let op bij de BP-feed: plaatsnaam staat als "Javea" zonder accent;
   filteren op "Jávea" of "Xàbia" geeft 0.

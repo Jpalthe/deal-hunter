@@ -341,6 +341,10 @@ def compute(row: dict, overrides: dict | None = None, scenario_key: str | None =
                 "earthworks": round(base["earthworks"]),
                 "financing": round(base["financing"]["total"]),
                 "financing_rate": base["financing"]["rate"],
+                # Rente is recht evenredig met het percentage, dus dit ene getal maakt elk ander
+                # tarief uit het hoofd uit te rekenen (Jan 26-09-2026).
+                "financing_per_5pct": round(base["financing"]["total"] / base["financing"]["rate"] * 0.05)
+                if base["financing"]["rate"] else 0,
                 "financing_per_month": round(base["financing"]["per_month"]),
                 "total_costs": round(base["total_costs"]), "sale": round(sales["base"]),
                 "result": round(base["result"]), "margin": round(base["margin_on_sale"], 4),

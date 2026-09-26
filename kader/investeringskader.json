@@ -10,12 +10,12 @@
     "datum": "25-09-2026",
     "bron": "Jan, interactieve vragen 25-09-2026",
     "dekking": "aankoop en bouw, 100 % geleend, geen eigen inbreng",
-    "rente_pct_default": 0.15,
+    "rente_pct_default": 0.05,
     "rente_per_project_instelbaar": true,
     "rente_grondslag": "Aankoopsom plus kosten koper vanaf dag één over de hele doorlooptijd. Bouwkosten naar rato van de opgenomen tranches; gerekend als gemiddeld de helft van de bouwsom over de bouwperiode.",
     "afsluitkosten": 0,
     "boete_vervroegd_aflossen": null,
-    "toelichting": "Jan werkt met verschillende investeerders die elk een ander tarief rekenen, daarom is het percentage per project te wijzigen. 15 % is de standaard."
+    "toelichting": "Jan werkt met verschillende investeerders die elk een ander tarief rekenen. De standaard staat op 5 %, het tarief van één van hen, omdat daar makkelijk vanaf te rekenen is: de rente is recht evenredig met het percentage. Staat er € 60.000 rente bij 5 %, dan is dat € 120.000 bij 10 % en € 180.000 bij 15 %, en gaat er van het resultaat telkens datzelfde bedrag af. Het percentage is per project te verschuiven in het dossier."
   },
   "rente_jaar": 0.0,
   "doorlooptijd_max_maanden": 24,

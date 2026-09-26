@@ -36,7 +36,7 @@
     "fitout_overlap_eur_per_m2": 115,
     "earthworks_light_eur": 15000,
     "earthworks_steep_eur": 50000,
-    "finance_rate_default": 0.15,
+    "finance_rate_default": 0.05,
     "finance_fee_pct": 0.0
   },
   "sources": {
@@ -302,6 +302,11 @@
         "pool_renovation_eur": 12000,
         "demolition_eur_per_m2": 90
       }
+    },
+    "26-09-2026-rente": {
+      "wie": "Jan",
+      "wat": "Standaardrente van 15 % naar 5 %. Jan werkt met meerdere investeerders die elk een ander tarief rekenen; 5 % is het tarief van één van hen en het rekent makkelijk door. Rente is recht evenredig met het percentage, dus het getoonde rentebedrag is precies wat elke 5 procentpunt extra kost.",
+      "oude_waarde": 0.15
     }
   }
 }

@@ -14,7 +14,10 @@ zichtbaar op het dashboard en de telefoonpagina.
 """
 from __future__ import annotations
 
+import json
 import logging
+import re
+from functools import lru_cache
 from datetime import datetime
 
 import httpx
@@ -97,21 +100,32 @@ def herinneringen_tekst(rijen: list[dict]) -> str:
 
 
 def message(direct: list[dict], collected: list[dict], report_url: str | None) -> str | None:
-    """Bouwt het Discord-bericht. Geeft None als er niets te melden is."""
+    """De begeleidende regel boven de kaartjes. Kort houden: het detail staat in de kaartjes.
+
+    Jan 26-09-2026: het oude bericht was één lap tekst met per object acht getallen op één regel.
+    Wat hij miste was juist het eenvoudigste — bij welke makelaar het staat en een link erheen."""
     if not direct and not collected:
         return None
-    parts: list[str] = []
+    delen = []
     if direct:
-        parts.append(f"🟢 **{len(direct)} sterke kans{'en' if len(direct) != 1 else ''}** — haalt de marge al bij de vraagprijs.")
-        parts += [line(i) for i in direct[:10]]
-        parts.append("Controleer perceel en vergunning vóór enig contact. Er gaat niets de deur uit zonder jouw akkoord.")
+        delen.append(f"🟢 **{len(direct)} sterke kans{'en' if len(direct) != 1 else ''}**")
     if collected:
-        parts.append("")
-        parts.append(f"🟠 **{len(collected)} binnen onderhandelbereik** — haalbaar tot 30 % onder de vraagprijs.")
-        parts += [line(i) for i in collected[:15]]
+        delen.append(f"🟠 {len(collected)} binnen onderhandelbereik")
+    regels = [" · ".join(delen)]
+    getoond = len(direct[:MAX_KAARTJES]) + max(0, MAX_KAARTJES - len(direct[:MAX_KAARTJES]))
+    totaal = len(direct) + len(collected)
+    if totaal > MAX_KAARTJES:
+        regels.append(f"De {MAX_KAARTJES} sterkste staan hieronder; de rest in de app.")
+    regels.append("Tik op de titel om de advertentie te openen. Controleer perceel en vergunning "
+                  "vóór enig contact.")
     if report_url:
-        parts.append(f"\nVolledig rapport: {report_url}")
-    return "\n".join(parts)
+        regels.append(f"Volledig rapport: {report_url}")
+    return "\n".join(regels)
+
+
+def kaartjes_voor(direct: list[dict], collected: list[dict]) -> list[dict]:
+    """De objecten als kaartjes, sterkste eerst."""
+    return [kaartje(i) for i in (direct + collected)][:MAX_KAARTJES]
 
 
 def _html(text: str) -> str:
@@ -158,9 +172,10 @@ def send_email(env: dict, text: str, onderwerp: str) -> str:
     return "e-mail: verzonden"
 
 
-def bezorg(env: dict, text: str, onderwerp: str = "Deal Hunter") -> str:
+def bezorg(env: dict, text: str, onderwerp: str = "Deal Hunter",
+           kaartjes: list[dict] | None = None) -> str:
     """Beide kanalen. Eén kanaal dat uitvalt mag het andere niet tegenhouden."""
-    return " · ".join((send(env, text), send_email(env, text, onderwerp)))
+    return " · ".join((send(env, text, kaartjes), send_email(env, text, onderwerp)))
 
 
 def is_bezorgd(uitslag: str | None) -> bool:
@@ -200,17 +215,102 @@ def bezorgstand(store: Store) -> dict:
     }
 
 
-def send(env: dict, text: str) -> str:
+# Discord kleurt de streep links van een kaartje. Zelfde kleuren als in de app.
+KLEUR = {"groen": 0x2F7A55, "blauw": 0x2F6386, "oranje": 0xB86E12,
+         "grijs": 0x8C918E, "onzeker": 0x7D6A9C}
+MAX_KAARTJES = 10          # de bovengrens van Discord per bericht
+
+
+@lru_cache(maxsize=1)
+def _kantoornamen() -> dict:
+    """Host → de naam zoals het kantoor zichzelf noemt, uit kader/makelaars.json."""
+    try:
+        d = json.loads((config.KADER / "makelaars.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    uit = {}
+    for k in d.get("kantoren") or []:
+        w = (k.get("website") or "").split("//")[-1].replace("www.", "").strip("/")
+        naam = re.sub(r"\s*\(.*?\)\s*", " ", k.get("naam") or "").strip()
+        naam = re.sub(r",?\s*(S\.L\.U?\.?|S\.A\.)\s*$", "", naam).strip()
+        if w and naam:
+            uit[w] = naam
+    return uit
+
+
+def _bron(it: dict) -> str:
+    """Bij welke aanbieder de advertentie staat. Jan miste dit in het bericht (26-09-2026)."""
+    if it.get("kantoor"):
+        return str(it["kantoor"])
+    b = str(it.get("source") or "")
+    if b.startswith("makelaar:"):
+        host = b.split(":", 1)[1]
+        uit = _kantoornamen().get(host)
+        if uit:
+            return uit
+        naam = host.rsplit(".", 1)[0].replace("-", " ")
+        return naam[:1].upper() + naam[1:]
+    return {"bp": "Background Properties", "idealista": "Idealista",
+            "idealista-zoek": "Idealista"}.get(b, b or "onbekend")
+
+
+def kaartje(it: dict) -> dict:
+    """Eén object als Discord-kaartje: te scannen, met de bron en een link naar de advertentie.
+
+    Waarom dit er is: het oude bericht was één lap tekst waarin per regel de referentie, de wijk, de
+    vraagprijs, de maximale prijs, het percentage, het scenario, het resultaat en de marge stonden.
+    Dat leest niemand. Nu staan de vier bedragen in vakjes, is de titel aanklikbaar naar de
+    advertentie, en staat eronder bij wie hij staat."""
+    c = it.get("calc") or {}
+    bod = it.get("bod") or {}
+    waar = it.get("zone_label") or it.get("area_label") or "Jávea"
+    velden = []
+    if c.get("result") is not None:
+        velden.append({"name": "Resultaat", "value": _eur(c.get("result")), "inline": True})
+    if it.get("per_maand"):
+        velden.append({"name": "Per maand", "value": _eur(it["per_maand"]), "inline": True})
+    if bod.get("opening"):
+        velden.append({"name": "Openen op", "value": _eur(bod["opening"]), "inline": True})
+    if c.get("financing_per_5pct"):
+        velden.append({"name": f"Rente {c.get('financing_rate', 0) * 100:.0f} %",
+                       "value": f"{_eur(c['financing'])}\nelke 5 % meer: {_eur(c['financing_per_5pct'])}",
+                       "inline": True})
+    velden.append({"name": "Staat bij", "value": _bron(it), "inline": True})
+    if it.get("bronnen", 1) > 1:
+        velden.append({"name": "Ook bij", "value": ", ".join(
+            o.get("bron", "?") for o in (it.get("ook_bij") or []))[:60], "inline": True})
+    onder = [str(it.get("ref") or "")]
+    if c.get("months"):
+        onder.append(f"{c['months']} maanden")
+    if it.get("water", {}) and (it.get("water") or {}).get("waarschuwing"):
+        onder.append("let op: water")
+    kaart = {
+        "title": f"{waar} · {_eur(it.get('price'))}"[:250],
+        "color": KLEUR.get(it.get("class"), 0x8C918E),
+        "description": (it.get("scenario") or "")[:180],
+        "fields": velden[:6],
+        "footer": {"text": " · ".join(x for x in onder if x)[:120]},
+    }
+    u = str(it.get("url") or "")
+    if u.startswith("http"):
+        kaart["url"] = u
+    return kaart
+
+
+def send(env: dict, text: str, kaartjes: list[dict] | None = None) -> str:
     url = env.get("DISCORD_WEBHOOK_URL")
     if not url:
         return "discord: overgeslagen (geen DISCORD_WEBHOOK_URL in .env)"
     chunks = [text[i:i + 1900] for i in range(0, len(text), 1900)][:3]
     try:
         with httpx.Client(timeout=20) as c:
-            for ch in chunks:
-                r = c.post(url, json={"content": ch, "username": "TREE Deal Hunter"})
+            for n, ch in enumerate(chunks):
+                lading = {"content": ch, "username": "TREE Deal Hunter"}
+                if kaartjes and n == 0:
+                    lading["embeds"] = kaartjes[:MAX_KAARTJES]
+                r = c.post(url, json=lading)
                 if r.status_code >= 300:
-                    return f"discord: fout {r.status_code}"
+                    return f"discord: fout {r.status_code} {r.text[:120]}"
     except Exception as e:  # noqa: BLE001
         return f"discord: fout {str(e)[:100]}"
     return f"discord: verzonden ({len(chunks)} bericht(en))"
@@ -260,7 +360,8 @@ def run(store: Store, run_id: int, items: list[dict], env: dict, report_url: str
         onderwerp = (f"Deal Hunter: {len(found['direct'])} sterke kans"
                      f"{'en' if len(found['direct']) != 1 else ''}" if found["direct"]
                      else f"Deal Hunter: {len(found['verzamel'])} binnen onderhandelbereik")
-        status = bezorg(env, text, onderwerp) if deliver else "niet verstuurd (dry-run)"
+        status = bezorg(env, text, onderwerp,
+                        kaartjes_voor(found["direct"], found["verzamel"])) if deliver else "niet verstuurd (dry-run)"
     for tier in ("direct", "verzamel"):
         for it in found[tier]:
             store.add_alert(run_id, int(it["id"]), tier, it.get("class"), it.get("price"),

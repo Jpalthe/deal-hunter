@@ -201,7 +201,9 @@ function card(x) {
       <div><span class="k">Bouw</span><span class="v">${eur(c.build)}</span></div>
       <div><span class="k">Verkoop</span><span class="v">${eur(c.sale)}</span></div>
       <div><span class="k">Resultaat</span><span class="v ${c.result < 0 ? 'neg' : (haalt ? 'pos' : '')}">${eur(c.result)}</span></div>
-    </div>` : '';
+    </div>
+    ${c.financing_per_5pct ? `<span class="rente">Gerekend met ${pct(c.financing_rate, 0)} rente.
+      Elke 5 % meer kost ${eur(c.financing_per_5pct)} van het resultaat.</span>` : ''}` : '';
   const merk = x.merk || '';
   const adv = safeUrl(x.url);          // Jan 26-09-2026: geen foto's, wel een duidelijke weg naar de bron
   const bij = aanbieder(x);
@@ -677,3 +679,27 @@ async function lookupCatastro() {
 setInterval(() => { if (!S.open && document.visibilityState === 'visible') load().catch(() => {}); }, 300000);
 
 load().catch((e) => { $('#runinfo').innerHTML = '<span class="fout">Geen verbinding met de server.</span>'; });
+laadBezorgstand();
+
+// ── Bezorging van meldingen ─────────────────────────────────────────────────
+// Tot 26-09-2026 mislukte het versturen geruisloos: veertien kansen zijn nooit
+// bezorgd omdat er geen webhook stond, en nergens was dat te zien. Deze balk
+// maakt dat zichtbaar zodra het weer gebeurt.
+async function laadBezorgstand() {
+  const balk = document.getElementById('bezorgbalk');
+  if (!balk) return;
+  try {
+    const d = await api('/api/bezorgstand');
+    if (!d || !d.gemist) { balk.hidden = true; return; }
+    const reden = (d.laatste_fout || '').includes('DISCORD_WEBHOOK_URL')
+      ? 'er staat geen Discord-webhook ingesteld'
+      : (d.laatste_fout || 'onbekende reden');
+    balk.innerHTML =
+      `<b>${d.gemist} melding${d.gemist === 1 ? '' : 'en'} niet bezorgd.</b> ` +
+      `Reden: ${esc(reden)}. Zet het kanaal goed bij Meer → Instellingen; ` +
+      `daarna kun je de gemiste kansen alsnog laten nasturen.`;
+    balk.hidden = false;
+  } catch (err) {
+    balk.hidden = true;   // liever geen balk dan een balk die zelf stuk is
+  }
+}
