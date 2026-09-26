@@ -53,6 +53,23 @@
 
     <div id="velden"></div>
 
+    <div class="veld" id="wachtwoordveld">
+      <h3>Wachtwoord van het dashboard</h3>
+      <p><span class="stand nee" id="wwstand">wordt geladen…</span>
+         Het tweede slot, achter Cloudflare. Minstens twaalf tekens; bewaar het
+         in je wachtwoordbeheerder. Na het wijzigen moet je opnieuw inloggen.</p>
+      <div class="rij" id="wwoudrij" hidden>
+        <input type="password" id="wwoud" placeholder="Huidig wachtwoord"
+               autocomplete="current-password">
+      </div>
+      <div class="rij">
+        <input type="password" id="wwnieuw" placeholder="Nieuw wachtwoord"
+               autocomplete="new-password">
+        <button id="wwzet">Opslaan</button>
+      </div>
+      <p class="uitslag" id="wwuitslag"></p>
+    </div>
+
     <div class="veld">
       <h3>Proefbericht</h3>
       <p>Stuurt één bericht via alles wat hierboven is ingevuld, zodat je weet dat het werkt.</p>
@@ -119,7 +136,46 @@ document.addEventListener('click', async (e) => {
   }
 });
 
+// ── Wachtwoord ──────────────────────────────────────────────────────────────
+async function laadToegang() {
+  const stand = document.getElementById('wwstand');
+  try {
+    const d = await (await fetch('/api/toegang')).json();
+    document.getElementById('wwoudrij').hidden = !d.beveiligd;
+    stand.className = 'stand ' + (d.beveiligd ? 'ja' : 'nee');
+    stand.textContent = d.beveiligd ? '✓ beveiligd' : 'nog geen wachtwoord';
+  } catch (err) { stand.textContent = 'stand onbekend'; }
+}
+
+document.getElementById('wwzet').addEventListener('click', async () => {
+  const uit = document.getElementById('wwuitslag');
+  const nieuw = document.getElementById('wwnieuw');
+  const oud = document.getElementById('wwoud');
+  if (nieuw.value.length < 12) {
+    uit.className = 'uitslag fout';
+    uit.textContent = 'Kies er een van minstens twaalf tekens.';
+    return;
+  }
+  uit.className = 'uitslag'; uit.textContent = 'Bezig…';
+  try {
+    const r = await fetch('/api/wachtwoord', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nieuw: nieuw.value, oud: oud ? oud.value : '' }) });
+    const d = await r.json();
+    if (r.ok) {
+      uit.className = 'uitslag ok';
+      uit.textContent = 'Opgeslagen. Je moet nu opnieuw inloggen.';
+      nieuw.value = ''; if (oud) oud.value = '';
+      setTimeout(() => { location.href = '/inloggen'; }, 1500);
+    } else {
+      uit.className = 'uitslag fout';
+      uit.textContent = d.detail || 'Dat lukte niet.';
+    }
+  } catch (err) { uit.className = 'uitslag fout'; uit.textContent = 'Geen verbinding met de server.'; }
+});
+
 laad();
+laadToegang();
 </script>
 </body>
 </html>

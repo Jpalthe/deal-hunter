@@ -92,6 +92,10 @@ INSTELBAAR = {
     "DH_EMAIL_TO": "Adres waar de e-mail heen gaat",
     "DH_EMAIL_FROM": "Afzender van de e-mail (mag leeg)",
     "ANTHROPIC_API_KEY": "Sleutel voor de AI-classificatie",
+    # Let op: hier staat een hash, nooit het wachtwoord zelf. Zetten gaat via
+    # POST /api/wachtwoord, dat eerst hasht; het algemene instellingen-eindpunt
+    # weigert deze sleutel met opzet.
+    "DH_WACHTWOORD_HASH": "Wachtwoord om het dashboard te openen",
 }
 
 

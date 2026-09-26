@@ -21,11 +21,11 @@ from datetime import datetime, timedelta
 
 import httpx
 from defusedxml import ElementTree as ET
-from fastapi import Body, FastAPI, HTTPException, Query
+from fastapi import Body, FastAPI, HTTPException, Query, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
-from . import alerts, config, feasibility, focus
+from . import alerts, config, feasibility, focus, toegang
 from .store import Store
 from .summary import (bouw_ctx as summary_ctx, AREA_LABEL, CLASS_LABEL, ZONE_LABEL, events_since, jload,
                       listing_summary)
@@ -33,6 +33,117 @@ from .summary import (bouw_ctx as summary_ctx, AREA_LABEL, CLASS_LABEL, ZONE_LAB
 STATIC = config.ROOT / "dh" / "static"
 app = FastAPI(title="TREE Deal Hunter", docs_url=None, redoc_url=None, openapi_url=None)
 app.mount("/static", StaticFiles(directory=str(STATIC)), name="static")
+
+
+# ── Toegang ──────────────────────────────────────────────────────────────────
+# Tweede slot, achter Cloudflare Access. Staat uit zolang er geen wachtwoord is
+# ingesteld (`python3 scripts/zet-wachtwoord.py`), zodat dit een draaiende
+# dienst niet stilzet. Zie dh/toegang.py voor het waarom.
+
+INLOG_PAGINA = """<!doctype html>
+<html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deal Hunter</title>
+<style>
+ :root{--pine:#1f3d2b;--paper:#f7f5f0;--line:#d8d2c6;--rood:#8c3a2b}
+ *{box-sizing:border-box}
+ body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);
+      color:var(--pine);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+ form{width:min(92vw,320px);display:grid;gap:14px}
+ h1{font-size:15px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:0 0 6px}
+ input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:0;
+       background:#fff;font-size:16px;color:var(--pine)}
+ button{padding:13px;border:0;border-radius:0;background:var(--pine);color:var(--paper);
+        font-size:15px;letter-spacing:.06em;cursor:pointer}
+ p.fout{margin:0;color:var(--rood);font-size:14px}
+</style></head><body>
+<form method="post" action="/inloggen">
+ <h1>Deal Hunter</h1>
+ __FOUT__
+ <input type="password" name="wachtwoord" placeholder="Wachtwoord" autofocus
+        autocomplete="current-password" required>
+ <button type="submit">Openen</button>
+</form></body></html>"""
+
+
+def _inlogpagina(fout: str = "") -> HTMLResponse:
+    melding = f'<p class="fout">{fout}</p>' if fout else ""
+    status = 401 if fout else 200
+    return HTMLResponse(INLOG_PAGINA.replace("__FOUT__", melding), status_code=status)
+
+
+@app.get("/inloggen", response_class=HTMLResponse)
+def inlogpagina():
+    return _inlogpagina()
+
+
+@app.post("/inloggen")
+async def inloggen(request: Request):
+    """Formulier handmatig ontleden: zo is python-multipart niet nodig."""
+    from urllib.parse import parse_qs
+
+    adres = request.client.host if request.client else "onbekend"
+    if toegang.te_veel_pogingen(adres):
+        return _inlogpagina("Te veel pogingen. Probeer het over een kwartier opnieuw.")
+
+    ruw = (await request.body()).decode("utf-8", "replace")
+    wachtwoord = (parse_qs(ruw).get("wachtwoord") or [""])[0]
+
+    if not toegang.klopt_wachtwoord(wachtwoord):
+        toegang.noteer_poging(adres)
+        return _inlogpagina("Dat wachtwoord klopt niet.")
+
+    toegang.wis_pogingen(adres)
+    antwoord = RedirectResponse("/m", status_code=303)
+    antwoord.set_cookie(
+        toegang.COOKIE_NAAM,
+        toegang.maak_cookie(),
+        max_age=toegang.GELDIG_SECONDEN,
+        httponly=True,
+        samesite="lax",
+        # Alleen over https, behalve lokaal op de Mac zelf.
+        secure=request.url.scheme == "https",
+        path="/",
+    )
+    return antwoord
+
+
+@app.post("/api/wachtwoord")
+def wachtwoord_zetten(body: dict = Body(...)):
+    """Zet of wijzigt het wachtwoord — bedoeld voor de telefoon.
+
+    Alleen de hash gaat naar .env; het wachtwoord zelf wordt nergens bewaard,
+    gelogd of teruggetoond. Staat er al een wachtwoord, dan moet het oude mee:
+    anders zou iemand met een geldige sessie het stilletjes kunnen overnemen.
+    """
+    nieuw = str(body.get("nieuw") or "")
+    if len(nieuw) < 12:
+        raise HTTPException(400, "Kies er een van minstens twaalf tekens.")
+    if toegang.controle_actief():
+        if not toegang.klopt_wachtwoord(str(body.get("oud") or "")):
+            raise HTTPException(400, "Het huidige wachtwoord klopt niet.")
+    config.save_env_key("DH_WACHTWOORD_HASH", toegang.maak_hash(nieuw))
+    # Alle bestaande cookies vervallen: de ondertekensleutel hangt aan de hash.
+    return {"ok": True, "opnieuw_inloggen": True}
+
+
+@app.get("/api/toegang")
+def toegang_status():
+    """Zegt alleen óf er een wachtwoord staat, nooit wat het is."""
+    return {"beveiligd": toegang.controle_actief()}
+
+
+@app.middleware("http")
+async def bewaak_toegang(request: Request, call_next):
+    if not toegang.controle_actief() or toegang.pad_is_vrij(request.url.path):
+        return await call_next(request)
+    if toegang.cookie_geldig(request.cookies.get(toegang.COOKIE_NAAM)):
+        return await call_next(request)
+    # Een pagina krijgt de inlog te zien; een API-verzoek een eerlijke 401,
+    # zodat de app niet stilletjes HTML in een JSON-veld krijgt.
+    if request.url.path.startswith("/api/"):
+        return JSONResponse({"error": "niet_aangemeld"}, status_code=401)
+    return _inlogpagina()
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -267,8 +378,11 @@ EMAIL_VORM = re.compile(r"^[^@\s,]+@[^@\s,]+\.[a-z]{2,}$", re.I)
 def instellingen_lezen():
     """Welke sleutels zijn gevuld. Nooit de waarden zelf, ook niet gedeeltelijk."""
     env = config.load_env()
+    # Het wachtwoord staat bewust niet in deze lijst: het hoort in een echt
+    # wachtwoordveld (POST /api/wachtwoord), niet in een gewoon tekstvak.
     return {"sleutels": [{"naam": k, "uitleg": v, "gevuld": bool((env.get(k) or "").strip())}
-                         for k, v in config.INSTELBAAR.items()]}
+                         for k, v in config.INSTELBAAR.items()
+                         if k != "DH_WACHTWOORD_HASH"]}
 
 
 @app.post("/api/instellingen")
@@ -278,6 +392,10 @@ def instellingen_zetten(body: dict = Body(...)):
     waarde = str(body.get("waarde") or "").strip()
     if naam not in config.INSTELBAAR:
         raise HTTPException(400, "onbekende instelling")
+    if naam == "DH_WACHTWOORD_HASH":
+        # Hier komt nooit een wachtwoord binnen: dat zou het onversleuteld in
+        # .env zetten. Zetten gaat via /api/wachtwoord, dat eerst hasht.
+        raise HTTPException(400, "het wachtwoord zet je via het wachtwoordveld")
     if waarde:
         if naam == "DISCORD_WEBHOOK_URL" and not WEBHOOK_VORM.match(waarde):
             raise HTTPException(400, "Dat ziet er niet uit als een Discord-webhook. "
