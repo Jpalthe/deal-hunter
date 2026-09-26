@@ -16,7 +16,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 
-from dh import config, dashboard, feasibility, focus, summary  # noqa: E402
+from dh import config, dashboard, dubbel, feasibility, focus, summary  # noqa: E402
 from dh.store import Store  # noqa: E402
 
 OUT = config.ROOT / "rapporten" / "mobiel.html"
@@ -38,6 +38,7 @@ _ev7 = summary.events_since(store, 7)
 _ctx = summary.bouw_ctx(store)
 _alles = [summary.listing_summary(store, r, _ev7, _ctx) for r in focus.rijen(store)]
 items = [i for i in _alles if i.get("tab") == focus.KANSEN and i.get("merk") != "weg"]
+items = dubbel.voeg_samen(items)
 items.sort(key=lambda x: -(x.get("per_maand") or -1e12))
 store.close()
 

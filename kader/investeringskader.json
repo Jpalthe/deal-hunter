@@ -97,7 +97,15 @@
     "appartementen": "meedoen_gemerkt",
     "bestemming_streng": true,
     "toelichting": "Jávea is de hoofdlijst. Benitachell en Moraira worden gelezen en doorgerekend maar staan op een eigen tabblad. Geen prijsgrenzen meer, boven noch onder (Jan, 25-09-2026): de rekensom bepaalt of iets interessant is, niet de vraagprijs. Appartementen doen mee met een eigen merkje. Percelen waarvan de officiële bestemming niet stedelijk is, gaan naar het tabblad 'misschien later'; is de bestemming nog niet opgevraagd, dan blijft het object in de hoofdlijst staan met de vermelding dat dit ONBEKEND is — een niet-gestelde vraag is geen afwijzing.",
-    "later_alleen_urbaniseerbaar": true
+    "later_alleen_urbaniseerbaar": true,
+    "opknapper_vermoeden": {
+      "aan": true,
+      "bouwjaar_voor": 1995,
+      "korting_op_wijkprijs_min": 0.4,
+      "bron": "Jan, 26-09-2026",
+      "toelichting": "Een gewoon huis waarvan de advertentie niets zegt, komt tóch in de lijst als het van vóór 1995 is en meer dan 40 % onder de wijkprijs per m² staat. Het bouwjaar komt uit het kadaster, dus dat is hard; de wijkprijs is een vraagprijzenreeks."
+    },
+    "dubbel_samenvoegen": true
   },
   "bouwtarief_besluit": {
     "datum": "25-09-2026",

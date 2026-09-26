@@ -37,6 +37,8 @@ STANDAARD = {
     "bovengrens": None,
     "bestemming_streng": True,
     "later_alleen_urbaniseerbaar": True,
+    "opknapper_vermoeden": {"aan": True, "bouwjaar_voor": 1995, "korting_op_wijkprijs_min": 0.40},
+    "dubbel_samenvoegen": True,
 }
 
 
@@ -79,6 +81,10 @@ def juiste_soort(item: dict, f: dict | None = None) -> bool:
         scen = (item.get("scenario") or "").lower()
         if "sloop" in scen or "nieuwbouw" in scen:
             return True
+    # Jan 26-09-2026: een gewoon huis waarvan de advertentie niets zegt, telt tóch mee als het oud is
+    # én meer dan 40 % onder de wijkprijs staat. Zie renovatie.opknapper_vermoeden.
+    if (f.get("opknapper_vermoeden") or {}).get("aan") and item.get("opknapper"):
+        return True
     return False
 
 
@@ -131,6 +137,14 @@ def rijen(store, alle_gebieden: bool = True) -> list:
         args += cats
         if f.get("sloop_nieuwbouw_telt_mee"):
             q += " OR (plot_m2 >= 800 AND built_m2 IS NOT NULL)"
+        ok = f.get("opknapper_vermoeden") or {}
+        if ok.get("aan"):
+            # Kandidaten voor het opknappervermoeden alvast binnenhalen: een bouwjaar uit het
+            # kadaster is in SQL te toetsen, de wijkprijs niet. Dat laatste doet `past()`.
+            q += (" OR (price IS NOT NULL AND built_m2 IS NOT NULL AND EXISTS("
+                  "SELECT 1 FROM parcels p WHERE p.listing_id = listings.id AND p.year IS NOT NULL"
+                  " AND p.year < ?))")
+            args.append(int(ok.get("bouwjaar_voor", 1995)))
         q += ")"
     # Prijsondergrens alvast in SQL: het laagste van de twee, de rest zeeft `binnen_prijs`.
     onder = min(x for x in (f.get("ondergrens_perceel"), f.get("ondergrens_pand")) if x) if (

@@ -15,6 +15,7 @@ zichtbaar op het dashboard en de telefoonpagina.
 from __future__ import annotations
 
 import logging
+from datetime import datetime
 
 import httpx
 
@@ -80,6 +81,19 @@ def line(it: dict) -> str:
     where = " · ".join(x for x in [it.get("zone_label") or it.get("area_label"), it.get("location")] if x)
     return (f"- **{it.get('ref')}** {where} — vraagprijs {_eur(it.get('price'))}, "
             f"maximaal {_eur(it.get('max_price', {}).get('base'))} ({room_txt}). {it.get('scenario') or ''} {res}".rstrip())
+
+
+def herinneringen_tekst(rijen: list[dict]) -> str:
+    """Wie je vandaag moet terugbellen (Jan, 26-09-2026: mee in het bericht van 08:00)."""
+    if not rijen:
+        return ""
+    r = [f"📞 **{len(rijen)} keer terugbellen vandaag**"]
+    for h in rijen[:10]:
+        notitie = (h.get("notitie") or "").strip().replace("\n", " ")
+        r.append(f"- **{h.get('source_ref')}** {_eur(h.get('price'))}"
+                 + (f" — {notitie[:120]}" if notitie else "")
+                 + (f" (stond op {h['volgende_stap']})" if h.get("volgende_stap") else ""))
+    return "\n".join(r)
 
 
 def message(direct: list[dict], collected: list[dict], report_url: str | None) -> str | None:
@@ -194,7 +208,16 @@ def run(store: Store, run_id: int, items: list[dict], env: dict, report_url: str
                                 (it.get("max_price") or {}).get("base"), it.get("room"), delivered=status)
         log.info("meldingen: nulmeting met %s objecten", n)
         return {"direct": 0, "verzamel": 0, "nulmeting": n, "status": status, "refs": []}
+    # Terugbelafspraken die vandaag aflopen gaan mee in hetzelfde bericht.
+    vandaag = datetime.now(config.TZ).date().isoformat()
+    try:
+        terug = store.herinneringen(vandaag)
+    except Exception:  # noqa: BLE001 — een kapotte herinnering mag de meldingen niet tegenhouden
+        terug = []
+    kop = herinneringen_tekst(terug)
     text = message(found["direct"], found["verzamel"], report_url)
+    if kop:
+        text = kop + ("\n\n" + text if text else "")
     status = "niets te melden"
     if text:
         onderwerp = (f"Deal Hunter: {len(found['direct'])} sterke kans"
@@ -205,6 +228,10 @@ def run(store: Store, run_id: int, items: list[dict], env: dict, report_url: str
         for it in found[tier]:
             store.add_alert(run_id, int(it["id"]), tier, it.get("class"), it.get("price"),
                             (it.get("max_price") or {}).get("base"), it.get("room"), delivered=status)
-    log.info("meldingen: %s direct, %s verzamel — %s", len(found["direct"]), len(found["verzamel"]), status)
-    return {"direct": len(found["direct"]), "verzamel": len(found["verzamel"]), "status": status,
+    if terug and "verzonden" in status:
+        store.herinnering_verstuurd([int(h["listing_id"]) for h in terug])
+    log.info("meldingen: %s direct, %s verzamel, %s herinneringen — %s",
+             len(found["direct"]), len(found["verzamel"]), len(terug), status)
+    return {"direct": len(found["direct"]), "verzamel": len(found["verzamel"]),
+            "herinneringen": len(terug), "status": status,
             "refs": [i.get("ref") for i in found["direct"]][:10]}

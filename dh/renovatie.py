@@ -74,3 +74,43 @@ def beoordeel(item: dict, parcel: dict | None, sig: dict | None, comps: dict | N
 
     return {"punten": len(redenen), "redenen": redenen, "waardig": bool(redenen),
             "verbouwd_geclaimd": verbouwd}
+
+
+def opknapper_vermoeden(item: dict, parcel: dict | None, comps: dict | None,
+                        bouwjaar_voor: int = 1995, korting_min: float = 0.40) -> dict | None:
+    """Een gewoon huis dat tóch een opknapper is (Jan, 26-09-2026).
+
+    Buiten de lijst staan bijna zestienhonderd woningen in Jávea waarvan de advertentie niet zegt dat
+    er iets aan moet. Daar zitten oude villa's tussen. Twee harde eisen: het kadaster geeft een
+    bouwjaar van vóór `bouwjaar_voor`, en de vraagprijs per m² ligt meer dan `korting_min` onder de
+    wijkprijs. Eén ervan is niet genoeg: oud alleen zegt niets, en goedkoop alleen kan aan de ligging
+    of de staat van de urbanisatie liggen.
+
+    Geeft None als het niet opgaat, en anders de reden in gewone taal."""
+    jaar = (parcel or {}).get("year")
+    if not jaar or int(jaar) >= bouwjaar_voor:
+        return None
+    if VERBOUWD.search(str(item.get("titel_en_tekst") or "")):
+        return None
+    em2 = _eur_m2(item)
+    grens = _wijkgrens_mediaan(comps or {}, item.get("zone"), (item.get("type") or "villa").lower())
+    if not em2 or not grens:
+        return None
+    korting = 1 - em2 / grens
+    if korting < korting_min:
+        return None
+    return {"jaar": int(jaar), "eur_m2": em2, "wijkprijs": grens, "korting": round(korting, 3),
+            "reden": (f"Gebouwd in {int(jaar)} en € {em2:,}/m² tegenover € {grens:,}/m² in de wijk, "
+                      f"{korting * 100:.0f} % eronder").replace(",", ".")}
+
+
+def _wijkgrens_mediaan(comps: dict, zone: str | None, typologie: str) -> int | None:
+    """De mediaan van de gerenoveerde reeks: waar vergelijkbare woningen in die wijk voor staan."""
+    z = (comps or {}).get(zone or "")
+    if not isinstance(z, dict):
+        return None
+    for k in (f"{typologie}_renovated", "villa_renovated", "townhouse_renovated", "apartment_renovated"):
+        r = z.get(k)
+        if isinstance(r, dict) and r.get("median"):
+            return int(r["median"])
+    return None

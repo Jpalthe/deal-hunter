@@ -148,6 +148,7 @@ function sumBlock(x) {
 function vlaggen(x) {
   // Hoogstens twee vlaggetjes: meer maakt het kaartje weer een lap tekst.
   const v = [];
+  if (x.opknapper) v.push(`<span class="flag ok">${esc(x.opknapper.reden)}</span>`);
   if ((x.tegenspraak || []).length) v.push(`<span class="flag let">${esc(x.tegenspraak[0])}</span>`);
   if (x.bestemming && x.bestemming !== 'stedelijk') v.push(`<span class="flag let">${esc(x.bestemming)}</span>`);
   else if (x.bestemming_wonen === 'onbekend') v.push('<span class="flag">bestemming onbekend</span>');
@@ -205,6 +206,7 @@ function card(x) {
     <button class="card-open" data-id="${esc(x.id)}">
       <span class="head"><span class="where">${esc(waar)}</span><span class="price">${eur(x.price)}</span></span>
       <span class="maten">${maten && maten.startsWith(soortmerk) ? '' : esc(soortmerk) + (maten ? ' · ' : '')}${esc(maten || x.ref)}</span>
+      ${x.bronnen > 1 ? `<span class="bronnen">Staat bij ${esc(x.bronnen)} aanbieders: ${esc((x.ook_bij || []).map((o) => o.bron).join(', '))}${x.prijsverschil_tussen_bronnen ? ' · ' + eur(x.prijsverschil_tussen_bronnen) + ' verschil in vraagprijs' : ''}</span>` : ''}
       ${oordeelRegel(x)}
       ${som}
       <span class="flags">${vlaggen(x)}</span>
@@ -214,9 +216,41 @@ function card(x) {
     <div class="acts">
       <button class="act${merk === 'boeiend' ? ' on' : ''}" data-mark="boeiend" data-mid="${esc(x.id)}">♥ Boeiend</button>
       <button class="act${merk === 'gebeld' ? ' on' : ''}" data-mark="gebeld" data-mid="${esc(x.id)}">☎ Gebeld</button>
+      <button class="act${merk === 'bod' ? ' on' : ''}" data-mark="bod" data-mid="${esc(x.id)}">€ Bod uit</button>
       <button class="act weg" data-mark="weg" data-mid="${esc(x.id)}">✕ Weg</button>
     </div>
+    ${(merk === 'gebeld' || merk === 'bod') ? notitieblok(x) : ''}
   </article>`;
+}
+
+/* Wat je na een telefoontje wilt onthouden, en wanneer je eraan herinnerd wilt worden. De
+   herinnering komt mee in het ochtendbericht van 08:00 (Jan, 26-09-2026). */
+function notitieblok(x) {
+  return `<div class="notitie" data-nid="${esc(x.id)}">
+    <textarea rows="2" placeholder="Wat is er gezegd?">${esc(x.notitie || '')}</textarea>
+    <div class="nrij">
+      <label>Terugbellen op <input type="date" value="${esc(x.volgende_stap || '')}"></label>
+      <button data-bewaar="${esc(x.id)}">Bewaren</button>
+    </div>
+    <p class="nuit"></p>
+  </div>`;
+}
+
+async function bewaarNotitie(id) {
+  const blok = document.querySelector(`.notitie[data-nid="${id}"]`);
+  if (!blok) return;
+  const uit = blok.querySelector('.nuit');
+  const x = S.items.find((i) => i.id === id);
+  uit.className = 'nuit'; uit.textContent = 'Bewaren…';
+  try {
+    const r = await api('/api/markeer', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: id, merk: (x && x.merk) || 'gebeld',
+                             notitie: blok.querySelector('textarea').value,
+                             volgende_stap: blok.querySelector('input[type=date]').value || null }) });
+    if (x) { x.notitie = r.notitie; x.volgende_stap = r.volgende_stap; }
+    uit.className = 'nuit ok';
+    uit.textContent = r.volgende_stap ? 'Bewaard. Je krijgt er bericht over op ' + r.volgende_stap + '.' : 'Bewaard.';
+  } catch (e) { uit.className = 'nuit fout'; uit.textContent = 'Bewaren mislukt.'; }
 }
 
 function renderList() {
@@ -513,7 +547,8 @@ async function markeer(id, merk) {
                                 body: JSON.stringify({ id: id, merk: nieuw }) });
     toast(nieuw === 'geen' ? 'Merkje weggehaald' :
       nieuw === 'weg' ? 'Weggeklikt. Staat niet meer in de lijst.' :
-      nieuw === 'boeiend' ? 'Op de lijst Boeiend gezet' : 'Op de lijst Gebeld gezet');
+      nieuw === 'boeiend' ? 'Op de lijst Boeiend gezet' :
+      nieuw === 'bod' ? 'Bod uitgebracht' : 'Op de lijst Gebeld gezet');
   } catch (e) {
     x.merk = vorig;                                   // server wees het af: terugdraaien
     renderBar(); renderChips(); renderList();
@@ -540,6 +575,8 @@ document.addEventListener('click', (e) => {
   if (sg) { S.tab = sg.dataset.tab; S.zone = null; renderBar(); renderChips(); renderList(); syncMarkers(); return; }
   const mk = e.target.closest('[data-mark]');
   if (mk) { markeer(Number(mk.dataset.mid), mk.dataset.mark); return; }
+  const bw = e.target.closest('[data-bewaar]');
+  if (bw) { bewaarNotitie(Number(bw.dataset.bewaar)); return; }
   const zo = e.target.closest('[data-zone]'); if (zo) { S.zone = zo.dataset.zone || null; renderChips(); renderList(); syncMarkers(); return; }
   const kl = e.target.closest('[data-klasse]'); if (kl) { S.klasse = kl.dataset.klasse || null; renderChips(); renderList(); syncMarkers(); return; }
   const c = e.target.closest('.card-open'); if (c) return openDetail(Number(c.dataset.id));

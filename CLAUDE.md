@@ -345,5 +345,28 @@ B grond en projectontwikkeling, C renovatie- en leveringsopdrachten
     harde uitsluiting en stond op een perceel van € 30.000 dat als kans in beeld kwam. Aangevuld met
     Duits, Engels en Nederlands; nu 25 objecten in Jávea herkend.
   - 35 tests groen.
+- **26-09-2026 (avond): opknappers, dubbelingen en opvolging.** Zes keuzes van Jan, verwerkt.
+  - **Opknappers uit de bak "overig"** (`renovatie.opknapper_vermoeden`). Buiten de lijst stonden
+    1.588 woningen in Jávea waarvan de advertentie niets zegt. Een huis komt er nu tóch bij als het
+    kadaster een bouwjaar vóór 1995 geeft **én** de vraagprijs meer dan 40 % onder de wijkprijs per m²
+    ligt. Eén van de twee is niet genoeg. 28 objecten erbij, elk met de reden op het kaartje
+    ("Gebouwd in 1910 en € 1.443/m² tegenover € 4.364/m² in de wijk, 67 % eronder"). De grens staat
+    in `kader/investeringskader.json` → `focus.opknapper_vermoeden`.
+  - **Dubbele woningen samengevoegd** (`dh/dubbel.py`). Zelfde gebied, prijs binnen 1 %, oppervlakte
+    binnen 5 %, en **verschillende bron**. Die laatste eis is wezenlijk: zonder die regel plakte de
+    eerste versie tien appartementen van xabiacasa.com met dezelfde vraagprijs tot één kaartje. Ook
+    wordt alleen met de hoofdregel vergeleken, niet met de hele groep, anders rijgt A~B en B~C ook
+    A en C aan elkaar. 14 echte dubbelingen; het kaartje toont "Staat bij 2 aanbieders" en het
+    verschil in vraagprijs, want dat is onderhandelinformatie.
+  - **Opvolging na het bellen.** Vier standen: boeiend, gebeld, bod uit, weg. Bij gebeld en bod uit
+    klapt een notitieveld open met een datum om aan herinnerd te worden. Die herinnering gaat mee in
+    het Discord-bericht van 08:00 (`alerts.herinneringen_tekst`) en gaat maar één keer de deur uit
+    (`markeringen.herinnerd_at`). Een andere stand aanklikken wist de notitie niet.
+  - **De titel telt weer mee** en `reanalyse` dekt nu ook de makelaarsobjecten; zie de notitie van
+    eerder vandaag. Dat was de oorzaak dat een perceel "zu urbanisieren" als kans in beeld kwam.
+  - Stand: 299 in de hoofdlijst, 48 tests groen.
+  - **Let op bij `/instellingen`:** dat scherm schrijft sleutels in `.env`. Het valt onder dezelfde
+    middleware `bewaak_toegang` als de rest, dus zodra er een wachtwoord staat is het dicht. Er staat
+    er nu géén, dus binnen het tailnet is het open — net als al het andere op deze dienst.
 - Let op bij de BP-feed: plaatsnaam staat als "Javea" zonder accent;
   filteren op "Jávea" of "Xàbia" geeft 0.

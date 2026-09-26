@@ -25,7 +25,7 @@ from fastapi import Body, FastAPI, HTTPException, Query, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
-from . import alerts, config, feasibility, focus, toegang
+from . import alerts, config, dubbel, feasibility, focus, toegang
 from .store import Store
 from .summary import (bouw_ctx as summary_ctx, AREA_LABEL, CLASS_LABEL, ZONE_LABEL, events_since, jload,
                       listing_summary)
@@ -355,7 +355,15 @@ def _listings_bouw(focus_only: bool, tab: str):
         items = [listing_summary(store, r, ev7, ctx) for r in rows]
         if tab:
             gevraagd = {t.strip() for t in tab.split(",") if t.strip()}
-            return [i for i in items if i.get("tab") in gevraagd]
+            uit = [i for i in items if i.get("tab") in gevraagd]
+            # Dezelfde woning via twee bronnen wordt één kaartje (Jan 26-09-2026). Per tabblad
+            # samenvoegen, anders zou een woning van het ene tabblad er op het andere bij verdwijnen.
+            if (focus.instelling().get("dubbel_samenvoegen", True)):
+                samen = []
+                for t in gevraagd:
+                    samen += dubbel.voeg_samen([i for i in uit if i.get("tab") == t])
+                return samen
+            return uit
         if focus_only:
             return [i for i in items if i.get("in_focus")]
         return items
@@ -423,19 +431,37 @@ def instellingen_test():
     return {"status": alerts.bezorg(env, tekst, "Deal Hunter: proefbericht")}
 
 
+DATUM = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
 @app.post("/api/markeer")
 def markeer(body: dict = Body(...)):
-    """Boeiend, weg of gebeld. `geen` haalt het merkje weer weg."""
+    """Boeiend, gebeld, bod uit of weg — met een notitie en een datum om aan herinnerd te worden.
+
+    Notitie en datum worden alleen overschreven als ze zijn meegegeven, zodat een andere stand
+    aanklikken niet wist wat je eerder opschreef."""
     lid, merk = body.get("id"), str(body.get("merk") or "geen")
     if not lid:
         raise HTTPException(400, "id ontbreekt")
+    notitie = body.get("notitie")
+    if notitie is not None:
+        notitie = str(notitie)[:1000]
+    stap = body.get("volgende_stap")
+    if stap:
+        stap = str(stap).strip()
+        if not DATUM.match(stap):
+            raise HTTPException(400, "de datum moet als JJJJ-MM-DD worden gegeven")
+    else:
+        stap = None
     store = Store()
     try:
         if not store.con.execute("SELECT 1 FROM listings WHERE id=?", (int(lid),)).fetchone():
             raise HTTPException(404, "object bestaat niet")
-        store.markeer(int(lid), merk, str(body.get("notitie") or "")[:500])
+        store.markeer(int(lid), merk, notitie, stap)
         _cache_leeg()
-        return {"ok": True, "id": int(lid), "merk": None if merk == "geen" else merk}
+        m = store.markeringen().get(int(lid)) or {}
+        return {"ok": True, "id": int(lid), "merk": m.get("merk"),
+                "notitie": m.get("notitie"), "volgende_stap": m.get("volgende_stap")}
     except ValueError as e:
         raise HTTPException(400, str(e)) from e
     finally:

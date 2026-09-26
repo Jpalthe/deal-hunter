@@ -160,8 +160,14 @@ def listing_summary(store: Store, row, ev7: dict, ctx: dict | None = None) -> di
     out["bestemming_wonen"] = ((u or {}).get("duiding") or {}).get("wonen", "onbekend") if u else "onbekend"
     # Renovatievermoeden uit de vier kenmerken van Jan
     par = (ctx.get("parcels") or {}).get(lid)
-    out["renovatie"] = renovatie.beoordeel(out, par, sig, ctx.get("comps"),
-                                           tekst=str(d.get("desc_excerpt") or ""))
+    tekst = " ".join(x for x in (d.get("title"), d.get("desc_excerpt")) if x)
+    out["renovatie"] = renovatie.beoordeel(out, par, sig, ctx.get("comps"), tekst=tekst)
+    # Gewone woning die tóch een opknapper is: oud én meer dan 40 % onder de wijkprijs (Jan 26-09).
+    ok = (focusmod.instelling().get("opknapper_vermoeden") or {})
+    out["opknapper"] = renovatie.opknapper_vermoeden(
+        {**out, "titel_en_tekst": tekst}, par, ctx.get("comps"),
+        int(ok.get("bouwjaar_voor", 1995)), float(ok.get("korting_op_wijkprijs_min", 0.40))
+    ) if ok.get("aan") else None
     # Overdrachtsbelasting: waarschuwen als de fiscale waarde boven de vraagprijs ligt
     out["perceel_zeker"] = perceel_is_het_object(out, par)
     out["tegenspraak"] = tegenspraak(out, par)
@@ -179,7 +185,10 @@ def listing_summary(store: Store, row, ev7: dict, ctx: dict | None = None) -> di
         out["per_maand"] = round(c["result"] / maanden * (1 / (1 + 0.15 * open_punten)))
     else:
         out["per_maand"] = None
-    out["merk"] = ((ctx.get("merken") or {}).get(lid) or {}).get("merk")
+    mk = (ctx.get("merken") or {}).get(lid) or {}
+    out["merk"] = mk.get("merk")
+    out["notitie"] = mk.get("notitie")
+    out["volgende_stap"] = mk.get("volgende_stap")
     out["tab"] = focusmod.tab(out, out["urbanisme"])
     out["in_focus"] = out["tab"] == focusmod.KANSEN
     out["bod"] = {"oordeel": p.get("verdict"), "opening": p.get("opening"), "streef": p.get("target"),

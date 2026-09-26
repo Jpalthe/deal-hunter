@@ -79,6 +79,8 @@ CREATE TABLE IF NOT EXISTS markeringen (
   listing_id INTEGER PRIMARY KEY,
   merk TEXT NOT NULL,
   notitie TEXT,
+  volgende_stap TEXT,          -- datum waarop Jan eraan herinnerd wil worden (JJJJ-MM-DD)
+  herinnerd_at TEXT,           -- wanneer de herinnering is verstuurd, zodat het maar één keer gebeurt
   at TEXT NOT NULL
 );
 CREATE TABLE IF NOT EXISTS ai_usage (
@@ -121,7 +123,9 @@ class Store:
 
     def _migreer(self) -> None:
         """Kolommen die later zijn bijgekomen. Ontbreekt er één, dan wordt hij toegevoegd."""
-        for tabel, kolom, soort in (("listings", "image_url", "TEXT"),):
+        for tabel, kolom, soort in (("listings", "image_url", "TEXT"),
+                                    ("markeringen", "volgende_stap", "TEXT"),
+                                    ("markeringen", "herinnerd_at", "TEXT")):
             heeft = any(r[1] == kolom for r in self.con.execute(f"PRAGMA table_info({tabel})"))
             if not heeft:
                 self.con.execute(f"ALTER TABLE {tabel} ADD COLUMN {kolom} {soort}")
@@ -411,25 +415,57 @@ class Store:
         return self.con.execute("SELECT * FROM reviews WHERE auction_id=? ORDER BY id DESC LIMIT 1", (auction_id,)).fetchone()
 
     # ---- markeringen: boeiend, weg, gebeld (Jan 25-09-2026)
-    MERKEN = ("boeiend", "weg", "gebeld")
+    # Jan 26-09-2026: na gebeld komt er nog één stand bij. Wat hij koopt verlaat deze app.
+    MERKEN = ("boeiend", "gebeld", "bod", "weg")
 
-    def markeer(self, listing_id: int, merk: str, notitie: str = "") -> None:
-        """Zet of wist een merkje. `geen` haalt het merkje weg."""
+    def markeer(self, listing_id: int, merk: str, notitie: str | None = None,
+                volgende_stap: str | None = None) -> None:
+        """Zet of wist een merkje, met een notitie en een datum om aan herinnerd te worden.
+
+        Notitie en datum worden alleen overschreven als ze zijn meegegeven; zo kun je een merkje
+        wijzigen zonder wat je eerder opschreef kwijt te raken."""
         if merk in ("geen", "", None):
             self.con.execute("DELETE FROM markeringen WHERE listing_id=?", (listing_id,))
-        else:
-            if merk not in self.MERKEN:
-                raise ValueError(f"onbekend merk: {merk}")
-            self.con.execute(
-                """INSERT INTO markeringen(listing_id, merk, notitie, at) VALUES (?,?,?,?)
-                   ON CONFLICT(listing_id) DO UPDATE SET merk=excluded.merk,
-                     notitie=excluded.notitie, at=excluded.at""",
-                (listing_id, merk, notitie, now_iso()))
+            self.con.commit()
+            return
+        if merk not in self.MERKEN:
+            raise ValueError(f"onbekend merk: {merk}")
+        if volgende_stap:
+            import re as _re
+            if not _re.fullmatch(r"\d{4}-\d{2}-\d{2}", volgende_stap):
+                raise ValueError("de datum moet als JJJJ-MM-DD worden gegeven")
+        self.con.execute(
+            """INSERT INTO markeringen(listing_id, merk, notitie, volgende_stap, at)
+               VALUES (?,?,?,?,?)
+               ON CONFLICT(listing_id) DO UPDATE SET
+                 merk=excluded.merk,
+                 notitie=COALESCE(excluded.notitie, markeringen.notitie),
+                 volgende_stap=COALESCE(excluded.volgende_stap, markeringen.volgende_stap),
+                 herinnerd_at=CASE WHEN excluded.volgende_stap IS NOT NULL
+                                   THEN NULL ELSE markeringen.herinnerd_at END,
+                 at=excluded.at""",
+            (listing_id, merk, notitie, volgende_stap, now_iso()))
         self.con.commit()
 
     def markeringen(self) -> dict[int, dict]:
-        return {int(r["listing_id"]): {"merk": r["merk"], "notitie": r["notitie"], "at": r["at"]}
+        return {int(r["listing_id"]): {"merk": r["merk"], "notitie": r["notitie"],
+                                       "volgende_stap": r["volgende_stap"], "at": r["at"]}
                 for r in self.con.execute("SELECT * FROM markeringen")}
+
+    def herinneringen(self, op: str) -> list[dict]:
+        """Wie er vandaag of eerder teruggebeld moet worden en nog niet is herinnerd."""
+        return [dict(r) for r in self.con.execute(
+            """SELECT m.listing_id, m.merk, m.notitie, m.volgende_stap, l.source_ref, l.price,
+                      l.title, l.url
+               FROM markeringen m JOIN listings l ON l.id = m.listing_id
+               WHERE m.volgende_stap IS NOT NULL AND m.volgende_stap <= ?
+                 AND m.herinnerd_at IS NULL AND m.merk <> 'weg'
+               ORDER BY m.volgende_stap""", (op,))]
+
+    def herinnering_verstuurd(self, ids: list[int]) -> None:
+        for i in ids:
+            self.con.execute("UPDATE markeringen SET herinnerd_at=? WHERE listing_id=?", (now_iso(), i))
+        self.con.commit()
 
     def close(self) -> None:
         self.con.commit()

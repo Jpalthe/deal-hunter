@@ -691,3 +691,82 @@ def test_titel_telt_mee_bij_het_herberekenen():
     # de titel alleen is genoeg om het te herkennen
     alleen_titel = signals.analyse("Baugrundstueck in Pinomar zu urbanisieren")
     assert alleen_titel["not_urbanised_signals"]
+
+
+# ---------------------------------------------------------------- keuzes van Jan, 26-09-2026
+
+def test_dubbele_woning_wordt_een_kaartje():
+    from dh import dubbel
+    idealista = {"id": 1, "area": "javea", "price": 340000, "plot_m2": 900, "lat": 38.7,
+                 "source": "idealista", "ref": "A", "first_seen": "2026-09-01"}
+    kantoor = {"id": 2, "area": "javea", "price": 341000, "plot_m2": 920, "lat": None,
+               "source": "makelaar:y.com", "ref": "B", "first_seen": "2026-09-20", "kantoor": "Y"}
+    ander = {"id": 3, "area": "javea", "price": 500000, "plot_m2": 900, "source": "bp", "ref": "C"}
+    uit = dubbel.voeg_samen([idealista, kantoor, ander])
+    assert len(uit) == 2
+    hoofd = next(x for x in uit if x["ref"] == "A")          # die met coördinaat wordt de hoofdregel
+    assert hoofd["bronnen"] == 2 and hoofd["ook_bij"][0]["bron"] == "Y"
+    assert hoofd["prijsverschil_tussen_bronnen"] == 1000
+
+    # Twee advertenties bij hetzelfde kantoor zijn twee woningen, geen dubbeling. Zonder deze regel
+    # werden tien appartementen van xabiacasa.com met dezelfde prijs tot één kaartje geplakt.
+    zelfde_kantoor = [{"id": n, "area": "javea", "price": 230000, "built_m2": 90,
+                       "source": "makelaar:x.com", "ref": f"R{n}"} for n in range(10)]
+    assert len(dubbel.voeg_samen(zelfde_kantoor)) == 10
+
+    # zonder een maat om op te vergelijken voegen wij niets samen
+    kaal = [{"id": 1, "area": "javea", "price": 340000, "source": "a", "ref": "D"},
+            {"id": 2, "area": "javea", "price": 340000, "source": "b", "ref": "E"}]
+    assert len(dubbel.voeg_samen(kaal)) == 2
+
+    # en A~B, B~C mag niet stilletjes A en C aan elkaar rijgen
+    keten = [{"id": 1, "area": "javea", "price": 300000, "plot_m2": 1000, "source": "a", "ref": "A"},
+             {"id": 2, "area": "javea", "price": 301500, "plot_m2": 1040, "source": "b", "ref": "B"},
+             {"id": 3, "area": "javea", "price": 303000, "plot_m2": 1090, "source": "c", "ref": "C"}]
+    samen = dubbel.voeg_samen(keten)
+    assert all(x.get("bronnen", 1) <= 2 for x in samen), [x.get("bronnen") for x in samen]
+
+
+def test_opknapper_alleen_bij_oud_en_ver_onder_de_wijkprijs():
+    """Jan 26-09-2026: een gewoon huis komt erbij als het van vóór 1995 is én meer dan 40 % onder
+    de wijkprijs staat. Eén van de twee is niet genoeg."""
+    from dh import renovatie
+    comps = {"tosalet_adsubia": {"villa_renovated": {"median": 4000}}}
+    it = lambda prijs: {"price": prijs, "built_m2": 200, "zone": "tosalet_adsubia", "type": "villa"}
+    goed = renovatie.opknapper_vermoeden(it(400000), {"year": 1978}, comps)   # € 2.000/m², 50 % eronder
+    assert goed and goed["korting"] == 0.5 and "1978" in goed["reden"]
+    assert renovatie.opknapper_vermoeden(it(560000), {"year": 1978}, comps) is None   # maar 30 % eronder
+    assert renovatie.opknapper_vermoeden(it(400000), {"year": 2015}, comps) is None   # te nieuw
+    assert renovatie.opknapper_vermoeden(it(400000), None, comps) is None             # geen bouwjaar
+    # een pand dat net verbouwd is telt niet, ook al is het oud en goedkoop
+    assert renovatie.opknapper_vermoeden(
+        {**it(400000), "titel_en_tekst": "Villa recién reformada"}, {"year": 1978}, comps) is None
+
+
+def test_terugbelherinnering():
+    """Notitie plus datum, en de herinnering gaat maar één keer de deur uit."""
+    from dh import alerts
+    with tempfile.TemporaryDirectory() as d:
+        s = Store(Path(d) / "t.sqlite")
+        s.con.execute("INSERT INTO listings(source, source_ref, title, price, first_seen_at,"
+                      " last_seen_at, last_fetch_at) VALUES ('t','R1','Villa',340000,'x','x','x')")
+        s.con.commit()
+        lid = int(s.con.execute("SELECT id FROM listings").fetchone()[0])
+        s.markeer(lid, "gebeld", "Maria wil praten vanaf 310", "2026-10-03")
+        assert s.markeringen()[lid]["volgende_stap"] == "2026-10-03"
+        # een andere stand aanklikken mag de notitie niet wissen
+        s.markeer(lid, "bod")
+        assert s.markeringen()[lid]["notitie"] == "Maria wil praten vanaf 310"
+        assert s.markeringen()[lid]["merk"] == "bod"
+        assert s.herinneringen("2026-10-02") == []          # nog niet aan de beurt
+        rijen = s.herinneringen("2026-10-03")
+        assert len(rijen) == 1 and rijen[0]["source_ref"] == "R1"
+        tekst = alerts.herinneringen_tekst(rijen)
+        assert "terugbellen vandaag" in tekst and "Maria" in tekst
+        s.herinnering_verstuurd([lid])
+        assert s.herinneringen("2026-10-03") == []          # niet twee keer
+        # een weggeklikt object herinnert nergens meer aan
+        s.markeer(lid, "gebeld", None, "2026-10-04")
+        s.markeer(lid, "weg")
+        assert s.herinneringen("2026-10-04") == []
+        s.close()

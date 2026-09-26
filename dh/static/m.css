@@ -345,3 +345,31 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
 }
 .card .adv:active { background: var(--sunk); }
 .card .adv .pijl { color: var(--faint); font-size: 0.95rem; }
+
+/* Vier standen in plaats van drie; korte labels, anders passen ze niet op 375 px. */
+.acts .act { font-size: 0.74rem; padding: 0 0.2rem; }
+
+/* Bij welke aanbieders dezelfde woning staat (Jan, 26-09-2026). */
+.card .bronnen {
+  display: block; padding: 0.1rem 0.8rem 0; font-size: 0.72rem; color: var(--c-oranje);
+}
+
+/* Wat er na het telefoontje is afgesproken. */
+.notitie { border-top: 1px solid var(--rule); padding: 0.6rem 0.8rem 0.7rem; background: var(--paper); }
+.notitie textarea {
+  width: 100%; border: 1px solid var(--rule-strong); border-radius: 8px; padding: 0.45rem 0.55rem;
+  font: inherit; font-size: 0.82rem; background: var(--surface); resize: vertical;
+}
+.notitie .nrij { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.45rem; flex-wrap: wrap; }
+.notitie label { font-size: 0.78rem; color: var(--muted); display: flex; align-items: center; gap: 0.35rem; }
+.notitie input[type=date] {
+  min-height: 40px; border: 1px solid var(--rule-strong); border-radius: 8px; padding: 0 0.45rem;
+  background: var(--surface); font: inherit; font-size: 0.8rem;
+}
+.notitie .nrij button {
+  margin-left: auto; min-height: 40px; padding: 0 0.9rem; border: 0; border-radius: 8px;
+  background: var(--deep-pine); color: #f2efe8; font-size: 0.82rem; cursor: pointer;
+}
+.notitie .nuit { margin: 0.35rem 0 0; font-size: 0.76rem; min-height: 1rem; color: var(--muted); }
+.notitie .nuit.ok { color: var(--c-groen); }
+.notitie .nuit.fout { color: var(--bad); }
