@@ -44,26 +44,63 @@ INLOG_PAGINA = """<!doctype html>
 <html lang="nl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Deal Hunter</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1C2220">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400&display=swap">
 <style>
- :root{--pine:#1f3d2b;--paper:#f7f5f0;--line:#d8d2c6;--rood:#8c3a2b}
+ /* Huisstijl TREE: vier kleuren, drie letterfamilies, geen radius, geen schaduw. */
+ :root{--paper:#F7F5F0;--pine:#2B3331;--deep:#1C2220;--beige:#B8A07A;
+       --pine-70:rgba(43,51,49,.7);--pine-45:rgba(43,51,49,.45);
+       --rule:rgba(43,51,49,.28);--fout:#8C3A2B;
+       --serif:"Newsreader",Georgia,serif;--sans:"Inter Tight",Arial,sans-serif;
+       --mono:"JetBrains Mono",Consolas,monospace}
  *{box-sizing:border-box}
- body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);
-      color:var(--pine);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
- form{width:min(92vw,320px);display:grid;gap:14px}
- h1{font-size:15px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:0 0 6px}
- input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:0;
-       background:#fff;font-size:16px;color:var(--pine)}
- button{padding:13px;border:0;border-radius:0;background:var(--pine);color:var(--paper);
-        font-size:15px;letter-spacing:.06em;cursor:pointer}
- p.fout{margin:0;color:var(--rood);font-size:14px}
+ body{margin:0;min-height:100vh;background:var(--paper);color:var(--pine);
+      font:17px/1.6 var(--sans);display:grid;grid-template-rows:auto 1fr}
+ /* Het beeld staat boven het formulier, nooit eronder: de kop hoort op papier. */
+ .beeld{height:38vh;min-height:220px;background:#ded9d0 url("/static/beeld/inloggen.jpg") center 62%/cover no-repeat}
+ main{display:grid;place-items:center;padding:48px 24px 64px}
+ form{width:min(92vw,380px);display:grid;gap:24px}
+ .merk{font:400 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--pine-45)}
+ h1{font:300 40px/1.05 var(--serif);letter-spacing:-.022em;margin:14px 0 6px}
+ .onder{font-size:15px;color:var(--pine-70);margin:0}
+ label{font:400 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--pine-45);display:block;margin-bottom:8px}
+ input{width:100%;padding:13px 16px;border:1px solid rgba(43,51,49,.55);border-radius:0;
+       background:transparent;font:400 16px/1.4 var(--sans);color:var(--pine)}
+ input:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
+ button{width:100%;min-height:44px;padding:13px;border:0;border-radius:0;background:var(--pine);
+        color:var(--paper);font:500 14px/1 var(--sans);letter-spacing:.02em;cursor:pointer;
+        transition:background 200ms ease-out}
+ button:hover{background:var(--deep)}
+ p.fout{margin:0;padding:8px 0 8px 16px;border-left:2px solid var(--fout);color:var(--fout);font-size:15px}
+ .voet{margin-top:8px;padding-top:20px;border-top:1px solid rgba(43,51,49,.14);
+       font-size:14px;color:var(--pine-45)}
+ @media(min-width:900px){
+   body{grid-template-rows:none;grid-template-columns:1fr 1fr}
+   .beeld{height:100vh;min-height:0;background-position:center 55%}
+   main{padding:24px}
+ }
 </style></head><body>
+<div class="beeld" role="img" aria-label="De geterrasseerde heuvels achter J&aacute;vea bij het eerste licht, met verspreide huizen en de Montg&oacute; in de nevel."></div>
+<main>
 <form method="post" action="/inloggen">
- <h1>Deal Hunter</h1>
+ <div>
+  <p class="merk">TREE &middot; Find. Build. Live.</p>
+  <h1>Deal Hunter</h1>
+  <p class="onder">Renovatieobjecten, percelen en veilingen in de Marina Alta.</p>
+ </div>
  __FOUT__
- <input type="password" name="wachtwoord" placeholder="Wachtwoord" autofocus
-        autocomplete="current-password" required>
+ <div>
+  <label for="ww">Wachtwoord</label>
+  <input id="ww" type="password" name="wachtwoord" autofocus
+         autocomplete="current-password" required>
+ </div>
  <button type="submit">Openen</button>
-</form></body></html>"""
+ <p class="voet">Dit dashboard bevat maximale koopprijzen en onderhandelplannen. Alleen voor Jan.</p>
+</form>
+</main></body></html>"""
 
 
 def _inlogpagina(fout: str = "") -> HTMLResponse:
