@@ -12,7 +12,7 @@ import json
 import sys
 from functools import lru_cache
 
-from . import config, oppervlakte
+from . import config, oppervlakte, zonewaarde
 from .prefilter import comps_zone
 
 
@@ -240,6 +240,9 @@ def compute(row: dict, overrides: dict | None = None, scenario_key: str | None =
     sale_adj = float(ov.get("sale_adj", 0.0))
     price = float(ov.get("price", row.get("price") or 0))
 
+    # Het gemiddelde werkelijk betaalde peil van de kadastrale waardezone waarin dit object ligt.
+    # Tweede opinie op onze verkoopwaarde, die op vraagprijzen rust (onderzoek N11).
+    zw = zonewaarde.module_voor(row.get("id"))
     scen, zone, vat_purchase = scenarios_for(row)
     if not scen:
         pf = json.loads(row.get("prefilter") or "{}")
@@ -299,15 +302,19 @@ def compute(row: dict, overrides: dict | None = None, scenario_key: str | None =
         # scenario "onbetrouwbaar", waardoor goede renovaties uit de ranglijst vielen.
         warnings = list(band["warnings"]) + (["kosten niet te ramen: " + ", ".join(sc.unknown_costs)] if sc.unknown_costs else [])
         notities: list[str] = []
+        # Onze verkoopwaarde naast wat er in deze zone werkelijk voor woningen is betaald. Ver
+        # erboven kan kloppen na een grondige renovatie; extreem erboven betekent dat er iets mis is
+        # met de vergelijkingsobjecten, en dat raakt de som zelf. Zie de drempels in dh/zonewaarde.py.
+        zw_oordeel = zonewaarde.oordeel(band["eur_m2"]["base"], zw)
+        if zw_oordeel:
+            (warnings if zw_oordeel[0] == "waarschuwing" else notities).append(zw_oordeel[1])
         # Een integrale renovatie van een oud huis is geen middenrenovatie. Onderzoek N05 zet dat op
         # 1.400 tot 1.800 €/m² tegenover de 1.000 uit het kader. Dat is geen reden om het tarief van Jan
         # stilletjes te veranderen, wel om het als open punt te tonen.
-        if sc.kind == "renovatie" and zware_renovatie(row):
-            notities.append(
-                f"Integrale renovatie van een oud pand tegen {k['bouwkosten_eur_per_m2']['renovatie']:.0f} €/m². "
-                "Dat is een kostprijs met eigen vaklieden, geen aannemersprijs (Jan 25-09-2026). Het risico "
-                "zit daardoor niet in de aanneemsom maar in de bezetting: loopt dit project uit, dan kost dat "
-                "capaciteit voor het volgende.")
+        # De opmerking over onderzoek N05 (1.400–1.800 €/m² voor casco strippen) stond hier tot
+        # 26-09-2026. Jan heeft toen bevestigd dat € 1.000/m² zijn eigen kostprijs is, ook bij een
+        # volledige renovatie, omdat hij het met eigen vaklieden doet en N05 aannemersprijzen geeft.
+        # De waarschuwing is eruit omdat zij alleen twijfel zaaide over een getal dat vaststaat.
         sales = {n: v * (1 + sale_adj) for n, v in band["sale"].items()}
         at = {n: m.project(price, sc, v, k, p, vat_purchase, intern, finance_rate) for n, v in sales.items()}
         mp = {n: m.max_price(sc, v, k, p, vat_purchase, roi, intern, finance_rate) for n, v in sales.items()}
@@ -364,6 +371,11 @@ def compute(row: dict, overrides: dict | None = None, scenario_key: str | None =
                         "saved_vs_extern": round(base["selling"]["saved_vs_extern"])},
             "comps": {"zone": zone, "series": sc.comps_key, "n": band["n"], "eur_m2": {kk: round(vv) for kk, vv in band["eur_m2"].items()},
                       "verification": band.get("verification")},
+            "zonewaarde": ({"zona_valor": zw["zona_valor"], "cod_zona": zw["cod_zona"],
+                            "eur_m2": round(zw["val_tipo_m2"]), "val_tipo": round(zw["val_tipo"]),
+                            "ejercicio": zw["ejercicio"],
+                            "verhouding": round(band["eur_m2"]["base"] / zw["val_tipo_m2"], 2)}
+                           if zw and zw.get("val_tipo_m2") else None),
             "sale": {kk: round(vv) for kk, vv in sales.items()},
             "max_price": mp,
             "margin_at_asking": {kk: round(vv["margin_on_sale"], 4) for kk, vv in at.items()},

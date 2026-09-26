@@ -203,11 +203,11 @@ def refresh_mobile() -> str:
 
 
 def step_verrijken(budget_s: int = 12 * 60) -> dict:
-    """Vult van nieuwe objecten het perceel, de bestemming en de helling aan.
+    """Vult van nieuwe objecten het perceel, de bestemming, de helling en het prijspeil aan.
 
     Zonder deze stap krijgen objecten die vanochtend binnenkwamen geen kadastrale referentie, geen
-    officiële bestemming en geen gemeten helling — en dan mist hun rekensom het grondwerk en staat de
-    bestemming op ONBEKEND. Alle drie de bronnen zijn gratis; Goolzoom kost wel geld per bevraging,
+    officiële bestemming, geen gemeten helling en geen vergelijking met het werkelijk betaalde peil
+    in hun waardezone — en dan mist hun rekensom het grondwerk en staat de bestemming op ONBEKEND. Alle drie de bronnen zijn gratis; Goolzoom kost wel geld per bevraging,
     vandaar het budget. Wat deze ronde niet lukt, komt de volgende aan de beurt."""
     log = logging.getLogger("dh.verrijken")
     uit: dict = {}
@@ -217,7 +217,10 @@ def step_verrijken(budget_s: int = 12 * 60) -> dict:
     # ronde aan de beurt, en er zijn twee rondes per dag.
     stappen = (("percelen", "dh.enrich_parcels", 400),
                ("bestemming", "dh.enrich_urbanisme", 250),
-               ("helling", "dh.enrich_helling", 400))
+               ("helling", "dh.enrich_helling", 400),
+               # Het prijspeil van het kadaster kost geen enkel extra verzoek: de waardezones staan
+               # op schijf en veranderen hoogstens één keer per jaar. Alleen rekenwerk, dus geen limiet.
+               ("prijspeil", "dh.enrich_zonewaarde", 0))
     for naam, mod, limiet in stappen:
         if time.time() - begin > budget_s:
             uit[naam] = "overgeslagen: tijdbudget op"

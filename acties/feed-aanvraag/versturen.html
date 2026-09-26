@@ -1,0 +1,1262 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feedaanvragen versturen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--paper:#f6f3ed;--surface:#fffefb;--sunk:#ece8df;--ink:#232a28;--ink-strong:#141a18;
+ --muted:#666d69;--faint:#949a95;--beige:#b8a07a;--pine:#1b2220;--rule:rgba(35,42,40,.14);
+ --goed:#2f7a55;--bad:#9b3a31;
+ --display:"Newsreader",Georgia,serif;--body:"Inter Tight",Arial,sans-serif;--mono:"JetBrains Mono",monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#151a19;--surface:#1d2321;
+ --sunk:#252c2a;--ink:#dfe3e0;--ink-strong:#f3f1ec;--muted:#a0a7a3;--faint:#78807b;--beige:#c9b28c;
+ --pine:#0d1211;--rule:rgba(223,227,224,.16);--goed:#6cc198;--bad:#d98b80}}
+:root[data-theme="dark"]{--paper:#151a19;--surface:#1d2321;--sunk:#252c2a;--ink:#dfe3e0;
+ --ink-strong:#f3f1ec;--muted:#a0a7a3;--faint:#78807b;--beige:#c9b28c;--pine:#0d1211;
+ --rule:rgba(223,227,224,.16);--goed:#6cc198;--bad:#d98b80}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 var(--body)}
+header.top{background:var(--pine);color:#eceae4;padding:2rem 1.2rem 1.6rem}
+header.top .in{max-width:52rem;margin:0 auto}
+.eyebrow{font:500 .7rem/1 var(--mono);letter-spacing:.24em;color:var(--beige);margin:0 0 .8rem}
+h1{font:500 clamp(1.7rem,5vw,2.3rem)/1.15 var(--display);margin:0;color:#fff}
+.lede{margin:.7rem 0 0;color:#c2c7c2;max-width:40rem}
+.wrap{max-width:52rem;margin:0 auto;padding:1.6rem 1.2rem 5rem}
+.velden{background:var(--sunk);border-radius:10px;padding:1rem 1.1rem;margin-bottom:1.6rem}
+.velden h3{margin:0 0 .5rem;font:600 .8rem/1.3 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.velden label{display:block;margin:.5rem 0;font-size:.85rem;color:var(--muted)}
+input{width:100%;min-height:42px;padding:.45rem .6rem;border:1px solid var(--rule);border-radius:8px;
+ background:var(--surface);color:var(--ink);font:inherit;font-size:.9rem}
+.m{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:1rem 1.1rem;margin-bottom:.9rem}
+.m.klaar{opacity:.55;border-left:3px solid var(--goed)}
+.m header{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:.5rem}
+.m h2{font:500 1.1rem/1.2 var(--display);margin:0;color:var(--ink-strong)}
+.m header a{font-size:.8rem;color:var(--muted)}
+.m label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:.5rem}
+.knoppen{display:flex;gap:.5rem;flex-wrap:wrap}
+button{min-height:42px;padding:0 .9rem;border:0;border-radius:8px;cursor:pointer;font:inherit;font-size:.85rem;
+ background:var(--pine);color:#f2efe8}
+button.klaar{background:var(--sunk);color:var(--muted)}
+button.open{background:var(--beige);color:#1b2220}
+details{margin-top:.7rem}
+summary{cursor:pointer;font-size:.82rem;color:var(--muted)}
+pre.body{white-space:pre-wrap;font:inherit;font-size:.85rem;background:var(--sunk);padding:.8rem;border-radius:8px;margin:.5rem 0 0}
+.st{margin:.4rem 0 0;font-size:.8rem;min-height:1rem;color:var(--goed)}
+.teller{position:sticky;top:0;background:var(--paper);padding:.6rem 0;font-size:.85rem;color:var(--muted);
+ border-bottom:1px solid var(--rule);margin-bottom:1rem;z-index:2}
+</style></head><body>
+<header class="top"><div class="in">
+<p class="eyebrow">TREE DEAL HUNTER</p>
+<h1>Achttien feedaanvragen, klaar om te versturen</h1>
+<p class="lede">Vul je telefoonnummer één keer in, daarna per kantoor het e-mailadres. Tik op
+Openen in Mail en de mail staat klaar in je mailprogramma, met onderwerp en tekst erin.</p>
+</div></header>
+<div class="wrap">
+<div class="velden">
+  <h3>Eén keer invullen</h3>
+  <label>Je telefoonnummer<input id="tel" placeholder="+34 …" autocomplete="tel"></label>
+  <label>Afzender zoals hij eronder moet staan<input id="afz" value="Jan Palthe"></label>
+</div>
+<p class="teller" id="teller"></p>
+<article class="m" data-i="0">
+  <header><h2>Bartolomé Bas</h2>
+    <a href="https://bartolomebas.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Un XML, un CSV o un enlace a vuestro catálogo: cualquier formato nos sirve.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? XML, CSV or a link to your catalogue: any format works for us.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="1">
+  <header><h2>Blanca International</h2>
+    <a href="https://www.blancainternational.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Paagees. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Paagees. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="2">
+  <header><h2>Crown Properties</h2>
+    <a href="https://www.crown-property.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="3">
+  <header><h2>Deluxe Homes Javea</h2>
+    <a href="https://www.deluxehomesjavea.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Kyero. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Kyero. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="4">
+  <header><h2>EuroJavea Inmobiliaria</h2>
+    <a href="https://www.eurojavea.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Inmobalia. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Inmobalia. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="5">
+  <header><h2>Grupo García Inmobiliaria</h2>
+    <a href="https://grupo-garcia.es" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Un XML, un CSV o un enlace a vuestro catálogo: cualquier formato nos sirve.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? XML, CSV or a link to your catalogue: any format works for us.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="6">
+  <header><h2>Hamiltons of London Jávea</h2>
+    <a href="https://www.hamiltonsoflondon.net" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="7">
+  <header><h2>Homes To Be Happy</h2>
+    <a href="https://www.homestobehappy.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="8">
+  <header><h2>Javea Casas</h2>
+    <a href="https://www.javeacasas.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="9">
+  <header><h2>Javea Home Finders</h2>
+    <a href="https://www.javeahomefinders.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con EasyInmo. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with EasyInmo. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="10">
+  <header><h2>Javea Immo</h2>
+    <a href="https://www.javeaimmo.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Paagees. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Paagees. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="11">
+  <header><h2>Maravilla Costa</h2>
+    <a href="https://www.maravilla-costa.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="12">
+  <header><h2>New Life Property Spain</h2>
+    <a href="https://www.newlifepropertyspain.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="13">
+  <header><h2>Paradise Real Estate</h2>
+    <a href="https://www.paradiserealestate.es" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="14">
+  <header><h2>Spainlife and Houses</h2>
+    <a href="https://www.spainlifeandhouses.es" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con eGO Real Estate. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with eGO Real Estate. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="15">
+  <header><h2>Terramar Costa Blanca</h2>
+    <a href="https://www.terramar.es" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="16">
+  <header><h2>Villadom Immo Jávea</h2>
+    <a href="https://www.villadomjavea.com" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Sabemos que trabajáis con Paagees. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? We understand you work with Paagees. That platform exports the catalogue as XML for partners, which is all we need.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+<article class="m" data-i="17">
+  <header><h2>VillaMia Real Estate</h2>
+    <a href="https://www.villamia.net" target="_blank" rel="noopener noreferrer">site openen ↗</a></header>
+  <label>E-mailadres van het kantoor
+    <input type="email" class="adres" placeholder="staat op hun contactpagina"></label>
+  <div class="knoppen">
+    <button class="kopieer">Tekst kopiëren</button>
+    <button class="open">Openen in Mail</button>
+    <button class="klaar">Verstuurd</button>
+  </div>
+  <details><summary>De tekst lezen</summary><pre class="body">Hola,
+
+Somos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,
+*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.
+
+Os escribimos por dos motivos.
+
+El primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir
+en Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.
+
+El segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de
+Europa. Si algo vuestro encaja, os lo presentamos.
+
+Para poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de
+exportación para colaboradores? Un XML, un CSV o un enlace a vuestro catálogo: cualquier formato nos sirve.
+
+Lo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna
+web sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.
+
+Un saludo,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [telefoonnummer invullen]
+
+---
+
+Hello,
+
+We are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,
+*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.
+
+Two reasons for writing.
+
+First, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.
+We view, we calculate, we decide quickly, and we do the renovation with our own people.
+
+Second, **we bring buyers**. TREE Properties has its own client base in northern Europe. When
+something of yours fits, we introduce it.
+
+So one request: could we receive your partner export feed? XML, CSV or a link to your catalogue: any format works for us.
+
+We use it in house only, for our own search. We do not publish your listings anywhere without
+agreeing that with you first. And if you would rather talk it through, we will come by the office.
+
+Kind regards,
+
+Jan Palthe
+TREE Group · Jávea, Costa Blanca
+Find. Build. Live.
+info@treeproperties.es · [phone number]</pre></details>
+  <p class="st"></p>
+</article>
+</div>
+<script>
+const MAILS = [{"naam": "Bartolomé Bas", "web": "https://bartolomebas.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Un XML, un CSV o un enlace a vuestro catálogo: cualquier formato nos sirve.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? XML, CSV or a link to your catalogue: any format works for us.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Blanca International", "web": "https://www.blancainternational.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Paagees. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Paagees. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Crown Properties", "web": "https://www.crown-property.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Deluxe Homes Javea", "web": "https://www.deluxehomesjavea.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Kyero. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Kyero. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "EuroJavea Inmobiliaria", "web": "https://www.eurojavea.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Inmobalia. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Inmobalia. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Grupo García Inmobiliaria", "web": "https://grupo-garcia.es", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Un XML, un CSV o un enlace a vuestro catálogo: cualquier formato nos sirve.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? XML, CSV or a link to your catalogue: any format works for us.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Hamiltons of London Jávea", "web": "https://www.hamiltonsoflondon.net", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Homes To Be Happy", "web": "https://www.homestobehappy.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Javea Casas", "web": "https://www.javeacasas.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Javea Home Finders", "web": "https://www.javeahomefinders.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con EasyInmo. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with EasyInmo. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Javea Immo", "web": "https://www.javeaimmo.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Paagees. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Paagees. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Maravilla Costa", "web": "https://www.maravilla-costa.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "New Life Property Spain", "web": "https://www.newlifepropertyspain.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Paradise Real Estate", "web": "https://www.paradiserealestate.es", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Spainlife and Houses", "web": "https://www.spainlifeandhouses.es", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con eGO Real Estate. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with eGO Real Estate. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Terramar Costa Blanca", "web": "https://www.terramar.es", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Sooprema. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Sooprema. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "Villadom Immo Jávea", "web": "https://www.villadomjavea.com", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Sabemos que trabajáis con Paagees. Ese sistema exporta el catálogo en XML para colaboradores, y con eso ya nos apañamos.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? We understand you work with Paagees. That platform exports the catalogue as XML for partners, which is all we need.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}, {"naam": "VillaMia Real Estate", "web": "https://www.villamia.net", "onderwerp": "Colaboración e intercambio de cartera — TREE, Jávea", "body": "Hola,\n\nSomos TREE, de Jávea, desde 2022. Trabajamos en tres frentes: *Find* con TREE Properties,\n*Build* con TREE Constructions y *Live* con cocinas y baños. Find. Build. Live.\n\nOs escribimos por dos motivos.\n\nEl primero: **compramos por cuenta propia**. Buscamos casas para reformar y parcelas para construir\nen Jávea. Miramos, calculamos y decidimos rápido, y la reforma la hacemos con gente nuestra.\n\nEl segundo: **traemos compradores**. TREE Properties tiene su propia cartera de clientes del norte de\nEuropa. Si algo vuestro encaja, os lo presentamos.\n\nPara poder mirar vuestro catálogo con orden, os pedimos una cosa: ¿podríamos recibir vuestro feed de\nexportación para colaboradores? Un XML, un CSV o un enlace a vuestro catálogo: cualquier formato nos sirve.\n\nLo usamos solo dentro de casa, para nuestra propia búsqueda. No publicamos vuestras fichas en ninguna\nweb sin acuerdo previo con vosotros. Y si preferís hablarlo antes, nos pasamos por la oficina.\n\nUn saludo,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [telefoonnummer invullen]\n\n---\n\nHello,\n\nWe are TREE, based in Jávea since 2022. Three disciplines under one roof: *Find* with TREE Properties,\n*Build* with TREE Constructions, *Live* with kitchens and bathrooms. Find. Build. Live.\n\nTwo reasons for writing.\n\nFirst, **we buy for our own account**. We look for houses to renovate and plots to build on in Jávea.\nWe view, we calculate, we decide quickly, and we do the renovation with our own people.\n\nSecond, **we bring buyers**. TREE Properties has its own client base in northern Europe. When\nsomething of yours fits, we introduce it.\n\nSo one request: could we receive your partner export feed? XML, CSV or a link to your catalogue: any format works for us.\n\nWe use it in house only, for our own search. We do not publish your listings anywhere without\nagreeing that with you first. And if you would rather talk it through, we will come by the office.\n\nKind regards,\n\nJan Palthe\nTREE Group · Jávea, Costa Blanca\nFind. Build. Live.\ninfo@treeproperties.es · [phone number]"}];
+const bewaard = (k, d) => { try { return localStorage.getItem(k) ?? d; } catch (e) { return d; } };
+const zet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+const tel = document.getElementById('tel'), afz = document.getElementById('afz');
+tel.value = bewaard('tel', ''); afz.value = bewaard('afz', 'Jan Palthe');
+tel.addEventListener('input', () => zet('tel', tel.value));
+afz.addEventListener('input', () => zet('afz', afz.value));
+
+function tekstVoor(i) {
+  let t = MAILS[i].body;
+  t = t.split('[telefoonnummer invullen]').join(tel.value || '[telefoonnummer]');
+  t = t.split('[phone number]').join(tel.value || '[phone number]');
+  if (afz.value && afz.value !== 'Jan Palthe') t = t.split('Jan Palthe').join(afz.value);
+  return t;
+}
+function telOp() {
+  const klaar = document.querySelectorAll('.m.klaar').length;
+  document.getElementById('teller').textContent = klaar + ' van ' + MAILS.length + ' verstuurd';
+}
+MAILS.forEach((m, i) => {
+  const kaart = document.querySelector('.m[data-i="' + i + '"]');
+  const adres = kaart.querySelector('.adres');
+  adres.value = bewaard('adres' + i, '');
+  adres.addEventListener('input', () => zet('adres' + i, adres.value));
+  if (bewaard('klaar' + i, '') === 'ja') kaart.classList.add('klaar');
+  kaart.querySelector('.kopieer').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(tekstVoor(i));
+      kaart.querySelector('.st').textContent = 'Tekst gekopieerd.';
+    } catch (e) { kaart.querySelector('.st').textContent = 'Kopiëren lukte niet; open de tekst hieronder.'; }
+  });
+  kaart.querySelector('.open').addEventListener('click', () => {
+    if (!adres.value) { kaart.querySelector('.st').textContent = 'Vul eerst het e-mailadres in.'; return; }
+    const u = 'mailto:' + encodeURIComponent(adres.value)
+      + '?subject=' + encodeURIComponent(m.onderwerp)
+      + '&body=' + encodeURIComponent(tekstVoor(i));
+    location.href = u;
+    kaart.querySelector('.st').textContent = 'Mail geopend. Lees hem na en verstuur zelf.';
+  });
+  kaart.querySelector('.klaar').addEventListener('click', () => {
+    const nu = !kaart.classList.contains('klaar');
+    kaart.classList.toggle('klaar', nu); zet('klaar' + i, nu ? 'ja' : ''); telOp();
+  });
+});
+telOp();
+</script>
+</body></html>

@@ -943,3 +943,67 @@ def test_bodtrap_hangt_aan_hoe_lang_iets_te_koop_staat():
     # past de vraagprijs bijna, dan is een net bod gewoon mogelijk
     dichtbij = plan(338000, 320000, 10)
     assert dichtbij["serieus_mogelijk"] and dichtbij["opening"] >= 338000 * 0.85
+
+
+def test_waardezone_geometrie_leest_graden_en_respecteert_gaten():
+    """Twee valkuilen in de waardekaart van het kadaster.
+
+    De eerste: de aanvraag wil x/y in Web Mercator, maar de geometrie komt terug in gewone graden.
+    Wie de teruggave nóg eens omrekent, houdt coördinaten rond 0,000002 over en dan ligt geen enkel
+    object meer in een zone (gebeurd op 26-09-2026, nul treffers op 718 objecten).
+    De tweede: een waardezone kan een stuk uitsparen dat bij een andere zone hoort. Alleen de
+    buitenring lezen plakt zo'n punt aan de verkeerde zone — en dus aan het verkeerde prijspeil."""
+    from dh import zonewaarde as Z
+    assert Z._punt([0.18, 38.79]) == (0.18, 38.79)
+    assert Z._punt([38.79, 0.18]) == (0.18, 38.79)          # omgedraaid paar
+    x, y = Z._naar_mercator(0.1830, 38.7647)
+    assert 20000 < x < 21000 and 4_680_000 < y < 4_700_000, (x, y)
+    buiten = [(0.10, 38.70), (0.30, 38.70), (0.30, 38.90), (0.10, 38.90), (0.10, 38.70)]
+    gat = [(0.18, 38.78), (0.22, 38.78), (0.22, 38.82), (0.18, 38.82), (0.18, 38.78)]
+    geom = {"type": "Polygon", "coordinates": [buiten, gat]}
+    vlak = Z._ringen(geom)[0]
+    assert len(vlak) == 2                                    # het gat is niet weggegooid
+    assert Z._in_vlak(0.12, 38.72, vlak)                     # binnen, buiten het gat
+    assert not Z._in_vlak(0.20, 38.80, vlak)                 # midden in het gat: niet deze zone
+    assert not Z._in_vlak(0.50, 38.80, vlak)
+
+
+def test_waardezone_koppelt_alleen_bij_de_passende_typologie():
+    """De module hoort bij één representatief product. Een appartement in een villazone krijgt dus
+    géén prijspeil: liever niets dan het verkeerde (onderzoek N11 §9.2)."""
+    from dh import zonewaarde as Z
+    vlak = [[(0.10, 38.70), (0.30, 38.70), (0.30, 38.90), (0.10, 38.90), (0.10, 38.70)]]
+    zones = {"gemeenten": {"javea": {"naam": "Jávea/Xàbia", "zones": [
+        {"zona_valor": "U20", "cod_zona": "127", "ejercicio": 2026, "num_inmuebles": 3025,
+         "tipologia": "Vivienda unifamiliar aislada/pareada", "categoria": "Media", "antiguedad": 50,
+         "conservacion": "Renovado", "superficie": 160.0, "superficie_suelo": 1000.0,
+         "val_tipo": 547400.0, "val_tipo_m2": 3200.0, "val_estandar_m2": 3500.0, "vlakken": [vlak]}]}}}
+    villa = Z.zoek(38.80, 0.20, "Villa", zones)
+    assert villa["gevonden"] and villa["zona_valor"] == "U20" and villa["val_tipo_m2"] == 3200.0
+    assert Z.zoek(38.80, 0.20, "Land", zones)["gevonden"]              # kavel wordt een villa
+    appartement = Z.zoek(38.80, 0.20, "Apartment", zones)
+    assert not appartement["gevonden"] and appartement["overlap"] == 1
+    assert "typologie" in appartement["reden"]
+    kantoor = Z.zoek(38.80, 0.20, "Building", zones)
+    assert not kantoor["gevonden"] and "geen enkele representatieve typologie" in kantoor["reden"]
+    assert not Z.zoek(38.60, 0.50, "Villa", zones)["gevonden"]          # buiten alle zones
+    assert "vrijstaande of geschakelde woning" in Z.omschrijving(villa)
+    assert "€ 547.200" not in Z.omschrijving(villa) and "€ 547.400" in Z.omschrijving(villa)
+
+
+def test_prijspeil_waarschuwt_pas_bij_het_extreme():
+    """Onderzoek N11 stelde één drempel van 2,0 voor. Op onze eigen scenario's (mediaan 1,54,
+    p90 2,27) zou die een vijfde van alles onbetrouwbaar maken. Daarom: opmerking vanaf 2,0,
+    waarschuwing pas vanaf 2,5 — en ook een opmerking als wij ónder het zonegemiddelde zitten."""
+    from dh import zonewaarde as Z
+    z = {"val_tipo_m2": 3200.0, "zona_valor": "U20", "antiguedad": 50}
+    assert Z.oordeel(4800, z) is None                       # 1,5× — gewoon een gerenoveerd huis
+    soort, tekst = Z.oordeel(6600, z)                       # 2,1×
+    assert soort == "opmerking" and "zonegemiddelde" in tekst
+    soort, tekst = Z.oordeel(8400, z)                       # 2,6×
+    assert soort == "waarschuwing" and "controleer de vergelijkingsobjecten" in tekst
+    soort, tekst = Z.oordeel(2900, z)                       # onder het zonegemiddelde
+    assert soort == "opmerking" and "mogelijk te laag" in tekst
+    assert Z.oordeel(8400, None) is None
+    assert Z.oordeel(None, z) is None
+    assert Z.oordeel(8400, {"val_tipo_m2": 0}) is None

@@ -207,6 +207,8 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
 .kv { display: grid; grid-template-columns: auto 1fr; gap: 0.15rem 0.7rem; font-size: 0.85rem; margin: 0.4rem 0; }
 .kv dt { color: var(--muted); }
 .kv dd { margin: 0; font-variant-numeric: tabular-nums; }
+/* onze verkoopwaarde staat ver boven het werkelijk betaalde peil in de kadasterzone */
+.kv dd.hoog { color: var(--bad); font-weight: 500; }
 .empty { color: var(--muted); padding: 1.2rem 0; text-align: center; }
 .foot { font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--rule); margin-top: 1.2rem; padding-top: 0.7rem; }
 

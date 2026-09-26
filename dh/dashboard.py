@@ -25,7 +25,7 @@ from fastapi import Body, FastAPI, HTTPException, Query, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
-from . import alerts, config, dubbel, feasibility, focus, toegang
+from . import alerts, config, dubbel, feasibility, focus, toegang, zonewaarde
 from .store import Store
 from .summary import (bouw_ctx as summary_ctx, AREA_LABEL, CLASS_LABEL, ZONE_LABEL, events_since, jload,
                       listing_summary)
@@ -509,8 +509,14 @@ def listing(lid: int):
                                                           "examples": [{kk: e.get(kk) for kk in ("code", "price", "m2", "eur_m2", "year", "label")} for e in (c.get("examples") or [])[:6]]}
         reviews = [dict(x) for x in store.con.execute("SELECT verdict, note, by, at FROM reviews WHERE listing_id=? ORDER BY id DESC LIMIT 10", (lid,))]
         events = [dict(x) for x in store.con.execute("SELECT kind, at, details FROM events WHERE listing_id=? ORDER BY id DESC LIMIT 20", (lid,))]
+        # Het werkelijk betaalde peil van de kadastrale waardezone. Het bedrag alleen is misleidend,
+        # dus de zin die zegt bij welke woning het hoort gaat mee (onderzoek N11 §9.3).
+        zwr = store.con.execute("SELECT * FROM zonewaarde WHERE listing_id=?", (lid,)).fetchone()
+        zw = {**dict(zwr), "omschrijving": zonewaarde.omschrijving(zwr), "bron": zonewaarde.BRON} \
+            if zwr and zwr["val_tipo_m2"] else None
         return {
             **base, "feasibility": res, "comps": comp_series, "price_history": store.price_history(lid),
+            "zonewaarde": zw,
             "desc": d["desc_excerpt"], "features": jload(d["features"], []), "beds": d["beds"], "baths": d["baths"],
             "signals_full": sig, "reviews": reviews, "events": events,
             "kandidaat_info": {"id": k["id"], "claims": k.get("claims", []), "blockers": k.get("blockers", []), "pin_note": k.get("pin_note")} if k else None,

@@ -3834,13 +3834,13 @@
     "website": "https://www.sedecatastro.gob.es",
     "type": "prijspeil",
     "coverage": "Jávea 39 zones, Benitatxell 34, Teulada-Moraira 24; módulo de valor medio per zone",
-    "technical_access": "openbare dienst, per zone opvraagbaar",
-    "fields": "zone, módulo de valor medio",
+    "technical_access": "SECDameGeoJSON.aspx, één GET per gemeente; x/y in EPSG:3857, geometrie komt terug in graden. Geen sleutel. Ingebouwd als dh/zonewaarde.py, dagelijkse koppeling via dh/enrich_zonewaarde.py",
+    "fields": "zona_valor, cod_zona (ATH), ejercicio, num_inmuebles_uso_v, en per representatief product: tipologia, categoria, antiguedad, conservacion, superficie, superficie_suelo, val_tipo, val_tipo_m2, val_estandar_m2, geometrie",
     "media_docs": "geen",
     "publish_modify_info": "n.v.t.",
     "historical_data": "per jaargang",
-    "refresh": "jaarlijks",
-    "rate_limits": "onbekend",
+    "refresh": "jaarlijks (jaargang 2026 opgehaald 26-09-2026; de dienst gaf 2026 terug op een vraag om 2027)",
+    "rate_limits": "niet gepubliceerd; wij houden 2 seconden tussen verzoeken aan",
     "costs": "gratis",
     "contract_status": "geen",
     "allowed_uses": "openbaar",
@@ -3849,8 +3849,8 @@
     "derived_data_rights": "met bronvermelding",
     "contact_route": "sedecatastro.gob.es",
     "last_verified": "26-09-2026",
-    "open_questions": "Afgeleid van notarieel verleden koopakten, dus werkelijke prijzen. Ligt over onze acht wijken op 0,53 tot 0,93 van onze vraagprijsmediaan.",
-    "status": "TECHNISCH ONDERZOEK NODIG",
+    "open_questions": "Uit welke jaren de koopakten achter een module komen staat niet in het antwoord: ONBEKEND. De module hoort bij één standaardwoning per zone, niet bij een object.",
+    "status": "GEVERIFIEERD EN ACTIEF",
     "automated_access": "yes",
     "storage": "yes",
     "history": "yes",
@@ -3861,7 +3861,9 @@
     "rights_basis": "openbare kadastrale informatie",
     "evidence_type": 3,
     "source_urls": [
-      "onderzoek/N11-werkelijke-verkoopprijzen.md"
+      "onderzoek/N11-werkelijke-verkoopprijzen.md",
+      "https://www1.sedecatastro.gob.es/Cartografia/SECDameGeoJSON.aspx",
+      "https://www.catastro.hacienda.gob.es/es-ES/faqs.html"
     ]
   },
   {

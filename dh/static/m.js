@@ -397,6 +397,26 @@ function syncMarkers() {
   });
 }
 
+/* Het werkelijk betaalde prijspeil van de kadastrale waardezone. Onze verkoopwaarde komt uit
+   vraagprijzen; dit is de enige gratis bron met wat er echt is betaald (onderzoek N11). Eén regel
+   met de verhouding, de onderbouwing achter een tik. */
+function kadasterRij(s) {
+  const z = s && s.zonewaarde;
+  if (!z) return '';
+  const keer = String(z.verhouding.toFixed(1)).replace('.', ',');
+  const kleur = z.verhouding >= 2.5 ? ' class="hoog"' : '';
+  return `<dt>Echt betaald</dt><dd${kleur}>${num(z.eur_m2)} €/m² in zone ${esc(z.zona_valor)} · wij rekenen ${keer}×</dd>`;
+}
+
+function kadasterUitleg(d) {
+  const z = d && d.zonewaarde;
+  if (!z || !z.omschrijving) return '';
+  return `<details class="fold"><summary>Waar dat bedrag bij hoort</summary>
+    <p class="meta">${esc(z.omschrijving)}</p>
+    <p class="meta">Het geldt voor die ene standaardwoning, niet voor dit object. Uit welke jaren de
+    koopakten komen staat niet in de bron.</p></details>`;
+}
+
 /* ---------- dossier ---------- */
 async function openDetail(id) {
   const seq = ++S.detailSeq;
@@ -447,7 +467,9 @@ function renderSheet() {
       <dt>Verkoopbaar</dt><dd>${num(s.result_m2)} m²</dd>
       <dt>Bouwkosten</dt><dd>${num(s.sum.eur_m2_build)} €/m²</dd>
       <dt>Vergelijking</dt><dd>${esc(zoneLabel(s.comps.zone))} · ${esc(s.comps.n)} objecten</dd>
-    </dl>`;
+      ${kadasterRij(s)}
+    </dl>
+    ${kadasterUitleg(d)}`;
 
     const a = (d.feasibility && d.feasibility.assumptions) || {};
     h += `<h2>Wat als</h2>
@@ -521,7 +543,8 @@ async function whatIf() {
   $('#kv').innerHTML = `<dt>Scenario</dt><dd>${esc(s.label)}</dd>
     <dt>Verkoopbaar</dt><dd>${num(s.result_m2)} m²</dd>
     <dt>Bouwkosten</dt><dd>${num(s.sum.eur_m2_build)} €/m²</dd>
-    <dt>Vergelijking</dt><dd>${esc(zoneLabel(s.comps.zone))} · ${esc(s.comps.n)} objecten</dd>`;
+    <dt>Vergelijking</dt><dd>${esc(zoneLabel(s.comps.zone))} · ${esc(s.comps.n)} objecten</dd>
+    ${kadasterRij(s)}`;
   const changed = Object.keys(S.open.ov).length;
   $('#wistatus').textContent = changed
     ? 'Aangepaste aannames; het vergelijk met de vraagprijs klopt alleen als je de koopprijs niet hebt verschoven.'

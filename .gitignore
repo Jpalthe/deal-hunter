@@ -29,3 +29,4 @@ __pycache__/
 # Back-upkopieën van bewerkte bestanden
 *.bak
 *.bak-*
+data/backups/

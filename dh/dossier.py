@@ -14,7 +14,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from . import config, feasibility, focus, negotiation, summary
+from . import config, feasibility, focus, negotiation, summary, zonewaarde
 from .store import Store
 
 BOUWREGELS = config.KADER / "bouwregels.json"
@@ -71,6 +71,15 @@ def build(store: Store, row, ev7: dict | None = None) -> dict:
         for k in ("nearby", "warnings", "mismatches"):
             parcel[k] = summary.jload(parcel.get(k), [])
         parcel["geojson"] = summary.jload(parcel.get("geojson"), None)
+    # Het gemiddelde werkelijk betaalde peil van de kadastrale waardezone. Tweede opinie naast de
+    # wijkreeks, die op vraagprijzen rust. Het bedrag zonder de omschrijving erbij is misleidend,
+    # dus die zin gaat mee (onderzoek N11 §9.3).
+    zwr = store.con.execute("SELECT * FROM zonewaarde WHERE listing_id=?", (lid,)).fetchone()
+    zw = None
+    if zwr:
+        z = dict(zwr)
+        zw = {**z, "omschrijving": zonewaarde.omschrijving(z), "bron": zonewaarde.BRON} if z.get("val_tipo_m2") \
+            else {"reden": z.get("reden"), "at": z.get("at")}
     hist = store.price_history(lid)
     events = [dict(x) for x in store.con.execute(
         "SELECT kind, at, details FROM events WHERE listing_id=? ORDER BY id DESC LIMIT 25", (lid,))]
@@ -127,6 +136,7 @@ def build(store: Store, row, ev7: dict | None = None) -> dict:
                     "eur_m2_plot": round(d["price"] / d["plot_m2"]) if d["price"] and d["plot_m2"] else None},
         "feasibility": res, "best": best, "comps": comps,
         "parcel": parcel, "zone_rules": zone_rules(d["area"], item.get("zone")), "risks": risk_layers(lid),
+        "zonewaarde": zw,
         "signals": sig, "price_history": hist, "events": events, "reviews": reviews,
         "negotiation": onderhandel,
         "te_bewijzen": [{"wat": a, "hoe": b} for a, b in te_bewijzen],

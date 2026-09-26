@@ -83,6 +83,17 @@ CREATE TABLE IF NOT EXISTS markeringen (
   herinnerd_at TEXT,           -- wanneer de herinnering is verstuurd, zodat het maar één keer gebeurt
   at TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS zonewaarde (
+  -- Het gemiddelde werkelijk betaalde prijspeil van de kadastrale waardezone waarin dit object
+  -- ligt. Eén rij per advertentie met een coördinaat, ook als er niets te koppelen viel: dan staat
+  -- in `reden` waarom, zodat "niet gekoppeld" te onderscheiden is van "nog niet gekeken".
+  listing_id INTEGER PRIMARY KEY, gemeente TEXT, gemeente_naam TEXT,
+  zona_valor TEXT, cod_zona TEXT, ejercicio INTEGER, num_inmuebles INTEGER,
+  tipologia TEXT, categoria TEXT, antiguedad INTEGER, conservacion TEXT,
+  superficie REAL, superficie_suelo REAL,
+  val_tipo REAL, val_tipo_m2 REAL, val_estandar_m2 REAL,
+  overlap INTEGER, reden TEXT, at TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS ai_usage (
   id INTEGER PRIMARY KEY, run_id INTEGER, model TEXT, input_tokens INTEGER, output_tokens INTEGER,
   cost_eur REAL, at TEXT NOT NULL
