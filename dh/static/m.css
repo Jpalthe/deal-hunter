@@ -389,3 +389,6 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
   line-height: 1.45;
 }
 #bezorgbalk b { font-weight: 600; }
+
+/* Het rendement naast het resultaat: Jans eis is 25 % op de kosten (26-09-2026). */
+.card .sums .v .rend { display: block; font-style: normal; font-size: 0.68rem; color: var(--muted); }

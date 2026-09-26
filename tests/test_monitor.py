@@ -383,22 +383,31 @@ def test_overzichtspagina_is_geen_woning():
         assert not is_overzichtspagina(url, titel), url
 
 
-def test_openingsbod_niet_op_het_pessimistische_scenario():
-    """Het openingsbod hoort een onderhandelpositie te zijn, geen bodemschatting.
+def test_openingsbod_stapelt_geen_twee_kortingen():
+    """Het openingsbod hoort dicht bij wat de deal draagt te liggen, niet twee kortingen daaronder.
 
-    Oude regel zette de streefprijs óp het voorzichtige scenario. Bij een villa van € 533.000 die de
-    deal tot € 380.000 draagt, maar waarvan het voorzichtige scenario op € 85.000 uitkwam, gaf dat
-    een openingsbod van € 78.000 — vijftien procent van de vraagprijs."""
+    Twee fouten zaten hier achter elkaar. Eerst stond de streefprijs óp het voorzichtige scenario,
+    waardoor er op een villa van € 533.000 een bod van € 78.000 uitkwam. Daarna bleef er nog een
+    stapeling over: 90 % van wat de deal draagt, en daar nog eens 92 % van. Jan 26-09-2026: "openen
+    op € 222.000 bij een vraagprijs van € 338.000 is 35 % eronder, zo worden wij niet serieus
+    genomen"."""
     from dh import negotiation
     p = negotiation.plan({"price": 533000},
                          {"available": True, "max_price": {"base": 380000, "conservative": 85000}})
     assert p["walk_away"] == 380000
-    assert 300000 <= p["opening"] <= 360000, p["opening"]
+    # hoogstens een bescheiden stap onder het weglooppunt, niet twee kortingen
+    assert p["opening"] >= 380000 * 0.93, p["opening"]
     assert p["opening"] <= p["target"] <= p["walk_away"]
+    # het object uit Jans voorbeeld: vraagprijs 338.000, de deal draagt 268.000
+    j = negotiation.plan({"price": 338000},
+                         {"available": True, "max_price": {"base": 268000, "conservative": 136000}})
+    assert j["opening"] >= 250000, j["opening"]          # was € 222.000
+    assert j["opening"] / 338000 - 1 > -0.27              # was -34 %
+    assert round(j["kloof_pct"], 2) == 0.21               # de vraagprijs staat 21 % te hoog
     # past de vraagprijs al binnen wat de deal draagt, dan onderhandel je een gewone korting
     q = negotiation.plan({"price": 500000},
                          {"available": True, "max_price": {"base": 600000, "conservative": 520000}})
-    assert q["walk_away"] == 500000 and q["opening"] == 425000
+    assert q["walk_away"] == 500000 and q["opening"] == 450000
     # boven de vraagprijs wordt nooit geboden
     assert q["opening"] < 500000 and q["target"] <= 500000
 
@@ -860,15 +869,18 @@ def test_discordkaartje_toont_bron_en_link():
           "class": "blauw", "scenario": "Sloop en nieuwbouw 291 m²", "per_maand": 14814,
           "source": "makelaar:randofrealestate.com",
           "url": "https://www.randofrealestate.com/casa-chalet-es1771041.html",
-          "calc": {"result": 385168, "months": 20}, "bod": {"opening": 354000}}
+          "calc": {"result": 385168, "months": 20},
+          "bod": {"opening": 354000, "walk": 368000, "kloof_pct": 0.14}}
     k = alerts.kaartje(it)
     assert k["title"].startswith("Granadella") and "430.000" in k["title"]
     assert k["url"] == it["url"]                                   # de titel is aanklikbaar
     namen = {f["name"]: f["value"] for f in k["fields"]}
     assert namen["Resultaat"] == "€ 385.168"
-    assert namen["Per maand"] == "€ 14.814"
+    assert "Per maand" not in namen, "Jan wilde die van het kaartje af (26-09-2026)"
     assert namen["Openen op"] == "€ 354.000"
     assert namen["Staat bij"] == "Randof Real Estate"              # naam, niet het webadres
+    assert namen["Niet hoger dan"] == "€ 368.000"
+    assert namen["Vraagprijs te hoog met"] == "14 %"   # de echte onderhandelafstand
     assert "CHA0730" in k["footer"]["text"] and "20 maanden" in k["footer"]["text"]
     # een object zonder link krijgt geen url-veld in plaats van een kapotte
     zonder = alerts.kaartje({**it, "url": ""})
@@ -905,3 +917,29 @@ def test_rente_is_recht_evenredig_en_dat_staat_erbij():
     assert abs((r5["result"] - r10["result"]) - r5["financing"]["total"]) < 2
     # het standaardtarief in de parameters staat op 5 %
     assert par["finance_rate_default"] == 0.05
+
+
+def test_bodtrap_hangt_aan_hoe_lang_iets_te_koop_staat():
+    """Jan 26-09-2026: hoe ver je onder de vraagprijs mag openen hangt af van hoe lang het te koop
+    staat. Bij een verse advertentie is een scherp bod niet serieus."""
+    from dh import negotiation
+    from datetime import date, timedelta
+    def plan(ask, plafond, dagen):
+        sd = (date.today() - timedelta(days=dagen)).isoformat() if dagen is not None else None
+        return negotiation.plan({"price": ask, "source_date": sd},
+                                {"available": True, "max_price": {"base": plafond, "conservative": plafond * 0.5}})
+    # vraagprijs 338.000, de deal draagt 268.000 — dat is 21 % eronder
+    assert plan(338000, 268000, 10)["serieus_mogelijk"] is False      # vers: hoogstens 15 % korting
+    assert plan(338000, 268000, 100)["serieus_mogelijk"] is False     # 3 maanden: hoogstens 20 %
+    assert plan(338000, 268000, 200)["serieus_mogelijk"] is True      # 6 maanden: 25 % mag
+    assert plan(338000, 268000, 400)["serieus_mogelijk"] is True      # ouder dan een jaar: vrij
+    # wij weten van de meeste objecten niet hoe lang ze te koop staan; dan leggen wij geen grens op
+    onbekend = plan(338000, 268000, None)
+    assert onbekend["serieus_mogelijk"] is True and onbekend["max_korting"] is None
+    assert onbekend["leeftijd_bron"] == "onbekend"
+    # first_seen telt niet als leeftijd: wij lezen de meeste sites pas sinds deze week
+    from dh import negotiation as N
+    assert N._te_koop_sinds({"first_seen": "2020-01-01"}) == (None, "onbekend")
+    # past de vraagprijs bijna, dan is een net bod gewoon mogelijk
+    dichtbij = plan(338000, 320000, 10)
+    assert dichtbij["serieus_mogelijk"] and dichtbij["opening"] >= 338000 * 0.85

@@ -25,7 +25,7 @@ from functools import lru_cache
 
 from . import config
 
-KANSEN, LATER, BUITEN = "kansen", "later", "buiten"
+KANSEN, LATER, BUITEN, TE_DUUR = "kansen", "later", "buiten", "teduur"
 
 STANDAARD = {
     "gebieden": ["javea"],
@@ -95,6 +95,12 @@ def tab(item: dict, urb: dict | None = None, f: dict | None = None) -> str | Non
     if not juiste_soort(item, f) or not binnen_prijs(item, f):
         return None
     if area in [g.lower() for g in (f.get("gebieden") or [])]:
+        # Jan 26-09-2026: kan er geen serieus bod worden gedaan omdat de vraagprijs te ver boven het
+        # haalbare staat, dan hoort dat object niet in de hoofdlijst maar op een eigen tabblad. Zakt
+        # de prijs later, dan komt het vanzelf terug.
+        bod = item.get("bod") or {}
+        if bod.get("serieus_mogelijk") is False:
+            return TE_DUUR
         if f.get("bestemming_streng") and urb:
             soort = (urb.get("duiding") or {}).get("soort")
             if soort and soort != "stedelijk":
@@ -162,7 +168,7 @@ def filter(items: list[dict]) -> list[dict]:
 
 def per_tab(items: list[dict]) -> dict[str, list[dict]]:
     f = instelling()
-    uit: dict[str, list[dict]] = {KANSEN: [], LATER: [], BUITEN: []}
+    uit: dict[str, list[dict]] = {KANSEN: [], LATER: [], BUITEN: [], TE_DUUR: []}
     for i in items:
         t = i.get("tab") or tab(i, i.get("urbanisme"), f)
         if t in uit:

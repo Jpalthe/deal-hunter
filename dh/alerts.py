@@ -266,11 +266,23 @@ def kaartje(it: dict) -> dict:
     waar = it.get("zone_label") or it.get("area_label") or "Jávea"
     velden = []
     if c.get("result") is not None:
-        velden.append({"name": "Resultaat", "value": _eur(c.get("result")), "inline": True})
-    if it.get("per_maand"):
-        velden.append({"name": "Per maand", "value": _eur(it["per_maand"]), "inline": True})
+        # Jan 26-09-2026: het resultaat ook als percentage. Het rendement op de kosten is zijn eigen
+        # eis (25 %), dus dat getal zegt in één oogopslag of het object die haalt.
+        deel = ""
+        if c.get("roi_on_costs") is not None:
+            deel = f"\n{c['roi_on_costs'] * 100:.0f} % op de kosten"
+            if c.get("margin") is not None:
+                deel += f" · {c['margin'] * 100:.0f} % marge"
+        velden.append({"name": "Resultaat", "value": _eur(c.get("result")) + deel, "inline": True})
+    # Jan 26-09-2026: "per maand" mag van het kaartje af. Wat hij wél wil weten is hoe ver de
+    # vraagprijs boven het haalbare staat, want dat is de echte onderhandelafstand.
     if bod.get("opening"):
         velden.append({"name": "Openen op", "value": _eur(bod["opening"]), "inline": True})
+    if bod.get("walk"):
+        velden.append({"name": "Niet hoger dan", "value": _eur(bod["walk"]), "inline": True})
+    if bod.get("kloof_pct") is not None and bod["kloof_pct"] > 0.01:
+        velden.append({"name": "Vraagprijs te hoog met",
+                       "value": f"{bod['kloof_pct'] * 100:.0f} %", "inline": True})
     if c.get("financing_per_5pct"):
         velden.append({"name": f"Rente {c.get('financing_rate', 0) * 100:.0f} %",
                        "value": f"{_eur(c['financing'])}\nelke 5 % meer: {_eur(c['financing_per_5pct'])}",

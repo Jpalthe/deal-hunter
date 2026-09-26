@@ -16,11 +16,45 @@ from datetime import date, datetime
 
 from . import config
 
-OPENING_KORTING = 0.08      # openingsbod onder de streefprijs
-STREEF_VAN_PLAFOND = 0.90   # streefprijs ten opzichte van wat de deal draagt
+# Jan 26-09-2026: "openen op € 222.000 bij een vraagprijs van € 338.000 is 35 % eronder; zo worden
+# wij niet serieus genomen". De oorzaak was dat er twee kortingen op elkaar stapelden: eerst 90 % van
+# wat de deal draagt, en daar nog eens 92 % van. Samen 83 %, en dat bovenop een plafond dat zelf al
+# onder de vraagprijs lag. Nu is er nog één stap: een bescheiden marge onder het weglooppunt, zodat
+# er ruimte is om elkaar te vinden zonder dat het bod als niet serieus overkomt.
+OPENING_ONDER_PLAFOND = 0.04   # openingsbod onder wat de deal draagt
+STREEF_ONDER_PLAFOND = 0.02    # streefprijs onder wat de deal draagt
 BODEM_VAN_VRAAGPRIJS = 0.55  # lager openen dan dit leest als niet serieus; dan eerst onderbouwen
 KLOOF_TE_GROOT = 0.50        # draagt de deal minder dan dit deel van de vraagprijs, dan is er niets te onderhandelen
 STIL_NA_DAGEN = 120          # zo lang te koop = onderhandelruimte
+
+# Jan 26-09-2026: hoe ver je onder de vraagprijs mag openen hangt af van hoe lang iets te koop staat.
+# Bij een verse advertentie is een scherp bod niet serieus; bij een woning die er al een jaar staat
+# begrijpt iedereen het. De trap hieronder is zijn eigen indeling.
+BODTRAP = ((90, 0.15), (180, 0.20), (365, 0.25))   # tot zoveel dagen: hoogstens zoveel korting
+
+
+def _te_koop_sinds(listing: dict) -> tuple[int | None, str]:
+    """Hoe lang staat dit te koop, en hoe zeker weten wij dat?
+
+    Alleen de datum van de bron zelf telt. `first_seen` is wanneer wíj het voor het eerst zagen, en
+    de meeste makelaarssites lezen wij pas sinds deze week; een woning die daar gisteren opdook kan
+    er al een jaar staan. Die datum als leeftijd gebruiken zou de trap hierboven op een verzinsel
+    laten rusten."""
+    d = _dagen(listing.get("source_date"))
+    if d is not None and d >= 0:
+        return d, "bron"
+    return None, "onbekend"
+
+
+def max_korting(listing: dict) -> tuple[float | None, int | None, str]:
+    """De grootste korting waarmee je nog serieus opent. None betekent: geen grens."""
+    dagen, herkomst = _te_koop_sinds(listing)
+    if dagen is None:
+        return None, None, herkomst          # niet bekend: dan leggen wij geen grens op
+    for grens, korting in BODTRAP:
+        if dagen < grens:
+            return korting, dagen, herkomst
+    return None, dagen, herkomst             # langer dan een jaar: verder mag
 
 
 def _dagen(iso: str | None) -> int | None:
@@ -55,8 +89,8 @@ def plan(listing: dict, best: dict | None, parcel: dict | None = None,
     if plafond >= ask:
         # De vraagprijs past. Dan onderhandel je een gewone korting, niet omhoog.
         walk = round(ask)
-        target = round(ask * 0.92 / 1000) * 1000
-        opening = round(ask * 0.85 / 1000) * 1000
+        target = round(ask * 0.95 / 1000) * 1000
+        opening = round(ask * 0.90 / 1000) * 1000
     else:
         walk = plafond
         # De streefprijs hoort tussen het voorzichtige en het basisscenario te liggen, niet óp het
@@ -64,13 +98,25 @@ def plan(listing: dict, best: dict | None, parcel: dict | None = None,
         # € 533.000 die de deal tot € 380.000 draagt, kwam er met de oude regel € 78.000 uit, omdat
         # het voorzichtige scenario daar op € 85.000 uitkwam. Het voorzichtige getal blijft apart
         # zichtbaar als "voorzichtig gerekend"; dát is de grens die je in je hoofd houdt.
-        bodem = round(plafond * STREEF_VAN_PLAFOND / 1000) * 1000
-        voorzichtig = mp.get("conservative") or 0
-        target = max(bodem, voorzichtig) if voorzichtig < plafond else bodem
-        target = min(target, plafond)
-        opening = round(target * (1 - OPENING_KORTING) / 1000) * 1000
+        target = round(plafond * (1 - STREEF_ONDER_PLAFOND) / 1000) * 1000
+        opening = round(plafond * (1 - OPENING_ONDER_PLAFOND) / 1000) * 1000
     opening = max(min(opening, target), 0)
     target = min(target, walk)
+    # Hoe ver de vraagprijs boven het haalbare staat. Dat is de echte onderhandelafstand, en die
+    # verzin je niet weg met een lager openingsbod.
+    kloof_pct = round(1 - plafond / ask, 3) if ask else None
+
+    # De ondergrens van een serieus bod, als wij weten hoe lang het te koop staat.
+    korting_max, dagen_te_koop, leeftijd_bron = max_korting(listing)
+    beleefd = round(ask * (1 - korting_max)) if korting_max is not None else None
+    serieus_mogelijk = True
+    if beleefd is not None:
+        if beleefd > walk:
+            # Een serieus bod zou boven je eigen grens liggen. Dan valt hier niets te openen.
+            serieus_mogelijk = False
+        else:
+            opening = max(opening, round(beleefd / 1000) * 1000)
+            target = max(target, opening)
     laag = opening < ask * BODEM_VAN_VRAAGPRIJS
     # Draagt de deal maar een fractie van de vraagprijs, dan is een openingsbod geen onderhandel-
     # positie meer maar een conclusie. Dat hoort er ook zo te staan in plaats van als bedrag.
@@ -86,6 +132,15 @@ def plan(listing: dict, best: dict | None, parcel: dict | None = None,
         "target_pct_of_asking": round(target / ask - 1, 3) if ask else None,
         "walk_pct_of_asking": round(walk / ask - 1, 3) if ask else None,
         "opening_is_laag": laag,
+        "kloof_pct": kloof_pct,
+        "serieus_mogelijk": serieus_mogelijk,
+        "max_korting": korting_max,
+        "dagen_te_koop": dagen_te_koop,
+        "leeftijd_bron": leeftijd_bron,
+        "serieus_tekst": (None if serieus_mogelijk else
+                          f"Een serieus bod zou hier {_eur(beleefd)} zijn, en dat ligt boven de "
+                          f"{_eur(walk)} die dit project draagt. Zolang de vraagprijs niet zakt, "
+                          f"valt hier niet te openen."),
         "kloof_te_groot": kloof,
         "kloof_tekst": (f"De deal draagt {_eur(plafond)} tegenover een vraagprijs van {_eur(ask)}. "
                         f"Dat is geen onderhandeling meer. Alleen de moeite waard als de verkoper "

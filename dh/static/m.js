@@ -53,7 +53,7 @@ async function load() {
   // De lijst eerst en meteen tonen. De samenvatting rekent alle 1.600 objecten door en duurt
   // seconden; daarop wachten betekende een leeg scherm op de telefoon.
   const zacht = (p, leeg) => p.catch(() => leeg);
-  S.items = await api('/api/listings?tab=kansen,later,buiten');
+  S.items = await api('/api/listings?tab=kansen,teduur,later,buiten');
   renderBar(); renderChips(); renderList();
   const [sum, auctions, zones, alerts, companies, tablones, dossiers] = await Promise.all([
     zacht(api('/api/summary'), null), zacht(api('/api/auctions'), []), zacht(api('/api/zones'), []),
@@ -72,7 +72,7 @@ async function load() {
 
 function renderBar() {
   const inBeeldNu = S.items.filter((x) => x.tab === S.tab && x.merk !== 'weg').length;
-  const waar = S.tab === 'kansen' ? 'in Jávea' : S.tab === 'later' ? 'misschien later' : 'buiten Jávea';
+  const waar = S.tab === 'kansen' ? 'in Jávea' : S.tab === 'teduur' ? 'te duur' : S.tab === 'later' ? 'misschien later' : 'buiten Jávea';
   if (!S.sum) {                       // de samenvatting komt erachteraan
     $('#runinfo').innerHTML = `<b>${esc(inBeeldNu)}</b> ${esc(waar)}`;
     return;
@@ -83,15 +83,15 @@ function renderBar() {
   const t = last.finished_at ? new Date(last.finished_at).toLocaleString('nl-NL', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : 'nog geen ronde';
   const nxt = s.next_run ? new Date(s.next_run).toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) : '—';
   const inBeeld = S.items.filter((x) => x.tab === S.tab && x.merk !== 'weg').length;
-  $('#runinfo').innerHTML = `<b>${esc(inBeeld)}</b> ${S.tab === 'kansen' ? 'in Jávea' : S.tab === 'later' ? 'misschien later' : 'buiten Jávea'} · ronde ${esc(t)} · volgende ${esc(nxt)}` +
+  $('#runinfo').innerHTML = `<b>${esc(inBeeld)}</b> ${S.tab === 'kansen' ? 'in Jávea' : S.tab === 'teduur' ? 'te duur' : S.tab === 'later' ? 'misschien later' : 'buiten Jávea'} · ronde ${esc(t)} · volgende ${esc(nxt)}` +
     (fout.length ? ` · <span class="fout">bron ${esc(fout.join(', '))} niet gelukt</span>` : '');
 }
 
-const TABLABEL = { kansen: 'Jávea', later: 'Misschien later', buiten: 'Buiten Jávea' };
+const TABLABEL = { kansen: 'Jávea', teduur: 'Te duur', later: 'Misschien later', buiten: 'Buiten Jávea' };
 
 function renderSeg() {
   const tel = (t) => S.items.filter((x) => x.tab === t && x.merk !== 'weg').length;
-  $('#tabseg').innerHTML = ['kansen', 'later', 'buiten'].map((t) =>
+  $('#tabseg').innerHTML = ['kansen', 'teduur', 'later', 'buiten'].map((t) =>
     `<button role="tab" class="sg${S.tab === t ? ' on' : ''}" data-tab="${t}" aria-selected="${S.tab === t}">${esc(TABLABEL[t])}<span class="n">${tel(t)}</span></button>`).join('');
 }
 
@@ -165,6 +165,10 @@ function vlaggen(x) {
 function oordeelRegel(x) {
   const b = x.bod;
   if (!b || !x.price) return '<p class="oordeel grijs">Nog niet betrouwbaar te rekenen.</p>';
+  if (b.serieus_mogelijk === false && b.serieus_tekst) {
+    return `<p class="oordeel let"><b>! Vraagprijs moet eerst zakken</b>
+      <span>${esc(b.serieus_tekst)}</span></p>`;
+  }
   if (b.kloof) {
     return `<p class="oordeel let"><b>! Te duur om te rekenen</b>
       <span>De deal draagt ${eur(b.plafond)} van de ${eur(x.price)}</span></p>`;
@@ -200,7 +204,7 @@ function card(x) {
       <div><span class="k">Aankoop</span><span class="v">${eur(c.acquisition)}</span></div>
       <div><span class="k">Bouw</span><span class="v">${eur(c.build)}</span></div>
       <div><span class="k">Verkoop</span><span class="v">${eur(c.sale)}</span></div>
-      <div><span class="k">Resultaat</span><span class="v ${c.result < 0 ? 'neg' : (haalt ? 'pos' : '')}">${eur(c.result)}</span></div>
+      <div><span class="k">Resultaat</span><span class="v ${c.result < 0 ? 'neg' : (haalt ? 'pos' : '')}">${eur(c.result)}${c.roi_on_costs != null ? `<i class="rend">${pct(c.roi_on_costs)} op kosten</i>` : ''}</span></div>
     </div>
     ${c.financing_per_5pct ? `<span class="rente">Gerekend met ${pct(c.financing_rate, 0)} rente.
       Elke 5 % meer kost ${eur(c.financing_per_5pct)} van het resultaat.</span>` : ''}` : '';

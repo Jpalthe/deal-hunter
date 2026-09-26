@@ -123,7 +123,8 @@ def listing_summary(store: Store, row, ev7: dict, ctx: dict | None = None) -> di
         "type": d["type"], "category": pf.get("category") or d["category"], "price": d["price"],
         "built_m2": d["built_m2"], "plot_m2": d["plot_m2"], "lat": d["lat"], "lon": d["lon"], "url": d["url"],
         "image_url": (d["image_url"] if "image_url" in d.keys() else None),
-        "first_seen": d["first_seen_at"], "class": cls, "class_label": CLASS_LABEL[cls],
+        "first_seen": d["first_seen_at"], "source_date": d["source_date"],
+        "class": cls, "class_label": CLASS_LABEL[cls],
         "scenario": best["label"] if best else None,
         "max_price": best["max_price"] if best else None,
         "margin_at_asking": best["margin_at_asking"] if best else None,
@@ -201,13 +202,18 @@ def listing_summary(store: Store, row, ev7: dict, ctx: dict | None = None) -> di
     out["merk"] = mk.get("merk")
     out["notitie"] = mk.get("notitie")
     out["volgende_stap"] = mk.get("volgende_stap")
-    out["tab"] = focusmod.tab(out, out["urbanisme"])
-    out["in_focus"] = out["tab"] == focusmod.KANSEN
+    # Het bod moet vóór het tabblad staan: focus.tab kijkt of er nog een serieus bod
+    # mogelijk is, en zonder bod zou dat oordeel stilzwijgend overgeslagen worden.
     out["bod"] = {"oordeel": p.get("verdict"), "opening": p.get("opening"), "streef": p.get("target"),
                   "walk": p.get("walk_away"), "plafond": p.get("ceiling"),
                   "voorzichtig": (best or {}).get("max_price", {}).get("conservative"),
                   "opening_pct": p.get("opening_pct_of_asking"), "risicos": (p.get("risks") or [])[:3],
-                  "kloof": bool(p.get("kloof_te_groot")), "kloof_tekst": p.get("kloof_tekst")} if p.get("walk_away") else None
+                  "kloof": bool(p.get("kloof_te_groot")), "kloof_tekst": p.get("kloof_tekst"),
+                  "kloof_pct": p.get("kloof_pct"), "serieus_mogelijk": p.get("serieus_mogelijk", True),
+                  "serieus_tekst": p.get("serieus_tekst"), "dagen_te_koop": p.get("dagen_te_koop"),
+                  "max_korting": p.get("max_korting")} if p.get("walk_away") else None
+    out["tab"] = focusmod.tab(out, out["urbanisme"])
+    out["in_focus"] = out["tab"] == focusmod.KANSEN
     return out
 
 

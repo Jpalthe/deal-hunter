@@ -4,11 +4,11 @@ Draait als launchd-dienst com.tree.deal-hunter-review op 127.0.0.1:8710. Leest d
 rekent haalbaarheid live met tools/haalbaarheid.py, schrijft alleen beoordelingen. Geen
 contactgegevens, geen berichten naar buiten.
 
-LET OP — deze applicatie heeft GEEN eigen authenticatie. Er is geen middleware, geen Depends en
-geen enkele controle: 27 endpoints staan open, waarvan vijf schrijven. De beveiliging zit er
-altijd vóór, nooit hierin. Tot 25-09-2026 was dat Tailscale (verwijderd); sindsdien is het de
-binding op 127.0.0.1, en vanaf oktober 2026 Cloudflare Access aan de rand van de tunnel
-(zie ~/tree-hub). Ontsluit deze dienst nooit zonder dat er een slot vóór staat.
+TOEGANG (sinds 26-09-2026) — er zit nu wél een slot in: middleware `bewaak_toegang`
+met een wachtwoord en een ondertekend sessiecookie (zie dh/toegang.py). Dat slot staat
+UIT zolang er geen DH_WACHTWOORD_HASH is ingesteld; zet er dus een via /instellingen.
+Het blijft de tweede laag: Cloudflare Access aan de rand van de tunnel is de eerste.
+Ontsluit deze dienst nooit zonder dat er minstens één slot vóór of in staat.
 """
 from __future__ import annotations
 
@@ -351,7 +351,7 @@ def focus_rijen(store: Store):
 
 @app.get("/api/listings")
 def listings(focus_only: bool = Query(False, alias="focus"),
-             tab: str = Query("", description="kansen, later, buiten of leeg voor alle drie")):
+             tab: str = Query("", description="kansen, teduur, later, buiten of leeg voor alle vier")):
     """De objecten voor de app.
 
     Zonder `focus` en zonder `tab`: alles wat actief is. Met `focus=1` of een `tab`: alleen de rijen
