@@ -1,0 +1,15 @@
+DPH_Estimado polygonen 20 ringen 20 punten 84224
+ZI_Laminas_ZFP polygonen 16 ringen 68 punten 90071
+Zi_laminas_q10 polygonen 11 ringen 16 punten 12788
+Zi_laminas_q100 polygonen 8 ringen 12 punten 12264
+Zi_laminas_q50 polygonen 8 ringen 12 punten 92960
+zim_laminas_q100 polygonen 3 ringen 5 punten 974
+zim_laminas_q500 polygonen 3 ringen 5 punten 967
+
+exacte afstand in meters (0.0 = perceel ligt erin of raakt de rand)
+0481122BC5907N {"DPH_Estimado": 2295.2, "ZI_Laminas_ZFP": 1423.6, "Zi_laminas_q10": 1423.6, "Zi_laminas_q100": 1383.4, "Zi_laminas_q50": 1383.4, "zim_laminas_q100": 4235.0, "zim_laminas_q500": 4235.0}
+5246308BC5954N {"DPH_Estimado": 2210.4, "ZI_Laminas_ZFP": 226.3, "Zi_laminas_q10": 230.7, "Zi_laminas_q100": 164.6, "Zi_laminas_q50": 197.5, "zim_laminas_q100": 1026.9, "zim_laminas_q500": 1026.9}
+6442010BC5964S {"DPH_Estimado": 3207.2, "ZI_Laminas_ZFP": 230.8, "Zi_laminas_q10": 230.8, "Zi_laminas_q100": 196.4, "Zi_laminas_q50": 212.2, "zim_laminas_q100": 815.1, "zim_laminas_q500": 807.6}
+5553425BC5955S {"DPH_Estimado": 1806.6, "ZI_Laminas_ZFP": 0.0, "Zi_laminas_q10": 0.0, "Zi_laminas_q100": 0.0, "Zi_laminas_q50": 0.0, "zim_laminas_q100": 378.4, "zim_laminas_q500": 378.4}
+
+[exited with code 0]

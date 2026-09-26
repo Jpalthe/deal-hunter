@@ -43,9 +43,28 @@
   "eindkoper": "Noord-Europese tweede-huiskopers",
   "bouwcapaciteit_projecten_tegelijk": "hangt van de deal af (Jan 17-09-2026)",
   "waarborg_max_tegelijk_eur": 150000,
-  "harde_uitsluitingen": [
-    "urbanisatie niet opgeleverd"
-  ],
+  "harde_uitsluitingen": {
+    "datum": "26-09-2026",
+    "lijst": [
+      {
+        "wat": "urbanisatie niet opgeleverd",
+        "sinds": "15-09-2026",
+        "werkt": true
+      },
+      {
+        "wat": "appartement boven de tweede verdieping zonder lift",
+        "sinds": "26-09-2026",
+        "werkt": true,
+        "let_op": "alleen uitsluiten als de advertentie allebei zegt; zwijgt zij over de lift, dan niet"
+      },
+      {
+        "wat": "binnen 50 meter van een doorgaande weg",
+        "sinds": "26-09-2026",
+        "werkt": false,
+        "let_op": "nog niet gebouwd: er is een bron met de weggeometrie nodig"
+      }
+    ]
+  },
   "risicoposten_geen_uitsluiting": [
     "bewoond zonder titel",
     "gedeeld eigendom/blote eigendom/vruchtgebruik",
@@ -144,5 +163,31 @@
     "projecten_tegelijk": 3,
     "toelichting": "Twee tot drie tegelijk met de eigen ploeg. Jan wil géén waarschuwing in de app: Boeiend is een verlanglijst, geen planning.",
     "waarschuwing_in_app": false
+  },
+  "koperswensen": {
+    "datum": "26-09-2026",
+    "bron": "Jan",
+    "wat": [
+      "zeezicht",
+      "zwembad en buitenruimte",
+      "loopafstand tot strand of dorp",
+      "gelijkvloers wonen"
+    ],
+    "gebruik": "indicator, nooit een uitsluiting",
+    "toelichting": "Jan: “alles is wel belangrijk, maar we moeten projecten die hier niet aan voldoen niet links laten liggen”. Daarom staat dit als merkje op het kaartje en verandert het geen enkel bedrag. Bij een perceel tellen alleen uitzicht en ligging, want zwembad en gelijkvloers bouw je er zelf bij."
+  },
+  "vergunningsrisico": {
+    "datum": "26-09-2026",
+    "keuze": "zonder voorbehoud, Jan neemt het risico",
+    "gevolg": "Bouwkavels zonder vergunning blijven gewoon in de lijst. Daar hoort wel een duidelijke waarschuwing bij zolang de bestemming niet is opgevraagd; dat geldt nu voor ruim vierhonderd objecten."
+  },
+  "veilingen": {
+    "datum": "26-09-2026",
+    "gebied": "hele Marina Alta",
+    "toelichting": "Per veiling de ligging uitzoeken, want een BOE-aankondiging noemt die nooit. Zonder juridische toets geen biedadvies; dat blijft regel 6 uit de masterprompt."
+  },
+  "meldingen": {
+    "datum": "26-09-2026",
+    "keuze": "zoals nu: alles wat de marge haalt of binnen 30 % onderhandelbereik ligt"
   }
 }

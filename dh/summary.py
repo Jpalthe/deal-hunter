@@ -6,7 +6,8 @@ from __future__ import annotations
 import json
 from datetime import datetime, timedelta
 
-from . import config, feasibility, focus as focusmod, goolzoom, negotiation, perceel, renovatie
+from . import (config, feasibility, focus as focusmod, goolzoom, negotiation, perceel,
+               renovatie, verkoopbaarheid)
 # Hier hernoemd zodat bestaande aanroepen en tests blijven werken.
 perceel_is_het_object = perceel.perceel_is_het_object
 tegenspraak = perceel.tegenspraak
@@ -161,9 +162,20 @@ def listing_summary(store: Store, row, ev7: dict, ctx: dict | None = None) -> di
     # Renovatievermoeden uit de vier kenmerken van Jan
     par = (ctx.get("parcels") or {}).get(lid)
     tekst = " ".join(x for x in (d.get("title"), d.get("desc_excerpt")) if x)
+    summary_features = jload(d["features"], [])
     out["renovatie"] = renovatie.beoordeel(out, par, sig, ctx.get("comps"), tekst=tekst)
     # Gewone woning die tóch een opknapper is: oud én meer dan 40 % onder de wijkprijs (Jan 26-09).
     ok = (focusmod.instelling().get("opknapper_vermoeden") or {})
+    # Waar de eindkoper op let. Indicator, nooit een uitsluiting (Jan 26-09-2026).
+    out["koper"] = verkoopbaarheid.beoordeel(out, tekst, summary_features)
+    if sig.get("zonder_lift_hoog") and not out.get("uitgesloten"):
+        out["uitgesloten"] = f"harde uitsluiting: {sig['zonder_lift_hoog']}"
+    # Doorstroomzone van de rivier of openbaar zeegebied: daar wordt niet gebouwd (Jan 26-09-2026).
+    if sig.get("water_uitsluiting") and not out.get("uitgesloten"):
+        out["uitgesloten"] = f"harde uitsluiting: {sig['water_uitsluiting']}"
+    out["water"] = {"waarschuwing": sig.get("water_waarschuwing"),
+                    "uitsluiting": sig.get("water_uitsluiting")} if (
+                        sig.get("water_waarschuwing") or sig.get("water_uitsluiting")) else None
     out["opknapper"] = renovatie.opknapper_vermoeden(
         {**out, "titel_en_tekst": tekst}, par, ctx.get("comps"),
         int(ok.get("bouwjaar_voor", 1995)), float(ok.get("korting_op_wijkprijs_min", 0.40))

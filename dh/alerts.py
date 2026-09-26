@@ -163,6 +163,43 @@ def bezorg(env: dict, text: str, onderwerp: str = "Deal Hunter") -> str:
     return " · ".join((send(env, text), send_email(env, text, onderwerp)))
 
 
+def is_bezorgd(uitslag: str | None) -> bool:
+    """Is deze melding langs minstens één kanaal écht de deur uit gegaan?
+
+    Aanleiding (26-09-2026): 24 meldingen zijn maandenlang stilletjes
+    overgeslagen omdat er geen webhook in .env stond. De uitslag werd wél
+    netjes vastgelegd, maar niemand las die ooit — Jan dacht dat er simpelweg
+    geen kansen waren. Deze functie maakt dat verschil leesbaar voor de app.
+    """
+    if not uitslag:
+        return False
+    if uitslag.startswith("nulmeting"):
+        return False          # bewust niet verstuurd, geen storing
+    return "verzonden" in uitslag
+
+
+def bezorgstand(store: Store) -> dict:
+    """Hoeveel meldingen zijn er niet aangekomen, en waarom niet.
+
+    De app toont dit als balk bovenaan; zie /api/bezorgstand.
+    """
+    gemist, laatste_fout, laatst_gelukt = 0, None, None
+    for at, delivered in store.con.execute(
+        "SELECT at, delivered FROM alerts ORDER BY at"
+    ):
+        if is_bezorgd(delivered):
+            laatst_gelukt = at
+        elif delivered and not str(delivered).startswith("nulmeting"):
+            gemist += 1
+            laatste_fout = delivered
+    return {
+        "gemist": gemist,
+        "laatste_fout": laatste_fout,
+        "laatst_gelukt": laatst_gelukt,
+        "werkt": gemist == 0 or bool(laatst_gelukt),
+    }
+
+
 def send(env: dict, text: str) -> str:
     url = env.get("DISCORD_WEBHOOK_URL")
     if not url:

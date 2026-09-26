@@ -368,5 +368,43 @@ B grond en projectontwikkeling, C renovatie- en leveringsopdrachten
   - **Let op bij `/instellingen`:** dat scherm schrijft sleutels in `.env`. Het valt onder dezelfde
     middleware `bewaak_toegang` als de rest, dus zodra er een wachtwoord staat is het dicht. Er staat
     er nu géén, dus binnen het tailnet is het open — net als al het andere op deze dienst.
+- **26-09-2026 (nacht): risicokaarten, koperswensen en prijspeil onderzocht.** Drie onderzoeken
+  parallel (N09, N10, N11), alle drie geslaagd, alles zelf aangeroepen en getoetst.
+  - **Overstroming en kustwet werken** (`dh/water_kust.py`, `dh/enrich_water_kust.py`). Bron: MITECO
+    GeoServer, werkruimten `agua` en `costas`, CC BY 4.0, geen sleutel. Zes WFS-verzoeken halen de
+    zones van heel Jávea op (10 seconden), daarna rekent alles lokaal — per perceel bevragen zou
+    4.300 verzoeken kosten. Mijn eigen implementatie reproduceert de meetwaarden uit het onderzoek:
+    1.377 tegen 1.383 m, 164 tegen 165 m, 1.012 tegen 1.016 m.
+    **Keuze van Jan:** alleen het zwaarste sluit uit — doorstroomzone (ZFP) en openbaar zeegebied
+    (DPMT). De honderdjaarszone blijft in de lijst mét waarschuwing, en er komt géén kostenpost bij;
+    dat bedrag is niet vastgesteld en wordt dus niet verzonnen.
+    **Twee valstrikken, vastgelegd in de module:** het coördinatenstelsel verschilt per laag en niet
+    per dienst (verkeerde volgorde geeft HTTP 200 met een lege lijst), en de strook van de kustwet is
+    ter plaatse 20 tot 100 m breed — méét hem, neem nooit de 100 m uit de wet aan.
+    **Eigen fout hersteld:** de eerste versie noemde een perceel op 1.012 m van zee "in de kustzone",
+    alleen omdat het net iets dichter bij de ene lijn lag dan bij de andere. Nu eerst een harde
+    afstandsgrens van 250 m.
+  - **Brand en erfgoed kunnen ook** (N10, nog niet gebouwd). De juiste laag is de *Zona de Influencia
+    Forestal 500 m* van het ICV, niet de brandinterfacekaart: die heeft een celmaat van 1.000 m en
+    meldt "hoog" op 913 m van bos. Vrije strook ≥ 30 m, en ≥ 50 m boven 30 % helling; in Xàbia loopt
+    de termijn tot ongeveer 28-11-2026. Archeologie is niet openbaar en blijft handwerk.
+  - **Werkelijke verkoopprijzen bestaan** (N11): de *mapas de valores* van het Catastro, 39 zones in
+    Jávea, afgeleid uit notarieel verleden koopakten. Die liggen op 0,53 tot 0,93 van onze
+    vraagprijsmediaan. De valor de referencia per eenheid is hiervoor juist onbruikbaar: over 173
+    objecten loopt de verhouding tot de vraagprijs van 0,07 tot 12,4.
+  - **Drie hosts verbieden AI-agents**, niet één: naast `mediambient.gva.es` ook `cultura.gva.es` en
+    `idev.gva.es`. Vastgelegd bij R3-94 in het register.
+  - **Koperswensen** (`dh/verkoopbaarheid.py`): zeezicht, zwembad, gelijkvloers en de loopafstand tot
+    Puerto–Arenal of het Centrum. Indicator, nooit een uitsluiting — Jan wil objecten die er niet aan
+    voldoen uitdrukkelijk niet laten liggen. Bij een perceel telt het uit twee in plaats van vier.
+    De twee ankerpunten zijn het gemiddelde van 66 en 64 woningen uit onze eigen database
+    (`kader/ankerpunten.json`), niet een adres uit mijn hoofd.
+    **Onderscheid dat er eerst niet was:** te weinig tekst geeft nu "niet te beoordelen" in plaats
+    van nul punten. Een nul zou zeggen dat het zeezicht ontbreekt, terwijl wij het niet weten.
+  - **Harde uitsluiting erbij:** appartement boven de tweede verdieping zonder lift. Alleen als de
+    advertentie allebei zegt; zwijgt zij over de lift, dan sluiten wij niets uit.
+  - Register 94 → 98 regels. 54 tests groen.
+  - **Nog niet gebouwd:** de vijftig meter van een doorgaande weg (er is een bron met weggeometrie
+    nodig), brand en erfgoed, en het prijspeil uit de Catastro-zonemodules.
 - Let op bij de BP-feed: plaatsnaam staat als "Javea" zonder accent;
   filteren op "Jávea" of "Xàbia" geeft 0.

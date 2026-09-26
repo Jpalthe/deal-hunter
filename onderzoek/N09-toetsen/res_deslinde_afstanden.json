@@ -1,0 +1,63 @@
+{
+ "0481122BC5907N": {},
+ "5246308BC5954N": {
+  "Límite DPMT aprobado": {
+   "min_afstand_m": 1015.7,
+   "n_lijnstukken": 4,
+   "referenties": [
+    "DES01/08/03/0001",
+    "DES01/13/03/0007",
+    "DES01/13/03/0007-DES04/01"
+   ]
+  },
+  "Límite SP aprobada": {
+   "min_afstand_m": 1027.8,
+   "n_lijnstukken": 4,
+   "referenties": [
+    "DES01/13/03/0007"
+   ]
+  },
+  "Límite RM aprobada": {
+   "min_afstand_m": 1047.8,
+   "n_lijnstukken": 5,
+   "referenties": [
+    "DES01/13/03/0007"
+   ]
+  },
+  "strookbreedte_ter_plaatse_m": 60.9,
+  "_dpmt_punt": [
+   777292.9,
+   4296185.8
+  ]
+ },
+ "6442010BC5964S": {
+  "Límite SP aprobada": {
+   "min_afstand_m": 820.6,
+   "n_lijnstukken": 3,
+   "referenties": [
+    "DES01/08/03/0001",
+    "DES01/13/03/0007"
+   ]
+  },
+  "Límite DPMT aprobado": {
+   "min_afstand_m": 840.6,
+   "n_lijnstukken": 2,
+   "referenties": [
+    "DES01/08/03/0001",
+    "DES01/13/03/0007"
+   ]
+  },
+  "Límite RM aprobada": {
+   "min_afstand_m": 1199.6,
+   "n_lijnstukken": 2,
+   "referenties": [
+    "DES01/13/03/0007"
+   ]
+  },
+  "strookbreedte_ter_plaatse_m": 20.0,
+  "_dpmt_punt": [
+   778211.8,
+   4295650.6
+  ]
+ }
+}

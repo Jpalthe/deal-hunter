@@ -148,7 +148,10 @@ function sumBlock(x) {
 function vlaggen(x) {
   // Hoogstens twee vlaggetjes: meer maakt het kaartje weer een lap tekst.
   const v = [];
+  if (x.water && x.water.waarschuwing) v.push(`<span class="flag let">${esc(x.water.waarschuwing.split('.')[0])}</span>`);
   if (x.opknapper) v.push(`<span class="flag ok">${esc(x.opknapper.reden)}</span>`);
+  const kp = x.koper;
+  if (kp && kp.punten) v.push(`<span class="flag">${esc(kp.redenen.slice(0, 2).join(' · '))}</span>`);
   if ((x.tegenspraak || []).length) v.push(`<span class="flag let">${esc(x.tegenspraak[0])}</span>`);
   if (x.bestemming && x.bestemming !== 'stedelijk') v.push(`<span class="flag let">${esc(x.bestemming)}</span>`);
   else if (x.bestemming_wonen === 'onbekend') v.push('<span class="flag">bestemming onbekend</span>');

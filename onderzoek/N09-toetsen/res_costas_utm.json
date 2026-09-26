@@ -1,0 +1,251 @@
+{
+ "0481122BC5907N": {
+  "deslinde_lijnen": {
+   "geen_treffer_binnen_m": 3000
+  },
+  "terrenos_incluidos": {
+   "n": 0,
+   "kenmerken": []
+  }
+ },
+ "5246308BC5954N": {
+  "deslinde_lijnen": {
+   "binnen_m": 3000,
+   "n": 14,
+   "kenmerken": [
+    {
+     "idtramo": 3006,
+     "referencia": "DES01/08/03/0001",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2011-04-04Z",
+     "sit_admin": "Aprobado (O.M. 05/04/2011)",
+     "tipo_linea": "Límite SP aprobada",
+     "label": "DES01/08/03/0001 (O.M. 05/04/2011)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3006,
+     "referencia": "DES01/08/03/0001",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2011-04-04Z",
+     "sit_admin": "Aprobado (O.M. 05/04/2011)",
+     "tipo_linea": "Límite DPMT aprobado",
+     "label": "DES01/08/03/0001 (O.M. 05/04/2011)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite DPMT aprobado",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite SP aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite SP aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite SP aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite SP aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite RM aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite RM aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite RM aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite RM aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite RM aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite DPMT aprobado",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3052,
+     "referencia": "DES01/13/03/0007-DES04/01",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2019-09-25Z",
+     "sit_admin": "Aprobado (O.M. 26/09/2019)",
+     "tipo_linea": "Límite DPMT aprobado",
+     "label": "DES01/13/03/0007-DES04/01 (O.M. 26/09/2019)\r\n",
+     "figura": null,
+     "vertices": "NO"
+    }
+   ]
+  },
+  "terrenos_incluidos": {
+   "n": 0,
+   "kenmerken": []
+  }
+ },
+ "6442010BC5964S": {
+  "deslinde_lijnen": {
+   "binnen_m": 1000,
+   "n": 4,
+   "kenmerken": [
+    {
+     "idtramo": 3006,
+     "referencia": "DES01/08/03/0001",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2011-04-04Z",
+     "sit_admin": "Aprobado (O.M. 05/04/2011)",
+     "tipo_linea": "Límite SP aprobada",
+     "label": "DES01/08/03/0001 (O.M. 05/04/2011)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3006,
+     "referencia": "DES01/08/03/0001",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2011-04-04Z",
+     "sit_admin": "Aprobado (O.M. 05/04/2011)",
+     "tipo_linea": "Límite DPMT aprobado",
+     "label": "DES01/08/03/0001 (O.M. 05/04/2011)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite DPMT aprobado",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    },
+    {
+     "idtramo": 3005,
+     "referencia": "DES01/13/03/0007",
+     "tm": "Jávea",
+     "estado": "A",
+     "om": "2016-04-26Z",
+     "sit_admin": "Aprobado (O.M. 27/04/2016)",
+     "tipo_linea": "Límite SP aprobada",
+     "label": "DES01/13/03/0007 (O.M. 27/04/2016)",
+     "figura": null,
+     "vertices": "SI"
+    }
+   ]
+  },
+  "terrenos_incluidos": {
+   "n": 0,
+   "kenmerken": []
+  }
+ }
+}

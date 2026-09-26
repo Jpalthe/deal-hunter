@@ -770,3 +770,84 @@ def test_terugbelherinnering():
         s.markeer(lid, "weg")
         assert s.herinneringen("2026-10-04") == []
         s.close()
+
+
+def test_koperswensen_zijn_een_indicator_en_geen_uitsluiting():
+    """Jan 26-09-2026: zeezicht, zwembad, loopafstand en gelijkvloers tellen allemaal, maar objecten
+    die er niet aan voldoen mogen uitdrukkelijk niet worden weggelaten."""
+    from dh import verkoopbaarheid as V
+    lang = ("Villa con vistas al mar y piscina privada, todo en una planta, muy tranquila y "
+            "cerca de todos los servicios del pueblo de Javea")
+    vol = V.beoordeel({"lat": 38.7869, "lon": 0.1790}, lang)
+    assert vol["punten"] == 4 and vol["van"] == 4
+    kaal = V.beoordeel({"lat": 38.74, "lon": 0.22},
+                       "Casa de campo tranquila en el interior de Javea con mucho terreno, "
+                       "rodeada de naranjos y con acceso por camino rural sin asfaltar")
+    assert kaal["punten"] == 0                      # nul punten, maar het object blijft bestaan
+    assert kaal["missers"], "ver van de kern hoort als misser te worden genoemd"
+    # bij een perceel tellen zwembad en gelijkvloers niet mee; die bouw je er zelf bij
+    kavel = V.beoordeel({"category": "perceel", "lat": 38.7869, "lon": 0.1790}, lang)
+    assert kavel["van"] == 2 and kavel["soort"] == "perceel"
+    # te weinig tekst is geen nul, dat is onbekend
+    onbekend = V.beoordeel({"lat": 38.79, "lon": 0.18}, "Villa")
+    assert onbekend["punten"] is None and "Niet te beoordelen" in onbekend["toelichting"]
+
+
+def test_appartement_zonder_lift_boven_de_tweede():
+    """Harde uitsluiting van Jan. Zwijgt de advertentie over de lift, dan sluiten wij niets uit."""
+    from dh import verkoopbaarheid as V
+    assert V.appartement_zonder_lift_hoog("Apartamento en 3ª planta sin ascensor")
+    assert V.appartement_zonder_lift_hoog("Apartment on the fourth floor without a lift")
+    assert V.appartement_zonder_lift_hoog("Appartement 5ª planta, zonder lift")
+    assert V.appartement_zonder_lift_hoog("Piso tercera planta con ascensor") is None
+    assert V.appartement_zonder_lift_hoog("Apartamento 3ª planta") is None      # zwijgt over de lift
+    assert V.appartement_zonder_lift_hoog("Apartamento planta baja sin ascensor") is None
+    assert V.appartement_zonder_lift_hoog("") is None
+
+
+def test_afstand_klopt_ongeveer():
+    from dh import verkoopbaarheid as V
+    # twee punten van ongeveer 1,3 km uit elkaar in Jávea: Puerto–Arenal en het Centrum
+    d = V.afstand_m(38.78728, 0.17944, 38.78664, 0.16393)
+    assert 1200 < d < 1500, d
+    assert V.afstand_m(38.78728, 0.17944, 38.78728, 0.17944) == 0
+
+
+def test_kustoordeel_niet_op_een_kilometer_van_zee():
+    """De eerste versie zei "in de kustzone" over een perceel op 1.012 meter van het water, alleen
+    omdat dat net iets dichter bij de ene lijn lag dan bij de andere. Op die afstand zegt dat niets."""
+    from dh import water_kust as W
+    assert W._kustoordeel(0.5, 40) == "in_dpmt"           # raakt het openbaar zeegebied
+    assert W._kustoordeel(30, 70) == "in_servidumbre"     # tussen de twee lijnen
+    assert W._kustoordeel(120, 30) == "nabij"             # landwaarts van de beschermingsgrens
+    assert W._kustoordeel(200, None) == "nabij"
+    assert W._kustoordeel(900, 950) == "buiten"           # de fout die eruit moest
+    assert W._kustoordeel(1012, 1028) == "buiten"
+    assert W._kustoordeel(None, None) == "buiten"
+
+
+def test_alleen_het_zwaarste_water_sluit_uit():
+    """Jan 26-09-2026: doorstroomzone en openbaar zeegebied vallen af; de honderdjaarszone blijft
+    staan met een waarschuwing, en zonder extra kostenpost."""
+    from dh import water_kust as W
+    assert W._uitsluiting({"zfp": True}) and "doorstroomzone" in W._uitsluiting({"zfp": True})
+    assert W._uitsluiting({"kust_oordeel": "in_dpmt"})
+    assert W._uitsluiting({"t100": True}) is None                  # blijft in de lijst
+    assert W._uitsluiting({"kust_oordeel": "in_servidumbre"}) is None
+    assert W.waarschuwing({"t100": True, "t100_rio": "Río Gorgos"}).startswith("Ligt in de honderdjaarszone")
+    assert W.waarschuwing({"kust_oordeel": "in_servidumbre"})
+    assert W.waarschuwing({}) is None
+
+
+def test_coordinaten_worden_rechtgezet():
+    """Het coördinatenstelsel verschilt per laag, niet per dienst. Met de verkeerde volgorde krijg je
+    HTTP 200 met een lege lijst en géén waarschuwing; daarom zet de module de volgorde zelf recht."""
+    from dh import water_kust as W
+    assert W._normaliseer([0.18, 38.79]) == (0.18, 38.79)      # al goed
+    assert W._normaliseer([38.79, 0.18]) == (0.18, 38.79)      # omgedraaid
+    # een vierkant van 100 bij 100 meter rond een punt in Jávea
+    ring = [(0.180, 38.790), (0.181, 38.790), (0.181, 38.791), (0.180, 38.791), (0.180, 38.790)]
+    assert W.in_ring(0.1805, 38.7905, ring)
+    assert not W.in_ring(0.200, 38.790, ring)
+    d = W.afstand_tot_ring_m((0.190, 38.7905), ring, 38.79)
+    assert 700 < d < 850, d                                     # ongeveer 780 meter naar het oosten

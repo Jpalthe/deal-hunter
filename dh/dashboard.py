@@ -127,6 +127,20 @@ def wachtwoord_zetten(body: dict = Body(...)):
     return {"ok": True, "opnieuw_inloggen": True}
 
 
+@app.get("/api/bezorgstand")
+def bezorgstand():
+    """Komen de meldingen aan? De app toont dit als balk bovenaan.
+
+    Tot 26-09-2026 ging dit geruisloos mis: 24 meldingen zijn overgeslagen
+    omdat er geen webhook in .env stond, en dat was nergens te zien.
+    """
+    store = Store()
+    try:
+        return alerts.bezorgstand(store)
+    finally:
+        store.close()
+
+
 @app.get("/api/toegang")
 def toegang_status():
     """Zegt alleen óf er een wachtwoord staat, nooit wat het is."""

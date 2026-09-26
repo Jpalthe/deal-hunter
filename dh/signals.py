@@ -103,6 +103,9 @@ def analyse(text: str, features: str = "", type_: str = "", new_build: bool = Fa
     geen_wonen = _find(NO_HOUSING, t)
     niet_geurbaniseerd = _find(NOT_URBANISED, t)
     geen_koop = _find(GEEN_KOOP, t)
+    # Harde uitsluiting van Jan (26-09-2026): appartement boven de tweede zonder lift.
+    from .verkoopbaarheid import appartement_zonder_lift_hoog
+    zonder_lift = appartement_zonder_lift_hoog(text or "")
     typ = (type_ or "").lower()
     is_land = typ in ("land", "plot", "terreno", "parcela", "solar") or (typ == "" and bool(plot) and not reno)
     is_apartment = typ in ("apartment", "piso", "flat", "penthouse", "atico", "ático")
@@ -145,6 +148,7 @@ def analyse(text: str, features: str = "", type_: str = "", new_build: bool = Fa
         "no_housing_signals": geen_wonen,
         "not_urbanised_signals": niet_geurbaniseerd,
         "geen_koop_signals": geen_koop,
+        "zonder_lift_hoog": zonder_lift,
         "geen_koop": bool(geen_koop),
         "not_urbanised": bool(niet_geurbaniseerd),
         "blockers": (

@@ -1,0 +1,26 @@
+{
+ "0481122BC5907N": {
+  "NZ.Flood.FluvialT10": "999.0",
+  "NZ.Flood.FluvialT500": "999.0",
+  "NZ.Flood.MarinaT100": "-9999.0",
+  "NZ.Flood.MarinaT500": "-9999.0"
+ },
+ "5246308BC5954N": {
+  "NZ.Flood.FluvialT10": "999.0",
+  "NZ.Flood.FluvialT500": "999.0",
+  "NZ.Flood.MarinaT100": "-9999.0",
+  "NZ.Flood.MarinaT500": "-9999.0"
+ },
+ "6442010BC5964S": {
+  "NZ.Flood.FluvialT10": "999.0",
+  "NZ.Flood.FluvialT500": "999.0",
+  "NZ.Flood.MarinaT100": "-9999.0",
+  "NZ.Flood.MarinaT500": "-9999.0"
+ },
+ "CTRL-Arenal 5553425BC5955S": {
+  "NZ.Flood.FluvialT10": "0.06400000303983688",
+  "NZ.Flood.FluvialT500": "1.8819999694824219",
+  "NZ.Flood.MarinaT100": "-9999.0",
+  "NZ.Flood.MarinaT500": "-9999.0"
+ }
+}

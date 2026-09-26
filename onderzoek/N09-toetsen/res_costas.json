@@ -1,0 +1,93 @@
+{
+ "0481122BC5907N": {
+  "deslinde_lijnen": {
+   "geen_treffer_binnen_m": 3000
+  },
+  "terrenos_incluidos": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "nucleos_excluidos": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "sp_vlakken": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "zim_laminas_q100": {
+   "intersect": 0,
+   "geen_treffer_binnen_m": 1000
+  },
+  "zim_laminas_q500": {
+   "intersect": 0,
+   "geen_treffer_binnen_m": 1000
+  }
+ },
+ "5246308BC5954N": {
+  "deslinde_lijnen": {
+   "geen_treffer_binnen_m": 3000
+  },
+  "terrenos_incluidos": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "nucleos_excluidos": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "sp_vlakken": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "zim_laminas_q100": {
+   "intersect": 0,
+   "geen_treffer_binnen_m": 1000
+  },
+  "zim_laminas_q500": {
+   "intersect": 0,
+   "geen_treffer_binnen_m": 1000
+  }
+ },
+ "6442010BC5964S": {
+  "deslinde_lijnen": {
+   "geen_treffer_binnen_m": 3000
+  },
+  "terrenos_incluidos": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "nucleos_excluidos": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "sp_vlakken": {
+   "n": 0,
+   "kenmerken": []
+  },
+  "zim_laminas_q100": {
+   "intersect": 0,
+   "binnen_m": 1000,
+   "kenmerken": [
+    {
+     "id_zona": "ES080_ARPS_0055_T100",
+     "zona": "Playa de la Cala Blanca",
+     "cota_max": 0.49000001,
+     "estudio": "SNCZI. MAPAS DE PELIGROSIDAD Y RIESGO DE INUNDACIÓN DEL LITORAL DE LA DEMARCACIÓN HIDROGRÁFICA DEL JÚCAR"
+    }
+   ]
+  },
+  "zim_laminas_q500": {
+   "intersect": 0,
+   "binnen_m": 1000,
+   "kenmerken": [
+    {
+     "id_zona": "ES080_ARPS_0055_T500",
+     "zona": "Playa de la Cala Blanca",
+     "cota_max": 0.50999999,
+     "estudio": "SNCZI. MAPAS DE PELIGROSIDAD Y RIESGO DE INUNDACIÓN DEL LITORAL DE LA DEMARCACIÓN HIDROGRÁFICA DEL JÚCAR"
+    }
+   ]
+  }
+ }
+}
