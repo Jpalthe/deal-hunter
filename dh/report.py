@@ -42,6 +42,9 @@ ul{padding-left:1.1rem}li{margin:.25rem 0}a{color:var(--ink2);text-decoration-co
 <div class="wrap"><table><tr><th>Bron</th><th>Status</th><th class="n">Aantal</th><th>Toelichting</th></tr>
 {% for s in source_rows %}<tr><td>{{ s.name }}</td><td><span class="pill {{ s.cls }}">{{ s.status }}</span></td><td class="n">{{ s.count }}</td><td>{{ s.note }}</td></tr>{% endfor %}
 </table></div>
+{% if weggestreept %}<h3>Weggestreept deze ronde</h3>
+<p class="note">Deze waarden stonden bij zoveel objecten van dezelfde bron dat zij niet uit de advertentie kunnen komen, maar uit het zoekfilter op die site. Ze staan nu op onbekend; de objecten zelf blijven staan onder Onvolledig.</p>
+<ul>{% for r in weggestreept %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
 {% if deadlines %}<h3>Naderende veilingdeadlines (≤ 14 dagen)</h3><div class="wrap"><table><tr><th>Sluiting</th><th>Veiling</th><th>Waar</th><th class="n">Taxatie</th><th>Blokkades</th></tr>
 {% for d in deadlines %}<tr><td>{{ d.end_date }}</td><td><a href="{{ d.url }}">{{ d.sub }}</a></td><td>{{ d.where }}</td><td class="n">{{ d.valuation }}</td><td>{{ d.blockers }}</td></tr>{% endfor %}</table></div>{% endif %}
 
@@ -105,6 +108,9 @@ def build(ctx: dict) -> tuple[str, str]:
     md += [f"- {t['label']}: **{t['value']}**" for t in ctx["tiles"]]
     md += ["", "**Aandacht:**"] + ([f"- {a}" for a in ctx["attention"]] or ["- Geen sterke kansen in deze ronde."])
     md += ["", "**Bronnen:** " + "; ".join(f"{s['name']}: {s['status']} ({s['count']})" for s in ctx["source_rows"])]
+    if ctx.get("weggestreept"):
+        md += ["", "**Weggestreept deze ronde** (waarde kwam uit een zoekfilter, niet uit de advertentie):"]
+        md += [f"- {r}" for r in ctx["weggestreept"]]
     if ctx["deadlines"]:
         md += ["", "**Veilingdeadlines ≤ 14 dagen:**"] + [f"- {d['end_date']} · {d['sub']} · {d['where']} · {d['valuation']} · {d['blockers']}" for d in ctx["deadlines"]]
     for sec in ctx["sections"]:
@@ -266,4 +272,8 @@ def context(store, run_id: int, slot: str, source_meta: dict, baseline: bool, li
         "priorities": priorities, "generated": now.strftime("%d-%m-%Y %H:%M %Z"), "run_id": run_id,
         "companies": company_rows, "tablones": [{"town": a, "url": b} for a, b in config.TABLONES],
         "attribution": config.AEAT_ATTRIBUTION + " · " + config.BORME_ATTRIBUTION,
+        # Waarden die deze ronde zijn weggestreept omdat ze een hele bron domineren en dus uit een
+        # keuzelijst komen. Hoort in het bericht: er verdwijnt een bedrag uit de lijst en Jan moet
+        # weten waarom (besluit 27-09-2026).
+        "weggestreept": (source_meta.get("weggestreept") or {}).get("regels") or [],
     }

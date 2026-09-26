@@ -7,9 +7,11 @@ Appartementen doen mee met een eigen merkje.
 
 Drie tabbladen:
 
-  kansen   Jávea, binnen de grenzen, bestemming stedelijk of nog niet opgevraagd
-  later    Jávea, maar de officiële bestemming is vastgesteld en niet stedelijk
-  buiten   Benitachell en Moraira
+  kansen      Jávea, binnen de grenzen, bestemming stedelijk of nog niet opgevraagd
+  later       Jávea, maar de officiële bestemming is vastgesteld en niet stedelijk
+  buiten      Benitachell en Moraira
+  teduur      de vraagprijs staat te ver boven wat er te bieden valt
+  onvolledig  de vraagprijs staat niet vast, dus er valt niets te rekenen
 
 Over "streng op bestemming": een niet-gestelde vraag is geen afwijzing. Alleen een vastgestelde
 niet-stedelijke bestemming verhuist een object naar `later`. Staat de bestemming op ONBEKEND — bij
@@ -26,6 +28,10 @@ from functools import lru_cache
 from . import config
 
 KANSEN, LATER, BUITEN, TE_DUUR = "kansen", "later", "buiten", "teduur"
+# Objecten waarvan de vraagprijs niet vaststaat. Zonder prijs is er niets door te rekenen,
+# dus die horen niet tussen de kansen — maar weggooien is erger: de advertentie bestaat wel.
+# Besluit Jan 27-09-2026, nadat 819 objecten een prijs uit een zoekfilter bleken te dragen.
+ONVOLLEDIG = "onvolledig"
 
 STANDAARD = {
     "gebieden": ["javea"],
@@ -94,6 +100,11 @@ def tab(item: dict, urb: dict | None = None, f: dict | None = None) -> str | Non
     area = (item.get("area") or "").lower()
     if not juiste_soort(item, f) or not binnen_prijs(item, f):
         return None
+    gebieden = [g.lower() for g in (f.get("gebieden") or [])] + [g.lower() for g in (f.get("gebieden_apart") or [])]
+    # Geen vraagprijs betekent: wij weten het niet. Dat is iets anders dan te duur of ongeschikt,
+    # en het hoort dus op een eigen tabblad in plaats van tussen de kansen of helemaal uit beeld.
+    if not item.get("price") and area in gebieden:
+        return ONVOLLEDIG
     if area in [g.lower() for g in (f.get("gebieden") or [])]:
         # Jan 26-09-2026: kan er geen serieus bod worden gedaan omdat de vraagprijs te ver boven het
         # haalbare staat, dan hoort dat object niet in de hoofdlijst maar op een eigen tabblad. Zakt

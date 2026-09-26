@@ -217,9 +217,13 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
    de vier bedragen, en drie knoppen. De rest zit achter een tik op het kaartje. */
 
 /* --- tabbladen binnen Kansen --- */
-.seg { display: flex; gap: 0.3rem; background: var(--sunk); padding: 0.22rem; border-radius: var(--radius); margin-bottom: 0.6rem; }
+/* Vijf tabbladen passen op een telefoon niet naast elkaar. De balk mag daarom schuiven;
+   zonder dat schoof de hele pagina zijwaarts mee (27-09-2026). */
+.seg { display: flex; gap: 0.3rem; background: var(--sunk); padding: 0.22rem; border-radius: var(--radius);
+       margin-bottom: 0.6rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.seg::-webkit-scrollbar { display: none; }
 .seg .sg {
-  flex: 1; min-height: 40px; border: 0; border-radius: 8px; background: transparent; color: var(--muted);
+  flex: 1 0 auto; min-height: 40px; padding: 0 0.5rem; border: 0; border-radius: 8px; background: transparent; color: var(--muted);
   font-size: 0.82rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 0.3rem; cursor: pointer;
 }
 .seg .sg.on { background: var(--surface); color: var(--ink-strong); box-shadow: 0 1px 2px rgba(28, 34, 32, 0.12); }

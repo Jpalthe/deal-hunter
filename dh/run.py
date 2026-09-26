@@ -296,6 +296,18 @@ def main(argv: list[str] | None = None) -> int:
         # Nieuwe objecten meteen verrijken: perceel, bestemming en helling. Moet vóór het rapport,
         # anders rekent deze ronde nog zonder grondwerk en zonder bestemming.
         store.con.commit()
+        # Vangnet tegen waarden uit een keuzelijst: een prijs of oppervlak dat een hele bron
+        # domineert, komt niet uit de advertentie. Moet ná het lezen en vóór het rapport, anders
+        # rekent deze ronde nog met die waarden door (besluit Jan 27-09-2026).
+        try:
+            from . import gedeelde_waarden
+            meta["weggestreept"] = gedeelde_waarden.opruimen(store, run_id)
+            if meta["weggestreept"]["waarden"]:
+                log.warning("weggestreept: %s waarden, %s objecten",
+                            len(meta["weggestreept"]["waarden"]), meta["weggestreept"]["objecten_geraakt"])
+        except Exception as e:  # noqa: BLE001 — het vangnet mag de ronde niet laten vallen
+            log.warning("wegstrepen mislukt: %s", str(e)[:150])
+            meta["weggestreept"] = {"fout": str(e)[:150], "waarden": [], "regels": []}
         meta["verrijken"] = step_verrijken()
         ctx = report.context(store, run_id, slot, meta, baseline, {}, {})
         html, md = report.build(ctx)

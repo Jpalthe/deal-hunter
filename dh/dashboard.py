@@ -351,7 +351,7 @@ def focus_rijen(store: Store):
 
 @app.get("/api/listings")
 def listings(focus_only: bool = Query(False, alias="focus"),
-             tab: str = Query("", description="kansen, teduur, later, buiten of leeg voor alle vier")):
+             tab: str = Query("", description="kansen, teduur, later, buiten, onvolledig of leeg voor alle")):
     """De objecten voor de app.
 
     Zonder `focus` en zonder `tab`: alles wat actief is. Met `focus=1` of een `tab`: alleen de rijen

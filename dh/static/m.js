@@ -53,7 +53,7 @@ async function load() {
   // De lijst eerst en meteen tonen. De samenvatting rekent alle 1.600 objecten door en duurt
   // seconden; daarop wachten betekende een leeg scherm op de telefoon.
   const zacht = (p, leeg) => p.catch(() => leeg);
-  S.items = await api('/api/listings?tab=kansen,teduur,later,buiten');
+  S.items = await api('/api/listings?tab=kansen,teduur,later,buiten,onvolledig');
   renderBar(); renderChips(); renderList();
   const [sum, auctions, zones, alerts, companies, tablones, dossiers] = await Promise.all([
     zacht(api('/api/summary'), null), zacht(api('/api/auctions'), []), zacht(api('/api/zones'), []),
@@ -72,7 +72,7 @@ async function load() {
 
 function renderBar() {
   const inBeeldNu = S.items.filter((x) => x.tab === S.tab && x.merk !== 'weg').length;
-  const waar = S.tab === 'kansen' ? 'in Jávea' : S.tab === 'teduur' ? 'te duur' : S.tab === 'later' ? 'misschien later' : 'buiten Jávea';
+  const waar = WAAR[S.tab] || 'in beeld';
   if (!S.sum) {                       // de samenvatting komt erachteraan
     $('#runinfo').innerHTML = `<b>${esc(inBeeldNu)}</b> ${esc(waar)}`;
     return;
@@ -83,15 +83,18 @@ function renderBar() {
   const t = last.finished_at ? new Date(last.finished_at).toLocaleString('nl-NL', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : 'nog geen ronde';
   const nxt = s.next_run ? new Date(s.next_run).toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) : '—';
   const inBeeld = S.items.filter((x) => x.tab === S.tab && x.merk !== 'weg').length;
-  $('#runinfo').innerHTML = `<b>${esc(inBeeld)}</b> ${S.tab === 'kansen' ? 'in Jávea' : S.tab === 'teduur' ? 'te duur' : S.tab === 'later' ? 'misschien later' : 'buiten Jávea'} · ronde ${esc(t)} · volgende ${esc(nxt)}` +
+  $('#runinfo').innerHTML = `<b>${esc(inBeeld)}</b> ${WAAR[S.tab] || 'in beeld'} · ronde ${esc(t)} · volgende ${esc(nxt)}` +
     (fout.length ? ` · <span class="fout">bron ${esc(fout.join(', '))} niet gelukt</span>` : '');
 }
 
-const TABLABEL = { kansen: 'Jávea', teduur: 'Te duur', later: 'Misschien later', buiten: 'Buiten Jávea' };
+const TABLABEL = { kansen: 'Jávea', teduur: 'Te duur', later: 'Later', buiten: 'Buiten', onvolledig: 'Geen prijs' };
+/* Onvolledig = de vraagprijs staat niet vast, dus er valt niets door te rekenen. Die objecten
+   horen niet tussen de kansen, maar weggooien is erger: de advertentie bestaat wel. */
+const WAAR = { kansen: 'in Jávea', teduur: 'te duur', later: 'misschien later', buiten: 'buiten Jávea', onvolledig: 'zonder vaste vraagprijs' };
 
 function renderSeg() {
   const tel = (t) => S.items.filter((x) => x.tab === t && x.merk !== 'weg').length;
-  $('#tabseg').innerHTML = ['kansen', 'teduur', 'later', 'buiten'].map((t) =>
+  $('#tabseg').innerHTML = ['kansen', 'teduur', 'later', 'buiten', 'onvolledig'].map((t) =>
     `<button role="tab" class="sg${S.tab === t ? ' on' : ''}" data-tab="${t}" aria-selected="${S.tab === t}">${esc(TABLABEL[t])}<span class="n">${tel(t)}</span></button>`).join('');
 }
 
