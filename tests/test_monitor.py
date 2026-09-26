@@ -1092,3 +1092,23 @@ def test_zoekresultaatpagina_is_geen_woning():
     assert not is_zoekopdracht("https://voorbeeld.es/villa-in-javea")      # helemaal geen parameters
     assert is_zoekopdracht("https://voorbeeld.es/x?id=1&type=2")           # twee parameters: een filter
     assert is_zoekopdracht("https://voorbeeld.es/x?id=" + "9" * 40)        # geen verwijzing maar een sleutel
+
+
+def test_punt_is_niet_altijd_een_duizendtalscheiding():
+    """In Spanje scheidt een punt duizendtallen ("1.760"), maar in een JSON-LD-veld is hij een
+    decimaalteken ("795.00"). De oude lezer haalde élke punt weg en maakte van 795,00 m² dus
+    79.500 m². 191 objecten hadden daardoor een oppervlak dat niet bestaat, tot 83.235 m² aan toe —
+    en dat getal gaat rechtstreeks de bouwkosten en de verkoopwaarde in."""
+    from dh.adapters.makelaars import _num
+    assert _num("795.00") == 795            # de fout die eruit moest
+    assert _num("389.00") == 389
+    assert _num("1.760") == 1760            # drie cijfers erachter: duizendtallen
+    assert _num("2.600.000") == 2600000
+    assert _num("83.235") == 83235
+    assert _num("1.234,56") == 1234.56      # Spaanse schrijfwijze
+    assert _num("1,234.56") == 1234.56      # Engelse schrijfwijze
+    assert _num("1,5") == 1.5
+    assert _num("1 760") == 1760            # spatie als scheiding
+    assert _num(" 1.760 ") == 1760  # vaste en smalle spatie
+    assert _num("389") == 389
+    assert _num("") is None and _num(None) is None and _num("abc") is None

@@ -282,10 +282,25 @@ class Site:
 
 # -------------------------------------------------------------------- ontleden
 
+# Een punt is in Spanje een duizendtalscheiding ("1.760" is duizendzevenhonderdzestig), maar in een
+# JSON-LD-veld is hij een decimaalteken ("795.00" is 795 m2). De oude lezer haalde elke punt weg en
+# maakte van 795,00 m2 dus 79.500 m2 - gevonden 27-09-2026 op 181 objecten, waarvan er een 83.235 m2
+# bebouwd zou zijn. Zulke getallen gaan rechtstreeks de bouwkosten en de verkoopwaarde in.
+# De scheiding herkennen wij nu aan het aantal cijfers erachter: drie is duizendtallen, een of twee
+# is een decimaal.
 def _num(s) -> float | None:
+    """Leest een getal dat met punten, komma's of spaties is geschreven."""
     if s is None:
         return None
-    s = str(s).replace(".", "").replace(" ", "").replace(" ", "").replace(",", ".")
+    s = str(s).strip().replace(" ", "").replace("\u00a0", "").replace("\u202f", "")
+    if not s:
+        return None
+    laatste = max(s.rfind("."), s.rfind(","))
+    if laatste >= 0 and s[laatste + 1:].isdigit() and len(s) - laatste - 1 in (1, 2):
+        # het laatste teken scheidt de decimalen; al het andere zijn duizendtallen
+        s = s[:laatste].replace(".", "").replace(",", "") + "." + s[laatste + 1:]
+    else:
+        s = s.replace(".", "").replace(",", "")
     try:
         return float(s)
     except ValueError:
