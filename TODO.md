@@ -111,6 +111,23 @@ die we al kenden. Volledige lijst met bewijs: `onderzoek/B00-nieuwe-bronnen-shor
 
 ## Systeem verbeteren
 
+- [x] 27-09 · **Werkelijk betaald prijspeil per kadasterzone.** Onze verkoopwaarde rustte volledig op
+  vraagprijzen van Idealista. Het Catastro publiceert per waardezone het gemiddelde van de notariële
+  koopakten; 88 zones over de drie gemeenten opgehaald (jaargang 2026), 323 van de 718 objecten met
+  coördinaat eraan gekoppeld. Staat in de app als één regel naast de wijkprijs, met de onderbouwing
+  achter een tik. Waarschuwt bij 2,5× het zonegemiddelde (12 objecten), merkt op vanaf 2,0 (62).
+  De eerste vondsten: een villa waarvan de verkoopwaarde op twee vergelijkingsobjecten rust, en
+  appartementen in Teulada-dorp die tegen de prijzen van kustplaats Moraira werden gerekend.
+  Modules `dh/zonewaarde.py` en `dh/enrich_zonewaarde.py`, bron R3-97, onderzoek N11.
+- [~] 27-09 · **Coördinaat van de makelaarssites zelf.** 3.400 objecten van eigen makelaarssites
+  hebben geen coördinaat, en dus geen bestemming, geen helling, geen water en geen prijspeil. De
+  objectpagina's zijn al in huis, dus dit kost geen extra verzoeken — mits er een coördinaat van het
+  object op staat. **Valkuil, gemeten 27-09:** op drie van de eerste zes sites gaf élke objectpagina
+  dezelfde coördinaat terug. Dat is het kantooradres. Eén pagina bekijken had dat adres in 800
+  objecten gezet en daarna helling en overstromingsrisico op het kantoor van de makelaar uitgerekend.
+  De toets is daarom niet "staat er een coördinaat" maar "verandert hij per object":
+  `tools/coordinaten-verkennen.py`, uitkomst in `onderzoek/N12-coordinaten-makelaarssites.json`.
+
 - [x] 25-09 · **De ronde verrijkt zelf.** Perceel, bestemming en helling worden nu in elke ronde
   aangevuld voor nieuwe objecten, met een portiegrootte per bron en een tijdbudget.
 
