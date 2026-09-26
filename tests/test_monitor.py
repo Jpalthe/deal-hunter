@@ -1066,3 +1066,29 @@ def test_coordinaat_vertrouwt_geen_meting_van_een_enkele_pagina():
         finally:
             C.METING = oud
             C._meting.cache_clear()
+
+
+def test_zoekresultaatpagina_is_geen_woning():
+    """Op 27-09-2026 stonden er 280 zoekresultaatpagina's als woning in de database, 277 van één
+    site. Elk droeg de prijs en het oppervlak van de woning die toevallig bovenaan dat filter stond:
+    € 1.950.000 met 389/409 m², eenentwintig keer. Over één ervan was al een melding gestuurd."""
+    from dh.adapters.makelaars import is_overzichtspagina, is_zoekopdracht
+    nep = [
+        "https://www.xabiacasa.com/results/?type%5B0%5D=1&id_tipo_operacion=1&od=prd.d",
+        "https://www.xabiacasa.com/results/?id_tipo_operacion=1",
+        "https://www.javeacontinental.com/results/?lan=&id_tipo_operacion=1&precio_min=",
+        "https://www.villalingo.com/?q=g6i1g3a5n1t6i5n0e547",
+    ]
+    echt = [
+        "https://www.xabiacasa.com/apartamento-en-javea-con-piscina-es1765346.html",
+        "https://www.costablancajaveaproperties.com/property/apartment-in-javea-cmaoiji6/",
+        "https://voorbeeld.es/ficha?id=12345",          # één verwijzing naar één object mag wel
+        "https://voorbeeld.es/inmueble?ref=AB-1234",
+    ]
+    for u in nep:
+        assert is_overzichtspagina(u, None), u
+    for u in echt:
+        assert not is_overzichtspagina(u, None), u
+    assert not is_zoekopdracht("https://voorbeeld.es/villa-in-javea")      # helemaal geen parameters
+    assert is_zoekopdracht("https://voorbeeld.es/x?id=1&type=2")           # twee parameters: een filter
+    assert is_zoekopdracht("https://voorbeeld.es/x?id=" + "9" * 40)        # geen verwijzing maar een sleutel

@@ -56,7 +56,24 @@ NIET_OBJECT = re.compile(r"(contact|about|nosotros|sobre|blog|noticias|news|priv
 # te zijn beland, alle met dezelfde prijs van € 50.000 uit het zoekfilter. Die filteren wij hier weg.
 OVERZICHT_URL = re.compile(
     r"(/page/\d+|[?&](?:view|orderby|sort|pagina|paged)=|/property-type/|/tipo-de-propiedad/|/property-city/|"
-    r"/categoria/|/category/|/tag/|/zona/|/location/|/busqueda|/search|/resultados|/listado)", re.I)
+    r"/categoria/|/category/|/tag/|/zona/|/location/|/busqueda|/search|/resultados?|/results?|/listado)", re.I)
+# Een zoekopdracht is geen woning. Op 27-09-2026 stonden er 280 zoekresultaatpagina's als object in
+# de database — 277 daarvan van één site, elk met de prijs en het oppervlak van de duurste woning
+# die toevallig bovenaan dat filter stond (€ 1.950.000, 389/409 m², eenentwintig keer). De URL
+# verraadt ze: `/results/?type[0]=1&id_tipo_operacion=1&od=prd.d`. Een echte objectpagina heeft
+# hoogstens één parameter, en dan een verwijzing naar dat ene object.
+ID_PARAMETER = re.compile(r"^(id|p|pid|property|property_id|inmueble|ref|referencia|codigo|code)$", re.I)
+
+
+def is_zoekopdracht(url: str) -> bool:
+    """Een adres met zoek- of filterparameters wijst naar een lijst, niet naar één woning."""
+    from urllib.parse import parse_qsl, urlparse
+    q = parse_qsl(urlparse(url or "").query, keep_blank_values=True)
+    if not q:
+        return False
+    if len(q) == 1 and ID_PARAMETER.match(q[0][0]) and 0 < len(q[0][1]) <= 24:
+        return False               # ?id=12345 mag: dat is wél één object
+    return True
 OVERZICHT_TITEL = re.compile(
     r"^(b[uú]squeda|resultados|propiedades|properties|inmuebles|listado|zoekresultaten|p[aá]gina\s*\d|"
     r"apartamento|apartamentos|villa|villas|chalet|chalets|casa adosada|tienda|parcela|parcelas|"
@@ -65,7 +82,7 @@ OVERZICHT_TITEL = re.compile(
 
 def is_overzichtspagina(url: str, titel: str | None) -> bool:
     """Een overzichts- of categoriepagina is geen woning, ook al staat er een prijs op."""
-    if OVERZICHT_URL.search(url or ""):
+    if OVERZICHT_URL.search(url or "") or is_zoekopdracht(url):
         return True
     return bool(OVERZICHT_TITEL.match((titel or "").strip()))
 

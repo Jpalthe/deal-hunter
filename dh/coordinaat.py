@@ -53,7 +53,12 @@ PATRONEN = {
 # Punten die tijdens de meting op élke objectpagina van een site terugkwamen. Eén ervan
 # (38,7039 / 0,15677) dook bij twee verschillende sites op, wat erop wijst dat een CRM hem als
 # standaardwaarde meegeeft. Zulke punten weigeren wij overal, ook op een site die verder in orde is.
-EXTRA_GEWEIGERD = [(38.7039, 0.15677)]
+EXTRA_GEWEIGERD = [
+    (38.7039, 0.15677),      # vast punt bij randofrealestate; ook als los punt bij remaxinmomas
+    (38.78894, 0.16642),     # dook op bij remaxinmomas én bij 52 objecten van atinainmobiliaria:
+                             # het midden van het Arenal, dat een CRM als standaard meegeeft. Het
+                             # lijkt juist bij elke strandwoning, en dat maakt hem gevaarlijk.
+]
 GELIJK_GRAAD = 0.0002          # ongeveer 20 meter: genoeg om afrondingsverschillen op te vangen
 
 

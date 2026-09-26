@@ -57,12 +57,22 @@ def run(limit: int = 0, hosts: list[str] | None = None) -> dict:
                 p = coordinaat.uit_pagina(t, host)
                 if p:
                     punten[int(r["id"])] = p
-            # standaardwaarden eruit: een punt dat bij meer dan drie objecten hoort, is geen adres
-            hoevaak: dict[tuple, int] = {}
-            for p in punten.values():
-                hoevaak[p] = hoevaak.get(p, 0) + 1
-            dubbel = {p for p, n in hoevaak.items() if n > MAX_ZELFDE_PUNT}
-            schoon = {lid: p for lid, p in punten.items() if p not in dubbel}
+            # Standaardwaarden eruit: een punt dat bij meer dan drie objecten hoort, is geen adres.
+            # Vergelijken met dezelfde marge als de weigerlijst, niet op de exacte waarde: op
+            # 27-09-2026 ontsnapte een standaardpunt omdat het een keer als 38,788944 en een keer
+            # als 38,788965 in de pagina stond — vier centimeter verschil, en dus twee "unieke"
+            # punten die elk onder de drempel bleven.
+            hoevaak: list[tuple[tuple[float, float], int]] = []
+            for pt in punten.values():
+                for i, (q, n) in enumerate(hoevaak):
+                    if coordinaat._bijna(pt, q):
+                        hoevaak[i] = (q, n + 1)
+                        break
+                else:
+                    hoevaak.append((pt, 1))
+            dubbel = [q for q, n in hoevaak if n > MAX_ZELFDE_PUNT]
+            schoon = {lid: p for lid, p in punten.items()
+                      if not any(coordinaat._bijna(p, q) for q in dubbel)}
             for lid, (la, lo) in schoon.items():
                 store.con.execute("UPDATE listings SET lat=?, lon=? WHERE id=?", (la, lo, lid))
             store.con.commit()
