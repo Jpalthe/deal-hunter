@@ -25,7 +25,7 @@
 
   const state = {
     summary: null, listings: [], auctions: [], zones: [],
-    f: { q: "", area: "alle", cat: "alle", cls: new Set(), onlyNew: false, onlyOpen: false, onlyIdeal: false, showLoss: false, sort: "room" },
+    f: { q: "", area: "alle", cat: "alle", cls: new Set(), onlyNew: false, onlyOpen: false, onlyIdeal: false, showLoss: false, alles: false, sort: "room" },
     selected: null, detail: null, overrides: {}, scenarioKey: null,
   };
 
@@ -77,7 +77,13 @@
 
   // ---------------------------------------------------------------- data
   async function loadAll() {
-    const [summary, listings, auctions, zones] = await Promise.all([api("/api/summary"), api("/api/listings"), api("/api/auctions"), api("/api/zones")]);
+    // De telefoon haalde de vijf tabbladen op, dit scherm alles wat actief is.
+    // Daardoor stonden hier 3.757 objecten waaronder goedkope woningen buiten de
+    // focus, en verscheen dezelfde woning uit twee bronnen twee keer — de
+    // ontdubbeling zit namelijk op het tabblad. Nu halen beide hetzelfde op.
+    // Het vinkje "Ook buiten de focus" zet het oude gedrag terug.
+    const pad = state.f.alles ? "/api/listings" : "/api/listings?tab=kansen,teduur,later,buiten,onvolledig";
+    const [summary, listings, auctions, zones] = await Promise.all([api("/api/summary"), api(pad), api("/api/auctions"), api("/api/zones")]);
     Object.assign(state, { summary, listings, auctions, zones });
     renderTop(); renderFilters(); renderList(); renderMap(); renderAuctions(); renderZones(); legend();
     const busy = Object.keys(state.overrides).length || document.activeElement?.id === "rv-note" || document.activeElement?.type === "range";
@@ -473,6 +479,9 @@
   $("#f-open").addEventListener("change", (e) => { state.f.onlyOpen = e.target.checked; renderList(); renderMap(); });
   $("#f-ideal").addEventListener("change", (e) => { state.f.onlyIdeal = e.target.checked; renderList(); renderMap(); });
   $("#f-loss").addEventListener("change", (e) => { state.f.showLoss = e.target.checked; renderList(); renderMap(); });
+  // Dit vinkje haalt een ándere verzameling op, dus het is een herlaadactie en
+  // geen filter. Daarom loadAll en niet renderList.
+  $("#f-alles").addEventListener("change", (e) => { state.f.alles = e.target.checked; loadAll(); });
   $("#sort").addEventListener("change", (e) => { state.f.sort = e.target.value; renderList(); });
   $("#drawer-close").addEventListener("click", () => { clearTimeout(wiTimer); wiSeq++; detailSeq++; state.detail = null; state.overrides = {}; $("#drawer").hidden = true; $(".mapwrap").classList.remove("drawer-open"); state.selected = null; renderList(); renderMap(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#drawer").hidden) $("#drawer-close").click(); });

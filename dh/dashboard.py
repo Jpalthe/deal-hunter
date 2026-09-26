@@ -197,15 +197,40 @@ async def bewaak_toegang(request: Request, call_next):
     return _inlogpagina()
 
 
+_VERSIE = re.compile(r'(?P<attr>href|src)="(?P<pad>/static/[^"?]+\.(?:css|js))"')
+
+
+def _pagina(naam: str) -> HTMLResponse:
+    """Een HTML-pagina met een versiemerk achter elke eigen stylesheet en script.
+
+    Zonder dit merk houdt de browser de oude app.css en app.js vast. Op de
+    telefoon is dat erger dan op een laptop: een webapp op het beginscherm
+    ververst niet met ctrl-F5, dus een verbetering komt daar pas aan als de
+    cache uit zichzelf verloopt. Het merk is de wijzigingstijd van het bestand
+    zelf, dus het verandert precies wanneer het bestand verandert en op geen
+    enkel ander moment."""
+    html = (STATIC / naam).read_text(encoding="utf-8")
+
+    def merk(m: "re.Match[str]") -> str:
+        bestand = STATIC / m.group("pad").removeprefix("/static/")
+        try:
+            v = int(bestand.stat().st_mtime)
+        except OSError:
+            return m.group(0)
+        return f'{m.group("attr")}="{m.group("pad")}?v={v}"'
+
+    return HTMLResponse(_VERSIE.sub(merk, html))
+
+
 @app.get("/", response_class=HTMLResponse)
 def index():
-    return FileResponse(str(STATIC / "index.html"))
+    return _pagina("index.html")
 
 
 @app.get("/m", response_class=HTMLResponse)
 def mobile():
     """Telefoonpagina: los van het dashboard, gemaakt voor duimbediening en een icoon op het beginscherm."""
-    return FileResponse(str(STATIC / "m.html"))
+    return _pagina("m.html")
 
 
 @app.get("/manifest.webmanifest")
