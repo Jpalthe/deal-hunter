@@ -32,7 +32,7 @@ from urllib.parse import urljoin, urlparse
 
 import httpx
 
-from .. import config
+from .. import config, coordinaat
 
 log = logging.getLogger("dh.makelaars")
 
@@ -436,6 +436,13 @@ def ontleed(t: str, url: str, k: Kantoor) -> dict | None:
         alineas = [a.strip() for a in txt.split("\n") if len(a.strip()) > 120]
         if alineas:
             tekst_beschrijving = max(alineas, key=len)[:1500]
+
+    if not config.valid_coord(lat, lon):
+        # Geen geo in de JSON-LD. Sommige sites zetten het punt elders in de pagina, maar alleen
+        # bij een site waarvan gemeten is dat dat punt per object verschilt (zie dh/coordinaat.py).
+        punt = coordinaat.uit_pagina(t, k.host)
+        if punt:
+            lat, lon = punt
 
     rec = {
         "source_ref": ref or hashlib.sha1(url.encode("utf-8")).hexdigest()[:12],

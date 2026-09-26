@@ -26,11 +26,107 @@
     }
    }
   },
-  "moraguespons.com": {
-   "objecten": 254,
-   "kantoor": "Moragues Pons Mediterranean Houses (DESARROLLOS MORAGUES PUGA S.L.)",
-   "cms": "eigen",
+  "sunshinevillas.co.uk": {
+   "objecten": 320,
+   "kantoor": "Sunshine Villas",
+   "cms": "Mediaelx",
    "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "leaflet": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.8388,
+       0.10506
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   }
+  },
+  "xabiacasa.com": {
+   "objecten": 298,
+   "kantoor": "Xabiacasa",
+   "cms": "Inmoweb",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": "javascript",
+   "patronen": {
+    "javascript": {
+     "oordeel": "bruikbaar",
+     "waarom": "één punt per pagina, en op elke pagina een ander",
+     "vast_op_elke_pagina": [],
+     "per_pagina": [
+      [
+       [
+        38.78976,
+        0.16534
+       ]
+      ],
+      [
+       [
+        38.76845,
+        0.1971
+       ]
+      ],
+      [
+       [
+        38.77449,
+        0.18688
+       ]
+      ],
+      [
+       [
+        38.76951,
+        0.19224
+       ]
+      ]
+     ]
+    },
+    "data-attribuut": {
+     "oordeel": "bruikbaar",
+     "waarom": "één punt per pagina, en op elke pagina een ander",
+     "vast_op_elke_pagina": [],
+     "per_pagina": [
+      [
+       [
+        38.78976,
+        0.16534
+       ]
+      ],
+      [
+       [
+        38.76845,
+        0.1971
+       ]
+      ],
+      [
+       [
+        38.77449,
+        0.18688
+       ]
+      ],
+      [
+       [
+        38.76951,
+        0.19224
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "inmovillasjavea.com": {
+   "objecten": 271,
+   "kantoor": "Inmo Villas Jávea",
+   "cms": "WordPress met Inmobalia-plugin (WordPress 7.0.1, WPML, Rank ",
+   "paginas_gelezen": 3,
    "bruikbaar_patroon": null,
    "patronen": {
     "javascript": {
@@ -38,8 +134,8 @@
      "waarom": "op te weinig pagina's iets gevonden",
      "vast_op_elke_pagina": [
       [
-       38.76198,
-       0.15285
+       38.75967,
+       0.17933
       ]
      ],
      "per_pagina": [
@@ -49,50 +145,31 @@
       []
      ]
     },
-    "json": {
-     "oordeel": "meerdere",
-     "waarom": "meerdere punten per pagina (9 op de drukste)",
+    "leaflet": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
      "vast_op_elke_pagina": [
       [
-       38.79155,
-       0.17759
+       38.75967,
+       0.17933
       ]
      ],
      "per_pagina": [
-      [
-       [
-        38.7889,
-        0.16546
-       ]
-      ],
-      [
-       [
-        38.73104,
-        0.19668
-       ],
-       [
-        38.7441,
-        0.19308
-       ],
-       [
-        38.74484,
-        0.22228
-       ]
-      ],
-      [
-       [
-        38.76198,
-        0.15285
-       ]
-      ],
-      [
-       [
-        38.76198,
-        0.15285
-       ]
-      ]
+      [],
+      [],
+      [],
+      []
      ]
-    },
+    }
+   }
+  },
+  "moraguespons.com": {
+   "objecten": 254,
+   "kantoor": "Moragues Pons Mediterranean Houses (DESARROLLOS MORAGUES PUGA S.L.)",
+   "cms": "eigen",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
     "leaflet": {
      "oordeel": "meerdere",
      "waarom": "meerdere punten per pagina (1318 op de drukste)",
@@ -168,6 +245,140 @@
        ]
       ]
      ]
+    },
+    "json": {
+     "oordeel": "meerdere",
+     "waarom": "meerdere punten per pagina (9 op de drukste)",
+     "vast_op_elke_pagina": [
+      [
+       38.79155,
+       0.17759
+      ]
+     ],
+     "per_pagina": [
+      [
+       [
+        38.7889,
+        0.16546
+       ]
+      ],
+      [
+       [
+        38.73104,
+        0.19668
+       ],
+       [
+        38.7441,
+        0.19308
+       ],
+       [
+        38.74484,
+        0.22228
+       ]
+      ],
+      [
+       [
+        38.76198,
+        0.15285
+       ]
+      ],
+      [
+       [
+        38.76198,
+        0.15285
+       ]
+      ]
+     ]
+    },
+    "javascript": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.76198,
+       0.15285
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   }
+  },
+  "sansyvillasjavea.com": {
+   "objecten": 192,
+   "kantoor": "Sansy Villas Jávea, S.L.",
+   "cms": "Inmobigrama (niet in de standaardlijst; eigen PHP-template v",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "costablancajaveaproperties.com": {
+   "objecten": 191,
+   "kantoor": "Giuliano Villas (Giuliano Villas SL, Jávea)",
+   "cms": "eigen (Mattis-Framework 4.0 / madstudio, PHP-maatwerk van ee",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "maps-parameter": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.77058,
+       0.19204
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   }
+  },
+  "lauroravillas.com": {
+   "objecten": 161,
+   "kantoor": "L'Aurora Villas Selection",
+   "cms": "Inmoweb",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "javascript": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.76844,
+       0.19728
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "data-attribuut": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.76844,
+       0.19728
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
     }
    }
   },
@@ -205,12 +416,451 @@
      ]
     }
    }
+  },
+  "randofrealestate.com": {
+   "objecten": 137,
+   "kantoor": "Randof Real Estate",
+   "cms": "Inmoweb",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "javascript": {
+     "oordeel": "meerdere",
+     "waarom": "meerdere punten per pagina (1 op de drukste)",
+     "vast_op_elke_pagina": [],
+     "per_pagina": [
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ],
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ],
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ],
+      [
+       [
+        38.7894,
+        0.17064
+       ]
+      ]
+     ]
+    },
+    "data-attribuut": {
+     "oordeel": "meerdere",
+     "waarom": "meerdere punten per pagina (1 op de drukste)",
+     "vast_op_elke_pagina": [],
+     "per_pagina": [
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ],
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ],
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ],
+      [
+       [
+        38.7894,
+        0.17064
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "blue-square.es": {
+   "objecten": 112,
+   "kantoor": "Blue Square Real Estate (Jávea) — handelsnaam Blue Square Spain / Blue Square International Property",
+   "cms": "WordPress (eigen thema 'blue-square', Yoast SEO Premium 28.1",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "javeacontinental.com": {
+   "objecten": 109,
+   "kantoor": "Jávea Continental (INMOBILIARIA JAVEA CONTINENTAL)",
+   "cms": "Inmoweb",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "javascript": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.76784,
+       0.19892
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "data-attribuut": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.76784,
+       0.19892
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   }
+  },
+  "vistavillasjavea.com": {
+   "objecten": 109,
+   "kantoor": "Vista Villas Javea",
+   "cms": "WordPress, eigen (maatwerkthema JointsWP door webbureau Naos",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "plotsdirect.com": {
+   "objecten": 95,
+   "kantoor": "Plots Direct S.L.",
+   "cms": "eigen",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "123javeavillas.com": {
+   "objecten": 77,
+   "kantoor": "123 Javea Villas",
+   "cms": "Advance Agent (advanceagent.co.uk, Brits makelaars-CMS; niet",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "javeaestateagent.com": {
+   "objecten": 70,
+   "kantoor": "Javea Estate Agent",
+   "cms": "WordPress",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "ashtonvillas.com": {
+   "objecten": 67,
+   "kantoor": "Ashton Villas",
+   "cms": "WordPress (thema RealHomes + WPML + Yoast + LiteSpeed Cache;",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "javeahouses.com": {
+   "objecten": 65,
+   "kantoor": "Houses Investment Holding S.L. (Javea Houses)",
+   "cms": "WordPress (thema RealHomes 4.5.2 + plugin Easy Real Estate 2",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "llidomarjavea.com": {
+   "objecten": 58,
+   "kantoor": "Llidomar Properties",
+   "cms": "Sooprema",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "rimontgo.com": {
+   "objecten": 57,
+   "kantoor": "Rimontgó",
+   "cms": "eigen",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "valuvillas.com": {
+   "objecten": 57,
+   "kantoor": "ValuVillas",
+   "cms": "WordPress (Elementor + JetEngine, Yoast, Schema Pro, WP Rock",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "mgvillas.com": {
+   "objecten": 43,
+   "kantoor": "MG Villas (MG Villas Luxury Property; rechtspersoon MARSAL PROPIEDADES S.L.)",
+   "cms": "Paagees (Spaans vastgoed-/websiteplatform op Nuxt); niet Inm",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "maps-parameter": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.77225,
+       0.18967
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "json": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.77225,
+       0.18967
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "google-maps": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [],
+     "per_pagina": [
+      [
+       [
+        38.78913,
+        0.14151
+       ]
+      ],
+      [
+       [
+        38.68848,
+        0.12802
+       ]
+      ],
+      [],
+      []
+     ]
+    }
+   }
+  },
+  "avcostamar.com": {
+   "objecten": 30,
+   "kantoor": "A.V. Costamar S.L.",
+   "cms": "WordPress",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "json": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.72995,
+       0.13904
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   }
+  },
+  "iadespana.es": {
+   "objecten": 22,
+   "kantoor": "iad España (asesores Jávea)",
+   "cms": "eigen",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "calablanca.com": {
+   "objecten": 10,
+   "kantoor": "Inmobiliaria Calablanca (opdracht: Cala Blanca Villas S.L.; aviso legal noemt Mediterranean Living, S.L.)",
+   "cms": "Sooprema",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "luxiaproperties.com": {
+   "objecten": 10,
+   "kantoor": "Luxia Properties",
+   "cms": "WordPress (thema WpResidence van WpEstate, custom post type ",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "remaxinmomas.es": {
+   "objecten": 7,
+   "kantoor": "RE/MAX Inmomás IV (groepssite van GRUPO INMOMÁS, vier kantoren: Elche, La Marina, Alicante Centro, Jávea)",
+   "cms": "WordPress (eigen plugin \"Nexora\", custom post type nexora_pr",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": "javascript",
+   "patronen": {
+    "javascript": {
+     "oordeel": "bruikbaar",
+     "waarom": "één punt per pagina, en op elke pagina een ander",
+     "vast_op_elke_pagina": [],
+     "per_pagina": [
+      [
+       [
+        38.79295,
+        0.17983
+       ]
+      ],
+      [
+       [
+        38.78894,
+        0.16642
+       ]
+      ],
+      [
+       [
+        38.78938,
+        0.1708
+       ]
+      ],
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ]
+     ]
+    },
+    "data-attribuut": {
+     "oordeel": "bruikbaar",
+     "waarom": "één punt per pagina, en op elke pagina een ander",
+     "vast_op_elke_pagina": [],
+     "per_pagina": [
+      [
+       [
+        38.79295,
+        0.17983
+       ]
+      ],
+      [
+       [
+        38.78894,
+        0.16642
+       ]
+      ],
+      [
+       [
+        38.78938,
+        0.1708
+       ]
+      ],
+      [
+       [
+        38.7039,
+        0.15677
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  "ahermar.com": {
+   "objecten": 5,
+   "kantoor": "Ahermar (AHERMAR Jávea Real Estate - Inmobiliaria Xàbia)",
+   "cms": "eigen",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {
+    "json": {
+     "oordeel": "te weinig",
+     "waarom": "op te weinig pagina's iets gevonden",
+     "vast_op_elke_pagina": [
+      [
+       38.77463,
+       0.18762
+      ]
+     ],
+     "per_pagina": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   }
+  },
+  "javeaestates.com": {
+   "objecten": 5,
+   "kantoor": "Javea Estates",
+   "cms": "Joomla + OS Property (joomdonation), template osprealestate4",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "javeamia.com": {
+   "objecten": 5,
+   "kantoor": "Jávea Mia",
+   "cms": "WordPress",
+   "paginas_gelezen": 4,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "xabiga.com": {
+   "objecten": 2,
+   "kantoor": "Xabiga S.L.",
+   "cms": "WordPress (vastgoedthema Houzez + Elementor; eigen ingericht",
+   "paginas_gelezen": 2,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "aplaceinjavea.com": {
+   "objecten": 1,
+   "kantoor": "A Place in Javea",
+   "cms": "WordPress, eigen bouw (GeneratePress-childthema apj-generate",
+   "paginas_gelezen": 1,
+   "bruikbaar_patroon": null,
+   "patronen": {}
+  },
+  "villalingo.com": {
+   "objecten": 1,
+   "kantoor": "Villa Lingo Real Estate (grupo Villa Lingo S.L)",
+   "cms": "eigen",
+   "paginas_gelezen": 1,
+   "bruikbaar_patroon": null,
+   "patronen": {}
   }
  },
  "samenvatting": {
-  "sites_bekeken": 3,
-  "sites_met_coordinaat_per_object": 1,
-  "objecten_daarmee_bereikbaar": 145,
-  "objecten_totaal": 795
+  "sites_bekeken": 33,
+  "sites_met_coordinaat_per_object": 3,
+  "objecten_daarmee_bereikbaar": 450,
+  "objecten_totaal": 3382
  }
 }

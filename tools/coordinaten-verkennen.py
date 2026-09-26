@@ -28,25 +28,12 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from dh import config                                    # noqa: E402
+from dh import config, coordinaat                        # noqa: E402
 from dh.adapters.makelaars import Site, laad_kantoren    # noqa: E402
 
-PATRONEN = {
-    "data-attribuut": re.compile(
-        r'data-(?:lat|latitude)\s*=\s*["\']?(-?\d{1,2}\.\d{3,})["\']?.{0,120}?'
-        r'data-(?:lng|lon|longitude)\s*=\s*["\']?(-?\d{1,3}\.\d{3,})', re.S | re.I),
-    "json": re.compile(
-        r'"lat(?:itude)?"\s*:\s*"?(-?\d{1,2}\.\d{3,})"?.{0,80}?'
-        r'"(?:lng|lon|longitude)"\s*:\s*"?(-?\d{1,3}\.\d{3,})"?', re.S | re.I),
-    "javascript": re.compile(
-        r'\blat\w*\s*[:=]\s*"?(-?\d{1,2}\.\d{3,})"?.{0,80}?\b(?:lng|lon|long\w*)\s*[:=]\s*"?(-?\d{1,3}\.\d{3,})"?',
-        re.S | re.I),
-    "google-maps": re.compile(
-        r'!3d(-?\d{1,2}\.\d{3,})!.{0,40}?!2d(-?\d{1,3}\.\d{3,})|!2d(-?\d{1,3}\.\d{3,})!3d(-?\d{1,2}\.\d{3,})'),
-    "maps-parameter": re.compile(r'[?&](?:q|ll|center|sll|daddr)=(-?\d{1,2}\.\d{3,})[,%]\s*2?C?(-?\d{1,3}\.\d{3,})', re.I),
-    "leaflet": re.compile(r'\[\s*(-?\d{1,2}\.\d{3,})\s*,\s*(-?\d{1,3}\.\d{3,})\s*\]'),
-    "osm-bbox": re.compile(r'bbox=(-?\d{1,3}\.\d{3,})(?:%2C|,)(-?\d{1,2}\.\d{3,})', re.I),
-}
+# De patronen staan in dh/coordinaat.py, zodat wat hier gemeten wordt en wat de monitor
+# gebruikt niet uit elkaar kunnen lopen.
+PATRONEN = coordinaat.PATRONEN
 
 
 def paren(tekst: str) -> dict[str, set[tuple[float, float]]]:

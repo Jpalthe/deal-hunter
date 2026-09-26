@@ -1007,3 +1007,62 @@ def test_prijspeil_waarschuwt_pas_bij_het_extreme():
     assert Z.oordeel(8400, None) is None
     assert Z.oordeel(None, z) is None
     assert Z.oordeel(8400, {"val_tipo_m2": 0}) is None
+
+
+def test_coordinaat_alleen_van_een_gemeten_site():
+    """De valkuil van 27-09-2026: op tien van de drieëndertig makelaarssites staat op élke
+    objectpagina dezelfde coördinaat — die van het kantoor. Overnemen betekent dat helling,
+    overstromingsrisico en prijspeil op het kantoor van de makelaar worden uitgerekend, met dezelfde
+    stelligheid als een echte meting. Daarom leest de module een meetrapport in plaats van een lijst
+    patronen, en doet zij niets voor een site die niet is gemeten."""
+    from dh import coordinaat as C
+    html = '<div data-lat="38.78894" data-lng="0.16642"></div>'
+    rapport = {"paginas_per_site": 4, "sites": {
+        "gemeten.com": {"bruikbaar_patroon": "data-attribuut", "patronen": {}},
+        "kantoor.com": {"bruikbaar_patroon": None,
+                        "patronen": {"data-attribuut": {"vast_op_elke_pagina": [[38.78894, 0.16642]]}}}}}
+    import json, pathlib, tempfile
+    C._meting.cache_clear()
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            p = pathlib.Path(d) / "meting.json"
+            p.write_text(json.dumps(rapport), encoding="utf-8")
+            oud, C.METING = C.METING, p
+            try:
+                C._meting.cache_clear()
+                assert C.toegestane_sites() == {"gemeten.com": "data-attribuut"}
+                assert C.uit_pagina(html, "kantoor.com") is None      # niet gemeten als bruikbaar
+                assert C.uit_pagina(html, "onbekend.com") is None     # helemaal niet gemeten
+                # het punt staat op de lijst vaste punten van kantoor.com en wordt overal geweigerd
+                assert C.uit_pagina(html, "gemeten.com") is None
+                goed = '<div data-lat="38.76845" data-lng="0.19710"></div>'
+                assert C.uit_pagina(goed, "gemeten.com") == (38.76845, 0.1971)
+                assert C.uit_pagina(goed, "WWW.Gemeten.com") == (38.76845, 0.1971)
+                # twee verschillende punten op één pagina: wij weten niet welke het object is
+                twee = goed + '<div data-lat="38.70000" data-lng="0.20000"></div>'
+                assert C.uit_pagina(twee, "gemeten.com") is None
+                # buiten het werkgebied telt niet mee
+                ver = '<div data-lat="40.41670" data-lng="-3.70330"></div>'
+                assert C.uit_pagina(ver, "gemeten.com") is None
+            finally:
+                C.METING = oud
+    finally:
+        C._meting.cache_clear()
+
+
+def test_coordinaat_vertrouwt_geen_meting_van_een_enkele_pagina():
+    """"Verandert per object" is niet vast te stellen op één of twee pagina's. Een rapport dat op
+    te weinig pagina's rust, zet dus geen enkele site aan."""
+    from dh import coordinaat as C
+    import json, tempfile, pathlib
+    with tempfile.TemporaryDirectory() as d:
+        p = pathlib.Path(d) / "meting.json"
+        p.write_text(json.dumps({"paginas_per_site": 1, "sites": {
+            "site.com": {"bruikbaar_patroon": "json", "patronen": {}}}}), encoding="utf-8")
+        oud, C.METING = C.METING, p
+        try:
+            C._meting.cache_clear()
+            assert C.toegestane_sites() == {}
+        finally:
+            C.METING = oud
+            C._meting.cache_clear()
