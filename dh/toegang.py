@@ -166,3 +166,40 @@ def wis_pogingen(adres: str) -> None:
 
 def pad_is_vrij(pad: str) -> bool:
     return any(pad == p or pad.startswith(p) for p in VRIJE_PADEN)
+
+
+# --- dienst-token ------------------------------------------------------------
+#
+# TREE Hub draait op dezelfde machine en laat de kansen zien op de telefoon.
+# Dat is een programma en geen mens: het heeft geen browser en dus geen cookie.
+# Daarom een gedeeld geheim in een kopregel.
+#
+# Bewust zo klein mogelijk gehouden:
+#   - staat er geen DH_DIENST_TOKEN, dan bestaat deze weg niet. Geen token in
+#     de omgeving betekent dat er niets te omzeilen valt.
+#   - alleen lezen via /api/ — de token geeft geen toegang tot de pagina's en
+#     is geen vervanging van het wachtwoord.
+#   - vergelijken in vaste tijd, zodat de duur van het antwoord niet verraadt
+#     hoeveel tekens klopten.
+
+TOKEN_KOP = "x-dh-token"
+
+
+def token_uit_omgeving() -> str | None:
+    waarde = (os.environ.get("DH_DIENST_TOKEN") or "").strip()
+    if waarde:
+        return waarde
+    try:
+        from . import config
+
+        waarde = (config.load_env().get("DH_DIENST_TOKEN") or "").strip()
+    except Exception:
+        waarde = ""
+    return waarde or None
+
+
+def token_klopt(gegeven: str | None) -> bool:
+    verwacht = token_uit_omgeving()
+    if not verwacht or not gegeven:
+        return False
+    return hmac.compare_digest(verwacht, gegeven)

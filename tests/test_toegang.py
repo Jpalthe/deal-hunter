@@ -122,3 +122,49 @@ def test_wachtwoord_wijzigen_vereist_het_oude(met_wachtwoord):
     assert zonder_oud.status_code == 400
     te_kort = met_wachtwoord.post("/api/wachtwoord", json={"nieuw": "kort"})
     assert te_kort.status_code == 400
+
+
+# --- dienst-token ------------------------------------------------------------
+#
+# TREE Hub laat de kansen zien op de telefoon en leest ze uit deze API. Dat is
+# een programma zonder browser en dus zonder cookie. De token is de smalst
+# mogelijke opening: alleen lezen, alleen /api/, en alleen als hij is ingesteld.
+
+TOKEN = "een-lang-genoeg-dienst-token"
+
+
+def test_zonder_token_in_de_omgeving_bestaat_die_weg_niet(met_wachtwoord, monkeypatch):
+    monkeypatch.setattr(toegang, "token_uit_omgeving", lambda: None)
+    # Ook mét een kopregel: geen token ingesteld betekent dat er niets te
+    # omzeilen valt.
+    antwoord = met_wachtwoord.get("/api/summary", headers={toegang.TOKEN_KOP: TOKEN})
+    assert antwoord.status_code == 401
+
+
+def test_met_de_juiste_token_mag_lezen(met_wachtwoord, monkeypatch):
+    monkeypatch.setattr(toegang, "token_uit_omgeving", lambda: TOKEN)
+    assert met_wachtwoord.get("/api/summary").status_code == 401
+    goed = met_wachtwoord.get("/api/summary", headers={toegang.TOKEN_KOP: TOKEN})
+    assert goed.status_code == 200
+
+
+def test_een_verkeerde_token_komt_er_niet_in(met_wachtwoord, monkeypatch):
+    monkeypatch.setattr(toegang, "token_uit_omgeving", lambda: TOKEN)
+    fout = met_wachtwoord.get("/api/summary", headers={toegang.TOKEN_KOP: "bijna-goed"})
+    assert fout.status_code == 401
+
+
+def test_de_token_geeft_geen_toegang_tot_de_paginas(met_wachtwoord, monkeypatch):
+    monkeypatch.setattr(toegang, "token_uit_omgeving", lambda: TOKEN)
+    pagina = met_wachtwoord.get("/", headers={toegang.TOKEN_KOP: TOKEN})
+    assert "wachtwoord" in pagina.text.lower()
+
+
+def test_de_token_mag_niet_schrijven(met_wachtwoord, monkeypatch):
+    monkeypatch.setattr(toegang, "token_uit_omgeving", lambda: TOKEN)
+    schrijven = met_wachtwoord.post(
+        "/api/wachtwoord",
+        json={"nieuw": "nog-een-lang-wachtwoord"},
+        headers={toegang.TOKEN_KOP: TOKEN},
+    )
+    assert schrijven.status_code == 401

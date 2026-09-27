@@ -190,6 +190,12 @@ async def bewaak_toegang(request: Request, call_next):
         return await call_next(request)
     if toegang.cookie_geldig(request.cookies.get(toegang.COOKIE_NAAM)):
         return await call_next(request)
+    # TREE Hub leest de kansen uit; dat is een programma zonder browser en dus
+    # zonder cookie. Alleen lezen, alleen op /api/, en alleen als er werkelijk
+    # een DH_DIENST_TOKEN is ingesteld.
+    if request.url.path.startswith("/api/") and request.method == "GET":
+        if toegang.token_klopt(request.headers.get(toegang.TOKEN_KOP)):
+            return await call_next(request)
     # Een pagina krijgt de inlog te zien; een API-verzoek een eerlijke 401,
     # zodat de app niet stilletjes HTML in een JSON-veld krijgt.
     if request.url.path.startswith("/api/"):
