@@ -1176,3 +1176,21 @@ def test_wijk_uit_de_tekst_verwart_uitzicht_niet_met_ligging():
     assert z("Villa en Balcon al Mar") == "granadella_balcon"
     # het locatieveld blijft leidend en kent geen uitzichtregel: dat veld beschrijft de ligging
     assert comps_zone("javea", "El Tosalet", "") == "tosalet_adsubia"
+
+
+def test_taalversies_van_dezelfde_woning_zijn_een_woning():
+    """Meertalige makelaarssites geven elke woning een adres per taal met hetzelfde objectnummer:
+    es1660088, da1660088, se1660088. De lezer kende alleen es/gb/en/nl/de/fr, dus Deens, Zweeds,
+    Italiaans, Fins en Portugees kwamen als losse objecten binnen — 51 woningen, 172 overtollige
+    rijen. En omdat de taalversies verschillende prijzen droegen en de meldingenlijst op de
+    grootste ruimte sorteert, won systematisch de goedkoopste, dus de foutste versie."""
+    from dh import dubbel
+    es = {"url": "https://x.es/villa-es1660088.html", "source": "makelaar:x.es", "price": 500000}
+    da = {"url": "https://x.es/hus-da1660088.html", "source": "makelaar:x.es", "price": 420000}
+    ander = {"url": "https://x.es/villa-es1660099.html", "source": "makelaar:x.es", "price": 500000}
+    assert dubbel.objectnummer(es) == "1660088"
+    assert dubbel.objectnummer({"url": "https://x.es/villa-in-javea/"}) is None
+    # zelfde objectnummer is dezelfde woning, ook al verschilt de prijs per taalversie
+    assert dubbel.zelfde(es, da)
+    # een ander nummer bij hetzelfde kantoor blijft een andere woning, ook bij gelijke prijs
+    assert not dubbel.zelfde(es, ander)

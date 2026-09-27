@@ -256,13 +256,21 @@ class Site:
             objs, vervolg = self.objecten_uit_index(u)
             out.update(o for o in objs if not OVERZICHT_URL.search(o))
             te_doen += [v for v in vervolg if v not in gezien]
-        # tweetalige Inmoweb-sites: dezelfde woning als -es en -gb; één taal is genoeg
+        # Meertalige Inmoweb-sites: dezelfde woning staat onder een eigen adres per taal, met
+        # hetzelfde objectnummer erin (es1660088, da1660088, se1660088, it1660088). Eén taal is
+        # genoeg. De vaste lijst es/gb/en/nl/de/fr miste Deens, Zweeds, Italiaans, Fins en
+        # Portugees; daardoor stonden 223 woningen tot vijf keer in de lijst, met verschillende
+        # prijzen per taalversie, en koos de meldingenlijst systematisch de goedkoopste — dus de
+        # foutste (foutenjacht 27-09-2026). Nu telt elk tweeletterig voorvoegsel.
         per_id: dict[str, str] = {}
         rest = []
         for u in sorted(out):
-            m = re.search(r"-(es|gb|en|nl|de|fr)(\d{4,9})\.html$", u)
+            m = re.search(r"-([a-z]{2})(\d{4,9})\.html$", u)
             if m:
-                per_id.setdefault(m.group(2), u)
+                # De Spaanse versie heeft de meest complete velden, dus die wint als hij er is.
+                huidig = per_id.get(m.group(2))
+                if huidig is None or (m.group(1) == "es" and not re.search(r"-es\d", huidig)):
+                    per_id[m.group(2)] = u
             else:
                 rest.append(u)
         return (list(per_id.values()) + rest)[:MAX_OBJECTEN_PER_SITE]

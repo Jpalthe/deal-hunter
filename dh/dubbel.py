@@ -11,6 +11,8 @@ doodgewoon en géén dubbeling.
 """
 from __future__ import annotations
 
+import re
+
 PRIJS_MARGE = 0.01
 MAAT_MARGE = 0.05
 
@@ -26,10 +28,26 @@ def _maten_kloppen(a: dict, b: dict) -> bool:
     return vergeleken
 
 
+# Objectnummer in een adres van een meertalige makelaarssite: .../iets-es1660088.html
+_OBJECTNUMMER = re.compile(r"-[a-z]{2}(\d{4,9})\.html$", re.I)
+
+
+def objectnummer(i: dict) -> str | None:
+    m = _OBJECTNUMMER.search(i.get("url") or "")
+    return m.group(1) if m else None
+
+
 def zelfde(a: dict, b: dict) -> bool:
     # Twee advertenties bij hetzelfde kantoor zijn twee verschillende woningen. Een makelaar zet
     # dezelfde woning niet twee keer op zijn eigen site. Zonder deze regel werden tien appartementen
     # van xabiacasa.com met dezelfde vraagprijs tot één kaartje geplakt.
+    #
+    # Eén uitzondering, en die is hard: staat in beide adressen hetzelfde objectnummer, dan ís het
+    # dezelfde woning, alleen in een andere taal. Dan telt zelfs een verschillende prijs niet —
+    # juist die verschillen waren het probleem (foutenjacht 27-09-2026).
+    na, nb = objectnummer(a), objectnummer(b)
+    if na and na == nb:
+        return True
     if (a.get("source") or "?") == (b.get("source") or "!"):
         return False
     if (a.get("area") or "") != (b.get("area") or ""):
