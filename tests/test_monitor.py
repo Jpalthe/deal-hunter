@@ -1143,3 +1143,36 @@ def test_keuzelijst_telt_niet_mee_als_paginatekst():
     assert "50 m2" not in txt
     # gewone tekst blijft ongemoeid, ook als er het woord option in staat
     assert "een optie" in _tekst("<p>een optie</p>")
+
+
+def test_wijk_uit_de_tekst_verwart_uitzicht_niet_met_ligging():
+    """Twee fouten in de wijkbepaling, gevonden in de foutenjacht van 27-09-2026.
+
+    De eerste: het patroon `tosal` stond zonder woordgrens in montgó–ermita en ving daardoor ook
+    El Tosalet, dat een eigen prijsreeks heeft. 115 objecten werden zo tegen de verkeerde
+    wijkprijzen gerekend, en de wijk bepaalt de verkoopwaarde en dus de maximale koopprijs.
+
+    De tweede: de Montgó is vanaf vrijwel heel Jávea te zien. "Vistas al Montgó" zegt niets over
+    waar een huis staat, maar telde wel als ligging. Het uitzichtwoord moet daarom vlák voor de
+    plaatsnaam staan — ruimer kijken onderdrukt te veel, want in "vistas al Montgó en El Arenal"
+    ligt het object wél in het Arenal."""
+    from dh.prefilter import comps_zone
+    z = lambda t: comps_zone("javea", "", t)                      # noqa: E731
+    assert z("Villa en El Tosalet met zwembad") == "tosalet_adsubia"
+    assert z("Casa en Els Tosals junto al Montgo") == "montgo_ermita"
+    assert z("Villa en la ladera del Montgo") == "montgo_ermita"
+    # uitzicht is geen ligging, in vier talen
+    assert z("Villa con vistas al Montgo") is None
+    assert z("Villa with panoramic views of the Montgo") is None
+    assert z("Haus mit Blick auf den Montgo") is None
+    assert z("Uitzicht op de Montgo") is None
+    # maar de wijk die er ná het uitzicht wél bij staat, telt gewoon
+    assert z("Villa con vistas al Montgo en El Arenal") == "puerto_arenal"
+    assert z("Haus mit Blick auf den Montgo in Toscamar") == "tosalet_adsubia"
+    assert z("Uitzicht op de Montgo, gelegen in Rafalet") == "rafalet_pinosol"
+    # een balkon is geen Balcón al Mar
+    assert z("Apartment with balcony and sea view") is None
+    assert z("Piso con balcones amplios") is None
+    assert z("Villa en Balcon al Mar") == "granadella_balcon"
+    # het locatieveld blijft leidend en kent geen uitzichtregel: dat veld beschrijft de ligging
+    assert comps_zone("javea", "El Tosalet", "") == "tosalet_adsubia"

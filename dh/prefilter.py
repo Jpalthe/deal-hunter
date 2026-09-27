@@ -15,11 +15,13 @@ from pathlib import Path
 from . import config
 
 _ZONE_WORDS = [
-    ("montgo_ermita", [r"montg", r"ermita", r"tosal", r"castellans", r"garroferal", r"carrasquetes", r"jesus pobre"]),
+    # `tosal` stond hier zonder grens en ving daardoor óók El Tosalet, dat een eigen wijk met een
+    # eigen prijsreeks is (110 objecten kregen zo de prijzen van Montgó–Ermita, 27-09-2026).
+    ("montgo_ermita", [r"montg", r"ermita", r"\btosals?\b", r"castellans", r"garroferal", r"carrasquetes", r"jesus pobre"]),
     ("centro", [r"centro", r"casco", r"pueblo", r"old town", r"town centre", r"town center", r"historic", r"dorp"]),
     ("puerto_arenal", [r"puerto", r"\bport\b", r"arenal", r"montañar", r"montanar", r"playa", r"beach", r"primera l[ií]nea", r"frontline", r"grava", r"sant antoni", r"san antonio", r"la corona", r"muntanyar"]),
     ("tosalet_adsubia", [r"tosalet", r"cap mart", r"adsubia", r"cansalades", r"toscamar", r"cala blanca"]),
-    ("granadella_balcon", [r"granadella", r"costa nova", r"portichol", r"portitxol", r"balc[oó]n al mar", r"balcon", r"ambolo", r"cap de la nau", r"cabo la nao", r"la guardia"]),
+    ("granadella_balcon", [r"granadella", r"costa nova", r"portichol", r"portitxol", r"balc[oó]n al mar", r"ambolo", r"cap de la nau", r"cabo la nao", r"la guardia"]),
     ("rafalet_pinosol", [r"rafalet", r"pinosol", r"pinomar", r"lluca", r"tarraula", r"golf", r"la plana", r"valls", r"cami cabanes", r"tossals"]),
 ]
 
@@ -40,9 +42,29 @@ def comps_zone(area: str | None, location_detail: str, text: str = "") -> str | 
             return key
     t = (text or "").lower()
     for key, pats in _ZONE_WORDS:
-        if any(re.search(p, t) for p in pats if p not in _GENERIC):
+        if any(_echt_de_ligging(p, t) for p in pats if p not in _GENERIC):
             return key
     return None
+
+
+# Woorden die van een plaatsnaam een uitzicht maken in plaats van een ligging. De Montgó is vanaf
+# vrijwel heel Jávea te zien; "vistas al Montgó" zegt niets over waar het object staat. Bij 98 van
+# de 850 objecten waarvan de wijk uit de advertentietekst kwam, was dit het geval (27-09-2026).
+# Het uitzichtwoord moet vlák voor de plaatsnaam staan, met hoogstens een voorzetsel ertussen.
+# Ruimer kijken gaat mis: in "vistas al Montgó en El Arenal" ligt het object wél in het Arenal,
+# en een venster van zestig tekens onderdrukte dat ook.
+_UITZICHT = re.compile(
+    r"(vista|view|blick|uitzicht|panor[aá]mic|overlooking|sicht|mirando|frente)s?\s*"
+    r"(?:al|a la|a|sobre|over|to the|to|towards|auf|op|naar|richting|del|de la|de|of the|of|van|sur|su)?\s*"
+    r"(?:el|la|los|las|the|den|der|die|das|dem|de|het)?\s*$", re.I)
+
+
+def _echt_de_ligging(patroon: str, tekst: str) -> bool:
+    """Zoekt het patroon, maar slaat treffers over die achter een uitzichtwoord staan."""
+    for m in re.finditer(patroon, tekst):
+        if not _UITZICHT.search(tekst[max(0, m.start() - 30):m.start()]):
+            return True
+    return False
 
 
 def _load_json(p: Path):
