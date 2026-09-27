@@ -263,6 +263,21 @@ def dossier_page(name: str):
     return FileResponse(str(p), media_type="text/html")
 
 
+@app.get("/onderzoek/{name}")
+def onderzoek_page(name: str):
+    """Een onderzoeksrapport als webpagina, zodat het ook op de telefoon te lezen is.
+
+    Alleen .html-bestanden uit onderzoek/, geen paden erbuiten. De rapporten bevatten geen
+    sleutels en geen klantgegevens; wel bedrijfsinformatie, dus ze zitten achter hetzelfde slot
+    als de rest van de app."""
+    if "/" in name or ".." in name or not name.endswith(".html"):
+        raise HTTPException(404)
+    p = config.ROOT / "onderzoek" / name
+    if not p.exists():
+        raise HTTPException(404, "dat rapport bestaat niet")
+    return FileResponse(str(p), media_type="text/html")
+
+
 @app.get("/api/dossiers")
 def dossiers():
     """Welke dossiers er klaarstaan, en welke objecten er volgens de rangschikking een verdienen."""
