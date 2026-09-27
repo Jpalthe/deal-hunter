@@ -167,7 +167,10 @@ function vlaggen(x) {
 
 function oordeelRegel(x) {
   const b = x.bod;
-  if (!b || !x.price) return '<p class="oordeel grijs">Nog niet betrouwbaar te rekenen.</p>';
+  /* Zeg erbij waaróm er niets staat. 'Nog niet betrouwbaar te rekenen' bij 281 objecten zonder
+     vraagprijs laat je raden of het aan de woning ligt of aan ons; het ligt aan ons. */
+  if (!x.price) return '<p class="oordeel grijs">Vraagprijs staat niet vast — open de advertentie.</p>';
+  if (!b) return '<p class="oordeel grijs">Nog niet betrouwbaar te rekenen.</p>';
   if (b.serieus_mogelijk === false && b.serieus_tekst) {
     return `<p class="oordeel let"><b>! Vraagprijs moet eerst zakken</b>
       <span>${esc(b.serieus_tekst)}</span></p>`;

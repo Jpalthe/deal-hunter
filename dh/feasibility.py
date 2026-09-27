@@ -239,6 +239,13 @@ def compute(row: dict, overrides: dict | None = None, scenario_key: str | None =
         intern = str(ov["sale_channel"]) == "intern"
     sale_adj = float(ov.get("sale_adj", 0.0))
     price = float(ov.get("price", row.get("price") or 0))
+    # Zonder vraagprijs is er niets te rekenen. Deed het model dat toch, dan kwam er een volledige
+    # som uit met een koopprijs van nul: "Aankoop € 7.500, Bouw € 520.548, Verkoop € 1.568.658" bij
+    # een object waarvan wij de prijs juist niet weten (gezien op 27-09-2026, tabblad Onvolledig).
+    # Een plausibel ogende som op een verzonnen nul is erger dan geen som.
+    if price <= 0:
+        return {"available": False, "scenarios": [],
+                "reason": "geen vraagprijs bekend: er valt niets door te rekenen"}
 
     # Het gemiddelde werkelijk betaalde peil van de kadastrale waardezone waarin dit object ligt.
     # Tweede opinie op onze verkoopwaarde, die op vraagprijzen rust (onderzoek N11).

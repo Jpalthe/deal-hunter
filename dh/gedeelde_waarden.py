@@ -68,8 +68,29 @@ def zin(g: dict) -> str:
             f"({g['aandeel'] * 100:.0f} %) {staart}")
 
 
+MAX_RONDEN = 4
+
+
 def opruimen(store: Store, run_id: int | None = None, doen: bool = True) -> dict:
-    """Zet de gevonden waarden op onbekend en legt per waarde één gebeurtenis vast."""
+    """Zet de gevonden waarden op onbekend en legt per waarde één gebeurtenis vast.
+
+    In ronden, want wegstrepen verandert de noemer: haal je 293 van de 320 prijzen weg, dan kan een
+    waarde die eerst 5 % van die bron was ineens boven de drempel uitkomen. Na drie ronden bleven er
+    op 27-09-2026 nog drie over; vier ronden is ruim genoeg en voorkomt dat het blijft doorlopen."""
+    alle, geraakt = [], 0
+    for _ in range(MAX_RONDEN):
+        gevonden = _ronde(store, run_id, doen)
+        if not gevonden["waarden"]:
+            break
+        alle += gevonden["waarden"]
+        geraakt += gevonden["objecten_geraakt"]
+        if not doen:
+            break                      # zonder wijzigen verandert de noemer niet: één ronde is alles
+    return {"waarden": alle, "objecten_geraakt": geraakt, "regels": [zin(g) for g in alle],
+            "nog_over": len(vind(store)) if doen else None}
+
+
+def _ronde(store: Store, run_id: int | None, doen: bool) -> dict:
     gevonden = vind(store)
     geraakt = 0
     for g in gevonden:
@@ -90,5 +111,4 @@ def opruimen(store: Store, run_id: int | None = None, doen: bool = True) -> dict
             "herstel": "tools/herlezen-getallen.py --gedeeld leest die pagina's opnieuw"})
     if doen:
         store.con.commit()
-    return {"waarden": gevonden, "objecten_geraakt": geraakt,
-            "regels": [zin(g) for g in gevonden]}
+    return {"waarden": gevonden, "objecten_geraakt": geraakt}

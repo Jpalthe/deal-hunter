@@ -83,10 +83,20 @@ def main(argv=None) -> int:
     print(f"\n{len(rijen)} objecten om opnieuw te lezen")
     sites: dict[str, Site] = {}
     gewijzigd = mislukt = ongewijzigd = 0
+    # Rem tegen een site die onder het lezen dichtklapt. Op 27-09-2026 leverde lauroravillas bij een
+    # ronde van achthonderd pagina's honderddertig keer dezelfde prijs; drie dezelfde pagina's, los
+    # opgehaald, gaven wél de echte bedragen. De site gaf onder druk een standaardpagina terug en
+    # wij schreven die weg — de herstelronde maakte de gegevens dus slechter. Komt bij een site
+    # vijf keer achter elkaar hetzelfde nieuwe getal, dan stoppen wij met die site.
+    achtereen: dict[str, list] = {}
+    gestaakt: set[str] = set()
+    MAX_ACHTEREEN = 5
     with httpx.Client(timeout=config.HTTP_TIMEOUT, follow_redirects=True,
                       headers={"User-Agent": config.USER_AGENT, "Accept-Language": "es,en;q=0.8,nl;q=0.6"}) as c:
         for r in rijen:
             host = r["source"].split(":", 1)[-1]
+            if host in gestaakt:
+                continue
             k = kantoren.get(host)
             if not k or not k.toegestaan:
                 mislukt += 1
@@ -104,6 +114,15 @@ def main(argv=None) -> int:
             if not anders:
                 ongewijzigd += 1
                 continue
+            vinger = tuple(sorted((v, n) for v, n in anders.items()))
+            reeks = achtereen.setdefault(host, [])
+            reeks.append(vinger)
+            if len(reeks) >= MAX_ACHTEREEN and len(set(reeks[-MAX_ACHTEREEN:])) == 1:
+                gestaakt.add(host)
+                print(f"  GESTAAKT {host}: {MAX_ACHTEREEN} keer achter elkaar dezelfde nieuwe waarde "
+                      f"{vinger}. Dat is geen advertentie maar een standaardpagina; deze site is "
+                      f"niet bijgewerkt.", flush=True)
+                continue
             gewijzigd += 1
             print(f"  {r['id']:5d} {host:24s} " + ", ".join(
                 f"{v}: {r[v] or 0:.0f} → {n or 0:.0f}" for v, n in anders.items()))
@@ -114,6 +133,8 @@ def main(argv=None) -> int:
     if a.doen:
         store.con.commit()
     store.close()
+    if gestaakt:
+        print("\ngestaakte sites (gaven steeds hetzelfde terug, niet bijgewerkt): " + ", ".join(sorted(gestaakt)))
     print(f"\ngewijzigd {gewijzigd} · ongewijzigd {ongewijzigd} · niet gelukt {mislukt}"
           + ("" if a.doen else "  — niets opgeslagen; met --doen wel"))
     return 0

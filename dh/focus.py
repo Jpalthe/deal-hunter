@@ -94,17 +94,36 @@ def juiste_soort(item: dict, f: dict | None = None) -> bool:
     return False
 
 
+# Soorten die wij überhaupt als woning of bouwgrond beschouwen. Gebruikt voor objecten waarvan de
+# prijs niet vaststaat: dan is de categorie van de voorfilter onbruikbaar, maar het soort uit de
+# advertentie zegt nog wel iets.
+WOONSOORTEN = ("villa", "house", "casa", "chalet", "apartment", "apartamento", "piso", "town house",
+               "townhouse", "bungalow", "finca", "country house", "land", "plot", "parcela",
+               "solar", "terreno", "duplex", "atico", "ático", "estudio", "rijwoning")
+
+
+def woonsoort(item: dict) -> bool:
+    t = (item.get("type") or "").strip().lower()
+    return any(w in t for w in WOONSOORTEN) if t else False
+
+
 def tab(item: dict, urb: dict | None = None, f: dict | None = None) -> str | None:
     """Op welk tabblad hoort dit object? None betekent: helemaal niet in beeld."""
     f = f or instelling()
     area = (item.get("area") or "").lower()
-    if not juiste_soort(item, f) or not binnen_prijs(item, f):
-        return None
     gebieden = [g.lower() for g in (f.get("gebieden") or [])] + [g.lower() for g in (f.get("gebieden_apart") or [])]
     # Geen vraagprijs betekent: wij weten het niet. Dat is iets anders dan te duur of ongeschikt,
     # en het hoort dus op een eigen tabblad in plaats van tussen de kansen of helemaal uit beeld.
+    #
+    # Let op de volgorde: dit staat vóór `juiste_soort`, en dat is met opzet. De categorie wordt
+    # door de voorfilter mede uit de prijs afgeleid, dus zodra de prijs is weggestreept valt een
+    # object terug op "overig". Zou de categorie hier gelden, dan verdween precies datgene wat wij
+    # zichtbaar wilden houden: 240 villa's in Jávea raakten zo alsnog uit beeld (27-09-2026).
+    # Het soort object telt wél: een garage of een winkelpand hoort hier evenmin.
     if not item.get("price") and area in gebieden:
-        return ONVOLLEDIG
+        return ONVOLLEDIG if woonsoort(item) else None
+    if not juiste_soort(item, f) or not binnen_prijs(item, f):
+        return None
     if area in [g.lower() for g in (f.get("gebieden") or [])]:
         # Jan 26-09-2026: kan er geen serieus bod worden gedaan omdat de vraagprijs te ver boven het
         # haalbare staat, dan hoort dat object niet in de hoofdlijst maar op een eigen tabblad. Zakt
@@ -162,6 +181,11 @@ def rijen(store, alle_gebieden: bool = True) -> list:
                   "SELECT 1 FROM parcels p WHERE p.listing_id = listings.id AND p.year IS NOT NULL"
                   " AND p.year < ?))")
             args.append(int(ok.get("bouwjaar_voor", 1995)))
+        # Zonder vraagprijs hoort een object op het tabblad Onvolledig, en dan moet het hier wél
+        # doorheen. Anders verdwijnt het uit beeld in plaats van dat het zichtbaar onvolledig is —
+        # en juist dat wilde Jan niet (27-09-2026). De categorie zegt vaak ook niets meer zodra de
+        # prijs is weggestreept, dus dit staat bewust naast de categorievoorwaarde.
+        q += " OR price IS NULL"
         q += ")"
     # Prijsondergrens alvast in SQL: het laagste van de twee, de rest zeeft `binnen_prijs`.
     onder = min(x for x in (f.get("ondergrens_perceel"), f.get("ondergrens_pand")) if x) if (
@@ -179,7 +203,7 @@ def filter(items: list[dict]) -> list[dict]:
 
 def per_tab(items: list[dict]) -> dict[str, list[dict]]:
     f = instelling()
-    uit: dict[str, list[dict]] = {KANSEN: [], LATER: [], BUITEN: [], TE_DUUR: []}
+    uit: dict[str, list[dict]] = {KANSEN: [], LATER: [], BUITEN: [], TE_DUUR: [], ONVOLLEDIG: []}
     for i in items:
         t = i.get("tab") or tab(i, i.get("urbanisme"), f)
         if t in uit:

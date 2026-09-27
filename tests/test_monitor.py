@@ -261,10 +261,17 @@ def test_focus_tabbladen():
         # eigen tabblad in plaats van tussen de kansen. Aanleiding: 819 objecten bleken een prijs
         # uit een zoekfilter te dragen; die prijzen zijn weggestreept en dan blijft er niets te
         # rekenen over. Weggooien is erger, want de advertentie bestaat wel (besluit Jan).
-        ({"area": "javea", "category": "renovatie", "price": None}, None, focus.ONVOLLEDIG),
-        ({"area": "moraira", "category": "renovatie", "price": None}, None, focus.ONVOLLEDIG),
+        ({"area": "javea", "category": "renovatie", "price": None, "type": "Villa"}, None, focus.ONVOLLEDIG),
+        ({"area": "moraira", "category": "renovatie", "price": None, "type": "Apartment"}, None, focus.ONVOLLEDIG),
+        # De categorie telt hier bewust níet mee: die wordt mede uit de prijs afgeleid, dus zodra de
+        # prijs is weggestreept valt een object terug op "overig". Zou de categorie gelden, dan
+        # verdween juist wat wij zichtbaar wilden houden (240 villa's op 27-09-2026).
+        ({"area": "javea", "category": "overig", "price": None, "type": "Villa"}, None, focus.ONVOLLEDIG),
+        # het soort telt wél: een winkelpand of een garage hoort er ook zonder prijs niet bij
+        ({"area": "javea", "category": "overig", "price": None, "type": "Commercial"}, None, None),
+        ({"area": "javea", "category": "renovatie", "price": None}, None, None),   # soort onbekend
         # buiten het werkgebied blijft het ook zonder prijs buiten beeld
-        ({"area": "denia", "category": "renovatie", "price": None}, None, None),
+        ({"area": "denia", "category": "renovatie", "price": None, "type": "Villa"}, None, None),
     ]
     for item, urb, verwacht in geval:
         assert focus.tab(item, urb, met_grenzen) == verwacht, (item, urb)
