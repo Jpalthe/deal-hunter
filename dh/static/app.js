@@ -496,6 +496,14 @@
   const showMapOnMobile = () => { if (window.innerWidth <= 900) { $('.vs[data-view="kaart"]').click(); } };
   if (location.hash === "#rapporten") $('.tab[data-tab="rapporten"]').click();
 
-  loadAll().catch((e) => { $("#runinfo").textContent = "Dashboard kon niet laden: " + e.message; });
+  // Een adres met ?id=... opent dat object meteen. Dat is wat de knop in
+  // TREE Hub belooft: je klikt daar op een kans en komt hier uit bij dié
+  // woning, niet in een lijst waarin je hem opnieuw moet zoeken. openDetail
+  // haalt het dossier los op, dus het werkt ook als het object buiten de
+  // huidige filterselectie valt.
+  const uitAdres = Number(new URLSearchParams(location.search).get("id"));
+  loadAll()
+    .then(() => { if (Number.isInteger(uitAdres) && uitAdres > 0) return openDetail(uitAdres, true); })
+    .catch((e) => { $("#runinfo").textContent = "Dashboard kon niet laden: " + e.message; });
   setInterval(() => loadAll().catch(() => {}), 5 * 60 * 1000);
 })();

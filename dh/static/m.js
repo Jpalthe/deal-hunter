@@ -711,7 +711,12 @@ async function lookupCatastro() {
 /* verversen alleen als er geen dossier openstaat, zodat werk niet wordt weggegooid */
 setInterval(() => { if (!S.open && document.visibilityState === 'visible') load().catch(() => {}); }, 300000);
 
-load().catch((e) => { $('#runinfo').innerHTML = '<span class="fout">Geen verbinding met de server.</span>'; });
+// Net als op het grote scherm: /m?id=... opent dat object meteen. De knop in
+// TREE Hub komt zo uit bij de woning die je aanklikte.
+const uitAdres = Number(new URLSearchParams(location.search).get('id'));
+load()
+  .then(() => { if (Number.isInteger(uitAdres) && uitAdres > 0) return openDetail(uitAdres); })
+  .catch((e) => { $('#runinfo').innerHTML = '<span class="fout">Geen verbinding met de server.</span>'; });
 laadBezorgstand();
 
 // ── Bezorging van meldingen ─────────────────────────────────────────────────
