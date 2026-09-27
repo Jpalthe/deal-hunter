@@ -56,12 +56,16 @@ NIET_OBJECT = re.compile(r"(contact|about|nosotros|sobre|blog|noticias|news|priv
 # te zijn beland, alle met dezelfde prijs van € 50.000 uit het zoekfilter. Die filteren wij hier weg.
 OVERZICHT_URL = re.compile(
     r"(/page/\d+|[?&](?:view|orderby|sort|pagina|paged)=|/property-type/|/tipo-de-propiedad/|/property-city/|"
-    r"/categoria/|/category/|/tag/|/zona/|/location/|/busqueda|/search|/resultados?|/results?|/listado)", re.I)
+    r"/categoria/|/category/|/tag/|/zona/|/location/|/busqueda|/search|/resultados?|/results?|/listado|"
+    # Vormen die de foutenjacht van 27-09-2026 in de database terugvond:
+    r"/location-\d|/type-[a-z-]+/?$|-\d+-\d+\.html$|/anuncios/|/propiedades-a-la-venta|"
+    r"/properties-for-sale|/villas-de-lujo/?$)", re.I)
 # Een zoekopdracht is geen woning. Op 27-09-2026 stonden er 280 zoekresultaatpagina's als object in
 # de database — 277 daarvan van één site, elk met de prijs en het oppervlak van de duurste woning
 # die toevallig bovenaan dat filter stond (€ 1.950.000, 389/409 m², eenentwintig keer). De URL
 # verraadt ze: `/results/?type[0]=1&id_tipo_operacion=1&od=prd.d`. Een echte objectpagina heeft
 # hoogstens één parameter, en dan een verwijzing naar dat ene object.
+OBJECTNUMMER_IN_URL = re.compile(r"\d{4,}")
 ID_PARAMETER = re.compile(r"^(id|p|pid|property|property_id|inmueble|ref|referencia|codigo|code)$", re.I)
 
 
@@ -78,13 +82,36 @@ OVERZICHT_TITEL = re.compile(
     r"^(b[uú]squeda|resultados|propiedades|properties|inmuebles|listado|zoekresultaten|p[aá]gina\s*\d|"
     r"apartamento|apartamentos|villa|villas|chalet|chalets|casa adosada|tienda|parcela|parcelas|"
     r"edificio apartamentos|local comercial|bungalow|[aá]tico|d[uú]plex|estudio|finca)\s*(–|-|\||$)", re.I)
+# Een titel in de vorm "<meervoud> te koop in <plaats>" is een lijst, ook zonder streepje erachter:
+# "Villas for sale in Teulada", "Casas en venta en Moraira", "Luxusvillen mit pool zum Verkauf in
+# Benitachell". 157 zulke pagina's stonden als woning in de database (foutenjacht 27-09-2026), elk
+# met de maxima van het zoekfilter als prijs en oppervlak.
+# De titel moet MET een meervoud beginnen. "Villas for sale in Teulada" is een lijst; "Moderne
+# villa in Jávea te koop" is één woning, en die mag er niet uit vallen. Daarom het meervoud als
+# eerste woord, niet ergens in de zin — en met een woordstaart ervoor, want het Duits plakt
+# ("Luxusvillen mit pool zum Verkauf in Benitachell").
+_MEERVOUD = (r"villas|villen|villa's|casas|chalets|apartamentos|apartments|appartementen|wohnungen|"
+             r"pisos|parcelas|plots|percelen|grundst[uü]cke|terrenos|solares|fincas|propiedades|"
+             r"properties|inmuebles|immobilien|objekte|woningen|huizen|h[aä]user|maisons|"
+             r"appartements|adosados|bungalows|locales|naves|[aá]ticos|d[uú]plex")
+OVERZICHT_TITEL_LIJST = re.compile(
+    rf"^\s*\w*(?:{_MEERVOUD})\b[\w\s,'’\-]{{0,60}}?"
+    r"(en venta|a la venta|for sale|to buy|zum verkauf|zu verkaufen|te koop|en vente|in vendita)\b",
+    re.I)
 
 
 def is_overzichtspagina(url: str, titel: str | None) -> bool:
     """Een overzichts- of categoriepagina is geen woning, ook al staat er een prijs op."""
     if OVERZICHT_URL.search(url or "") or is_zoekopdracht(url):
         return True
-    return bool(OVERZICHT_TITEL.match((titel or "").strip()))
+    t = (titel or "").strip()
+    if OVERZICHT_TITEL.match(t):
+        return True
+    # De meervoudsregel alleen toepassen als het adres geen objectnummer draagt. Anders sneuvelt
+    # een echte advertentie die toevallig zo heet: inmovillasjavea heeft objectpagina's met de
+    # titel "Plots for sale in Jávea in a strategic location" op /property/sale-javea-plot-607488.
+    # Een getal van vier cijfers of meer in het adres betekent: dit gaat over één object.
+    return bool(OVERZICHT_TITEL_LIJST.match(t)) and not OBJECTNUMMER_IN_URL.search(url or "")
 
 # Tekstpatronen op de pagina, in het Spaans, Engels, Nederlands en Duits
 PRIJS = re.compile(r"(?:€|EUR|euros?)\s*([\d]{1,3}(?:[.\s]\d{3})+|\d{5,8})|([\d]{1,3}(?:[.\s]\d{3})+|\d{5,8})\s*(?:€|EUR|euros?)", re.I)

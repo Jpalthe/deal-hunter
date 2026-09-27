@@ -1194,3 +1194,39 @@ def test_taalversies_van_dezelfde_woning_zijn_een_woning():
     assert dubbel.zelfde(es, da)
     # een ander nummer bij hetzelfde kantoor blijft een andere woning, ook bij gelijke prijs
     assert not dubbel.zelfde(es, ander)
+
+
+def test_categoriepagina_aan_de_titel_herkennen():
+    """Na de zoekparameter-filter van 27-09 kwamen er nog 202 categoriepagina's binnen met een
+    gewoon ogend adres: /villas-de-lujo/, /properties-for-sale/location-5-moraira/type-plot,
+    /de/verkauf/duplex/javea/. Elk droeg de maxima van het zoekfilter als prijs en oppervlak.
+
+    De titel verraadt ze: een lijst begint met een meervoud ("Villas for sale in Teulada"), een
+    woning niet ("Moderne villa in Jávea te koop"). Maar die regel mag alleen gelden als het adres
+    geen objectnummer heeft — inmovillasjavea heeft echte objectpagina's die "Plots for sale in
+    Jávea" heten, en die mogen er niet uit vallen."""
+    from dh.adapters.makelaars import is_overzichtspagina as o
+    lijsten = [
+        ("https://www.mgvillas.com/villas-de-lujo/", "Villas de lujo en Jávea"),
+        ("https://www.123javeavillas.com/javea-port", "Villas for sale in Teulada"),
+        ("https://www.calablanca.com/chalets-en-venta-javea/", "Chalets en venta Jávea"),
+        ("https://www.moraguespons.com/de/verkauf/duplex/javea/", "Duplex zum Verkauf in Jávea"),
+        ("https://www.javeacontinental.com/de/villen-verkauf-3-1.html", "Villen verkauf"),
+        ("https://iadespana.es/anuncios/javea", "Casas en venta"),
+        ("https://x.es/a", "Luxusvillen mit pool zum Verkauf in Benitachell"),
+        ("https://x.es/b", "Appartementen te koop in Moraira"),
+    ]
+    woningen = [
+        # echte objectpagina's, twee met een titel die op een lijst lijkt maar een nummer in het adres heeft
+        ("https://www.inmovillasjavea.com/en/property/sale-javea-plot-607488", "Plots for sale in Jávea"),
+        ("https://www.inmovillasjavea.com/en/property/sale-valle-del-sol-plot-611739", "Plots for sale in Villes del Sol"),
+        ("https://x.es/villa-es1765346.html", "Moderne villa in Jávea te koop met zeezicht"),
+        ("https://x.es/c", "Villa en venta en El Tosalet"),
+        ("https://x.es/d", "Casa de pueblo en venta en el centro"),
+        ("https://x.es/e", "Luxusvilla zum Verkauf in Benitachell"),
+        ("https://atinainmobiliaria.com/en/properties/villa-aral-luxe/", "Villa Aral: luxe met zeezicht"),
+    ]
+    for u, t in lijsten:
+        assert o(u, t), (u, t)
+    for u, t in woningen:
+        assert not o(u, t), (u, t)
